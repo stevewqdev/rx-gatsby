@@ -1,0 +1,165 @@
+.brand__menu__toggle{
+    position: relative;
+    cursor: pointer;
+}
+.brand__menu__toggle p{
+    margin: 0!important;
+    position: relative;
+    left: 25px;
+}
+.floating__web__info{
+    z-index: 9;
+    mix-blend-mode: difference;
+}
+
+.floating__web__info .row{
+    display: flex;
+    flex-wrap: unset;
+}
+.floating__web__info .col{
+    position: relative;
+}
+.floating__web__info a{
+    text-decoration: none;
+    color: #F4F4F4;
+}
+
+.floating__web__info p{
+    color: #F4F4F4;
+}
+
+.floating__web__info .col{
+    height: 100vh;
+}
+
+.floating__web__info .brand{
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    mix-blend-mode: difference;
+
+}
+
+.floating__web__info .brand .brand__logo img{
+    width: 104px;
+    height: auto;
+}
+
+.floating__web__info .copyright__column{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    mix-blend-mode: difference;
+
+}
+.floating__web__info .brand > div {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.floating__web__info .brand__menu{
+    position: relative;
+    top: 0%;
+}
+
+.floating__web__info .brand__menu p{
+    margin: 0 0 15px 0;
+}
+
+.floating__web__info .brand__social{
+    position: relative;
+    top: -7%;
+}
+
+.floating__web__info .brand__social .brand__social__network{
+    max-width: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 45px 0;
+}
+
+.floating__web__info .copy__one__column, .floating__web__info .copy__two__column{
+    padding: 45px 0;
+}
+
+ 
+
+.floating__web__info .copyright__column p{
+    position: relative;
+    top: -25px;
+    left: -10px;
+}
+
+.floating__web__info .copyright__column p:before{
+    content: ""; 
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+    height: 2px;
+    background: #F4F4F4;
+}
+.black svg path{
+    fill: black!important
+    ;
+}
+.black p, .black a {
+    color: black!important;
+}
+.menu__subitem {
+    margin-left: 15px;
+}
+@media(max-width: 768px){
+
+}
+@media(max-width: 500px){
+    .floating__web__info .copyright__column p {
+        left: -40px;
+    }
+    .floating__web__info .brand {
+        padding: 48px 15px;
+    }
+    .floating__web__info .brand > div{
+        position: static;
+    }
+    .copy__one__column{
+        left: 15px;
+        position: absolute;
+        top: 60px;
+        font-size: 8px;
+    }
+    .copy__two__column{
+        position: absolute!important;
+        top: 60px;
+        right: -22px;
+        font-size: 8px;
+    }
+    .copyright__column > div{
+        position: absolute;
+        width: 100px;
+    }
+    .floating__web__info .copy__one__column{
+        position: absolute;
+        width: 45%;
+    }
+    .floating__web__info .copy__two__column{
+        position: absolute!important;
+        width: 45%;
+        right: 15px;
+    }
+    .brand__menu__toggle{
+        position: absolute;
+        top: 50%;
+    }
+    .floating__web__info .brand__menu{
+        position: unset;
+    }
+}
+@media(max-width: 320px){
+    .copy__two__column {
+        right: -8px;
+    }
+}

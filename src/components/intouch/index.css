@@ -1,0 +1,25 @@
+.get_in_touch{
+    padding: 60px 0px;
+}
+.get_in_touch a{
+    color: #606060;
+    text-decoration: underline;
+}
+.get_in_touch .up__arrow{
+    cursor: pointer;
+}
+.get_in_touch .black__arrow svg path{
+    fill: #000000;
+
+}
+.get_in_touch .black__arrow svg text{
+    font-family: LucidaGrande-Bold, Lucida Grande;
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: 0.001em;
+}
+@media(max-width:500px){
+    .get_in_touch .row{
+        flex-wrap: unset;
+    }
+}
