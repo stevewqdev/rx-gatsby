@@ -1,5 +1,4 @@
-require("dotenv").config({path: `.env.${process.env.NODE_ENV}`})
-
+require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
 
 module.exports = {
   siteMetadata: {
@@ -9,12 +8,12 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
           include: /images\/.*\.svg/,
-        }
-      }
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-nprogress`,

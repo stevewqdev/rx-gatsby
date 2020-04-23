@@ -8,6 +8,9 @@ footer a{
    text-decoration: none;
    color: #f4f4f4;
 }
+footer .menu__subitem{
+    display: none;
+}
 .footer__menu a{
     margin-left: 5px;
     text-decoration: none;

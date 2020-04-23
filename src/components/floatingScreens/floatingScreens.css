@@ -11,7 +11,9 @@
     z-index: 9;
     mix-blend-mode: difference;
 }
-
+.floating__web__info{
+    top: 0;
+}
 .floating__web__info .row{
     display: flex;
     flex-wrap: unset;

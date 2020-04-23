@@ -630,9 +630,20 @@ body{
   left: 0px;
   transition: left 0.6s cubic-bezier(0.83, 0, 0.17, 1);
 }
-/* Helper classes */ 
+/* Helper classes -- GLOBAL -- */ 
+.separator {
+  width: 100%;
+  height: 2px;
+}
+.separator.--black{
+  background: #000000;
+}
+.no__padding{
+  padding: 0;
+}
 .container__custom{
-  padding: 0 4%;
+  padding: 0 10%;
+  max-width: 1250px;
 }
 .opacity-0{
     opacity: 0;
@@ -641,7 +652,7 @@ body{
     opacity: 0.5;
 }
 .desktop-hidden{
-    display: none;
+    display: none!important;
 }
 .white__font{
   color: #F4F4F4;
@@ -675,6 +686,11 @@ body{
     line-height: 62px;
     margin: 0;
 }
+.xxl__font{
+  font-size: 80px!important;
+  line-height: 62px;
+  margin: 0;
+}
 .fixed{
     position: fixed;
 }
@@ -693,6 +709,192 @@ body{
     min-height: 100vh;
     height: 100%;
 }
+/* Section One Component */
+section#one{
+  background: black;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 8;
+  top: 0;
+}
+/* Video Background Component */
+.video__background{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+}
+.video__background video{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+/* Fallback image background */
+.raxo__rx__svg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.raxo__rx__svg img{
+  z-index: 8;
+  position: absolute;
+  top: 0px;
+  height: 85%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+/* Featured video Component */
+.featured__video{
+  margin-top: 25%;
+}
+.featured__video .featured__video__copy h4{
+  font-size: 18px;
+  font-weight: bold;
+}
+.featured__video .featured__video__copy p{
+  font-size: 12px;
+  font-family: 'MarkPro-Book';
+  font-weight: normal;
+}
+.featured__video .featured__video__title{
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+.featured__video .featured__video__wrapper{
+  position: relative;
+}
+.featured__video .featured__video__source {
+  position: absolute;
+  top: 0px;
+}
+.featured__video .featured__video__source video{
+  position: absolute;
+  max-width: 100%;
+  top: 0px;
+  right: 0;
+  width: calc(100% / 1.6);
+}
+.featured__video .featured__video__source:hover video{
+  width: calc(100% / 1);
+}
+/* Selected projects Section */
+.selected__projects{
+  margin-top: 45%;
+}
+.selected__projects .selected__projects__title{
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+.selected__projects .selected__projects__button{
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+.selected__projects .selected__projects__copy p{
+  font-size: 12px;
+  font-family: 'MarkPro-Book';
+  font-weight: normal;
+  width: 100%;
+  max-width: 60%;
+}
+.selected__projects{
+  margin-bottom: 10%;
+}
+.selected__projects__projects{
+  margin-top: 1.5%;
+  position: relative;
+}
+.selected__projects__projects__left__copy p{
+  font-size: 12px;
+  font-family: 'MarkPro-Book';
+  font-weight: normal;
+  width: 90%;
+}
+.selected__projects__projects > div {
+  padding: 0 2%;
+}
+.selected__projects__projects__left img{
+  max-width: 100%!important;
+  top: 0px!important;
+  right: 0!important;
+  width: calc(100% / 2)!important;
+  object-fit: unset!important;
+  height: calc(100% / 2)!important;
+  z-index: 8;
+  position: relative;
+}
+.selected__projects__projects__left:hover img{
+  width: calc(100% / 1.05)!important;
+  object-fit: unset!important;
+  height: calc(100% / 1.05)!important;
+}
+.selected__projects__projects__left__copy{
+  position: relative;
+  bottom: -5%;
+}
+.selected__projects__projects__right{
+  position: absolute;
+  right: -54%;
+  bottom: 12%;
+  width: 100%;
+}
+.selected__projects__projects__right .selected__projects__projects__right__title{
+  height: 100%;
+}
+.selected__projects__projects__left:hover .selected__projects__projects__left__copy{
+  bottom: 15%;
+}
+button{
+  height: 60px;
+  width: 156px;
+  border: none;
+  background: black;
+  color: white;
+}
+.selected__projects.latest__projects .latest__projects__subtitle{
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 4%;
+}
+.selected__projects.latest__projects{
+  margin-top: 25%;
+  margin-bottom: 15%;
+}
+.selected__projects.latest__projects .pgrid__base__thumbnail {
+  position: relative;
+  height: 250px;
+}
+.selected__projects.latest__projects .pgrid__base__thumbnail p{
+  bottom:-30px;
+
+  position: absolute;
+}
+.selected__projects.latest__projects .pgrid__base__thumbnail img{
+  width: 93%;
+  transition: width 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+  left: 0;
+  top: 0;
+  position: absolute;
+  cursor: pointer;
+}
+.selected__projects.latest__projects  .pgrid__base__thumbnail:hover img{
+  width: 100%;
+}
+.selected__projects.latest__projects .latest__projects__projects{
+  margin-top: 12%;
+}
+
 @media(max-width: 992px){
   .container__custom{
     padding: 0 10%;
