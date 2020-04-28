@@ -155,6 +155,8 @@
     .brand__menu__toggle{
         position: absolute;
         top: 50%;
+        left: 18px;
+    
     }
     .floating__web__info .brand__menu{
         position: unset;

@@ -1,0 +1,59 @@
+.hero__component{
+    position: absolute;
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    z-index: 8;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero__component .hero__subtitle{
+    padding-top: 45px;
+}
+.hero__component .container__custom{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.hero__component.dark .container__custom .row{
+    border-top: solid 2px  #ffffff;
+}
+.hero__component.light .container__custom .row{
+    border-top: solid 2px  #000000;
+}
+.hero__component.dark{
+    background: #000000;
+    color: white;
+}
+.hero__component.light{
+    background: #F4F4F4;
+    color: #000000;
+}
+.hero__component .hero__extra__info{
+    position: relative;
+    top: 45px;
+}
+.hero__component .hero__title{
+    margin-top: 50px;
+}
+@media(max-width: 500px){
+    .hero__component .xxl__font{
+        font-size: 40px!important;
+        line-height: 40px;
+    }
+    .hero__component .container__custom {
+        margin-top: 50%;
+        margin-bottom: 100px;
+    }
+    .hero__component .hero__subtitle {
+        padding-top: 25px;
+    }
+    .hero__component .hero__title {
+        margin-top: 20px;
+    }
+    .hero__component .hero__extra__info {
+        position: relative;
+        top: 15px;
+    }
+}

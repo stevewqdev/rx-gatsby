@@ -1,0 +1,10 @@
+.raxo__info{
+    margin: 10% 0;
+}
+.raxo__social__menu a{
+    text-decoration: none;
+    color: black;
+}
+.raxo__social__menu a:hover{
+    color: #EA3464;
+}

@@ -11,7 +11,6 @@ class HomePage extends Component {
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
     const latestProjects = this.props.data.allWordpressWpProjects.edges; 
 
-    console.log(latestProjects);
     return ( 
       <Layout>
         <div className={`home__page post__${pageData.id}`}>
@@ -52,7 +51,7 @@ class HomePage extends Component {
                   <h2 className={"xxl__font"}>{pageAcf.reel_title}</h2>
                 </div>
                 <div className="col-lg-12 featured__video__wrapper no__padding">
-                  <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4 featured__video__copy no__padding">
+                  <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4 featured__video__copy no__padding">
                     <div
                       className=""
                       dangerouslySetInnerHTML={{ __html: pageAcf.reel_copy }}
@@ -156,8 +155,8 @@ class HomePage extends Component {
                 </div>
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__button">
                   <div className="row">
-                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__button__left"></div>
-                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__button__right">
+                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 no__padding selected__projects__button__left"></div>
+                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 no__padding selected__projects__button__right">
                       <div className="selected__projects__copy">
                         <p className="bold__font md__font latest__projects__subtitle">{pageAcf.lp_subtitle}</p>
                         <div

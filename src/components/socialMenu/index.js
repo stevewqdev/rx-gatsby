@@ -63,7 +63,7 @@ const SocialMenu = props => {
             {/* If layout is full__screen__menu we only show the the network name */}
             {layoutType === "full__screen__menu" ? (
               <>
-                <p className="reg__font">{network.network}</p>
+                <p className={props.fontSize ? props.fontSize : "reg__font"}>{network.network}</p>
               </>
             ) : (
               ""

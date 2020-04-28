@@ -611,6 +611,38 @@ body{
     overflow-x: hidden;
     background: #F4F4F4;
 }
+@media(max-width: 4000px){
+  .container__custom{
+    padding: 0 20px;
+    max-width: 1250px;
+  }
+  .featured__video {
+    margin-top: 10%;
+  }
+  .selected__projects {
+    margin-top: 20%;
+  }
+  .selected__projects.latest__projects {
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
+
+}
+@media(max-width: 2000px){
+  .container__custom{
+    padding: 0 10%;
+  }
+  .featured__video{
+    margin-top: 25%;
+  }
+  .selected__projects{
+    margin-top: 45%;
+  }
+  .selected__projects.latest__projects{
+    margin-top: 25%;
+    margin-bottom: 15%;
+  }
+}
 #top{
   position: absolute;
   top: 0px;
@@ -640,10 +672,6 @@ body{
 }
 .no__padding{
   padding: 0;
-}
-.container__custom{
-  padding: 0 10%;
-  max-width: 1250px;
 }
 .opacity-0{
     opacity: 0;
@@ -688,7 +716,7 @@ body{
 }
 .xxl__font{
   font-size: 80px!important;
-  line-height: 62px;
+  line-height: 80px;
   margin: 0;
 }
 .fixed{
@@ -708,6 +736,9 @@ body{
 .full__height{ 
     min-height: 100vh;
     height: 100%;
+}
+.no__decoration a{
+  text-decoration: none;
 }
 /* Section One Component */
 section#one{
@@ -756,9 +787,7 @@ section#one{
   margin: auto;
 }
 /* Featured video Component */
-.featured__video{
-  margin-top: 25%;
-}
+
 .featured__video .featured__video__copy h4{
   font-size: 18px;
   font-weight: bold;
@@ -790,9 +819,7 @@ section#one{
   width: calc(100% / 1);
 }
 /* Selected projects Section */
-.selected__projects{
-  margin-top: 45%;
-}
+
 .selected__projects .selected__projects__title{
   margin-top: 4%;
   margin-bottom: 4%;
@@ -867,17 +894,12 @@ button{
   font-size: 18px;
   margin-bottom: 4%;
 }
-.selected__projects.latest__projects{
-  margin-top: 25%;
-  margin-bottom: 15%;
-}
 .selected__projects.latest__projects .pgrid__base__thumbnail {
   position: relative;
   height: 250px;
 }
 .selected__projects.latest__projects .pgrid__base__thumbnail p{
-  bottom:-30px;
-
+  top: 270px;
   position: absolute;
 }
 .selected__projects.latest__projects .pgrid__base__thumbnail img{
@@ -894,7 +916,21 @@ button{
 .selected__projects.latest__projects .latest__projects__projects{
   margin-top: 12%;
 }
-
+@media(max-width: 1024px){
+  .container__custom {
+    max-width: 880px;
+  }
+  .selected__projects__projects__right {
+    bottom: 22%;
+  }
+  .selected__projects__projects > div {
+    padding: 0 3%;
+  }
+  .selected__projects.latest__projects .pgrid__base__thumbnail p {
+    top: unset;
+    bottom: 10%;
+  }
+}
 @media(max-width: 992px){
   .container__custom{
     padding: 0 10%;
@@ -903,10 +939,41 @@ button{
 @media(max-width: 768px){
   .lg__font {
     font-size: 27px!important;
+    line-height: 45px;
   }
   .raxo__rx__svg svg{
     width: 400px;
   }
+  .xxl__font {
+    font-size: 65px!important;
+    line-height: 65px;
+  }
+  .container__custom {
+    max-width: 82%;
+  }
+  .selected__projects__projects__right {
+    bottom: 33%;
+  }
+  .selected__projects .selected__projects__copy p {
+    max-width: 100%;
+  } 
+  .selected__projects__projects > div {
+    padding: 5% 4%;
+  }
+  .selected__projects.latest__projects .pgrid__base__thumbnail p {
+    bottom: 30%;
+  }
+  .md__font {
+    font-size: 16px;
+  }
+  .featured__video .featured__video__source{
+    position: relative;
+    margin-top: 5%;
+  }
+  .selected__projects {
+    margin-top: 65%;
+  }
+
 }
 @media(max-width: 500px){
   .mobile-hidden{
@@ -914,6 +981,9 @@ button{
   }
   .xs__font{
       font-size: 9px;
+  }
+  .container__custom {
+    padding: 0 8.5%;
   }
   .lg__font {
     font-size: 23px!important;
@@ -930,9 +1000,46 @@ button{
     width: 40%;
     top: -60px;
   }
+  .container__custom {
+    max-width: 100%;
+  }
+  .selected__projects__copy{
+    padding: 0 5%;
+  }
+  .selected__projects .selected__projects__copy{
+    padding: 0;
+  }
+  .selected__projects__button__right{
+    padding: 0 4%;
+  }
+  .selected__projects__projects__left:hover .selected__projects__projects__left__copy {
+    bottom: 18%;
+  }
+  .selected__projects.latest__projects .pgrid__base__thumbnail {
+    height: 400px;
+  }
+  .selected__projects.latest__projects .pgrid__base__thumbnail p {
+    bottom: 12%;
+  }
+  .xxl__font {
+    font-size: 50px!important;
+    line-height: 45px;
+  }
+  .selected__projects__projects > div {
+    padding: 5% 4.5%;
+  }
 }
 @media(max-width: 320px){
   .md__font {
     font-size: 12px;
+  }
+  .selected__projects__projects__left:hover .selected__projects__projects__left__copy {
+    bottom: 20%;
+  }
+  .selected__projects.latest__projects .pgrid__base__thumbnail p {
+    bottom: 23%;
+  }
+  .selected__projects__projects > div {
+    padding: 5% 5%;
   }
 }

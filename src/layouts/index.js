@@ -87,7 +87,6 @@ const Layout = ({ children }) => {
   if (data.allWordpressMenusMenusItems) {
     legalMenu = data.allWordpressMenusMenusItems.edges[0].node.items
   }
-
   return (
     <>
       <Helmet>

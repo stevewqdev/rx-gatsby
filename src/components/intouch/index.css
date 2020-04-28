@@ -22,4 +22,7 @@
     .get_in_touch .row{
         flex-wrap: unset;
     }
+    .get_in_touch .row {
+        padding: 0px 25px 60px;
+    }
 }
