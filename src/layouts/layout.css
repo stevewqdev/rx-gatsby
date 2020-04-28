@@ -979,6 +979,9 @@ button{
 
 }
 @media(max-width: 500px){
+  .brand__menu__toggle{
+    display: none!important;
+  }
   .mobile-hidden{
     display: none!important;
   }

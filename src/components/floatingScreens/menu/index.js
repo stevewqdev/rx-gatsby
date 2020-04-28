@@ -31,7 +31,7 @@ export default class MainMenuFloatingScreen extends Component {
                 <div className="brand__menu bold__font ">
                   <div
                     className="brand__menu__toggle --opened d-flex align-items-center"
-                    onClick={this.toggleMenu}
+                    onClick={this.toggleMenu} role="button"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

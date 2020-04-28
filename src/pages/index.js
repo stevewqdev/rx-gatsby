@@ -2,8 +2,8 @@ import React, { Component } from "react"
 import Layout from "../layouts/index"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 import About from "../components/about/index"
+import {Helmet} from "react-helmet";
 
 class HomePage extends Component {
   render() {
@@ -13,6 +13,12 @@ class HomePage extends Component {
 
     return ( 
       <Layout>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <meta name="description" content={ pageData.yoast_meta.yoast_wpseo_metadesc }/>
+          <title>{ pageData.yoast_meta.yoast_wpseo_title }</title>
+          <link rel="canonical" href={ pageData.yoast_meta.yoast_wpseo_canonical} />
+        </Helmet>
         <div className={`home__page post__${pageData.id}`}>
           <section id="one">
             <div className="row">

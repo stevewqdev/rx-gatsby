@@ -70,7 +70,6 @@ const Layout = ({ children }) => {
     }
   `)
 
-  const siteData = data.allWordpressSiteMetadata.edges[0].node
   const siteDataAcf = data.wordpressAcfOptions.options
   let legalMenu = false
   let siteLogo = false

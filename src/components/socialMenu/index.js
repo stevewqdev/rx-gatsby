@@ -27,10 +27,6 @@ const SocialMenu = props => {
     socialItems = data.wordpressAcfOptions.options.social_networks
   }
 
-  function checkIfBodyIsLight(event) {
-    event.target.parentElement.classList.add("isWhiteBackground")
-  }
-
   return (
     <>
       {socialItems.map((network, index) => (
@@ -41,7 +37,6 @@ const SocialMenu = props => {
         >
           <a
             href={`${network.network_link}`}
-            onMouseOver={checkIfBodyIsLight}
             target="_BLANK"
             rel="noopener noreferrer"
           >

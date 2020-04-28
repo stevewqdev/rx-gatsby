@@ -1,6 +1,6 @@
 import React, { Component } from "react"
-import MainMenu from "../../menu/index"
 import SocialMenu from "../../socialMenu/index"
+import { Link } from "gatsby"
 
 import "../../floatingScreens/floatingScreens.css"
 
@@ -20,15 +20,17 @@ export default class MainFloatingScreen extends Component {
             >
               <div className="fixed">
                 <div className="brand__logo">
-                  <img
-                    src={this.props.siteLogo.source_url}
-                    alt={this.props.siteLogo.title}
-                  />
+                  <Link to="/">
+                    <img
+                      src={this.props.siteLogo.source_url}
+                      alt={this.props.siteLogo.title}
+                    />
+                  </Link>
                 </div>
                 <div className="brand__menu bold__font ">
                   <div
                     className="brand__menu__toggle --closed d-flex align-items-center"
-                    onClick={this.toggleMenu}
+                    onClick={this.toggleMenu} role="button"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

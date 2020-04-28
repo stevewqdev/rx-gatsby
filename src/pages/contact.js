@@ -3,6 +3,7 @@ import Layout from "../layouts/index"
 import { graphql } from "gatsby"
 import Hero from "../components/hero/index"
 import SocialMenu from "../components/socialMenu"
+import {Helmet} from "react-helmet";
 
 import "../layouts/pages/contact.css"
 
@@ -14,6 +15,12 @@ class ContactPage extends Component {
     
     return ( 
       <Layout>
+          <Helmet>
+            <meta charSet="utf-8" />
+            <meta name="description" content={ pageData.yoast_meta.yoast_wpseo_metadesc }/>
+            <title>{ pageData.yoast_meta.yoast_wpseo_title }</title>
+            <link rel="canonical" href={ pageData.yoast_meta.yoast_wpseo_canonical} />
+          </Helmet>
           <Hero 
             theme={pageAcf.section_color}
             image={pageAcf.fallback_image} 
