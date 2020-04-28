@@ -709,8 +709,16 @@ body{
     font-size: 12px;
     line-height: 1.5;
 }
+.xsm__font{
+  font-size: 15px;
+}
 .md__font{
     font-size: 18px;
+}
+.xmd__font{
+  font-size: 40px!important;
+  line-height: 42px;
+  margin: 0;
 }
 .lg__font{
     font-size: 60px!important;
