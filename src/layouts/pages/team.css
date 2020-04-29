@@ -35,6 +35,10 @@
     height: 156.8px;
     background: black;
     max-height: 170px;
+    cursor: pointer;
+}
+.team__member > * {
+    pointer-events: none;
 }
 .team__member.active:after{
     opacity: 0;

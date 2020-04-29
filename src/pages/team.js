@@ -9,6 +9,52 @@ import Img from "gatsby-image"
 import "../layouts/pages/team.css"
 
 class ContactPage extends Component {
+  toggleTitle(event){
+    let elementId = event.target.getAttribute("id")
+    let teamArray = [...document.getElementsByClassName(elementId)];
+
+    if(event.target.classList.contains("active")){
+        event.target.classList.remove("active")
+        
+        teamArray.map(element => {
+            element.classList.remove("active")
+        })
+    }else{
+        event.target.classList.add("active")
+        
+        teamArray.map(element => {
+            element.classList.add("active")
+        })
+    }
+  }
+  toggleTeamMember(event){
+    let elementId = event.target.classList[1];
+    let teamArray = [...document.getElementsByClassName(elementId)];
+    
+    console.log(elementId);
+
+    if(event.target.classList.contains("active")){
+        document.getElementById(elementId).classList.remove("active")
+
+        teamArray.map(element => {
+            element.classList.remove("active")
+        })
+    }else{
+        document.getElementById(elementId).classList.add("active")
+
+        teamArray.map(element => {
+            element.classList.add("active")
+        })
+    }
+  }
+  componentDidMount(){
+    let teamArray = [...document.getElementsByClassName("creative")];
+
+    teamArray.map(element => {
+        element.classList.add("active")
+    })
+  }
+
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
@@ -36,7 +82,7 @@ class ContactPage extends Component {
                     <div className="no__padding col-xs-12 col-sm-12 col-md-3 col-lg-3 team__column__one">
                         {
                             pageAcf.team_categories.map((categorie,index) =>
-                                <h2 className={`categorie__name xmd__font bold__font ${ index === 0 ? "active" : "" } `} id={categorie.title} key={index} >
+                                <h2 className={`categorie__name xmd__font bold__font ${ index === 0 ? "active" : "" } `} id={categorie.title === "Creative Team" ? "creative" : categorie.title.toLowerCase()} key={index} onClick={this.toggleTitle} >
                                     {categorie.title}
                                     {
                                         index === 0
@@ -55,7 +101,7 @@ class ContactPage extends Component {
                                 pageAcf.team_members.map((member, index) => 
                                     index < 2
                                     ?
-                                    <div className={`team__member ${member.category}`}>
+                                    <div className={`team__member  ${member.category}`} onClick={this.toggleTeamMember}>
                                         <div className={`team__member__background`}>
                                             {
                                                 member.photo
@@ -83,7 +129,7 @@ class ContactPage extends Component {
                                 pageAcf.team_members.map((member, index) => 
                                     index > 1 & index < 7
                                     ?
-                                    <div className={`team__member ${member.category}`}>
+                                    <div className={`team__member ${member.category}`} onClick={this.toggleTeamMember}>
                                         <div className={`team__member__background`}>
                                             {
                                                 member.photo
@@ -111,7 +157,7 @@ class ContactPage extends Component {
                                 pageAcf.team_members.map((member, index) => 
                                     index > 6 & index < 12
                                     ?
-                                    <div className={`team__member ${member.category}`}>
+                                    <div className={`team__member ${member.category}`} onClick={this.toggleTeamMember}>
                                         <div className={`team__member__background`}>
                                             {
                                                 member.photo
@@ -139,7 +185,7 @@ class ContactPage extends Component {
                                 pageAcf.team_members.map((member, index) => 
                                     index > 11 & index < 17
                                     ?
-                                    <div className={`team__member ${member.category}`}>
+                                    <div className={`team__member ${member.category}`} onClick={this.toggleTeamMember}>
                                         <div className={`team__member__background`}>
                                             {
                                                 member.photo
