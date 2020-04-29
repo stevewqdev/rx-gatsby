@@ -697,9 +697,11 @@ body{
 }
 .bold__font{
     font-weight: bold;
+    font-family: 'MarkPro';
 }
 .black__font{
     font-weight: 900;
+    font-family: 'MarkPro';
 }
 .xs__font{
     font-size: 10px;

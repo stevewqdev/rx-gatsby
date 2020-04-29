@@ -34,12 +34,13 @@ const Hero = props => {
                     {
                         props.extraInfo
                         ?<div
-                            className="sm__font"
+                            className="sm__font reg__font"
                             dangerouslySetInnerHTML={{ __html: props.extraInfo }}
                             />
                         :""
                     }
                 </div>
+                
             </div>
         </div>
     </section>

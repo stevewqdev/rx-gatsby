@@ -16,15 +16,15 @@ class ContactPage extends Component {
     if(event.target.classList.contains("active")){
         event.target.classList.remove("active")
         
-        teamArray.map(element => {
+        teamArray.map(element => 
             element.classList.remove("active")
-        })
+        )
     }else{
         event.target.classList.add("active")
         
-        teamArray.map(element => {
+        teamArray.map(element => 
             element.classList.add("active")
-        })
+        )
     }
   }
   toggleTeamMember(event){
@@ -36,23 +36,23 @@ class ContactPage extends Component {
     if(event.target.classList.contains("active")){
         document.getElementById(elementId).classList.remove("active")
 
-        teamArray.map(element => {
+        teamArray.map(element => 
             element.classList.remove("active")
-        })
+        )
     }else{
         document.getElementById(elementId).classList.add("active")
 
-        teamArray.map(element => {
+        teamArray.map(element => 
             element.classList.add("active")
-        })
+        )
     }
   }
   componentDidMount(){
     let teamArray = [...document.getElementsByClassName("creative")];
 
-    teamArray.map(element => {
+    teamArray.map(element => 
         element.classList.add("active")
-    })
+    )
   }
 
   render() {
