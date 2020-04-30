@@ -337,7 +337,7 @@ class ContactPage extends Component {
                   pageAcf.clients_logos.map((client, index) => 
                     client.logo
                     ?
-                      <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 client__logo" key={index}>
+                      <div className="col-xs-6 col-sm-12 col-md-3 col-lg-3 client__logo" key={index}>
                         <img src={client.logo.localFile.url} alt="Client Logo"/>
                       </div>
                     :""

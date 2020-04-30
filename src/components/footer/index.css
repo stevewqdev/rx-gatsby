@@ -30,12 +30,7 @@ footer .menu__subitem{
     footer {
         padding: 50px 0 20px;
     }
-    .footer__copyright{
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+
     .get_in_touch {
         padding: 30px 15px!important;
     }
@@ -84,4 +79,18 @@ footer .menu__subitem{
         height: 2px;
         background: #F4F4F4;
     }
+    footer .sm__font{
+        font-size: 16px;
+    }
+    .footer__menu{
+        flex-direction: column;
+        text-align: center;
+        font-size: 16px;
+        margin: 20px 0;
+    }
+    .footer__menu p{
+        margin: 5px 0;
+        font-weight: bold;
+    }
+
 }

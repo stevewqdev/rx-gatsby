@@ -6,6 +6,13 @@ import About from "../components/about/index"
 import {Helmet} from "react-helmet";
 
 class HomePage extends Component {
+  playVideo(event){
+    if (!event.target.paused) {
+      event.target.pause();
+    } else{
+      event.target.play();
+    }
+  }
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
@@ -55,6 +62,7 @@ class HomePage extends Component {
                 </div>
                 <div className="col-lg-12 no__padding featured__video__title">
                   <h2 className={"xxl__font"}>{pageAcf.reel_title}</h2>
+                  <br/>
                 </div>
                 <div className="col-lg-12 featured__video__wrapper no__padding">
                   <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4 featured__video__copy no__padding">
@@ -62,20 +70,31 @@ class HomePage extends Component {
                       className=""
                       dangerouslySetInnerHTML={{ __html: pageAcf.reel_copy }}
                     />
+                    <br/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19.73" height="19.72" viewBox="0 0 19.73 19.72">
+                      <g id="Grupo_76" data-name="Grupo 76" transform="translate(-336 -3038.156)">
+                        <g id="Grupo_75" data-name="Grupo 75">
+                          <g id="Grupo_74" data-name="Grupo 74">
+                            <g id="Grupo_73" data-name="Grupo 73">
+                              <path id="Trazado_39" data-name="Trazado 39" d="M355.73,3054.586a3.29,3.29,0,1,1-6.58,0,3.063,3.063,0,0,1,.15-.96l-7.35-3.68a3.29,3.29,0,1,1,0-3.86l7.35-3.68a3.126,3.126,0,0,1-.15-.97,3.284,3.284,0,1,1,.63,1.94l-7.35,3.67a3.212,3.212,0,0,1,0,1.94l7.35,3.67a3.287,3.287,0,0,1,5.95,1.93Z" fill="#050505"/>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
                   </div>
                   <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 featured__video__source no__padding">
                     {
                       pageAcf.reel_video
                       ?
                       <video
-                        autoPlay 
-                        loop 
-                        muted
-                        
+                        className="reel_video"
                         playsInline
                         className="mobile-hidden"
+                        poster={pageAcf.reel_video_poster.source_url}
+                        onClick={this.playVideo}
                       >
-                        <source src={pageAcf.reel_video.source_url} type="video/mp4" />
+                        <source src={pageAcf.reel_video.source_url}  type="video/mp4" />
                       </video>
                       :""
                     }

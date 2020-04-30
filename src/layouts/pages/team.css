@@ -121,10 +121,10 @@
         padding: 100px 50px 0;
     }
     .team__member {
-        height: 156.8px;
+        height: 200px;
     }
     .team__section .xsm__font {
-        font-size: 15px;
+        font-size: 16px;
     }
     .team__member__info {
         top: 15px;
@@ -148,5 +148,8 @@
     .team__section .xmd__font {
         font-size: 32px!important;
         line-height: 35px;
+    }
+    .team__copy p{
+        font-size: 14px;
     }
 }
