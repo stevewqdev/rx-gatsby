@@ -6,7 +6,6 @@ import Footer from "../components/footer/index"
 import MainFloatingScreen from "../components/floatingScreens/main/index"
 import MainFloatingMenu from "../components/floatingScreens/menu/index"
 import GetInTouch from "../components/intouch/index"
-import Transition from '../components/transition'
 
 import "../layouts/layout.css"
 import "../fonts/stylesheet.css"
@@ -99,16 +98,14 @@ const Layout = ({ children, location }) => {
         siteAcf={siteDataAcf}
       ></MainFloatingMenu>
       <div className="page__wrapper" id="page__wrapper">
-        <Transition location={window.location}>
-          <MainFloatingScreen siteLogo={siteLogo} siteAcf={siteDataAcf}></MainFloatingScreen>
-          <div id="top"></div>
-            {children}
-          <GetInTouch></GetInTouch>
-          <Footer
-            copyright={siteDataAcf.copyright_info}
-            menu={legalMenu}
-          ></Footer>
-        </Transition>
+      <MainFloatingScreen siteLogo={siteLogo} siteAcf={siteDataAcf}></MainFloatingScreen>
+      <div id="top"></div>
+      <main>{children}</main>
+      <GetInTouch></GetInTouch>
+      <Footer
+        copyright={siteDataAcf.copyright_info}
+        menu={legalMenu}
+      ></Footer>
       </div>
     </>
   )
