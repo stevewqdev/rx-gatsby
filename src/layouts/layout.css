@@ -951,6 +951,8 @@ button{
   top: 0;
   position: absolute;
   cursor: pointer;
+  height: 100%;
+  object-fit: cover;
 }
 .selected__projects.latest__projects  .pgrid__base__thumbnail:hover img{
   width: 100%;
