@@ -47,7 +47,10 @@ class ContactPage extends Component {
                                             </Link>
                                         </div>
                                         <div className="work__list__project__info">
-                                            <p className="bold__font md__font">{project.node.title}</p>
+                                        <p
+                                className="bold__font md__font"
+                                dangerouslySetInnerHTML={{ __html: project.node.title }}
+                            />
                                             <p className="bold__font md__font">{project.node.acf.subtitle}</p>
                                         </div>
                                     </div>

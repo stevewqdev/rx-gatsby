@@ -31,8 +31,6 @@ class ContactPage extends Component {
     let elementId = event.target.classList[1];
     let teamArray = [...document.getElementsByClassName(elementId)];
     
-    console.log(elementId);
-
     if(event.target.classList.contains("active")){
         document.getElementById(elementId).classList.remove("active")
 
@@ -58,7 +56,7 @@ class ContactPage extends Component {
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
-    console.log(pageAcf);
+
     return ( 
       <Layout>
           <Helmet>
@@ -101,7 +99,7 @@ class ContactPage extends Component {
                                 pageAcf.team_members.map((member, index) => 
                                     index < 2
                                     ?
-                                    <div className={`team__member  ${member.category}`} onClick={this.toggleTeamMember}>
+                                    <div className={`team__member  ${member.category}`} key={index} onClick={this.toggleTeamMember}>
                                         <div className={`team__member__background`}>
                                             {
                                                 member.photo
@@ -129,7 +127,7 @@ class ContactPage extends Component {
                                 pageAcf.team_members.map((member, index) => 
                                     index > 1 & index < 7
                                     ?
-                                    <div className={`team__member ${member.category}`} onClick={this.toggleTeamMember}>
+                                    <div className={`team__member ${member.category}`} key={index} onClick={this.toggleTeamMember}>
                                         <div className={`team__member__background`}>
                                             {
                                                 member.photo
@@ -157,7 +155,7 @@ class ContactPage extends Component {
                                 pageAcf.team_members.map((member, index) => 
                                     index > 6 & index < 12
                                     ?
-                                    <div className={`team__member ${member.category}`} onClick={this.toggleTeamMember}>
+                                    <div className={`team__member ${member.category}`} key={index} onClick={this.toggleTeamMember}>
                                         <div className={`team__member__background`}>
                                             {
                                                 member.photo
@@ -185,7 +183,7 @@ class ContactPage extends Component {
                                 pageAcf.team_members.map((member, index) => 
                                     index > 11 & index < 17
                                     ?
-                                    <div className={`team__member ${member.category}`} onClick={this.toggleTeamMember}>
+                                    <div className={`team__member ${member.category}`} key={index} onClick={this.toggleTeamMember}>
                                         <div className={`team__member__background`}>
                                             {
                                                 member.photo

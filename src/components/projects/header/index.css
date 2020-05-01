@@ -1,0 +1,60 @@
+.project__header__component{
+    position: absolute;
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    z-index: 8;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0;
+}
+.project__header__component .container__custom .row {
+    border-top: solid 2px #ffffff;
+}
+.project__header__component.c-f84b2c{
+    background: #f84b2c;
+    color: white;
+}
+.project__header__component .hero__title {
+    margin-top: 20px;
+}
+.project__header__component .hero__title h1{
+    width: 90%;
+    position: absolute;
+    z-index: 2;
+}
+.project__client{
+    margin-top: 35px;
+    margin-bottom: 20px
+}
+.project__info__content{
+    margin-top: 45px;
+    margin-bottom: 20px
+}
+.project__focus{
+    margin-top: 35px;
+    margin-bottom: 10px
+}
+.project__focus__content p{
+    line-height: 25px;
+}
+.project__featured__image{
+    padding-left: 40px;
+    margin-top: 45px;
+}
+.project__info{
+    margin-top: 150px;
+}
+.project__featured__image .gatsby-image-wrapper{
+    height: 100%;
+}
+
+
+@media(max-width: 768px){
+
+    .project__featured__image{
+        padding-left: 0px;
+    }
+}

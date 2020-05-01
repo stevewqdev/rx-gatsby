@@ -618,6 +618,13 @@ body{
     background: #F4F4F4;
 }
 @media(max-width: 4000px){
+  /* .project__template .container__custom{
+    padding: 0 10%;
+    max-width: 1400px;
+  } */
+  .continer-fluid{
+    max-width: 1600px;
+  }
   .container__custom{
     padding: 0 20px;
     max-width: 1250px;
@@ -635,6 +642,9 @@ body{
 
 }
 @media(max-width: 2000px){
+  .continer-fluid{
+    max-width: 100%;
+  }
   .container__custom{
     padding: 0 10%;
   }
@@ -648,6 +658,20 @@ body{
     margin-top: 25%;
     margin-bottom: 15%;
   }
+}
+.full__width__image img{
+  width: 100%;
+  object-fit: cover;
+}
+.simple__copy h4{
+  font-size: 18px;
+  font-weight: bold;
+}
+.simple__copy p{
+  max-width: 300px;
+}
+.mix__blend__screen{
+  mix-blend-mode: screen!important;
 }
 #top{
   position: absolute;

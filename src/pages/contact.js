@@ -55,7 +55,7 @@ class ContactPage extends Component {
               <div className="container container__custom raxo__addresses">
                   {
                     pageAcf.address.map((address, index) =>
-                        <div className="row raxo__theAddress" key={`address-${index}`}>
+                        <div className="row raxo__theAddress" key={`${index}`}>
                             <div className="col-lg-12 no__padding raxo__address__office">
                                 <h3 className="xxl__font bold__font">
                                   {address.office_address}

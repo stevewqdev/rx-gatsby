@@ -10,6 +10,11 @@ export default class MainMenuFloatingScreen extends Component {
     document.getElementById("page__wrapper").classList.remove("hide")
     document.getElementById("menu__full__screen").classList.remove("show")
   }
+  componentDidMount(){
+    [...document.getElementsByClassName("floating-menu")[0].childNodes].map(item => {
+      item.addEventListener("clic", this.toggleMenu);
+    }) 
+  }
   render() {
     return (
       <>

@@ -8,6 +8,10 @@
 .work__list__project.lower__project{
     margin-top: 25%;
 }
+.work__list__project__img img{
+    width: 100%;
+    object-fit: cover;
+}
 .work__list__project__info{
     display: flex;
     color: white;

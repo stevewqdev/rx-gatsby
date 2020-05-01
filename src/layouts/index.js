@@ -6,10 +6,12 @@ import Footer from "../components/footer/index"
 import MainFloatingScreen from "../components/floatingScreens/main/index"
 import MainFloatingMenu from "../components/floatingScreens/menu/index"
 import GetInTouch from "../components/intouch/index"
+import Transition from '../components/transition'
+
 import "../layouts/layout.css"
 import "../fonts/stylesheet.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   // Next query will return the site data, the master acf fields for whole website data, the logo and the favicon.
   const data = useStaticQuery(graphql`
     query {
@@ -97,17 +99,16 @@ const Layout = ({ children }) => {
         siteAcf={siteDataAcf}
       ></MainFloatingMenu>
       <div className="page__wrapper" id="page__wrapper">
-        <MainFloatingScreen
-          siteLogo={siteLogo}
-          siteAcf={siteDataAcf}
-        ></MainFloatingScreen>
-        <div id="top"></div>
-        <main>{children}</main>
-        <GetInTouch></GetInTouch>
-        <Footer
-          copyright={siteDataAcf.copyright_info}
-          menu={legalMenu}
-        ></Footer>
+        <Transition location={window.location}>
+          <MainFloatingScreen siteLogo={siteLogo} siteAcf={siteDataAcf}></MainFloatingScreen>
+          <div id="top"></div>
+            {children}
+          <GetInTouch></GetInTouch>
+          <Footer
+            copyright={siteDataAcf.copyright_info}
+            menu={legalMenu}
+          ></Footer>
+        </Transition>
       </div>
     </>
   )

@@ -13,6 +13,9 @@ class HomePage extends Component {
       event.target.play();
     }
   }
+  componentWillUmount(){
+    alert("done");
+  }
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;

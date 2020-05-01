@@ -26,6 +26,10 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/layouts/index.js`),
+      },
       resolve: `gatsby-source-wordpress`,
       options: {
         name: `images`,
