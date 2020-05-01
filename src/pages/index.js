@@ -202,7 +202,7 @@ class HomePage extends Component {
                     {
                       latestProjects.map((project, index) => 
                         <div className="col-xs-6 col-sm-3 col-md-3 pgrid__base__thumbnail --pr-one no__padding" key={index}>
-                            <Link to={`/project/${project.node.title.toLowerCase()}`}>
+                            <Link to={`/project/${project.node.slug.toLowerCase()}`}>
                               <img src={`${project.node.acf.featured_image.localFile.url}`} alt={`${project.node.title}`}/>
                             </Link>
                             <p className="bold__font md__font">{project.node.title}</p>
@@ -227,6 +227,7 @@ export const pageQuery = graphql`
       edges {
         node {
           title
+          slug
           acf {
             featured_image {
               localFile {

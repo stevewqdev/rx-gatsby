@@ -42,7 +42,7 @@ class ContactPage extends Component {
                                 ? 
                                     <div className="col-xs-6 col-sm-6 col-md-6 pgrid__base__thumbnail --pr-one no__padding work__list__project" key={index}>
                                         <div className="work__list__project__img">
-                                            <Link to={`/project/${project.node.title.toLowerCase()}`}>
+                                            <Link to={`/project/${project.node.sluggit .toLowerCase()}`}>
                                                     <img src={`${project.node.acf.featured_image.localFile.url}`} alt={`${project.node.title}`} />
                                             </Link>
                                         </div>
@@ -57,7 +57,7 @@ class ContactPage extends Component {
                                 :
                                     <div className="col-xs-6 col-sm-6 col-md-6 pgrid__base__thumbnail --pr-one no__padding work__list__project lower__project" key={index} >
                                         <div className="work__list__project__img">
-                                            <Link to={`/project/${project.node.title.toLowerCase()}`}>
+                                            <Link to={`/project/${project.node.slug.toLowerCase()}`}>
                                                     <img src={`${project.node.acf.featured_image.localFile.url}`} alt={`${project.node.title}`} />
                                             </Link>
                                         </div>
@@ -83,6 +83,7 @@ query WorkQuery {
         edges {
             node {
                 title
+                slug
                 acf {
                     subtitle
                     featured_image {
