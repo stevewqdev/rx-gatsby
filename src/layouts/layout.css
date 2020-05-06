@@ -622,12 +622,61 @@ body{
     padding: 0 10%;
     max-width: 1400px;
   } */
+  .white__font{
+    color: #F4F4F4;
+  }
+  .dark__font{
+    color: #707070;
+  }
+  .reg__font{
+      font-family: 'MarkPro-Book';
+      font-weight: normal;
+  }
+  .bold__font{
+      font-weight: bold;
+      font-family: 'MarkPro';
+  }
+  .black__font{
+      font-weight: 900;
+      font-family: 'MarkPro';
+  }
+  .xs__font{
+      font-size: 10px;
+      line-height: 1.4;
+  }
+  .sm__font{
+      font-size: 12px;
+      line-height: 15px;
+  }
+  .xsm__font{
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .md__font{
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .xmd__font{
+    font-size: 40px!important;
+    line-height: 42px;
+    margin: 0;
+  }
+  .lg__font{
+      font-size: 60px!important;
+      line-height: 62px;
+      margin: 0;
+  }
+  .xxl__font{
+    font-size: 110px!important;
+    line-height: 100px;
+    margin: 0;
+  }
   .continer-fluid{
     max-width: 1600px;
   }
   .container__custom{
-    padding: 0 20px;
-    max-width: 1250px;
+    padding: 0px 0px;
+    max-width: 1280px;
   }
   .featured__video {
     margin-top: 10%;
@@ -641,12 +690,14 @@ body{
   }
 
 }
-@media(max-width: 2000px){
+@media(max-width: 1700px){
   .continer-fluid{
     max-width: 100%;
+    
   }
   .container__custom{
     padding: 0 10%;
+    max-width: 1250px;
   }
   .featured__video{
     margin-top: 25%;
@@ -658,6 +709,22 @@ body{
     margin-top: 25%;
     margin-bottom: 15%;
   }
+  .xxl__font{
+    font-size: 80px!important;
+    line-height: 80px;
+    margin: 0;
+  }
+}
+@media(max-width: 1024px){
+  .xxl__font {
+    font-size: 60px!important;
+    line-height: 65px;
+  }
+
+}
+
+.contrast_02{
+  filter: contrast(1.2);
 }
 .full__width__image img{
   width: 100%;
@@ -712,53 +779,7 @@ body{
 .desktop-hidden{
     display: none!important;
 }
-.white__font{
-  color: #F4F4F4;
-}
-.dark__font{
-  color: #707070;
-}
-.reg__font{
-    font-family: 'MarkPro-Book';
-    font-weight: normal;
-}
-.bold__font{
-    font-weight: bold;
-    font-family: 'MarkPro';
-}
-.black__font{
-    font-weight: 900;
-    font-family: 'MarkPro';
-}
-.xs__font{
-    font-size: 10px;
-    line-height: 1.4;
-}
-.sm__font{
-    font-size: 12px;
-    line-height: 1.5;
-}
-.xsm__font{
-  font-size: 15px;
-}
-.md__font{
-    font-size: 18px;
-}
-.xmd__font{
-  font-size: 40px!important;
-  line-height: 42px;
-  margin: 0;
-}
-.lg__font{
-    font-size: 60px!important;
-    line-height: 62px;
-    margin: 0;
-}
-.xxl__font{
-  font-size: 80px!important;
-  line-height: 80px;
-  margin: 0;
-}
+
 .fixed{
     position: fixed;
 }
@@ -989,8 +1010,8 @@ button{
     width: 400px;
   }
   .xxl__font {
-    font-size: 65px!important;
-    line-height: 65px;
+    font-size: 42px!important;
+    line-height: 47px;
   }
   .container__custom {
     max-width: 82%;
@@ -1031,7 +1052,7 @@ button{
       font-size: 9px;
   }
   .container__custom {
-    padding: 0 8.5%;
+    padding: 0 55px;
   }
   .lg__font {
     font-size: 23px!important;
@@ -1067,8 +1088,8 @@ button{
     height: 400px;
   }
   .xxl__font {
-    font-size: 50px!important;
-    line-height: 45px;
+    font-size: 30px!important;
+    line-height: 30px;
   }
   .selected__projects__projects > div {
     padding: 5% 4.5%;

@@ -9,7 +9,11 @@ const Hero = props => {
                 <div className="col-lg-12 hero__title no__padding">
                     {
                         props.title
-                        ?<h1 className="xxl__font">{props.title}</h1>
+                        ?
+                        <h1
+                            className="xxl__font"
+                            dangerouslySetInnerHTML={{ __html: props.title }}
+                        />
                         :""
                     }
                 </div>

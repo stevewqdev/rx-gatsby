@@ -153,9 +153,11 @@ class HomePage extends Component {
                                 </div>
                                 <div className="no__padding selected__projects__projects__right">
                                   <div className="selected__projects__projects__right__title">
-                                    <p className="bold__font md__font">
-                                      {project.post_name}
-                                    </p>
+                                    <p
+                                      className="bold__font md__font"
+                                      dangerouslySetInnerHTML={{ __html: project.post_name }}
+                                    />
+ 
                                   </div>
                                 </div>
                               </div>
@@ -169,7 +171,7 @@ class HomePage extends Component {
               </div>
             </div>
           </section>
-          <section className="selected__projects latest__projects">
+          {/* <section className="selected__projects latest__projects">
             <div className="container container__custom">
               <div className="row">
                 <div className="col-lg-12 no__padding">
@@ -213,7 +215,7 @@ class HomePage extends Component {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
         </div>
       </Layout>
     )

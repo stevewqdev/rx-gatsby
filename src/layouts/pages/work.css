@@ -11,6 +11,7 @@
 .work__list__project__img img{
     width: 100%;
     object-fit: cover;
+    min-height: 490px;
 }
 .work__list__project__info{
     display: flex;
@@ -39,6 +40,16 @@
 .work__list__project__img:hover::after{
     opacity: 0;
 }
+@media(max-width: 1024px){
+    .work__list__project__img img {
+        min-height: 350px;
+    }
+}
+@media(max-width: 768px){
+    .work__list__project__img img {
+        min-height: 250px;
+    }
+}
 @media(max-width: 500px){
     .work__list__project__info .md__font {
         font-size: 14px;
@@ -48,5 +59,8 @@
     }
     .work__list {
         margin-bottom: 50px;
+    }
+    .work__list__project__img img {
+        min-height: 130px;
     }
 }

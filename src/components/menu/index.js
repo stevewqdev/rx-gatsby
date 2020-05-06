@@ -16,14 +16,7 @@ const MainMenu = props => {
               classes
               attr_title
               wordpress_id
-              child_items {
-                attr_title
-                classes
-                title
-                target
-                url
-                wordpress_id
-              }
+
             }
           }
         }
@@ -46,7 +39,7 @@ const MainMenu = props => {
           <Link to={menuItem.url} key={`${index + 1}-${menuItems.length}`}>
             {menuItem.title}
           </Link>
-          {menuItem.child_items
+          {/* {menuItem.child_items
             ? menuItem.child_items.map((subItem, index) => (
                 <Link
                   to={subItem.url}
@@ -56,7 +49,7 @@ const MainMenu = props => {
                   {subItem.title}
                 </Link>
               ))
-            : ""}
+            : ""} */}
           {props.area === "footer" ? (
             <>{index + 1 < menuItems.length ? <span> - </span> : ""}</>
           ) : (

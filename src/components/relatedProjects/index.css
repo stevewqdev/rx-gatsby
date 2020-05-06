@@ -1,0 +1,41 @@
+.related__projects{
+    padding: 210px 0;
+    color: white;
+    background: black;
+    margin-top: 200px;
+}
+.related__projects h3{
+    position: relative;
+    left: -5px;
+}
+.related__section__title{
+    margin-bottom: 80px;
+}
+.related__project__thumbnail{
+    position: relative;
+    top: 40px;
+}
+.related__projects a{
+    color: white;
+}
+.related__projects img{
+    opacity: 0.4!important;
+}
+.related__projects img:hover{
+    opacity: 1!important;
+}
+@media(max-width: 500px){
+    .related__projects {
+        padding: 100px 20px;
+    }
+    .related__section__title {
+        margin-bottom: 40px;
+    }
+    .related__projects {
+        margin-top: 120px;
+        margin-bottom: 55px;
+    }
+    .related__projects img {
+        opacity: 1!important;
+    }
+}

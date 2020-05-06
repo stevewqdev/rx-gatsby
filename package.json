@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@u-wave/react-vimeo": "^0.8.3",
+    "@vimeo/player": "^2.11.0",
     "bootstrap": "^4.4.1",
     "dotenv": "^8.2.0",
     "gatsby": "^2.20.12",

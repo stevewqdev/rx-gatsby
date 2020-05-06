@@ -5,20 +5,67 @@ import {Helmet} from "react-helmet";
 import ProjectHero  from "../../components/projects/header/index"
 import Img from "gatsby-image"
 import "../../layouts/pages/projects/mina-and-jack.css"
+import Vimeo from '@u-wave/react-vimeo';
+import RelatedProjects from "../../components/relatedProjects/index"
 
 class MinaAndJack extends Component {
- componentDidMount(){
-   document.querySelectorAll(".floating__web__info")[1].classList.add("mix__blend__screen");
- }
- render() {
+ constructor(props) {
+  super(props);
+
+    this.state = {
+      videoIndex: 0,
+      volume: 1,
+      paused: false,
+    };
+
+    this.handlePause = this.handlePause.bind(this);
+    this.handlePlayerPause = this.handlePlayerPause.bind(this);
+    this.handlePlayerPlay = this.handlePlayerPlay.bind(this);
+    this.handleVolume = this.handleVolume.bind(this);
+  }
+ 
+  selectVideo(index) {
+    this.setState({ videoIndex: index });
+  }
+
+  handlePause(event) {
+    this.setState({
+      paused: event.target.checked,
+    });
+  }
+
+  handlePlayerPause() {
+    document.querySelectorAll(".video__poster")[0].classList.remove("fade__out__video");
+    this.setState({ paused: true });
+  }
+
+  handlePlayerPlay() {
+    document.querySelectorAll(".video__poster")[0].classList.add("fade__out__video");
+    this.setState({ paused: false });
+   
+  }
+
+  handleVolume(event) {
+    this.setState({
+      volume: parseFloat(event.target.value),
+    });
+  }
+
+  componentDidMount(){
+    document.querySelectorAll(".floating__web__info")[1].classList.add("mix__blend__screen");
+  }
+
+   
+  render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
-    
-    console.log(pageData, pageAcf);
+    const { videoIndex, paused, volume } = this.state;
+
+    console.log(pageAcf.video_iframe);
 
     return ( 
       <Layout>
-        <div className="project__template">
+        <div className="project__template ">
           <Helmet>
             <meta charSet="utf-8" />
             <meta name="description" content={ pageData.yoast_meta.yoast_wpseo_metadesc }/>
@@ -26,8 +73,8 @@ class MinaAndJack extends Component {
             <link rel="canonical" href={ pageData.yoast_meta.yoast_wpseo_canonical} />
           </Helmet>
 
-          <ProjectHero
-            title={pageData.title}
+          <ProjectHero 
+            title={pageAcf.frontend_title}
             clientName={pageAcf.client}
             projectInfo={pageData.content}
             projectFocus={pageAcf.project_focus}
@@ -37,7 +84,7 @@ class MinaAndJack extends Component {
 
           </ProjectHero>
 
-          <section id="two" className="section__one">
+          <section id="two" className="section__one contrast_02">
             <div className="container container__custom ">
               <div className="row">
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 no__padding simple__copy">
@@ -50,12 +97,12 @@ class MinaAndJack extends Component {
             </div>
           </section>
 
-          <section id="three" className="section__two">
+          <section id="three" className="section__two contrast_02">
             <div className="container container__custom">
               <div className="row">
                 {
-                  pageAcf.images.map(image => 
-                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 gallery no__padding">
+                  pageAcf.images.map((image, index) => 
+                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 gallery no__padding" key={index}>
                       <img src={image} alt="Project Image"/>
                     </div>
                   )
@@ -86,13 +133,14 @@ class MinaAndJack extends Component {
             </div>
           </section>
 
-          <div className="section__three " id="four">
+          <div className="section__three contrast_02" id="four">
             <div className="container container__custom">
               <div className="row section__three__about">
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 full__width__image no__padding">
-                  <h1 className="xxl__font">
-                    {pageAcf.about}
-                  </h1>
+                  <h1
+                    className="xxl__font"
+                    dangerouslySetInnerHTML={{ __html: pageAcf.about }}
+                  />
                 </div>
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 full__width__image no__padding section__three__about__image">
                   <Img fluid={pageAcf.about_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
@@ -101,18 +149,38 @@ class MinaAndJack extends Component {
             </div>
           </div>
 
-          <section id="five" className="section__five">
+          <section id="five" className="section__five contrast_02">
             <div className="container container__custom ">
               <div className="row">
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 no__padding simple__copy">
                   <div
-                    className="sm__font reg__font"
+                    className="video__copy sm__font reg__font"
                     dangerouslySetInnerHTML={{ __html: pageAcf.video_copy }}
                   />
+                </div>
+                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 no__padding simple__copy">
+
                   {
-                    pageAcf.video_iframe
-                    ? <div className="video__wrapper">
-                        {pageAcf.video_iframe}
+                    pageAcf.video_iframe  
+                    ? 
+                      <div className="iframe__video__wrapper">
+
+                        <div className="the__video" onClick={this.playVideo}>
+                          <div className="video__poster"
+                                onPause={this.handlePlayerPause}
+                                onPlay={this.handlePlayerPlay}
+                          >
+                          </div>
+
+                          <Vimeo
+                            video={pageAcf.video_iframe}
+
+                            volume={volume}
+                            paused={paused}
+                            onPause={this.handlePlayerPause}
+                            onPlay={this.handlePlayerPlay}
+                          />
+                        </div>
                       </div>
                     : ""
                   }
@@ -121,7 +189,7 @@ class MinaAndJack extends Component {
             </div>
           </section>
 
-          <section id="six" className="section__six">
+          <section id="six" className="section__six contrast_02">
             <div className="container container__custom">
               <div className="row">
 
@@ -137,8 +205,8 @@ class MinaAndJack extends Component {
                 </div>
 
                 {
-                  pageAcf.ssix_gallery.map(image => 
-                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 gallery no__padding full__width__image four__square__gallery">
+                  pageAcf.ssix_gallery.map((image, index) => 
+                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 gallery no__padding full__width__image four__square__gallery" key={index}>
                       <img src={image} alt="Project Image"/>
                     </div>
                   )
@@ -147,7 +215,7 @@ class MinaAndJack extends Component {
             </div>
           </section>
 
-          <section id="seven" className="section__seven">
+          <section id="seven" className="section__seven contrast_02">
             <div className="container container__custom">
               <div className="row">
                 <div className="col-xs-12 col-sm-12 col-md-5 col-lg-3 no__padding  section__two__copy inverse copy__on__top">
@@ -161,8 +229,8 @@ class MinaAndJack extends Component {
                   <Img fluid={pageAcf.sseven_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                 </div>
                 {
-                  pageAcf.sseven_gallery.map(image => 
-                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 gallery no__padding full__width__image four__square__gallery">
+                  pageAcf.sseven_gallery.map((image, index) => 
+                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 gallery no__padding full__width__image four__square__gallery" key={index}>
                       <img src={image} alt="Project Image"/>
                     </div>
                   )
@@ -171,7 +239,7 @@ class MinaAndJack extends Component {
             </div>
           </section>
 
-          <section id="eight" className="section__eight">
+          <section id="eight" className="section__eight contrast_02">
             <div className="container container__custom">
               <div className="row">
 
@@ -187,8 +255,8 @@ class MinaAndJack extends Component {
                 </div>
 
                 {
-                  pageAcf.seight_gallery.map(image => 
-                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 gallery no__padding full__width__image four__square__gallery">
+                  pageAcf.seight_gallery.map((image, index) => 
+                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 gallery no__padding full__width__image four__square__gallery" key={index}>
                       <img src={image} alt="Project Image"/>
                     </div>
                   )
@@ -197,7 +265,7 @@ class MinaAndJack extends Component {
             </div>
           </section>
 
-          <section id="nine" className="section__nine">
+          <section id="nine" className="section__nine contrast_02">
             <div className="container container__custom">
               <div className="row">
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 section__nine__floating__wrapper no__padding">
@@ -213,12 +281,12 @@ class MinaAndJack extends Component {
             </div>
           </section>
 
-          <section id="ten" className="section__ten">
+          <section id="ten" className="section__ten contrast_02">
             <div className="container container__custom">
               <div className="row">
                 {
-                  pageAcf.snine_gallery.map(image => 
-                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 gallery no__padding full__width__image four__square__gallery">
+                  pageAcf.snine_gallery.map((image, index) => 
+                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 gallery no__padding full__width__image four__square__gallery" key={index}>
                       <img src={image} alt="Project Image"/>
                     </div>
                   )
@@ -226,6 +294,13 @@ class MinaAndJack extends Component {
               </div>
             </div>
           </section>
+
+          <RelatedProjects 
+            relatedcopy={pageAcf.related_extra_copy}
+            relatedproject={pageAcf.related_project.post_title}
+            relatedthumbnail={pageAcf.related_project_thumbnail}
+            relatedprojectlink={pageAcf.related_project_url}
+          ></RelatedProjects>
 
         </div>
       </Layout>
@@ -246,6 +321,21 @@ query MinaAndJackPageQuery {
             about
             about_image {
               localFile {
+                childImageSharp {
+                  fluid(maxWidth: 2000, quality: 100) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+                url
+              }
+            }
+            related_extra_copy
+            related_project {
+              post_title
+            }
+            related_project_url
+            related_project_thumbnail {
+              localFile{
                 childImageSharp {
                   fluid(maxWidth: 2000, quality: 100) {
                     ...GatsbyImageSharpFluid_withWebp
@@ -279,8 +369,19 @@ query MinaAndJackPageQuery {
             stwo_copy
             stwo_copy_second
             subtitle
+            frontend_title
             video_copy
             video_iframe
+            video_iframe_poster{
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 2000, quality: 100) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+                url
+              }
+            }
             featured_image {
               localFile {
                 childImageSharp {

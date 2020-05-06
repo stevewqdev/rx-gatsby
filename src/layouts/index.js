@@ -56,14 +56,6 @@ const Layout = ({ children, location }) => {
               classes
               attr_title
               wordpress_id
-              child_items {
-                attr_title
-                classes
-                title
-                target
-                url
-                wordpress_id
-              }
             }
           }
         }
