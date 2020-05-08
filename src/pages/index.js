@@ -13,8 +13,8 @@ class HomePage extends Component {
       event.target.play();
     }
   }
-  componentWillUmount(){
-    alert("done");
+  componentDidMount(){
+    document.querySelectorAll(".footer")[0].classList.add("dark");
   }
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
@@ -139,7 +139,7 @@ class HomePage extends Component {
                     <div className="row">
                       {
                         pageAcf.sp_projects.map((project, index) => 
-                          <div key={index} className="col-xs-12 col-sm-6 col-md-6 col-lg-6 no__padding selected__projects__projects --project">
+                          <div key={index} className="col-xs-6 col-sm-6 col-md-6 col-lg-6 no__padding selected__projects__projects --project">
                             <div className="row">
                               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 no__padding selected__projects__projects__left">
                                 <div className="selected__projects__projects__left__img">

@@ -41,13 +41,11 @@
 }
 @media(max-width:500px){
     .raxo__address__copy {
-        margin-top: 10px;
-        order: 2;
+        margin-top: 100px;
     }
     .raxo__address__map {
         padding-left: 0px;
-        order: 1;
-        margin-top: 10px;
+        margin-top: 80px;
     }
     .raxo__address__map iframe{
         width: 100%;
@@ -55,5 +53,14 @@
     .raxo__theAddress{
         display: flex;
         flex-direction: column;
+    }
+    .raxo__info {
+        margin-top: -40px;
+    }
+    .raxo__theAddress {
+        margin-bottom: 0px;
+    }
+    .raxo__addresses {
+        margin-bottom: 50px;
     }
 }

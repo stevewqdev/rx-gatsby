@@ -8,11 +8,13 @@ export default class MainFloatingScreen extends Component {
   toggleMenu() {
     document.getElementById("page__wrapper").classList.add("hide")
     document.getElementById("menu__full__screen").classList.add("show")
+    document.querySelectorAll(".main__floating__menu .brand__menu")[0].classList.add("hidden");
+    document.querySelectorAll(".menu__full__screen .brand__menu")[0].classList.remove("hidden");
   }
   render() {
     return (
       <>
-        <div className="container-fluid floating__web__info relative full__height sm__font">
+        <div className="container-fluid floating__web__info main__floating__menu relative full__height sm__font">
           <div className="row">
             <div
               className="col-xs-12 col-sm-2 col-md-2 col-lg-2 brand relative"

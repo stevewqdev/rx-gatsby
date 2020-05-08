@@ -17,3 +17,9 @@
 .work__areas__area{
     padding-top: 1.1%;
 }
+@media(max-width:500px)
+{
+.work__areas__area{
+  display: none;
+}
+}

@@ -5,8 +5,13 @@
     color: white;
 }
 #we_can_help .lg__font{
-    font-size: 45px!important;
-    line-height: 47px;
+    font-size: 60px!important;
+    line-height: 62px;
+}
+#we_can_help .lg__font img{
+    position: relative;
+    top: -8px;
+    left: 5px;
 }
 .services__list{
     margin-top: 70px;
@@ -17,18 +22,46 @@
 }
 
 .services__list__subtitle{
-    max-width: 50%;
-    padding: 25px 0;
+    max-width: 110px;
+    padding: 35px 0 25px;
 }
 #columns{
-    background: black;
+    background: linear-gradient(to right, black 50%, black 50%);
     color: white;
     min-height: 100vh;
+    position: relative;
+}
+.columns__original{
+    background: linear-gradient(to right, black 50%, black 50%)!important;
+}
+.columns__mustard{
+    background: linear-gradient(to right, #f2ab3d 50%, black 50%)!important;
+    transition: all ease-in-out 0s!important;
 }
 .colored__column{
-    padding: 10% 10px!important;
+    background: black;
+}
+.colored__column{
+    padding: 10% 20px!important;
     min-height: 100vh;
-    transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+}
+.service__list__3 .services__list__items .row{
+    position: relative;
+}
+.service__list__3 .services__list__items .row p:last-child{
+    position: absolute;
+    font-size: 13px;
+    color: white;
+    font-family: Roboto;
+    font-weight: 400;
+    width: 100px;
+    line-height: 16px;
+    right: 22%;
+    bottom: 5px;
+}
+.services__list__items .row a{
+    color: white;
+    text-decoration: none;
 }
 .colored__column h4{
     font-size: 40px;
@@ -36,30 +69,97 @@
     font-weight:600!important;
     font-family: 'MarkPro';
     margin: 0px;
-    transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
-    color: white;
+    color: black;
     padding: 0 15px;
     position: relative;
     z-index: 2;
+    opacity: 0;
+    transition: all ease-in-out 0.2s!important;
 }
 .colored__column p{
     font-size: 12px;
-    height: 0;
-    overflow: hidden;
-    transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
-    color: white;
+    height: auto;
+    color: black;
     padding: 0 15px;
     position: relative;
     z-index: 2;
+    opacity: 0;
+    margin-top: 20px;
+    transition: all ease-in-out 0.2s!important;
+
+}
+.colored__column:hover p{
+    height: auto;
+    color: black;
+    margin: 20px 0px;opacity: 1;
 }
 .colored__column:hover h4{
     color: black;
+    opacity: 1;
 }
-.colored__column:hover p{
-    height: 130px;
-    color: black;
-    margin: 20px 0px;
+.colored__floating{
+    position: absolute;
+    z-index: 2;
+    max-width: 800px;
+    top: 130px;
+    width: 100%;
+    pointer-events: none;
+    transition: all ease-in-out 0.2s!important;
+    z-index: 5;
 }
+.service__list__4{
+    opacity: 0;
+}
+.service__list__5{
+    margin-top: 110px!important;
+}
+.column-1, .column-2, .column-3{
+    position: relative;
+}
+.colored__sub__svg h4{
+    font-size: 13px;
+    color: white;
+    opacity: 1!important;
+    font-family: Roboto;
+    font-weight: 400!important;
+}
+.colored__column:hover .colored__sub__svg h4{
+    color: white!important;
+}
+.c-f2ab3d__column .colored__sub__svg h4{
+    opacity: 0!important;
+}
+.c-73faeb__column .colored__sub__svg h4{
+    opacity: 0!important;
+}
+.c-ea3464__column .colored__sub__svg h4{
+    opacity: 0!important;
+}
+.c-1d61f5__column .colored__sub__svg h4{
+    opacity: 0!important;
+}
+.colored__sub__svg p{
+    display: none;
+}
+.colored__floating__hidden{
+    opacity: 0!important;
+}
+.location__icon{
+    position: relative;
+    left: -15px;
+    top: 50px;
+}
+.colored__floating h4{
+    font-size: 60px;
+    line-height: 62px;
+    font-weight: bold;
+    font-family: 'MarkPro';
+}
+.colored__floating p{
+    margin-top: 10px;
+    max-width:650px;
+}
+
 .colored__column{
     overflow: hidden;
     position: relative;
@@ -68,32 +168,31 @@
     content: "";
     width: 100%;
     height: 100%;
-    bottom: -1000px;
+    bottom: 0px;
     left: 0;
     right: 0;
-    transition: all 0.7s cubic-bezier(0.83, 0, 0.17, 1);
     z-index: 1;
     position: absolute;
 }
-.colored__column.c-f2ab3d:hover:after{
-    position: absolute;
+.c-f2ab3d__column{
     bottom:0px;
     background: #f2ab3d;
+    transition: all ease-in-out 0s!important;
 }
-.colored__column.c-73faeb:hover:after {
-    position: absolute;
+.c-73faeb__column {
     bottom:0px;
     background: #73faeb;
+    transition: all ease-in-out 0s!important;
 }
-.colored__column.c-ea3464:hover:after{
-    position: absolute;
+.c-ea3464__column{
     bottom:0px;
     background: #ea3464;
+    transition: all ease-in-out 0s!important;
 }
-.colored__column.c-1d61f5:hover:after{
-    position: absolute;
+.c-1d61f5__column{
     bottom:0px;
     background: #1d61f5;
+    transition: all ease-in-out 0s!important;
 }
 .offices__one{
     margin-top: 25%;
@@ -107,6 +206,10 @@
 }
 .offices__two__copy{
     margin-top: 15%;
+}
+.offices__two__copy p{
+    padding-right: 30px;
+
 }
 .offices__two__copy h4{
     font-size: 18px;
@@ -238,33 +341,54 @@
 }
 .column__svg{
     position: absolute;
-    bottom: 0;
+    bottom: 10%;
     width: 100%;
-    z-index: 9;
+    z-index: 11;
     left: 0;
+}
+.column__svg svg > *{
+    pointer-events: none;
 }
 .column__svg svg path, .column__svg svg polygon, .column__svg svg circle{
     fill: white;
 }
-.colored__column:hover .column__svg svg path,
-.colored__column:hover .column__svg svg polygon,
-.colored__column:hover .column__svg svg circle {
-    fill: black;
+.colored__column__svg__black  path,
+.colored__column__svg__black  polygon,
+.colored__column__svg__black  circle {
+    fill: black!important;
+    transition: all ease-in-out 0.2s!important;
 }
 .services__list.c-f2ab3d:hover .services__list__items .row p:last-child{
     color: #f2ab3d;
 }
+.services__list.c-f2ab3d:hover .services__list__items .row img{
+    filter: invert(29%) sepia(92%) saturate(450%) hue-rotate(331deg) brightness(98%) contrast(93%);
+}
 .services__list.c-73faeb:hover .services__list__items .row p:last-child{
     color: #73faeb;
+}
+.services__list.c-73faeb:hover .services__list__items .row img{
+    filter: invert(84%) sepia(31%) saturate(612%) hue-rotate(110deg) brightness(105%) contrast(96%);
 }
 .services__list.c-ea3464:hover .services__list__items .row p:last-child{
     color: #ea3464;
 }
+.services__list.c-ea3464:hover .services__list__items .row  img{
+    filter: invert(78%) sepia(72%) saturate(2119%) hue-rotate(322deg) brightness(95%) contrast(93%);
+}
 .services__list.c-1d61f5:hover .services__list__items .row p:last-child{
     color: #1d61f5;
 }
+.services__list.c-1d61f5:hover .services__list__items .row img{
+    filter: invert(87%) sepia(80%) saturate(4616%) hue-rotate(219deg) brightness(100%) contrast(92%);
+}
 #recognition .recognition__one__copy{
     display: block;
+}
+@media(max-width: 1440px){
+    .service__list__3 .services__list__items .row p:last-child {
+        right: 5%;
+    }
 }
 @media(max-width: 1024px){
     .offices__three {
@@ -272,6 +396,17 @@
     }
     .services__list.service__list__3{
         margin-top: 50%;
+    }
+    #we_can_help .lg__font {
+        font-size: 50px!important;
+        line-height: 52px;
+    }
+    .service__list__3 .services__list__items .row p:last-child {
+        right: 0%;
+        position: static;
+        bottom: -20px;
+        flex-direction: column;
+        left: 0px;
     }
 }
 @media(max-width: 768px){
@@ -283,28 +418,61 @@
         font-size: 25px!important;
         line-height: 37px;
     }
+    #we_can_help .lg__font img {
+        top: -6px;
+        height: 25px;
+        width: auto;
+    }
+    .service__list__3 .services__list__items .row{
+        display: flex;
+        flex-direction: column;
+    }
+    .service__list__3 .services__list__items .row p:last-child {
+margin-top: 20px;    }
 }
 @media(max-width: 500px){
     #columns .container__custom{
         padding: 0;
     }
+    .offices__one{
+        display: none;
+    }
     #columns .colored__column {
-        padding: 60px 0px 0!important;
+        padding: 20px 0px!important;
         height: auto;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
+        min-height: auto;
+    }
+    #columns .colored__column .colored__column__copy p{
+        padding-right: 50px;
+    }
+    #columns {
+        height: auto;
+        padding-bottom: 100px;
+    }
+    .colored__columns__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 50px 40px;
+    }
+    .colored__sub__svg{
+        display: none;
     }
     .colored__column h4 {
-        font-size: 40px;
-        line-height: 50px!important;
+        font-size: 24px;
+        line-height: 32px;
     }
     #columns{
         height: auto;
     }
-    #columns .colored__column__copy{
-        margin-bottom: 50px;
-        padding: 0 50px;
+    .column__svg p{
+        display: none!important;
     }
+    .column__svg h4{
+        font-size: 13px;
+    }
+
     .colored__column p{
         height: auto!important;
         display: block;
@@ -313,39 +481,42 @@
         min-height: auto;
         overflow: unset;
     }
-    .column__svg{
-        position: relative;
-        order: 2;
-    }
-    .colored__column.c-f2ab3d:after {
-        bottom: 0px;
-        background: #f2ab3d;
-    }
-    .colored__column.c-73faeb:after {
-        bottom: 0px;
-        background: #73faeb;
-    }
-    .colored__column.c-ea3464:after {
-        bottom: 0px;
-        background: #ea3464;
-    }
-    .colored__column.c-1d61f5:after {
-        bottom: 0px;
-        background: #1d61f5;
-    }
+    
 
     .colored__column p, .colored__column h4{
         color: black;
         position: relative;
         z-index: 5;
     }
-    .colored__column .column__svg svg path,
-    .colored__column .column__svg svg polygon,
-    .colored__column .column__svg svg circle {
-        fill: black;
+    .column__svg {
+        bottom: unset;
+        position: relative;
     }
-    .offices__two__photo{
-        padding: 60px 0;
+    .colored__floating {
+        position: relative;
+        padding: 0 56px;
+        top: 0;
+        margin-top: 100px;
+    }
+    .colored__floating .row{
+        border-top: solid 2px #ffffff;
+        padding-top: 15px;
+    }
+    .colored__column h4{
+        opacity: 1;
+        color: white;
+    }
+    .colored__column p{
+        color: white;
+        opacity: 1;
+        font-size:8.5px;
+    }
+    .colored__floating h4 {
+        font-size: 37px;
+        line-height: 40px;
+    }
+    .offices__two__photo {
+        padding: 30px 0 30px;
     }
     .offices__buttons {
         margin-top: 50px;
@@ -361,30 +532,67 @@
         font-size: 33px!important;
         line-height: 35px;
     }
-    .services__list.lower__list{
-        margin-top: 70px;
+    .services__list.lower__list {
+        margin-top: 100%;
     }
     .services__list__items .row{
         display: flex;
         flex-direction: column;
     }
+    .service__list__5 {
+        margin-top: 35px!important;
+    }
+    #we_can_help .lg__font img {
+        left: 2px;
+    }
+    .recognition__list__copy{
+        display: none!important;
+    }
+    .recognition__list__two{
+        display: none!important;
+    }
+    .recognition__wrapper {
+        padding-bottom: 0%;
+    }
+    .recognition__list__item.active h3 {
+        color: white;
+    }
+    .select__clients{
+        display: none!important;
+    }
+    #we_can_help .lg__font {
+        font-size: 25px!important;
+        line-height: 29px;
+    }
     .services__list.c-f2ab3d .services__list__items .row p:last-child{
         color: #f2ab3d;
+    }
+    .services__list.c-f2ab3d .services__list__items .row img{
+        filter: invert(29%) sepia(92%) saturate(450%) hue-rotate(331deg) brightness(98%) contrast(93%);
     }
     .services__list.c-73faeb .services__list__items .row p:last-child{
         color: #73faeb;
     }
+    .services__list.c-73faeb .services__list__items .row img{
+        filter: invert(84%) sepia(31%) saturate(612%) hue-rotate(110deg) brightness(105%) contrast(96%);
+    }
     .services__list.c-ea3464 .services__list__items .row p:last-child{
         color: #ea3464;
+    }
+    .services__list.c-ea3464 .services__list__items .row  img{
+        filter: invert(78%) sepia(72%) saturate(2119%) hue-rotate(322deg) brightness(95%) contrast(93%);
     }
     .services__list.c-1d61f5 .services__list__items .row p:last-child{
         color: #1d61f5;
     }
+    .services__list.c-1d61f5 .services__list__items .row img{
+        filter: invert(87%) sepia(80%) saturate(4616%) hue-rotate(219deg) brightness(100%) contrast(92%);
+    }
     .offices__two__copy {
         margin-top: 5%;
     }
-    #clients {
-        margin-bottom: 50px;
+    .location__icon{
+        display: none;
     }
     .client__logo img {
         width: 120px;

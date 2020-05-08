@@ -31,6 +31,7 @@ const Layout = ({ children, location }) => {
           copyright_info
           contact_email
           contact_phone
+          management_agreements_info
         }
       }
       logo: allWordpressWpMedia(filter: { title: { eq: "logo" } }) {
@@ -86,6 +87,7 @@ const Layout = ({ children, location }) => {
         <html lang="en" />
       </Helmet>
       <MainFloatingMenu
+        agreements={siteDataAcf.management_agreements_info}
         siteLogo={siteLogo}
         siteAcf={siteDataAcf}
       ></MainFloatingMenu>

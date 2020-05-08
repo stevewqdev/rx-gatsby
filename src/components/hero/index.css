@@ -32,15 +32,21 @@
 }
 .hero__component .hero__extra__info{
     position: relative;
-    top: 45px;
+    top: 100px;
 }
 .hero__component .hero__title{
     margin-top: 50px;
 }
 @media(max-width: 500px){
     .hero__component .xxl__font{
-        font-size: 40px!important;
-        line-height: 40px;
+        font-size: 35px!important;
+        line-height: 35px;
+    }
+    .hero__component{
+        align-items: unset;
+    }
+    .hero__component .xxl__font br{
+        display: none;
     }
     .hero__component .container__custom {
         margin-top: 50%;
@@ -54,6 +60,13 @@
     }
     .hero__component .hero__extra__info {
         position: relative;
-        top: 15px;
+        top: 190px;
+    }
+}
+@media(max-width: 360px){
+    .hero__component .hero__extra__info {
+        position: relative;
+        top: 0;
+        margin-top: 90px;
     }
 }

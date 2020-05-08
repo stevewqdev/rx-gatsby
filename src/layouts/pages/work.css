@@ -1,6 +1,6 @@
 .work__list{
     background: #000000;
-    padding: 20% 0;
+    padding: 15% 0;
 }
 .work__list__project{
     padding: 0 5px;
@@ -58,9 +58,20 @@
         flex-direction: column;
     }
     .work__list {
-        margin-bottom: 50px;
+        margin-bottom: 0px;
+        padding: 15px 0 70px;
     }
     .work__list__project__img img {
-        min-height: 130px;
+        min-height: 170px;
+    }
+    .work__list__project.lower__project {
+        margin-top: 0%;
+    }
+    .work__list__project__info{
+        display: none;
+    }
+    .work__list__project__img {
+
+        margin-bottom: 10px;
     }
 }

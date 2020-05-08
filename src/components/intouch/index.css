@@ -19,10 +19,13 @@
     letter-spacing: 0.001em;
 }
 @media(max-width:500px){
+    .get__in__touch__wrapper{
+        display: none;
+    }
     .get_in_touch .row{
         flex-wrap: unset;
     }
     .get_in_touch .row {
-        padding: 0px 40px 60px;
+        padding: 40px 40px;
     }
 }

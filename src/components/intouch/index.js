@@ -22,6 +22,7 @@ const GetInTouch = props => {
   }
 
   return (
+    <div className="get__in__touch__wrapper">   
     <div className="container container__custom get_in_touch" id="get_in_touch">
       <div className="row">
         <div className="col-xs-9 col-sm-9 col-md-9 col-lg-9 no__padding">
@@ -56,6 +57,7 @@ const GetInTouch = props => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }

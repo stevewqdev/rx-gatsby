@@ -21,30 +21,70 @@ const About = props => {
   if (data.wordpressAcfOptions) {
     aboutItems = data.wordpressAcfOptions.options
   }
-
+  
+  if(props.customData){
+    aboutItems = [...props.customData];
+  }
   return (
     <section id="about">
       <div className="container container__custom about__wrapper">
         <div className="row ">
           <div className="col-lg-12 no__padding">
-            <div className="separator --black "></div>
+            {
+              props.customData
+              ? <div className="separator --white "></div>
+              : <div className="separator --black "></div>
+            }
+            
           </div>
 
-          {aboutItems.about_areas.map((item, index) => (
-            <div
-              className="col-xs-4 col-sm-3 col-md-3 work__areas__area no__padding"
-              key={index}
-            >
-              <p className="bold__font md__font">{item.title}</p>
-            </div>
-          ))}
+          {
+            props.customData
+            ?
+              <>
+              {
+              aboutItems.map((item, index) => (
+                <div
+                  className="col-xs-3 col-sm-3 col-md-3 work__areas__area no__padding"
+                  key={index}
+                >
+                  <p className="bold__font md__font">{item.title}</p>
+                </div>
+              ))
+              }
+              </>
+            :
+              <>
+              {
+              aboutItems.about_areas.map((item, index) => (
+                <div
+                  className="col-xs-3 col-sm-3 col-md-3 work__areas__area no__padding"
+                  key={index}
+                >
+                  <p className="bold__font md__font">{item.title}</p>
+                </div>
+              ))
+              }
+              </>
+          }
 
-          <div className="col-xs-4 col-sm-3 col-md-3 work__areas__area"></div>
+          <div className="col-xs-3 col-sm-3 col-md-3 work__areas__area"></div>
         </div>
-        <div
-          className="row about__rx bold__font "
-          dangerouslySetInnerHTML={{ __html: aboutItems.about_copy }}
-        />
+        {
+          props.agreementCopy
+          ? <div className="row about__rx ">
+              <h2
+                className="bold__font lg__font"
+                dangerouslySetInnerHTML={{ __html: props.agreementCopy }}
+              />
+            </div>
+
+          : <div
+              className="row about__rx bold__font "
+              dangerouslySetInnerHTML={{ __html: aboutItems.about_copy }}
+            />
+        }
+
       </div>
     </section>
   )

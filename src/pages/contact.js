@@ -8,6 +8,9 @@ import {Helmet} from "react-helmet";
 import "../layouts/pages/contact.css"
 
 class ContactPage extends Component {
+  componentDidMount(){
+    document.querySelectorAll(".footer")[0].classList.add("dark");
+  }
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;

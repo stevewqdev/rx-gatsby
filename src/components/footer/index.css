@@ -1,12 +1,15 @@
 
 footer{
-    padding: 20px 0;
+    padding: 40px 0;
     background: #000000;
     position: relative;
 }
 footer a{
    text-decoration: none;
    color: #f4f4f4;
+}
+.mobile__bottom__info{
+    display: none;
 }
 footer .menu__subitem{
     display: none;
@@ -26,11 +29,39 @@ footer .menu__subitem{
 .legal__menu a{
     margin-left: 5px;
 }
-@media(max-width: 500px){
-    footer {
-        padding: 50px 0 20px;
-    }
 
+.get__in__touch__wrapper {
+   background: #EDEDED;
+}
+.legal__menu{
+    text-transform: uppercase;
+}
+.footer__menu a{
+    position: relative;
+}
+.footer__menu a:after{
+    content: "-";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -8px;
+    margin: auto;
+    color: white;
+    z-index: 9999;
+}
+.footer__menu a:last-child:after{
+    display: none;
+}
+@media(max-width: 500px){
+    .mobile__bottom__info{
+        display: flex;
+    }
+    footer {
+        padding: 0px;
+    }
+    footer .col-xs-12{
+        display: none!important;
+    }
     .get_in_touch {
         padding: 30px 15px!important;
     }
@@ -51,13 +82,23 @@ footer .menu__subitem{
     }
     .mobile__bottom__info .col-xs-6{
         width: 50%;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+    footer{
+        background: #EDEDED;
+        color: black;
+    }
+    .mobile__copyright{
+        color: black;
     }
     .mobile__bottom__info .brand__social{
         display: flex!important;
         flex-direction: unset!important;
     }
     .mobile__bottom__info .brand__social a{
-        margin-left: 15px;
+        margin: 0 35px 0 0;
     }
     .mobile__bottom__info{
         padding: 30px 0;
@@ -77,10 +118,26 @@ footer .menu__subitem{
         position: absolute;
         bottom: -10px;
         height: 2px;
-        background: #F4F4F4;
+        background: #000000;
     }
     footer .sm__font{
         font-size: 16px;
+    }
+    footer .brand__social{
+        mix-blend-mode: difference;
+    }
+    footer.dark .brand__social{
+        mix-blend-mode: unset;
+    }
+    footer.dark {
+        background: black;
+        color: white;
+    }
+    footer.dark  .mobile__copyright p:before {
+        background: white;
+    }
+    footer.dark .mobile__copyright p {
+        color: white;
     }
     .footer__menu{
         flex-direction: column;

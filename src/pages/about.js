@@ -60,7 +60,52 @@ class ContactPage extends Component {
 
     document.getElementsByClassName(itemId)[0].classList.add("active");
   }
-
+  makeColumnBlack(event){
+    if(event.target.classList.contains("column-0")) {
+      event.target.classList.add("colored__column__svg__black")
+      document.querySelectorAll(".c-f2ab3d")[0].classList.add("c-f2ab3d__column");
+      document.getElementById("columns").classList.add("columns__mustard")
+      document.getElementById("colored_floating").classList.add("colored__floating__hidden")
+    }
+    if(event.target.classList.contains("column-1")) {
+      event.target.classList.add("colored__column__svg__black")
+      document.querySelectorAll(".c-73faeb")[0].classList.add("c-73faeb__column");
+      document.getElementById("colored_floating").classList.add("colored__floating__hidden")
+    }
+    if(event.target.classList.contains("column-2")) {
+      event.target.classList.add("colored__column__svg__black")
+      document.querySelectorAll(".c-ea3464")[0].classList.add("c-ea3464__column");
+      document.getElementById("colored_floating").classList.add("colored__floating__hidden")
+    }
+    if(event.target.classList.contains("column-3")) {
+      event.target.classList.add("colored__column__svg__black")
+      document.querySelectorAll(".c-1d61f5")[0].classList.add("c-1d61f5__column");
+      document.getElementById("colored_floating").classList.add("colored__floating__hidden")
+    }
+  }
+  removeColumnBlack(event){
+    if(event.target.classList.contains("column-0")) {
+      event.target.classList.remove("colored__column__svg__black")
+      document.querySelectorAll(".c-f2ab3d")[0].classList.remove("c-f2ab3d__column");
+      document.getElementById("columns").classList.remove("columns__mustard")
+      document.getElementById("colored_floating").classList.remove("colored__floating__hidden")
+    }
+    if(event.target.classList.contains("column-1")) {
+      event.target.classList.remove("colored__column__svg__black")
+      document.querySelectorAll(".c-73faeb")[0].classList.remove("c-73faeb__column");
+      document.getElementById("colored_floating").classList.remove("colored__floating__hidden")
+    }
+    if(event.target.classList.contains("column-2")) {
+      event.target.classList.remove("colored__column__svg__black")
+      document.querySelectorAll(".c-ea3464")[0].classList.remove("c-ea3464__column");
+      document.getElementById("colored_floating").classList.remove("colored__floating__hidden")
+    }
+    if(event.target.classList.contains("column-3")) {
+      event.target.classList.remove("colored__column__svg__black")
+      document.querySelectorAll(".c-1d61f5")[0].classList.remove("c-1d61f5__column");
+      document.getElementById("colored_floating").classList.remove("colored__floating__hidden")
+    }
+  }
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
@@ -86,30 +131,98 @@ class ContactPage extends Component {
           <section id="columns">
             <div className="container container__custom">
               <div className="row">
+                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 colored__floating" id="colored_floating">
+                  <div6
+                    className="row reg__font sm__font"
+                    dangerouslySetInnerHTML={{ __html: pageAcf.colored_copy }}
+                  />
+                </div>
+
                 <div className="col-lg-12 divider"></div>
+                <div className="colored__columns__wrapper">
+
+
                 {
                   pageAcf.colored_columns.map((column, index) => 
-                    <div className={`col-xs-12 col-sm-12 col-md-3 col-lg-3 colored__column order-${index} c-${column.color.replace('#','')}`} key={index}>
-                      <div className="column__svg">
+                    <div className={`col-xs-6 col-sm-6 col-md-3 col-lg-3 colored__column order-${index} c-${column.color.replace('#','')} `} 
+                    key={index}
+     
+                    >
+                      <div>
                       {
                         index === 0
                         ?
-                        <SVGONE></SVGONE>
+                        <div className="column__svg">
+                        <SVGONE 
+                          className={`column-${index}`}
+                          onMouseEnter={this.makeColumnBlack}
+                          onMouseLeave={this.removeColumnBlack}
+                        >
+                        </SVGONE>
+                        <div className="colored__sub__svg">
+                        <div
+                            className="row reg__font "
+                            dangerouslySetInnerHTML={{ __html: column.copy }}
+                          />
+                        </div>
+                        </div>
                         : ""
                       }
                       {
                         index === 1
-                        ?<SVGTWO></SVGTWO>
+                        ?
+                        <div className="column__svg">
+                        <SVGTWO
+                        className={`column-${index}`}
+                        onMouseEnter={this.makeColumnBlack}
+                        onMouseLeave={this.removeColumnBlack}
+                        ></SVGTWO>
+                        <div className="colored__sub__svg">
+                        <div
+                            className="row reg__font "
+                            dangerouslySetInnerHTML={{ __html: column.copy }}
+                          />
+                        </div>
+                        </div>
                         : ""
                       }
                       {
                         index === 2
-                        ?<SVGTHREE></SVGTHREE>
+                        ?
+
+                        <div className="column__svg">
+                        <SVGTHREE
+                        className={`column-${index}`}
+                        onMouseEnter={this.makeColumnBlack}
+                        onMouseLeave={this.removeColumnBlack}
+                        ></SVGTHREE>
+                        <div className="colored__sub__svg">
+                        <div
+                            className="row reg__font "
+                            dangerouslySetInnerHTML={{ __html: column.copy }}
+                          />
+                        </div>
+                        </div>
+
                         : ""
                       }
                       {
                         index === 3
-                        ?<SVGFOUR></SVGFOUR>
+                        ?
+                        <div className="column__svg">
+                        <SVGFOUR
+                        className={`column-${index}`}
+                        onMouseEnter={this.makeColumnBlack}
+                        onMouseLeave={this.removeColumnBlack}
+                        ></SVGFOUR>
+                        <div className="colored__sub__svg">
+                        <div
+                            className="row reg__font "
+                            dangerouslySetInnerHTML={{ __html: column.copy }}
+                          />
+                        </div>
+                        </div>
+
                         : ""
                       }
                       </div>
@@ -122,6 +235,7 @@ class ContactPage extends Component {
                     </div>
                   )
                 }
+                                </div>
               </div>
             </div>
           </section>
@@ -145,6 +259,11 @@ class ContactPage extends Component {
                     className="row reg__font sm__font reg__font"
                     dangerouslySetInnerHTML={{ __html: pageAcf.office_copy }}
                   />
+                  <div className="location__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14.763" height="18.003" viewBox="0 0 14.763 18.003">
+                    <path id="Trazado_65" data-name="Trazado 65" d="M10883.708,3645.969c4.053-4.24,1.889-11.487-3.895-12.459a8.886,8.886,0,0,0-1.487-.124q-.369,0-.73.029c-6.194.5-8.765,8.279-4.37,12.674l5.3,5.3Z" transform="translate(-10871.027 -3633.386)"/>
+                    </svg>
+                  </div>
                 </div>
                 <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 offices__two__photo">
                   {
@@ -211,7 +330,7 @@ class ContactPage extends Component {
                     pageAcf.services_info.map((services, index) => 
                             index % 2 === 0 
                             ? 
-                                <div className={`col-xs-1 col-sm-12 col-md-6 col-lg-6 services__list no__padding c-${services.hover_color.replace('#','')}`} key={index}>
+                                <div className={`col-xs-6 col-sm-6 col-md-6 col-lg-6 services__list no__padding c-${services.hover_color.replace('#','')} service__list__${index}`} key={index}>
                                   <div className="services__list__subtitle">
                                     <p className="reg__font sm__font">
                                       {services.subtitle}
@@ -221,11 +340,11 @@ class ContactPage extends Component {
                                     <div
                                       className="row lg__font bold__font "
                                       dangerouslySetInnerHTML={{ __html: services.services_list }}
-                                      />
+                                    />
                                   </div>
                                 </div>
                             :
-                                <div className={`col-xs-12 col-sm-12 col-md-6 col-lg-6 services__list lower__list no__padding service__list__${index} c-${services.hover_color.replace('#','')}`} key={index} >
+                                <div className={`col-xs-6 col-sm-6 col-md-6 col-lg-6 services__list lower__list no__padding service__list__${index} c-${services.hover_color.replace('#','')}`} key={index} >
                                   <div className="services__list__subtitle">
                                     <p className="reg__font sm__font">
                                       {services.subtitle}
@@ -272,7 +391,7 @@ class ContactPage extends Component {
                 </div>
               </div>
               <div className="row recognition__list__wrapper">
-                <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 recognition__list__one no__padding">
+                <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 recognition__list__one no__padding">
                     {
                       pageAcf.recognition_list.map((item, index) => 
                         <div className={`recognition__list__item ${index === 0 ? "active" : ""}`} key={index} id={`tab-rec-${index}`} onClick={this.toggleListElement}>
@@ -287,7 +406,7 @@ class ContactPage extends Component {
                       )
                     }
                 </div>
-                <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 recognition__list__two no__padding">
+                <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 recognition__list__two no__padding">
                     {
                       pageAcf.recognition_list.map((item, index) => 
                       <div
@@ -317,7 +436,7 @@ class ContactPage extends Component {
                       dangerouslySetInnerHTML={{ __html: pageAcf.clients_copy }}
                     />
                 </div>
-                <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 recognition__two no__padding">
+                <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 recognition__two select__clients no__padding">
                     <div
                       className="row sm__font reg__font recognition__one__copy"
                       dangerouslySetInnerHTML={{ __html: pageAcf.clients_second_copy }}
@@ -333,7 +452,7 @@ class ContactPage extends Component {
                   pageAcf.clients_logos.map((client, index) => 
                     client.logo
                     ?
-                      <div className="col-xs-6 col-sm-12 col-md-3 col-lg-3 client__logo" key={index}>
+                      <div className="col-xs-4 col-sm-4 col-md-3 col-lg-3 client__logo" key={index}>
                         <img src={client.logo.localFile.url} alt="Client Logo"/>
                       </div>
                     :""
@@ -374,6 +493,7 @@ query AboutPageQuery {
             }
             section_color
             about_copy
+            colored_copy
             colored_columns{
                 copy
                 color
