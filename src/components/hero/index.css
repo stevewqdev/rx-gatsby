@@ -60,7 +60,7 @@
     }
     .hero__component .hero__extra__info {
         position: relative;
-        top: 190px;
+        top: 140px;
     }
 }
 @media(max-width: 360px){

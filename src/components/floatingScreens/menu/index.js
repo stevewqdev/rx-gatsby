@@ -102,7 +102,7 @@ export default class MainMenuFloatingScreen extends Component {
                   <p className="md__font bold__font menu__section__title">
                     Email Address
                   </p>
-                  <p className=" reg__font">
+                  <p className=" sm__font reg__font">
                     <a href={`mailto:${this.props.siteAcf.contact_email}`}>
                       {this.props.siteAcf.contact_email}
                     </a>
@@ -118,7 +118,7 @@ export default class MainMenuFloatingScreen extends Component {
                   <p className="md__font bold__font menu__section__title">
                     Social Media
                   </p>
-                  <SocialMenu layout={"full__screen__menu"}></SocialMenu>
+                  <SocialMenu fontSize="sm__font no__decoration" layout={"full__screen__menu"}></SocialMenu>
                 </div>
               </div>
             </div>

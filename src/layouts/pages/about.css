@@ -13,6 +13,9 @@
     top: -8px;
     left: 5px;
 }
+.colored__columns__wrapper{
+    display: flex;
+}
 .services__list{
     margin-top: 70px;
     border-top: solid 2px white;
@@ -36,7 +39,7 @@
 }
 .columns__mustard{
     background: linear-gradient(to right, #f2ab3d 50%, black 50%)!important;
-    transition: all ease-in-out 0s!important;
+    transition: background ease-in-out 0.5s!important;
 }
 .colored__column{
     background: black;

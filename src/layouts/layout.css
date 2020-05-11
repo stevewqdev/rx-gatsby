@@ -702,6 +702,9 @@ body{
   .selected__projects {
     margin-top: 40%;
 }
+.featured__video {
+  margin-top: 25%;
+}
 }
 @media(max-width: 1700px){
   .continer-fluid{
