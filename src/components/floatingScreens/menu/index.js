@@ -13,7 +13,7 @@ export default class MainMenuFloatingScreen extends Component {
     document.querySelectorAll(".menu__full__screen .brand__menu")[0].classList.add("hidden");
   }
   componentDidMount(){
-    [...document.getElementsByClassName("floating-menu")[0].childNodes].map(item => {
+    [...document.querySelectorAll("a")].map(item => {
       item.addEventListener("click", this.toggleMenu);
       document.querySelectorAll(".main__floating__menu .brand__menu")[0].classList.remove("hidden");
       document.querySelectorAll(".menu__full__screen .brand__menu")[0].classList.add("hidden");

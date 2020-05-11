@@ -1,3 +1,15 @@
+@media(max-width:4000px ){
+    .work__list__project__img img{
+        width: 100%;
+        object-fit: cover;
+        min-height: 650px;
+    }
+}
+@media(max-width:1700px ){
+    .work__list__project__img img{
+        min-height: 490px;
+    }
+}
 .work__list{
     background: #000000;
     padding: 15% 0;
@@ -8,11 +20,7 @@
 .work__list__project.lower__project{
     margin-top: 25%;
 }
-.work__list__project__img img{
-    width: 100%;
-    object-fit: cover;
-    min-height: 490px;
-}
+
 .work__list__project__info{
     display: flex;
     color: white;

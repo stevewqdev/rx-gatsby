@@ -17,13 +17,13 @@ const Layout = ({ children, location }) => {
     aElements.forEach(element => {
       element.addEventListener("click", function(event){
         event.preventDefault();
-
         document.querySelectorAll(".page__wrapper")[0].classList.add("on-transition");
-        
         setTimeout(function() {
-
-          window.location.href = `${event.target.getAttribute("href")}`;
-
+          if(event.target.getAttribute("href") === null){
+            window.location.href = `/`;
+          }else{
+            window.location.href = `${event.target.getAttribute("href")}`;
+          }
         },500);
       })
     });
