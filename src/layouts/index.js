@@ -13,16 +13,24 @@ import "../fonts/stylesheet.css"
 
 const Layout = ({ children, location }) => {
   function hrefRedirect(){
-    let aElements = document.querySelectorAll("a"); 
+    let aElements = document.querySelectorAll(".menu__full__screen a"); 
     aElements.forEach(element => {
       element.addEventListener("click", function(event){
         event.preventDefault();
         document.querySelectorAll(".page__wrapper")[0].classList.add("on-transition");
+
+        let redirectLink = event.target.getAttribute("href");
+
         setTimeout(function() {
-          if(event.target.getAttribute("href") === null){
+          if(redirectLink === null){
             window.location.href = `/`;
           }else{
-            window.location.href = `${event.target.getAttribute("href")}`;
+            if(redirectLink.includes("facebook") || redirectLink.includes("twitter") || redirectLink.includes("instagram") || redirectLink.includes("behance") || redirectLink.includes("vimeo")){
+
+            }else{
+              window.location.href = `${event.target.getAttribute("href")}`;
+
+            }
           }
         },500);
       })

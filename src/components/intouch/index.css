@@ -7,6 +7,8 @@
 }
 .get_in_touch .up__arrow{
     cursor: pointer;
+    position: relative;
+    top: 10px;
 }
 .get_in_touch .black__arrow svg path{
     fill: #000000;
