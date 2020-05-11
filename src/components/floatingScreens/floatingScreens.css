@@ -1,3 +1,12 @@
+@media(max-width: 4000px){
+    .floating__web__info, .menu__full__screen .row{
+        max-width: 1600px;
+        width: 100%;
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+}
 .brand__menu__toggle{
     position: absolute;
     cursor: pointer;

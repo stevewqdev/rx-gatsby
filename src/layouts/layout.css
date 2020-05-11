@@ -898,13 +898,20 @@ section#one{
   position: absolute;
   top: -11%;
 }
-.featured__video .featured__video__source video{
-  position: absolute;
-  max-width: 100%;
-  top: 0px;
-  right: 0;
-  width: calc(100% / 1.6);
-  cursor: pointer;
+@media(max-width: 4000px){
+  .featured__video .featured__video__source video{
+    position: absolute;
+    max-width: 100%;
+    top: 0px;
+    right: 0;
+    width: calc(100% / 1.6);
+    cursor: pointer;
+  }
+}
+@media(max-width: 2000px){
+  .featured__video .featured__video__source video {
+    top: -25px;
+  }
 }
 .featured__video .featured__video__source:hover video{
   width: calc(100% / 1);
