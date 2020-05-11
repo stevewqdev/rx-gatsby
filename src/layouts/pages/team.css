@@ -83,10 +83,7 @@
     }
 }
 @media(max-width: 1024px){
-    .team__section .xmd__font {
-        font-size: 26px!important;
-        line-height: 32px;
-    }
+    
     .team__column__two .team__members:nth-child(1), .team__column__three .team__members:nth-child(1), .team__column__four .team__members:nth-child(1) {
         margin-top: 75px;
     }
@@ -95,10 +92,7 @@
     .team__member {
         height: 85.8px;
     }
-    .team__section .xmd__font {
-        font-size: 22px!important;
-        line-height: 22px;
-    }
+    
     .team__column__two .team__members:nth-child(1), .team__column__three .team__members:nth-child(1), .team__column__four .team__members:nth-child(1) {
         margin-top: 346px;
     }
@@ -145,11 +139,177 @@
     .team__section{
         margin-bottom: 50px;
     }
-    .team__section .xmd__font {
-        font-size: 32px!important;
-        line-height: 35px;
-    }
+    
     .team__copy p{
         font-size: 14px;
+    }
+}
+
+/* ================== NEW TEAM PAGE ================ */
+@media(max-width: 4000px){
+    .team__new__member{
+        background: #F4F4F4;
+        color: black;
+        width: 100%;
+        position: relative;
+        min-height: 348px;
+    }
+    .team__member__14 {
+        position: relative;
+        top: -14.2vw;
+        min-height: 348px;
+    }
+    .team__member__12 {
+        height: 548px;
+    }
+    .team__member__14, .team__member__15{
+        position: relative;
+        top: -85px;
+        min-height: 448px;
+    }
+    .team__member__15{
+        top: -7.1vw;
+    }
+    .team__new{
+        background: black;
+    }
+    
+    .team__new{
+        padding-bottom: 200px;
+    }
+    .team__new .gatsby-image-wrapper{
+        position: absolute!important;
+        width: 50%;
+        height: 72%;
+        right: 0;
+    }
+    .team__information{
+        position: absolute;
+        width: 50%;
+        right: 0;
+        bottom: -8%;
+        z-index: 2;
+    }
+    .team__new__member__info__name{
+        font-family: 'MarkPro';
+        font-weight: bold;
+        position: absolute;
+        z-index: 2;
+        top: 55%;
+        left: 5px;
+    }
+    .team__member__block{
+        background: #F4F4F4;
+    }
+    
+    /*TEAM MEMBER SECTION*/
+    .team__member__2, .team__member__4, .team__member__10{
+        padding-top: 100px;
+    }
+    .team__member__6, .team__member__8{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .team__member__7{
+        padding-top: 20px;
+    }
+    .team__member__13{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .team__member__9, .team__member__10, .team__member__11, .team__member__12,.team__member__13{
+        position: relative;
+        top: -85px;
+    }
+    
+}
+@media(max-width: 3000px){
+    .team__member__15{
+        top: -9.4vw;
+    }
+}
+
+@media(max-width: 2000px){
+    .team__new__member{
+        min-height: calc(17.3vw);
+    }
+    .team__member__14, .team__member__15 {
+        height: 23vw;
+    }
+    .team__member__12 {
+        height: 23vw;
+    }
+    .team__member__14, .team__member__15{
+        height: 23vw;
+        top: -9.1vw;
+    }
+    .team__member__15{
+        top: -14.5vw;
+    }
+}
+@media(max-width: 1440px){
+    .team__member__14, .team__member__15 {
+        top: -203px;
+        min-height: 340px;
+    }
+    .team__member__15{
+        top: -256px;
+    }
+}
+@media(max-width: 1280px){
+    .team__member__14, .team__member__15 {
+        top: -212px;
+        min-height: 310px;
+    }
+    .team__member__15{
+        top: -247px;
+    }
+    .team__information {
+        bottom: -15%;
+    }
+}
+@media(max-width: 1024px){
+    .team__information {
+        bottom: -30%;
+    }
+    .team__member__14, .team__member__15 {
+        top: -227px;
+        min-height: 290px;
+    }
+    .team__member__15 {
+        top: -236px;
+    }
+    
+}
+@media(max-width: 768px){
+    .team__member__12 {
+        height: 30vw;
+    }
+    .team__information {
+        bottom: -50%;
+    }
+    .team__member__14, .team__member__15 {
+        top: -187px;
+        min-height: 250px;
+    }
+    .team__member__15 {
+        top: -222px;
+    }
+}
+@media(max-width: 500px){
+    .team__new__member {
+        min-height: 378px;
+    }
+    .team__new__member .xxl__font {
+        font-size: 100px!important;
+    }
+    .team__information {
+        bottom:5%;
+    }
+    .team__new__member__info__name {
+        top: 66%;
+    }
+    .team__member__block {
+        padding-top: 20px!important;
     }
 }

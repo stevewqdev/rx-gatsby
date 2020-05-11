@@ -56,166 +56,168 @@ class HomePage extends Component {
               </div>
             </div>
           </section>
-          <About></About>
-          <section className="featured__video">
-            <div className="container container__custom">
-              <div className="row">
-                <div className="col-lg-12 no__padding">
-                  <div className="separator --black "></div>
-                </div>
-                <div className="col-lg-12 no__padding featured__video__title">
-                  <h2 className={"xxl__font"}>{pageAcf.reel_title}</h2>
-                  <br/>
-                </div>
-                <div className="col-lg-12 featured__video__wrapper no__padding">
-                  <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4 featured__video__copy no__padding">
-                    <div
-                      className=""
-                      dangerouslySetInnerHTML={{ __html: pageAcf.reel_copy }}
-                    />
+          <div className="main__section__wrapper">
+            <About></About>
+            <section className="featured__video">
+              <div className="container container__custom">
+                <div className="row">
+                  <div className="col-lg-12 no__padding">
+                    <div className="separator --black "></div>
+                  </div>
+                  <div className="col-lg-12 no__padding featured__video__title">
+                    <h2 className={"xxl__font"}>{pageAcf.reel_title}</h2>
                     <br/>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="19.73" height="19.72" viewBox="0 0 19.73 19.72">
-                      <g id="Grupo_76" data-name="Grupo 76" transform="translate(-336 -3038.156)">
-                        <g id="Grupo_75" data-name="Grupo 75">
-                          <g id="Grupo_74" data-name="Grupo 74">
-                            <g id="Grupo_73" data-name="Grupo 73">
-                              <path id="Trazado_39" data-name="Trazado 39" d="M355.73,3054.586a3.29,3.29,0,1,1-6.58,0,3.063,3.063,0,0,1,.15-.96l-7.35-3.68a3.29,3.29,0,1,1,0-3.86l7.35-3.68a3.126,3.126,0,0,1-.15-.97,3.284,3.284,0,1,1,.63,1.94l-7.35,3.67a3.212,3.212,0,0,1,0,1.94l7.35,3.67a3.287,3.287,0,0,1,5.95,1.93Z" fill="#050505"/>
+                  </div>
+                  <div className="col-lg-12 featured__video__wrapper no__padding">
+                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4 featured__video__copy no__padding">
+                      <div
+                        className=""
+                        dangerouslySetInnerHTML={{ __html: pageAcf.reel_copy }}
+                      />
+                      <br/>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="19.73" height="19.72" viewBox="0 0 19.73 19.72">
+                        <g id="Grupo_76" data-name="Grupo 76" transform="translate(-336 -3038.156)">
+                          <g id="Grupo_75" data-name="Grupo 75">
+                            <g id="Grupo_74" data-name="Grupo 74">
+                              <g id="Grupo_73" data-name="Grupo 73">
+                                <path id="Trazado_39" data-name="Trazado 39" d="M355.73,3054.586a3.29,3.29,0,1,1-6.58,0,3.063,3.063,0,0,1,.15-.96l-7.35-3.68a3.29,3.29,0,1,1,0-3.86l7.35-3.68a3.126,3.126,0,0,1-.15-.97,3.284,3.284,0,1,1,.63,1.94l-7.35,3.67a3.212,3.212,0,0,1,0,1.94l7.35,3.67a3.287,3.287,0,0,1,5.95,1.93Z" fill="#050505"/>
+                              </g>
                             </g>
                           </g>
                         </g>
-                      </g>
-                    </svg>
-                  </div>
-                  <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 featured__video__source no__padding">
-                    {
-                      pageAcf.reel_video
-                      ?
-                      <video
-                        className="reel_video"
-                        playsInline
-                        className="mobile-hidden"
-                        poster={pageAcf.reel_video_poster.source_url}
-                        onClick={this.playVideo}
-                      >
-                        <source src={pageAcf.reel_video.source_url}  type="video/mp4" />
-                      </video>
-                      :""
-                    }
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section className="selected__projects">
-            <div className="container container__custom">
-              <div className="row">
-                <div className="col-lg-12 no__padding">
-                  <div className="separator --black "></div>
-                </div>
-                <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__info">
-                  <div className="selected__projects__title">
-                    <h2 className="lg__font">{pageAcf.sp_title}</h2>
-                  </div>
-                  <div className="selected__projects__copy">
-                    <div
-                      className=""
-                      dangerouslySetInnerHTML={{ __html: pageAcf.sp_copy }}
-                    />
-                  </div>
-                </div>
-                <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__button">
-                  <div className="row">
-                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__button__left"></div>
-                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__button__right">
-                      <Link to="/projects">
-                        <button className="btn btn-default sm__font reg__font">See More</button>
-                      </Link>
+                      </svg>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div className="row selected__projects__projects">
-                  <div className="col-lg-12 no__padding">
-                    <div className="row">
+                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 featured__video__source no__padding">
                       {
-                        pageAcf.sp_projects.map((project, index) => 
-                          <div key={index} className="col-xs-6 col-sm-6 col-md-6 col-lg-6 no__padding selected__projects__projects --project">
-                            <div className="row">
-                              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 no__padding selected__projects__projects__left">
-                                <div className="selected__projects__projects__left__img">
-                                  <img src={`${project.acf.featured_image.localFile.url}`} alt={`${project.post_name}`}/>
-                                </div>
-                                <div className="selected__projects__projects__left__copy">
-                                  <div
-                                    className=""
-                                    dangerouslySetInnerHTML={{ __html: project.post_content }}
-                                  />
-                                </div>
-                                <div className="no__padding selected__projects__projects__right">
-                                  <div className="selected__projects__projects__right__title">
-                                    <p
-                                      className="bold__font md__font"
-                                      dangerouslySetInnerHTML={{ __html: project.post_name }}
-                                    />
- 
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        )
+                        pageAcf.reel_video
+                        ?
+                        <video
+                          className="reel_video"
+                          playsInline
+                          className="mobile-hidden"
+                          poster={pageAcf.reel_video_poster.source_url}
+                          onClick={this.playVideo}
+                        >
+                          <source src={pageAcf.reel_video.source_url}  type="video/mp4" />
+                        </video>
+                        :""
                       }
-
                     </div>
                   </div>
+                </div>
               </div>
-            </div>
-          </section>
-          {/* <section className="selected__projects latest__projects">
-            <div className="container container__custom">
-              <div className="row">
-                <div className="col-lg-12 no__padding">
-                  <div className="separator --black "></div>
-                </div>
-                <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__info">
-                  <div className="selected__projects__title">
-                    <h2 className="lg__font">{pageAcf.lp_title}</h2>
+            </section>
+            <section className="selected__projects">
+              <div className="container container__custom">
+                <div className="row">
+                  <div className="col-lg-12 no__padding">
+                    <div className="separator --black "></div>
                   </div>
-
-                </div>
-                <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__button">
-                  <div className="row">
-                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 no__padding selected__projects__button__left"></div>
-                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 no__padding selected__projects__button__right">
-                      <div className="selected__projects__copy">
-                        <p className="bold__font md__font latest__projects__subtitle">{pageAcf.lp_subtitle}</p>
-                        <div
-                          className=""
-                          dangerouslySetInnerHTML={{ __html: pageAcf.lp_copy }}
-                        />
+                  <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__info">
+                    <div className="selected__projects__title">
+                      <h2 className="lg__font">{pageAcf.sp_title}</h2>
+                    </div>
+                    <div className="selected__projects__copy">
+                      <div
+                        className=""
+                        dangerouslySetInnerHTML={{ __html: pageAcf.sp_copy }}
+                      />
+                    </div>
+                  </div>
+                  <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__button">
+                    <div className="row">
+                      <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__button__left"></div>
+                      <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__button__right">
+                        <Link to="/projects">
+                          <button className="btn btn-default sm__font reg__font">See More</button>
+                        </Link>
                       </div>
                     </div>
                   </div>
                 </div>
+                <div className="row selected__projects__projects">
+                    <div className="col-lg-12 no__padding">
+                      <div className="row">
+                        {
+                          pageAcf.sp_projects.map((project, index) => 
+                            <div key={index} className="col-xs-6 col-sm-6 col-md-6 col-lg-6 no__padding selected__projects__projects --project">
+                              <div className="row">
+                                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 no__padding selected__projects__projects__left">
+                                  <div className="selected__projects__projects__left__img">
+                                    <img src={`${project.acf.featured_image.localFile.url}`} alt={`${project.post_name}`}/>
+                                  </div>
+                                  <div className="selected__projects__projects__left__copy">
+                                    <div
+                                      className=""
+                                      dangerouslySetInnerHTML={{ __html: project.post_content }}
+                                    />
+                                  </div>
+                                  <div className="no__padding selected__projects__projects__right">
+                                    <div className="selected__projects__projects__right__title">
+                                      <p
+                                        className="bold__font md__font"
+                                        dangerouslySetInnerHTML={{ __html: project.post_name }}
+                                      />
+  
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          )
+                        }
+
+                      </div>
+                    </div>
+                </div>
               </div>
-              <div className="row latest__projects__projects">
-                <div className="container">
-                  <div className="row">
-                    {
-                      latestProjects.map((project, index) => 
-                        <div className="col-xs-6 col-sm-3 col-md-3 pgrid__base__thumbnail --pr-one no__padding" key={index}>
-                            <Link to={`/project/${project.node.slug.toLowerCase()}`}>
-                              <img src={`${project.node.acf.featured_image.localFile.url}`} alt={`${project.node.title}`}/>
-                            </Link>
-                            <p className="bold__font md__font">{project.node.title}</p>
+            </section>
+            {/* <section className="selected__projects latest__projects">
+              <div className="container container__custom">
+                <div className="row">
+                  <div className="col-lg-12 no__padding">
+                    <div className="separator --black "></div>
+                  </div>
+                  <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__info">
+                    <div className="selected__projects__title">
+                      <h2 className="lg__font">{pageAcf.lp_title}</h2>
+                    </div>
+
+                  </div>
+                  <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__button">
+                    <div className="row">
+                      <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 no__padding selected__projects__button__left"></div>
+                      <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 no__padding selected__projects__button__right">
+                        <div className="selected__projects__copy">
+                          <p className="bold__font md__font latest__projects__subtitle">{pageAcf.lp_subtitle}</p>
+                          <div
+                            className=""
+                            dangerouslySetInnerHTML={{ __html: pageAcf.lp_copy }}
+                          />
                         </div>
-                      )
-                    }
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="row latest__projects__projects">
+                  <div className="container">
+                    <div className="row">
+                      {
+                        latestProjects.map((project, index) => 
+                          <div className="col-xs-6 col-sm-3 col-md-3 pgrid__base__thumbnail --pr-one no__padding" key={index}>
+                              <Link to={`/project/${project.node.slug.toLowerCase()}`}>
+                                <img src={`${project.node.acf.featured_image.localFile.url}`} alt={`${project.node.title}`}/>
+                              </Link>
+                              <p className="bold__font md__font">{project.node.title}</p>
+                          </div>
+                        )
+                      }
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </section> */}
+            </section> */}
+          </div>
         </div>
       </Layout>
     )

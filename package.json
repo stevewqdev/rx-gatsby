@@ -7,6 +7,7 @@
   "dependencies": {
     "@u-wave/react-vimeo": "^0.8.3",
     "@vimeo/player": "^2.11.0",
+    "aos": "^2.3.4",
     "bootstrap": "^4.4.1",
     "dotenv": "^8.2.0",
     "gatsby": "^2.20.12",

@@ -1,4 +1,13 @@
 
+#columns > * {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
 #we_can_help{
     padding: 10% 0;
     background: black;
@@ -81,6 +90,10 @@
 }
 .colored__column p{
     font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.3px;
+    font-family: 'Roboto';
+    font-weight: 400;
     height: auto;
     color: black;
     padding: 0 15px;
@@ -89,7 +102,6 @@
     opacity: 0;
     margin-top: 20px;
     transition: all ease-in-out 0.2s!important;
-
 }
 .colored__column:hover p{
     height: auto;

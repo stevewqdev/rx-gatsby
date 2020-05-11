@@ -1,6 +1,11 @@
 .brand__menu__toggle{
-    position: relative;
+    position: absolute;
     cursor: pointer;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
 }
 .brand__menu__toggle p{
     margin: 0!important;
@@ -38,7 +43,7 @@
 }
 
 .floating__web__info .brand{
-    padding: 40px 25px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -47,7 +52,7 @@
 }
 
 .floating__web__info .brand .brand__logo img{
-    width: 104px;
+    width: 95px;
     height: auto;
 }
 
@@ -76,37 +81,44 @@
 
 .floating__web__info .brand__social{
     position: relative;
-    top: -7%;
+    top: -2.5%;
 }
-
+.brand__menu__toggle svg{
+    width: 18px;
+}
 .floating__web__info .brand__social .brand__social__network{
-    max-width: 17px;
+    max-width: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 0 45px 0;
+    margin: 0 0 30px 0;
 }
 
 .floating__web__info .copy__one__column, .floating__web__info .copy__two__column{
-    padding: 45px 0;
+    padding: 30px 0;
 }
 
  
 
 .floating__web__info .copyright__column p{
     position: relative;
-    top: -70px;
+    top: -45px;
     left: -10px;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.3px;
+    font-family: 'Roboto';
+    font-weight: 400;
 }
 
 .floating__web__info .copyright__column p:before{
     content: "";
-    width: 120%;
+    width: 100%;
     position: absolute;
     bottom: -10px;
     height: 2px;
     background: #F4F4F4;
-    left: -35px;
+    left: -0px;
 }
 .black svg path{
     fill: black!important
@@ -138,7 +150,7 @@
         font-size: 8px;
     }
     .floating__web__info .copy__one__column, .floating__web__info .copy__two__column {
-        padding: 45px 11px;
+        padding: 30px 11px;
     }
     .copy__two__column{
         position: absolute!important;
@@ -180,8 +192,7 @@
     }
     .brand__menu__toggle{
         position: fixed;
-        top: 57%;
-        left: 5px;
+         left: 5px;
         z-index: 99999;
     }
     .floating__web__info .brand__menu{
@@ -191,7 +202,6 @@
         position: fixed;
         height: 100%;
         left: 5px;
-        top: 150px;
         bottom: 0;
         margin: auto;
         display: flex;

@@ -128,324 +128,325 @@ class ContactPage extends Component {
             extraInfo={pageAcf.about_copy}
           >
           </Hero>
-          <section id="columns">
-            <div className="container container__custom">
-              <div className="row">
-                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 colored__floating" id="colored_floating">
-                  <div6
-                    className="row reg__font sm__font"
-                    dangerouslySetInnerHTML={{ __html: pageAcf.colored_copy }}
-                  />
-                </div>
+          <div className="main__section__wrapper">
+            <section id="columns">
+              <div className="container container__custom">
+                <div className="row">
+                  <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 colored__floating" id="colored_floating">
+                    <div6
+                      className="row reg__font sm__font"
+                      dangerouslySetInnerHTML={{ __html: pageAcf.colored_copy }}
+                    />
+                  </div>
 
-                <div className="col-lg-12 divider"></div>
-                <div className="colored__columns__wrapper">
+                  <div className="col-lg-12 divider"></div>
+                  <div className="colored__columns__wrapper">
 
 
-                {
-                  pageAcf.colored_columns.map((column, index) => 
-                    <div className={`col-xs-6 col-sm-6 col-md-3 col-lg-3 colored__column order-${index} c-${column.color.replace('#','')} `} 
-                    key={index}
-     
-                    >
-                      <div>
-                      {
-                        index === 0
-                        ?
-                        <div className="column__svg">
-                        <SVGONE 
+                  {
+                    pageAcf.colored_columns.map((column, index) => 
+                      <div className={`col-xs-6 col-sm-6 col-md-3 col-lg-3 colored__column order-${index} c-${column.color.replace('#','')} `} 
+                      key={index}
+      
+                      >
+                        <div>
+                        {
+                          index === 0
+                          ?
+                          <div className="column__svg">
+                          <SVGONE 
+                            className={`column-${index}`}
+                            onMouseEnter={this.makeColumnBlack}
+                            onMouseLeave={this.removeColumnBlack}
+                          >
+                          </SVGONE>
+                          <div className="colored__sub__svg">
+                          <div
+                              className="row reg__font "
+                              dangerouslySetInnerHTML={{ __html: column.copy }}
+                            />
+                          </div>
+                          </div>
+                          : ""
+                        }
+                        {
+                          index === 1
+                          ?
+                          <div className="column__svg">
+                          <SVGTWO
                           className={`column-${index}`}
                           onMouseEnter={this.makeColumnBlack}
                           onMouseLeave={this.removeColumnBlack}
-                        >
-                        </SVGONE>
-                        <div className="colored__sub__svg">
-                        <div
+                          ></SVGTWO>
+                          <div className="colored__sub__svg">
+                          <div
+                              className="row reg__font "
+                              dangerouslySetInnerHTML={{ __html: column.copy }}
+                            />
+                          </div>
+                          </div>
+                          : ""
+                        }
+                        {
+                          index === 2
+                          ?
+
+                          <div className="column__svg">
+                          <SVGTHREE
+                          className={`column-${index}`}
+                          onMouseEnter={this.makeColumnBlack}
+                          onMouseLeave={this.removeColumnBlack}
+                          ></SVGTHREE>
+                          <div className="colored__sub__svg">
+                          <div
+                              className="row reg__font "
+                              dangerouslySetInnerHTML={{ __html: column.copy }}
+                            />
+                          </div>
+                          </div>
+
+                          : ""
+                        }
+                        {
+                          index === 3
+                          ?
+                          <div className="column__svg">
+                          <SVGFOUR
+                          className={`column-${index}`}
+                          onMouseEnter={this.makeColumnBlack}
+                          onMouseLeave={this.removeColumnBlack}
+                          ></SVGFOUR>
+                          <div className="colored__sub__svg">
+                          <div
+                              className="row reg__font "
+                              dangerouslySetInnerHTML={{ __html: column.copy }}
+                            />
+                          </div>
+                          </div>
+
+                          : ""
+                        }
+                        </div>
+                        <div className="colored__column__copy">
+                          <div
                             className="row reg__font "
                             dangerouslySetInnerHTML={{ __html: column.copy }}
                           />
                         </div>
-                        </div>
-                        : ""
-                      }
-                      {
-                        index === 1
-                        ?
-                        <div className="column__svg">
-                        <SVGTWO
-                        className={`column-${index}`}
-                        onMouseEnter={this.makeColumnBlack}
-                        onMouseLeave={this.removeColumnBlack}
-                        ></SVGTWO>
-                        <div className="colored__sub__svg">
-                        <div
-                            className="row reg__font "
-                            dangerouslySetInnerHTML={{ __html: column.copy }}
-                          />
-                        </div>
-                        </div>
-                        : ""
-                      }
-                      {
-                        index === 2
-                        ?
-
-                        <div className="column__svg">
-                        <SVGTHREE
-                        className={`column-${index}`}
-                        onMouseEnter={this.makeColumnBlack}
-                        onMouseLeave={this.removeColumnBlack}
-                        ></SVGTHREE>
-                        <div className="colored__sub__svg">
-                        <div
-                            className="row reg__font "
-                            dangerouslySetInnerHTML={{ __html: column.copy }}
-                          />
-                        </div>
-                        </div>
-
-                        : ""
-                      }
-                      {
-                        index === 3
-                        ?
-                        <div className="column__svg">
-                        <SVGFOUR
-                        className={`column-${index}`}
-                        onMouseEnter={this.makeColumnBlack}
-                        onMouseLeave={this.removeColumnBlack}
-                        ></SVGFOUR>
-                        <div className="colored__sub__svg">
-                        <div
-                            className="row reg__font "
-                            dangerouslySetInnerHTML={{ __html: column.copy }}
-                          />
-                        </div>
-                        </div>
-
-                        : ""
-                      }
-                      </div>
-                      <div className="colored__column__copy">
-                        <div
-                          className="row reg__font "
-                          dangerouslySetInnerHTML={{ __html: column.copy }}
-                        />
-                      </div>
-                    </div>
-                  )
-                }
-                                </div>
-              </div>
-            </div>
-          </section>
-          <About></About>
-          <section id="offices">
-            <div className="container container__custom">
-              <div className="row offices__one">
-                <div className="col-s-12 col-sm-12 col-md-3 col-lg-3"></div>
-                <div className="col-s-12 col-sm-12 col-md-3 col-lg-3"></div>
-                <div className="col-s-12 col-sm-12 col-md-3 col-lg-3"></div>
-                <div className="col-s-12 col-sm-12 col-md-3 col-lg-3 offices__first__copy">
-                  <div
-                    className="row reg__font sm__font reg__font"
-                    dangerouslySetInnerHTML={{ __html: pageAcf.pre_office_copy }}
-                  />
-                </div>
-              </div>
-              <div className="row offices__two">
-                <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 offices__two__copy">
-                  <div
-                    className="row reg__font sm__font reg__font"
-                    dangerouslySetInnerHTML={{ __html: pageAcf.office_copy }}
-                  />
-                  <div className="location__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14.763" height="18.003" viewBox="0 0 14.763 18.003">
-                    <path id="Trazado_65" data-name="Trazado 65" d="M10883.708,3645.969c4.053-4.24,1.889-11.487-3.895-12.459a8.886,8.886,0,0,0-1.487-.124q-.369,0-.73.029c-6.194.5-8.765,8.279-4.37,12.674l5.3,5.3Z" transform="translate(-10871.027 -3633.386)"/>
-                    </svg>
-                  </div>
-                </div>
-                <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 offices__two__photo">
-                  {
-                      pageAcf.office_photo
-                      ?<Img fluid={pageAcf.office_photo.localFile.childImageSharp.fluid} alt={`Raxo's office photo`} tabIndex={-1}/>
-                      :""
-                  }
-                </div>
-              </div>
-              <div className="row offices__three">
-                <div className="col-s-12 col-sm-12 col-md-3 col-lg-3  no__padding">
-                  {
-                    pageAcf.offices.map((office, index)=> 
-                      <div className={`${office.city.replace(/ /g,'').toLowerCase()} office__name ${index === 0 ? "active show" : "floating__element hide" } `} key={index}>
-                        <p className="md__font bold__font">
-                          Office
-                        </p>
-                        <h3 className="lg__font bold__font">
-                          {office.city}
-                        </h3>
-
                       </div>
                     )
                   }
-                  <div className="offices__buttons">
+                                  </div>
+                </div>
+              </div>
+            </section>
+            <About></About>
+            <section id="offices">
+              <div className="container container__custom">
+                <div className="row offices__one">
+                  <div className="col-s-12 col-sm-12 col-md-3 col-lg-3"></div>
+                  <div className="col-s-12 col-sm-12 col-md-3 col-lg-3"></div>
+                  <div className="col-s-12 col-sm-12 col-md-3 col-lg-3"></div>
+                  <div className="col-s-12 col-sm-12 col-md-3 col-lg-3 offices__first__copy">
+                    <div
+                      className="row reg__font sm__font reg__font"
+                      dangerouslySetInnerHTML={{ __html: pageAcf.pre_office_copy }}
+                    />
+                  </div>
+                </div>
+                <div className="row offices__two">
+                  <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 offices__two__copy">
+                    <div
+                      className="row reg__font sm__font reg__font"
+                      dangerouslySetInnerHTML={{ __html: pageAcf.office_copy }}
+                    />
+                    <div className="location__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14.763" height="18.003" viewBox="0 0 14.763 18.003">
+                      <path id="Trazado_65" data-name="Trazado 65" d="M10883.708,3645.969c4.053-4.24,1.889-11.487-3.895-12.459a8.886,8.886,0,0,0-1.487-.124q-.369,0-.73.029c-6.194.5-8.765,8.279-4.37,12.674l5.3,5.3Z" transform="translate(-10871.027 -3633.386)"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 offices__two__photo">
+                    {
+                        pageAcf.office_photo
+                        ?<Img fluid={pageAcf.office_photo.localFile.childImageSharp.fluid} alt={`Raxo's office photo`} tabIndex={-1}/>
+                        :""
+                    }
+                  </div>
+                </div>
+                <div className="row offices__three">
+                  <div className="col-s-12 col-sm-12 col-md-3 col-lg-3  no__padding">
                     {
                       pageAcf.offices.map((office, index)=> 
-                        <div className={`button__office ${index === 0 ? "active" : "second__button" }`} id={office.city.replace(/ /g,'').toLowerCase()} key={index} onClick={this.changeCity}></div>
-                    )
-                    }
-                  </div>
-                </div>
-                <div className="col-s-12 col-sm-12 col-md-3 col-lg-3"></div>
-                <div className="col-s-12 col-sm-12 col-md-3 col-lg-3"></div>
-                <div className="col-s-12 col-sm-12 col-md-3 col-lg-3"></div>
-
-              </div>
-              <div className="row offices__four">
-                {
-                  pageAcf.offices.map((office, index)=> 
-                    <div className={`no__padding ${office.city.replace(/ /g,'').toLowerCase()} col-s-12 col-sm-12 col-md-12 col-lg-12 office__photo ${index === 0 ? "active show" : "floating__element hide" }`} key={index}>
-                      {
-                        office.photo
-                        ?<Img fluid={office.photo.localFile.childImageSharp.fluid} alt={`Raxo's office photo`} tabIndex={-1}/>
-                        :""
-                      }
-                    </div>
-                  )
-                }
-              </div>
-            </div>
-          </section>
-          <section id="we_can_help">
-            <div className="container container__custom">
-                <div className="row">
-                    <div className="col-lg-12 no__padding">
-                      <h2 className="xxl__font bold__font">
-                        {pageAcf.services}
-                      </h2>
-                    </div>
-                </div>
-                <div className="row services">
-                  {
-                    pageAcf.services_info.map((services, index) => 
-                            index % 2 === 0 
-                            ? 
-                                <div className={`col-xs-6 col-sm-6 col-md-6 col-lg-6 services__list no__padding c-${services.hover_color.replace('#','')} service__list__${index}`} key={index}>
-                                  <div className="services__list__subtitle">
-                                    <p className="reg__font sm__font">
-                                      {services.subtitle}
-                                    </p>
-                                  </div>
-                                  <div className="services__list__items">
-                                    <div
-                                      className="row lg__font bold__font "
-                                      dangerouslySetInnerHTML={{ __html: services.services_list }}
-                                    />
-                                  </div>
-                                </div>
-                            :
-                                <div className={`col-xs-6 col-sm-6 col-md-6 col-lg-6 services__list lower__list no__padding service__list__${index} c-${services.hover_color.replace('#','')}`} key={index} >
-                                  <div className="services__list__subtitle">
-                                    <p className="reg__font sm__font">
-                                      {services.subtitle}
-                                    </p>
-                                  </div>
-                                  <div className="services__list__items">
-                                    <div
-                                      className="row lg__font bold__font "
-                                      dangerouslySetInnerHTML={{ __html: services.services_list }}
-                                      />
-                                  </div>
-                                </div> 
-                    )
-                    }
-                </div>
-            </div>
-          </section>
-          <section id="recognition">
-            <div className="container container__custom recognition__wrapper">
-              <div className="row">
-                <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 recognition__one no__padding">
-                    <h3 className="xxl__font bold__font">
-                      {pageAcf.recognition_title}
-                    </h3>
-                    <div
-                      className="row sm__font reg__font recognition__one__copy"
-                      dangerouslySetInnerHTML={{ __html: pageAcf.recognition_copy }}
-                    />
-                </div>
-                <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 recognition__two no__padding">
-
-                </div>
-              </div>
-            </div>
-          </section>
-          <section id="recognition_list">
-            <div className="container container__custom">
-              <div className="row">
-                <div className="col-lg-12 no__padding">
-                  <p className="sm__font reg__font recognition_list__top">
-                    List of services of <br/>
-                    Art Direction
-                  </p>
-                </div>
-              </div>
-              <div className="row recognition__list__wrapper">
-                <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 recognition__list__one no__padding">
-                    {
-                      pageAcf.recognition_list.map((item, index) => 
-                        <div className={`recognition__list__item ${index === 0 ? "active" : ""}`} key={index} id={`tab-rec-${index}`} onClick={this.toggleListElement}>
+                        <div className={`${office.city.replace(/ /g,'').toLowerCase()} office__name ${index === 0 ? "active show" : "floating__element hide" } `} key={index}>
+                          <p className="md__font bold__font">
+                            Office
+                          </p>
                           <h3 className="lg__font bold__font">
-                            {item.title}
-                            
+                            {office.city}
                           </h3>
-                          <h3 className="lg__font bold__font">
-                          {item.amount}
-                          </h3>
+
                         </div>
                       )
                     }
-                </div>
-                <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 recognition__list__two no__padding">
-                    {
-                      pageAcf.recognition_list.map((item, index) => 
-                      <div
-                        className={`row sm__font reg__font recognition__one__copy recognition__list__copy tab-rec-${index} ${index === 0 ? "active" : ""}`}
-                        dangerouslySetInnerHTML={{ __html: item.details }}
-                      />
+                    <div className="offices__buttons">
+                      {
+                        pageAcf.offices.map((office, index)=> 
+                          <div className={`button__office ${index === 0 ? "active" : "second__button" }`} id={office.city.replace(/ /g,'').toLowerCase()} key={index} onClick={this.changeCity}></div>
                       )
-                    }
-                  <svg id="Componente_53_1" data-name="Componente 53 – 1" xmlns="http://www.w3.org/2000/svg" width="36.061" height="36.061" viewBox="0 0 36.061 36.061">
-                    <circle id="Elipse_3" data-name="Elipse 3" cx="18.03" cy="18.03" r="18.03" fill="#fff"/>
-                    <path id="Trazado_70" data-name="Trazado 70" d="M10889.058,8070.985l2.2,6.783h7.133l-5.771,4.192,2.2,6.783-5.77-4.192-5.771,4.192,2.2-6.783-5.77-4.192h7.132Z" transform="translate(-10871.028 -8062.771)"/>
-                  </svg>
+                      }
+                    </div>
+                  </div>
+                  <div className="col-s-12 col-sm-12 col-md-3 col-lg-3"></div>
+                  <div className="col-s-12 col-sm-12 col-md-3 col-lg-3"></div>
+                  <div className="col-s-12 col-sm-12 col-md-3 col-lg-3"></div>
 
                 </div>
-              </div>
-            </div>
-          </section>
-          <section id="recognition">
-            <div className="container container__custom recognition__wrapper">
-              <div className="row">
-                <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 recognition__one no__padding">
-                    <h3 className="xxl__font bold__font">
-                      {pageAcf.clients_title}
-                    </h3>
-                    <div
-                      className="row sm__font reg__font recognition__one__copy"
-                      dangerouslySetInnerHTML={{ __html: pageAcf.clients_copy }}
-                    />
-                </div>
-                <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 recognition__two select__clients no__padding">
-                    <div
-                      className="row sm__font reg__font recognition__one__copy"
-                      dangerouslySetInnerHTML={{ __html: pageAcf.clients_second_copy }}
-                    />
+                <div className="row offices__four">
+                  {
+                    pageAcf.offices.map((office, index)=> 
+                      <div className={`no__padding ${office.city.replace(/ /g,'').toLowerCase()} col-s-12 col-sm-12 col-md-12 col-lg-12 office__photo ${index === 0 ? "active show" : "floating__element hide" }`} key={index}>
+                        {
+                          office.photo
+                          ?<Img fluid={office.photo.localFile.childImageSharp.fluid} alt={`Raxo's office photo`} tabIndex={-1}/>
+                          :""
+                        }
+                      </div>
+                    )
+                  }
                 </div>
               </div>
-            </div>
-          </section>
-          <section id="clients">
+            </section>
+            <section id="we_can_help">
+              <div className="container container__custom">
+                  <div className="row">
+                      <div className="col-lg-12 no__padding">
+                        <h2 className="xxl__font bold__font">
+                          {pageAcf.services}
+                        </h2>
+                      </div>
+                  </div>
+                  <div className="row services">
+                    {
+                      pageAcf.services_info.map((services, index) => 
+                              index % 2 === 0 
+                              ? 
+                                  <div className={`col-xs-6 col-sm-6 col-md-6 col-lg-6 services__list no__padding c-${services.hover_color.replace('#','')} service__list__${index}`} key={index}>
+                                    <div className="services__list__subtitle">
+                                      <p className="reg__font sm__font">
+                                        {services.subtitle}
+                                      </p>
+                                    </div>
+                                    <div className="services__list__items">
+                                      <div
+                                        className="row lg__font bold__font "
+                                        dangerouslySetInnerHTML={{ __html: services.services_list }}
+                                      />
+                                    </div>
+                                  </div>
+                              :
+                                  <div className={`col-xs-6 col-sm-6 col-md-6 col-lg-6 services__list lower__list no__padding service__list__${index} c-${services.hover_color.replace('#','')}`} key={index} >
+                                    <div className="services__list__subtitle">
+                                      <p className="reg__font sm__font">
+                                        {services.subtitle}
+                                      </p>
+                                    </div>
+                                    <div className="services__list__items">
+                                      <div
+                                        className="row lg__font bold__font "
+                                        dangerouslySetInnerHTML={{ __html: services.services_list }}
+                                        />
+                                    </div>
+                                  </div> 
+                      )
+                      }
+                  </div>
+              </div>
+            </section>
+            <section id="recognition">
+              <div className="container container__custom recognition__wrapper">
+                <div className="row">
+                  <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 recognition__one no__padding">
+                      <h3 className="xxl__font bold__font">
+                        {pageAcf.recognition_title}
+                      </h3>
+                      <div
+                        className="row sm__font reg__font recognition__one__copy"
+                        dangerouslySetInnerHTML={{ __html: pageAcf.recognition_copy }}
+                      />
+                  </div>
+                  <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 recognition__two no__padding">
+
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section id="recognition_list">
+              <div className="container container__custom">
+                <div className="row">
+                  <div className="col-lg-12 no__padding">
+                    <p className="sm__font reg__font recognition_list__top">
+                      List of services of <br/>
+                      Art Direction
+                    </p>
+                  </div>
+                </div>
+                <div className="row recognition__list__wrapper">
+                  <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 recognition__list__one no__padding">
+                      {
+                        pageAcf.recognition_list.map((item, index) => 
+                          <div className={`recognition__list__item `} key={index} id={`tab-rec-${index}`} onMouseEnter={this.toggleListElement}>
+                            <h3 className="lg__font bold__font">
+                              {item.title}
+                              
+                            </h3>
+                            <h3 className="lg__font bold__font">
+                            {item.amount}
+                            </h3>
+                          </div>
+                        )
+                      }
+                  </div>
+                  <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 recognition__list__two no__padding">
+                      {
+                        pageAcf.recognition_list.map((item, index) => 
+                        <div
+                          className={`row sm__font reg__font recognition__one__copy recognition__list__copy tab-rec-${index} ${index === 0 ? "active" : ""}`}
+                          dangerouslySetInnerHTML={{ __html: item.details }}
+                        />
+                        )
+                      }
+                    <svg id="Componente_53_1" data-name="Componente 53 – 1" xmlns="http://www.w3.org/2000/svg" width="36.061" height="36.061" viewBox="0 0 36.061 36.061">
+                      <circle id="Elipse_3" data-name="Elipse 3" cx="18.03" cy="18.03" r="18.03" fill="#fff"/>
+                      <path id="Trazado_70" data-name="Trazado 70" d="M10889.058,8070.985l2.2,6.783h7.133l-5.771,4.192,2.2,6.783-5.77-4.192-5.771,4.192,2.2-6.783-5.77-4.192h7.132Z" transform="translate(-10871.028 -8062.771)"/>
+                    </svg>
+
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section id="recognition">
+              <div className="container container__custom recognition__wrapper">
+                <div className="row">
+                  <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 recognition__one no__padding">
+                      <h3 className="xxl__font bold__font">
+                        {pageAcf.clients_title}
+                      </h3>
+                      <div
+                        className="row sm__font reg__font recognition__one__copy"
+                        dangerouslySetInnerHTML={{ __html: pageAcf.clients_copy }}
+                      />
+                  </div>
+                  <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 recognition__two select__clients no__padding">
+                      <div
+                        className="row sm__font reg__font recognition__one__copy"
+                        dangerouslySetInnerHTML={{ __html: pageAcf.clients_second_copy }}
+                      />
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section id="clients">
             <div className="container container__custom">
               <div className="row">
                 {
@@ -461,6 +462,7 @@ class ContactPage extends Component {
               </div>
             </div>
           </section>
+          </div>
       </Layout>
     )
   }

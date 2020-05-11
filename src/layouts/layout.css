@@ -652,8 +652,9 @@ body{
       line-height: 1.4;
   }
   .sm__font{
-      font-size: 13px;
-      line-height: 16px;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.3px;
   }
   .xsm__font{
     font-size: 15px;
@@ -662,21 +663,25 @@ body{
   .md__font{
     font-size: 18px;
     line-height: 20px;
+    letter-spacing: -0.7px;
   }
   .xmd__font{
     font-size: 40px!important;
     line-height: 42px;
     margin: 0;
+    letter-spacing: -3px;
   }
   .lg__font{
       font-size: 60px!important;
       line-height: 62px;
       margin: 0;
+      letter-spacing: -3px;
   }
   .xxl__font{
     font-size: 110px!important;
     line-height: 100px;
     margin: 0;
+    letter-spacing: -5px;
   }
   .continer-fluid{
     max-width: 1600px;
@@ -689,7 +694,7 @@ body{
     margin-top: 10%;
   }
   .selected__projects {
-    margin-top: 20%;
+    padding-top: 20%;
   }
   .selected__projects.latest__projects {
     margin-top: 10%;
@@ -700,7 +705,7 @@ body{
 @media(max-width: 2000px)
 {
   .selected__projects {
-    margin-top: 40%;
+    padding-top: 40%;
 }
 .featured__video {
   margin-top: 25%;
@@ -718,9 +723,7 @@ body{
   .featured__video{
     margin-top: 25%;
   }
-  .selected__projects{
-    margin-top: 38%;
-  }
+
   .selected__projects.latest__projects{
     margin-top: 25%;
     margin-bottom: 15%;
@@ -729,6 +732,7 @@ body{
     font-size: 80px!important;
     line-height: 80px;
     margin: 0;
+    letter-spacing: -3.5px;
   }
 }
 @media(max-width: 1024px){
@@ -736,7 +740,9 @@ body{
     font-size: 60px!important;
     line-height: 65px;
   }
-
+  .selected__projects {
+    padding-top: 30%;
+}
 }
 
 .contrast_02{
@@ -775,6 +781,7 @@ body{
 #menu__full__screen.show{
   left: 0px;
   transition: left 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+  z-index: 999;
 }
 /* Helper classes -- GLOBAL -- */ 
 .separator {
@@ -824,10 +831,10 @@ body{
 /* Section One Component */
 section#one{
   background: black;
-  position: absolute;
+  position: fixed;
   height: 100vh;
   width: 100%;
-  z-index: 8;
+  z-index: 5;
   top: 0;
 }
 /* Video Background Component */
@@ -875,8 +882,10 @@ section#one{
 }
 .featured__video .featured__video__copy p{
   font-size: 12px;
-  font-family: 'MarkPro-Book';
-  font-weight: normal;
+  line-height: 15px;
+  letter-spacing: 0.3px;
+  font-family: 'Roboto';
+  font-weight: 400;
 }
 .featured__video .featured__video__title{
   margin-top: 4%;
@@ -913,13 +922,15 @@ section#one{
 }
 .selected__projects .selected__projects__copy p{
   font-size: 12px;
-  font-family: 'MarkPro-Book';
-  font-weight: normal;
+  line-height: 15px;
+  letter-spacing: 0.3px;
+  font-family: 'Roboto';
+  font-weight: 400;
   width: 100%;
   max-width: 60%;
 }
 .selected__projects{
-  margin-bottom: 30%;
+  padding-bottom: 30%;
 }
 .selected__projects__projects{
   margin-top: 1.5%;
@@ -927,8 +938,10 @@ section#one{
 }
 .selected__projects__projects__left__copy p{
   font-size: 12px;
-  font-family: 'MarkPro-Book';
-  font-weight: normal;
+  line-height: 15px;
+  letter-spacing: 0.3px;
+  font-family: 'Roboto';
+  font-weight: 400;
   width: 90%;
 }
 .selected__projects__projects > div {
@@ -1053,7 +1066,7 @@ button{
     margin-top: 5%;
   }
   .selected__projects {
-    margin-top: 65%;
+    padding-top: 55%;
   }
   .selected__projects.latest__projects .pgrid__base__thumbnail p {
     top: 130px;
@@ -1064,9 +1077,18 @@ button{
   .brand__menu__toggle p{
     display: none;
   }
+  .xxl__font {
+    letter-spacing: -2px;
+  }
+  .md__font {
+    letter-spacing: -0.5px;
+  }
+  .lg__font{
+    letter-spacing: -1.5px;
+  }
   .selected__projects {
-    margin-bottom: 50px;
-}
+    padding-bottom: 50px;
+  }
   .selected__projects__projects__left__copy{
     display: none;
   }
@@ -1155,7 +1177,7 @@ button{
   }
 
   .sm__font{
-    font-size: 14px;
+    font-size: 12px;
   }
   .selected__projects .selected__projects__copy p{
       font-size: 14px;
@@ -1171,13 +1193,13 @@ button{
     display: none!important;
   }
   .selected__projects {
-    margin-top: 35%;
+    padding-top: 20%;
   }
   .selected__projects.latest__projects {
       margin-top: 35%;
   }
   .featured__video {
-      margin-top: 35%;
+      margin-top: 20%;
   }
   .featured__video .featured__video__source video {
       position: relative;
@@ -1212,4 +1234,34 @@ button{
   .selected__projects__projects > div {
     padding: 5% 5%;
   }
+}
+
+.on-transition{
+  opacity: 0;
+}
+.main__section__wrapper{
+  position: relative;
+  z-index: 8;
+  background: #F4F4F4;
+}
+
+main, .floating__web__info {
+  animation-duration: 0.5s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+body{
+  background: #f4f4f4;
 }

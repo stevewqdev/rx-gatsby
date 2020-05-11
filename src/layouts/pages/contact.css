@@ -1,5 +1,5 @@
 .raxo__info{
-    margin: 15% 0;
+    padding: 15% 0;
 }
 .raxo__social__menu{
     text-transform: capitalize;
@@ -30,10 +30,10 @@
     padding-left: 40px;
 }
 .raxo__theAddress{
-    margin-bottom: 80px;
+    padding-bottom: 80px;
 }
 .raxo__addresses{
-    margin-bottom: 200px;
+    padding-bottom: 200px;
 }
 .raxo__address__copy h4{
     font-size: 18px;
@@ -55,12 +55,12 @@
         flex-direction: column;
     }
     .raxo__info {
-        margin-top: -40px;
+        padding-top: -40px;
     }
     .raxo__theAddress {
-        margin-bottom: 0px;
+        padding-bottom: 0px;
     }
     .raxo__addresses {
-        margin-bottom: 50px;
+        padding-bottom: 50px;
     }
 }

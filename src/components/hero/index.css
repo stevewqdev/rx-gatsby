@@ -1,5 +1,5 @@
 .hero__component{
-    position: absolute;
+    position: fixed;
     min-height: 100vh;
     height: auto;
     width: 100%;

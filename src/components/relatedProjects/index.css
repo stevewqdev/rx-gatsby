@@ -24,6 +24,9 @@
 .related__projects img:hover{
     opacity: 1!important;
 }
+.related__projects a{
+    text-decoration: none;
+}
 @media(max-width: 500px){
     .related__projects {
         padding: 100px 20px;

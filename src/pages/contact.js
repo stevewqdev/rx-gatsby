@@ -33,28 +33,29 @@ class ContactPage extends Component {
             secondSubtitle={pageAcf.second_subtitle}
           >
           </Hero>
-          <section id="two " className="raxo__info">
-              <div className="container container__custom">
-                  <div className="row">
-                      <div className="col-xs-6 col-sm-6 col-lg-6 raxo__social__menu no__padding">
-                        <SocialMenu fontSize="lg__font bold__font no__decoration" layout={"full__screen__menu"}></SocialMenu>
-                      </div>
-                      <div className="col-xs-6  col-sm-6 col-lg-6 raxo__contact__info no__padding">
-                        <a href={`mailto:${this.props.data.wordpressAcfOptions.options.contact_email}`}>
-                            <h2 className="lg__font bold__font">
-                                {this.props.data.wordpressAcfOptions.options.contact_email}
-                            </h2>
-                        </a>
-                        <a href={`tel:${this.props.data.wordpressAcfOptions.options.contact_phone}`}>
-                        <h2 className="lg__font bold__font">
-                            {this.props.data.wordpressAcfOptions.options.contact_phone}
-                        </h2>
-                        </a>
-                      </div>
-                  </div>
-              </div>
-          </section>
-          <section id="three">
+          <div className="main__section__wrapper">
+            <section id="two " className="raxo__info">
+                <div className="container container__custom">
+                    <div className="row">
+                        <div className="col-xs-6 col-sm-6 col-lg-6 raxo__social__menu no__padding">
+                          <SocialMenu fontSize="lg__font bold__font no__decoration" layout={"full__screen__menu"}></SocialMenu>
+                        </div>
+                        <div className="col-xs-6  col-sm-6 col-lg-6 raxo__contact__info no__padding">
+                          <a href={`mailto:${this.props.data.wordpressAcfOptions.options.contact_email}`}>
+                              <h2 className="lg__font bold__font">
+                                  {this.props.data.wordpressAcfOptions.options.contact_email}
+                              </h2>
+                          </a>
+                          <a href={`tel:${this.props.data.wordpressAcfOptions.options.contact_phone}`}>
+                          <h2 className="lg__font bold__font">
+                              {this.props.data.wordpressAcfOptions.options.contact_phone}
+                          </h2>
+                          </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="three">
               <div className="container container__custom raxo__addresses">
                   {
                     pageAcf.address.map((address, index) =>
@@ -81,6 +82,7 @@ class ContactPage extends Component {
                   }
               </div>
           </section>
+          </div>
       </Layout>
     )
   }

@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useState, useEffect } from 'react';
 import { useStaticQuery, graphql } from "gatsby"
+import AOS from 'aos';
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import Footer from "../components/footer/index"
@@ -11,6 +12,34 @@ import "../layouts/layout.css"
 import "../fonts/stylesheet.css"
 
 const Layout = ({ children, location }) => {
+  function hrefRedirect(){
+    let aElements = document.querySelectorAll("a"); 
+    aElements.forEach(element => {
+      element.addEventListener("click", function(event){
+        event.preventDefault();
+
+        document.querySelectorAll(".page__wrapper")[0].classList.add("on-transition");
+        
+        setTimeout(function() {
+
+          window.location.href = `${event.target.getAttribute("href")}`;
+
+        },500);
+      })
+    });
+  }
+  useEffect(() => {
+    hrefRedirect();
+
+    AOS.init({
+      disable: 'mobile', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+      easing: 'ease', // default easing for AOS animations
+      once: true, // whether animation should happen only once - while scrolling down    
+    });
+  });
   // Next query will return the site data, the master acf fields for whole website data, the logo and the favicon.
   const data = useStaticQuery(graphql`
     query {

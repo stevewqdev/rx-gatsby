@@ -32,6 +32,7 @@ class ContactPage extends Component {
             secondSubtitle={pageAcf.second_subtitle}
           >
           </Hero>
+          <div className="main__section__wrapper">
           <section className="work__list">
             <div className="container container__custom">
                 <div className="row">
@@ -71,6 +72,7 @@ class ContactPage extends Component {
                 </div>
             </div>
           </section>
+          </div>
       </Layout>
     )
   }

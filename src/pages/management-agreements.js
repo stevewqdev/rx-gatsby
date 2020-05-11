@@ -31,7 +31,7 @@ class ManagementAgreements extends Component {
             secondSubtitle={pageAcf.second_subtitle}
           >
           </Hero>
-          <div className="management__page">
+          <div className="management__page main__section__wrapper">
             <About 
                 customData={pageAcf.about_areas_agreement} 
                 agreementCopy={pageAcf.about_copy_agreement}>

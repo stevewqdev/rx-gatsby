@@ -8,43 +8,7 @@ import Img from "gatsby-image"
 
 import "../layouts/pages/team.css"
 
-class ContactPage extends Component {
-  toggleTitle(event){
-    let elementId = event.target.getAttribute("id")
-    let teamArray = [...document.getElementsByClassName(elementId)];
-
-    if(event.target.classList.contains("active")){
-        event.target.classList.remove("active")
-        
-        teamArray.map(element => 
-            element.classList.remove("active")
-        )
-    }else{
-        event.target.classList.add("active")
-        
-        teamArray.map(element => 
-            element.classList.add("active")
-        )
-    }
-  }
-  toggleTeamMember(event){
-    let elementId = event.target.classList[1];
-    let teamArray = [...document.getElementsByClassName(elementId)];
-    
-    if(event.target.classList.contains("active")){
-        document.getElementById(elementId).classList.remove("active")
-
-        teamArray.map(element => 
-            element.classList.remove("active")
-        )
-    }else{
-        document.getElementById(elementId).classList.add("active")
-
-        teamArray.map(element => 
-            element.classList.add("active")
-        )
-    }
-  }
+class Team extends Component {
   componentDidMount(){
     let teamArray = [...document.getElementsByClassName("creative")];
 
@@ -74,145 +38,296 @@ class ContactPage extends Component {
             secondSubtitle={pageAcf.second_subtitle}
           >
           </Hero>
-          <section className="team__section">
-            <div className="container container__custom">
-                <div className="row">
-                    <div className="no__padding col-xs-12 col-sm-12 col-md-3 col-lg-3 team__column__one">
+          <div className="main__section__wrapper">
+             <section className="team__new">
+              <div className="container container__custom">
+                    <div className="row team__row__one">
+                      {/* FIRST ROW OF TEAM */}
+                      <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 team__member__0 no__padding">
                         {
-                            pageAcf.team_categories.map((categorie,index) =>
-                                <h2 className={`categorie__name xmd__font bold__font ${ index === 0 ? "active" : "" } `} id={categorie.title === "Creative Team" ? "creative" : categorie.title.toLowerCase()} key={index} onClick={this.toggleTitle} >
-                                    {categorie.title}
-                                    {
-                                        index === 0
-                                        ? " / "
-                                        : ""
-                                    }
-                                </h2>
+                            pageAcf.team_members.map((member, index) => 
+                                index === 0
+                                ?
+                                <div className={`team__new__member ${member.category}`} key={index} onClick={this.toggleTeamMember}>
+                                    <div className={`team__new__member__background`}>
+                                        {
+                                            member.photo
+                                            ?<Img fluid={member.photo.localFile.childImageSharp.fluid} alt={`${member.name} photo`} tabIndex={-1}/>
+                                            :""
+                                        }
+                                    </div>
+                                    <div className="team__new__member__info">
+                                        <p className="xxl__font team__new__member__info__name">
+                                            {member.name}
+                                        </p>
+                                        <div className="team__information">
+                                            <p className="sm__font bold__font reg__font team__new__member__info__position">
+                                                {member.position}
+                                            </p>
+                                            <p className="sm__font reg__font team__new__member__info__position">
+                                                {member.email}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                : ""
                             )
                         }
-                        <div
-                            className="sm__font reg__font team__copy"
-                            dangerouslySetInnerHTML={{ __html: pageAcf.team_copy }}
-                        />
-                        <div className="team__members">
-                            {
-                                pageAcf.team_members.map((member, index) => 
-                                    index < 2
-                                    ?
-                                    <div className={`team__member  ${member.category}`} key={index} onClick={this.toggleTeamMember}>
-                                        <div className={`team__member__background`}>
-                                            {
-                                                member.photo
-                                                ?<Img fluid={member.photo.localFile.childImageSharp.fluid} alt={`${member.name} photo`} tabIndex={-1}/>
-                                                :""
-                                            }
-                                        </div>
-                                        <div className="team__member__info">
-                                            <p className="xsm__font reg__font team__member__info__name">
-                                                {member.name}
-                                            </p>
-                                            <p className="xsm__font reg__font team__member__info__position">
-                                                {member.position}
-                                            </p>
-                                        </div>
-                                    </div>
-                                    : ""
-                                )
-                            }
-                        </div>
-                    </div>
-                    <div className="no__padding col-xs-12 col-sm-12 col-md-3 col-lg-3 team__column__two">
-                        <div className="team__members">
+                      </div>
+                      <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 dark__space no__padding"></div>
+                      <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 team__member__1 no__padding">
                         {
-                                pageAcf.team_members.map((member, index) => 
-                                    index > 1 & index < 7
-                                    ?
-                                    <div className={`team__member ${member.category}`} key={index} onClick={this.toggleTeamMember}>
-                                        <div className={`team__member__background`}>
+                            pageAcf.team_members.map((member, index) => 
+                                index === 1
+                                ?
+                                <div className={`team__new__member ${member.category}`} key={index} onClick={this.toggleTeamMember}>
+                                    <div className={`team__new__member__background`}>
+                                        {
+                                            member.photo
+                                            ?<Img fluid={member.photo.localFile.childImageSharp.fluid} alt={`${member.name} photo`} tabIndex={-1}/>
+                                            :""
+                                        }
+                                    </div>
+                                    <div className="team__new__member__info">
+                                        <p className="xxl__font team__new__member__info__name">
+                                            {member.name}
+                                        </p>
+                                        <div className="team__information">
+                                            <p className="sm__font bold__font reg__font team__new__member__info__position">
+                                                {member.position}
+                                            </p>
+                                            <p className="sm__font reg__font team__new__member__info__position">
+                                                {member.email}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                : ""
+                            )
+                        }
+                      </div>
+                      <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 dark__space no__padding"></div>
+
+
+
+
+                    </div>
+                    <div className="row team__row__two">
+                      {/* SECOND ROW OF TEAM */}
+                      {
+                            pageAcf.team_members.map((member, index) => 
+                                index >= 2 & index  < 6
+                                ?
+                                <div className={`col-xs-12 col-sm-12 col-md-3 col-lg-3 team__member__block team__member__${index} no__padding`} key={index}>
+                                    <div className={`team__new__member ${member.category}`}  onClick={this.toggleTeamMember}>
+                                        <div className={`team__new__member__background`}>
                                             {
                                                 member.photo
                                                 ?<Img fluid={member.photo.localFile.childImageSharp.fluid} alt={`${member.name} photo`} tabIndex={-1}/>
                                                 :""
                                             }
                                         </div>
-                                        <div className="team__member__info">
-                                            <p className="xsm__font reg__font team__member__info__name">
+                                        <div className="team__new__member__info">
+                                            <p className="xxl__font team__new__member__info__name">
                                                 {member.name}
                                             </p>
-                                            <p className="xsm__font reg__font team__member__info__position">
+                                            <div className="team__information">
+                                            <p className="sm__font bold__font reg__font team__new__member__info__position">
                                                 {member.position}
                                             </p>
+                                            <p className="sm__font reg__font team__new__member__info__position">
+                                                {member.email}
+                                            </p>
+                                            </div>
                                         </div>
                                     </div>
-                                    : ""
-                                )
-                            }
-                            </div>
+                                </div>
+                                : ""
+                            )
+                        }
+
+
                     </div>
-                    <div className="no__padding col-xs-12 col-sm-12 col-md-3 col-lg-3 team__column__three">
-                        <div className="team__members">
+                    <div className="row team__row__three">
+                        {/* THIRD ROW OF TEAM */}
+                        
                         {
-                                pageAcf.team_members.map((member, index) => 
-                                    index > 6 & index < 12
-                                    ?
-                                    <div className={`team__member ${member.category}`} key={index} onClick={this.toggleTeamMember}>
-                                        <div className={`team__member__background`}>
+                            pageAcf.team_members.map((member, index) => 
+                                index >= 6 & index  < 9
+                                ?
+                                <div className={`col-xs-12 col-sm-12 col-md-3 col-lg-3 team__member__block team__member__${index} no__padding`} key={index}>
+                                    <div className={`team__new__member ${member.category}`}  onClick={this.toggleTeamMember}>
+                                        <div className={`team__new__member__background`}>
                                             {
                                                 member.photo
                                                 ?<Img fluid={member.photo.localFile.childImageSharp.fluid} alt={`${member.name} photo`} tabIndex={-1}/>
                                                 :""
                                             }
                                         </div>
-                                        <div className="team__member__info">
-                                            <p className="xsm__font reg__font team__member__info__name">
+                                        <div className="team__new__member__info">
+                                            <p className="xxl__font team__new__member__info__name">
                                                 {member.name}
                                             </p>
-                                            <p className="xsm__font reg__font team__member__info__position">
+                                            <div className="team__information">
+                                            <p className="sm__font bold__font reg__font team__new__member__info__position">
                                                 {member.position}
                                             </p>
+                                            <p className="sm__font reg__font team__new__member__info__position">
+                                                {member.email}
+                                            </p>
+                                            </div>
                                         </div>
                                     </div>
-                                    : ""
-                                )
-                            }
-                        </div>
+                                </div>
+                                : ""
+                            )
+                        }
+                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 dark__space no__padding"></div>
                     </div>
-                    <div className="no__padding col-xs-12 col-sm-12 col-md-3 col-lg-3 team__column__four">
-                        <div className="team__members">
-                            {   
-                                pageAcf.team_members.map((member, index) => 
-                                    index > 11 & index < 17
-                                    ?
-                                    <div className={`team__member ${member.category}`} key={index} onClick={this.toggleTeamMember}>
-                                        <div className={`team__member__background`}>
+                    <div className="row team__row__four">
+                    <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 dark__space no__padding"></div>
+                        {
+                            pageAcf.team_members.map((member, index) => 
+                                index >= 9 & index  < 12
+                                ?
+                                <div className={`col-xs-12 col-sm-12 col-md-3 col-lg-3 team__member__block team__member__${index} no__padding`} key={index}>
+                                    <div className={`team__new__member ${member.category}`}  onClick={this.toggleTeamMember}>
+                                        <div className={`team__new__member__background`}>
                                             {
                                                 member.photo
                                                 ?<Img fluid={member.photo.localFile.childImageSharp.fluid} alt={`${member.name} photo`} tabIndex={-1}/>
                                                 :""
                                             }
                                         </div>
-                                        <div className="team__member__info">
-                                            <p className="xsm__font reg__font team__member__info__name">
+                                        <div className="team__new__member__info">
+                                            <p className="xxl__font team__new__member__info__name">
                                                 {member.name}
                                             </p>
-                                            <p className="xsm__font reg__font team__member__info__position">
+                                            <div className="team__information">
+                                            <p className="sm__font bold__font reg__font team__new__member__info__position">
                                                 {member.position}
                                             </p>
+                                            <p className="sm__font reg__font team__new__member__info__position">
+                                                {member.email}
+                                            </p>
+                                            </div>
                                         </div>
                                     </div>
-                                    : ""
-                                )
-                            }
-                        </div>
+                                </div>
+                                : ""
+                            )
+                        }
+                    </div>
+                    <div className="row team__row__five">
+                    <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 dark__space no__padding"></div>
+                        {
+                            pageAcf.team_members.map((member, index) => 
+                                index >= 12 & index  < 14
+                                ?
+                                <div className={`col-xs-12 col-sm-12 col-md-3 col-lg-3 team__member__block team__member__${index} no__padding`} key={index}>
+                                    <div className={`team__new__member ${member.category}`}  onClick={this.toggleTeamMember}>
+                                        <div className={`team__new__member__background`}>
+                                            {
+                                                member.photo
+                                                ?<Img fluid={member.photo.localFile.childImageSharp.fluid} alt={`${member.name} photo`} tabIndex={-1}/>
+                                                :""
+                                            }
+                                        </div>
+                                        <div className="team__new__member__info">
+                                            <p className="xxl__font team__new__member__info__name">
+                                                {member.name}
+                                            </p>
+                                            <div className="team__information">
+                                            <p className="sm__font bold__font reg__font team__new__member__info__position">
+                                                {member.position}
+                                            </p>
+                                            <p className="sm__font reg__font team__new__member__info__position">
+                                                {member.email}
+                                            </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                : ""
+                            )
+                        }
+                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 dark__space no__padding"></div>
+                    </div>
+                    <div className="row team__row__six">
+                    {
+                            pageAcf.team_members.map((member, index) => 
+                                index >= 14 & index  < 15
+                                ?
+                                <div className={`col-xs-12 col-sm-12 col-md-3 col-lg-3 team__member__block team__member__${index} no__padding`} key={index}>
+                                    <div className={`team__new__member ${member.category}`}  onClick={this.toggleTeamMember}>
+                                        <div className={`team__new__member__background`}>
+                                            {
+                                                member.photo
+                                                ?<Img fluid={member.photo.localFile.childImageSharp.fluid} alt={`${member.name} photo`} tabIndex={-1}/>
+                                                :""
+                                            }
+                                        </div>
+                                        <div className="team__new__member__info">
+                                            <p className="xxl__font team__new__member__info__name">
+                                                {member.name}
+                                            </p>
+                                            <div className="team__information">
+                                            <p className="sm__font bold__font reg__font team__new__member__info__position">
+                                                {member.position}
+                                            </p>
+                                            <p className="sm__font reg__font team__new__member__info__position">
+                                                {member.email}
+                                            </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                : ""
+                            )
+                        }
+                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 dark__space no__padding"></div>
+                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 dark__space no__padding"></div>
+                        {
+                            pageAcf.team_members.map((member, index) => 
+                                index >= 15 & index  < 16
+                                
+                                ?
+                                <div className={`col-xs-12 col-sm-12 col-md-3 col-lg-3 team__member__block team__member__${index} no__padding`} key={index}>
+                                    <div className={`team__new__member ${member.category}`}  onClick={this.toggleTeamMember}>
+                                        <div className={`team__new__member__background`}>
+                                            {
+                                                member.photo
+                                                ?<Img fluid={member.photo.localFile.childImageSharp.fluid} alt={`${member.name} photo`} tabIndex={-1}/>
+                                                :""
+                                            }
+                                        </div>
+                                        <div className="team__new__member__info">
+                                            <p className="xxl__font team__new__member__info__name">
+                                                {member.name}
+                                            </p>
+                                            <div className="team__information">
+                                            <p className="sm__font bold__font reg__font team__new__member__info__position">
+                                                {member.position}
+                                            </p>
+                                            <p className="sm__font reg__font team__new__member__info__position">
+                                                {member.email}
+                                            </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                : ""
+                            )
+                        }
                     </div>
                 </div>
-            </div>
           </section>
+          </div>
       </Layout>
     )
   }
 }
-export default ContactPage
+export default Team
 
 export const pageQuery = graphql`
 query TeamQuery {
@@ -247,6 +362,7 @@ query TeamQuery {
                 name
                 position
                 category
+                email
                 photo{
                     localFile {
                         childImageSharp {

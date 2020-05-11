@@ -8,6 +8,9 @@
 .management__page{
     padding: 170px 0 450px;
 }
+.management__page .about__wrapper {
+    padding-top: 10%;
+}
 .standard__web{
     margin-top: 300px;
 }

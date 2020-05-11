@@ -1,12 +1,12 @@
 
 @media(max-width:4000px){
     .about__wrapper {
-      margin-top: 10%;
+      padding-top: 10%;
     }
 }
 @media(max-width:2000px){
     .about__wrapper {
-      margin-top: 25%;
+      padding-top: 25%;
     }
 }
 .about__rx{
