@@ -65,17 +65,36 @@ class HomePage extends Component {
                     <div className="separator --black "></div>
                   </div>
                   <div className="col-lg-12 no__padding featured__video__title">
-                    <h2 className={"xxl__font"}>{pageAcf.reel_title}</h2>
+                    <h2 
+                    data-aos="fade-up"
+                    data-aos-delay={`200`}
+                    data-aos-duration="1200"
+                    data-aos-anchor-placement="top"
+                    data-aos-easing="ease-in-out"
+                    className={"xxl__font"}>{pageAcf.reel_title}</h2>
                     <br/>
                   </div>
                   <div className="col-lg-12 featured__video__wrapper no__padding">
                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4 featured__video__copy no__padding">
                       <div
+                        data-aos="fade-up"
+                        data-aos-delay={`250`}
+                        data-aos-duration="1200"
+                        data-aos-anchor-placement="top"
+                        data-aos-easing="ease-in-out"
                         className=""
                         dangerouslySetInnerHTML={{ __html: pageAcf.reel_copy }}
                       />
                       <br/>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="19.73" height="19.72" viewBox="0 0 19.73 19.72">
+                      <div className="svg"
+                      data-aos="fade-up"
+                      data-aos-delay={`300`}
+                      data-aos-duration="1200"
+                      data-aos-anchor-placement="top"
+                      data-aos-easing="ease-in-out">
+                      <svg 
+
+                      xmlns="http://www.w3.org/2000/svg" width="19.73" height="19.72" viewBox="0 0 19.73 19.72">
                         <g id="Grupo_76" data-name="Grupo 76" transform="translate(-336 -3038.156)">
                           <g id="Grupo_75" data-name="Grupo 75">
                             <g id="Grupo_74" data-name="Grupo 74">
@@ -86,12 +105,16 @@ class HomePage extends Component {
                           </g>
                         </g>
                       </svg>
+                      </div>
                     </div>
                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 featured__video__source no__padding">
                       {
                         pageAcf.reel_video
                         ?
                         <video
+                          data-aos="fade-up"
+                          data-aos-delay={`250`}
+                          data-aos-duration="1500"
                           className="reel_video"
                           playsInline
                           className="mobile-hidden"
@@ -115,10 +138,21 @@ class HomePage extends Component {
                   </div>
                   <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__info">
                     <div className="selected__projects__title">
-                      <h2 className="lg__font">{pageAcf.sp_title}</h2>
+                      <h2 
+                      data-aos="fade-up"
+                      data-aos-delay={`150`}
+                      data-aos-duration="1200"
+                      data-aos-anchor-placement="top"
+                      data-aos-easing="ease-in-out"
+                      className="lg__font">{pageAcf.sp_title}</h2>
                     </div>
                     <div className="selected__projects__copy">
                       <div
+                        data-aos="fade-up"
+                        data-aos-delay={`200`}
+                        data-aos-duration="1200"
+                        data-aos-anchor-placement="top"
+                        data-aos-easing="ease-in-out"
                         className=""
                         dangerouslySetInnerHTML={{ __html: pageAcf.sp_copy }}
                       />
@@ -126,10 +160,18 @@ class HomePage extends Component {
                   </div>
                   <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__button">
                     <div className="row">
-                      <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__button__left"></div>
+                      <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__button__left"
+
+                      ></div>
                       <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__button__right">
                         <Link to="/projects">
-                          <button className="btn btn-default sm__font reg__font">See More</button>
+                          <button className="btn btn-default sm__font reg__font"
+                          data-aos="fade-up"
+                          data-aos-delay={`175`}
+                          data-aos-duration="1200"
+                          data-aos-anchor-placement="top"
+                          data-aos-easing="ease-in-out"
+                          >See More</button>
                         </Link>
                       </div>
                     </div>
@@ -144,10 +186,21 @@ class HomePage extends Component {
                               <div className="row">
                                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 no__padding selected__projects__projects__left">
                                   <div className="selected__projects__projects__left__img">
-                                    <img src={`${project.acf.featured_image.localFile.url}`} alt={`${project.post_name}`}/>
+                                    <img 
+                                    data-aos="fade-up"
+                                    data-aos-delay={`100`}
+                                    data-aos-duration="1200"
+                                    data-aos-anchor-placement="top"
+                                    data-aos-easing="ease-in-out"
+                                    src={`${project.acf.featured_image.localFile.url}`} alt={`${project.post_name}`}/>
                                   </div>
                                   <div className="selected__projects__projects__left__copy">
                                     <div
+                                      data-aos="fade-up"
+                                      data-aos-delay={`200`}
+                                      data-aos-duration="1200"
+                                      data-aos-anchor-placement="top"
+                                      data-aos-easing="ease-in-out"
                                       className=""
                                       dangerouslySetInnerHTML={{ __html: project.post_content }}
                                     />
@@ -155,6 +208,11 @@ class HomePage extends Component {
                                   <div className="no__padding selected__projects__projects__right">
                                     <div className="selected__projects__projects__right__title">
                                       <p
+                                        data-aos="fade-up"
+                                        data-aos-delay={`220`}
+                                        data-aos-duration="1200"
+                                        data-aos-anchor-placement="top"
+                                        data-aos-easing="ease-in-out"
                                         className="bold__font md__font"
                                         dangerouslySetInnerHTML={{ __html: project.post_name }}
                                       />

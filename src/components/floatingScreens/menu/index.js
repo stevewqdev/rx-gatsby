@@ -135,7 +135,7 @@ export default class MainMenuFloatingScreen extends Component {
               className="col col-xs-12 col-sm-2 col-md-2 col-lg-2 relative copyright__column reg__font mobile-hidden"
               id="copyright__column"
             >
-              <div className="fixed">
+              <div className="fixed copyright__inner">
                 <p>{this.props.siteAcf.copyright_info}</p>
               </div>
             </div>

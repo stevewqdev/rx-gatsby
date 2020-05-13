@@ -34,6 +34,12 @@ const SocialMenu = props => {
           className={`brand__social__network --${network.network} ${layoutType} social-${index}`}
           id={`${network.network}`}
           key={index}
+
+          data-aos="fade-right"
+          data-aos-easing="ease-in-back"
+          data-aos-delay={`${(index + 1 )* 100}`}
+          data-aos-offset="0"
+          data-aos-duration="1200"
         >
           <a
             href={`${network.network_link}`}

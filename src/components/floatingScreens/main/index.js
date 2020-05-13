@@ -21,7 +21,12 @@ export default class MainFloatingScreen extends Component {
               id="brand"
             >
               <div className="fixed">
-                <div className="brand__logo">
+                <div  className="brand__logo"
+                      data-aos="fade-up"
+                      data-aos-easing="ease-in-back"
+                      data-aos-delay="100"
+                          data-aos-duration="1200"
+                >
                   <Link to="/">
                     <img
                       src={this.props.siteLogo.source_url}
@@ -31,6 +36,10 @@ export default class MainFloatingScreen extends Component {
                 </div>
                 <div className="brand__menu bold__font ">
                   <div
+                    data-aos="fade-up"
+                    data-aos-easing="ease-in-back"
+                    data-aos-delay="200"
+                      data-aos-duration="1200"
                     className="brand__menu__toggle --closed d-flex align-items-center"
                     onClick={this.toggleMenu} role="button"
                   >
@@ -84,6 +93,10 @@ export default class MainFloatingScreen extends Component {
             <div className="col-xs-6 col-sm-2 col-md-2 col-lg-2 relative copy__one__column sm__font reg__font">
               <div className="fixed column__top__one">
                 <p
+                  data-aos="fade-down"
+                  data-aos-easing="ease-in-back"
+                  data-aos-delay="300"
+                  data-aos-duration="1200"
                   dangerouslySetInnerHTML={{
                     __html: this.props.siteAcf.web_info_column_one,
                   }}
@@ -93,6 +106,10 @@ export default class MainFloatingScreen extends Component {
             <div className="col col-xs-6 col-sm-2 col-md-2 col-lg-2 relative copy__two__column sm__font reg__font">
               <div className="fixed column__top__two">
                 <p
+                  data-aos="fade-down"
+                  data-aos-easing="ease-in-back"
+                  data-aos-delay="350"
+                  data-aos-duration="1200"
                   dangerouslySetInnerHTML={{
                     __html: this.props.siteAcf.web_info_column_two,
                   }}
@@ -103,8 +120,16 @@ export default class MainFloatingScreen extends Component {
               className="col col-xs-12 col-sm-2 col-md-2 col-lg-2 relative copyright__column reg__font mobile-hidden"
               id="copyright__column"
             >
-              <div className="fixed">
-                <p>{this.props.siteAcf.copyright_info}</p>
+              <div className="fixed copyright__inner"
+
+              >
+                <p
+                  data-aos="fade-up"
+                  data-aos-easing="ease-in-back"
+                  data-aos-delay="400"
+                  data-aos-duration="1200"
+                  data-aos-anchor="top"
+                >{this.props.siteAcf.copyright_info}</p>
               </div>
             </div>
           </div>

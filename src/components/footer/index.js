@@ -10,7 +10,13 @@ export default class Footer extends Component {
         <div className="container container__custom">
           <div className="row">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4 d-flex justify-start align-items-center footer__copyright">
-              <p className="reg__font sm__font ">{this.props.copyright}</p>
+              <p className="reg__font sm__font "
+              data-aos="fade-up"
+              data-aos-delay={`100`}
+              data-aos-duration="1200"
+              data-aos-anchor-placement="top"
+              data-aos-easing="ease-in-out"
+              >{this.props.copyright}</p>
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center align-items-center">
               <MainMenu
@@ -21,10 +27,17 @@ export default class Footer extends Component {
             <div className="col-xs-12 col-sm-4 col-md-4 legal__menu col-lg-4 d-flex justify-content-center align-items-center">
               {this.props.menu.map((menuItem, index) => (
                 <Link
+
                   to={menuItem.url}
                   key={`${index + 1}-${this.props.menu.length}`}
                 >
-                  <p className="reg__font sm__font footer__policy">
+                  <p className="reg__font sm__font footer__policy"
+                    data-aos="fade-up"
+                    data-aos-delay={`225`}
+                    data-aos-duration="1200"
+                    data-aos-anchor-placement="top"
+                    data-aos-easing="ease-in-out"
+                  >
                     {menuItem.title}
                     {index + 1 < this.props.menu.length ? ", " : ""}
                   </p>

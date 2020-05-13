@@ -40,7 +40,6 @@
 #columns{
     background: linear-gradient(to right, black 50%, black 50%);
     color: white;
-    min-height: 100vh;
     position: relative;
 }
 .columns__original{
@@ -50,17 +49,30 @@
     background: linear-gradient(to right, #FEA904 50%, black 50%)!important;
     transition: background ease-in-out 0.5s!important;
 }
+.columns__sky{
+    background: linear-gradient(to right, #01FEEB 50%, black 50%)!important;
+    transition: background ease-in-out 0.5s!important;
+}
+.columns__fuchsia{
+    background: linear-gradient(to right, #FE0062 50%, black 50%)!important;
+    transition: background ease-in-out 0.5s!important;
+}
+.columns__sea{
+    background: linear-gradient(to right, #005CFE 50%, black 50%)!important;
+    transition: background ease-in-out 0.5s!important;
+}
 .colored__column{
     background: black;
 }
 .colored__column{
     padding: 10% 20px!important;
     min-height: 100vh;
+    height: 100vh;
 }
 .service__list__3 .services__list__items .row{
     position: relative;
 }
-.service__list__3 .services__list__items .row p:last-child{
+.service__list__3 .services__list__items .row p:last-child span{
     position: absolute;
     font-size: 13px;
     color: white;
@@ -68,27 +80,53 @@
     font-weight: 400;
     width: 100px;
     line-height: 16px;
-    right: 22%;
+    right: unset;
     bottom: 5px;
+    margin-left: 10px;
 }
 .services__list__items .row a{
     color: white;
     text-decoration: none;
 }
-.colored__column h4{
-    font-size: 60px;
-    line-height: 62px!important;
-    font-weight:600!important;
-    font-family: 'MarkPro';
-    margin: 0px;
-    color: black;
-    padding: 0 15px;
-    position: relative;
-    z-index: 2;
-    opacity: 0;
-    transition: all ease-in-out 0.2s!important;
-    letter-spacing: -3px;
+@media(max-width: 4000px){
+    .colored__column h4{
+        font-size: 60px;
+        line-height: 62px!important;
+        font-weight:600!important;
+        font-family: 'MarkPro';
+        margin: 0px;
+        color: black;
+        padding: 0 15px;
+        position: relative;
+        z-index: 2;
+        opacity: 0;
+        transition: all ease-in-out 0.2s!important;
+        letter-spacing: -3px;
+    }
+    .colored__floating h4{
+        font-size: 60px;
+        line-height: 62px;
+        font-weight: bold;
+        font-family: 'MarkPro';
+        letter-spacing: -3px;
+        top: 15px;
+        position: relative;
+    }
 }
+@media(max-width: 1700px){
+    .colored__column h4{
+        font-size: 3vw;
+    }
+    .colored__floating h4 {
+        font-size: 3vw;
+        top: 15px;
+        position: relative;
+    }
+}
+.services__list__items .row a{
+    letter-spacing: 0px!important;
+}
+
 .colored__column p{
     font-size: 12px;
     line-height: 15px;
@@ -104,6 +142,9 @@
     margin-top: 20px;
     transition: all ease-in-out 0.2s!important;
 }
+.recognition__one__copy svg{
+    margin-top: 30px;
+}
 .colored__column:hover p{
     height: auto;
     color: black;
@@ -117,11 +158,13 @@
     position: absolute;
     z-index: 2;
     max-width: 800px;
-    top: 130px;
+    top: 8.9vw;
     width: 100%;
     pointer-events: none;
     transition: all ease-in-out 0.2s!important;
     z-index: 5;
+    margin-left: 20px;
+    left: 16.7%;
 }
 .service__list__4{
     opacity: 0;
@@ -138,6 +181,7 @@
     opacity: 1!important;
     font-family: Roboto;
     font-weight: 400!important;
+    letter-spacing: 0px!important;
 }
 .colored__column:hover .colored__sub__svg h4{
     color: white!important;
@@ -165,13 +209,7 @@
     left: -15px;
     top: 50px;
 }
-.colored__floating h4{
-    font-size: 60px;
-    line-height: 62px;
-    font-weight: bold;
-    font-family: 'MarkPro';
-    letter-spacing: -3px;
-}
+
 .colored__floating p{
     margin-top: 10px;
     max-width:650px;
@@ -311,7 +349,7 @@
     display: block;
 }
 .recognition__wrapper{
-    padding-top: 12%;
+    padding-top: 8%;
     padding-bottom: 10%;
 }
 .recognition__list__item h3{
@@ -422,6 +460,10 @@
     .offices__three {
         margin-top: 0px;
     }
+    .colored__column {
+        min-height: 730px;
+        height: 730px;
+    }
     .services__list.service__list__3{
         margin-top: 50%;
     }
@@ -436,15 +478,23 @@
         flex-direction: column;
         left: 0px;
     }
+    .offices__two__copy {
+        margin-top: 3%;
+      }
 }
 @media(max-width: 768px){
     .colored__column h4 {
         font-size: 20px;
         line-height: 30px!important;
     }
+    .offices__three {
+        margin-top: 100px;
+    }
     #we_can_help .lg__font {
         font-size: 25px!important;
-        line-height: 37px;
+        line-height: 31px;
+        display: flex;
+        flex-direction: column;
     }
     #we_can_help .lg__font img {
         top: -6px;
@@ -456,7 +506,37 @@
         flex-direction: column;
     }
     .service__list__3 .services__list__items .row p:last-child {
-margin-top: 20px;    }
+        margin-top: 0px;
+        display: flex;
+}
+.service__list__3 .services__list__items .row p:last-child span {
+    position: relative;
+    bottom: 0px;
+    margin-left: 0px;
+}
+#we_can_help .lg__font img {
+
+    margin-right: 5px;
+}
+.service__list__5 {
+    margin-top: 40px!important;
+}
+.recognition__list__item {
+    margin: 0px 0;
+}
+.recognition__list__one{
+    top: 25px;
+}
+.colored__floating {
+
+    max-width: 300px;
+}
+.colored__column h4 {
+    font-size: 3vw;
+}
+.colored__sub__svg h4{
+    font-size: 13px;
+}
 }
 @media(max-width: 500px){
     #columns .container__custom{
@@ -473,7 +553,7 @@ margin-top: 20px;    }
         min-height: auto;
     }
     #columns .colored__column .colored__column__copy p{
-        padding-right: 50px;
+        padding-right: 20px;
     }
     #columns {
         height: auto;
@@ -482,7 +562,7 @@ margin-top: 20px;    }
     .colored__columns__wrapper{
         display: flex;
         flex-wrap: wrap;
-        padding: 50px 40px;
+        padding: 50px 30px;
     }
     .colored__sub__svg{
         display: none;
@@ -522,13 +602,19 @@ margin-top: 20px;    }
     }
     .colored__floating {
         position: relative;
-        padding: 0 56px;
+        padding: 0 25px;
         top: 0;
         margin-top: 100px;
+        left: 0;
+        width: 100%!important;
+        max-width: 100%!important;
     }
     .colored__floating .row{
         border-top: solid 2px #ffffff;
         padding-top: 15px;
+    }
+    .space__column{
+        display: none;
     }
     .colored__column h4{
         opacity: 1;

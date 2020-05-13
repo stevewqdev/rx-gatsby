@@ -1,3 +1,11 @@
+html::-webkit-scrollbar {
+  background-color: black;
+} 
+html::-webkit-scrollbar-thumb {
+  background-color: #FE0062;
+  border-radius: 100px;
+}
+
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
@@ -7,6 +15,7 @@ html {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    
   }
   .col-xs-12{
     width: 100%!important;
@@ -707,6 +716,7 @@ body{
   .selected__projects {
     padding-top: 40%;
 }
+
 .featured__video {
   margin-top: 25%;
 }
@@ -717,9 +727,10 @@ body{
     
   }
   .container__custom{
-    padding: 0 10%;
-    max-width: 1250px;
+    padding: 0px 0%;
+    max-width: 950px;
   }
+
   .featured__video{
     margin-top: 25%;
   }
@@ -785,6 +796,7 @@ body{
   left: 0px;
   transition: left 0.6s cubic-bezier(0.83, 0, 0.17, 1);
   z-index: 999;
+  padding: 0px;
 }
 /* Helper classes -- GLOBAL -- */ 
 .separator {
@@ -902,6 +914,8 @@ section#one{
 .featured__video .featured__video__source {
   position: absolute;
   top: -11%;
+  transition: all 1.2s cubic-bezier(0.83, 0, 0.17, 1)!important;
+
 }
 @media(max-width: 4000px){
   .featured__video .featured__video__source video{
@@ -911,6 +925,8 @@ section#one{
     right: 0;
     width: calc(100% / 1.6);
     cursor: pointer;
+    transition: all 1.2s cubic-bezier(0.83, 0, 0.17, 1)!important;
+
   }
 }
 @media(max-width: 2000px){
@@ -968,11 +984,17 @@ section#one{
   height: calc(100% / 2)!important;
   z-index: 8;
   position: relative;
+  transition: all 1.2s cubic-bezier(0.83, 0, 0.17, 1)!important;
+
+}
+.selected__projects__projects__left{
+  transition: all 1.2s cubic-bezier(0.83, 0, 0.17, 1)!important;
 }
 .selected__projects__projects__left:hover img{
   width: calc(100% / 1.05)!important;
   object-fit: unset!important;
   height: calc(100% / 1.05)!important;
+  transition: all 1.2s cubic-bezier(0.83, 0, 0.17, 1)!important;
 }
 .selected__projects__projects__left__copy{
   position: relative;
@@ -983,12 +1005,14 @@ section#one{
   right: -54%;
   bottom: 12%;
   width: 100%;
+  
 }
 .selected__projects__projects__right .selected__projects__projects__right__title{
   height: 100%;
 }
 .selected__projects__projects__left:hover .selected__projects__projects__left__copy{
   bottom: 15%;
+  transition: all 1.2s cubic-bezier(0.83, 0, 0.17, 1)!important;
 }
 button{
   height: 60px;
@@ -1028,8 +1052,9 @@ button{
 }
 @media(max-width: 1024px){
   .container__custom {
-    max-width: 880px;
-  }
+    max-width: 650px;
+}
+
   .selected__projects__projects__right {
     bottom: 22%;
   }
@@ -1049,7 +1074,7 @@ button{
 @media(max-width: 768px){
   .lg__font {
     font-size: 27px!important;
-    line-height: 45px;
+    line-height: 30px;
   }
   .raxo__rx__svg svg{
     width: 400px;

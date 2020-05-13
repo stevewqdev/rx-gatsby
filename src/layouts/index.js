@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useStaticQuery, graphql } from "gatsby"
 import AOS from 'aos';
+import 'aos/dist/aos.css';
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import Footer from "../components/footer/index"
@@ -39,12 +40,12 @@ const Layout = ({ children, location }) => {
   function removeFixed(){
     window.onscroll = function(){
       var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
-      if(top > document.querySelectorAll(".main__section__wrapper")[0].offsetTop - 100){
+      if(top > document.querySelectorAll(".main__section__wrapper")[0].offsetTop){
         document.querySelectorAll(".column__top__one")[0].classList.add("force__absolute");
         document.querySelectorAll(".column__top__two")[0].classList.add("force__absolute");
       }else{
-        document.querySelectorAll(".column__top__one")[0].classList.remove("force__absolute");
-        document.querySelectorAll(".column__top__two")[0].classList.remove("force__absolute");
+                document.querySelectorAll(".column__top__one")[0].classList.add("force__absolute");
+        document.querySelectorAll(".column__top__two")[0].classList.add("force__absolute");
       }
     };
   }
@@ -54,12 +55,7 @@ const Layout = ({ children, location }) => {
     hrefRedirect();
 
     AOS.init({
-      disable: 'mobile', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-      startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-      easing: 'ease', // default easing for AOS animations
-      once: true, // whether animation should happen only once - while scrolling down    
+      disable: 'mobile', 
     });
   });
   // Next query will return the site data, the master acf fields for whole website data, the logo and the favicon.

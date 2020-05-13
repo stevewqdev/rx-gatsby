@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from 'react';
 import { useStaticQuery, graphql } from "gatsby"
 import "./index.css"
 
@@ -25,6 +25,8 @@ const About = props => {
   if(props.customData){
     aboutItems = [...props.customData];
   }
+
+
   return (
     <section id="about">
       <div className="container container__custom about__wrapper">
@@ -35,7 +37,7 @@ const About = props => {
               ? <div className="separator --white "></div>
               : <div className="separator --black "></div>
             }
-            
+        
           </div>
 
           {
@@ -47,8 +49,15 @@ const About = props => {
                 <div
                   className="col-xs-3 col-sm-3 col-md-3 work__areas__area no__padding"
                   key={index}
+
                 >
-                  <p className="bold__font md__font">{item.title}</p>
+                  <p 
+                  data-aos="fade-up"
+                  data-aos-delay={`${(index + 1) * 100}`}
+                  data-aos-duration="1200"
+                  data-aos-easing="ease-in-out"
+                  data-aos-anchor-placement="top"
+                  className="bold__font md__font">{item.title}</p>
                 </div>
               ))
               }
@@ -61,7 +70,13 @@ const About = props => {
                   className="col-xs-3 col-sm-3 col-md-3 work__areas__area no__padding"
                   key={index}
                 >
-                  <p className="bold__font md__font">{item.title}</p>
+                  <p 
+                  data-aos="fade-up"
+                  data-aos-delay={`${(index + 1) * 100}`}
+                  data-aos-duration="1200"
+                  data-aos-easing="ease-in-out"
+                  data-aos-anchor-placement="top"
+                  className="bold__font md__font">{item.title}</p>
                 </div>
               ))
               }
@@ -74,12 +89,22 @@ const About = props => {
           props.agreementCopy
           ? <div className="row about__rx ">
               <h2
+                data-aos="fade-up"
+                data-aos-delay={`300`}
+                data-aos-duration="1200"
+                data-aos-easing="ease-in-out"
+                
                 className="bold__font lg__font"
                 dangerouslySetInnerHTML={{ __html: props.agreementCopy }}
               />
             </div>
 
           : <div
+              data-aos="fade-up"
+              data-aos-delay={`300`}
+              data-aos-duration="1200"
+              data-aos-easing="ease-in-out"
+              
               className="row about__rx bold__font "
               dangerouslySetInnerHTML={{ __html: aboutItems.about_copy }}
             />

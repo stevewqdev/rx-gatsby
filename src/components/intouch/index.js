@@ -26,10 +26,21 @@ const GetInTouch = props => {
     <div className="container container__custom get_in_touch" id="get_in_touch">
       <div className="row">
         <div className="col-xs-9 col-sm-9 col-md-9 col-lg-9 no__padding">
-          <div className="" dangerouslySetInnerHTML={{ __html: inTouchCopy }} />
+          <div 
+          data-aos="fade-up"
+          data-aos-delay={`175`}
+          data-aos-duration="1200"
+          data-aos-anchor-placement="top"
+          data-aos-easing="ease-in-out"
+          className="" dangerouslySetInnerHTML={{ __html: inTouchCopy }} />
         </div>
         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 side__column d-flex justify-content-center align-items-center no__padding">
-          <div className="up__arrow black__arrow">
+          <div className="up__arrow black__arrow"
+            data-aos="fade-up"
+            data-aos-delay={`200`}
+            data-aos-duration="1200"
+            data-aos-anchor-placement="top"
+            data-aos-easing="ease-in-out">
             <AnchorLink href="#top">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

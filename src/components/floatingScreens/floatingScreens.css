@@ -15,6 +15,10 @@
 .force__absolute{
     position: absolute!important;
 }
+.copyright__inner{
+    right: 5px;
+    width: 201px;
+}
 .brand__menu__toggle{
     position: absolute;
     cursor: pointer;
@@ -53,6 +57,7 @@
 
 .floating__web__info p{
     color: #F4F4F4;
+    width: 90%;
 }
 
 .floating__web__info .col{
@@ -78,7 +83,7 @@
     justify-content: center;
     align-items: flex-end;
     mix-blend-mode: difference;
-
+    position: relative;
 }
 .floating__web__info .brand > div {
     height: 100vh;
@@ -119,13 +124,14 @@
 
 .floating__web__info .copyright__column p{
     position: relative;
-    top: -45px;
-    left: -10px;
+    top: -35px;
+    left: unset;
     font-size: 12px;
     line-height: 15px;
     letter-spacing: 0.3px;
     font-family: 'Roboto';
     font-weight: 400;
+    right: 0;
 }
 
 .floating__web__info .copyright__column p:before{
@@ -147,12 +153,20 @@
 .menu__subitem {
     margin-left: 15px;
 }
+@media(max-width:1024px){
+    .floating__web__info p{
+        width: 60%;
+    }
+}
 @media(max-width: 768px){
 
 }
 @media(max-width: 500px){
     .column__top__one, .column__top__two{
         position: absolute!important;
+    }
+    .floating__web__info p {
+        width: 100%;
     }
     .floating__web__info .copyright__column p {
         left: -40px;

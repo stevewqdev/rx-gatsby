@@ -9,6 +9,7 @@ import SVGONE from "../images/svg/Icon-01.svg";
 import SVGTWO from "../images/svg/Icon-02.svg";
 import SVGTHREE from "../images/svg/Icon-03.svg";
 import SVGFOUR from "../images/svg/Icon-04.svg";
+import { motion } from "framer-motion"
 
 
 import "../layouts/pages/about.css"
@@ -69,16 +70,19 @@ class ContactPage extends Component {
     if(event.target.classList.contains("column-1")) {
       event.target.classList.add("colored__column__svg__black")
       document.querySelectorAll(".c-73faeb")[0].classList.add("c-73faeb__column");
+      document.getElementById("columns").classList.add("columns__sky")
       document.getElementById("colored_floating").classList.add("colored__floating__hidden")
     }
     if(event.target.classList.contains("column-2")) {
       event.target.classList.add("colored__column__svg__black")
       document.querySelectorAll(".c-ea3464")[0].classList.add("c-ea3464__column");
+      document.getElementById("columns").classList.add("columns__fuchsia")
       document.getElementById("colored_floating").classList.add("colored__floating__hidden")
     }
     if(event.target.classList.contains("column-3")) {
       event.target.classList.add("colored__column__svg__black")
       document.querySelectorAll(".c-1d61f5")[0].classList.add("c-1d61f5__column");
+      document.getElementById("columns").classList.add("columns__sea")
       document.getElementById("colored_floating").classList.add("colored__floating__hidden")
     }
   }
@@ -92,16 +96,19 @@ class ContactPage extends Component {
     if(event.target.classList.contains("column-1")) {
       event.target.classList.remove("colored__column__svg__black")
       document.querySelectorAll(".c-73faeb")[0].classList.remove("c-73faeb__column");
+      document.getElementById("columns").classList.remove("columns__sky")
       document.getElementById("colored_floating").classList.remove("colored__floating__hidden")
     }
     if(event.target.classList.contains("column-2")) {
       event.target.classList.remove("colored__column__svg__black")
       document.querySelectorAll(".c-ea3464")[0].classList.remove("c-ea3464__column");
+      document.getElementById("columns").classList.remove("columns__fuchsia")
       document.getElementById("colored_floating").classList.remove("colored__floating__hidden")
     }
     if(event.target.classList.contains("column-3")) {
       event.target.classList.remove("colored__column__svg__black")
       document.querySelectorAll(".c-1d61f5")[0].classList.remove("c-1d61f5__column");
+      document.getElementById("columns").classList.remove("columns__sea")
       document.getElementById("colored_floating").classList.remove("colored__floating__hidden")
     }
   }
@@ -130,8 +137,9 @@ class ContactPage extends Component {
           </Hero>
           <div className="main__section__wrapper">
             <section id="columns">
-              <div className="container container__custom">
+              <div className="container-fluid">
                 <div className="row">
+                  
                   <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 colored__floating" id="colored_floating">
                     <div
                       className="row reg__font sm__font"
@@ -142,10 +150,10 @@ class ContactPage extends Component {
                   <div className="col-lg-12 divider"></div>
                   <div className="colored__columns__wrapper">
 
-
+                  <div className={`col-xs-6 col-sm-6 col-md-2 col-lg-2 space__column`} ></div>
                   {
                     pageAcf.colored_columns.map((column, index) => 
-                      <div className={`col-xs-6 col-sm-6 col-md-3 col-lg-3 colored__column order-${index} c-${column.color.replace('#','')} `} 
+                      <div className={`col-xs-6 col-sm-6 col-md-2 col-lg-2 colored__column order-${index} c-${column.color.replace('#','')} `} 
                       key={index}
       
                       >
@@ -236,7 +244,9 @@ class ContactPage extends Component {
                       </div>
                     )
                   }
+                 
                                   </div>
+                                  <div className={`col-xs-6 col-sm-6 col-md-2 col-lg-2 space__column`} ></div>
                 </div>
               </div>
             </section>
@@ -410,16 +420,19 @@ class ContactPage extends Component {
                   <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 recognition__list__two no__padding">
                       {
                         pageAcf.recognition_list.map((item, index) => 
-                        <div
-                          className={`row sm__font reg__font recognition__one__copy recognition__list__copy tab-rec-${index} ${index === 0 ? "active" : ""}`}
-                          dangerouslySetInnerHTML={{ __html: item.details }}
-                        />
+                        <div className={`row sm__font reg__font recognition__one__copy recognition__list__copy tab-rec-${index}`}>
+                          <div
+                            className={` `}
+                            dangerouslySetInnerHTML={{ __html: item.details }}
+                          />
+                          <svg id="Componente_53_1" data-name="Componente 53 – 1" xmlns="http://www.w3.org/2000/svg" width="36.061" height="36.061" viewBox="0 0 36.061 36.061">
+                          <circle id="Elipse_3" data-name="Elipse 3" cx="18.03" cy="18.03" r="18.03" fill="#fff"/>
+                          <path id="Trazado_70" data-name="Trazado 70" d="M10889.058,8070.985l2.2,6.783h7.133l-5.771,4.192,2.2,6.783-5.77-4.192-5.771,4.192,2.2-6.783-5.77-4.192h7.132Z" transform="translate(-10871.028 -8062.771)"/>
+                        </svg>
+                        </div>
                         )
                       }
-                    <svg id="Componente_53_1" data-name="Componente 53 – 1" xmlns="http://www.w3.org/2000/svg" width="36.061" height="36.061" viewBox="0 0 36.061 36.061">
-                      <circle id="Elipse_3" data-name="Elipse 3" cx="18.03" cy="18.03" r="18.03" fill="#fff"/>
-                      <path id="Trazado_70" data-name="Trazado 70" d="M10889.058,8070.985l2.2,6.783h7.133l-5.771,4.192,2.2,6.783-5.77-4.192-5.771,4.192,2.2-6.783-5.77-4.192h7.132Z" transform="translate(-10871.028 -8062.771)"/>
-                    </svg>
+
 
                   </div>
                 </div>
