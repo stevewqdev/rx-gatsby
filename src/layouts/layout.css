@@ -55,7 +55,7 @@ html {
   a:active,
   a:hover {
     outline-width: 0;
-    color: #EA3464;
+    color: #FE0062;
   }
   abbr[title] {
     border-bottom: none;
@@ -755,6 +755,9 @@ body{
 .simple__copy h4{
   font-size: 18px;
   font-weight: bold;
+  line-height: 20px;
+  letter-spacing: -0.7px;
+  font-family: MarkPro;
 }
 .simple__copy p{
   max-width: 300px;
@@ -879,6 +882,8 @@ section#one{
 .featured__video .featured__video__copy h4{
   font-size: 18px;
   font-weight: bold;
+  line-height: 20px;
+  letter-spacing: -0.7px;
 }
 .featured__video .featured__video__copy p{
   font-size: 12px;
@@ -937,7 +942,7 @@ section#one{
   max-width: 60%;
 }
 .selected__projects{
-  padding-bottom: 30%;
+  padding-bottom: 15%;
 }
 .selected__projects__projects{
   margin-top: 1.5%;
@@ -1271,4 +1276,9 @@ main, .floating__web__info {
 
 body{
   background: #f4f4f4;
+}
+@media(max-width: 500px){
+  .main__section__wrapper{
+    z-index: 0;
+  }
 }

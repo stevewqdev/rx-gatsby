@@ -35,9 +35,12 @@
     top: 100px;
 }
 .hero__component .hero__title{
-    margin-top: 50px;
+    margin-top: 30px;
 }
 @media(max-width: 500px){
+    .hero__component{
+        position: absolute;
+    }
     .hero__component .xxl__font{
         font-size: 35px!important;
         line-height: 35px;

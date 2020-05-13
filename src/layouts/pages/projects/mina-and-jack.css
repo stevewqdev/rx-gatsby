@@ -1,12 +1,12 @@
 
 @media(max-width: 4000px){
     .section__one{
-        margin-top: 200px;
+        padding-top: 200px;
     }
 }
 @media(max-width: 2000px){
     .section__one {
-        margin-top: 26%;
+        padding-top: 15%;
     }
 }
 .section__two .gallery img{
@@ -149,7 +149,7 @@
         margin-top: 120px;
     }
     .section__one {
-        margin-top: 13%;
+        padding-top: 13%;
     }
 }
 
@@ -170,7 +170,7 @@
 }
 @media(max-width: 768px){
     .section__one {
-        margin-top: 85%;
+        padding-top: 85%;
     }
     .section__two__copy{
         padding: 0px;
@@ -190,7 +190,7 @@
 }
 @media(max-width: 500px){
     .section__one {
-        margin-top: 120%;
+        padding-top: 96%;
     }
     .section__two {
         margin-top: 20%;

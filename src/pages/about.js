@@ -44,7 +44,6 @@ class ContactPage extends Component {
       }
     })
   }
-
   toggleListElement(event){
     let itemId = event.target.getAttribute("id");
     
@@ -106,6 +105,7 @@ class ContactPage extends Component {
       document.getElementById("colored_floating").classList.remove("colored__floating__hidden")
     }
   }
+
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
@@ -133,7 +133,7 @@ class ContactPage extends Component {
               <div className="container container__custom">
                 <div className="row">
                   <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 colored__floating" id="colored_floating">
-                    <div6
+                    <div
                       className="row reg__font sm__font"
                       dangerouslySetInnerHTML={{ __html: pageAcf.colored_copy }}
                     />

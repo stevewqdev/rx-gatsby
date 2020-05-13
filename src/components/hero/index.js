@@ -3,7 +3,7 @@ import "./index.css"
 
 const Hero = props => {
   return (
-    <section className={`hero__component ${props.theme}`}>
+    <section className={`hero__component ${props.theme} ${props.customClass}`}>
         <div className="container container__custom">
             <div className="row">
                 <div className="col-lg-12 hero__title no__padding">

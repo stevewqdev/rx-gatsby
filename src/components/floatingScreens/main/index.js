@@ -82,7 +82,7 @@ export default class MainFloatingScreen extends Component {
             <div className="col-xs-12 col-sm-2 col-md-2 col-lg-2 relative"></div>
             <div className="col-xs-12 col-sm-2 col-md-2 col-lg-2 relative"></div>
             <div className="col-xs-6 col-sm-2 col-md-2 col-lg-2 relative copy__one__column sm__font reg__font">
-              <div className="absolute">
+              <div className="fixed column__top__one">
                 <p
                   dangerouslySetInnerHTML={{
                     __html: this.props.siteAcf.web_info_column_one,
@@ -91,7 +91,7 @@ export default class MainFloatingScreen extends Component {
               </div>
             </div>
             <div className="col col-xs-6 col-sm-2 col-md-2 col-lg-2 relative copy__two__column sm__font reg__font">
-              <div className="absolute">
+              <div className="fixed column__top__two">
                 <p
                   dangerouslySetInnerHTML={{
                     __html: this.props.siteAcf.web_info_column_two,

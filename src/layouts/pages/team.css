@@ -2,8 +2,11 @@
     background: linear-gradient(to right, #EA3464 20%, #000000 80%);
 }
 .team__column__one{
-    background: #EA3464;
+    background: #FE0062;
     padding: 20% 0px;
+}
+.team__hero{
+    margin-top: -60px;
 }
 .team__column__two, .team__column__three, .team__column__four{
     background: #000000;
@@ -105,6 +108,9 @@
     }
 }
 @media(max-width: 500px){
+    .team__hero{
+        margin-top: 0px;
+    }
     .team__section{
         background: #000000;
     }

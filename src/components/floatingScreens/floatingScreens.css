@@ -7,6 +7,14 @@
         right: 0;
     }
 }
+@media(max-width: 2000px){
+    .floating__web__info, .menu__full__screen .row{
+        max-width: 100%;
+    }
+}
+.force__absolute{
+    position: absolute!important;
+}
 .brand__menu__toggle{
     position: absolute;
     cursor: pointer;
@@ -52,7 +60,7 @@
 }
 
 .floating__web__info .brand{
-    padding: 25px;
+    padding:40px 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -90,7 +98,7 @@
 
 .floating__web__info .brand__social{
     position: relative;
-    top: -2.5%;
+    top: -4.5%;
 }
 .brand__menu__toggle svg{
     width: 18px;
@@ -104,7 +112,7 @@
 }
 
 .floating__web__info .copy__one__column, .floating__web__info .copy__two__column{
-    padding: 30px 0;
+    padding: 40px 20px;
 }
 
  
@@ -143,6 +151,9 @@
 
 }
 @media(max-width: 500px){
+    .column__top__one, .column__top__two{
+        position: absolute!important;
+    }
     .floating__web__info .copyright__column p {
         left: -40px;
     }
@@ -159,7 +170,7 @@
         font-size: 8px;
     }
     .floating__web__info .copy__one__column, .floating__web__info .copy__two__column {
-        padding: 30px 11px;
+        padding: 30px 12px;
     }
     .copy__two__column{
         position: absolute!important;
@@ -173,7 +184,7 @@
         top: unset;
         display: flex!important;
         width: 100%;
-        bottom: 96px;
+        bottom: 50px;
         left: 0;
         padding: 24px;
         flex-direction: row!important;

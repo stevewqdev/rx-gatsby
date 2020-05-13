@@ -14,6 +14,9 @@
 .menu__full__screen.floating__web__info .brand p{
     color: #f4f4f4;
 }
+.menu__agreements a {
+    letter-spacing: 0px!important;
+}
 @media(max-width: 4000px){
     .menu__full__screen .main__page__menu a{
         font-size: 60px;
@@ -24,8 +27,9 @@
 }
 @media(max-width: 2000px){
     .menu__full__screen .main__page__menu a{
-        font-size: calc(3.5vw + 3.5vh);
-        line-height: calc(3.5vw + 4vh);
+        font-size: 80px;
+        line-height: 80px;
+        letter-spacing: -3.5px;
     }
 }
 .menu__full__screen .main__page__menu .floating-menu{
@@ -34,7 +38,7 @@
     padding-top: 0px;
 }
 .menu__full__screen .main__page__menu a:hover{
-    color: #EA3464;
+    color: #FE0062;
 }
 @media(max-width: 4000px){
     .menu__full__screen .copy__one__column__extra__menu{
@@ -63,11 +67,14 @@
         margin: auto;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
+    }
+    .menu__social{
+        margin-top: 30px;
     }
     .menu__email {
         position: relative;
-        top: 100;
+        margin-top: 100px;
     }
 }
 
@@ -79,10 +86,10 @@
     color: #000000;
 }
 .menu__full__screen .copy__one__column__extra__menu a:hover{
-    color: #EA3464;
+    color: #FE0062;
 }
 .menu__full__screen .copy__one__column__extra__menu a:hover p{
-    color: #EA3464;
+    color: #FE0062;
 }
 .menu__agreements p{
     position: absolute;
@@ -134,7 +141,7 @@
     .floating__web__info .copyright__column p {
         position: absolute;
         top: -90px;
-        left: -250px;
+        left: -260px;
         width: 200px;
     }
 }
@@ -149,11 +156,14 @@
 }
 @media(max-width: 800px){
     .menu__full__screen .main__page__menu a {
-        font-size: calc(1vw + 1.5vh);
-        line-height: calc(0.5vw + 3vh);
+        font-size: 50px;
+        line-height: 50px;
     }  
 }
 @media(max-width: 500px){
+    .menu__full__screen{
+        padding: 0px;
+    }
     .menu__full__screen .row{
         display: flex;
         flex-wrap: unset;
@@ -199,7 +209,7 @@
         font-size: 8.5px;
     }
     .floating__web__info .copyright__column p:before{
-        width: 60%;
+        width: 127px;
         left: 0px;
         bottom: -3px;
     }

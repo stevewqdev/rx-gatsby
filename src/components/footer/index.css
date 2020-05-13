@@ -38,6 +38,8 @@ footer .menu__subitem{
 }
 .legal__menu{
     text-transform: uppercase;
+    opacity: 0;
+    pointer-events: none;
 }
 .footer__menu a{
     position: relative;

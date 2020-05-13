@@ -47,7 +47,7 @@
     background: linear-gradient(to right, black 50%, black 50%)!important;
 }
 .columns__mustard{
-    background: linear-gradient(to right, #f2ab3d 50%, black 50%)!important;
+    background: linear-gradient(to right, #FEA904 50%, black 50%)!important;
     transition: background ease-in-out 0.5s!important;
 }
 .colored__column{
@@ -76,8 +76,8 @@
     text-decoration: none;
 }
 .colored__column h4{
-    font-size: 40px;
-    line-height: 50px!important;
+    font-size: 60px;
+    line-height: 62px!important;
     font-weight:600!important;
     font-family: 'MarkPro';
     margin: 0px;
@@ -87,6 +87,7 @@
     z-index: 2;
     opacity: 0;
     transition: all ease-in-out 0.2s!important;
+    letter-spacing: -3px;
 }
 .colored__column p{
     font-size: 12px;
@@ -169,6 +170,7 @@
     line-height: 62px;
     font-weight: bold;
     font-family: 'MarkPro';
+    letter-spacing: -3px;
 }
 .colored__floating p{
     margin-top: 10px;
@@ -191,22 +193,22 @@
 }
 .c-f2ab3d__column{
     bottom:0px;
-    background: #f2ab3d;
+    background: #FEA904;
     transition: all ease-in-out 0s!important;
 }
 .c-73faeb__column {
     bottom:0px;
-    background: #73faeb;
+    background: #01FEEB;
     transition: all ease-in-out 0s!important;
 }
 .c-ea3464__column{
     bottom:0px;
-    background: #ea3464;
+    background: #FE0062;
     transition: all ease-in-out 0s!important;
 }
 .c-1d61f5__column{
     bottom:0px;
-    background: #1d61f5;
+    background: #005CFE;
     transition: all ease-in-out 0s!important;
 }
 .offices__one{
@@ -215,6 +217,9 @@
 .offices__one .offices__first__copy h4{
     font-size: 18px;
     font-weight: bold;
+    font-family: MarkPro;
+    line-height: 20px;
+    letter-spacing: -0.7px;
 }
 .offices__two{
     margin-top: 10%;
@@ -229,6 +234,9 @@
 .offices__two__copy h4{
     font-size: 18px;
     font-weight: bold;
+    font-family: MarkPro;
+    line-height: 20px;
+    letter-spacing: -0.7px;
 }
 .offices__three .floating__element{
     position: absolute;
@@ -293,6 +301,11 @@
     max-width: 480px;
     margin: 35px 0;
     display: none;
+
+}
+.select__clients .recognition__one__copy{
+    opacity: 0;
+    pointer-events: none;
 }
 .recognition__one__copy.active{
     display: block;
@@ -305,7 +318,7 @@
     cursor: pointer;
 }
 .recognition__list__item.active h3{
-    color: #EA3464;
+    color: #FE0062;
 }
 .recognition__list__item{
     cursor: pointer;
@@ -374,25 +387,25 @@
     transition: all ease-in-out 0.2s!important;
 }
 .services__list.c-f2ab3d:hover .services__list__items .row p:last-child{
-    color: #f2ab3d;
+    color: #FEA904;
 }
 .services__list.c-f2ab3d:hover .services__list__items .row img{
     filter: invert(29%) sepia(92%) saturate(450%) hue-rotate(331deg) brightness(98%) contrast(93%);
 }
 .services__list.c-73faeb:hover .services__list__items .row p:last-child{
-    color: #73faeb;
+    color: #01FEEB;
 }
 .services__list.c-73faeb:hover .services__list__items .row img{
     filter: invert(84%) sepia(31%) saturate(612%) hue-rotate(110deg) brightness(105%) contrast(96%);
 }
 .services__list.c-ea3464:hover .services__list__items .row p:last-child{
-    color: #ea3464;
+    color: #FE0062;
 }
 .services__list.c-ea3464:hover .services__list__items .row  img{
     filter: invert(78%) sepia(72%) saturate(2119%) hue-rotate(322deg) brightness(95%) contrast(93%);
 }
 .services__list.c-1d61f5:hover .services__list__items .row p:last-child{
-    color: #1d61f5;
+    color: #005CFE;
 }
 .services__list.c-1d61f5:hover .services__list__items .row img{
     filter: invert(87%) sepia(80%) saturate(4616%) hue-rotate(219deg) brightness(100%) contrast(92%);
@@ -580,25 +593,25 @@ margin-top: 20px;    }
         line-height: 29px;
     }
     .services__list.c-f2ab3d .services__list__items .row p:last-child{
-        color: #f2ab3d;
+        color: #FEA904;
     }
     .services__list.c-f2ab3d .services__list__items .row img{
         filter: invert(29%) sepia(92%) saturate(450%) hue-rotate(331deg) brightness(98%) contrast(93%);
     }
     .services__list.c-73faeb .services__list__items .row p:last-child{
-        color: #73faeb;
+        color: #01FEEB;
     }
     .services__list.c-73faeb .services__list__items .row img{
         filter: invert(84%) sepia(31%) saturate(612%) hue-rotate(110deg) brightness(105%) contrast(96%);
     }
     .services__list.c-ea3464 .services__list__items .row p:last-child{
-        color: #ea3464;
+        color: #FE0062;
     }
     .services__list.c-ea3464 .services__list__items .row  img{
         filter: invert(78%) sepia(72%) saturate(2119%) hue-rotate(322deg) brightness(95%) contrast(93%);
     }
     .services__list.c-1d61f5 .services__list__items .row p:last-child{
-        color: #1d61f5;
+        color: #005CFE;
     }
     .services__list.c-1d61f5 .services__list__items .row img{
         filter: invert(87%) sepia(80%) saturate(4616%) hue-rotate(219deg) brightness(100%) contrast(92%);

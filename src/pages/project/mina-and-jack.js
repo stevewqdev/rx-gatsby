@@ -83,7 +83,7 @@ class MinaAndJack extends Component {
           >
 
           </ProjectHero>
-
+          <div className="main__section__wrapper">
           <section id="two" className="section__one contrast_02">
             <div className="container container__custom ">
               <div className="row">
@@ -297,11 +297,11 @@ class MinaAndJack extends Component {
 
           <RelatedProjects 
             relatedcopy={pageAcf.related_extra_copy}
-            relatedproject={pageAcf.related_project.post_title}
+            relatedproject={pageAcf.related_project}
             relatedthumbnail={pageAcf.related_project_thumbnail}
             relatedprojectlink={pageAcf.related_project_url}
           ></RelatedProjects>
-
+          </div>
         </div>
       </Layout>
     )
@@ -330,9 +330,7 @@ query MinaAndJackPageQuery {
               }
             }
             related_extra_copy
-            related_project {
-              post_title
-            }
+            related_project
             related_project_url
             related_project_thumbnail {
               localFile{

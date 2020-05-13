@@ -36,6 +36,7 @@ class Team extends Component {
             title={pageAcf.top_title}
             firstSubtitle={pageAcf.first_subtitle}
             secondSubtitle={pageAcf.second_subtitle}
+            customClass={"team__hero"}
           >
           </Hero>
           <div className="main__section__wrapper">

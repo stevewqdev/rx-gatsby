@@ -36,7 +36,21 @@ const Layout = ({ children, location }) => {
       })
     });
   }
+  function removeFixed(){
+    window.onscroll = function(){
+      var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
+      if(top > document.querySelectorAll(".main__section__wrapper")[0].offsetTop - 100){
+        document.querySelectorAll(".column__top__one")[0].classList.add("force__absolute");
+        document.querySelectorAll(".column__top__two")[0].classList.add("force__absolute");
+      }else{
+        document.querySelectorAll(".column__top__one")[0].classList.remove("force__absolute");
+        document.querySelectorAll(".column__top__two")[0].classList.remove("force__absolute");
+      }
+    };
+  }
   useEffect(() => {
+    removeFixed();
+
     hrefRedirect();
 
     AOS.init({
