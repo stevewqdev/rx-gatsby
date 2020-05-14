@@ -13,6 +13,7 @@ import "../layouts/layout.css"
 import "../fonts/stylesheet.css"
 
 const Layout = ({ children, location }) => {
+  // This function controls the redirect on the menu, to avoid a direct redirection, first closes the menu and after that it makes the redirection. 
   function hrefRedirect(){
     let aElements = document.querySelectorAll(".menu__full__screen a"); 
     aElements.forEach(element => {
@@ -37,6 +38,7 @@ const Layout = ({ children, location }) => {
       })
     });
   }
+  // This function adds and remove an absolute position in the main content, this way the top section hides behind the other sections
   function removeFixed(){
     window.onscroll = function(){
       var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
@@ -44,16 +46,45 @@ const Layout = ({ children, location }) => {
         document.querySelectorAll(".column__top__one")[0].classList.add("force__absolute");
         document.querySelectorAll(".column__top__two")[0].classList.add("force__absolute");
       }else{
-                document.querySelectorAll(".column__top__one")[0].classList.add("force__absolute");
+        document.querySelectorAll(".column__top__one")[0].classList.add("force__absolute");
         document.querySelectorAll(".column__top__two")[0].classList.add("force__absolute");
       }
     };
   }
+  // This function draw all lines with class .separator that are inside a parent element with the class .includes__separator
+  function drawLines(){
+    var lines = [...document.querySelectorAll(".includes__separator")]; 
+    if(lines.length > 0){
+      lines.map((line, index) => {
+        window.addEventListener("scroll", function(){
+          var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
+          let innerLine = line.querySelectorAll(".separator")[0];
+
+          if(top  > line.offsetTop + 500){ 
+            innerLine.classList.add("full");
+          }else{
+            innerLine.classList.remove("full");
+          }
+        }, {passive: true});
+      })
+    }
+  }
+  // This function handle the position of the footer, once you scroll more than 1000px the footer become fixed thiw way it reveals at the end
+  function changePositionFooter(){
+    window.addEventListener("scroll", function(){
+      var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
+      if(top > 1000){
+        document.querySelectorAll(".footer")[0].classList.add("fixed__footer");
+      }else{
+        document.querySelectorAll(".footer")[0].classList.remove("fixed__footer");
+      }
+    }, {passive: true});
+  }
   useEffect(() => {
     removeFixed();
-
+    drawLines();
     hrefRedirect();
-
+    changePositionFooter();
     AOS.init({
       disable: 'mobile', 
     });

@@ -24,8 +24,8 @@ export default class MainFloatingScreen extends Component {
                 <div  className="brand__logo"
                       data-aos="fade-up"
                       data-aos-easing="ease-in-back"
-                      data-aos-delay="100"
-                          data-aos-duration="1200"
+                      data-aos-delay="450"
+                      data-aos-duration="1200"
                 >
                   <Link to="/">
                     <img
@@ -38,7 +38,7 @@ export default class MainFloatingScreen extends Component {
                   <div
                     data-aos="fade-up"
                     data-aos-easing="ease-in-back"
-                    data-aos-delay="200"
+                    data-aos-delay="550"
                       data-aos-duration="1200"
                     className="brand__menu__toggle --closed d-flex align-items-center"
                     onClick={this.toggleMenu} role="button"
@@ -95,7 +95,7 @@ export default class MainFloatingScreen extends Component {
                 <p
                   data-aos="fade-down"
                   data-aos-easing="ease-in-back"
-                  data-aos-delay="300"
+                  data-aos-delay="600"
                   data-aos-duration="1200"
                   dangerouslySetInnerHTML={{
                     __html: this.props.siteAcf.web_info_column_one,
@@ -108,7 +108,7 @@ export default class MainFloatingScreen extends Component {
                 <p
                   data-aos="fade-down"
                   data-aos-easing="ease-in-back"
-                  data-aos-delay="350"
+                  data-aos-delay="670"
                   data-aos-duration="1200"
                   dangerouslySetInnerHTML={{
                     __html: this.props.siteAcf.web_info_column_two,
@@ -126,7 +126,7 @@ export default class MainFloatingScreen extends Component {
                 <p
                   data-aos="fade-up"
                   data-aos-easing="ease-in-back"
-                  data-aos-delay="400"
+                  data-aos-delay="800"
                   data-aos-duration="1200"
                   data-aos-anchor="top"
                 >{this.props.siteAcf.copyright_info}</p>

@@ -341,8 +341,10 @@ class ContactPage extends Component {
                       pageAcf.services_info.map((services, index) => 
                               index % 2 === 0 
                               ? 
-                                  <div className={`col-xs-6 col-sm-6 col-md-6 col-lg-6 services__list no__padding c-${services.hover_color.replace('#','')} service__list__${index}`} key={index}>
+                                  <div className={`col-xs-6 col-sm-6 col-md-6 col-lg-6 includes__separator services__list no__padding c-${services.hover_color.replace('#','')} service__list__${index}`} key={index}>
+                                    <div className="separator --white"></div>
                                     <div className="services__list__subtitle">
+                                      
                                       <p className="reg__font sm__font">
                                         {services.subtitle}
                                       </p>
@@ -355,7 +357,8 @@ class ContactPage extends Component {
                                     </div>
                                   </div>
                               :
-                                  <div className={`col-xs-6 col-sm-6 col-md-6 col-lg-6 services__list lower__list no__padding service__list__${index} c-${services.hover_color.replace('#','')}`} key={index} >
+                                  <div className={`col-xs-6 col-sm-6 col-md-6 includes__separator col-lg-6 services__list lower__list no__padding service__list__${index} c-${services.hover_color.replace('#','')}`} key={index} >
+                                    <div className="separator --white"></div>
                                     <div className="services__list__subtitle">
                                       <p className="reg__font sm__font">
                                         {services.subtitle}

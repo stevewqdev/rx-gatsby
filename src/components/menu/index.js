@@ -34,11 +34,7 @@ const MainMenu = props => {
 
   return (
     <div className={`${props.customClass}`} id={menuId}
-    data-aos="fade-up"
-    data-aos-delay={`140`}
-    data-aos-duration="1200"
-    data-aos-anchor-placement="top"
-    data-aos-easing="ease-in-out"
+
     >
       {menuItems.map((menuItem, index) => (
         <p key={index}

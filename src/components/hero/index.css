@@ -19,9 +19,9 @@
 .hero__component.dark .container__custom .row{
     border-top: solid 2px  #ffffff;
 }
-.hero__component.light .container__custom .row{
+/* .hero__component.light .container__custom .row{
     border-top: solid 2px  #000000;
-}
+} */
 .hero__component.dark{
     background: #000000;
     color: white;
@@ -36,6 +36,9 @@
 }
 .hero__component .hero__title{
     margin-top: 30px;
+}
+.hero__component .separator{
+    margin-bottom: 30px;
 }
 @media(max-width: 500px){
     .hero__component{

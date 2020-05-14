@@ -58,7 +58,7 @@ class HomePage extends Component {
           </section>
           <div className="main__section__wrapper">
             <About></About>
-            <section className="featured__video">
+            <section className="featured__video includes__separator">
               <div className="container container__custom">
                 <div className="row">
                   <div className="col-lg-12 no__padding">
@@ -69,7 +69,7 @@ class HomePage extends Component {
                     data-aos="fade-up"
                     data-aos-delay={`200`}
                     data-aos-duration="1200"
-                    data-aos-anchor-placement="top"
+                    data-aos-anchor-placement="bottom"
                     data-aos-easing="ease-in-out"
                     className={"xxl__font"}>{pageAcf.reel_title}</h2>
                     <br/>
@@ -80,7 +80,7 @@ class HomePage extends Component {
                         data-aos="fade-up"
                         data-aos-delay={`250`}
                         data-aos-duration="1200"
-                        data-aos-anchor-placement="top"
+                        data-aos-anchor-placement="bottom"
                         data-aos-easing="ease-in-out"
                         className=""
                         dangerouslySetInnerHTML={{ __html: pageAcf.reel_copy }}
@@ -90,7 +90,7 @@ class HomePage extends Component {
                       data-aos="fade-up"
                       data-aos-delay={`300`}
                       data-aos-duration="1200"
-                      data-aos-anchor-placement="top"
+                      data-aos-anchor-placement="bottom"
                       data-aos-easing="ease-in-out">
                       <svg 
 
@@ -130,7 +130,7 @@ class HomePage extends Component {
                 </div>
               </div>
             </section>
-            <section className="selected__projects">
+            <section className="selected__projects includes__separator">
               <div className="container container__custom">
                 <div className="row">
                   <div className="col-lg-12 no__padding">
@@ -142,7 +142,7 @@ class HomePage extends Component {
                       data-aos="fade-up"
                       data-aos-delay={`150`}
                       data-aos-duration="1200"
-                      data-aos-anchor-placement="top"
+                      data-aos-anchor-placement="bottom"
                       data-aos-easing="ease-in-out"
                       className="lg__font">{pageAcf.sp_title}</h2>
                     </div>
@@ -151,7 +151,7 @@ class HomePage extends Component {
                         data-aos="fade-up"
                         data-aos-delay={`200`}
                         data-aos-duration="1200"
-                        data-aos-anchor-placement="top"
+                        data-aos-anchor-placement="bottom"
                         data-aos-easing="ease-in-out"
                         className=""
                         dangerouslySetInnerHTML={{ __html: pageAcf.sp_copy }}
@@ -169,7 +169,7 @@ class HomePage extends Component {
                           data-aos="fade-up"
                           data-aos-delay={`175`}
                           data-aos-duration="1200"
-                          data-aos-anchor-placement="top"
+                          data-aos-anchor-placement="bottom"
                           data-aos-easing="ease-in-out"
                           >See More</button>
                         </Link>
@@ -190,7 +190,7 @@ class HomePage extends Component {
                                     data-aos="fade-up"
                                     data-aos-delay={`100`}
                                     data-aos-duration="1200"
-                                    data-aos-anchor-placement="top"
+                                    data-aos-anchor-placement="bottom"
                                     data-aos-easing="ease-in-out"
                                     src={`${project.acf.featured_image.localFile.url}`} alt={`${project.post_name}`}/>
                                   </div>
@@ -199,7 +199,7 @@ class HomePage extends Component {
                                       data-aos="fade-up"
                                       data-aos-delay={`200`}
                                       data-aos-duration="1200"
-                                      data-aos-anchor-placement="top"
+                                      data-aos-anchor-placement="bottom"
                                       data-aos-easing="ease-in-out"
                                       className=""
                                       dangerouslySetInnerHTML={{ __html: project.post_content }}
@@ -211,7 +211,7 @@ class HomePage extends Component {
                                         data-aos="fade-up"
                                         data-aos-delay={`220`}
                                         data-aos-duration="1200"
-                                        data-aos-anchor-placement="top"
+                                        data-aos-anchor-placement="bottom"
                                         data-aos-easing="ease-in-out"
                                         className="bold__font md__font"
                                         dangerouslySetInnerHTML={{ __html: project.post_name }}

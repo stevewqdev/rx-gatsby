@@ -28,7 +28,7 @@ const About = props => {
 
 
   return (
-    <section id="about">
+    <section id="about" className="includes__separator">
       <div className="container container__custom about__wrapper">
         <div className="row ">
           <div className="col-lg-12 no__padding">
