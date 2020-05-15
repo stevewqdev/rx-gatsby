@@ -142,6 +142,10 @@ class ContactPage extends Component {
                   
                   <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 colored__floating" id="colored_floating">
                     <div
+                      data-aos="fade-up"
+                      data-aos-easing="ease-in-back"
+                      data-aos-delay={`100`}
+                      data-aos-duration="1200"
                       className="row reg__font sm__font"
                       dangerouslySetInnerHTML={{ __html: pageAcf.colored_copy }}
                     />
@@ -163,12 +167,21 @@ class ContactPage extends Component {
                           ?
                           <div className="column__svg">
                           <SVGONE 
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`${(index + 1) * 130}`}
+                            data-aos-duration="1200"
                             className={`column-${index}`}
                             onMouseEnter={this.makeColumnBlack}
                             onMouseLeave={this.removeColumnBlack}
                           >
                           </SVGONE>
-                          <div className="colored__sub__svg">
+                          <div className="colored__sub__svg"
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`${(index + 1) * 130}`}
+                          data-aos-duration="1200"
+                          >
                           <div
                               className="row reg__font "
                               dangerouslySetInnerHTML={{ __html: column.copy }}
@@ -182,11 +195,20 @@ class ContactPage extends Component {
                           ?
                           <div className="column__svg">
                           <SVGTWO
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`${(index + 1) * 130}`}
+                          data-aos-duration="1200"
                           className={`column-${index}`}
                           onMouseEnter={this.makeColumnBlack}
                           onMouseLeave={this.removeColumnBlack}
                           ></SVGTWO>
-                          <div className="colored__sub__svg">
+                          <div className="colored__sub__svg"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`${(index + 1) * 130}`}
+                            data-aos-duration="1200"
+                          >
                           <div
                               className="row reg__font "
                               dangerouslySetInnerHTML={{ __html: column.copy }}
@@ -201,11 +223,21 @@ class ContactPage extends Component {
 
                           <div className="column__svg">
                           <SVGTHREE
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`${(index + 1) * 130}`}
+                          data-aos-duration="1200"
                           className={`column-${index}`}
                           onMouseEnter={this.makeColumnBlack}
                           onMouseLeave={this.removeColumnBlack}
                           ></SVGTHREE>
-                          <div className="colored__sub__svg">
+                          <div className="colored__sub__svg"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`${(index + 1) * 130}`}
+                            data-aos-duration="1200"
+                          
+                          >
                           <div
                               className="row reg__font "
                               dangerouslySetInnerHTML={{ __html: column.copy }}
@@ -220,11 +252,21 @@ class ContactPage extends Component {
                           ?
                           <div className="column__svg">
                           <SVGFOUR
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`${(index + 1) * 130}`}
+                          data-aos-duration="1200"
                           className={`column-${index}`}
                           onMouseEnter={this.makeColumnBlack}
                           onMouseLeave={this.removeColumnBlack}
                           ></SVGFOUR>
-                          <div className="colored__sub__svg">
+                          <div className="colored__sub__svg"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`${(index + 1) * 130}`}
+                            data-aos-duration="1200"
+                          
+                          >
                           <div
                               className="row reg__font "
                               dangerouslySetInnerHTML={{ __html: column.copy }}
@@ -245,8 +287,8 @@ class ContactPage extends Component {
                     )
                   }
                  
-                                  </div>
-                                  <div className={`col-xs-6 col-sm-6 col-md-2 col-lg-2 space__column`} ></div>
+                  </div>
+                  <div className={`col-xs-6 col-sm-6 col-md-2 col-lg-2 space__column`} ></div>
                 </div>
               </div>
             </section>
@@ -259,6 +301,10 @@ class ContactPage extends Component {
                   <div className="col-s-12 col-sm-12 col-md-3 col-lg-3"></div>
                   <div className="col-s-12 col-sm-12 col-md-3 col-lg-3 offices__first__copy">
                     <div
+                      data-aos="fade-up"
+                      data-aos-easing="ease-in-back"
+                      data-aos-delay={`200`}
+                      data-aos-duration="1200"
                       className="row reg__font sm__font reg__font"
                       dangerouslySetInnerHTML={{ __html: pageAcf.pre_office_copy }}
                     />
@@ -267,29 +313,46 @@ class ContactPage extends Component {
                 <div className="row offices__two">
                   <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 offices__two__copy">
                     <div
+                      data-aos="fade-up"
+                      data-aos-easing="ease-in-back"
+                      data-aos-delay={`250`}
+                      data-aos-duration="1200"
+                      className="row reg__font sm__font reg__font"
                       className="row reg__font sm__font reg__font"
                       dangerouslySetInnerHTML={{ __html: pageAcf.office_copy }}
                     />
-                    <div className="location__icon">
+                    <div className="location__icon"
+ 
+                    >
                       <svg xmlns="http://www.w3.org/2000/svg" width="14.763" height="18.003" viewBox="0 0 14.763 18.003">
                       <path id="Trazado_65" data-name="Trazado 65" d="M10883.708,3645.969c4.053-4.24,1.889-11.487-3.895-12.459a8.886,8.886,0,0,0-1.487-.124q-.369,0-.73.029c-6.194.5-8.765,8.279-4.37,12.674l5.3,5.3Z" transform="translate(-10871.027 -3633.386)"/>
                       </svg>
                     </div>
                   </div>
-                  <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 offices__two__photo">
+                  <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 offices__two__photo"
+                  
+                  
+                  >
                     {
                         pageAcf.office_photo
-                        ?<Img fluid={pageAcf.office_photo.localFile.childImageSharp.fluid} alt={`Raxo's office photo`} tabIndex={-1}/>
+                        ?<Img 
+                        
+                        
+                        fluid={pageAcf.office_photo.localFile.childImageSharp.fluid} alt={`Raxo's office photo`} tabIndex={-1}/>
                         :""
                     }
                   </div>
                 </div>
                 <div className="row offices__three">
-                  <div className="col-s-12 col-sm-12 col-md-3 col-lg-3  no__padding">
+                  <div className="col-s-12 col-sm-12 col-md-3 col-lg-3  no__padding"
+                  
+                  >
                     {
                       pageAcf.offices.map((office, index)=> 
                         <div className={`${office.city.replace(/ /g,'').toLowerCase()} office__name ${index === 0 ? "active show" : "floating__element hide" } `} key={index}>
-                          <p className="md__font bold__font">
+                          <p className="md__font bold__font"
+                          
+                          >
                             Office
                           </p>
                           <h3 className="lg__font bold__font">
@@ -331,7 +394,13 @@ class ContactPage extends Component {
               <div className="container container__custom">
                   <div className="row">
                       <div className="col-lg-12 no__padding">
-                        <h2 className="xxl__font bold__font">
+                        <h2 className="xxl__font bold__font"
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`250`}
+                          data-aos-duration="1200"
+
+                        >
                           {pageAcf.services}
                         </h2>
                       </div>
@@ -345,12 +414,23 @@ class ContactPage extends Component {
                                     <div className="separator --white"></div>
                                     <div className="services__list__subtitle">
                                       
-                                      <p className="reg__font sm__font">
+                                      <p className="reg__font sm__font"
+                                        data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`270`}
+                                        data-aos-duration="1200"
+ 
+                                      >
                                         {services.subtitle}
                                       </p>
                                     </div>
                                     <div className="services__list__items">
                                       <div
+                                        data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`290`}
+                                        data-aos-duration="1200"
+    
                                         className="row lg__font bold__font "
                                         dangerouslySetInnerHTML={{ __html: services.services_list }}
                                       />
@@ -360,12 +440,23 @@ class ContactPage extends Component {
                                   <div className={`col-xs-6 col-sm-6 col-md-6 includes__separator col-lg-6 services__list lower__list no__padding service__list__${index} c-${services.hover_color.replace('#','')}`} key={index} >
                                     <div className="separator --white"></div>
                                     <div className="services__list__subtitle">
-                                      <p className="reg__font sm__font">
+                                      <p className="reg__font sm__font"
+                                        data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`270`}
+                                        data-aos-duration="1200"
+
+                                      >
                                         {services.subtitle}
                                       </p>
                                     </div>
                                     <div className="services__list__items">
                                       <div
+                                        data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`290`}
+                                        data-aos-duration="1200"
+             
                                         className="row lg__font bold__font "
                                         dangerouslySetInnerHTML={{ __html: services.services_list }}
                                         />
@@ -380,10 +471,19 @@ class ContactPage extends Component {
               <div className="container container__custom recognition__wrapper">
                 <div className="row">
                   <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 recognition__one no__padding">
-                      <h3 className="xxl__font bold__font">
+                      <h3 className="xxl__font bold__font"
+                      data-aos="fade-up"
+                      data-aos-easing="ease-in-back"
+                      data-aos-delay={`290`}
+                      data-aos-duration="1200"
+                      >
                         {pageAcf.recognition_title}
                       </h3>
                       <div
+                        data-aos="fade-up"
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay={`360`}
+                        data-aos-duration="1200"
                         className="row sm__font reg__font recognition__one__copy"
                         dangerouslySetInnerHTML={{ __html: pageAcf.recognition_copy }}
                       />
@@ -398,7 +498,12 @@ class ContactPage extends Component {
               <div className="container container__custom">
                 <div className="row">
                   <div className="col-lg-12 no__padding">
-                    <p className="sm__font reg__font recognition_list__top">
+                    <p className="sm__font reg__font recognition_list__top"
+                    data-aos="fade-up"
+                    data-aos-easing="ease-in-back"
+                    data-aos-delay={`200`}
+                    data-aos-duration="1200"
+                    >
                       List of services of <br/>
                       Art Direction
                     </p>
@@ -409,11 +514,22 @@ class ContactPage extends Component {
                       {
                         pageAcf.recognition_list.map((item, index) => 
                           <div className={`recognition__list__item `} key={index} id={`tab-rec-${index}`} onMouseEnter={this.toggleListElement}>
-                            <h3 className="lg__font bold__font">
+                            <h3 className="lg__font bold__font"
+                              data-aos="fade-up"
+                              data-aos-easing="ease-in-back"
+                              data-aos-delay={`${(index + 1) *100}`}
+                              data-aos-duration="1200"
+                            >
                               {item.title}
                               
                             </h3>
-                            <h3 className="lg__font bold__font">
+                            <h3 className="lg__font bold__font"
+                              data-aos="fade-up"
+                              data-aos-easing="ease-in-back"
+                              data-aos-delay={`${(index + 1) *150}`}
+                              data-aos-duration="1200"
+                            >
+                              
                             {item.amount}
                             </h3>
                           </div>
@@ -445,10 +561,20 @@ class ContactPage extends Component {
               <div className="container container__custom recognition__wrapper">
                 <div className="row">
                   <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 recognition__one no__padding">
-                      <h3 className="xxl__font bold__font">
+                      <h3 className="xxl__font bold__font"
+                      
+                      data-aos="fade-up"
+                      data-aos-easing="ease-in-back"
+                      data-aos-delay={`100`}
+                      data-aos-duration="1200"
+                      >
                         {pageAcf.clients_title}
                       </h3>
                       <div
+                     data-aos="fade-up"
+                     data-aos-easing="ease-in-back"
+                     data-aos-delay={`250`}
+                     data-aos-duration="1200"
                         className="row sm__font reg__font recognition__one__copy"
                         dangerouslySetInnerHTML={{ __html: pageAcf.clients_copy }}
                       />
@@ -469,7 +595,13 @@ class ContactPage extends Component {
                   pageAcf.clients_logos.map((client, index) => 
                     client.logo
                     ?
-                      <div className="col-xs-4 col-sm-4 col-md-3 col-lg-3 client__logo" key={index}>
+                      <div className="col-xs-4 col-sm-4 col-md-3 col-lg-3 client__logo" key={index}
+                      
+                      data-aos="fade-up"
+                      data-aos-easing="ease-in-back"
+                      data-aos-delay={`${(index + 1) * 100}`}
+                      data-aos-duration="1200"
+                      >
                         <img src={client.logo.localFile.url} alt="Client Logo"/>
                       </div>
                     :""

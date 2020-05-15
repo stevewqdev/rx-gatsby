@@ -50,7 +50,11 @@ class Team extends Component {
                                 index === 0
                                 ?
                                 <div className={`team__new__member ${member.category}`} key={index} onClick={this.toggleTeamMember}>
-                                    <div className={`team__new__member__background`}>
+                                    <div className={`team__new__member__background`}
+                                    
+                                                                            
+                                    
+                                    >
                                         {
                                             member.photo
                                             ?<Img fluid={member.photo.localFile.childImageSharp.fluid} alt={`${member.name} photo`} tabIndex={-1}/>
@@ -58,14 +62,30 @@ class Team extends Component {
                                         }
                                     </div>
                                     <div className="team__new__member__info">
-                                        <p className="xxl__font team__new__member__info__name">
+                                        <p className="xxl__font team__new__member__info__name"
+                                        data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 130}`}
+                                        data-aos-duration="1200"
+                                        >
                                             {member.name}
                                         </p>
                                         <div className="team__information">
-                                            <p className="sm__font bold__font reg__font team__new__member__info__position">
+                                            <p className="sm__font bold__font reg__font team__new__member__info__position"
+                                        data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 150}`}
+                                        data-aos-duration="1200"
+                                            
+                                            >
                                                 {member.position}
                                             </p>
-                                            <p className="sm__font reg__font team__new__member__info__position">
+                                            <p className="sm__font reg__font team__new__member__info__position"
+                                                                                    data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 180}`}
+                                        data-aos-duration="1200"
+                                            >
                                                 {member.email}
                                             </p>
                                         </div>
@@ -82,7 +102,11 @@ class Team extends Component {
                                 index === 1
                                 ?
                                 <div className={`team__new__member ${member.category}`} key={index} onClick={this.toggleTeamMember}>
-                                    <div className={`team__new__member__background`}>
+                                    <div className={`team__new__member__background`}
+                                    
+                                                                            
+                                    
+                                    >
                                         {
                                             member.photo
                                             ?<Img fluid={member.photo.localFile.childImageSharp.fluid} alt={`${member.name} photo`} tabIndex={-1}/>
@@ -90,14 +114,30 @@ class Team extends Component {
                                         }
                                     </div>
                                     <div className="team__new__member__info">
-                                        <p className="xxl__font team__new__member__info__name">
+                                        <p className="xxl__font team__new__member__info__name"
+                                                                                data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 130}`}
+                                        data-aos-duration="1200"
+                                        >
                                             {member.name}
                                         </p>
                                         <div className="team__information">
-                                            <p className="sm__font bold__font reg__font team__new__member__info__position">
+                                            <p className="sm__font bold__font reg__font team__new__member__info__position"
+                                                                                    data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 150}`}
+                                        data-aos-duration="1200"
+                                            
+                                            >
                                                 {member.position}
                                             </p>
-                                            <p className="sm__font reg__font team__new__member__info__position">
+                                            <p className="sm__font reg__font team__new__member__info__position"
+                                                                                    data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 180}`}
+                                        data-aos-duration="1200"
+                                            >
                                                 {member.email}
                                             </p>
                                         </div>
@@ -121,7 +161,11 @@ class Team extends Component {
                                 ?
                                 <div className={`col-xs-12 col-sm-12 col-md-3 col-lg-3 team__member__block team__member__${index} no__padding`} key={index}>
                                     <div className={`team__new__member ${member.category}`}  onClick={this.toggleTeamMember}>
-                                        <div className={`team__new__member__background`}>
+                                        <div className={`team__new__member__background`}
+                                        
+                                                                                
+                                        
+                                        >
                                             {
                                                 member.photo
                                                 ?<Img fluid={member.photo.localFile.childImageSharp.fluid} alt={`${member.name} photo`} tabIndex={-1}/>
@@ -129,14 +173,30 @@ class Team extends Component {
                                             }
                                         </div>
                                         <div className="team__new__member__info">
-                                            <p className="xxl__font team__new__member__info__name">
+                                            <p className="xxl__font team__new__member__info__name"
+                                                                                    data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 130}`}
+                                        data-aos-duration="1200"
+                                            >
                                                 {member.name}
                                             </p>
                                             <div className="team__information">
-                                            <p className="sm__font bold__font reg__font team__new__member__info__position">
+                                            <p className="sm__font bold__font reg__font team__new__member__info__position"
+                                                                                    data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 150}`}
+                                        data-aos-duration="1200"
+                                            
+                                            >
                                                 {member.position}
                                             </p>
-                                            <p className="sm__font reg__font team__new__member__info__position">
+                                            <p className="sm__font reg__font team__new__member__info__position"
+                                                                                    data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 180}`}
+                                        data-aos-duration="1200"
+                                            >
                                                 {member.email}
                                             </p>
                                             </div>
@@ -158,7 +218,11 @@ class Team extends Component {
                                 ?
                                 <div className={`col-xs-12 col-sm-12 col-md-3 col-lg-3 team__member__block team__member__${index} no__padding`} key={index}>
                                     <div className={`team__new__member ${member.category}`}  onClick={this.toggleTeamMember}>
-                                        <div className={`team__new__member__background`}>
+                                        <div className={`team__new__member__background`}
+                                        
+                                                                                
+                                        
+                                        >
                                             {
                                                 member.photo
                                                 ?<Img fluid={member.photo.localFile.childImageSharp.fluid} alt={`${member.name} photo`} tabIndex={-1}/>
@@ -166,14 +230,30 @@ class Team extends Component {
                                             }
                                         </div>
                                         <div className="team__new__member__info">
-                                            <p className="xxl__font team__new__member__info__name">
+                                            <p className="xxl__font team__new__member__info__name"
+                                                                                    data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 130}`}
+                                        data-aos-duration="1200"
+                                            >
                                                 {member.name}
                                             </p>
                                             <div className="team__information">
-                                            <p className="sm__font bold__font reg__font team__new__member__info__position">
+                                            <p className="sm__font bold__font reg__font team__new__member__info__position"
+                                                                                    data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 150}`}
+                                        data-aos-duration="1200"
+                                            
+                                            >
                                                 {member.position}
                                             </p>
-                                            <p className="sm__font reg__font team__new__member__info__position">
+                                            <p className="sm__font reg__font team__new__member__info__position"
+                                                                                    data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 180}`}
+                                        data-aos-duration="1200"
+                                            >
                                                 {member.email}
                                             </p>
                                             </div>
@@ -193,7 +273,11 @@ class Team extends Component {
                                 ?
                                 <div className={`col-xs-12 col-sm-12 col-md-3 col-lg-3 team__member__block team__member__${index} no__padding`} key={index}>
                                     <div className={`team__new__member ${member.category}`}  onClick={this.toggleTeamMember}>
-                                        <div className={`team__new__member__background`}>
+                                        <div className={`team__new__member__background`}
+                                        
+                                                                                
+                                        
+                                        >
                                             {
                                                 member.photo
                                                 ?<Img fluid={member.photo.localFile.childImageSharp.fluid} alt={`${member.name} photo`} tabIndex={-1}/>
@@ -201,14 +285,30 @@ class Team extends Component {
                                             }
                                         </div>
                                         <div className="team__new__member__info">
-                                            <p className="xxl__font team__new__member__info__name">
+                                            <p className="xxl__font team__new__member__info__name"
+                                                                                    data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 130}`}
+                                        data-aos-duration="1200"
+                                            >
                                                 {member.name}
                                             </p>
                                             <div className="team__information">
-                                            <p className="sm__font bold__font reg__font team__new__member__info__position">
+                                            <p className="sm__font bold__font reg__font team__new__member__info__position"
+                                                                                    data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 150}`}
+                                        data-aos-duration="1200"
+                                            
+                                            >
                                                 {member.position}
                                             </p>
-                                            <p className="sm__font reg__font team__new__member__info__position">
+                                            <p className="sm__font reg__font team__new__member__info__position"
+                                                                                    data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 180}`}
+                                        data-aos-duration="1200"
+                                            >
                                                 {member.email}
                                             </p>
                                             </div>
@@ -227,7 +327,11 @@ class Team extends Component {
                                 ?
                                 <div className={`col-xs-12 col-sm-12 col-md-3 col-lg-3 team__member__block team__member__${index} no__padding`} key={index}>
                                     <div className={`team__new__member ${member.category}`}  onClick={this.toggleTeamMember}>
-                                        <div className={`team__new__member__background`}>
+                                        <div className={`team__new__member__background`}
+                                        
+                                                                                
+                                        
+                                        >
                                             {
                                                 member.photo
                                                 ?<Img fluid={member.photo.localFile.childImageSharp.fluid} alt={`${member.name} photo`} tabIndex={-1}/>
@@ -235,14 +339,30 @@ class Team extends Component {
                                             }
                                         </div>
                                         <div className="team__new__member__info">
-                                            <p className="xxl__font team__new__member__info__name">
+                                            <p className="xxl__font team__new__member__info__name"
+                                                                                    data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 130}`}
+                                        data-aos-duration="1200"
+                                            >
                                                 {member.name}
                                             </p>
                                             <div className="team__information">
-                                            <p className="sm__font bold__font reg__font team__new__member__info__position">
+                                            <p className="sm__font bold__font reg__font team__new__member__info__position"
+                                                                                    data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 150}`}
+                                        data-aos-duration="1200"
+                                            
+                                            >
                                                 {member.position}
                                             </p>
-                                            <p className="sm__font reg__font team__new__member__info__position">
+                                            <p className="sm__font reg__font team__new__member__info__position"
+                                                                                    data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 180}`}
+                                        data-aos-duration="1200"
+                                            >
                                                 {member.email}
                                             </p>
                                             </div>
@@ -261,7 +381,11 @@ class Team extends Component {
                                 ?
                                 <div className={`col-xs-12 col-sm-12 col-md-3 col-lg-3 team__member__block team__member__${index} no__padding`} key={index}>
                                     <div className={`team__new__member ${member.category}`}  onClick={this.toggleTeamMember}>
-                                        <div className={`team__new__member__background`}>
+                                        <div className={`team__new__member__background`}
+                                        
+                                                                                
+                                        
+                                        >
                                             {
                                                 member.photo
                                                 ?<Img fluid={member.photo.localFile.childImageSharp.fluid} alt={`${member.name} photo`} tabIndex={-1}/>
@@ -269,14 +393,30 @@ class Team extends Component {
                                             }
                                         </div>
                                         <div className="team__new__member__info">
-                                            <p className="xxl__font team__new__member__info__name">
+                                            <p className="xxl__font team__new__member__info__name"
+                                                                                    data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 130}`}
+                                        data-aos-duration="1200"
+                                            >
                                                 {member.name}
                                             </p>
                                             <div className="team__information">
-                                            <p className="sm__font bold__font reg__font team__new__member__info__position">
+                                            <p className="sm__font bold__font reg__font team__new__member__info__position"
+                                                                                    data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 150}`}
+                                        data-aos-duration="1200"
+                                            
+                                            >
                                                 {member.position}
                                             </p>
-                                            <p className="sm__font reg__font team__new__member__info__position">
+                                            <p className="sm__font reg__font team__new__member__info__position"
+                                                                                    data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 180}`}
+                                        data-aos-duration="1200"
+                                            >
                                                 {member.email}
                                             </p>
                                             </div>
@@ -295,7 +435,11 @@ class Team extends Component {
                                 ?
                                 <div className={`col-xs-12 col-sm-12 col-md-3 col-lg-3 team__member__block team__member__${index} no__padding`} key={index}>
                                     <div className={`team__new__member ${member.category}`}  onClick={this.toggleTeamMember}>
-                                        <div className={`team__new__member__background`}>
+                                        <div className={`team__new__member__background`}
+                                        
+                                                                                
+                                        
+                                        >
                                             {
                                                 member.photo
                                                 ?<Img fluid={member.photo.localFile.childImageSharp.fluid} alt={`${member.name} photo`} tabIndex={-1}/>
@@ -303,14 +447,30 @@ class Team extends Component {
                                             }
                                         </div>
                                         <div className="team__new__member__info">
-                                            <p className="xxl__font team__new__member__info__name">
+                                            <p className="xxl__font team__new__member__info__name"
+                                                                                    data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 130}`}
+                                        data-aos-duration="1200"
+                                            >
                                                 {member.name}
                                             </p>
                                             <div className="team__information">
-                                            <p className="sm__font bold__font reg__font team__new__member__info__position">
+                                            <p className="sm__font bold__font reg__font team__new__member__info__position"
+                                                                                    data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 150}`}
+                                        data-aos-duration="1200"
+                                            
+                                            >
                                                 {member.position}
                                             </p>
-                                            <p className="sm__font reg__font team__new__member__info__position">
+                                            <p className="sm__font reg__font team__new__member__info__position"
+                                                                                    data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 180}`}
+                                        data-aos-duration="1200"
+                                            >
                                                 {member.email}
                                             </p>
                                             </div>

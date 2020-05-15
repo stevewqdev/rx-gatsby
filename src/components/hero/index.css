@@ -62,11 +62,14 @@
         padding-top: 25px;
     }
     .hero__component .hero__title {
-        margin-top: 20px;
+        margin-top: 150px;
     }
     .hero__component .hero__extra__info {
         position: relative;
         top: 140px;
+    }
+    .hero__component .container-fluid{
+        padding: 42px;
     }
 }
 @media(max-width: 360px){

@@ -33,9 +33,14 @@ const MainMenu = props => {
   }
 
   return (
-    <div className={`${props.customClass}`} id={menuId}
+    <div className={`includes__separator ${props.customClass}`} id={menuId}
 
     >
+      {
+        props.customClass === "floating-menu"
+        ? <div className="menu__separator --black"></div>
+        : ""
+      }
       {menuItems.map((menuItem, index) => (
         <p key={index}
 

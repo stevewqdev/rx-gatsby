@@ -69,8 +69,9 @@ class HomePage extends Component {
                     data-aos="fade-up"
                     data-aos-delay={`200`}
                     data-aos-duration="1200"
-                    data-aos-anchor-placement="bottom"
+                    data-aos-anchor-placement="top"
                     data-aos-easing="ease-in-out"
+                    
                     className={"xxl__font"}>{pageAcf.reel_title}</h2>
                     <br/>
                   </div>
@@ -80,8 +81,9 @@ class HomePage extends Component {
                         data-aos="fade-up"
                         data-aos-delay={`250`}
                         data-aos-duration="1200"
-                        data-aos-anchor-placement="bottom"
+                        data-aos-anchor-placement="top"
                         data-aos-easing="ease-in-out"
+                        
                         className=""
                         dangerouslySetInnerHTML={{ __html: pageAcf.reel_copy }}
                       />
@@ -90,8 +92,9 @@ class HomePage extends Component {
                       data-aos="fade-up"
                       data-aos-delay={`300`}
                       data-aos-duration="1200"
-                      data-aos-anchor-placement="bottom"
-                      data-aos-easing="ease-in-out">
+                      data-aos-anchor-placement="top"
+                      data-aos-easing="ease-in-out"
+                      >
                       <svg 
 
                       xmlns="http://www.w3.org/2000/svg" width="19.73" height="19.72" viewBox="0 0 19.73 19.72">
@@ -142,8 +145,9 @@ class HomePage extends Component {
                       data-aos="fade-up"
                       data-aos-delay={`150`}
                       data-aos-duration="1200"
-                      data-aos-anchor-placement="bottom"
+                      data-aos-anchor-placement="top"
                       data-aos-easing="ease-in-out"
+                      
                       className="lg__font">{pageAcf.sp_title}</h2>
                     </div>
                     <div className="selected__projects__copy">
@@ -151,8 +155,9 @@ class HomePage extends Component {
                         data-aos="fade-up"
                         data-aos-delay={`200`}
                         data-aos-duration="1200"
-                        data-aos-anchor-placement="bottom"
+                        data-aos-anchor-placement="top"
                         data-aos-easing="ease-in-out"
+                        
                         className=""
                         dangerouslySetInnerHTML={{ __html: pageAcf.sp_copy }}
                       />
@@ -169,8 +174,9 @@ class HomePage extends Component {
                           data-aos="fade-up"
                           data-aos-delay={`175`}
                           data-aos-duration="1200"
-                          data-aos-anchor-placement="bottom"
+                          data-aos-anchor-placement="top"
                           data-aos-easing="ease-in-out"
+                          
                           >See More</button>
                         </Link>
                       </div>
@@ -190,8 +196,9 @@ class HomePage extends Component {
                                     data-aos="fade-up"
                                     data-aos-delay={`100`}
                                     data-aos-duration="1200"
-                                    data-aos-anchor-placement="bottom"
+                                    data-aos-anchor-placement="top"
                                     data-aos-easing="ease-in-out"
+                                    
                                     src={`${project.acf.featured_image.localFile.url}`} alt={`${project.post_name}`}/>
                                   </div>
                                   <div className="selected__projects__projects__left__copy">
@@ -199,8 +206,9 @@ class HomePage extends Component {
                                       data-aos="fade-up"
                                       data-aos-delay={`200`}
                                       data-aos-duration="1200"
-                                      data-aos-anchor-placement="bottom"
+                                      data-aos-anchor-placement="top"
                                       data-aos-easing="ease-in-out"
+                                      
                                       className=""
                                       dangerouslySetInnerHTML={{ __html: project.post_content }}
                                     />
@@ -211,8 +219,9 @@ class HomePage extends Component {
                                         data-aos="fade-up"
                                         data-aos-delay={`220`}
                                         data-aos-duration="1200"
-                                        data-aos-anchor-placement="bottom"
+                                        data-aos-anchor-placement="top"
                                         data-aos-easing="ease-in-out"
+                                        
                                         className="bold__font md__font"
                                         dangerouslySetInnerHTML={{ __html: project.post_name }}
                                       />

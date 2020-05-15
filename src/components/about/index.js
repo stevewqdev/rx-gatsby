@@ -53,7 +53,7 @@ const About = props => {
                 >
                   <p 
                   data-aos="fade-up"
-                  data-aos-delay={`${(index + 1) * 100}`}
+                  data-aos-delay={`${(index + 1) * 120}`}
                   data-aos-duration="1200"
                   data-aos-easing="ease-in-out"
                   data-aos-anchor-placement="top"

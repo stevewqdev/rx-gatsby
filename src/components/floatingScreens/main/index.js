@@ -10,6 +10,10 @@ export default class MainFloatingScreen extends Component {
     document.getElementById("menu__full__screen").classList.add("show")
     document.querySelectorAll(".main__floating__menu .brand__menu")[0].classList.add("hidden");
     document.querySelectorAll(".menu__full__screen .brand__menu")[0].classList.remove("hidden");
+    setTimeout(function(){
+      document.querySelectorAll("#menu__full__screen .menu__separator")[0].classList.add("full");
+
+    }, 700)
   }
   render() {
     return (

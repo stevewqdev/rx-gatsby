@@ -46,19 +46,19 @@
 }
 .columns__mustard{
     background: linear-gradient(to right, #FEA904 50%, black 50%)!important;
-    transition: background ease-in-out 0.5s!important;
+    transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
 }
 .columns__sky{
     background: linear-gradient(to right, #01FEEB 50%, black 50%)!important;
-    transition: background ease-in-out 0.5s!important;
+    transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
 }
 .columns__fuchsia{
     background: linear-gradient(to right, #FE0062 50%, black 50%)!important;
-    transition: background ease-in-out 0.5s!important;
+    transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
 }
 .columns__sea{
     background: linear-gradient(to right, #005CFE 50%, black 50%)!important;
-    transition: background ease-in-out 0.5s!important;
+    transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
 }
 .colored__column{
     background: black;
@@ -99,7 +99,7 @@
         position: relative;
         z-index: 2;
         opacity: 0;
-        transition: all ease-in-out 0.2s!important;
+        transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
         letter-spacing: -3px;
     }
     .colored__floating h4{
@@ -139,7 +139,7 @@
     z-index: 2;
     opacity: 0;
     margin-top: 20px;
-    transition: all ease-in-out 0.2s!important;
+    transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
 }
 .recognition__one__copy svg{
     margin-top: 30px;
@@ -160,7 +160,7 @@
     top: 8.9vw;
     width: 100%;
     pointer-events: none;
-    transition: all ease-in-out 0.2s!important;
+    transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
     z-index: 5;
     margin-left: 20px;
     left: 16.7%;
@@ -231,22 +231,22 @@
 .c-f2ab3d__column{
     bottom:0px;
     background: #FEA904;
-    transition: all ease-in-out 0s!important;
+    transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
 }
 .c-73faeb__column {
     bottom:0px;
     background: #01FEEB;
-    transition: all ease-in-out 0s!important;
+    transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
 }
 .c-ea3464__column{
     bottom:0px;
     background: #FE0062;
-    transition: all ease-in-out 0s!important;
+    transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
 }
 .c-1d61f5__column{
     bottom:0px;
     background: #005CFE;
-    transition: all ease-in-out 0s!important;
+    transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
 }
 .offices__one{
     margin-top: 25%;
@@ -309,7 +309,7 @@
     margin-left: 10px;
 }
 .office__name{
-  transition: all 0.8s ease-in-out;
+  transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
   opacity: 0;
 }
 .office__name.show{
@@ -421,7 +421,7 @@
 .colored__column__svg__black  polygon,
 .colored__column__svg__black  circle {
     fill: black!important;
-    transition: all ease-in-out 0.2s!important;
+    transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
 }
 .services__list.c-f2ab3d:hover .services__list__items .row p:last-child{
     color: #FEA904;
@@ -666,6 +666,7 @@
     }
     .recognition__wrapper {
         padding-bottom: 0%;
+        padding-top: 100px;
     }
     .recognition__list__item.active h3 {
         color: white;

@@ -11,6 +11,7 @@ export default class MainMenuFloatingScreen extends Component {
     document.getElementById("menu__full__screen").classList.remove("show")
     document.querySelectorAll(".main__floating__menu .brand__menu")[0].classList.remove("hidden");
     document.querySelectorAll(".menu__full__screen .brand__menu")[0].classList.add("hidden");
+    document.querySelectorAll("#menu__full__screen .menu__separator")[0].classList.remove("full");
   }
   componentDidMount(){
     [...document.querySelectorAll("a")].map(item => {

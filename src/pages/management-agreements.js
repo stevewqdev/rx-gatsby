@@ -43,12 +43,20 @@ class ManagementAgreements extends Component {
                             <div className="separator --white "></div>
                             <br/>
                             <h2
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`100`}
+                            data-aos-duration="1200"
                             className="row  bold__font xxl__font "
                             dangerouslySetInnerHTML={{ __html: pageAcf.web_agreements_title }}
                             />
                         </div>
                         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 no__padding">
                             <div
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`200`}
+                            data-aos-duration="1200"
                             className="row  md__font mark__font reg__font web__agreements"
                             dangerouslySetInnerHTML={{ __html: pageAcf.web_agreements }}
                             />
@@ -63,12 +71,20 @@ class ManagementAgreements extends Component {
                             <div className="separator --white "></div>
                             <br/>
                             <h2
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`100`}
+                            data-aos-duration="1200"
                             className="row  bold__font xxl__font "
                             dangerouslySetInnerHTML={{ __html: pageAcf.service_level_title }}
                             />
                         </div>
                         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 no__padding">
                             <div
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`200`}
+                            data-aos-duration="1200"
                             className="row  md__font mark__font reg__font service__level__agreements"
                             dangerouslySetInnerHTML={{ __html: pageAcf.service_level_agreements }}
                             />

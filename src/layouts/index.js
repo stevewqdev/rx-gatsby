@@ -59,11 +59,13 @@ const Layout = ({ children, location }) => {
         window.addEventListener("scroll", function(){
           var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
           let innerLine = line.querySelectorAll(".separator")[0];
+          if(innerLine){
+            if(top  > line.offsetTop + 500){ 
+              innerLine.classList.add("full");
+            }else{
+              innerLine.classList.remove("full");
+            }
 
-          if(top  > line.offsetTop + 500){ 
-            innerLine.classList.add("full");
-          }else{
-            innerLine.classList.remove("full");
           }
         }, {passive: true});
       })
@@ -87,6 +89,7 @@ const Layout = ({ children, location }) => {
     changePositionFooter();
     AOS.init({
       disable: 'mobile', 
+      mirror: true,
     });
   });
   // Next query will return the site data, the master acf fields for whole website data, the logo and the favicon.

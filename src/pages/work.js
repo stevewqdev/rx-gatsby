@@ -42,29 +42,66 @@ class ContactPage extends Component {
                                 index % 2 === 0 
                                 ? 
                                     <div className="col-xs-6 col-sm-6 col-md-6 pgrid__base__thumbnail --pr-one no__padding work__list__project" key={index}>
-                                        <div className="work__list__project__img">
+                                        <div className="work__list__project__img"
+                                        data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 100}`}
+                                        data-aos-duration="1200"
+                                        
+                                        >
                                             <Link to={`/project/${project.node.slug.toLowerCase()}`}>
                                                     <img src={`${project.node.acf.featured_image.localFile.url}`} alt={`${project.node.title}`} />
                                             </Link>
                                         </div>
                                         <div className="work__list__project__info">
                                         <p
-                                className="bold__font md__font"
-                                dangerouslySetInnerHTML={{ __html: project.node.title }}
-                            />
-                                            <p className="bold__font md__font">{project.node.acf.subtitle}</p>
+                                        data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 120}`}
+                                        data-aos-duration="1200"
+                                        
+                                            className="bold__font md__font"
+                                            dangerouslySetInnerHTML={{ __html: project.node.title }}
+                                        />
+                                        <p 
+                                        
+                                        data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 200}`}
+                                        data-aos-duration="1200"
+                                        
+                                        className="bold__font md__font">{project.node.acf.subtitle}</p>
                                         </div>
                                     </div>
                                 :
                                     <div className="col-xs-6 col-sm-6 col-md-6 pgrid__base__thumbnail --pr-one no__padding work__list__project lower__project" key={index} >
-                                        <div className="work__list__project__img">
+                                        <div className="work__list__project__img"
+                                        
+                                        data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`${(index + 1) * 100}`}
+                                        data-aos-duration="1200"
+                                        
+                                        >
                                             <Link to={`/project/${project.node.slug.toLowerCase()}`}>
                                                     <img src={`${project.node.acf.featured_image.localFile.url}`} alt={`${project.node.title}`} />
                                             </Link>
                                         </div>
                                         <div className="work__list__project__info">
-                                            <p className="bold__font md__font">{project.node.title}</p>
-                                            <p className="bold__font md__font">{project.node.acf.subtitle}</p>
+                                            <p className="bold__font md__font"
+                                            data-aos="fade-up"
+                                            data-aos-easing="ease-in-back"
+                                            data-aos-delay={`${(index + 1) * 120}`}
+                                            data-aos-duration="1200"
+                                            
+                                            >{project.node.title}</p>
+                                            <p className="bold__font md__font"
+                                            data-aos="fade-up"
+                                            data-aos-easing="ease-in-back"
+                                            data-aos-delay={`${(index + 1) * 200}`}
+                                            data-aos-duration="1200"
+                                            
+                                            >{project.node.acf.subtitle}</p>
                                         </div>
                                     </div> 
                         )
