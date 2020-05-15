@@ -11,6 +11,10 @@ const ProjectHero = props => {
                     {
                         props.title
                         ?  <h1
+                                data-aos="fade-up"
+                                data-aos-easing="ease-in-back"
+                                data-aos-delay={`100`}
+                                data-aos-duration="1200"
                                 className="xxl__font"
                                 dangerouslySetInnerHTML={{ __html: props.title }}
                             />
@@ -18,30 +22,63 @@ const ProjectHero = props => {
                     }
                 </div>
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 project__info no__padding">
-                    <p className="md__font bold__font reg__font project__client">
+                    <p className="md__font bold__font reg__font project__client"
+                        data-aos="fade-up"
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay={`120`}
+                        data-aos-duration="1200"
+                    >
                         Client
                     </p>
-                    <p className="xsm__font reg__font">
+                    <p className="xsm__font reg__font"
+                        data-aos="fade-up"
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay={`150`}
+                        data-aos-duration="1200"                  
+                    >
                         {props.clientName}
                     </p>
 
-                    <p className="md__font bold__font reg__font project__info__content">
+                    <p className="md__font bold__font reg__font project__info__content"
+                        data-aos="fade-up"
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay={`170`}
+                        data-aos-duration="1200"                 
+                    >
                         Project Info
                     </p>
                     <div
+                        data-aos="fade-up"
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay={`190`}
+                        data-aos-duration="1200"                
                         className="sm__font reg__font project__info__content__data"
                         dangerouslySetInnerHTML={{ __html: props.projectInfo }}
                     />
 
-                    <p className="md__font bold__font reg__font project__focus">
+                    <p className="md__font bold__font reg__font project__focus"
+                        data-aos="fade-up"
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay={`210`}
+                        data-aos-duration="1200"
+                    >
                         Project Focus
                     </p>
                     <div
+                        data-aos="fade-up"
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay={`230`}
+                        data-aos-duration="1200"
                         className="xsm__font reg__font project__focus__content"
                         dangerouslySetInnerHTML={{ __html: props.projectFocus }}
                     />
                     <br/><br/>
-                    <div className="share__project">
+                    <div className="share__project"
+                    data-aos="fade-up"
+                    data-aos-easing="ease-in-back"
+                    data-aos-delay={`250`}
+                    data-aos-duration="1200"
+                    >
                         <svg xmlns="http://www.w3.org/2000/svg" width="19.73" height="19.72" viewBox="0 0 19.73 19.72">
                         <g id="Grupo_229" data-name="Grupo 229" transform="translate(-336 -3038.156)">
                             <g id="Grupo_75" data-name="Grupo 75">
@@ -55,7 +92,13 @@ const ProjectHero = props => {
                         </svg>
                     </div>
                 </div>
-                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 project__featured__image no__padding">
+                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 project__featured__image no__padding"
+                
+                data-aos="fade-up"
+                data-aos-easing="ease-in-back"
+                data-aos-delay={`230`}
+                data-aos-duration="1200"
+                >
                     <Img fluid={props.projectThumbnail.localFile.childImageSharp.fluid} alt={`${props.clientName} featured image`} tabIndex={-1}/>
                 </div>
 
