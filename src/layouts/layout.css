@@ -1069,11 +1069,18 @@ button{
 .selected__projects.latest__projects .latest__projects__projects{
   margin-top: 12%;
 }
+@media(max-width: 1280px){
+  #page__wrapper{
+    margin-bottom: 22%;
+  }
+}
 @media(max-width: 1024px){
   .container__custom {
     max-width: 650px;
-}
-
+  }
+  #page__wrapper {
+    margin-bottom: 35%;
+  }
   .selected__projects__projects__right {
     bottom: 22%;
   }
@@ -1325,6 +1332,9 @@ body{
 @media(max-width: 500px){
   .main__section__wrapper{
     z-index: 0;
+  }
+  #page__wrapper {
+    margin-bottom: 0;
   }
   .menu__separator.full{
     width: 50%;

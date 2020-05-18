@@ -64,9 +64,19 @@ footer .menu__subitem{
 .footer__menu a:last-child:after{
     display: none;
 }
+@media(max-width: 768px){
+    .get_in_touch .col-lg-9{
+        display: flex;
+        align-items: center;
+    }
+}
 @media(max-width: 500px){
     .mobile__bottom__info{
         display: flex;
+    }
+    .fixed__footer{
+        position: relative!important;
+        z-index: 8!important;
     }
     footer {
         padding: 0px;

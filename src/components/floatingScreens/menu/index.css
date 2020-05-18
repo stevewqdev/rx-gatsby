@@ -183,9 +183,12 @@
         display: none!important;
     }
     .menu__full__screen .copyright__column{
+        display: none!important;
+    }
+    .menu__full__screen.show .copyright__column{
         display: block!important;
     }
-    .menu__full__screen .copyright__column > div {
+    .menu__full__screen.show .copyright__column > div {
         position: fixed;
         width: 100px;
         bottom: -30px;
