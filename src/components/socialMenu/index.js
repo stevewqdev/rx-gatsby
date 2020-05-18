@@ -35,7 +35,7 @@ const SocialMenu = props => {
           id={`${network.network}`}
           key={index}
 
-          data-aos="fade-right"
+          data-aos="fade-up"
           data-aos-easing="ease-in-back"
           data-aos-delay={`${(index + 1 )* 100}`}
           data-aos-offset="0"

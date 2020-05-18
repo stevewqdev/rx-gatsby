@@ -44,6 +44,7 @@ class HomePage extends Component {
                       
                       playsInline
                       className="mobile-hidden"
+
                     >
                       <source src={pageAcf.video_background.source_url} type="video/mp4" />
                     </video>
@@ -69,7 +70,7 @@ class HomePage extends Component {
                     data-aos="fade-up"
                     data-aos-delay={`200`}
                     data-aos-duration="1200"
-                    data-aos-anchor-placement="top"
+                    data-aos-offset="450"
                     data-aos-easing="ease-in-out"
                     
                     className={"xxl__font"}>{pageAcf.reel_title}</h2>
@@ -79,20 +80,18 @@ class HomePage extends Component {
                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4 featured__video__copy no__padding">
                       <div
                         data-aos="fade-up"
-                        data-aos-delay={`250`}
+                        data-aos-delay={`350`}
                         data-aos-duration="1200"
-                        data-aos-anchor-placement="top"
                         data-aos-easing="ease-in-out"
-                        
+                        data-aos-offset="350"
                         className=""
                         dangerouslySetInnerHTML={{ __html: pageAcf.reel_copy }}
                       />
                       <br/>
                       <div className="svg"
                       data-aos="fade-up"
-                      data-aos-delay={`300`}
+                      data-aos-delay={`390`}
                       data-aos-duration="1200"
-                      data-aos-anchor-placement="top"
                       data-aos-easing="ease-in-out"
                       >
                       <svg 
@@ -115,14 +114,12 @@ class HomePage extends Component {
                         pageAcf.reel_video
                         ?
                         <video
-                          data-aos="fade-up"
-                          data-aos-delay={`250`}
-                          data-aos-duration="1500"
                           className="reel_video"
                           playsInline
                           className="mobile-hidden"
                           poster={pageAcf.reel_video_poster.source_url}
-                          onClick={this.playVideo}
+                          onMouseEnter={this.playVideo}
+                          onMouseLeave={this.playVideo}
                         >
                           <source src={pageAcf.reel_video.source_url}  type="video/mp4" />
                         </video>
@@ -174,7 +171,7 @@ class HomePage extends Component {
                           data-aos="fade-up"
                           data-aos-delay={`175`}
                           data-aos-duration="1200"
-                          data-aos-anchor-placement="top"
+                          
                           data-aos-easing="ease-in-out"
                           
                           >See More</button>
@@ -196,7 +193,7 @@ class HomePage extends Component {
                                     data-aos="fade-up"
                                     data-aos-delay={`100`}
                                     data-aos-duration="1200"
-                                    data-aos-anchor-placement="top"
+                                    
                                     data-aos-easing="ease-in-out"
                                     
                                     src={`${project.acf.featured_image.localFile.url}`} alt={`${project.post_name}`}/>
@@ -206,7 +203,7 @@ class HomePage extends Component {
                                       data-aos="fade-up"
                                       data-aos-delay={`200`}
                                       data-aos-duration="1200"
-                                      data-aos-anchor-placement="top"
+                                      
                                       data-aos-easing="ease-in-out"
                                       
                                       className=""
@@ -219,7 +216,7 @@ class HomePage extends Component {
                                         data-aos="fade-up"
                                         data-aos-delay={`220`}
                                         data-aos-duration="1200"
-                                        data-aos-anchor-placement="top"
+                                        
                                         data-aos-easing="ease-in-out"
                                         
                                         className="bold__font md__font"

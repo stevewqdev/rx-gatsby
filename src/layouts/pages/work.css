@@ -26,6 +26,7 @@
     color: white;
     justify-content: space-between;
     margin-top: 15px;
+   display: none;
 }
 .work__list__project__img{
     position: relative;
@@ -47,6 +48,12 @@
 }
 .work__list__project__img:hover::after{
     opacity: 0;
+}
+.work__list .project-3{
+    margin-top: 50%;
+}
+.work__list .project-4{
+    margin-top: -25%;
 }
 @media(max-width: 1024px){
     .work__list__project__img img {

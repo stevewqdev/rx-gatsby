@@ -8,6 +8,10 @@
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+.services__list__items > div {
+    display: flex;
+    flex-direction: column;
+}
 #we_can_help{
     padding: 10% 0;
     background: black;

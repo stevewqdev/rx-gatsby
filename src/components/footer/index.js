@@ -1,12 +1,16 @@
 import React, { Component } from "react"
 import MainMenu from "../menu/index"
 import SocialMenu from "../socialMenu/index"
+import GetInTouch from "../../components/intouch/index"
+
 import { Link } from "gatsby"
 import "./index.css"
 export default class Footer extends Component {
   render() {
     return (
+      <>
       <footer className="footer">
+        <GetInTouch></GetInTouch>
         <div className="container container__custom">
           <div className="row">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4 d-flex justify-start align-items-center footer__copyright">
@@ -49,6 +53,7 @@ export default class Footer extends Component {
           </div>
         </div>
       </footer>
+      </>
     )
   }
 }

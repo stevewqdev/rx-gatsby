@@ -40,6 +40,10 @@
 .floating__web__info{
     top: 0;
 }
+.brand__menu{
+    transition: opacity 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+
+}
 .brand__menu.hidden{
     opacity: 0;
 }

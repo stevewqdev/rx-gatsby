@@ -41,6 +41,7 @@ footer .menu__subitem{
    background: #EDEDED;
    position: relative;
    z-index: 9;
+   margin-bottom: 40px;
 }
 .legal__menu{
     text-transform: uppercase;

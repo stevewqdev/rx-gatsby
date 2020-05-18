@@ -1,6 +1,12 @@
 .menu__full__screen{
     background: #f4f4f4;
-    left: -10000px;
+    left: -200%;
+    transition: left 1s cubic-bezier(0.85, 0, 0.15, 1)!important;
+    z-index: 999;
+    padding: 0px;
+}
+#menu__full__screen.show{
+    left: 0%;
 }
 .menu__full__screen.floating__web__info p{
     color: #000000;

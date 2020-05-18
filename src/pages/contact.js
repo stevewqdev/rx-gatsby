@@ -47,7 +47,7 @@ class ContactPage extends Component {
                               <h2 className="lg__font bold__font"
                               data-aos="fade-up"
                               data-aos-easing="ease-in-back"
-                              data-aos-delay="300"
+                              data-aos-delay="500"
                               data-aos-duration="1200"
                               >
                                   {this.props.data.wordpressAcfOptions.options.contact_email}
@@ -57,7 +57,7 @@ class ContactPage extends Component {
                               <h2 className="lg__font bold__font"
                               data-aos="fade-up"
                               data-aos-easing="ease-in-back"
-                              data-aos-delay="400"
+                              data-aos-delay="550"
                               data-aos-duration="1200"
                               >
                               {this.props.data.wordpressAcfOptions.options.contact_phone}
@@ -98,10 +98,7 @@ class ContactPage extends Component {
                             />
                             </div>
                             <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 no__padding raxo__address__map"
-                            data-aos="fade-up"
-                            data-aos-easing="ease-in-back"
-                            data-aos-delay="450"
-                            data-aos-duration="1200"
+
                             >
                             <div
                               className=""
