@@ -69,6 +69,7 @@ const ProjectHero = props => {
                         data-aos-easing="ease-in-back"
                         data-aos-delay={`230`}
                         data-aos-duration="1200"
+                        data-aos-offset="20"
                         className="xsm__font reg__font project__focus__content"
                         dangerouslySetInnerHTML={{ __html: props.projectFocus }}
                     />

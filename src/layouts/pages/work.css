@@ -13,6 +13,7 @@
 .work__list{
     background: #000000;
     padding: 15% 0;
+    overflow: hidden;
 }
 .work__list__project{
     padding: 0 5px;
@@ -20,13 +21,34 @@
 .work__list__project.lower__project{
     margin-top: 25%;
 }
-
+.work__list__title{
+    position: absolute;
+    top: 39%;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    padding: 0 20px;
+}
+.work__list__description{
+    padding: 0 20px;
+    position: absolute;
+    bottom: 15px;
+}
+.work__list__project:hover .work__list__project__info{
+    opacity: 1;
+}
 .work__list__project__info{
     display: flex;
     color: white;
     justify-content: space-between;
-    margin-top: 15px;
-   display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 5;
 }
 .work__list__project__img{
     position: relative;
@@ -37,8 +59,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #00000066;
-    opacity: 1;
+    background: #0000009c;
+    opacity: 0;
     top: 0;
     left: 0;
     bottom: 0;
@@ -47,7 +69,7 @@
     transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
 }
 .work__list__project__img:hover::after{
-    opacity: 0;
+    opacity: 1;
 }
 .work__list .project-3{
     margin-top: 50%;
@@ -69,6 +91,12 @@
     .work__list__project__info .md__font {
         font-size: 14px;
     }
+    .work__list .project-3{
+        margin-top: 0%;
+    }
+    .work__list .project-4{
+        margin-top: 0%;
+    }
     .work__list__project__info {
         flex-direction: column;
     }
@@ -77,7 +105,7 @@
         padding: 15px 0 70px;
     }
     .work__list__project__img img {
-        min-height: 170px;
+        min-height: 160px;
     }
     .work__list__project.lower__project {
         margin-top: 0%;
