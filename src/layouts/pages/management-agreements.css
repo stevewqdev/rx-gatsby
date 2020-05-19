@@ -70,7 +70,7 @@
 }
 @media(max-width: 500px){
     .management__page {
-        padding: 80px 0 160px;
+        padding: 0px 0 160px;
     }
     .service__level__agreements {
         left: 0;

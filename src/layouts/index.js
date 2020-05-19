@@ -86,10 +86,12 @@ const Layout = ({ children, location }) => {
     drawLines();
     hrefRedirect();
     changePositionFooter();
+
     AOS.init({
       disable: 'mobile', 
       mirror: true,
     });
+
   });
   // Next query will return the site data, the master acf fields for whole website data, the logo and the favicon.
   const data = useStaticQuery(graphql`
@@ -165,6 +167,7 @@ const Layout = ({ children, location }) => {
       <Helmet>
         <link rel="icon" href={siteFavicon} />
         <html lang="en" />
+        <script src="//instant.page/5.0.1" type="module" integrity="sha384-0DvoZ9kNcB36fWcQApIMIGQoTzoBDYTQ85e8nmsfFOGz4RHAdUhADqJt4k3K2uLS"></script>
       </Helmet>
       <MainFloatingMenu
         agreements={siteDataAcf.management_agreements_info}

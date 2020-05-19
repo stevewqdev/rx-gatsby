@@ -17,6 +17,14 @@
     background: #f84b2c;
     color: white;
 }
+.project__header__component.c-13245d{
+    background: #13245d;
+    color: white;
+}
+.project__header__component.c-000000{
+    background: #000000;
+    color: white;
+}
 .project__header__component .hero__title {
     margin-top: 20px;
 }
@@ -97,5 +105,17 @@
     .project__header__component{
         position: absolute;
         padding: 140px 0 40px;
+    }
+    .project__header__component .container__custom .row{
+        display: flex;
+    }
+    .project__header__component .container__custom .row .hero__title{
+        order: 1;
+    }
+    .project__header__component .container__custom .row .project__featured__image{
+        order: 2;
+    }
+    .project__header__component .container__custom .row .project__info{
+        order: 3;
     }
 }

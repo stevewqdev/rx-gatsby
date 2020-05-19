@@ -11,6 +11,12 @@
 .menu__full__screen.floating__web__info p{
     color: #000000;
 }
+.menu__full__screen .copyright__inner {
+    display: none;
+}
+.menu__full__screen.show .copyright__inner {
+    display: block;
+}
 .menu__full__screen.floating__web__info .copyright__column p:before{
     background: #000000;
 }

@@ -1,0 +1,41 @@
+#section__one .gallery{
+    margin-top: 100px;
+}
+.section__one__image-2{
+    margin-top: 40px;
+}
+.section__one__image-3{
+    margin-top: 40px;
+}
+.section__one__image-4{
+    margin-top: 40px;
+}
+.section__one__image-5{
+    margin-top: 70px;
+}
+.section__one__image-6{
+    margin-top: 40px;
+}
+.section__one__image-7{
+    margin-top: 40px;
+}
+#section__two{
+    margin: 350px 0 100px;
+}
+.section__three__image-0{
+    margin-bottom: 200px;
+}
+.section__three__image-1{
+    margin-bottom: 20px;
+}
+.section__three__image-2{
+    margin-bottom: 10px;
+}
+@media(max-width: 500px){
+    #section__two {
+        margin: 110px 0 10px;
+    }
+    .section__three__image-0 {
+        margin-bottom: 100px;
+    }
+}
