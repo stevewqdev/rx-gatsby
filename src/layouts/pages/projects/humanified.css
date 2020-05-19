@@ -1,0 +1,74 @@
+#section__one{
+    padding-top: 350px;
+}
+.grid .grid__info{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 20px;
+}
+.grid.three{
+    margin-top: 70px;
+}
+.uneven__grid .floating{
+    position: relative;
+    z-index: 2;
+}
+.uneven__grid .one{
+    margin-top: -100px;
+}
+.uneven__grid .two{
+    margin-top: -200px;
+}
+.uneven__grid .simple__copy{
+    padding: 0 15px;
+}
+.section__four__image-0{
+    margin-top: -70px;
+    margin-bottom: 80px;
+}
+.section__four__image-1{
+    margin-bottom: 80px;
+}
+#section__four .one {
+    position: relative;
+    z-index: 2;
+}
+@media(max-width: 1024px){
+    .uneven__grid .one{
+        margin-top: -50px;
+    }
+    .uneven__grid .two{
+        margin-top: -100px;
+    }
+}
+@media(max-width: 768px){
+    .uneven__grid .one{
+        margin-top: -30px;
+    }
+    .uneven__grid .two{
+        margin-top: 80px;
+    }
+    .uneven__grid .three{
+        margin-top: 80px;
+        margin-bottom: 100px;
+    }
+    .grid .grid__info {
+        width: 100%;
+    }
+
+}
+@media(max-width: 500px){
+    .uneven__grid .one{
+        margin-top: 60px;
+    }
+    .uneven__grid .two{
+        margin-top: 50px;
+    }
+    .uneven__grid .copy{
+        margin-top: 50px;
+    }
+    #section__one {
+        padding-top: 280px;
+    }
+}

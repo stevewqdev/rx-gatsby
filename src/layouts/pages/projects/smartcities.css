@@ -31,6 +31,11 @@
 .section__three__image-2{
     margin-bottom: 10px;
 }
+@media(max-width: 768px){
+    #section__two {
+        margin: 220px 0 100px;
+    }
+}
 @media(max-width: 500px){
     #section__two {
         margin: 110px 0 10px;

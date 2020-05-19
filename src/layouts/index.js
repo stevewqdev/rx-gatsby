@@ -33,7 +33,7 @@ const Layout = ({ children, location }) => {
 
             }
           }
-        },1000);
+        },620);
       })
     });
   }
@@ -167,7 +167,6 @@ const Layout = ({ children, location }) => {
       <Helmet>
         <link rel="icon" href={siteFavicon} />
         <html lang="en" />
-        <script src="//instant.page/5.0.1" type="module" integrity="sha384-0DvoZ9kNcB36fWcQApIMIGQoTzoBDYTQ85e8nmsfFOGz4RHAdUhADqJt4k3K2uLS"></script>
       </Helmet>
       <MainFloatingMenu
         agreements={siteDataAcf.management_agreements_info}

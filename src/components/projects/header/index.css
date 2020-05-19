@@ -25,6 +25,10 @@
     background: #000000;
     color: white;
 }
+.project__header__component.c-f8604d{
+    background: #f8604d;
+    color: white;
+}
 .project__header__component .hero__title {
     margin-top: 20px;
 }
