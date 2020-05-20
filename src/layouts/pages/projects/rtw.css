@@ -1,0 +1,26 @@
+.rtw .project__info{
+    margin-top: 80px;
+}
+.rtw #section__one .gallery {
+    margin-top: 0px;
+}
+.rtw #section__one .gallery  .image__3{
+    margin-top: 90px;
+}
+#section__two.rtw__about{
+    margin: 200px 0 100px 0;
+}
+.rtw #section__three .col-xs-12{
+    margin-top: 90px;
+}
+@media(max-width: 500px){
+    .rtw #section__one{
+        margin-top: 300px;
+    }
+    .rtw #section__one .copy{
+        margin: 50px 0;
+    }
+    #section__two.rtw__about {
+        margin: 100px 0 100px 0;
+    }
+}

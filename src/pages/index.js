@@ -21,6 +21,8 @@ class HomePage extends Component {
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
     const latestProjects = this.props.data.allWordpressWpProjects.edges; 
 
+
+    console.log(pageAcf);
     return ( 
       <Layout>
         <Helmet>
@@ -204,7 +206,7 @@ class HomePage extends Component {
                                     
                                     data-aos-easing="ease-in-out"
                                     
-                                    src={`${project.acf.featured_image.localFile.url}`} alt={`${project.post_name}`}/>
+                                    src={`${project.acf.thumbnail_image.localFile.url}`} alt={`${project.post_name}`}/>
                                   </div>
                                   <div className="selected__projects__projects__left__copy">
                                     <div
@@ -353,7 +355,7 @@ export const pageQuery = graphql`
               post_name
               post_content
               acf {
-                featured_image {
+                thumbnail_image {
                   localFile {
                     childImageSharp {
                       fluid(maxWidth: 1000, quality: 100) {

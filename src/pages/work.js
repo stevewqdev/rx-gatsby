@@ -14,7 +14,7 @@ class ContactPage extends Component {
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
     const latestProjects = this.props.data.allWordpressWpProjects.edges; 
 
-    
+    console.log(latestProjects);
     return ( 
       <Layout>
           <Helmet>

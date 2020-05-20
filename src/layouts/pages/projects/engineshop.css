@@ -1,0 +1,38 @@
+/*ENGINE SHOP USES THE HUMANIFIED CSS SHEET*/
+.grid.four{
+    margin-top: 180px;
+}
+#section__four{
+    margin-top: 200px;
+}
+.uneven__grid .one.engine {
+    margin-top: -280px;
+}
+@media(max-width: 1024px){
+    .uneven__grid .one.engine {
+        margin-top: -180px;
+    }
+    .uneven__grid.engineshop .two .copy{
+        margin-top: 20px;
+    }
+}
+.engineshop .project__info{
+    margin-top: 80px;
+}
+@media(max-width: 500px){
+    .uneven__grid.engineshop .two .copy {
+        margin-top: 100px;
+    }
+    .uneven__grid .one.engine {
+        margin-top: 0px;
+    }
+    .grid.four {
+        margin-top: 80px;
+    }
+    #section__four.engineshop{
+        margin-top: 100px;
+    }
+    #section__one.engineshop {
+        padding-top: 320px;
+    }
+}

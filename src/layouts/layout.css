@@ -907,7 +907,7 @@ section#one{
 }
 /* Video Background Component */
 .video__background{
-  width: 100%;
+  width: auto;
   height: 100vh;
   position: absolute;
   top: 0;
@@ -915,9 +915,13 @@ section#one{
   left: 0;
   right: 0;
   z-index: 9;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .video__background video{
-  width: 100%;
+  width: 50%;
   height: 100vh;
   object-fit: cover;
 }
