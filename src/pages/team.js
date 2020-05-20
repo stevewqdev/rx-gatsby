@@ -9,6 +9,7 @@ import Img from "gatsby-image"
 import "../layouts/pages/team.css"
 
 class Team extends Component {
+
   componentDidMount(){
     let teamArray = [...document.getElementsByClassName("creative")];
 

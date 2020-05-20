@@ -1,24 +1,46 @@
 @media(max-width: 4000px){
-    .floating__web__info, .menu__full__screen .row{
-        max-width: 1600px;
+    .floating__web__info{
+        max-width: 1800px;
         width: 100%;
         margin: auto;
         left: 0;
         right: 0;
+    }
+    .menu__full__screen{
+        max-width: 100%;
+        width: 100%;
+    }
+    .menu__full__screen.floating__web__info .row{
+        max-width: 1900px;
+        width: 100%;
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+    .copyright__inner{
+        right: 25%;
+        width: 201px;
+    }
+}
+@media(max-width: 3000px){
+    .copyright__inner{
+        right: 15%;
     }
 }
 @media(max-width: 2000px){
     .floating__web__info, .menu__full__screen .row{
         max-width: 100%;
     }
+    .copyright__inner{
+        right: -55px;
+        width: 260px;
+        
+    }
 }
 .force__absolute{
     position: absolute!important;
 }
-.copyright__inner{
-    right: 5px;
-    width: 201px;
-}
+
 .brand__menu__toggle{
     position: absolute;
     cursor: pointer;
@@ -61,7 +83,7 @@
 
 .floating__web__info p{
     color: #F4F4F4;
-    width: 90%;
+    width: 70%;
 }
 
 .floating__web__info .col{

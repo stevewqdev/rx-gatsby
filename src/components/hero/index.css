@@ -1,3 +1,4 @@
+
 .hero__component{
     position: fixed;
     min-height: 100vh;
@@ -9,6 +10,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .hero__component .hero__subtitle{
     padding-top: 45px;
 }
@@ -16,8 +18,8 @@
     margin-top: 50px;
     margin-bottom: 50px;
 }
-.hero__component.dark .container__custom .row{
-    border-top: solid 2px  #ffffff;
+.hero__component.dark .container__custom .row .separator{
+    background: white;
 }
 /* .hero__component.light .container__custom .row{
     border-top: solid 2px  #000000;

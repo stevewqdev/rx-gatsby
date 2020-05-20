@@ -45,6 +45,14 @@ class ContactPage extends Component {
       }
     })
   }
+  hideListElements(){
+    [...document.getElementsByClassName("recognition__list__item")].map(element => {
+      element.classList.remove("active");
+    })
+    Array.from(document.getElementsByClassName("recognition__list__copy")).map(element => {
+      element.classList.remove("active");
+    })
+  }
   toggleListElement(event){
     let itemId = event.target.getAttribute("id");
     
@@ -419,7 +427,7 @@ class ContactPage extends Component {
                                         data-aos-easing="ease-in-back"
                                         data-aos-delay={`270`}
                                         data-aos-duration="1200"
- 
+                                        data-aos-offset="320"
                                       >
                                         {services.subtitle}
                                       </p>
@@ -430,7 +438,7 @@ class ContactPage extends Component {
                                         data-aos-easing="ease-in-back"
                                         data-aos-delay={`290`}
                                         data-aos-duration="1200"
-    
+                                        data-aos-offset="320"
                                         className="row lg__font bold__font "
                                         dangerouslySetInnerHTML={{ __html: services.services_list }}
                                       />
@@ -445,7 +453,7 @@ class ContactPage extends Component {
                                         data-aos-easing="ease-in-back"
                                         data-aos-delay={`270`}
                                         data-aos-duration="1200"
-
+                                        data-aos-offset="320"
                                       >
                                         {services.subtitle}
                                       </p>
@@ -456,7 +464,7 @@ class ContactPage extends Component {
                                         data-aos-easing="ease-in-back"
                                         data-aos-delay={`290`}
                                         data-aos-duration="1200"
-             
+                                        data-aos-offset="320"
                                         className="row lg__font bold__font "
                                         dangerouslySetInnerHTML={{ __html: services.services_list }}
                                         />
@@ -513,7 +521,7 @@ class ContactPage extends Component {
                   <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 recognition__list__one no__padding">
                       {
                         pageAcf.recognition_list.map((item, index) => 
-                          <div className={`recognition__list__item `} key={index} id={`tab-rec-${index}`} onMouseEnter={this.toggleListElement}>
+                          <div className={`recognition__list__item `} key={index} id={`tab-rec-${index}`} onMouseEnter={this.toggleListElement} onMouseLeave={this.hideListElements}>
                             <h3 className="lg__font bold__font"
                               data-aos="fade-up"
                               data-aos-easing="ease-in-back"

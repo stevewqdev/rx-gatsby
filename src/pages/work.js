@@ -54,20 +54,14 @@ class ContactPage extends Component {
                                             </Link>
                                             <div className="work__list__project__info">
                                               <p
-                                              data-aos="fade-up"
-                                              data-aos-easing="ease-in-back"
-                                              data-aos-delay={`${(index + 1) * 120}`}
-                                              data-aos-duration="1200"
+                
                                               
                                                   className="bold__font lg__font work__list__title"
                                                   dangerouslySetInnerHTML={{ __html: project.node.title }}
                                               />
                                               <p 
                                               
-                                              data-aos="fade-up"
-                                              data-aos-easing="ease-in-back"
-                                              data-aos-delay={`${(index + 1) * 200}`}
-                                              data-aos-duration="1200"
+                   
                                               
                                               className=" reg__font sm__font work__list__description">{project.node.acf.subtitle}</p>
                                             </div>
@@ -88,17 +82,11 @@ class ContactPage extends Component {
                                             </Link>
                                             <div className="work__list__project__info">
                                                 <p className="bold__font lg__font work__list__title"
-                                                data-aos="fade-up"
-                                                data-aos-easing="ease-in-back"
-                                                data-aos-delay={`${(index + 1) * 120}`}
-                                                data-aos-duration="1200"
+                    
                                                 
                                                 >{project.node.title}</p>
                                                 <p className="reg__font sm__font work__list__description"
-                                                data-aos="fade-up"
-                                                data-aos-easing="ease-in-back"
-                                                data-aos-delay={`${(index + 1) * 200}`}
-                                                data-aos-duration="1200"
+                      
                                                 
                                                 >{project.node.acf.subtitle}</p>
                                             </div>

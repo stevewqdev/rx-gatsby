@@ -70,7 +70,7 @@ class HomePage extends Component {
                     data-aos="fade-up"
                     data-aos-delay={`200`}
                     data-aos-duration="1200"
-                    data-aos-offset="450"
+                    data-aos-offset="300"
                     data-aos-easing="ease-in-out"
                     
                     className={"xxl__font"}>{pageAcf.reel_title}</h2>
@@ -83,7 +83,7 @@ class HomePage extends Component {
                         data-aos-delay={`350`}
                         data-aos-duration="1200"
                         data-aos-easing="ease-in-out"
-                        data-aos-offset="350"
+                        data-aos-offset="300"
                         className=""
                         dangerouslySetInnerHTML={{ __html: pageAcf.reel_copy }}
                       />
@@ -109,7 +109,14 @@ class HomePage extends Component {
                       </svg>
                       </div>
                     </div>
-                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 featured__video__source no__padding">
+                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 featured__video__source no__padding"
+                    
+                    data-aos="fade-up"
+                    data-aos-delay={`500`}
+                    data-aos-duration="1200"
+                    data-aos-easing="ease-in-out"
+                    data-aos-offset="300"
+                    >
                       {
                         pageAcf.reel_video
                         ?
@@ -148,6 +155,7 @@ class HomePage extends Component {
                       className="lg__font">{pageAcf.sp_title}</h2>
                     </div>
                     <div className="selected__projects__copy">
+                      
                       <div
                         data-aos="fade-up"
                         data-aos-delay={`200`}
@@ -207,7 +215,7 @@ class HomePage extends Component {
                                       data-aos-easing="ease-in-out"
                                       
                                       className=""
-                                      dangerouslySetInnerHTML={{ __html: project.post_content }}
+                                      dangerouslySetInnerHTML={{ __html: project.post_content.substring(0,150) + "..."  }}
                                     />
                                   </div>
                                   <div className="no__padding selected__projects__projects__right">

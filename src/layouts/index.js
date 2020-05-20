@@ -41,12 +41,12 @@ const Layout = ({ children, location }) => {
   function removeFixed(){
     window.onscroll = function(){
       var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
-      if(top > document.querySelectorAll(".main__section__wrapper")[0].offsetTop){
+      if(top >= document.querySelectorAll(".main__section__wrapper")[0].offsetTop - 90){
         document.querySelectorAll(".column__top__one")[0].classList.add("force__absolute");
         document.querySelectorAll(".column__top__two")[0].classList.add("force__absolute");
       }else{
-        document.querySelectorAll(".column__top__one")[0].classList.add("force__absolute");
-        document.querySelectorAll(".column__top__two")[0].classList.add("force__absolute");
+        document.querySelectorAll(".column__top__one")[0].classList.remove("force__absolute");
+        document.querySelectorAll(".column__top__two")[0].classList.remove("force__absolute");
       }
     };
   }
@@ -59,7 +59,7 @@ const Layout = ({ children, location }) => {
           var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
           let innerLine = line.querySelectorAll(".separator")[0];
           if(innerLine){
-            if(top  > line.offsetTop + 450){ 
+            if(top  > line.offsetTop + 350){ 
               innerLine.classList.add("full");
             }else{
               innerLine.classList.remove("full");

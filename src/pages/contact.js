@@ -10,6 +10,8 @@ import "../layouts/pages/contact.css"
 class ContactPage extends Component {
   componentDidMount(){
     document.querySelectorAll(".footer")[0].classList.add("dark");
+    document.querySelectorAll(".separator")[0].classList.remove("--black");
+    document.querySelectorAll(".separator")[0].classList.add("--white");
   }
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
@@ -98,7 +100,11 @@ class ContactPage extends Component {
                             />
                             </div>
                             <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 no__padding raxo__address__map"
-
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay="700"
+                            data-aos-duration="1200"
+   
                             >
                             <div
                               className=""

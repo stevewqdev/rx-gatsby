@@ -2,6 +2,8 @@
     .raxo__address__map iframe{
         width: 100%;
         min-height: 700px;
+        max-height: 700px;
+        margin-top: -150px;
     }
 }
 @media(max-width: 2000px){
@@ -10,10 +12,9 @@
     }
 }
 @media(max-width: 1700px){
-    .raxo__address__map iframe{
-        min-height: auto;
-    }
+
 }
+
 .raxo__info{
     padding: 15% 0;
 }
@@ -29,7 +30,7 @@
     color: #FE0062;
 }
 .raxo__social__menu .brand__social__network:last-child a, .raxo__contact__info a:last-child{
-    color: #606060;
+    color: black;
 }
 .raxo__social__menu .brand__social__network:last-child a:hover, .raxo__contact__info a:last-child:hover{
     color: #FE0062;
@@ -45,6 +46,9 @@
 .raxo__address__map{
     filter: grayscale(1);
     padding-left: 40px;
+    min-height: 700px;
+    max-height: 700px;
+    overflow: hidden;
 }
 .raxo__theAddress{
     padding-bottom: 80px;
@@ -56,9 +60,24 @@
     font-size: 18px;
     font-weight: bold;
 }
+@media(max-width: 768px){
+    .raxo__address__map iframe {
+        min-height: 300px;
+    }
+    .raxo__address__copy {
+        margin-top: 90px;
+    }
+    .raxo__address__map {
+        min-height: 400px;
+        max-height: 400px;
+    }
+}
 @media(max-width:500px){
     .raxo__address__copy {
         margin-top: 100px;
+    }
+    .raxo__theAddress {
+        height: auto;
     }
     .raxo__address__map {
         padding-left: 0px;
