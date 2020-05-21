@@ -50,7 +50,7 @@ class ContactPage extends Component {
                                         
                                         >
                                             <Link to={`/project/${project.node.slug.toLowerCase()}`}>
-                                                    <img src={`${project.node.acf.featured_image.localFile.url}`} alt={`${project.node.title}`} />
+                                                    <img src={`${project.node.acf.thumbnail_image.localFile.url}`} alt={`${project.node.title}`} />
                                             </Link>
                                             <div className="work__list__project__info">
                                               <p
@@ -78,7 +78,7 @@ class ContactPage extends Component {
                                         
                                         >
                                             <Link to={`/project/${project.node.slug.toLowerCase()}`}>
-                                                    <img src={`${project.node.acf.featured_image.localFile.url}`} alt={`${project.node.title}`} />
+                                                    <img src={`${project.node.acf.thumbnail_image.localFile.url}`} alt={`${project.node.title}`} />
                                             </Link>
                                             <div className="work__list__project__info">
                                                 <p className="bold__font lg__font work__list__title"
@@ -113,6 +113,11 @@ query WorkQuery {
                 slug
                 acf {
                     subtitle
+                    thumbnail_image {
+                      localFile {
+                          url
+                      }
+                    }
                     featured_image {
                         localFile {
                             url

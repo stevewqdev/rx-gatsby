@@ -37,6 +37,7 @@
     .related__projects {
         margin-top: 120px;
         margin-bottom: 55px;
+        display: none;
     }
     .related__projects img {
         opacity: 1!important;

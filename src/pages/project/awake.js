@@ -60,7 +60,7 @@ class Awake extends Component {
 
     return ( 
       <Layout>
-        <div className="project__template ">
+        <div className="project__template awake">
           <Helmet>
             <meta charSet="utf-8" />
             <meta name="description" content={ pageData.yoast_meta.yoast_wpseo_metadesc }/>
@@ -74,10 +74,144 @@ class Awake extends Component {
             projectInfo={pageData.content}
             projectFocus={pageAcf.project_focus}
             projectThumbnail={pageAcf.featured_image}
-            theme={pageAcf.project_background}
+            theme={`${pageAcf.project_background} awake`}
           ></ProjectHero>
 
           <div className="main__section__wrapper">
+            <section id="section__one">
+              <div className="container container__custom">
+                <div className="row one">
+                  <div className="col-lg-12 no__padding copy">
+                      <div
+                        className="simple__copy sm__font reg__font"
+                        dangerouslySetInnerHTML={{ __html: pageAcf.awake_sone_copy }}
+                      />
+                  </div>
+                  {
+                    pageAcf.awake_sone_gallery.map((element, index) =>
+                      <div 
+                        className={`
+                        col-xs-12 col-sm-12 col-md-12 no__padding
+                        ${index === 0 ? "col-lg-6" : ""}
+                        ${index === 1 ? "col-lg-6" : ""}
+                        ${index === 2 ? "col-lg-12 bottom__image" : ""}
+                        `}>
+                        <img src={element} alt="Awake Image"/>
+                      </div>
+                    )
+                  }
+
+                </div>
+                <div className="row two">
+                  <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 copy no__padding">
+                      <div
+                        className="simple__copy sm__font reg__font"
+                        dangerouslySetInnerHTML={{ __html: pageAcf.awake_stwo_copy }}
+                      />
+                  </div>
+                  {
+                    pageAcf.awake_stwo_gallery.map((element, index) =>
+                      <div 
+                        className={`
+                        col-xs-12 col-sm-12 col-md-12 no__padding image
+                        ${index === 0 ? "col-lg-6" : ""}
+                        ${index > 0 ? "col-lg-12" : ""}
+                        `}>
+                        <img src={element} alt="Awake Image"/>
+                      </div>
+                    )
+                  }
+
+                </div>
+              </div>
+            </section>
+
+            <section className="includes__separator awake" id="section__two">
+              <div className="container container__custom">
+                <div className="row section__two__about">
+                  <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 full__width__image ">
+                    <div className="separator --black"></div>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-easing="ease-in-back"
+                      data-aos-delay={`120`}
+                      data-aos-duration="1200"
+                      data-aos-offset="350"
+                    >
+                      <h1
+
+                          className="xxl__font"
+                          dangerouslySetInnerHTML={{ __html: pageAcf.awake_stwo_about }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section id="section__three">
+              <div className="container container__custom">
+                <div className="row">
+                  {
+                    pageAcf.awake_sthree_gallery.map((element, index) =>
+                    <>
+                      {
+                        index === 0
+                        ?
+                        <div 
+                        className={`
+                          col-xs-12 col-sm-12 col-md-12 no__padding image image__top`}
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                          
+                          >
+                          <img src={element} alt="Awake Image"/>
+                        </div>
+                        :""
+                      }
+                      {
+                        index === 1
+                        ?
+                        <>
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 "></div>
+                        <div 
+                        className={`
+                          col-xs-12 col-sm-12 col-md-12 col-lg-9 no__padding image`}
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                        >
+                          <img src={element} alt="Awake Image"/>
+                        </div>
+                        </>
+                        :""
+                      }
+                      {
+                        index > 1
+                        ?
+                        <div 
+                        className={`
+                          col-xs-12 col-sm-12 col-md-12 no__padding image`}
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                        >
+                          <img src={element} alt="Awake Image"/>
+                        </div>
+                        :""
+                      }
+                    </>
+
+                    )
+                  }
+                </div>
+              </div>
+            </section>
+
             <RelatedProjects 
                 relatedcopy={pageAcf.related_extra_copy}
                 relatedproject={pageAcf.related_project}

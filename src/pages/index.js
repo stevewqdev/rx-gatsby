@@ -20,9 +20,8 @@ class HomePage extends Component {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
     const latestProjects = this.props.data.allWordpressWpProjects.edges; 
-
-
     console.log(pageAcf);
+
     return ( 
       <Layout>
         <Helmet>
@@ -72,7 +71,7 @@ class HomePage extends Component {
                     data-aos="fade-up"
                     data-aos-delay={`200`}
                     data-aos-duration="1200"
-                    data-aos-offset="300"
+                    data-aos-offset="360"
                     data-aos-easing="ease-in-out"
                     
                     className={"xxl__font"}>{pageAcf.reel_title}</h2>
@@ -95,6 +94,7 @@ class HomePage extends Component {
                       data-aos-delay={`390`}
                       data-aos-duration="1200"
                       data-aos-easing="ease-in-out"
+                      data-aos-offset="100"
                       >
                       <svg 
 

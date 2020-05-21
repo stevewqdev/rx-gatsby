@@ -188,6 +188,9 @@
     .floating__web__info p{
         width: 100%;
     }
+    .floating__web__info .copyright__column p{
+        display: none;
+    }
 }
 @media(max-width: 500px){
     .column__top__one, .column__top__two{

@@ -1,0 +1,76 @@
+.cbeebies .project__info {
+    margin-top: 80px;
+    padding-left: 8px;
+    margin-bottom: 20px;
+}
+.cbeebies #section__one .row.one .copy{
+    margin-bottom: 80px;
+}
+#section__two.includes__separator.cbeebies{
+    margin: 100px 0 100px;
+}
+.cbeebies #section__three .video{
+    margin-top: 35px;
+    margin-bottom: 40px;
+}
+.cbeebies #section__three .image{
+    margin-top: 170px;
+}
+.cbeebies #section__three .copy{
+    margin-top: 170px;
+}
+.cbeebies .hidden-0{
+    display: none!important;
+}
+.video iframe{
+    position: absolute!important;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+@media(max-width: 4000px){
+    .video{
+        height: 735px;
+    }
+}
+@media(max-width: 1700px){
+    .video{
+        height: 535px;
+    }
+}
+@media(max-width: 1440px){
+    .video{
+        height: 565px;
+    }
+}
+@media(max-width: 1280px){
+    .video{
+        height: 73vh;
+    }
+}
+@media(max-width: 1024px){
+    .video{
+        height: 400px;
+    }
+}
+@media(max-width: 768px){
+    .video{
+        height: 290px;
+    }
+}
+@media(max-width: 500px){
+    .video {
+        height: 200px;
+    }
+    .cbeebies #section__one{
+        margin-top: 250px;
+    }
+    .cbeebies #section__three .image {
+        margin-top: 50px;
+    }
+    .cbeebies #section__three .copy {
+        margin-top: 50px;
+    }
+}

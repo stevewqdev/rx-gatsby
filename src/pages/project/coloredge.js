@@ -60,7 +60,7 @@ class Coloredge extends Component {
     console.log(pageAcf);
     return ( 
       <Layout>
-        <div className="project__template ">
+        <div className="project__template coloredge">
           <Helmet>
             <meta charSet="utf-8" />
             <meta name="description" content={ pageData.yoast_meta.yoast_wpseo_metadesc }/>
@@ -81,7 +81,7 @@ class Coloredge extends Component {
 
             <section id="section__one">
                 <div className="container container__custom">
-                    <div className="row">
+                    <div className="row one">
                         <div className="col-lg-12 copy no__padding">
                             <div
                             className="simple__copy sm__font reg__font"
@@ -93,8 +93,345 @@ class Coloredge extends Component {
                             <Img fluid={pageAcf.ce_sone_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                         </div>
                     </div>
+                    <div className="row two">
+                        <div className="col-lg-12 copy no__padding">
+                          <div
+                            className="simple__copy sm__font reg__font"
+                            dangerouslySetInnerHTML={{ __html: pageAcf.ce_stwo_copy }}
+                          />
+                        
+                        </div>
+                        <div className="col-lg-12 image no__padding">
+                            <Img fluid={pageAcf.ce_stwo_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                        </div>
+                    </div>
+                    <div className="row three">
+                        <div className="col-lg-12 copy no__padding d-flex justify-content-end">
+                          <div
+                            className="simple__copy sm__font reg__font"
+                            dangerouslySetInnerHTML={{ __html: pageAcf.ce_stwo_copy_two }}
+                          />
+                        
+                        </div>
+                        <div className="col-lg-12 image no__padding">
+                            <Img fluid={pageAcf.ce_stwo_image_two.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                        </div>
+                    </div>
                 </div>
             </section>
+
+            <section className="includes__separator coloredge" id="section__two">
+              <div className="container container__custom">
+                <div className="row section__two__about">
+                  <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 full__width__image ">
+                    <div className="separator --black"></div>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-easing="ease-in-back"
+                      data-aos-delay={`120`}
+                      data-aos-duration="1200"
+                      data-aos-offset="450"
+                    >
+                      <h1
+
+                          className="xxl__font"
+                          dangerouslySetInnerHTML={{ __html: pageAcf.ce_about }}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="row about__grid">
+                  {
+                    pageAcf.ce_sthree_grid.map((element, index) => 
+                      <>
+                      {
+                        index % 2 === 0
+                        ?
+                        <>
+                          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 image"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`120`}
+                            data-aos-duration="1200"
+                          >
+                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                          </div>
+                          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 copy d-flex align-items-center"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`120`}
+                            data-aos-duration="1200"
+                          >
+                            <div
+                              className="simple__copy sm__font reg__font"
+                              dangerouslySetInnerHTML={{ __html: pageAcf.ce_stwo_copy_two }}
+                            />
+                          </div>
+                        </>
+                        : 
+                        <>
+                          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 copy d-flex align-items-center"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`120`}
+                            data-aos-duration="1200"
+                          >
+                            <div
+                              className="simple__copy sm__font reg__font"
+                              dangerouslySetInnerHTML={{ __html: pageAcf.ce_stwo_copy_two }}
+                            />
+                          </div>
+                          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 image"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`120`}
+                            data-aos-duration="1200"
+                          >
+                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                          </div>
+
+                        </>
+                      }
+                      </>
+                    )
+                  }
+                </div>
+                <div className="row floating__image">
+                  <div className="col-lg-12 image no__padding">
+                    <Img fluid={pageAcf.ce_sthree_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                  </div>
+                </div>
+                <div className="row three">
+                    <div className="col-sm-12  col-md-12 col-lg-6 image no__padding"></div>
+                    <div className="col-sm-12 col-md-12 col-lg-6 copy no__padding d-flex justify-content-end no__end">
+                      <div
+                        className="simple__copy sm__font reg__font"
+                        dangerouslySetInnerHTML={{ __html: pageAcf.ce_sfour_copy }}
+                      />
+                    </div>
+                    
+                    <div className="col-lg-12 image no__padding">
+                        <Img fluid={pageAcf.ce_sfour_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                    </div>
+
+
+                </div>
+              </div>
+            </section>
+
+            <section id="section__three">
+              <div className="container container__custom">
+                <div className="row">
+                  {
+                    pageAcf.ce_sfour_grid.map((element, index) => 
+                    <>
+                      {
+                        index === 0 
+                        ? 
+                          <>
+                          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 copy d-flex align-items-center"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`120`}
+                            data-aos-duration="1200"
+                          >
+                            <div
+                              className="simple__copy sm__font reg__font"
+                              dangerouslySetInnerHTML={{ __html: element.copy }}
+                            />
+                          </div>
+                          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`120`}
+                            data-aos-duration="1200"
+                          >
+                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                          </div>
+                          </>
+                        : ""
+                      }
+                      {
+                        index === 1
+                        ? 
+                          <>
+                            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 image"
+                              data-aos="fade-up"
+                              data-aos-easing="ease-in-back"
+                              data-aos-delay={`120`}
+                              data-aos-duration="1200"
+                            >
+                              <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            </div>
+                            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 copy d-flex align-items-center"
+                              data-aos="fade-up"
+                              data-aos-easing="ease-in-back"
+                              data-aos-delay={`120`}
+                              data-aos-duration="1200"
+                            >
+                              <div
+                                className="simple__copy sm__font reg__font"
+                                dangerouslySetInnerHTML={{ __html: element.copy }}
+                              />
+                            </div>
+                          </>
+                          
+                        : ""
+                      }
+                      {
+                        index === 2
+                        ? 
+                          <>
+                          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 copy d-flex align-items-center"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`120`}
+                            data-aos-duration="1200"
+                          >
+                            <div
+                              className="simple__copy sm__font reg__font"
+                              dangerouslySetInnerHTML={{ __html: element.copy }}
+                            />
+                          </div>
+                          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 image"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`120`}
+                            data-aos-duration="1200"
+                          >
+                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                          </div>
+                          </>
+                        : ""
+                      }
+                      {
+                        index === 3
+                        ? 
+                          <>
+                            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 image"
+                              data-aos="fade-up"
+                              data-aos-easing="ease-in-back"
+                              data-aos-delay={`120`}
+                              data-aos-duration="1200"
+                            >
+                              <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            </div>
+                            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 copy d-flex align-items-center"
+                              data-aos="fade-up"
+                              data-aos-easing="ease-in-back"
+                              data-aos-delay={`120`}
+                              data-aos-duration="1200"
+                            >
+                              <div
+                                className="simple__copy sm__font reg__font"
+                                dangerouslySetInnerHTML={{ __html: element.copy }}
+                              />
+                            </div>
+                          </>
+                          
+                        : ""
+                      }
+                      {
+                        index === 4
+                        ? <>
+                            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding "
+                              data-aos="fade-up"
+                              data-aos-easing="ease-in-back"
+                              data-aos-delay={`120`}
+                              data-aos-duration="1200"
+                            >
+                              <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            </div>
+                          </>
+                        : ""
+                      }
+                      {
+                        index === 5
+                        ? 
+                          <>
+                          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 copy d-flex align-items-center"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`120`}
+                            data-aos-duration="1200"
+                          >
+                            <div
+                              className="simple__copy sm__font reg__font"
+                              dangerouslySetInnerHTML={{ __html: element.copy }}
+                            />
+                          </div>
+                          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`120`}
+                            data-aos-duration="1200"
+                          >
+                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                          </div>
+                          </>
+                        : ""
+                      }
+                      {
+                        index === 6
+                        ? 
+                          <>
+                            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 image"
+                              data-aos="fade-up"
+                              data-aos-easing="ease-in-back"
+                              data-aos-delay={`120`}
+                              data-aos-duration="1200"
+                            >
+                              <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            </div>
+                            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 copy d-flex align-items-center"
+                              data-aos="fade-up"
+                              data-aos-easing="ease-in-back"
+                              data-aos-delay={`120`}
+                              data-aos-duration="1200"
+                            >
+                              <div
+                                className="simple__copy sm__font reg__font"
+                                dangerouslySetInnerHTML={{ __html: element.copy }}
+                              />
+                            </div>
+                          </>
+                          
+                        : ""
+                      }
+                      {
+                        index === 7
+                        ? 
+                          <>
+                          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 copy d-flex align-items-center"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`120`}
+                            data-aos-duration="1200"
+                          >
+                            <div
+                              className="simple__copy sm__font reg__font"
+                              dangerouslySetInnerHTML={{ __html: element.copy }}
+                            />
+                          </div>
+                          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 image"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`120`}
+                            data-aos-duration="1200"
+                          >
+                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                          </div>
+                          </>
+                        : ""
+                      }                      
+                    </>
+                    )
+                  }
+                </div>
+              </div>
+            </section>        
+            
+
             <RelatedProjects 
                 relatedcopy={pageAcf.related_extra_copy}
                 relatedproject={pageAcf.related_project}

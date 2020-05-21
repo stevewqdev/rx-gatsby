@@ -1,0 +1,61 @@
+.fkh .project__info {
+    margin-top: 80px;
+    padding-left: 8px;
+    margin-bottom: 20px;
+}
+.fkh #section__one{
+    margin-top: -100px;
+}
+.fkh #section__one .row{
+    margin-top: 100px;
+}
+#section__two.includes__separator.fkh{
+    margin: 200px 0 100px;
+}
+.fkh .uneven__grid .one {
+    margin-top: -250px;
+}
+.uneven__grid .two .copy{
+    margin-top: 100px;
+}
+@media(max-width: 1024px){
+    .uneven__grid .two .copy{
+        margin-top: 50px;
+    }
+}
+@media(max-width: 768px){
+    .fkh .copy{
+        display: none!important;
+    }
+    .fkh #section__one .row{
+        margin-top:  50px;
+    }
+    .fkh .uneven__grid .one {
+        margin-top: -130px;
+    }
+    .fkh .uneven__grid .two {
+        margin-top: 0px;
+    }
+    .fkh .uneven__grid .three {
+        margin-top: 0px;
+        margin-bottom: 100px;
+    }
+}
+@media(max-width: 500px){
+    .fkh .uneven__grid .one {
+        margin-top: 0px;
+    }
+    .fkh .uneven__grid .two {
+        margin-top: 50px;
+    }
+    .fkh .uneven__grid .three {
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    .fkh #section__one{
+        margin-top: 250px;
+    }
+    #section__two.includes__separator.fkh {
+        margin: 100px 0 20px;
+    }
+}

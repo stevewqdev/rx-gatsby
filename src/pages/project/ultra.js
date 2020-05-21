@@ -60,7 +60,7 @@ class Ultra extends Component {
 
     return ( 
       <Layout>
-        <div className="project__template ">
+        <div className="project__template ultra">
           <Helmet>
             <meta charSet="utf-8" />
             <meta name="description" content={ pageData.yoast_meta.yoast_wpseo_metadesc }/>
@@ -74,10 +74,510 @@ class Ultra extends Component {
             projectInfo={pageData.content}
             projectFocus={pageAcf.project_focus}
             projectThumbnail={pageAcf.featured_image}
-            theme={pageAcf.project_background}
+            theme={`${pageAcf.project_background} ultra`}
           ></ProjectHero>
 
           <div className="main__section__wrapper">
+            <section id="section__one">
+              <div className="container container__custom">
+                <div className="row one">
+                {
+                  pageAcf.ultra_sone_grid.map((element, index) => 
+                   <>
+                   {
+                     index === 0
+                     ?
+                      <>
+                          <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 copy hidden-${index} no__padding`}
+                                                 data-aos="fade-up"
+                                                 data-aos-easing="ease-in-back"
+                                                 data-aos-delay={`120`}
+                                                 data-aos-duration="1200"
+                                                 data-aos-offset="300"
+                          >
+                            <div
+                            className="simple__copy sm__font reg__font"
+                            dangerouslySetInnerHTML={{ __html: element.copy }}
+                            />
+                          </div>
+                          {
+                            element.image
+                            ? 
+                              <>
+                                <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 image hidden-${index} no__padding`}
+                                  data-aos="fade-up"
+                                  data-aos-easing="ease-in-back"
+                                  data-aos-delay={`220`}
+                                  data-aos-duration="1200"
+                                  data-aos-offset="300"
+                                >
+                                  <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                </div>
+                              </>
+                            : ""
+                          }
+
+                          {
+                            element.vimeo_id
+                            ?
+                              <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 video no__padding hidden-${index}`} 
+                              data-aos="fade-up"
+                              data-aos-easing="ease-in-back"
+                              data-aos-delay={`120`}
+                              data-aos-duration="1200"
+                              data-aos-offset="300"
+                              >
+                              <Vimeo
+                                video={element.vimeo_id}
+
+                                volume={volume}
+                                paused={paused}
+                                onPause={this.handlePlayerPause}
+                                onPlay={this.handlePlayerPlay}
+                              />
+                              </div>
+                            :""
+                          }
+                      </>
+                     : ""
+                   }
+                   {
+                     index === 1
+                     ?
+                      <>
+                          <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 copy hidden-${index} no__padding`}
+                          
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                          data-aos-offset="300"
+                          >
+                            <div
+                            className="simple__copy sm__font reg__font"
+                            dangerouslySetInnerHTML={{ __html: element.copy }}
+                            />
+                          </div>
+                          {
+                            element.image
+                            ? 
+                              <>
+                                <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 image hidden-${index} no__padding`}
+                                  data-aos="fade-up"
+                                  data-aos-easing="ease-in-back"
+                                  data-aos-delay={`220`}
+                                  data-aos-duration="1200"
+                                  data-aos-offset="300"
+                                >
+                                  <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                </div>
+                              </>
+                            : ""
+                          }
+
+                          {
+                            element.vimeo_id
+                            ?
+                              <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 video no__padding hidden-${index}`} 
+                              data-aos="fade-up"
+                              data-aos-easing="ease-in-back"
+                              data-aos-delay={`120`}
+                              data-aos-duration="1200"
+                              data-aos-offset="300"
+                              >
+                              <Vimeo
+                                video={element.vimeo_id}
+
+                                volume={volume}
+                                paused={paused}
+                                onPause={this.handlePlayerPause}
+                                onPlay={this.handlePlayerPlay}
+                              />
+                              </div>
+                            :""
+                          }
+                      </>
+                     : ""
+                   }
+                   {
+                     index === 2
+                     ?
+                      <>
+                          <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 copy  hidden-${index} no__padding`}
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`120`}
+                            data-aos-duration="1200"
+                            data-aos-offset="300"
+                          >
+                            <div
+                            className="simple__copy sm__font reg__font"
+                            dangerouslySetInnerHTML={{ __html: element.copy }}
+                            />
+                          </div>
+                          {
+                            element.image
+                            ? 
+                              <>
+                                <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12  image-${index} image hidden-${index} no__padding`}
+                                  data-aos="fade-up"
+                                  data-aos-easing="ease-in-back"
+                                  data-aos-delay={`220`}
+                                  data-aos-duration="1200"
+                                  data-aos-offset="300"
+                                >
+                                  <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                </div>
+                              </>
+                            : ""
+                          }
+
+                          {
+                            element.vimeo_id
+                            ?
+                              <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 video no__padding hidden-${index}`} 
+                              data-aos="fade-up"
+                              data-aos-easing="ease-in-back"
+                              data-aos-delay={`120`}
+                              data-aos-duration="1200"
+                              data-aos-offset="300"
+                              >
+                              <Vimeo
+                                video={element.vimeo_id}
+
+                                volume={volume}
+                                paused={paused}
+                                onPause={this.handlePlayerPause}
+                                onPlay={this.handlePlayerPlay}
+                              />
+                              </div>
+                            :""
+                          }
+                      </>
+                     : ""
+                   }
+                   {
+                     index === 3
+                     ?
+                      <>
+                          <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-112 copy hidden-${index} d-flex justify-content-end no__padding`}
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`120`}
+                            data-aos-duration="1200"
+                            data-aos-offset="300"
+                          >
+                            <div
+                            className="simple__copy sm__font reg__font"
+                            dangerouslySetInnerHTML={{ __html: element.copy }}
+                            />
+                          </div>
+                          {
+                            element.image
+                            ? 
+                              <>
+                                <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 image hidden-${index} no__padding`}
+                                  data-aos="fade-up"
+                                  data-aos-easing="ease-in-back"
+                                  data-aos-delay={`220`}
+                                  data-aos-duration="1200"
+                                  data-aos-offset="300"
+                                >
+                                  <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                </div>
+                              </>
+                            : ""
+                          }
+
+                          {
+                            element.vimeo_id
+                            ?
+                              <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 video no__padding hidden-${index}`} 
+                              
+                              data-aos="fade-up"
+                              data-aos-easing="ease-in-back"
+                              data-aos-delay={`120`}
+                              data-aos-duration="1200"
+                              data-aos-offset="300"
+                              >
+                              <Vimeo
+                                video={element.vimeo_id}
+
+                                volume={volume}
+                                paused={paused}
+                                onPause={this.handlePlayerPause}
+                                onPlay={this.handlePlayerPlay}
+                              />
+                              </div>
+                            :""
+                          }
+                      </>
+                     : ""
+                   }
+                   </>
+                  )
+                }
+                </div>
+              </div>
+            </section>
+            <section className="includes__separator ultra" id="section__two">
+              <div className="container container__custom">
+                <div className="row section__two__about">
+                  <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 full__width__image no__padding">
+                    <div className="separator --black"></div>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-easing="ease-in-back"
+                      data-aos-delay={`120`}
+                      data-aos-duration="1200"
+                      data-aos-offset="300"
+                    >
+                      <h1
+
+                          className="xxl__font"
+                          dangerouslySetInnerHTML={{ __html: pageAcf.ultra_sone_about }}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="row two">
+                  <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image no__padding"
+                                        data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`120`}
+                                        data-aos-duration="1200"
+                                        data-aos-offset="300"
+                  >
+                    <Img fluid={pageAcf.ultra_two_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                  </div>
+                  <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy "
+                                        data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`160`}
+                                        data-aos-duration="1200"
+                                        data-aos-offset="300"
+                  >
+                    <div
+                    className="simple__copy sm__font reg__font"
+                    dangerouslySetInnerHTML={{ __html: pageAcf.ultra_two_copy }}
+                    />
+                  </div>
+                  {
+                    pageAcf.ultra_two_gallery.map((element, index) => 
+                      <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding"
+                        data-aos="fade-up"
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay={`220`}
+                        data-aos-duration="1200"
+                        data-aos-offset="300"
+                      >
+                        <img src={element} alt="Ultra Image"/>
+                      </div>
+                    )
+                  }
+                </div>
+              </div>
+            </section> 
+            <section id="section__three">
+              <div className="container container__custom">
+                <div className="row">
+                  {
+                    pageAcf.ultra_three_grid.map((element, index) => 
+                      <>
+                      {
+                        index === 0 
+                        ?
+                        <>
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 image no__padding"
+                                                data-aos="fade-up"
+                                                data-aos-easing="ease-in-back"
+                                                data-aos-delay={`120`}
+                                                data-aos-duration="1200"
+                                                data-aos-offset="300"
+                        >
+                          <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                        </div>
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 copy "
+                                data-aos="fade-up"
+                                data-aos-easing="ease-in-back"
+                                data-aos-delay={`220`}
+                                data-aos-duration="1200"
+                                data-aos-offset="300"
+                        >
+                          <div
+                            className="simple__copy sm__font reg__font"
+                            dangerouslySetInnerHTML={{ __html: element.copy }}
+                          />
+                        </div>
+                        </>
+                        :""
+                      }
+                      {
+                        index === 1
+                        ?
+                        <>
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 left copy no__padding"
+                                data-aos="fade-up"
+                                data-aos-easing="ease-in-back"
+                                data-aos-delay={`120`}
+                                data-aos-duration="1200"
+                                data-aos-offset="300"
+                        >
+                          <div
+                            className="simple__copy sm__font reg__font"
+                            dangerouslySetInnerHTML={{ __html: element.copy }}
+                          />
+                        </div>
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 image no__padding"
+                                data-aos="fade-up"
+                                data-aos-easing="ease-in-back"
+                                data-aos-delay={`220`}
+                                data-aos-duration="1200"
+                                data-aos-offset="300"
+                        >
+                          <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                        </div>
+                        </>
+                        :""
+                      }
+                      {
+                        index === 2 
+                        ?
+                        <>
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding"
+                                data-aos="fade-up"
+                                data-aos-easing="ease-in-back"
+                                data-aos-delay={`120`}
+                                data-aos-duration="1200"
+                                data-aos-offset="300"
+                        >
+                          <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                        </div>
+                        </>
+                        :""
+                      }
+                      {
+                        index === 3 
+                        ?
+                        <>
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 copy no__top d-flex justify-content-end "
+                                data-aos="fade-up"
+                                data-aos-easing="ease-in-back"
+                                data-aos-delay={`120`}
+                                data-aos-duration="1200"
+                                data-aos-offset="300"
+                        >
+                          <div
+                            className="simple__copy sm__font reg__font"
+                            dangerouslySetInnerHTML={{ __html: element.copy }}
+                          />
+                        </div>
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding"
+                                data-aos="fade-up"
+                                data-aos-easing="ease-in-back"
+                                data-aos-delay={`220`}
+                                data-aos-duration="1200"
+                                data-aos-offset="300"
+                        >
+                          <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                        </div>
+                        </>
+                        :""
+                      }
+                      {
+                        index === 4 
+                        ?
+                        <>
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 copy left d-flex no__padding"
+                        data-aos="fade-up"
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay={`120`}
+                        data-aos-duration="1200"
+                        data-aos-offset="300"
+                        >
+                          <div
+                            className="simple__copy sm__font reg__font"
+                            dangerouslySetInnerHTML={{ __html: element.copy }}
+                          />
+                        </div>
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9  d-flex no__padding">
+
+                        </div>
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image floating__image no__padding"
+                        data-aos="fade-up"
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay={`220`}
+                        data-aos-duration="1200"
+                        data-aos-offset="300"
+                        >
+                          <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                        </div>
+
+                        </>
+                        :""
+                      }
+                      {
+                        index === 5 
+                        ?
+                        <>
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 image no__padding"
+                        data-aos="fade-up"
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay={`120`}
+                        data-aos-duration="1200"
+                        data-aos-offset="300"
+                        >
+                          <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                        </div>
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 copy no__padding"
+                        data-aos="fade-up"
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay={`220`}
+                        data-aos-duration="1200"
+                        data-aos-offset="300"
+                        >
+                          <div
+                            className="simple__copy sm__font reg__font"
+                            dangerouslySetInnerHTML={{ __html: element.copy }}
+                          />
+                        </div>
+                        </>
+                        :""
+                      }
+                      {
+                        index === 6 
+                        ?
+                        <>
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 copy left no__padding"
+                        data-aos="fade-up"
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay={`120`}
+                        data-aos-duration="1200"
+                        data-aos-offset="300"
+                        >
+                          <div
+                            className="simple__copy sm__font reg__font"
+                            dangerouslySetInnerHTML={{ __html: element.copy }}
+                          />
+                        </div>
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 image no__padding"
+                        data-aos="fade-up"
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay={`220`}
+                        data-aos-duration="1200"
+                        data-aos-offset="300"
+                        >
+                          <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                        </div>
+                        </>
+                        :""
+                      }
+                      </>
+                    )
+                  }
+                </div>
+              </div>
+            </section>
             <RelatedProjects 
                 relatedcopy={pageAcf.related_extra_copy}
                 relatedproject={pageAcf.related_project}

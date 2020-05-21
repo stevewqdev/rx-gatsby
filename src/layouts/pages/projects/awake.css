@@ -1,0 +1,38 @@
+.awake .project__info {
+    margin-top: 80px;
+    padding-left: 8px;
+    margin-bottom: 20px;
+}
+#section__two.includes__separator.awake{
+    margin: 100px 0 20px;
+}
+.awake #section__one .row.one .copy{
+    margin-bottom: 100px;
+}
+.awake #section__one .row.one .bottom__image{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.awake #section__one .row.two .image{
+    margin-top: 40px;
+}
+.awake #section__three .image{
+    margin-top: 40px;
+}
+.awake #section__three .image__top{
+    margin-bottom: 100px;
+}
+@media(max-width: 768px){
+    .awake .copy{
+        display: none;
+    }
+    .awake #section__one .row.one .bottom__image {
+        margin-bottom: 0px;
+    }
+}
+@media(max-width: 500px){
+    .awake #section__one{
+        margin-top: 100px;
+    }
+    
+}

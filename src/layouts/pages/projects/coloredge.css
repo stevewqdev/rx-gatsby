@@ -1,0 +1,90 @@
+.coloredge #section__one .row.one .image{
+    margin-top: -250px;
+}
+.coloredge #section__one .row.two{
+    margin-top: 100px;
+}
+.coloredge #section__one .row.two .image{
+    margin-top: -220px;
+}
+.coloredge #section__one .row.three{
+    margin-top: 0px;
+}
+.coloredge #section__one .row.three .copy{
+    margin-bottom: 100px;
+}
+#section__two.includes__separator.coloredge{
+    margin: 200px 0 100px;
+}
+.coloredge .about__grid {
+    margin-top: 50px;
+}
+.coloredge .about__grid .image{
+    margin-top: 150px;
+}
+.coloredge .floating__image .image{
+    margin-top: -70px;
+}
+.coloredge #section__two .three {
+    margin-top: 150px;
+}
+.coloredge #section__two .three .image {
+    margin-top: -120px;
+}
+.coloredge #section__three .image{
+    margin-top: 100px;
+}
+@media(max-width: 1024px){
+    .coloredge #section__one .row.two .image {
+        margin-top: -50px;
+    }
+    #section__two.includes__separator.coloredge {
+        margin: 150px 0 50px;
+    }
+    .coloredge .about__grid {
+        margin-top: 100px;
+    }
+
+}
+@media(max-width: 768px){
+    .coloredge .about__grid .image {
+        margin-top: 50px;
+    }
+    .coloredge .about__grid .copy{
+        margin-top: 30px;
+    }
+    .coloredge .floating__image .image {
+        margin-top: 30px;
+    }
+    .coloredge #section__two .three .image {
+        margin-top: -20px;
+    }
+    .coloredge .no__end{
+        justify-content: start!important;
+    }
+    .coloredge #section__three .image{
+        margin-top: 50px;
+    }
+    .coloredge #section__three .copy{
+        margin-top: 50px;
+        display: none!important;
+    }
+    .coloredge .copy {
+        display: none!important;
+    }
+    .coloredge #section__one {
+        padding-top: 370px;
+    }
+    .coloredge #section__one .row.three {
+        margin-top: 100px;
+    }
+}
+@media(max-width: 500px){
+    .coloredge #section__one {
+        padding-top: 570px;
+    }
+    .coloredge #section__two .three .image {
+        margin-top: -80px;
+        margin-bottom: -80px;
+    }
+}
