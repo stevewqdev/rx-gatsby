@@ -1,15 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+
 import "./index.css"
 
 const Hero = props => {
+
+
+  function parallaxContainer(){
+    window.addEventListener("scroll", function(){
+        var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
+        var finalX = top / -7;
+        document.getElementById("hero__component").style.transform=`translateY(${finalX}px)`;
+    }, {passive: true});
+  }
+
   useEffect(() => {
     setTimeout(function(){
         document.querySelectorAll(".hero__component .separator")[0].classList.add("full");
     }, 1500)
+
+    parallaxContainer();
+
   });
   return (
-    <section className={`hero__component ${props.theme} ${props.classes} `}>
-        <div className="container-fluid">
+    <section className={`hero__component ${props.theme} ${props.classes} `} id="hero__component" >
+        <div className="container-fluid" >
             <div className="row">
                 <div className=" col-xs-2 col-sm-2 col-md-2 col-lg-2 no__padding"></div>
                 <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 hero__title no__padding">
@@ -33,7 +47,7 @@ const Hero = props => {
             </div>
             <div className="row">
                 <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2 no__padding"></div>
-                <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3 hero__subtitle hero__first__subtitle no__padding">
+                <div className="col-xs-6 col-sm-4 col-md-2 col-lg-2 hero__subtitle hero__first__subtitle no__padding">
                     {
                         props.firstSubtitle
                         ?<p 
@@ -46,7 +60,7 @@ const Hero = props => {
                         :""
                     }
                 </div>
-                <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3 hero__subtitle hero__second__subtitle no__padding">
+                <div className="col-xs-6 col-sm-4 col-md-2 col-lg-2 hero__subtitle hero__second__subtitle no__padding">
                     {
                         props.secondSubtitle
                         ?<p 

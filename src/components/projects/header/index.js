@@ -1,8 +1,18 @@
-import React from "react"
+import React, { useState, useEffect } from 'react';
 import Img from "gatsby-image"
 import "./index.css"
 
 const ProjectHero = props => {
+  function scaleImage(event){
+    event.target.classList.add("scaled")
+  }
+  function unscaleImage(event){
+    event.target.classList.remove("scaled")
+  }
+  useEffect(() => {
+
+
+  });
   return ( 
     <section className={`project__header__component contrast_02 c-${props.theme.replace('#','')}`} >
         <div className="container container__custom">
@@ -94,7 +104,8 @@ const ProjectHero = props => {
                     </div>
                 </div>
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 project__featured__image no__padding"
-                
+                onMouseEnter={scaleImage}
+                onMouseLeave={unscaleImage}
                 data-aos="fade-up"
                 data-aos-easing="ease-in-back"
                 data-aos-delay={`230`}

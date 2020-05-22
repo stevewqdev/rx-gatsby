@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import About from "../components/about/index"
 import {Helmet} from "react-helmet";
+import Parallax from 'parallax-js'
 
 class HomePage extends Component {
   playVideo(event){
@@ -13,14 +14,34 @@ class HomePage extends Component {
       event.target.play();
     }
   }
+
+  activeProject(event){
+    Array.from(document.querySelectorAll(".the__project")).map(element => {
+      element.classList.remove("active")
+    })
+    event.target.classList.add("active")
+  }
+  unactiveProject(event){
+    Array.from(document.querySelectorAll(".the__project")).map(element => {
+      element.classList.remove("active")
+    })
+    event.target.classList.remove("active")
+  }
+
   componentDidMount(){
+
     document.querySelectorAll(".footer")[0].classList.add("dark");
+    var scene = document.getElementById('scene');
+    var parallaxInstance = new Parallax(scene, {
+      relativeInput: true,
+      pointerEvents: false,
+    });
+
+    
   }
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
-    const latestProjects = this.props.data.allWordpressWpProjects.edges; 
-    console.log(pageAcf);
 
     return ( 
       <Layout>
@@ -34,18 +55,20 @@ class HomePage extends Component {
           <section id="one">
             <div className="row">
               <div className="col-lg-12">
-                <div className="video__background">
+                <div className="video__background" id="scene">
                   {
                     pageAcf.video_background
                     ?
+                    
                     <video
+                      data-depth="0.2"
                       autoPlay 
                       loop 
                       muted
                       
                       playsInline
                       className="mobile-hidden"
-
+                      id="parallaxVideo"
                     >
                       <source src={pageAcf.video_background.source_url} type="video/mp4" />
                     </video>
@@ -89,27 +112,7 @@ class HomePage extends Component {
                         dangerouslySetInnerHTML={{ __html: pageAcf.reel_copy }}
                       />
                       <br/>
-                      <div className="svg"
-                      data-aos="fade-up"
-                      data-aos-delay={`390`}
-                      data-aos-duration="1200"
-                      data-aos-easing="ease-in-out"
-                      data-aos-offset="100"
-                      >
-                      <svg 
 
-                      xmlns="http://www.w3.org/2000/svg" width="19.73" height="19.72" viewBox="0 0 19.73 19.72">
-                        <g id="Grupo_76" data-name="Grupo 76" transform="translate(-336 -3038.156)">
-                          <g id="Grupo_75" data-name="Grupo 75">
-                            <g id="Grupo_74" data-name="Grupo 74">
-                              <g id="Grupo_73" data-name="Grupo 73">
-                                <path id="Trazado_39" data-name="Trazado 39" d="M355.73,3054.586a3.29,3.29,0,1,1-6.58,0,3.063,3.063,0,0,1,.15-.96l-7.35-3.68a3.29,3.29,0,1,1,0-3.86l7.35-3.68a3.126,3.126,0,0,1-.15-.97,3.284,3.284,0,1,1,.63,1.94l-7.35,3.67a3.212,3.212,0,0,1,0,1.94l7.35,3.67a3.287,3.287,0,0,1,5.95,1.93Z" fill="#050505"/>
-                              </g>
-                            </g>
-                          </g>
-                        </g>
-                      </svg>
-                      </div>
                     </div>
                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 featured__video__source no__padding"
                     
@@ -135,6 +138,27 @@ class HomePage extends Component {
                         :""
                       }
                     </div>
+                    <div className="svg"
+                      data-aos="fade-up"
+                      data-aos-delay={`390`}
+                      data-aos-duration="1200"
+                      data-aos-easing="ease-in-out"
+                      data-aos-offset="100"
+                      >
+                      <svg 
+
+                      xmlns="http://www.w3.org/2000/svg" width="19.73" height="19.72" viewBox="0 0 19.73 19.72">
+                        <g id="Grupo_76" data-name="Grupo 76" transform="translate(-336 -3038.156)">
+                          <g id="Grupo_75" data-name="Grupo 75">
+                            <g id="Grupo_74" data-name="Grupo 74">
+                              <g id="Grupo_73" data-name="Grupo 73">
+                                <path id="Trazado_39" data-name="Trazado 39" d="M355.73,3054.586a3.29,3.29,0,1,1-6.58,0,3.063,3.063,0,0,1,.15-.96l-7.35-3.68a3.29,3.29,0,1,1,0-3.86l7.35-3.68a3.126,3.126,0,0,1-.15-.97,3.284,3.284,0,1,1,.63,1.94l-7.35,3.67a3.212,3.212,0,0,1,0,1.94l7.35,3.67a3.287,3.287,0,0,1,5.95,1.93Z" fill="#050505"/>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                      </div>
                   </div>
                 </div>
               </div>
@@ -176,7 +200,7 @@ class HomePage extends Component {
 
                       ></div>
                       <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__button__right">
-                        <Link to="/projects">
+                        <Link to="/work">
                           <button className="btn btn-default sm__font reg__font"
                           data-aos="fade-up"
                           data-aos-delay={`175`}
@@ -197,7 +221,7 @@ class HomePage extends Component {
                           pageAcf.sp_projects.map((project, index) => 
                             <div key={index} className="col-xs-6 col-sm-6 col-md-6 col-lg-6 no__padding selected__projects__projects --project">
                               <div className="row">
-                                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 no__padding selected__projects__projects__left">
+                                <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 no__padding selected__projects__projects__left the__project ${index === 0 ? "active" : ""}`} onMouseEnter={this.activeProject} onMouseLeave={this.unactiveProject}>
                                   <div className="selected__projects__projects__left__img">
                                     <img 
                                     data-aos="fade-up"
@@ -217,7 +241,7 @@ class HomePage extends Component {
                                       data-aos-easing="ease-in-out"
                                       
                                       className=""
-                                      dangerouslySetInnerHTML={{ __html: project.post_content.substring(0,150) + "..."  }}
+                                      dangerouslySetInnerHTML={{ __html: project.post_content.substring(0,120) + "..."  }}
                                     />
                                   </div>
                                   <div className="no__padding selected__projects__projects__right">

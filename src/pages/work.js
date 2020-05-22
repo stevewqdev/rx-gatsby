@@ -81,10 +81,10 @@ class ContactPage extends Component {
                                                     <img src={`${project.node.acf.thumbnail_image.localFile.url}`} alt={`${project.node.title}`} />
                                             </Link>
                                             <div className="work__list__project__info">
-                                                <p className="bold__font lg__font work__list__title"
-                    
-                                                
-                                                >{project.node.title}</p>
+                                                <p
+                                                    className="bold__font lg__font work__list__title"
+                                                    dangerouslySetInnerHTML={{ __html: project.node.title }}
+                                                />
                                                 <p className="reg__font sm__font work__list__description"
                       
                                                 

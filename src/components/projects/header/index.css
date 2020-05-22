@@ -108,11 +108,17 @@
         margin-top: 50px;
     }
 }
-
+.project__featured__image.scaled img{
+    transform: scale(1.1);
+}
+.project__featured__image:hover img{
+    transform: scale(1.05);
+}
 @media(max-width: 4000px){
     .project__featured__image .gatsby-image-wrapper{
         height: 100%;
     }
+
 }
 @media(max-width: 1600px){
     .project__featured__image .gatsby-image-wrapper{

@@ -5,6 +5,7 @@
         margin: auto;
         left: 0;
         right: 0;
+        pointer-events: none;
     }
     .menu__full__screen{
         max-width: 100%;
@@ -96,6 +97,7 @@
     flex-direction: column;
     justify-content: space-between;
     mix-blend-mode: difference;
+    pointer-events: all;
 
 }
 
@@ -213,6 +215,7 @@
         position: absolute;
         top: 60px;
         font-size: 8px;
+        pointer-events: none;
     }
     .floating__web__info .copy__one__column, .floating__web__info .copy__two__column {
         padding: 30px 12px;
@@ -222,6 +225,7 @@
         top: 60px;
         right: -22px;
         font-size: 8px;
+        pointer-events: none;
     }
 
     .menu__full__screen .brand__social {
@@ -257,8 +261,10 @@
     }
     .brand__menu__toggle{
         position: fixed;
-         left: 5px;
-        z-index: 99999;
+        left: 5px;
+        z-index: -1;
+        width: 25px;
+        right: unset;
     }
     .floating__web__info .brand__menu{
         position: unset;
@@ -283,7 +289,7 @@
     .lateral__click{
         position: fixed;
         left: 0;
-        width: 20px;
+        width: 23px;
         height: 100%;
         z-index: 999999999;
         cursor: pointer;
