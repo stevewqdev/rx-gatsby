@@ -9,7 +9,39 @@
 #menu__full__screen.show{
     left: 0%;
     pointer-events: all;
+    display: block;
+    transition: left 1s cubic-bezier(0.85, 0, 0.15, 1)!important;
 }
+@media(max-width: 500px){
+    .menu__full__screen {
+        position: absolute;
+        margin: 0px;
+        left: -200%;
+    }
+    #menu__full__screen.show{
+        left: 0%;
+        pointer-events: all;
+        display: block;
+        z-index: 9999;
+    }
+}
+/* The animation code */
+@keyframes PullMenu {
+    0% {
+        left: -200%;
+        display: none;
+    }
+    1% {
+        left: -200%;
+        display: block!important;
+    }
+    100%{
+        left: 0%;
+        pointer-events: all;
+        display: block;
+    }
+  }
+
 .menu__full__screen.floating__web__info p{
     color: #000000;
 }
@@ -68,7 +100,7 @@
     }
     .menu__email {
         position: relative;
-        top: 0;
+        margin-top: 160px;
     }
 }
 @media(max-width: 2000px){
@@ -88,7 +120,7 @@
     }
     .menu__email {
         position: relative;
-        margin-top: 100px;
+        margin-top: 235px;
     }
 }
 
@@ -185,8 +217,11 @@
     }
     .menu__agreements p {
         bottom: unset;
-        top: 115%;
         z-index: 999;
+        position: relative;
+        left: -35px;
+        right: unset;
+        margin: 0!important;
     }
     .floating__web__info .copyright__column{
         display: none!important;
@@ -214,6 +249,8 @@
         top: 200px;
         position: absolute!important;
         padding: 0 24px;
+        display: flex;
+        flex-direction: column;
     }
     .menu__full__screen .main__page__menu a {
         font-size: 54px;
@@ -248,7 +285,6 @@
     }
     .brand__menu__toggle{
         position: fixed;
-        top: 62%;
         left: 7px;
     }
     .menu__full__screen .copyright__column > div {

@@ -6,6 +6,7 @@ import "../../floatingScreens/floatingScreens.css"
 
 export default class MainFloatingScreen extends Component {
   toggleMenu() {
+    console.log("cl;ic");
     document.getElementById("page__wrapper").classList.add("hide")
     document.getElementById("menu__full__screen").classList.add("show")
     document.querySelectorAll(".main__floating__menu .brand__menu")[0].classList.add("hidden");
@@ -92,9 +93,9 @@ export default class MainFloatingScreen extends Component {
                 </div>
               </div>
             </div>
-            <div className="col-xs-12 col-sm-2 col-md-2 col-lg-2 relative"></div>
-            <div className="col-xs-12 col-sm-2 col-md-2 col-lg-2 relative"></div>
-            <div className="col-xs-6 col-sm-2 col-md-2 col-lg-2 relative copy__one__column sm__font reg__font">
+            <div className="col-xs-12 col-sm-2 col-md-2 col-lg-2 relative pointer__none"></div>
+            <div className="col-xs-12 col-sm-2 col-md-2 col-lg-2 relative pointer__none"></div>
+            <div className="col-xs-6 col-sm-2 col-md-2 col-lg-2 relative copy__one__column sm__font reg__font pointer__none">
               <div className="fixed column__top__one">
                 <p
                   data-aos="fade-down"
@@ -107,7 +108,7 @@ export default class MainFloatingScreen extends Component {
                 />
               </div>
             </div>
-            <div className="col col-xs-6 col-sm-2 col-md-2 col-lg-2 relative copy__two__column sm__font reg__font">
+            <div className="col col-xs-6 col-sm-2 col-md-2 col-lg-2 relative copy__two__column sm__font reg__font pointer__none">
               <div className="fixed column__top__two">
                 <p
                   data-aos="fade-down"

@@ -5,7 +5,9 @@ html::-webkit-scrollbar-thumb {
   background-color: #FE0062;
   border-radius: 100px;
 } */
-
+.pointer__none{
+  pointer-events: none!important;
+}
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
@@ -898,6 +900,7 @@ section#one{
   width: 100%;
   z-index: 5;
   top: 0;
+  pointer-events: none;
 }
 /* Video Background Component */
 .video__background{
@@ -993,7 +996,24 @@ section#one{
 
 }
 /* Selected projects Section */
-
+.video__home__wrapper{
+  position: relative;
+}
+.poster__animated{
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  height: 100%;
+  pointer-events: none;
+  transition: all ease-in-out 0.5s;
+}
+.poster__animated.hidden{
+  opacity: 0;
+}
+.poster__animated img{
+  object-fit: cover;
+  height: 100%;
+}
 .selected__projects .selected__projects__title{
   margin-top: 4%;
   margin-bottom: 4%;
@@ -1093,7 +1113,38 @@ button{
   width: 156px;
   border: none;
   background: black;
+  color: transparent;
+  position: relative;
+  overflow: hidden;
+  transition: all ease-in-out 0.5s;
+}
+button:before{
+  content: "See More";
+  position: absolute;
+  top: 23px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   color: white;
+  transition: all ease-in-out 0.5s;
+}
+button:after{
+  content: "+";
+  position: absolute;
+  top: -100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: white;
+  transition: all ease-in-out 0.5s;
+}
+button:hover:after{
+  top: 23px;
+}
+button:hover:before{
+  top: 200px;
 }
 .selected__projects.latest__projects .latest__projects__subtitle{
   font-weight: bold;

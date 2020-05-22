@@ -10,8 +10,10 @@ class HomePage extends Component {
   playVideo(event){
     if (!event.target.paused) {
       event.target.pause();
+      document.querySelectorAll(".poster__animated")[0].classList.remove("hidden");
     } else{
       event.target.play();
+      document.querySelectorAll(".poster__animated")[0].classList.add("hidden");
     }
   }
 
@@ -125,16 +127,21 @@ class HomePage extends Component {
                       {
                         pageAcf.reel_video
                         ?
-                        <video
-                          className="reel_video"
-                          playsInline
-                          className="mobile-hidden"
-                          poster={pageAcf.reel_video_poster.source_url}
-                          onMouseEnter={this.playVideo}
-                          onMouseLeave={this.playVideo}
-                        >
-                          <source src={pageAcf.reel_video.source_url}  type="video/mp4" />
-                        </video>
+                        <>
+                        <div className="video__home__wrapper">
+                          <div className="poster__animated">
+                            <img src={pageAcf.reel_video_poster.source_url} alt=""/>
+                          </div>
+                          <video
+                            className="reel_video"
+                            playsInline
+                            className="mobile-hidden"
+                            onClick={this.playVideo}
+                          >
+                            <source src={pageAcf.reel_video.source_url}  type="video/mp4" />
+                          </video>
+                        </div>
+                        </>
                         :""
                       }
                     </div>
@@ -177,7 +184,7 @@ class HomePage extends Component {
                       data-aos-duration="1200"
                       data-aos-anchor-placement="top"
                       data-aos-easing="ease-in-out"
-                      
+                      data-aos-offset="400"
                       className="lg__font">{pageAcf.sp_title}</h2>
                     </div>
                     <div className="selected__projects__copy">
@@ -188,7 +195,7 @@ class HomePage extends Component {
                         data-aos-duration="1200"
                         data-aos-anchor-placement="top"
                         data-aos-easing="ease-in-out"
-                        
+                        data-aos-offset="400"
                         className=""
                         dangerouslySetInnerHTML={{ __html: pageAcf.sp_copy }}
                       />

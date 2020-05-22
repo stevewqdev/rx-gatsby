@@ -261,10 +261,8 @@
     }
     .brand__menu__toggle{
         position: fixed;
-        left: 5px;
-        z-index: -1;
-        width: 25px;
-        right: unset;
+         left: 5px;
+        z-index: 99999;
     }
     .floating__web__info .brand__menu{
         position: unset;
@@ -324,5 +322,39 @@
 @media(max-height: 667px){
     .menu__agreements p {
         top: 92%!important;
+    }
+}
+@media(max-width: 500px){
+    .menu__full__screen  .brand__menu__toggle > * {
+        pointer-events: none;
+    }
+    .brand__menu__toggle > *{
+        pointer-events: none;
+    }
+    .floating__web__info .brand{
+        pointer-events: none;
+    }
+    .floating__web__info.menu__full__screen > *{
+        pointer-events: none!important;
+    }
+    .menu__full__screen.show > *{
+        pointer-events: all!important;
+    }
+    .brand__menu__toggle{
+        position: fixed;
+        left: 5px;
+        z-index: 1;
+        width: 25px;
+        right: unset;
+    }
+    .floating__web__info:not(.menu__full__screen) .brand__menu__toggle{
+        z-index: 9999999999999999;
+        z-index: 9999999999999999;
+        pointer-events: all;
+    }
+}
+@media(max-width: 320px){
+    .menu__agreements p {
+        left: -5px!important;
     }
 }
