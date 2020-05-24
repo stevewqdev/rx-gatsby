@@ -17,6 +17,9 @@
 }
 .work__list__project{
     padding: 0 5px;
+    height: auto;
+    overflow: hidden;
+    display: inline-table;
 }
 .work__list__project.lower__project{
     margin-top: 25%;
@@ -36,6 +39,7 @@
 }
 .work__list__project:hover .work__list__project__info{
     opacity: 1;
+    transition: opacity  ease-in-out 0.5s;
 }
 .work__list__project__info{
     display: flex;
@@ -49,6 +53,7 @@
     opacity: 0;
     pointer-events: none;
     z-index: 5;
+    transition: opacity  ease-in-out 0.5s;
 }
 .work__list__project__img{
     position: relative;

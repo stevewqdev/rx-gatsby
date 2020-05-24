@@ -28,6 +28,10 @@ class HomePage extends Component {
       element.classList.remove("active")
     })
     event.target.classList.remove("active")
+
+    if(document.querySelectorAll(".the__project.active").length === 0){
+      document.querySelectorAll(".the__project")[0].classList.add("active");
+    }
   }
 
   componentDidMount(){

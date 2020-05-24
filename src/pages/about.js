@@ -165,9 +165,10 @@ class ContactPage extends Component {
                   <div className={`col-xs-6 col-sm-6 col-md-2 col-lg-2 space__column`} ></div>
                   {
                     pageAcf.colored_columns.map((column, index) => 
-                      <div className={`col-xs-6 col-sm-6 col-md-2 col-lg-2 colored__column order-${index} c-${column.color.replace('#','')} `} 
+                      <div className={`col-xs-6 col-sm-6 col-md-2 col-lg-2 colored__column column-${index} order-${index} c-${column.color.replace('#','')} `} 
                       key={index}
-      
+                      onMouseEnter={this.makeColumnBlack}
+                      onMouseLeave={this.removeColumnBlack}
                       >
                         <div>
                         {
@@ -179,9 +180,8 @@ class ContactPage extends Component {
                             data-aos-easing="ease-in-back"
                             data-aos-delay={`${(index + 1) * 130}`}
                             data-aos-duration="1200"
-                            className={`column-${index}`}
-                            onMouseEnter={this.makeColumnBlack}
-                            onMouseLeave={this.removeColumnBlack}
+                            
+                            
                           >
                           </SVGONE>
                           <div className="colored__sub__svg"
@@ -207,9 +207,7 @@ class ContactPage extends Component {
                           data-aos-easing="ease-in-back"
                           data-aos-delay={`${(index + 1) * 130}`}
                           data-aos-duration="1200"
-                          className={`column-${index}`}
-                          onMouseEnter={this.makeColumnBlack}
-                          onMouseLeave={this.removeColumnBlack}
+                          
                           ></SVGTWO>
                           <div className="colored__sub__svg"
                             data-aos="fade-up"
@@ -235,9 +233,7 @@ class ContactPage extends Component {
                           data-aos-easing="ease-in-back"
                           data-aos-delay={`${(index + 1) * 130}`}
                           data-aos-duration="1200"
-                          className={`column-${index}`}
-                          onMouseEnter={this.makeColumnBlack}
-                          onMouseLeave={this.removeColumnBlack}
+                          
                           ></SVGTHREE>
                           <div className="colored__sub__svg"
                             data-aos="fade-up"
@@ -264,9 +260,7 @@ class ContactPage extends Component {
                           data-aos-easing="ease-in-back"
                           data-aos-delay={`${(index + 1) * 130}`}
                           data-aos-duration="1200"
-                          className={`column-${index}`}
-                          onMouseEnter={this.makeColumnBlack}
-                          onMouseLeave={this.removeColumnBlack}
+                          
                           ></SVGFOUR>
                           <div className="colored__sub__svg"
                             data-aos="fade-up"

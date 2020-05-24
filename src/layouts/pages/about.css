@@ -447,6 +447,9 @@
     position: relative;
     margin-bottom: 30px;
 }
+.colored__column *{
+    pointer-events: none;
+}
 .recognition__list__item{
     padding: 10px 0;
 }

@@ -83,7 +83,7 @@ const Layout = ({ children, location }) => {
   }
   // START SMOOTH SCROLLING //
   function init(){
-    new SmoothScroll(document,150,12)
+    new SmoothScroll(document,90,20)
   }
   
   function SmoothScroll(target, speed, smooth) {
