@@ -794,3 +794,9 @@
         width: 120px;
     }
 }
+@media (max-width: 920px) and (orientation: landscape) {
+
+    .colored__floating {
+        max-width: 400px;
+    }
+}

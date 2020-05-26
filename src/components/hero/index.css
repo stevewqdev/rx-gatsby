@@ -89,3 +89,11 @@
         margin-top: 90px;
     }
 }
+@media (max-width: 920px) and (orientation: landscape) {
+    .hero__component .hero__extra__info {
+        display: none;
+    }
+    .hero__component .separator.full {
+        width: 50%;
+    }
+}

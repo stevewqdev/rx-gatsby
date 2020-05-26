@@ -1461,3 +1461,23 @@ body{
     width: 50%;
   }
 }
+@media (max-width: 920px) and (orientation: landscape) {
+  #page__wrapper {
+    margin-bottom: 330px;
+  }
+  /* home */
+  .the__project.active img {
+      width: calc(100% / 1.2)!important;
+      height: calc(100% / 1.2)!important;
+  }
+  .selected__projects__projects > div {
+    padding: 0 4%;
+  }
+  .container__custom {
+    padding: 0;
+  }
+  .xxl__font {
+    font-size: 40px!important;
+    line-height: 40px;
+  }
+}

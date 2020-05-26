@@ -164,7 +164,9 @@ const Layout = ({ children, location }) => {
   }
 
   useEffect(() => {
-    init();
+    if (window.innerWidth > 768) {
+      init();
+    }
     removeFixed();
     drawLines();
     hrefRedirect();

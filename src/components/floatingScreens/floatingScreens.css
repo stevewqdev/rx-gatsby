@@ -146,6 +146,7 @@
 
 .floating__web__info .copy__one__column, .floating__web__info .copy__two__column{
     padding: 40px 20px;
+   
 }
 
  
@@ -218,7 +219,7 @@
         pointer-events: none;
     }
     .floating__web__info .copy__one__column, .floating__web__info .copy__two__column {
-        padding: 30px 12px;
+        padding: 10px 10px;
     }
     .copy__two__column{
         position: absolute!important;
@@ -253,11 +254,13 @@
     .floating__web__info .copy__one__column{
         position: absolute;
         width: 45%;
+        pointer-events: none;
     }
     .floating__web__info .copy__two__column{
         position: absolute!important;
         width: 45%;
         right: 15px;
+        pointer-events: none;
     }
     .brand__menu__toggle{
         position: fixed;
@@ -357,4 +360,64 @@
     .menu__agreements p {
         left: -5px!important;
     }
+}
+@media (max-width: 920px) and (orientation: landscape) {
+    .floating__web__info .brand__social .brand__social__network{
+        display: none;
+    }
+    .brand__menu__toggle {
+        top: -70px;
+    }
+    .floating__web__info p {
+        width: 210%;
+    }
+    .copyright__inner {
+        right: 125px;
+        width: 90px;
+    }
+    .floating__web__info .brand > div {
+        position: absolute;
+    }
+    .floating__web__info .copy__one__column .fixed, .floating__web__info .copy__two__column .fixed{
+        position: absolute!important;
+        left: 170px;
+    }
+    .raxo__rx__svg img {
+        display: block!important;
+    }
+
+    .menu__full__screen .copy__one__column .absolute, .menu__full__screen .copy__two__column .absolute{
+        display: none;
+    }
+    .menu__email {
+        margin-top: -25px!important;
+        left: 50px;
+    }
+    .menu__social {
+        margin-top: 0px!important;
+        left: 50px;
+        position: relative;
+    }
+    .menu__full__screen .main__page__menu a {
+        font-size: 34px!important;
+        line-height: 22px!important;
+    }
+    .menu__full__screen .main__page__menu{
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    .menu__full__screen .menu__agreements p{
+        position: relative;
+        margin: auto;
+        font-size: 12px!important;
+        left: -5px;
+        bottom: unset;
+        top: unset!important;
+    }
+    .menu__full__screen .menu__agreements a{
+        font-size: 12px!important;
+    }
+
+
+
 }
