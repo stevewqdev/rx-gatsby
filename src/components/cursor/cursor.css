@@ -1,7 +1,7 @@
 html body { cursor: none!important; }
 
 .cursor {
-    opacity: 1;
+    opacity: 0;
   }
   .cursor.its__home .cursor__inner {
     z-index: 9999999999;
