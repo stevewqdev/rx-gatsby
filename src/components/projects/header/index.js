@@ -84,11 +84,14 @@ const ProjectHero = props => {
                         dangerouslySetInnerHTML={{ __html: props.projectFocus }}
                     />
                     <br/><br/>
+                    
                     <div className="share__project"
                     data-aos="fade-up"
                     data-aos-easing="ease-in-back"
                     data-aos-delay={`250`}
                     data-aos-duration="1200"
+                    data-aos-offset="-350"
+                    shareUrl={window.location.href}
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="19.73" height="19.72" viewBox="0 0 19.73 19.72">
                         <g id="Grupo_229" data-name="Grupo 229" transform="translate(-336 -3038.156)">
@@ -102,6 +105,7 @@ const ProjectHero = props => {
                         </g>
                         </svg>
                     </div>
+                    
                 </div>
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 project__featured__image no__padding"
                 onMouseEnter={scaleImage}

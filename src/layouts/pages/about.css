@@ -99,7 +99,7 @@
 }
 .colored__column{
     padding: 10% 20px!important;
-    min-height: 100vh;
+    max-height: 1400px;
     height: 100vh;
 }
 .service__list__3 .services__list__items .row{
@@ -346,8 +346,7 @@
     height: 3px;
     width: 97%;
     background: #707070;
-    cursor: pointer;
-}
+/* cursor: pointer; */}
 .button__office.active{
     background: black;
 }
@@ -398,21 +397,16 @@
     padding-bottom: 100px;
 }
 .recognition__list__item h3{
-    cursor: pointer;
-}
+/* cursor: pointer; */}
 .recognition__list__item.active h3{
     color: #FE0062;
 }
 .recognition__list__item{
-    cursor: pointer;
-}
+/* cursor: pointer; */}
 .recognition__list__item > *{
     pointer-events: none;
 }
-#clients{
-    background: black;
-    padding: 0% 0px 15%;
-}
+
 .recognition__list__wrapper {
     justify-content: space-between;
 }
@@ -435,8 +429,29 @@
     align-items: center;
     margin-bottom: 100px;
 }
-.client__logo img{
-    width: 140px;
+@media(max-width: 4000px){
+    .client__logo img{
+        width: 180px;
+    }
+    #clients{
+        background: black;
+        padding: 0% 0px 400px;
+    }
+    #clients .container__custom{
+        max-width: 1455px;
+    }
+}
+@media(max-width: 2000px){
+    .client__logo img{
+        width: 140px;
+    }
+    #clients{
+        background: black;
+        padding: 0% 0px 300px;
+    }
+    #clients .container__custom{
+        max-width: 1085px;
+    }
 }
 #recognition_list{
     background: black;
@@ -514,12 +529,21 @@
     .offices__three {
         margin-top: 0px;
     }
+    #clients .container__custom {
+        max-width: 680px;
+    }
     .colored__column {
         min-height: 730px;
         height: 730px;
     }
     .services__list.service__list__3{
         margin-top: 50%;
+    }
+    .client__logo img {
+        width: 120px;
+    }
+    .select__clients{
+        display: none;
     }
     #we_can_help .lg__font {
         font-size: 50px!important;
@@ -540,6 +564,9 @@
     .colored__column h4 {
         font-size: 20px;
         line-height: 30px!important;
+    }
+    .recognition__wrapper {
+        padding-bottom: 50px;
     }
     .offices__three {
         margin-top: 100px;

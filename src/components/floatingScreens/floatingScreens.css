@@ -44,7 +44,7 @@
 
 .brand__menu__toggle{
     position: absolute;
-    cursor: pointer;
+    /* cursor: pointer; */
     top: 0;
     bottom: 0;
     margin: auto;
@@ -290,7 +290,7 @@
         width: 23px;
         height: 100%;
         z-index: 999999999;
-        cursor: pointer;
+/* cursor: pointer; */
         pointer-events: all;
     }
 }

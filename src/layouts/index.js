@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import { useStaticQuery, graphql } from "gatsby"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -7,6 +7,7 @@ import Helmet from "react-helmet"
 import Footer from "../components/footer/index"
 import MainFloatingScreen from "../components/floatingScreens/main/index"
 import MainFloatingMenu from "../components/floatingScreens/menu/index"
+import Cursor from "../components/cursor/cursor"
 
 import "../layouts/layout.css"
 import "../fonts/stylesheet.css"
@@ -87,6 +88,7 @@ const Layout = ({ children, location }) => {
   }
   
   function SmoothScroll(target, speed, smooth) {
+
     if (target === document)
       target = (document.scrollingElement 
                 || document.documentElement 
@@ -104,6 +106,7 @@ const Layout = ({ children, location }) => {
     target.addEventListener('DOMMouseScroll', scrolled, { passive: false })
   
     function scrolled(e) {
+      
       e.preventDefault(); // disable default scrolling
   
       var delta = normalizeWheelDelta(e)
@@ -115,6 +118,7 @@ const Layout = ({ children, location }) => {
     }
   
     function normalizeWheelDelta(e){
+      
       if(e.detail){
         if(e.wheelDelta)
           return e.wheelDelta/e.detail/40 * (e.detail>0 ? 1 : -1) // Opera
@@ -241,6 +245,7 @@ const Layout = ({ children, location }) => {
         <link rel="icon" href={siteFavicon} />
         <html lang="en" />
       </Helmet>
+      <Cursor></Cursor>
       <MainFloatingMenu
         agreements={siteDataAcf.management_agreements_info}
         siteLogo={siteLogo}

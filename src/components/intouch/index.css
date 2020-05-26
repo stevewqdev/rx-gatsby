@@ -6,9 +6,9 @@
     text-decoration: underline;
 }
 .get_in_touch .up__arrow{
-    cursor: pointer;
-    position: relative;
+/* cursor: pointer; */    position: relative;
     top: 10px;
+    opacity: 0;
 }
 .get_in_touch .black__arrow svg path{
     fill: #000000;

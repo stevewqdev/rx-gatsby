@@ -58,6 +58,8 @@ class Ultra extends Component {
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
     const { videoIndex, paused, volume } = this.state;
 
+    console.log(pageAcf);
+
     return ( 
       <Layout>
         <div className="project__template ultra">
@@ -444,14 +446,21 @@ class Ultra extends Component {
                         index === 2 
                         ?
                         <>
-                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding"
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding mix-multiply"
                                 data-aos="fade-up"
                                 data-aos-easing="ease-in-back"
                                 data-aos-delay={`120`}
                                 data-aos-duration="1200"
                                 data-aos-offset="300"
                         >
-                          <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                          {
+                            element.image.localFile.childImageSharp !== null
+                            ?
+                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            : 
+                            <img src={element.image.localFile.url} alt={`Project  image`} tabIndex={-1} />
+                          }
+                  
                         </div>
                         </>
                         :""

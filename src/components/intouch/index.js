@@ -33,7 +33,7 @@ const GetInTouch = props => {
         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 side__column d-flex justify-content-center align-items-center no__padding">
           <div className="up__arrow black__arrow"
 >
-            <AnchorLink href="#top">
+            <AnchorLink offset='100' href="#top">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="33"

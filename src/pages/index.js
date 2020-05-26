@@ -150,12 +150,13 @@ class HomePage extends Component {
                         :""
                       }
                     </div>
-                    <div className="svg"
+                    <div className="svg share__project"
                       data-aos="fade-up"
                       data-aos-delay={`390`}
                       data-aos-duration="1200"
                       data-aos-easing="ease-in-out"
                       data-aos-offset="100"
+                      shareUrl={window.location.href}
                       >
                       <svg 
 
