@@ -155,13 +155,21 @@ const Layout = ({ children, location }) => {
     }()
   }
   // ENDS SMOOTH SCROLLING //
+
+  // Add shareable Link
+  function addShareLink(){
+    Array.from(document.querySelectorAll(".share__project")).map(element => {
+      element.dataset.sharelink = window.location.href;
+    })
+  }
+
   useEffect(() => {
     init();
     removeFixed();
     drawLines();
     hrefRedirect();
     changePositionFooter();
-
+    addShareLink();
     AOS.init({
       disable: 'mobile', 
       mirror: true,
