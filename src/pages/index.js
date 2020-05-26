@@ -7,6 +7,11 @@ import {Helmet} from "react-helmet";
 import Parallax from 'parallax-js'
 
 class HomePage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {isMobile: false};
+  }
+
   playVideo(event){
     if (!event.target.paused) {
       event.target.pause();
@@ -43,6 +48,11 @@ class HomePage extends Component {
       pointerEvents: false,
     });
 
+    if (window.innerWidth < 500) {
+      this.setState({
+        isMobile: true,
+      });
+    }
     
   }
   render() {
@@ -60,31 +70,40 @@ class HomePage extends Component {
         <div className={`home__page post__${pageData.id}`}>
           <section id="one">
             <div className="row">
-              <div className="col-lg-12">
-                <div className="video__background" id="scene">
-                  {
-                    pageAcf.video_background
-                    ?
-                    
-                    <video
-                      data-depth="0.2"
-                      autoPlay 
-                      loop 
-                      muted
-                      
-                      playsInline
-                      className="mobile-hidden"
-                      id="parallaxVideo"
-                    >
-                      <source src={pageAcf.video_background.source_url} type="video/mp4" />
-                    </video>
-                    :""
-                  }
+              
+
+              
+              {
+                this.state.isMobile
+                ?
+                <div className="col-lg-12 raxo__rx__svg">
+                  <img src={pageAcf.fallback_image.source_url} alt={pageAcf.fallback_image.title}/>
                 </div>
-              </div>
-              <div className="col-lg-12 raxo__rx__svg">
-                <img src={pageAcf.fallback_image.source_url} alt={pageAcf.fallback_image.title}/>
-              </div>
+                : 
+                <div className="col-lg-12">
+                  <div className="video__background" id="scene">
+                    {
+                      pageAcf.video_background
+                      ?
+                      
+                      <video
+                        data-depth="0.2"
+                        autoPlay 
+                        loop 
+                        muted
+                        
+                        playsInline
+                        className="mobile-hidden"
+                        id="parallaxVideo"
+                      >
+                        <source src={pageAcf.video_background.source_url} type="video/mp4" />
+                      </video>
+                      :""
+                    }
+                  </div>
+                </div>
+              }
+
             </div>
           </section>
           <div className="main__section__wrapper">

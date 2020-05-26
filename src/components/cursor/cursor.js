@@ -51,7 +51,6 @@ export default class cursor extends Component {
         return (
             <>
             <Helmet>
-                <script src="https://raxo.tv/custom-cursor/cursorController.js"></script>
                 <script src="https://raxo.tv/custom-cursor/cursor.js"></script>
             </Helmet>
             <div
