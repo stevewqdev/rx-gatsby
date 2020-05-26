@@ -156,7 +156,7 @@ class HomePage extends Component {
                       data-aos-duration="1200"
                       data-aos-easing="ease-in-out"
                       data-aos-offset="100"
-                      shareUrl={window.location.href}
+                      shareurl={window.location.href}
                       >
                       <svg 
 

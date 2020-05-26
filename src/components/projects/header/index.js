@@ -91,7 +91,7 @@ const ProjectHero = props => {
                     data-aos-delay={`250`}
                     data-aos-duration="1200"
                     data-aos-offset="-350"
-                    shareUrl={window.location.href}
+                    shareurl={window.location.href}
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="19.73" height="19.72" viewBox="0 0 19.73 19.72">
                         <g id="Grupo_229" data-name="Grupo 229" transform="translate(-336 -3038.156)">

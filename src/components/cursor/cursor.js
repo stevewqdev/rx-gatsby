@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Cursor } from "./cursorController";
+import {Helmet} from "react-helmet";
+
 import "./cursor.css" 
 
 export default class cursor extends Component {
@@ -41,14 +42,18 @@ export default class cursor extends Component {
             });
         });
     }
+    
     componentDidMount(){
-        new Cursor(document.querySelector(".cursor"));
-
         this.transformCursor();
     }
 
     render() {
         return (
+            <>
+            <Helmet>
+                <script src="https://raxo.tv/custom-cursor/cursorController.js"></script>
+                <script src="https://raxo.tv/custom-cursor/cursor.js"></script>
+            </Helmet>
             <div
             className="cursor body__wrapper"
             id="cursor"
@@ -60,6 +65,7 @@ export default class cursor extends Component {
               </p>
             </div>
           </div>
+          </>
         )
     }
 }
