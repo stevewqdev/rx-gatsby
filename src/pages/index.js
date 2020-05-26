@@ -139,6 +139,7 @@ class HomePage extends Component {
                           <video
                             className="reel_video"
                             playsInline
+                            controls
                             className="mobile-hidden"
                             onClick={this.playVideo}
                           >

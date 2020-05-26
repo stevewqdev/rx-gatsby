@@ -86,7 +86,7 @@ const About = props => {
           <div className="col-xs-3 col-sm-3 col-md-3 work__areas__area"></div>
         </div>
         {
-          props.agreementCopy
+          props.customCopy
           ? <div className="row about__rx ">
               <h2
                 data-aos="fade-up"
@@ -95,7 +95,7 @@ const About = props => {
                 data-aos-easing="ease-in-out"
                 
                 className="bold__font lg__font"
-                dangerouslySetInnerHTML={{ __html: props.agreementCopy }}
+                dangerouslySetInnerHTML={{ __html: props.customCopy }}
               />
             </div>
 

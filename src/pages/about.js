@@ -121,6 +121,20 @@ class ContactPage extends Component {
     }
   }
 
+  componentDidMount(){
+    let lastColoredItems = document.querySelectorAll(".services__list__items"); 
+    Array.from(lastColoredItems).map(element => {
+      window.addEventListener("scroll", function(){
+        var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
+        let currentColoredElement = element.children[0].children[element.children[0].children.length - 1];
+          if(top  > currentColoredElement.offsetTop + 4000){ 
+            currentColoredElement.classList.add("colored__scroll");
+          }
+      }, {passive: true});
+    })
+
+
+  }
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
@@ -294,7 +308,7 @@ class ContactPage extends Component {
                 </div>
               </div>
             </section>
-            <About></About>
+            <About customCopy={pageAcf.main_about_copy}></About>
             <section id="offices">
               <div className="container container__custom">
                 <div className="row offices__one">
@@ -637,6 +651,7 @@ query AboutPageQuery {
             top_title
             first_subtitle
             second_subtitle
+            main_about_copy
             video_background {
               id
             }

@@ -34,7 +34,7 @@ class ManagementAgreements extends Component {
           <div className="management__page main__section__wrapper">
             <About 
                 customData={pageAcf.about_areas_agreement} 
-                agreementCopy={pageAcf.about_copy_agreement}>
+                customCopy={pageAcf.about_copy_agreement}>
             </About>
             <section className="standard__web">
                 <div className="container container__custom">

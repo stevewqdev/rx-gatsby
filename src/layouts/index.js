@@ -55,18 +55,18 @@ const Layout = ({ children, location }) => {
     var lines = [...document.querySelectorAll(".includes__separator")]; 
     if(lines.length > 0){
       lines.map((line, index) => {
-        window.addEventListener("scroll", function(){
-          var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
-          let innerLine = line.querySelectorAll(".separator")[0];
-          if(innerLine){
-            if(top  > line.offsetTop + 350){ 
-              innerLine.classList.add("full");
-            }else{
-              innerLine.classList.remove("full");
+        var isDrawed = false; 
+        if(!isDrawed){
+          window.addEventListener("scroll", function(){
+            var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
+            let innerLine = line.querySelectorAll(".separator")[0];
+            if(innerLine){
+              if(top  > line.offsetTop + 350){ 
+                innerLine.classList.add("full");
+              }
             }
-
-          }
-        }, {passive: true});
+          }, {passive: true});
+        }
       })
     }
   }

@@ -394,8 +394,8 @@
     display: block;
 }
 .recognition__wrapper{
-    padding-top: 8%;
-    padding-bottom: 10%;
+    padding-top: 80px;
+    padding-bottom: 100px;
 }
 .recognition__list__item h3{
     cursor: pointer;
@@ -472,28 +472,34 @@
     fill: black!important;
     transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
 }
-.services__list.c-f2ab3d:hover .services__list__items .row p:last-child{
+.services__list.c-f2ab3d .services__list__items .row p.colored__scroll{
+    transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+}
+.services__list.c-f2ab3d .services__list__items .row .colored__scroll img{
+    transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+}
+.services__list.c-f2ab3d .services__list__items .row p.colored__scroll:last-child{
     color: #FEA904;
 }
-.services__list.c-f2ab3d:hover .services__list__items .row img{
+.services__list.c-f2ab3d .services__list__items .row .colored__scroll img{
     filter: invert(29%) sepia(92%) saturate(450%) hue-rotate(331deg) brightness(98%) contrast(93%);
 }
-.services__list.c-73faeb:hover .services__list__items .row p:last-child{
+.services__list.c-73faeb .services__list__items .row p.colored__scroll:last-child{
     color: #01FEEB;
 }
-.services__list.c-73faeb:hover .services__list__items .row img{
+.services__list.c-73faeb .services__list__items .row .colored__scroll img{
     filter: invert(84%) sepia(31%) saturate(612%) hue-rotate(110deg) brightness(105%) contrast(96%);
 }
-.services__list.c-ea3464:hover .services__list__items .row p:last-child{
+.services__list.c-ea3464 .services__list__items .row p.colored__scroll:last-child{
     color: #FE0062;
 }
-.services__list.c-ea3464:hover .services__list__items .row  img{
+.services__list.c-ea3464 .services__list__items .row .colored__scroll img{
     filter: invert(78%) sepia(72%) saturate(2119%) hue-rotate(322deg) brightness(95%) contrast(93%);
 }
-.services__list.c-1d61f5:hover .services__list__items .row p:last-child{
+.services__list.c-1d61f5 .services__list__items .row p.colored__scroll:last-child{
     color: #005CFE;
 }
-.services__list.c-1d61f5:hover .services__list__items .row img{
+.services__list.c-1d61f5 .services__list__items .row .colored__scroll img{
     filter: invert(87%) sepia(80%) saturate(4616%) hue-rotate(219deg) brightness(100%) contrast(92%);
 }
 #recognition .recognition__one__copy{
