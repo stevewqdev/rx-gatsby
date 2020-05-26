@@ -37,12 +37,12 @@ export default class MainMenuFloatingScreen extends Component {
             >
               <div className="fixed">
                 <div className="brand__logo">
-                <Link to="/">
+                <a href="/">
                     <img
                       src={this.props.siteLogo.source_url}
                       alt={this.props.siteLogo.title}
                     />
-                  </Link>
+                </a>
                 </div>
                 <div className="brand__menu bold__font "  onClick={this.toggleMenu} role="button">
                   <div

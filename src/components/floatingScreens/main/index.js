@@ -32,12 +32,12 @@ export default class MainFloatingScreen extends Component {
                       data-aos-delay="450"
                       data-aos-duration="1200"
                 >
-                  <Link to="/">
+                <a href="/">
                     <img
                       src={this.props.siteLogo.source_url}
                       alt={this.props.siteLogo.title}
                     />
-                  </Link>
+                </a>
                 </div>
                 <div className="brand__menu bold__font ">
                   <div
