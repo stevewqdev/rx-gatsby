@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 import "./cursor.css" 
-import { Helmet } from 'react-helmet';
 
 export default class cursor extends Component {
     
@@ -44,7 +43,12 @@ export default class cursor extends Component {
     }
     
     componentDidMount(){
+        const script = document.createElement("script");
 
+        script.src = "https://raxo.tv/custom-cursor/cursor.js";
+        script.async = true;
+    
+        document.body.appendChild(script);
 
         this.transformCursor();
     }
@@ -52,9 +56,6 @@ export default class cursor extends Component {
     render() {
         return (
             <>
-            <Helmet>
-              <script src="https://raxo.tv/custom-cursor/cursor.js"></script>
-            </Helmet>
             <div
             className="cursor body__wrapper"
             id="cursor"
