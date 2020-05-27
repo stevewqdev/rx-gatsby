@@ -809,7 +809,7 @@ body{
   position: relative;
   right: 0%;
   z-index: 99;
-  margin-bottom: 275px;
+  margin-bottom: 500px;
 }
 #page__wrapper.hide{
   position: relative;
@@ -1209,7 +1209,7 @@ button:hover:before{
     max-width: 650px;
   }
   #page__wrapper {
-    margin-bottom: 32vw;
+    margin-bottom: 53vw;
   }
   .selected__projects__projects > div {
     padding: 0 3%;
@@ -1230,7 +1230,7 @@ button:hover:before{
     line-height: 30px;
   }
   #page__wrapper {
-    margin-bottom: 36vw;
+    margin-bottom: 450px;
 }
   .raxo__rx__svg svg{
     width: 400px;
@@ -1465,7 +1465,7 @@ body{
 }
 @media (max-width: 920px) and (orientation: landscape) {
   #page__wrapper {
-    margin-bottom: 330px;
+    margin-bottom: 130px!important;
   }
   /* home */
   .the__project.active img {
