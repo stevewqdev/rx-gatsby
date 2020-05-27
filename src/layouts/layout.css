@@ -1012,6 +1012,7 @@ section#one{
   height: 100%;
   pointer-events: none;
   transition: all ease-in-out 0.5s;
+  width: 100%;
 }
 .poster__animated.hidden{
   opacity: 0;
@@ -1019,6 +1020,7 @@ section#one{
 .poster__animated img{
   object-fit: cover;
   height: 100%;
+  width: 100%;
 }
 .selected__projects .selected__projects__title{
   margin-top: 4%;
