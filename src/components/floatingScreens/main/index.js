@@ -6,7 +6,6 @@ import "../../floatingScreens/floatingScreens.css"
 
 export default class MainFloatingScreen extends Component {
   toggleMenu() {
-    console.log("cl;ic");
     document.getElementById("page__wrapper").classList.add("hide")
     document.getElementById("menu__full__screen").classList.add("show")
     document.querySelectorAll(".main__floating__menu .brand__menu")[0].classList.add("hidden");

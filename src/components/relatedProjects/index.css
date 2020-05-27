@@ -27,6 +27,12 @@
 .related__projects a{
     text-decoration: none;
 }
+.related__project__title p {
+    pointer-events: none!important;
+}
+.related__project__thumbnail .gatsby-image-wrapper{
+    pointer-events: none;
+}
 @media(max-width: 500px){
     .related__projects {
         padding: 100px 20px;

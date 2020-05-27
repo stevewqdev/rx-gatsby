@@ -58,7 +58,6 @@ class Ultra extends Component {
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
     const { videoIndex, paused, volume } = this.state;
 
-    console.log(pageAcf);
 
     return ( 
       <Layout>

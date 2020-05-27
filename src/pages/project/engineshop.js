@@ -58,7 +58,6 @@ class MinaAndJack extends Component {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
     const { videoIndex, paused, volume } = this.state;
-    console.log(pageAcf);
     return ( 
       <Layout>
         <div className="project__template ">
