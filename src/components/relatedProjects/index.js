@@ -49,7 +49,13 @@ const RelatedProjects = props => {
                     data-aos-duration="1200"
                 >
                     <Link to={props.relatedprojectlink}>
-                        <Img fluid={props.relatedthumbnail.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                        {
+                            props.relatedthumbnail.localFile.childImageSharp !== null
+                            ?
+                            <Img fluid={props.relatedthumbnail.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            : 
+                            <img src={props.relatedthumbnail.localFile.url} alt={`Project  image`} tabIndex={-1} />
+                        }
                     </Link>
                 </div>
             </div>
