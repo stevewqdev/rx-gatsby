@@ -61,14 +61,34 @@ export default class NotFoundPage extends Component {
               <div className="row">
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 left d-flex justify-content-center  flex-column no__padding">
                   <div className="internal">
-                    <h1 className={`xxl__font bold__font`}>Error 404</h1>
+                    <h1 className={`xxl__font bold__font`}
+                      data-aos="fade-up"
+                      data-aos-easing="ease-in-back"
+                      data-aos-delay="200"
+                      data-aos-duration="1200"
+                
+                    >Error 404</h1>
                     <br></br>
-                    <Link to={`/`}><button className={`sm__font reg__font`}>Go back to home</button></Link>
+                    <Link to={`/`}
+    
+                    
+                    ><button className={`sm__font reg__font`}
+                    
+                    data-aos="fade-up"
+                    data-aos-easing="ease-in-back"
+                    data-aos-delay="300"
+                    data-aos-duration="1200"
+                    >Go back to home</button></Link>
                   </div>
                   
                 </div>
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 right no__padding  d-flex justify-content-center  flex-column ">
-                  <div className="internal">
+                  <div className="internal"
+                    data-aos="fade-up"
+                    data-aos-easing="ease-in-back"
+                    data-aos-delay="400"
+                    data-aos-duration="1200"
+                  >
                   <svg xmlns="http://www.w3.org/2000/svg" width="320.041" height="475.16" viewBox="0 0 320.041 475.16">
                     <g id="Grupo_329" data-name="Grupo 329" transform="translate(-2022.974 171.411)">
                       <g id="Grupo_329-2" data-name="Grupo 329" transform="translate(2022.974 -171.411)">
