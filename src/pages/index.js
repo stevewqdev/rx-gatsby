@@ -14,11 +14,11 @@ class HomePage extends Component {
 
   playVideo(event){
     if (!event.target.paused) {
-      event.target.pause();
       document.querySelectorAll(".poster__animated")[0].classList.remove("hidden");
+
     } else{
-      event.target.play();
       document.querySelectorAll(".poster__animated")[0].classList.add("hidden");
+
     }
   }
 
