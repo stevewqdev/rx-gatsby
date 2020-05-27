@@ -9,12 +9,40 @@ import { Link } from "gatsby"
 import "../layouts/pages/work.css"
 
 class ContactPage extends Component {
+  hrefRedirect(){
+    let aElements = [...document.querySelectorAll(".work__list a")]; 
+
+    aElements.forEach(element => {
+      element.addEventListener("click", function(event){
+        event.preventDefault();
+        document.querySelectorAll(".page__wrapper")[0].classList.add("on-transition");
+
+        let redirectLink = event.target.getAttribute("href");
+        setTimeout(function() {
+          if(redirectLink === null){
+            window.location.href = `/`;
+          }else{
+            if(redirectLink.includes("facebook") || redirectLink.includes("twitter") || redirectLink.includes("instagram") || redirectLink.includes("behance") || redirectLink.includes("vimeo")){
+
+            }else{
+              window.location.href = `${event.target.getAttribute("href")}`;
+
+            }
+          }
+        },10);
+      })
+    });
+  }
+
+  componentDidMount(){
+    this.hrefRedirect();
+  }
+
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
     const latestProjects = this.props.data.allWordpressWpProjects.edges; 
 
-    console.log(latestProjects);
     return ( 
       <Layout>
           <Helmet>
@@ -51,7 +79,7 @@ class ContactPage extends Component {
                                         >
                                             <Link to={`/project/${project.node.slug.toLowerCase()}`}>
                                                     <img src={`${project.node.acf.thumbnail_image.localFile.url}`} alt={`${project.node.title}`} />
-                                            </Link>
+                                           
                                             <div className="work__list__project__info">
                                               <p
                 
@@ -65,6 +93,7 @@ class ContactPage extends Component {
                                               
                                               className=" reg__font sm__font work__list__description">{project.node.acf.subtitle}</p>
                                             </div>
+                                            </Link>
                                         </div>
                                     </div>
                                 :
@@ -78,8 +107,8 @@ class ContactPage extends Component {
                                         
                                         >
                                             <Link to={`/project/${project.node.slug.toLowerCase()}`}>
-                                                    <img src={`${project.node.acf.thumbnail_image.localFile.url}`} alt={`${project.node.title}`} />
-                                            </Link>
+                                            <img src={`${project.node.acf.thumbnail_image.localFile.url}`} alt={`${project.node.title}`} />
+                                            
                                             <div className="work__list__project__info">
                                                 <p
                                                     className="bold__font lg__font work__list__title"
@@ -90,6 +119,7 @@ class ContactPage extends Component {
                                                 
                                                 >{project.node.acf.subtitle}</p>
                                             </div>
+                                            </Link>
                                         </div>
                                     </div> 
                         )

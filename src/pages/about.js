@@ -122,17 +122,26 @@ class ContactPage extends Component {
   }
 
   componentDidMount(){
-    let lastColoredItems = document.querySelectorAll(".services__list__items"); 
-    Array.from(lastColoredItems).map(element => {
-      window.addEventListener("scroll", function(){
-        var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
-        let currentColoredElement = element.children[0].children[element.children[0].children.length - 1];
-          if(top  > currentColoredElement.offsetTop + 4000){ 
-            currentColoredElement.classList.add("colored__scroll");
-          }
-      }, {passive: true});
-    })
+    if (window.innerWidth > 768) {
+      let lastColoredItems = document.querySelectorAll(".services__list__items"); 
+      Array.from(lastColoredItems).map(element => {
+        window.addEventListener("scroll", function(){
+          var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
+          let currentColoredElement = element.children[0].children[element.children[0].children.length - 1];
+            if(top  > currentColoredElement.offsetTop + 4000){ 
+              currentColoredElement.classList.add("colored__scroll");
+            }
+        }, {passive: true});
+      })
+    }
 
+    if (window.innerWidth < 768) {
+        let lastColoredItems = document.querySelectorAll(".services__list__items"); 
+        Array.from(lastColoredItems).map(element => {
+          let currentColoredElement = element.children[0].children[element.children[0].children.length - 1];
+          currentColoredElement.classList.add("colored__scroll");
+        })
+    }
 
   }
   render() {

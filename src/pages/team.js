@@ -10,28 +10,31 @@ import "../layouts/pages/team.css"
 
 class Team extends Component {
   parallaxContainer(){
-    window.addEventListener("scroll", function(){
-        var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
-        var finalX = top / - 40;
-        if(top >= document.querySelectorAll(".team__new")[0].offsetTop ){
-            Array.from(document.querySelectorAll(".team__new__member__info__name")).map((element, index) => {
-                element.style.transform=`translateY(${finalX}px)`;
-            })
-            Array.from(document.querySelectorAll(".team__new__member__info__position")).map((element, index) => {
-                element.style.transform=`translateY(${finalX}px)`;
-            })
-            Array.from(document.querySelectorAll(".team__email")).map((element, index) => {
-                element.style.transform=`translateY(${finalX}px)`;
-            })
-            
-            
-        }
+    if (window.innerWidth > 768) {
+        window.addEventListener("scroll", function(){
+            var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
+            var finalX = top / - 40;
+            if(top >= document.querySelectorAll(".team__new")[0].offsetTop ){
+                Array.from(document.querySelectorAll(".team__new__member__info__name")).map((element, index) => {
+                    element.style.transform=`translateY(${finalX}px)`;
+                })
+                Array.from(document.querySelectorAll(".team__new__member__info__position")).map((element, index) => {
+                    element.style.transform=`translateY(${finalX}px)`;
+                })
+                Array.from(document.querySelectorAll(".team__email")).map((element, index) => {
+                    element.style.transform=`translateY(${finalX}px)`;
+                })
+                
+                
+            }
 
-    }, {passive: true});
+        }, {passive: true});
+    }
   }
 
   componentDidMount(){
     let teamArray = [...document.getElementsByClassName("creative")];
+    
     this.parallaxContainer()
     teamArray.map(element => 
         element.classList.add("active")

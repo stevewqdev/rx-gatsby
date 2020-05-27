@@ -97,3 +97,16 @@
         width: 50%;
     }
 }
+@media (max-width: 750px) and (orientation: landscape) {
+    .hero__component .container-fluid{
+        width: 450px;
+    }
+    .project__header__component {
+        margin-top: -375px;
+    }
+}
+@media (max-width: 600px) and (orientation: landscape) {
+    .hero__component .separator {
+        margin-bottom: 10px;
+    }
+}

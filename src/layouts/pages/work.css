@@ -4,6 +4,12 @@
         object-fit: cover;
         min-height: 650px;
     }
+    .work__list__project__img *{
+        cursor: none!important;
+    }
+    .work__list__project__img img{
+        pointer-events: none;
+    }
 }
 @media(max-width:1700px ){
     .work__list__project__img img{
@@ -123,3 +129,8 @@
         margin-bottom: 10px;
     }
 }
+@media (max-width: 750px) and (orientation: landscape) {
+    .work__list__project__img {
+        height: 200px;
+    }
+  }

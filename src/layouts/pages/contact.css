@@ -100,3 +100,16 @@
         padding-bottom: 50px;
     }
 }
+@media (max-width: 750px) and (orientation: landscape) {
+    .raxo__address__map {
+        padding-left: 0px;
+        margin-top: 20px;
+    }
+    .raxo__theAddress {
+        padding-bottom: 0px;
+    }
+    .raxo__address__copy {
+        margin-top: 50px;
+        max-width: 200px;
+    }
+}

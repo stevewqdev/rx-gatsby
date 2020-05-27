@@ -174,3 +174,24 @@ footer .menu__subitem{
     }
 
 }
+@media (max-width: 920px) and (orientation: landscape) {
+    .footer__menu{
+        top: 7px;
+        left: 40px;
+        position: relative;
+    }
+    .footer__menu a:after {
+        display: none;
+    }
+}
+@media (max-width: 750px) and (orientation: landscape) {
+
+    .footer__menu{
+        position: relative;
+        top: 0px;
+        left: 40px;
+    }
+    .footer__menu a:after {
+        display: none;
+    }
+}

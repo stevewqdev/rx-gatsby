@@ -15,14 +15,14 @@ import "../fonts/stylesheet.css"
 const Layout = ({ children, location }) => {
   // This function controls the redirect on the menu, to avoid a direct redirection, first closes the menu and after that it makes the redirection. 
   function hrefRedirect(){
-    let aElements = document.querySelectorAll(".menu__full__screen a"); 
+    let aElements = [...document.querySelectorAll(".menu__full__screen a")]; 
+
     aElements.forEach(element => {
       element.addEventListener("click", function(event){
         event.preventDefault();
         document.querySelectorAll(".page__wrapper")[0].classList.add("on-transition");
 
         let redirectLink = event.target.getAttribute("href");
-
         setTimeout(function() {
           if(redirectLink === null){
             window.location.href = `/`;
@@ -42,12 +42,14 @@ const Layout = ({ children, location }) => {
   function removeFixed(){
     window.onscroll = function(){
       var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
-      if(top >= document.querySelectorAll(".main__section__wrapper")[0].offsetTop - 90){
-        document.querySelectorAll(".column__top__one")[0].classList.add("force__absolute");
-        document.querySelectorAll(".column__top__two")[0].classList.add("force__absolute");
-      }else{
-        document.querySelectorAll(".column__top__one")[0].classList.remove("force__absolute");
-        document.querySelectorAll(".column__top__two")[0].classList.remove("force__absolute");
+      if(document.querySelectorAll(".main__section__wrapper")[0].length > 0){
+        if(top >= document.querySelectorAll(".main__section__wrapper")[0].offsetTop - 90){
+          document.querySelectorAll(".column__top__one")[0].classList.add("force__absolute");
+          document.querySelectorAll(".column__top__two")[0].classList.add("force__absolute");
+        }else{
+          document.querySelectorAll(".column__top__one")[0].classList.remove("force__absolute");
+          document.querySelectorAll(".column__top__two")[0].classList.remove("force__absolute");
+        }
       }
     };
   }

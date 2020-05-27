@@ -6,11 +6,15 @@ const Hero = props => {
 
 
   function parallaxContainer(){
-    window.addEventListener("scroll", function(){
-        var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
-        var finalX = top / -7;
-        document.getElementById("hero__component").style.transform=`translateY(${finalX}px)`;
-    }, {passive: true});
+    if (window.innerWidth > 768) {
+        window.addEventListener("scroll", function(){
+            var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
+            var finalX = top / -7;
+            if(document.getElementById("hero__component") !== null){
+                document.getElementById("hero__component").style.transform=`translateY(${finalX}px)`;
+            }
+        }, {passive: true});
+    }
   }
 
   useEffect(() => {

@@ -368,6 +368,9 @@
     .brand__menu__toggle {
         top: -70px;
     }
+    .brand__menu__toggle p{
+        display: none;
+    }
     .floating__web__info p {
         width: 210%;
     }
@@ -420,4 +423,13 @@
 
 
 
+}
+@media (max-width: 750px) and (orientation: landscape) {
+    .floating__web__info .copy__one__column .fixed, .floating__web__info .copy__two__column .fixed {
+        left: 80px;
+    }
+    .floating__web__info.main__floating__menu .copy__one__column p, .floating__web__info.main__floating__menu .copy__two__column p {
+        width: 150%;
+        display: none;
+    }
 }

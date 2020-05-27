@@ -331,3 +331,37 @@
         padding-top: 20px!important;
     }
 }
+@media (max-width: 750px) and (orientation: landscape) {
+    .team__new__member {
+        min-height: 350px;
+    }
+    .team__new__member .xxl__font{
+        font-size: 120px!important;
+    }
+    .team__information {
+        bottom: 20px;
+    }
+    .team__information .sm__font {
+        font-size: 17px;
+        line-height: 25px;
+        letter-spacing: 0.3px;
+    }
+    .team__member__2, .team__member__4, .team__member__10{
+        padding-top: unset;
+    }
+    .team__member__6, .team__member__8{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .team__member__9, .team__member__10, .team__member__11, .team__member__12, .team__member__13 {
+        position: relative;
+        top: 0;
+    }
+    .team__member__13 {
+        padding-top: 170px;
+        padding-bottom: 200px;
+    }
+    .team__member__15 {
+        padding-top: 30px;
+    }
+}

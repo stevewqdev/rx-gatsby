@@ -89,7 +89,7 @@ class Awake extends Component {
                   </div>
                   {
                     pageAcf.awake_sone_gallery.map((element, index) =>
-                      <div 
+                      <div  key={index}
                         className={`
                         col-xs-12 col-sm-12 col-md-12 no__padding
                         ${index === 0 ? "col-lg-6" : ""}
@@ -111,7 +111,7 @@ class Awake extends Component {
                   </div>
                   {
                     pageAcf.awake_stwo_gallery.map((element, index) =>
-                      <div 
+                      <div key={index}
                         className={`
                         col-xs-12 col-sm-12 col-md-12 no__padding image
                         ${index === 0 ? "col-lg-6" : ""}
@@ -151,10 +151,9 @@ class Awake extends Component {
 
             <section id="section__three">
               <div className="container container__custom">
-                <div className="row">
                   {
                     pageAcf.awake_sthree_gallery.map((element, index) =>
-                    <>
+                    <div className="row" key={index}>
                       {
                         index === 0
                         ?
@@ -174,7 +173,7 @@ class Awake extends Component {
                       {
                         index === 1
                         ?
-                        <>
+                        <div>
                         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 "></div>
                         <div 
                         className={`
@@ -186,7 +185,7 @@ class Awake extends Component {
                         >
                           <img src={element} alt="Awake Image"/>
                         </div>
-                        </>
+                        </div>
                         :""
                       }
                       {
@@ -204,11 +203,10 @@ class Awake extends Component {
                         </div>
                         :""
                       }
-                    </>
+                    </div>
 
                     )
                   }
-                </div>
               </div>
             </section>
 
