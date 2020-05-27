@@ -1,0 +1,66 @@
+.not__found__page .left{
+    background: #F4F4F4;
+}
+.not__found__page .row, .not__found__page .row .left, .not__found__page .row .right{
+    min-height: 100vh;
+}
+.not__found__page .row .left .internal{
+    max-width: 350px;
+    margin: auto;
+    position: relative;
+    top: -50px;
+}
+.not__found__page .row .right .internal{
+    max-width: 230px;
+    position: relative;
+    padding-left: 30px;
+}
+.not__found__page .row .left .internal button{
+    margin-top: 40px;
+    pointer-events: none;
+}
+.not__found__page .row .right .internal svg{
+    width: 100%;
+    height: 300px;
+}
+@media(max-width: 500px){
+    .not__found__page .row, .not__found__page .row .left, .not__found__page .row .right {
+        min-height: 70vh;
+    }
+    .not__found__page .row .left .internal {
+        top: 50px;
+    }
+    .not__found__page .row .right .internal {
+        max-width: 100%;
+        padding-left: 0px;
+        position: relative;
+        top: -160px;
+    }
+    .not__found__page .row .right .internal svg {
+        height: 160px;
+    }
+}
+@media(max-width: 320px){
+    .not__found__page .row .right .internal {
+        padding-left: 20px;
+        top: -115px;
+    }
+    .not__found__page .row .right .internal svg {
+        height: 110px;
+    }
+}
+@media (max-width: 920px) and (orientation: landscape) {
+    .not__found__page .row .left .internal button {
+        margin-top: 10px;
+        pointer-events: none;
+    }
+    .not__found__page .row .left .internal {
+        top: 0px;
+    }
+    .not__found__page .row .right .internal svg {
+        height: 170px;
+    }
+    .not__found__page .row .right .internal {
+        max-width: 130px;
+    }
+}

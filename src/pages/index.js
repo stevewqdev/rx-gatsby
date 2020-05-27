@@ -54,6 +54,28 @@ class HomePage extends Component {
       });
     }
     
+    let aElements = [...document.querySelectorAll(".selected__projects__button__right a")]; 
+
+    aElements.forEach(element => {
+      element.addEventListener("click", function(event){
+        event.preventDefault();
+        document.querySelectorAll(".page__wrapper")[0].classList.add("on-transition");
+
+        let redirectLink = event.target.getAttribute("href");
+        setTimeout(function() {
+          if(redirectLink === null){
+            window.location.href = `/`;
+          }else{
+            if(redirectLink.includes("facebook") || redirectLink.includes("twitter") || redirectLink.includes("instagram") || redirectLink.includes("behance") || redirectLink.includes("vimeo")){
+
+            }else{
+              window.location.href = `${event.target.getAttribute("href")}`;
+
+            }
+          }
+        },10);
+      })
+    });
   }
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 

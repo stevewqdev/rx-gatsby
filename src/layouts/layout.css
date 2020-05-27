@@ -1057,6 +1057,9 @@ section#one{
 .selected__projects__projects > div {
   padding: 0 2%;
 }
+.selected__projects__button__right button{
+  pointer-events: none;
+}
 .selected__projects__projects__left img{
   max-width: 100%!important;
   top: 0px!important;

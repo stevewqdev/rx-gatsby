@@ -25,22 +25,26 @@ const GetInTouch = props => {
   function handleSubmit(e){
     e.preventDefault();
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if(email.match(mailformat)){
-      addToMailchimp(email)
-        .then((data) => {
-          document.querySelectorAll(".form__success")[0].style.display="block";
-          document.querySelectorAll(".form__email__wrong")[0].style.display="none";
-          document.querySelectorAll(".form__error")[0].style.display="none";
-        })
-        .catch((error) => {
-          document.querySelectorAll(".form__success")[0].style.display="none";
-          document.querySelectorAll(".form__email__wrong")[0].style.display="none";
-          document.querySelectorAll(".form__error")[0].style.display="block";
-      });
-    }else{
-      document.querySelectorAll(".form__success")[0].style.display="none";
-      document.querySelectorAll(".form__email__wrong")[0].style.display="block";
-      document.querySelectorAll(".form__error")[0].style.display="none";
+    if(email && email.length > 0){
+      if(email.match(mailformat)){
+        addToMailchimp(email)
+          .then((data) => {
+            document.querySelectorAll(".form__success")[0].style.display="block";
+            document.querySelectorAll(".form__email__wrong")[0].style.display="none";
+            document.querySelectorAll(".form__error")[0].style.display="none";
+            document.querySelectorAll(".email__input")[0].value = "";
+          })
+          .catch((error) => {
+            document.querySelectorAll(".form__success")[0].style.display="none";
+            document.querySelectorAll(".form__email__wrong")[0].style.display="none";
+            document.querySelectorAll(".form__error")[0].style.display="block";
+        });
+      }else{
+        document.querySelectorAll(".form__success")[0].style.display="none";
+        document.querySelectorAll(".form__email__wrong")[0].style.display="block";
+        document.querySelectorAll(".form__error")[0].style.display="none";
+      }
+
     }
 
   }
