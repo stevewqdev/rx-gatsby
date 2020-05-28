@@ -8,6 +8,9 @@ html::-webkit-scrollbar-thumb {
 .pointer__none{
   pointer-events: none!important;
 }
+img{
+  width: 100%;
+}
 .share__project svg{
   pointer-events: none;
 }
