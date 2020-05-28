@@ -16,7 +16,7 @@ export default class cursor extends Component {
         const iframes = [...document.querySelectorAll("iframe")]; 
         const toggleOffices = [...document.querySelectorAll(".button__office")]; 
         const servicesList = [...document.querySelectorAll(".recognition__list__item")]; 
-
+        const projects = [...document.querySelectorAll(".the__project")]; 
         
         
         const allElements = aLinks
@@ -30,6 +30,7 @@ export default class cursor extends Component {
         .concat(iframes)
         .concat(toggleOffices)
         .concat(servicesList)
+        .concat(projects)
         allElements.forEach(function(element) {
             element.addEventListener("mouseenter", function() {
               const theCursor = document.querySelector(".cursor");

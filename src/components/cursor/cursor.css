@@ -65,12 +65,12 @@ html body { cursor: none!important; }
   .cursor__inner--dot {
     width: 12px;
     height: 12px;
-    background: #d13368;
+    background: #FE0062;
     display: block;
     left: 0px !important;
     top: 0px !important;
     z-index: 9999;
-    border: #d13368;
+    border: #FE0062;
   }
   .cursor__inner--circle {
     width: 40px;

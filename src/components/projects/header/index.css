@@ -110,15 +110,15 @@
     }
     .project__client{
         margin-top: 15px;
-        margin-bottom: 15px
+        margin-bottom: 12px
     }
     .project__info__content{
-        margin-top: 15px;
+        margin-top: 17px;
         margin-bottom: 15px
     }
     .project__focus{
         margin-top: 15px;
-        margin-bottom: 15px
+        margin-bottom: 8px
     }
     .project__focus__content p{
         line-height: 25px;

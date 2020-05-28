@@ -45,6 +45,17 @@ class HomePage extends Component {
     }
   }
 
+  projectRedirect(event){
+    let redirectLink = event.target.getAttribute("datalink");
+    setTimeout(function() {
+      if(redirectLink === null){
+        window.location.href = `/`;
+      }else{
+        window.location.href = redirectLink;
+      }
+    },10);
+  }
+
   componentDidMount(){
 
     document.querySelectorAll(".footer")[0].classList.add("dark");
@@ -61,11 +72,9 @@ class HomePage extends Component {
     }
     
     let aElements = [...document.querySelectorAll(".selected__projects__button__right a")]; 
-    let pElements = [...document.querySelectorAll(".the__project a")]; 
 
-    let allElements = aElements.concat(pElements);
 
-    allElements.forEach(element => {
+    aElements.forEach(element => {
       element.addEventListener("click", function(event){
         event.preventDefault();
         document.querySelectorAll(".page__wrapper")[0].classList.add("on-transition");
@@ -297,8 +306,8 @@ class HomePage extends Component {
                           pageAcf.sp_projects.map((project, index) => 
                             <div key={index} className="col-xs-6 col-sm-6 col-md-6 col-lg-6 no__padding selected__projects__projects --project">
                               <div className="row">
-                                <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 no__padding selected__projects__projects__left the__project ${index === 0 ? "active" : ""}`} onMouseEnter={this.activeProject} onMouseLeave={this.unactiveProject}>
-                                  <Link to={`/project/${project.post_name.toLowerCase()}`}>
+                                <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 no__padding selected__projects__projects__left the__project ${index === 0 ? "active" : ""}`} onMouseEnter={this.activeProject} onMouseLeave={this.unactiveProject} onClick={this.projectRedirect} datalink={`/project/${project.post_name.toLowerCase()}`}>
+                                  
                                   <div className="selected__projects__projects__left__img">
                                     <img 
                                     data-aos="fade-up"
@@ -309,7 +318,6 @@ class HomePage extends Component {
                                     
                                     src={`${project.acf.thumbnail_image.localFile.url}`} alt={`${project.post_name}`}/>
                                   </div>
-                                  </Link>
                                   <div className="selected__projects__projects__left__copy">
                                     <div
                                       data-aos="fade-up"
@@ -337,7 +345,6 @@ class HomePage extends Component {
   
                                     </div>
                                   </div>
-                                  
                                 </div>
                               </div>
                             </div>
