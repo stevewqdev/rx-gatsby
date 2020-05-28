@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 import About from "../components/about/index"
 import {Helmet} from "react-helmet";
 import Parallax from 'parallax-js'
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 class HomePage extends Component {
   constructor(props) {
@@ -13,12 +14,17 @@ class HomePage extends Component {
   }
 
   playVideo(event){
+    console.log("click");
     if (!event.target.paused) {
       document.querySelectorAll(".poster__animated")[0].classList.remove("hidden");
-
+      if (window.innerWidth < 500) {
+        event.target.pause();
+      }
     } else{
       document.querySelectorAll(".poster__animated")[0].classList.add("hidden");
-
+      if (window.innerWidth < 500) {
+        event.target.play();
+      }
     }
   }
 
@@ -55,8 +61,11 @@ class HomePage extends Component {
     }
     
     let aElements = [...document.querySelectorAll(".selected__projects__button__right a")]; 
+    let pElements = [...document.querySelectorAll(".the__project a")]; 
 
-    aElements.forEach(element => {
+    let allElements = aElements.concat(pElements);
+
+    allElements.forEach(element => {
       element.addEventListener("click", function(event){
         event.preventDefault();
         document.querySelectorAll(".page__wrapper")[0].classList.add("on-transition");
@@ -195,6 +204,7 @@ class HomePage extends Component {
                             controls
                             className="mobile-hidden"
                             onClick={this.playVideo}
+                            onTouchStart={this.playVideo}
                           >
                             <source src={pageAcf.reel_video.source_url}  type="video/mp4" />
                           </video>
@@ -203,6 +213,7 @@ class HomePage extends Component {
                         :""
                       }
                     </div>
+                    
                     <div className="svg share__project"
                       data-aos="fade-up"
                       data-aos-delay={`390`}
@@ -287,6 +298,7 @@ class HomePage extends Component {
                             <div key={index} className="col-xs-6 col-sm-6 col-md-6 col-lg-6 no__padding selected__projects__projects --project">
                               <div className="row">
                                 <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 no__padding selected__projects__projects__left the__project ${index === 0 ? "active" : ""}`} onMouseEnter={this.activeProject} onMouseLeave={this.unactiveProject}>
+                                  <Link to={`/project/${project.post_name.toLowerCase()}`}>
                                   <div className="selected__projects__projects__left__img">
                                     <img 
                                     data-aos="fade-up"
@@ -297,6 +309,7 @@ class HomePage extends Component {
                                     
                                     src={`${project.acf.thumbnail_image.localFile.url}`} alt={`${project.post_name}`}/>
                                   </div>
+                                  </Link>
                                   <div className="selected__projects__projects__left__copy">
                                     <div
                                       data-aos="fade-up"
@@ -324,6 +337,7 @@ class HomePage extends Component {
   
                                     </div>
                                   </div>
+                                  
                                 </div>
                               </div>
                             </div>

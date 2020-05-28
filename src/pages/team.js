@@ -44,10 +44,16 @@ class Team extends Component {
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
-
+    const customStyle = 
+    `
+    html, body{
+        overflow-x: hidden!important;
+    }
+    `;
     return ( 
       <Layout>
           <Helmet>
+            <style>{customStyle}</style>
             <meta charSet="utf-8" />
             <meta name="description" content={ pageData.yoast_meta.yoast_wpseo_metadesc }/>
             <title>{ pageData.yoast_meta.yoast_wpseo_title }</title>

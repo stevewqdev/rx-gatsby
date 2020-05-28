@@ -38,6 +38,9 @@ class ContactPage extends Component {
     if (window.innerWidth > 800) {
       this.hrefRedirect();
     }
+    document.querySelectorAll(".footer")[0].classList.add("dark");
+    document.querySelectorAll(".separator")[0].classList.remove("--black");
+    document.querySelectorAll(".separator")[0].classList.add("--white");
   }
 
   render() {

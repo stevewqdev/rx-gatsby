@@ -8,6 +8,9 @@ html::-webkit-scrollbar-thumb {
 .pointer__none{
   pointer-events: none!important;
 }
+.share__project svg{
+  pointer-events: none;
+}
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
@@ -1015,6 +1018,38 @@ section#one{
   transition: all ease-in-out 0.5s;
   width: 100%;
 }
+.poster__animated:after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: black;
+  margin: auto;
+  z-index: 9;
+}
+.poster__animated:before{
+  content: "";
+  display: flex;
+  position: absolute;
+  left: 10px;
+  right: 0;
+  top: 0;
+  margin: auto;
+  border-style: solid;
+  border-width: 21.8px 0 22.5px 37px;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 1);
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+}
 .poster__animated.hidden{
   opacity: 0;
 }
@@ -1073,8 +1108,12 @@ section#one{
   transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1)!important;
 
 }
-.the__project > *{
+.the__project  *{
   pointer-events: none;
+}
+.the__project  a{
+  pointer-events: all;
+  display: contents;
 }
 .the__project{
   display: flex;
@@ -1281,6 +1320,13 @@ button:hover:before{
 @media(max-width: 500px){
   .brand__menu__toggle p{
     display: none;
+  }
+  .poster__animated:after {
+    width: 70px;
+    height: 70px;
+  }
+  .poster__animated:before {
+    transform: scale(0.8);
   }
   .selected__projects {
     height: 550px;

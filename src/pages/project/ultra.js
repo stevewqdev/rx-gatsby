@@ -112,7 +112,13 @@ class Ultra extends Component {
                                   data-aos-duration="1200"
                                   data-aos-offset="300"
                                 >
+                                {
+                                  element.image.localFile.childImageSharp !== null
+                                  ?
                                   <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                  : 
+                                  <img src={element.image.localFile.url} alt={`Project  image`} tabIndex={-1} />
+                                }
                                 </div>
                               </>
                             : ""
@@ -170,7 +176,13 @@ class Ultra extends Component {
                                   data-aos-duration="1200"
                                   data-aos-offset="300"
                                 >
+                                {
+                                  element.image.localFile.childImageSharp !== null
+                                  ?
                                   <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                  : 
+                                  <img src={element.image.localFile.url} alt={`Project  image`} tabIndex={-1} />
+                                }
                                 </div>
                               </>
                             : ""
@@ -227,7 +239,13 @@ class Ultra extends Component {
                                   data-aos-duration="1200"
                                   data-aos-offset="300"
                                 >
+                                {
+                                  element.image.localFile.childImageSharp !== null
+                                  ?
                                   <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                  : 
+                                  <img src={element.image.localFile.url} alt={`Project  image`} tabIndex={-1} />
+                                }
                                 </div>
                               </>
                             : ""

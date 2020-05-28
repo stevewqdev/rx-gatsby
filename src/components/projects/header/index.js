@@ -32,7 +32,7 @@ const ProjectHero = props => {
                     }
                 </div>
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 project__info no__padding">
-                    <p className="md__font bold__font reg__font project__client"
+                    <p className="sm__font bold__font reg__font project__client"
                         data-aos="fade-up"
                         data-aos-easing="ease-in-back"
                         data-aos-delay={`120`}
@@ -40,7 +40,7 @@ const ProjectHero = props => {
                     >
                         Client
                     </p>
-                    <p className="xsm__font reg__font"
+                    <p className="sm__font reg__font"
                         data-aos="fade-up"
                         data-aos-easing="ease-in-back"
                         data-aos-delay={`150`}
@@ -49,7 +49,7 @@ const ProjectHero = props => {
                         {props.clientName}
                     </p>
 
-                    <p className="md__font bold__font reg__font project__info__content"
+                    <p className="sm__font bold__font reg__font project__info__content"
                         data-aos="fade-up"
                         data-aos-easing="ease-in-back"
                         data-aos-delay={`170`}
@@ -66,7 +66,7 @@ const ProjectHero = props => {
                         dangerouslySetInnerHTML={{ __html: props.projectInfo }}
                     />
 
-                    <p className="md__font bold__font reg__font project__focus"
+                    <p className="sm__font bold__font reg__font project__focus"
                         data-aos="fade-up"
                         data-aos-easing="ease-in-back"
                         data-aos-delay={`210`}
@@ -80,7 +80,7 @@ const ProjectHero = props => {
                         data-aos-delay={`230`}
                         data-aos-duration="1200"
                         data-aos-offset="20"
-                        className="xsm__font reg__font project__focus__content"
+                        className="sm__font reg__font project__focus__content"
                         dangerouslySetInnerHTML={{ __html: props.projectFocus }}
                     />
                     <br/><br/>

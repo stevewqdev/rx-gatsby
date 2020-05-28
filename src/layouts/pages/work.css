@@ -102,9 +102,6 @@
     .work__list__project__info .md__font {
         font-size: 14px;
     }
-    .work__list__project__img img{
-        pointer-events: all;
-    }
     .work__list .project-3{
         margin-top: 0%;
     }
@@ -117,7 +114,6 @@
     .work__list {
         margin-bottom: 0px;
         padding: 15px 0 70px;
-        margin-top: -50px;
     }
     .work__list__project__img img {
         min-height: 160px;
@@ -131,11 +127,6 @@
     .work__list__project__img {
 
         margin-bottom: 10px;
-    }
-}
-@media (max-width: 920px) and (orientation: landscape) {
-    .work__list__project__img img{
-        pointer-events: all;
     }
 }
 @media (max-width: 750px) and (orientation: landscape) {

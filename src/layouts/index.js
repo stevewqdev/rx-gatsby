@@ -163,6 +163,24 @@ const Layout = ({ children, location }) => {
   function addShareLink(){
     Array.from(document.querySelectorAll(".share__project")).map(element => {
       element.dataset.sharelink = window.location.href;
+
+      element.addEventListener("click", function(e){
+        var textarea = document.createElement("textarea");
+        textarea.textContent = e.target.getAttribute("data-sharelink");
+        textarea.style.position = "fixed";  // Prevent scrolling to bottom of page in Microsoft Edge.
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+            return document.execCommand("copy");  // Security exception may be thrown by some browsers.
+        }
+        catch (ex) {
+            console.warn("Copy to clipboard failed.", ex);
+            return false;
+        }
+        finally {
+            document.body.removeChild(textarea);
+        }
+      })
     })
   }
 
@@ -252,11 +270,26 @@ const Layout = ({ children, location }) => {
   if (data.allWordpressMenusMenusItems) {
     legalMenu = data.allWordpressMenusMenusItems.edges[0].node.items
   }
+  const tagOne =
+  `
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-W5WQF9T');
+  `;
+  const tagTwo =
+  `
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5WQF9T"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  `;
   return (
     <>
       <Helmet>
         <link rel="icon" href={siteFavicon} />
         <html lang="en" />
+        <script>{tagOne}</script>
+        <noscript>{tagTwo}</noscript>
       </Helmet>
       <Cursor></Cursor>
       <MainFloatingMenu
