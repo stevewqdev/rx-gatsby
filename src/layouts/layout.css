@@ -625,13 +625,10 @@ html {
     }
   }
 
-  html{
-    overflow-x: hidden;
-}
+
 body{
     font-family: 'MarkPro';
     font-weight: normal;
-    overflow-x: hidden;
     background: #F4F4F4;
 }
 .col-xs-3{
@@ -713,6 +710,7 @@ body{
   }
   .selected__projects {
     padding-top: 50px;
+    height: 1100px;
   }
   .selected__projects.latest__projects {
     margin-top: 10%;
@@ -1224,6 +1222,9 @@ button:hover:before{
     top: unset;
     bottom: 10%;
   }
+  .selected__projects {
+    height: 970px;
+  }
 }
 @media(max-width: 992px){
   .container__custom{
@@ -1234,6 +1235,13 @@ button:hover:before{
   .lg__font {
     font-size: 27px!important;
     line-height: 30px;
+  }
+  .selected__projects {
+    height: 1160px;
+  }
+  .the__project.active img {
+    width: calc(98% / 1.05)!important;
+    height: calc(98% / 1.05)!important;
   }
   #page__wrapper {
     margin-bottom: 450px;
@@ -1274,6 +1282,9 @@ button:hover:before{
   .brand__menu__toggle p{
     display: none;
   }
+  .selected__projects {
+    height: 550px;
+}
   .xxl__font {
     letter-spacing: -2px;
   }
@@ -1293,7 +1304,18 @@ button:hover:before{
   }
   .selected__projects__projects__left img{
     width: calc(100% )!important;
-    height: 144px!important;
+    height: auto!important;
+    padding-right: 20px;
+  }
+  .the__project.active .selected__projects__projects__left__copy{
+    display: none;
+  }
+  .the__project .selected__projects__projects__left__copy{
+    display: none;
+  }
+  .the__project.active img{
+    width: calc(100% )!important;
+    height: auto!important;
     padding-right: 20px;
   }
   .selected__projects__button__right{
@@ -1363,7 +1385,7 @@ button:hover:before{
   }
 
   .selected__projects__projects__left:hover img {
-    width: calc(100% / 2)!important;
+    width: calc(100% / 1)!important;
   }
   .selected__projects__projects__left:hover .selected__projects__projects__left__copy {
     bottom: -5%;
@@ -1387,7 +1409,7 @@ button:hover:before{
     display: none!important;
   }
   .selected__projects {
-    padding-top: 20%;
+    padding-top: 35px;
   }
   .selected__projects.latest__projects {
       margin-top: 35%;
@@ -1399,6 +1421,7 @@ button:hover:before{
       position: relative;
       width: 100%;
       display: block!important;
+      cursor: pointer;
   }
   .featured__video .featured__video__source {
       margin-top: 20px;
@@ -1471,7 +1494,7 @@ body{
 }
 @media (max-width: 920px) and (orientation: landscape) {
   #page__wrapper {
-    margin-bottom: 130px!important;
+    margin-bottom: 90px!important;
   }
   /* home */
   .the__project.active img {
@@ -1479,7 +1502,7 @@ body{
       height: calc(100% / 1.2)!important;
   }
   .selected__projects__projects > div {
-    padding: 0 4%;
+    padding: 0 3.5%;
   }
   .container__custom {
     padding: 0;
@@ -1490,6 +1513,9 @@ body{
   }
   .container__custom {
     max-width: 550px;
+  }
+  .selected__projects {
+    height: 840px;
   }
 }
 @media (max-width: 750px) and (orientation: landscape) {

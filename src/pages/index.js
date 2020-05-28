@@ -84,12 +84,10 @@ class HomePage extends Component {
     `
     @media(max-width: 500px){
       html{
-        left: -6px;
         position: relative;
+        overflown: hidden!important;
       }
-      *{
-        border: solid 1px transparent;
-      }
+
     }
     `
     ;

@@ -14,8 +14,6 @@ const RelatedProjects = props => {
         document.querySelectorAll(".page__wrapper")[0].classList.add("on-transition");
 
         let redirectLink = event.target.getAttribute("href");
-
-        console.log(redirectLink);
         setTimeout(function() {
             if(redirectLink === null){
             window.location.href = `/`;
@@ -33,7 +31,9 @@ const RelatedProjects = props => {
   }
 
   useEffect(() => {
-    hrefRedirect();
+    if (window.innerWidth > 800) {
+        hrefRedirect();
+    }
   }); 
 
   return ( 

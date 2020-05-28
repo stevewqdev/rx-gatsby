@@ -35,7 +35,9 @@ class ContactPage extends Component {
   }
 
   componentDidMount(){
-    this.hrefRedirect();
+    if (window.innerWidth > 800) {
+      this.hrefRedirect();
+    }
   }
 
   render() {

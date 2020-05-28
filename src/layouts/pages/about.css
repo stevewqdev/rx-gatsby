@@ -683,7 +683,7 @@
     }
     .colored__floating {
         position: relative;
-        padding: 0 25px;
+        padding: 0 45px 0 25px;
         top: 0;
         margin-top: 100px;
         left: 0;
@@ -728,7 +728,10 @@
         line-height: 35px;
     }
     .services__list.lower__list {
-        margin-top: 100%;
+        margin-top: 20px;
+    }
+    .services__list{
+        margin-top: 20px;
     }
     .services__list__items .row{
         display: flex;
@@ -748,7 +751,10 @@
     }
     .recognition__wrapper {
         padding-bottom: 0%;
-        padding-top: 100px;
+        padding-top: 35px;
+    }
+    .chose__us{
+        padding-top: 75px;
     }
     .recognition__list__item.active h3 {
         color: white;
@@ -756,9 +762,15 @@
     .select__clients{
         display: none!important;
     }
+    .service__list__4{
+        display: none;
+    }
+    #clients {
+        padding: 0% 0px 0px;
+    }
     #we_can_help .lg__font {
-        font-size: 25px!important;
-        line-height: 29px;
+        font-size: 35px!important;
+        line-height: 40px;
     }
     .services__list.c-f2ab3d .services__list__items .row p:last-child{
         color: #FEA904;

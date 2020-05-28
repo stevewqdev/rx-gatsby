@@ -435,7 +435,7 @@ class ContactPage extends Component {
                       pageAcf.services_info.map((services, index) => 
                               index % 2 === 0 
                               ? 
-                                  <div className={`col-xs-6 col-sm-6 col-md-6 col-lg-6 includes__separator services__list no__padding c-${services.hover_color.replace('#','')} service__list__${index}`} key={index}>
+                                  <div className={`col-xs-12 col-sm-12 col-md-6 col-lg-6 includes__separator services__list no__padding c-${services.hover_color.replace('#','')} service__list__${index}`} key={index}>
                                     <div className="separator --white"></div>
                                     <div className="services__list__subtitle">
                                       
@@ -462,7 +462,7 @@ class ContactPage extends Component {
                                     </div>
                                   </div>
                               :
-                                  <div className={`col-xs-6 col-sm-6 col-md-6 includes__separator col-lg-6 services__list lower__list no__padding service__list__${index} c-${services.hover_color.replace('#','')}`} key={index} >
+                                  <div className={`col-xs-12 col-sm-12 col-md-6 includes__separator col-lg-6 services__list lower__list no__padding service__list__${index} c-${services.hover_color.replace('#','')}`} key={index} >
                                     <div className="separator --white"></div>
                                     <div className="services__list__subtitle">
                                       <p className="reg__font sm__font"
@@ -583,7 +583,7 @@ class ContactPage extends Component {
               </div>
             </section>
             <section id="recognition">
-              <div className="container container__custom recognition__wrapper">
+              <div className="container container__custom recognition__wrapper chose__us">
                 <div className="row">
                   <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 recognition__one no__padding">
                       <h3 className="xxl__font bold__font"

@@ -330,6 +330,19 @@
     .team__member__block {
         padding-top: 20px!important;
     }
+    .team__member__6{
+        padding-bottom: 0px;
+    }
+    .team__member__8{
+        padding-bottom: 90px;
+    }
+    .team__member__12 {
+        height: 405px;
+    }
+    .team__member__15{
+        padding-top: 50px!important;
+        padding-bottom: 20px;
+    }
 }
 @media (max-width: 750px) and (orientation: landscape) {
     .team__new__member {
