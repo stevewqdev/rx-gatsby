@@ -107,7 +107,7 @@ export default class MainFloatingScreen extends Component {
                 />
               </div>
             </div>
-            <div className="col col-xs-6 col-sm-2 col-md-2 col-lg-2 relative copy__two__column sm__font reg__font pointer__none">
+            <div className="col col-xs-6 col-sm-2 col-md-2 col-lg-2 relative copy__two__column sm__font reg__font">
               <div className="fixed column__top__two">
                 <p
                   data-aos="fade-down"

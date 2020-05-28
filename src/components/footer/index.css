@@ -124,7 +124,7 @@ footer .menu__subitem{
         margin: 0 35px 0 0;
     }
     .mobile__bottom__info{
-        padding: 30px 0;
+        padding: 30px 0 30px;
         flex-direction: unset!important;
     }
     .mobile__copyright{

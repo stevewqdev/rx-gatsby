@@ -1290,7 +1290,7 @@ button:hover:before{
   }
   .selected__projects__projects__left img{
     width: calc(100% )!important;
-    height: calc(100%)!important;
+    height: 144px!important;
     padding-right: 20px;
   }
   .selected__projects__button__right{
