@@ -80,55 +80,69 @@ class HomePage extends Component {
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
+    const customStyle =
+    `
+    @media(max-width: 500px){
+      html{
+        left: -6px;
+        position: relative;
+      }
+      *{
+        border: solid 1px transparent;
+      }
+    }
+    `
+    ;
 
     return ( 
       <Layout>
         <Helmet>
+          <style>{customStyle}</style>
           <meta charSet="utf-8" />
           <meta name="description" content={ pageData.yoast_meta.yoast_wpseo_metadesc }/>
           <title>{ pageData.yoast_meta.yoast_wpseo_title }</title>
           <link rel="canonical" href={ pageData.yoast_meta.yoast_wpseo_canonical} />
         </Helmet>
-        <div className={`home__page post__${pageData.id}`}>
-          <section id="one">
-            <div className="row">
-              
+        
+        <section id="one">
+          <div className="row">
+            
 
-              
-              {
-                this.state.isMobile
-                ?
-                <div className="col-lg-12 raxo__rx__svg">
-                  <img src={pageAcf.fallback_image.source_url} alt={pageAcf.fallback_image.title}/>
-                </div>
-                : 
-                <div className="col-lg-12">
-                  <div className="video__background" id="scene">
-                    {
-                      pageAcf.video_background
-                      ?
+            
+            {
+              this.state.isMobile
+              ?
+              <div className="col-lg-12 raxo__rx__svg">
+                <img src={pageAcf.fallback_image.source_url} alt={pageAcf.fallback_image.title}/>
+              </div>
+              : 
+              <div className="col-lg-12">
+                <div className="video__background" id="scene">
+                  {
+                    pageAcf.video_background
+                    ?
+                    
+                    <video
+                      data-depth="0.2"
+                      autoPlay 
+                      loop 
+                      muted
                       
-                      <video
-                        data-depth="0.2"
-                        autoPlay 
-                        loop 
-                        muted
-                        
-                        playsInline
-                        className="mobile-hidden"
-                        id="parallaxVideo"
-                      >
-                        <source src={pageAcf.video_background.source_url} type="video/mp4" />
-                      </video>
-                      :""
-                    }
-                  </div>
+                      playsInline
+                      className="mobile-hidden"
+                      id="parallaxVideo"
+                    >
+                      <source src={pageAcf.video_background.source_url} type="video/mp4" />
+                    </video>
+                    :""
+                  }
                 </div>
-              }
+              </div>
+            }
 
-            </div>
-          </section>
-          <div className="main__section__wrapper">
+          </div>
+        </section>
+        <div className="main__section__wrapper">
             <About></About>
             <section className="featured__video includes__separator">
               <div className="container container__custom">
@@ -369,7 +383,7 @@ class HomePage extends Component {
               </div>
             </section> */}
           </div>
-        </div>
+        
       </Layout>
     )
   }
