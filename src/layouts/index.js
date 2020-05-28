@@ -270,26 +270,13 @@ const Layout = ({ children, location }) => {
   if (data.allWordpressMenusMenusItems) {
     legalMenu = data.allWordpressMenusMenusItems.edges[0].node.items
   }
-  const tagOne =
-  `
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-W5WQF9T');
-  `;
-  const tagTwo =
-  `
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5WQF9T"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  `;
+
   return (
     <>
       <Helmet>
         <link rel="icon" href={siteFavicon} />
         <html lang="en" />
-        <script>{tagOne}</script>
-        <noscript>{tagTwo}</noscript>
+        
       </Helmet>
       <Cursor></Cursor>
       <MainFloatingMenu
@@ -300,7 +287,10 @@ const Layout = ({ children, location }) => {
       <div className="page__wrapper" id="page__wrapper">
       <MainFloatingScreen siteLogo={siteLogo} siteAcf={siteDataAcf}></MainFloatingScreen>
       <div id="top"></div>
-      <main>{children}</main>
+      <main>
+        
+        {children}
+      </main>
       
       <Footer
         copyright={siteDataAcf.copyright_info}

@@ -23,6 +23,21 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-W5WQF9T",
+        // datalayer to be set before GTM is loaded
+        // should be a stringified object or object
+        //
+        // Defaults to null
+        defaultDataLayer: function () {
+          return {
+            pageType: window.pageType,
+          }
+        },
+      },
+    },
+    {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
         endpoint: 'https://raxo.us18.list-manage.com/subscribe/post?u=0a73a5fcd4be545fba0c4bac9&amp;id=d80e65e5f2',
