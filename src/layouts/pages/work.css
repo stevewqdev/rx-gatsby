@@ -79,6 +79,7 @@
     }
 
 }
+
 @media(max-width: 1280px){
     .work__list__project:nth-child(odd){
         margin-top: -5vh;

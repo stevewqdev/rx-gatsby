@@ -33,11 +33,22 @@ class ContactPage extends Component {
       })
     });
   }
-
+  parallaxContainer(){
+    if (window.innerWidth > 768) {
+        window.addEventListener("scroll", function(){
+            var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
+            var finalX = top / -7;
+            if(document.getElementById("work__list__project") !== null){
+                document.getElementById("work__list__project").style.transform=`translateY(${finalX}px)`;
+            }
+        }, {passive: true});
+    }
+  }
   componentDidMount(){
     if (window.innerWidth > 800) {
       this.hrefRedirect();
     }
+    this.parallaxContainer();
     document.querySelectorAll(".footer")[0].classList.add("dark");
     document.querySelectorAll(".separator")[0].classList.remove("--black");
     document.querySelectorAll(".separator")[0].classList.add("--white");
@@ -59,12 +70,12 @@ class ContactPage extends Component {
     .main__section__wrapper {
       background: #000000;
     }
-    @media (max-width: 1500px)
+    @media (max-width: 1500px){
       .container__custom {
-          max-width: 920px;
+          max-width: 930px;
       }
     }
-    @media (max-width: 1280px)
+    @media (max-width: 1280px){
       .container__custom {
           max-width: 815px;
       }
@@ -93,7 +104,7 @@ class ContactPage extends Component {
           >
           </Hero>
           <section className="work__list">
-            <div className="container container__custom">
+            <div className="container container__custom workPage">
                 <div className="row">
                     {
                         latestProjects.map((project, index) => 
