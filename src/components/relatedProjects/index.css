@@ -50,7 +50,7 @@
 .related__projects img{
     opacity: 0.4!important;
 }
-.related__projects img:hover{
+.related__projects a:hover img{
     opacity: 1!important;
 }
 .related__projects a{
