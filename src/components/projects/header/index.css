@@ -126,7 +126,7 @@
     
 }
 .project__featured__image img{
-    transition: all 1.2s cubic-bezier(0.83, 0, 0.17, 1)!important;
+    transition: all 1.2s cubic-bezier(.215,.61,.355,1)!important;
 
 }
 
