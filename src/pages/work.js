@@ -127,21 +127,15 @@ class ContactPage extends Component {
                                         >
                                             <Link to={`/project/${project.node.slug.toLowerCase()}`}>
                                                     <img src={`${project.node.acf.thumbnail_image.localFile.url}`} alt={`${project.node.title}`} />
-                                           
+                                            </Link>
                                             <div className="work__list__project__info">
                                               <p
-                
-                                              
                                                   className="bold__font md__font work__list__title"
                                                   dangerouslySetInnerHTML={{ __html: project.node.title }}
                                               />
                                               <p 
-                                              
-                   
-                                              
                                               className=" reg__font sm__font work__list__description">{project.node.acf.subtitle}</p>
                                             </div>
-                                            </Link>
                                         </div>
                                     </div>
                                 :
@@ -154,20 +148,18 @@ class ContactPage extends Component {
                                         data-aos-duration="1200"
                                         
                                         >
-                                            <Link to={`/project/${project.node.slug.toLowerCase()}`}>
-                                            <img src={`${project.node.acf.thumbnail_image.localFile.url}`} alt={`${project.node.title}`} />
-                                            
-                                            <div className="work__list__project__info">
-                                                <p
-                                                    className="bold__font md__font work__list__title"
-                                                    dangerouslySetInnerHTML={{ __html: project.node.title }}
-                                                />
-                                                <p className="reg__font sm__font work__list__description"
-                      
-                                                
-                                                >{project.node.acf.subtitle}</p>
-                                            </div>
+                                           <Link to={`/project/${project.node.slug.toLowerCase()}`}>
+                                                    <img src={`${project.node.acf.thumbnail_image.localFile.url}`} alt={`${project.node.title}`} />
                                             </Link>
+                                            <div className="work__list__project__info">
+                                              <p
+                                                  className="bold__font md__font work__list__title"
+                                                  dangerouslySetInnerHTML={{ __html: project.node.title }}
+                                              />
+                                              <p 
+                                              className=" reg__font sm__font work__list__description">{project.node.acf.subtitle}</p>
+                                            </div>
+                          
                                         </div>
                                     </div> 
                         )
