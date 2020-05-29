@@ -126,14 +126,12 @@
     
 }
 .project__featured__image img{
-    transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1)!important;
+    transition: all 1.2s cubic-bezier(0.83, 0, 0.17, 1)!important;
 
 }
-.project__featured__image.scaled img{
-    transform: scale(1.1);
-}
+
 .project__featured__image:hover img{
-    transform: scale(1.05);
+    transform: scale(1.05) translateZ(0);
 }
 @media(max-width: 4000px){
     .project__featured__image .gatsby-image-wrapper{

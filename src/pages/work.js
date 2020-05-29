@@ -60,6 +60,12 @@ class ContactPage extends Component {
     const latestProjects = this.props.data.allWordpressWpProjects.edges; 
     const customStyles =
     `
+    .fixed.column__top__one{
+      position: absolute!important;
+    }
+    .fixed.column__top__two{
+      position: absolute!important;
+    }
     .hero__component {
       position: relative;
       min-height: 500px;

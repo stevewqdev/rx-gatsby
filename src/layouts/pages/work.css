@@ -21,6 +21,20 @@
     padding: 100px 0;
     overflow: hidden;
 }
+.work__list__project img{
+    transition: transform 1.2s cubic-bezier(.215,.61,.355,1);
+}
+.work__list__project a:hover img{
+    transform: scale(1.05) translateZ(0);
+}
+.work__list__project{
+    overflow: hidden;
+}
+.work__list__project__img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 .work__list__project{
     padding: 0 5px;
     height: auto;
