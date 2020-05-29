@@ -810,12 +810,21 @@ body{
   top: 0px;
   width: 100%;
 }
-#page__wrapper{
-  position: relative;
-  right: 0%;
-  z-index: 99;
-  margin-bottom: 500px;
+@media(max-width: 4000px){
+  #page__wrapper{
+    position: relative;
+    right: 0%;
+    z-index: 99;
+    margin-bottom: 500px;
+  }
 }
+@media(max-width: 2600px){
+  #page__wrapper {
+    margin-bottom: 480px;
+  }
+}
+
+
 #page__wrapper.hide{
   position: relative;
 }
@@ -1247,7 +1256,7 @@ button:hover:before{
 }
 @media(max-width: 1280px){
   #page__wrapper{
-    margin-bottom: 22%;
+    margin-bottom: 40%;
   }
 }
 @media(max-width: 1024px){
@@ -1255,7 +1264,7 @@ button:hover:before{
     max-width: 650px;
   }
   #page__wrapper {
-    margin-bottom: 53vw;
+    margin-bottom: 51vw;
   }
   .selected__projects__projects > div {
     padding: 0 3%;
@@ -1459,6 +1468,7 @@ button:hover:before{
   }
   .selected__projects {
     padding-top: 35px;
+    margin-bottom: 0px;
   }
   .selected__projects.latest__projects {
       margin-top: 35%;

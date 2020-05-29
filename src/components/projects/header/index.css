@@ -165,8 +165,9 @@
 }
 @media(max-width: 500px){
     .project__header__component{
-        position: absolute;
+        position: relative;
         padding: 140px 0 40px;
+        margin-top: -108vh;
     }
     .project__header__component .container__custom .row{
         display: flex;

@@ -189,7 +189,7 @@
 }
 @media(max-width: 500px){
     .section__one {
-        padding-top: 96%;
+        padding-top: 80px;
     }
     .section__two {
         margin-top: 20%;

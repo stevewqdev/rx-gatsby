@@ -17,3 +17,8 @@
 .lcb .section__one__image-5 {
     margin-top: 40px;
 }
+@media(max-width: 500px){
+    #section__three.lcb{
+        padding-bottom: 20px;
+    }
+}

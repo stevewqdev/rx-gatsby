@@ -96,6 +96,9 @@
     }
 }
 @media(max-width: 500px){
+    #section__one {
+        padding-top: 80px;
+    }
     .video__wrapper {
         height: 150px;
     }

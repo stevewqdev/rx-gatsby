@@ -19,28 +19,28 @@
 .section__one__image-7{
     margin-top: 40px;
 }
-#section__two{
+#section__two.smartcities{
     margin: 350px 0 100px;
 }
-.section__three__image-0{
+.smartcities.section__three__image-0{
     margin-bottom: 200px;
 }
-.section__three__image-1{
+.smartcities.section__three__image-1{
     margin-bottom: 20px;
 }
-.section__three__image-2{
+.smartcities.section__three__image-2{
     margin-bottom: 10px;
 }
 @media(max-width: 768px){
-    #section__two {
+    #section__two.smartcities {
         margin: 220px 0 100px;
     }
 }
 @media(max-width: 500px){
-    #section__two {
+    #section__two.smartcities {
         margin: 110px 0 10px;
     }
-    .section__three__image-0 {
+    .smartcities.section__three__image-0 {
         margin-bottom: 100px;
     }
 }

@@ -76,7 +76,7 @@
 }
 @media(max-width: 500px){
     .ultra #section__one{
-        margin-top: 250px;
+        margin-top: 0px;
     }
     #section__two.includes__separator.ultra {
         margin: 100px 0 0px;

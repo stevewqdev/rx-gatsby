@@ -170,7 +170,7 @@ class MinaAndJack extends Component {
                 </div>
             </section> 
 
-            <section id="section__three">
+            <section id="section__three" className="rtw">
               <div className="container container__custom">
                 <div className="row">
                   <div className="col-lg-12 no__padding"

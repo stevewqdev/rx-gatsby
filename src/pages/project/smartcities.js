@@ -247,7 +247,7 @@ class MinaAndJack extends Component {
                 </div>
             </section>
 
-            <section className="includes__separator" id="section__two">
+            <section className="includes__separator smartcities" id="section__two">
                 <div className="container container__custom">
                 <div className="row section__three__about">
                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 full__width__image no__padding">
@@ -284,7 +284,7 @@ class MinaAndJack extends Component {
                                             data-aos-delay={`${(index + 1) * 100}`}
                                             data-aos-duration="1200"
                                             className={
-                                                `no__padding col-xs-12 col-sm-12 
+                                                `smartcities no__padding col-xs-12 col-sm-12 
                                                 section__three__image-${index}
                                             
                                             `}>

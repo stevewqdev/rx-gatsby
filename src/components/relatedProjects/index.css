@@ -1,5 +1,5 @@
 .related__projects{
-    padding: 210px 0;
+    padding: 50px 0 100px;
     color: white;
     background: black;
     margin-top: 200px;
@@ -7,6 +7,26 @@
 .related__projects h3{
     position: relative;
     left: -5px;
+}
+.related__project__title a p:nth-child(1){
+    display: none;
+}
+.related__project__copy p:nth-child(1){
+    display: none;
+}
+.related__projects .gatsby-image-wrapper{
+    top: -30px;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+}
+.related__projects .separator{
+    display: none;
+}
+.related__project__copy p{
+    position: relative;
+    z-index: 3;
 }
 .related__section__title{
     margin-bottom: 80px;
@@ -34,16 +54,67 @@
     pointer-events: none;
 }
 @media(max-width: 500px){
+    .related__project__title a p:nth-child(1){
+        display: flex;
+    }
+    .related__project__copy p:nth-child(1){
+        display: flex;
+    }
     .related__projects {
-        padding: 100px 20px;
+        padding: 50px 20px 120px;
+    }
+    .related__projects .separator{
+        display: block;
+    }
+    .related__projects .row{
+        display: flex;
+    }
+    .related__projects .related__section__title{
+        order: 1;
+    }
+    .related__projects .related__project__title{
+        order: 3;
+        position: relative;
+        top: -80px;
+    }
+    .related__projects .related__project__copy{
+        order: 2;
+        display: flex;
+        flex-direction: column;
+    }
+    .related__projects .related__project__copy a{
+        order: 1;
+    }
+    .related__projects .related__project__copy .internal__info{
+        order: 3;
+        position: relative;
+        top: 75px;
+    }
+    .related__projects .related__project__copy p:nth-child(1){
+        order: 2;
+        margin-top: 20px;
+    }
+    .related__project__title a p:nth-child(2){
+        margin: 10px 0;
+    }
+    .related__projects .related__project__copy p:nth-child(2){
+        order: 3;
+        top: 10px;
+        line-height: 35px;
+    }
+    .related__projects .gatsby-image-wrapper{
+        top: 0px;
+    }
+    .related__projects h3 {
+        position: relative;
+        left: 0;
+        top: 10px;
     }
     .related__section__title {
         margin-bottom: 40px;
     }
     .related__projects {
         margin-top: 120px;
-        margin-bottom: 55px;
-        display: none;
     }
     .related__projects img {
         opacity: 1!important;

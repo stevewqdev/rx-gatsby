@@ -339,7 +339,7 @@ class MinaAndJack extends Component {
                                 data-aos-delay={`${(index + 1) * 100}`}
                                 data-aos-duration="1200"
                                 className={
-                                    `no__padding section__four__item col-xs-12 col-sm-12 col-md-9 col-lg-9
+                                    `humanified no__padding section__four__item col-xs-12 col-sm-12 col-md-9 col-lg-9
                                     section__four__image-${index}
                                 
                                 `}>
@@ -359,7 +359,7 @@ class MinaAndJack extends Component {
                                 data-aos-delay={`${(index + 1) * 100}`}
                                 data-aos-duration="1200"
                                 className={
-                                    `no__padding col-xs-12 col-sm-12 col-md-9 col-lg-9
+                                    `humanified no__padding col-xs-12 col-sm-12 col-md-9 col-lg-9
                                     section__four__image-${index}
                                 
                                 `}>
@@ -379,7 +379,7 @@ class MinaAndJack extends Component {
                                 data-aos-delay={`${(index + 1) * 100}`}
                                 data-aos-duration="1200"
                                 className={
-                                    `no__padding col-xs-12 col-sm-12 col-md-9 col-lg-9
+                                    ` humanified no__padding col-xs-12 col-sm-12 col-md-9 col-lg-9
                                     section__four__image-${index}
                                 
                                 `}>
