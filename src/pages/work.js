@@ -47,7 +47,31 @@ class ContactPage extends Component {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
     const latestProjects = this.props.data.allWordpressWpProjects.edges; 
+    const customStyles =
+    `
+    .hero__component {
+      position: relative;
+      min-height: 500px;
+      margin-top: -100vh;
+      padding-top: 150px;
+      padding-bottom: 0px;
+    }
+    .main__section__wrapper {
+      background: #000000;
+    }
+    @media (max-width: 1500px)
+      .container__custom {
+          max-width: 920px;
+      }
+    }
+    @media (max-width: 1280px)
+      .container__custom {
+          max-width: 815px;
+      }
+    }
 
+    `
+    ;
     return ( 
       <Layout>
           <Helmet>
@@ -55,7 +79,9 @@ class ContactPage extends Component {
             <meta name="description" content={ pageData.yoast_meta.yoast_wpseo_metadesc }/>
             <title>{ pageData.yoast_meta.yoast_wpseo_title }</title>
             <link rel="canonical" href={ pageData.yoast_meta.yoast_wpseo_canonical} />
+            <style>{customStyles}</style>
           </Helmet>
+          <div className="main__section__wrapper">
           <Hero 
             theme={pageAcf.section_color}
             image={pageAcf.fallback_image} 
@@ -63,9 +89,9 @@ class ContactPage extends Component {
             title={pageAcf.top_title}
             firstSubtitle={pageAcf.first_subtitle}
             secondSubtitle={pageAcf.second_subtitle}
+            classes={'workPage'}
           >
           </Hero>
-          <div className="main__section__wrapper">
           <section className="work__list">
             <div className="container container__custom">
                 <div className="row">
@@ -89,7 +115,7 @@ class ContactPage extends Component {
                                               <p
                 
                                               
-                                                  className="bold__font lg__font work__list__title"
+                                                  className="bold__font md__font work__list__title"
                                                   dangerouslySetInnerHTML={{ __html: project.node.title }}
                                               />
                                               <p 
@@ -116,7 +142,7 @@ class ContactPage extends Component {
                                             
                                             <div className="work__list__project__info">
                                                 <p
-                                                    className="bold__font lg__font work__list__title"
+                                                    className="bold__font md__font work__list__title"
                                                     dangerouslySetInnerHTML={{ __html: project.node.title }}
                                                 />
                                                 <p className="reg__font sm__font work__list__description"
