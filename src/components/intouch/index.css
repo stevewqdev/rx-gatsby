@@ -40,15 +40,12 @@ input{
     letter-spacing: 0.001em;
 }
 .form__success{
-    display: none;
     color: yellowgreen;
 }
 .form__email__wrong{
-    display: none;
     color: red;
 }
 .form__error{
-    display: none;
     color: red;
 }
 @media(max-width:768px){

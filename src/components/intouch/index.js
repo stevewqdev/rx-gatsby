@@ -16,7 +16,9 @@ const GetInTouch = props => {
     }
   `)
 
-  const [email, setEmail, SetStatus, SetMessage] = useState('');
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('');
+  const [message, setMessage] = useState('');
 
   function submitForm(e){
     handleSubmit(e); 
@@ -29,20 +31,18 @@ const GetInTouch = props => {
       if(email.match(mailformat)){
         addToMailchimp(email)
           .then((data) => {
-            document.querySelectorAll(".form__success")[0].style.display="block";
-            document.querySelectorAll(".form__email__wrong")[0].style.display="none";
-            document.querySelectorAll(".form__error")[0].style.display="none";
-            document.querySelectorAll(".email__input")[0].value = "";
+            console.log(data);
+            setStatus(data.result);
+            setMessage(data.msg);
           })
           .catch((error) => {
-            document.querySelectorAll(".form__success")[0].style.display="none";
-            document.querySelectorAll(".form__email__wrong")[0].style.display="none";
-            document.querySelectorAll(".form__error")[0].style.display="block";
+            console.log(error);
+            setStatus(error.result);
+            setMessage(error.msg);
         });
       }else{
-        document.querySelectorAll(".form__success")[0].style.display="none";
-        document.querySelectorAll(".form__email__wrong")[0].style.display="block";
-        document.querySelectorAll(".form__error")[0].style.display="none";
+        setStatus("invalid");
+        setMessage("Please, add a valid email address");
       }
 
     }
@@ -69,15 +69,32 @@ const GetInTouch = props => {
           <form onSubmit={handleSubmit}>
             <input type="email" className="lg__font dark__font bold__font email__input" name="email" placeholder="Email Address" onChange={handleEmailChange} />
             <div className="form__messages">
-              <div className="form__success form__message sm__font bold__font">
-                <p>We added your email succesfully</p>
-              </div>
-              <div className="form__email__wrong form__message sm__font bold__font">
-                <p>Please, add a valid email address</p>
-              </div>
-              <div className="form__error form__message sm__font bold__font">
-                <p>We could not add your email to our list, try again later</p>
-              </div>
+              { 
+                status === "success"
+                ?
+                <div
+                    className={`form__${status} form__message sm__font bold__font form__is__sent`}
+                    dangerouslySetInnerHTML={{ __html: message }}
+                />
+                : ""
+              }
+              { 
+                status === "error"
+                ?
+                <div
+                    className={`form__${status} form__message sm__font bold__font`}
+                    dangerouslySetInnerHTML={{ __html: message }}
+                />
+                : ""
+              }
+              { 
+                status === "invalid"
+                ?
+                <div className={`form__email__wrong form__message sm__font bold__font`}>
+                  {message}
+                </div>
+                : ""
+              }
             </div>
             <p className="dark__font md__font reg__font getintouch__subtitle submit__form" onClick={submitForm}>
               Submit
