@@ -1,7 +1,7 @@
-import React, {  useEffect } from 'react';
+import React, { useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos"
+import "aos/dist/aos.css"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import Footer from "../components/footer/index"
@@ -13,138 +13,165 @@ import "../layouts/layout.css"
 import "../fonts/stylesheet.css"
 
 const Layout = ({ children, location }) => {
-  // This function controls the redirect on the menu, to avoid a direct redirection, first closes the menu and after that it makes the redirection. 
-  function hrefRedirect(){
-    let aElements = [...document.querySelectorAll(".menu__full__screen a")]; 
+  // This function controls the redirect on the menu, to avoid a direct redirection, first closes the menu and after that it makes the redirection.
+  function hrefRedirect() {
+    let aElements = [...document.querySelectorAll(".menu__full__screen a")]
 
     aElements.forEach(element => {
-      element.addEventListener("click", function(event){
-        event.preventDefault();
-        document.querySelectorAll(".page__wrapper")[0].classList.add("on-transition");
+      element.addEventListener("click", function(event) {
+        event.preventDefault()
+        document
+          .querySelectorAll(".page__wrapper")[0]
+          .classList.add("on-transition")
 
-        let redirectLink = event.target.getAttribute("href");
+        let redirectLink = event.target.getAttribute("href")
         setTimeout(function() {
-          if(redirectLink === null){
-            window.location.href = `/`;
-          }else{
-            if(redirectLink.includes("facebook") || redirectLink.includes("twitter") || redirectLink.includes("instagram") || redirectLink.includes("behance") || redirectLink.includes("vimeo")){
-
-            }else{
-              window.location.href = `${event.target.getAttribute("href")}`;
-
+          if (redirectLink === null) {
+            window.location.href = `/`
+          } else {
+            if (
+              redirectLink.includes("facebook") ||
+              redirectLink.includes("twitter") ||
+              redirectLink.includes("instagram") ||
+              redirectLink.includes("behance") ||
+              redirectLink.includes("vimeo")
+            ) {
+            } else {
+              window.location.href = `${event.target.getAttribute("href")}`
             }
           }
-        },620);
+        }, 620)
       })
-    });
+    })
   }
   // This function adds and remove an absolute position in the main content, this way the top section hides behind the other sections
-  function removeFixed(){
-    let mainElement = document.querySelectorAll(".main__section__wrapper");
-    window.onscroll = function(){
-      var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
-      if(mainElement.length > 0){
-        if(top >= document.querySelectorAll(".main__section__wrapper")[0].offsetTop - 90){
-          document.querySelectorAll(".column__top__one")[0].classList.add("force__absolute");
-          document.querySelectorAll(".column__top__two")[0].classList.add("force__absolute");
-        }else{
-          document.querySelectorAll(".column__top__one")[0].classList.remove("force__absolute");
-          document.querySelectorAll(".column__top__two")[0].classList.remove("force__absolute");
+  function removeFixed() {
+    let mainElement = document.querySelectorAll(".main__section__wrapper")
+    window.onscroll = function() {
+      var top =
+        (window.pageYOffset || document.scrollTop) - (document.clientTop || 0)
+      if (mainElement.length > 0) {
+        if (
+          top >=
+          document.querySelectorAll(".main__section__wrapper")[0].offsetTop - 90
+        ) {
+          document
+            .querySelectorAll(".column__top__one")[0]
+            .classList.add("force__absolute")
+          document
+            .querySelectorAll(".column__top__two")[0]
+            .classList.add("force__absolute")
+        } else {
+          document
+            .querySelectorAll(".column__top__one")[0]
+            .classList.remove("force__absolute")
+          document
+            .querySelectorAll(".column__top__two")[0]
+            .classList.remove("force__absolute")
         }
       }
-    };
+    }
   }
   // This function draw all lines with class .separator that are inside a parent element with the class .includes__separator
-  function drawLines(){
-    var lines = [...document.querySelectorAll(".includes__separator")]; 
-    if(lines.length > 0){
+  function drawLines() {
+    var lines = [...document.querySelectorAll(".includes__separator")]
+    if (lines.length > 0) {
       lines.map((line, index) => {
-        var isDrawed = false; 
-        if(!isDrawed){
-          window.addEventListener("scroll", function(){
-            var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
-            let innerLine = line.querySelectorAll(".separator")[0];
-            if(innerLine){
-              if(top  > line.offsetTop + 350){ 
-                innerLine.classList.add("full");
+        var isDrawed = false
+        if (!isDrawed) {
+          window.addEventListener(
+            "scroll",
+            function() {
+              var top =
+                (window.pageYOffset || document.scrollTop) -
+                (document.clientTop || 0)
+              let innerLine = line.querySelectorAll(".separator")[0]
+              if (innerLine) {
+                if (top > line.offsetTop + 350) {
+                  innerLine.classList.add("full")
+                }
               }
-            }
-          }, {passive: true});
+            },
+            { passive: true }
+          )
         }
       })
     }
   }
   // This function handle the position of the footer, once you scroll more than 1000px the footer become fixed thiw way it reveals at the end
-  function changePositionFooter(){
-    window.addEventListener("scroll", function(){
-      var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
-      if(top > 1000){
-        document.querySelectorAll(".footer")[0].classList.add("fixed__footer");
-      }else{
-        document.querySelectorAll(".footer")[0].classList.remove("fixed__footer");
-      }
-    }, {passive: true});
+  function changePositionFooter() {
+    window.addEventListener(
+      "scroll",
+      function() {
+        var top =
+          (window.pageYOffset || document.scrollTop) - (document.clientTop || 0)
+        if (top > 1000) {
+          document.querySelectorAll(".footer")[0].classList.add("fixed__footer")
+        } else {
+          document
+            .querySelectorAll(".footer")[0]
+            .classList.remove("fixed__footer")
+        }
+      },
+      { passive: true }
+    )
   }
   // START SMOOTH SCROLLING //
-  function init(){
-    new SmoothScroll(document,90,20)
+  function init() {
+    new SmoothScroll(document, 90, 20)
   }
-  
-  function SmoothScroll(target, speed, smooth) {
 
+  function SmoothScroll(target, speed, smooth) {
     if (target === document)
-      target = (document.scrollingElement 
-                || document.documentElement 
-                || document.body.parentNode 
-                || document.body) // cross browser support for document scrolling
-        
+      target =
+        document.scrollingElement ||
+        document.documentElement ||
+        document.body.parentNode ||
+        document.body // cross browser support for document scrolling
+
     var moving = false
     var pos = target.scrollTop
-    var frame = target === document.body 
-                && document.documentElement 
-                ? document.documentElement 
-                : target // safari is the new IE
-    
-    target.addEventListener('mousewheel', scrolled, { passive: false })
-    target.addEventListener('DOMMouseScroll', scrolled, { passive: false })
-  
+    var frame =
+      target === document.body && document.documentElement
+        ? document.documentElement
+        : target // safari is the new IE
+
+    target.addEventListener("mousewheel", scrolled, { passive: false })
+    target.addEventListener("DOMMouseScroll", scrolled, { passive: false })
+
     function scrolled(e) {
-      
-      e.preventDefault(); // disable default scrolling
-  
+      e.preventDefault() // disable default scrolling
+
       var delta = normalizeWheelDelta(e)
-  
+
       pos += -delta * speed
       pos = Math.max(0, Math.min(pos, target.scrollHeight - frame.clientHeight)) // limit scrolling
-  
+
       if (!moving) update()
     }
-  
-    function normalizeWheelDelta(e){
-      
-      if(e.detail){
-        if(e.wheelDelta)
-          return e.wheelDelta/e.detail/40 * (e.detail>0 ? 1 : -1) // Opera
-        else
-          return -e.detail/3 // Firefox
-      }else
-        return e.wheelDelta/120 // IE,Safari,Chrome
+
+    function normalizeWheelDelta(e) {
+      if (e.detail) {
+        if (e.wheelDelta)
+          return (e.wheelDelta / e.detail / 40) * (e.detail > 0 ? 1 : -1)
+        // Opera
+        else return -e.detail / 3 // Firefox
+      } else return e.wheelDelta / 120 // IE,Safari,Chrome
     }
-  
+
     function update() {
       moving = true
-      
+
       var delta = (pos - target.scrollTop) / smooth
-      
+
       target.scrollTop += delta
-      
-      if (Math.abs(delta) > 0.5)
-        requestFrame(update)
-      else
-        moving = false
+
+      if (Math.abs(delta) > 0.5) requestFrame(update)
+      else moving = false
     }
-  
-    var requestFrame = function() { // requestAnimationFrame cross browser
+
+    var requestFrame = (function() {
+      // requestAnimationFrame cross browser
       return (
         window.requestAnimationFrame ||
         window.webkitRequestAnimationFrame ||
@@ -152,33 +179,31 @@ const Layout = ({ children, location }) => {
         window.oRequestAnimationFrame ||
         window.msRequestAnimationFrame ||
         function(func) {
-          window.setTimeout(func, 1000 / 50);
+          window.setTimeout(func, 1000 / 50)
         }
-      );
-    }()
+      )
+    })()
   }
   // ENDS SMOOTH SCROLLING //
 
   // Add shareable Link
-  function addShareLink(){
+  function addShareLink() {
     Array.from(document.querySelectorAll(".share__project")).map(element => {
-      element.dataset.sharelink = window.location.href;
+      element.dataset.sharelink = window.location.href
 
-      element.addEventListener("click", function(e){
-        var textarea = document.createElement("textarea");
-        textarea.textContent = e.target.getAttribute("data-sharelink");
-        textarea.style.position = "fixed";  // Prevent scrolling to bottom of page in Microsoft Edge.
-        document.body.appendChild(textarea);
-        textarea.select();
+      element.addEventListener("click", function(e) {
+        var textarea = document.createElement("textarea")
+        textarea.textContent = e.target.getAttribute("data-sharelink")
+        textarea.style.position = "fixed" // Prevent scrolling to bottom of page in Microsoft Edge.
+        document.body.appendChild(textarea)
+        textarea.select()
         try {
-            return document.execCommand("copy");  // Security exception may be thrown by some browsers.
-        }
-        catch (ex) {
-            console.warn("Copy to clipboard failed.", ex);
-            return false;
-        }
-        finally {
-            document.body.removeChild(textarea);
+          return document.execCommand("copy") // Security exception may be thrown by some browsers.
+        } catch (ex) {
+          console.warn("Copy to clipboard failed.", ex)
+          return false
+        } finally {
+          document.body.removeChild(textarea)
         }
       })
     })
@@ -186,21 +211,20 @@ const Layout = ({ children, location }) => {
 
   useEffect(() => {
     if (window.innerWidth > 768) {
-      init();
+      init()
     }
-    removeFixed();
-    drawLines();
-    hrefRedirect();
-    changePositionFooter();
-    addShareLink();
+    removeFixed()
+    drawLines()
+    hrefRedirect()
+    changePositionFooter()
+    addShareLink()
     AOS.init({
-      disable: 'mobile', 
+      disable: "mobile",
       mirror: true,
       once: true, // whether animation should happen only once - while scrolling down
       mirror: true, // whether elements should animate out while scrolling past them
-    });
-
-  });
+    })
+  })
   // Next query will return the site data, the master acf fields for whole website data, the logo and the favicon.
   const data = useStaticQuery(graphql`
     query {
@@ -276,7 +300,6 @@ const Layout = ({ children, location }) => {
       <Helmet>
         <link rel="icon" href={siteFavicon} />
         <html lang="en" />
-        
       </Helmet>
       <Cursor></Cursor>
       <MainFloatingMenu
@@ -285,17 +308,17 @@ const Layout = ({ children, location }) => {
         siteAcf={siteDataAcf}
       ></MainFloatingMenu>
       <div className="page__wrapper" id="page__wrapper">
-      <MainFloatingScreen siteLogo={siteLogo} siteAcf={siteDataAcf}></MainFloatingScreen>
-      <div id="top"></div>
-      <main>
-        
-        {children}
-      </main>
-      
-      <Footer
-        copyright={siteDataAcf.copyright_info}
-        menu={legalMenu}
-      ></Footer>
+        <MainFloatingScreen
+          siteLogo={siteLogo}
+          siteAcf={siteDataAcf}
+        ></MainFloatingScreen>
+        <div id="top"></div>
+        <main>{children}</main>
+
+        <Footer
+          copyright={siteDataAcf.copyright_info}
+          menu={legalMenu}
+        ></Footer>
       </div>
     </>
   )

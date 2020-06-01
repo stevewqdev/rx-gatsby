@@ -1218,7 +1218,24 @@ button:after{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
+}
+button.inner__post__return__button:before{
+  content: "Go Back";
+}
+button.inner__post__return__button:after{
+  content: "Go Back";
+}
+button.page__button:before{
+  display: none;
+}
+button.page__button{
+  width: auto;
+  height: auto;
+  opacity: 1;
+  color: black;
+}
+button.page__button:after{
+  display: none;
 }
 button:hover:after{
   left: 0px;

@@ -9,16 +9,26 @@ export default class MainMenuFloatingScreen extends Component {
   toggleMenu() {
     document.getElementById("page__wrapper").classList.remove("hide")
     document.getElementById("menu__full__screen").classList.remove("show")
-    document.querySelectorAll(".main__floating__menu .brand__menu")[0].classList.remove("hidden");
-    document.querySelectorAll(".menu__full__screen .brand__menu")[0].classList.add("hidden");
-    document.querySelectorAll("#menu__full__screen .menu__separator")[0].classList.remove("full");
+    document
+      .querySelectorAll(".main__floating__menu .brand__menu")[0]
+      .classList.remove("hidden")
+    document
+      .querySelectorAll(".menu__full__screen .brand__menu")[0]
+      .classList.add("hidden")
+    document
+      .querySelectorAll("#menu__full__screen .menu__separator")[0]
+      .classList.remove("full")
   }
-  componentDidMount(){
-    [...document.querySelectorAll("a")].map(item => {
-      item.addEventListener("click", this.toggleMenu);
-      document.querySelectorAll(".main__floating__menu .brand__menu")[0].classList.remove("hidden");
-      document.querySelectorAll(".menu__full__screen .brand__menu")[0].classList.add("hidden");
-    }) 
+  componentDidMount() {
+    ;[...document.querySelectorAll("a")].map(item => {
+      item.addEventListener("click", this.toggleMenu)
+      document
+        .querySelectorAll(".main__floating__menu .brand__menu")[0]
+        .classList.remove("hidden")
+      document
+        .querySelectorAll(".menu__full__screen .brand__menu")[0]
+        .classList.add("hidden")
+    })
   }
   render() {
     return (
@@ -27,9 +37,7 @@ export default class MainMenuFloatingScreen extends Component {
           className="container-fluid fixed menu__full__screen  floating__web__info  full__height sm__font"
           id="menu__full__screen"
         >
-          <div className="lateral__click" onClick={this.toggleMenu}>
-
-          </div>
+          <div className="lateral__click" onClick={this.toggleMenu}></div>
           <div className="row">
             <div
               className="col-xs-12 col-sm-2 col-md-2 col-lg-2 brand relative"
@@ -37,18 +45,19 @@ export default class MainMenuFloatingScreen extends Component {
             >
               <div className="fixed">
                 <div className="brand__logo">
-                <a href="/">
+                  <a href="/">
                     <img
                       src={this.props.siteLogo.source_url}
                       alt={this.props.siteLogo.title}
                     />
-                </a>
+                  </a>
                 </div>
-                <div className="brand__menu bold__font "  onClick={this.toggleMenu} role="button">
-                  <div
-                    className="brand__menu__toggle --opened d-flex align-items-center"
-                   
-                  >
+                <div
+                  className="brand__menu bold__font "
+                  onClick={this.toggleMenu}
+                  role="button"
+                >
+                  <div className="brand__menu__toggle --opened d-flex align-items-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="23.309"
@@ -86,8 +95,8 @@ export default class MainMenuFloatingScreen extends Component {
             <div className="col-xs-12 col-sm-4 col-md-4 main__page__menu col-lg-4 relative d-flex align-items-center">
               <MainMenu customClass="floating-menu"></MainMenu>
               <div
-                  className="sm__font reg__font menu__agreements"
-                  dangerouslySetInnerHTML={{ __html: this.props.agreements }}
+                className="sm__font reg__font menu__agreements"
+                dangerouslySetInnerHTML={{ __html: this.props.agreements }}
               />
             </div>
             <div className="col-xs-6 col-sm-2 col-md-2 col-lg-2 relative copy__one__column sm__font reg__font">
@@ -119,7 +128,10 @@ export default class MainMenuFloatingScreen extends Component {
                   <p className="md__font bold__font menu__section__title">
                     Social Media
                   </p>
-                  <SocialMenu fontSize="sm__font no__decoration" layout={"full__screen__menu"}></SocialMenu>
+                  <SocialMenu
+                    fontSize="sm__font no__decoration"
+                    layout={"full__screen__menu"}
+                  ></SocialMenu>
                 </div>
               </div>
             </div>

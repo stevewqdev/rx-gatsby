@@ -3,7 +3,7 @@ import Layout from "../layouts/index"
 import { graphql } from "gatsby"
 import Hero from "../components/hero/index"
 import SocialMenu from "../components/socialMenu"
-import {Helmet} from "react-helmet";
+import {Helmet} from "react-helmet"; 
 
 import "../layouts/pages/contact.css"
 

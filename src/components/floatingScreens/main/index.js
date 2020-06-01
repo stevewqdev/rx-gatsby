@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import SocialMenu from "../../socialMenu/index"
-import { Link } from "gatsby"
 
 import "../../floatingScreens/floatingScreens.css"
 
@@ -8,11 +7,16 @@ export default class MainFloatingScreen extends Component {
   toggleMenu() {
     document.getElementById("page__wrapper").classList.add("hide")
     document.getElementById("menu__full__screen").classList.add("show")
-    document.querySelectorAll(".main__floating__menu .brand__menu")[0].classList.add("hidden");
-    document.querySelectorAll(".menu__full__screen .brand__menu")[0].classList.remove("hidden");
-    setTimeout(function(){
-      document.querySelectorAll("#menu__full__screen .menu__separator")[0].classList.add("full");
-
+    document
+      .querySelectorAll(".main__floating__menu .brand__menu")[0]
+      .classList.add("hidden")
+    document
+      .querySelectorAll(".menu__full__screen .brand__menu")[0]
+      .classList.remove("hidden")
+    setTimeout(function() {
+      document
+        .querySelectorAll("#menu__full__screen .menu__separator")[0]
+        .classList.add("full")
     }, 700)
   }
   render() {
@@ -25,27 +29,29 @@ export default class MainFloatingScreen extends Component {
               id="brand"
             >
               <div className="fixed">
-                <div  className="brand__logo"
-                      data-aos="fade-up"
-                      data-aos-easing="ease-in-back"
-                      data-aos-delay="450"
-                      data-aos-duration="1200"
+                <div
+                  className="brand__logo"
+                  data-aos="fade-up"
+                  data-aos-easing="ease-in-back"
+                  data-aos-delay="450"
+                  data-aos-duration="1200"
                 >
-                <a href="/">
+                  <a href="/">
                     <img
                       src={this.props.siteLogo.source_url}
                       alt={this.props.siteLogo.title}
                     />
-                </a>
+                  </a>
                 </div>
                 <div className="brand__menu bold__font ">
                   <div
                     data-aos="fade-up"
                     data-aos-easing="ease-in-back"
                     data-aos-delay="550"
-                      data-aos-duration="1200"
+                    data-aos-duration="1200"
                     className="brand__menu__toggle --closed d-flex align-items-center"
-                    onClick={this.toggleMenu} role="button"
+                    onClick={this.toggleMenu}
+                    role="button"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -124,16 +130,16 @@ export default class MainFloatingScreen extends Component {
               className="col col-xs-12 col-sm-2 col-md-2 col-lg-2 relative copyright__column reg__font mobile-hidden"
               id="copyright__column"
             >
-              <div className="fixed copyright__inner"
-
-              >
+              <div className="fixed copyright__inner">
                 <p
                   data-aos="fade-up"
                   data-aos-easing="ease-in-back"
                   data-aos-delay="800"
                   data-aos-duration="1200"
                   data-aos-anchor="top"
-                >{this.props.siteAcf.copyright_info}</p>
+                >
+                  {this.props.siteAcf.copyright_info}
+                </p>
               </div>
             </div>
           </div>

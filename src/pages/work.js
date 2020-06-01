@@ -176,26 +176,26 @@ export default ContactPage
 
 export const pageQuery = graphql`
 query WorkQuery {
-    allWordpressWpProjects{
-        edges {
-            node {
-                title
-                slug
-                acf {
-                    subtitle
-                    thumbnail_image {
-                      localFile {
-                          url
-                      }
-                    }
-                    featured_image {
-                        localFile {
-                            url
-                        }
-                    }
-                }
+    allWordpressWpProjects(sort: {fields: date}) {
+      edges {
+        node {
+          title
+          slug
+          acf {
+            subtitle
+            thumbnail_image {
+              localFile {
+                url
+              }
             }
+            featured_image {
+              localFile {
+                url
+              }
+            }
+          }
         }
+      }
     }
     allWordpressPage(filter: {slug: {eq: "work"}}) {
       edges {

@@ -34,10 +34,9 @@ const SocialMenu = props => {
           className={`brand__social__network --${network.network} ${layoutType} social-${index}`}
           id={`${network.network}`}
           key={index}
-
           data-aos="fade-up"
           data-aos-easing="ease-in-back"
-          data-aos-delay={`${(index + 1 )* 100}`}
+          data-aos-delay={`${(index + 1) * 100}`}
           data-aos-offset="0"
           data-aos-duration="1200"
         >
@@ -64,7 +63,9 @@ const SocialMenu = props => {
             {/* If layout is full__screen__menu we only show the the network name */}
             {layoutType === "full__screen__menu" ? (
               <>
-                <p className={props.fontSize ? props.fontSize : "reg__font"}>{network.network}</p>
+                <p className={props.fontSize ? props.fontSize : "reg__font"}>
+                  {network.network}
+                </p>
               </>
             ) : (
               ""

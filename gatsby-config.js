@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: `Raxo`,
     description: `Branding - Design - Development`,
-    author: `@gatsbyjs`,
+    author: `RAXO TEAM`,
   },
   plugins: [
     {
@@ -13,11 +13,11 @@ module.exports = {
         fonts: [
           {
             family: `Roboto Mono`,
-            variants: [`400`, `700`]
+            variants: [`400`, `700`],
           },
           {
             family: `Roboto`,
-            subsets: [`latin`]
+            subsets: [`latin`],
           },
         ],
       },
@@ -30,7 +30,7 @@ module.exports = {
         // should be a stringified object or object
         //
         // Defaults to null
-        defaultDataLayer: function () {
+        defaultDataLayer: function() {
           return {
             pageType: window.pageType,
           }
@@ -38,9 +38,10 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-mailchimp',
+      resolve: "gatsby-plugin-mailchimp",
       options: {
-        endpoint: 'https://raxo.us18.list-manage.com/subscribe/post?u=0a73a5fcd4be545fba0c4bac9&amp;id=d80e65e5f2',
+        endpoint:
+          "https://raxo.us18.list-manage.com/subscribe/post?u=0a73a5fcd4be545fba0c4bac9&amp;id=d80e65e5f2",
       },
     },
     {

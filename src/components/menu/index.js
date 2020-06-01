@@ -16,7 +16,6 @@ const MainMenu = props => {
               classes
               attr_title
               wordpress_id
-
             }
           }
         }
@@ -33,20 +32,15 @@ const MainMenu = props => {
   }
 
   return (
-    <div className={`includes__separator ${props.customClass}`} id={menuId}
-
-    >
-      {
-        props.customClass === "floating-menu"
-        ? <div className="menu__separator --black"></div>
-        : ""
-      }
+    <div className={`includes__separator ${props.customClass}`} id={menuId}>
+      {props.customClass === "floating-menu" ? (
+        <div className="menu__separator --black"></div>
+      ) : (
+        ""
+      )}
       {menuItems.map((menuItem, index) => (
-        <p key={index}
-
-        >
-          <Link to={menuItem.url} key={`${index + 1}-${menuItems.length}`}
-          >
+        <p key={index}>
+          <Link to={menuItem.url} key={`${index + 1}-${menuItems.length}`}>
             {menuItem.title}
           </Link>
           {/* {menuItem.child_items
