@@ -328,7 +328,7 @@ class MinaAndJack extends Component {
                   </div>
                   <div className="row gallery">
                     {
-                        pageAcf.sthree_gallery.map((image,index) => 
+                        pageAcf.humanified_sthree_gallery.map((image,index) => 
                         <>
                         {
                             index === 0
