@@ -547,7 +547,7 @@ query HumanifiedPageQuery {
                     url
                 }
             }
-            sthree_gallery{
+            humanified_sthree_gallery{
                 image{
                     localFile {
                         childImageSharp {
