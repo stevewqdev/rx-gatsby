@@ -1,0 +1,27 @@
+.pluto-tv .about{
+    margin: 140px 0;
+}
+.pluto-tv #single__one .image-1, .pluto-tv #single__two .image-1{
+    margin: 160px 0 -100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+.pluto-tv #single__one .image-1 img, .pluto-tv #single__two .image-1 img{
+    width: 75%;
+    margin: auto;
+}
+@media(max-width: 500px){
+    .pluto-tv #single__one .image-1 img, .pluto-tv #single__two .image-1 img{
+        width: 100%;
+        margin: auto;
+    }
+    .pluto-tv #single__one .image-1, .pluto-tv #single__two .image-1{
+        margin: 50px 0 20px;
+    }
+    .pluto-tv .about{
+        margin: 50px 0;
+    }
+}

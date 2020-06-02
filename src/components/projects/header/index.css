@@ -81,7 +81,19 @@
     background: #d42027;
     color: white;
 }
+.project__header__component.c-be7e9a{
+    background: #be7e9a;
+    color: white;
+}
+.project__header__component.c-1c1c1c{
+    background: #1c1c1c;
+    color: white;
+}
 
+.project__header__component.c-046cdb{
+    background: #046cdb;
+    color: white;
+}
 .project__header__component .hero__title {
     margin-top: 20px;
 }
