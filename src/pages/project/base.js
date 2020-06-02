@@ -55,7 +55,7 @@ class Base extends Component {
                         
                         </div>
                         {
-                            pageAcf.sone_gallery.map((image, index) => 
+                            pageAcf.base_sone_gallery.map((image, index) => 
                             <div
                             data-aos="fade-up"
                             data-aos-easing="ease-in-back"
@@ -82,7 +82,7 @@ class Base extends Component {
                         }
                         <div className="col-lg-3 copy no__padding"></div>
                         {
-                            pageAcf.stwo_gallery.map((image, index) => 
+                            pageAcf.base_stwo_gallery.map((image, index) => 
                             <div
                             data-aos="fade-up"
                             data-aos-easing="ease-in-back"
@@ -122,12 +122,12 @@ class Base extends Component {
                                 <h1
 
                                     className="xxl__font"
-                                    dangerouslySetInnerHTML={{ __html: pageAcf.stwo_about }}
+                                    dangerouslySetInnerHTML={{ __html: pageAcf.base_stwo_about }}
                                 />
                             </div>
                         </div>
                         {
-                            pageAcf.sthree_gallery.map((image, index) => 
+                            pageAcf.base_sthree_gallery.map((image, index) => 
                             <>
                                 {
                                     index === 1
@@ -217,13 +217,11 @@ query BasePageQuery {
                 }
             }           
             project_background
-            sone_copy
-            sone_gallery
-            stwo_copy
-            stwo_gallery
-            stwo_about
-            sthree_copy
-            sthree_gallery
+            base_sone_copy
+            base_sone_gallery
+            base_stwo_gallery
+            base_stwo_about
+            base_sthree_gallery
           }
           
           yoast_meta {

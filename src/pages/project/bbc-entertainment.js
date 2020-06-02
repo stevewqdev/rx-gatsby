@@ -51,7 +51,7 @@ class BbcEntertainment extends Component {
                         
                         </div>
                         {
-                            pageAcf.sone_gallery.map((image, index) => 
+                            pageAcf.bbce_sone_gallery.map((image, index) => 
                             <>
                                 {
                                     index === 4
@@ -94,7 +94,7 @@ class BbcEntertainment extends Component {
                         }
                         <div className="col-lg-3 copy no__padding"></div>
                         {
-                            pageAcf.stwo_gallery.map((image, index) => 
+                            pageAcf.bbce_stwo_gallery.map((image, index) => 
                             <>
                                 {
                                     index === 3
@@ -155,18 +155,18 @@ class BbcEntertainment extends Component {
                                 <h1
 
                                     className="xxl__font"
-                                    dangerouslySetInnerHTML={{ __html: pageAcf.stwo_about }}
+                                    dangerouslySetInnerHTML={{ __html: pageAcf.bbce_stwo_about }}
                                 />
                             </div>
                         </div>
 
                         <div
                             className="simple__copy sm__font reg__font two__columns__copy"
-                            dangerouslySetInnerHTML={{ __html: pageAcf.sthree_copy }}
+                            dangerouslySetInnerHTML={{ __html: pageAcf.bbce_sthree_copy }}
                         />
 
                         {
-                            pageAcf.sthree_gallery.map((image, index) => 
+                            pageAcf.bbce_sthree_gallery.map((image, index) => 
                             <>
 
                                 <div
@@ -252,13 +252,11 @@ query BbcEntertainmentPageQuery {
                 }
             }           
             project_background
-            sone_copy
-            sone_gallery
-            stwo_copy
-            stwo_gallery
-            stwo_about
-            sthree_copy
-            sthree_gallery
+            bbce_sone_gallery
+            bbce_stwo_gallery
+            bbce_stwo_about
+            bbce_sthree_copy
+            bbce_sthree_gallery
           }
           
           yoast_meta {

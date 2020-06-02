@@ -51,7 +51,7 @@ class FusionBeauty extends Component {
                         
                         </div>
                         {
-                            pageAcf.sone_gallery.map((image, index) => 
+                            pageAcf.fusion_sone_gallery.map((image, index) => 
                             <>
 
                                 {
@@ -94,7 +94,7 @@ class FusionBeauty extends Component {
                         }
                         <div className="col-lg-3 copy no__padding"></div>
                         {
-                            pageAcf.stwo_gallery.map((image, index) => 
+                            pageAcf.fusion_stwo_gallery.map((image, index) => 
                             <>
                                 {
                                     index === 3
@@ -146,18 +146,18 @@ class FusionBeauty extends Component {
                                 <h1
 
                                     className="xxl__font"
-                                    dangerouslySetInnerHTML={{ __html: pageAcf.stwo_about }}
+                                    dangerouslySetInnerHTML={{ __html: pageAcf.fusion_stwo_about }}
                                 />
                             </div>
                         </div>
 
                         <div
                             className="simple__copy sm__font reg__font two__columns__copy"
-                            dangerouslySetInnerHTML={{ __html: pageAcf.sthree_copy }}
+                            dangerouslySetInnerHTML={{ __html: pageAcf.fusion_sthree_copy }}
                         />
 
                         {
-                            pageAcf.sthree_gallery.map((image, index) => 
+                            pageAcf.fusion_sthree_gallery.map((image, index) => 
                             <>
                                 {
                                     index === 1
@@ -256,13 +256,11 @@ query FusionBeautyPageQuery {
                 }
             }           
             project_background
-            sone_copy
-            sone_gallery
-            stwo_copy
-            stwo_gallery
-            stwo_about
-            sthree_copy
-            sthree_gallery
+            fusion_sone_gallery
+            fusion_stwo_gallery
+            fusion_stwo_about
+            fusion_sthree_copy
+            fusion_sthree_gallery
           }
           
           yoast_meta {

@@ -55,7 +55,7 @@ class PlutoTv extends Component {
                         
                         </div>
                         {
-                            pageAcf.sone_gallery.map((image, index) => 
+                            pageAcf.plutotv_sone_gallery.map((image, index) => 
                             <>  
                                 {
                                     index === 3
@@ -97,7 +97,7 @@ class PlutoTv extends Component {
                             )
                         }
                         {
-                            pageAcf.stwo_gallery.map((image, index) => 
+                            pageAcf.plutotv_stwo_gallery.map((image, index) => 
                             <>
                             
                                 <div
@@ -141,12 +141,12 @@ class PlutoTv extends Component {
                                 <h1
 
                                     className="xxl__font"
-                                    dangerouslySetInnerHTML={{ __html: pageAcf.stwo_about }}
+                                    dangerouslySetInnerHTML={{ __html: pageAcf.plutotv_stwo_about }}
                                 />
                             </div>
                         </div>
                         {
-                            pageAcf.sthree_gallery.map((image, index) => 
+                            pageAcf.plutotv_sthree_gallery.map((image, index) => 
                             <>
                                 {
                                     index === 1
@@ -239,13 +239,10 @@ query PlutoTvPageQuery {
                 }
             }           
             project_background
-            sone_copy
-            sone_gallery
-            stwo_copy
-            stwo_gallery
-            stwo_about
-            sthree_copy
-            sthree_gallery
+            plutotv_sone_gallery
+            plutotv_stwo_gallery
+            plutotv_stwo_about
+            plutotv_sthree_gallery
           }
           
           yoast_meta {

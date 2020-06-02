@@ -55,7 +55,7 @@ class BbcHd extends Component {
                         
                         </div>
                         {
-                            pageAcf.sone_gallery.map((image, index) => 
+                            pageAcf.bbchd_sone_gallery.map((image, index) => 
                             <>  
                                 {
                                     index === 3
@@ -100,7 +100,7 @@ class BbcHd extends Component {
                             )
                         }
                         {
-                            pageAcf.stwo_gallery.map((image, index) => 
+                            pageAcf.bbchd_stwo_gallery.map((image, index) => 
                             <>
                             
                                 <div
@@ -146,12 +146,12 @@ class BbcHd extends Component {
                                 <h1
 
                                     className="xxl__font"
-                                    dangerouslySetInnerHTML={{ __html: pageAcf.stwo_about }}
+                                    dangerouslySetInnerHTML={{ __html: pageAcf.bbchd_stwo_about }}
                                 />
                             </div>
                         </div>
                         {
-                            pageAcf.sthree_gallery.map((image, index) => 
+                            pageAcf.bbchd_sthree_gallery.map((image, index) => 
                             <>
                                 {
                                     index === 1
@@ -248,13 +248,11 @@ query BbcHdPageQuery {
                 }
             }           
             project_background
-            sone_copy
-            sone_gallery
-            stwo_copy
-            stwo_gallery
-            stwo_about
-            sthree_copy
-            sthree_gallery
+            bbchd_sone_copy
+            bbchd_sone_gallery
+            bbchd_stwo_gallery
+            bbchd_stwo_about
+            bbchd_sthree_gallery
           }
           
           yoast_meta {

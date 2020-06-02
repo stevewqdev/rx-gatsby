@@ -51,7 +51,7 @@ class AllocateRite extends Component {
                         
                         </div>
                         {
-                            pageAcf.sone_gallery.map((image, index) => 
+                            pageAcf.allocaterite_sone_gallery.map((image, index) => 
                             <>
                                 {
                                     index === 4
@@ -94,7 +94,7 @@ class AllocateRite extends Component {
                         }
                         <div className="col-lg-3 copy no__padding"></div>
                         {
-                            pageAcf.stwo_gallery.map((image, index) => 
+                            pageAcf.allocaterite_stwo_gallery.map((image, index) => 
                             <>
                                 {
                                     index === 3
@@ -155,12 +155,12 @@ class AllocateRite extends Component {
                                 <h1
 
                                     className="xxl__font"
-                                    dangerouslySetInnerHTML={{ __html: pageAcf.stwo_about }}
+                                    dangerouslySetInnerHTML={{ __html: pageAcf.allocaterite_stwo_about }}
                                 />
                             </div>
                         </div>
                         {
-                            pageAcf.sthree_gallery.map((image, index) => 
+                            pageAcf.allocaterite_sthree_gallery.map((image, index) => 
                             <>
                                 {
                                     index === 1
@@ -259,13 +259,10 @@ query AllocateRitePageQuery {
                 }
             }           
             project_background
-            sone_copy
-            sone_gallery
-            stwo_copy
-            stwo_gallery
-            stwo_about
-            sthree_copy
-            sthree_gallery
+            allocaterite_sone_gallery
+            allocaterite_stwo_gallery
+            allocaterite_stwo_about
+            allocaterite_sthree_gallery
           }
           
           yoast_meta {

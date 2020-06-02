@@ -49,7 +49,7 @@ class HugoBoss extends Component {
                     <div className="row one">
 
                         {
-                            pageAcf.sone_gallery.map((image, index) => 
+                            pageAcf.hugoboss_sone_gallery.map((image, index) => 
                             <>
                                 {
                                     index === 0
@@ -57,7 +57,7 @@ class HugoBoss extends Component {
                                     <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy no__padding">
                                         <div
                                         className="simple__copy sm__font reg__font"
-                                        dangerouslySetInnerHTML={{ __html: pageAcf.sone_copy }}
+                                        dangerouslySetInnerHTML={{ __html: pageAcf.hugoboss_sone_copy }}
                                         />
                                     </div>
                                     : ""
@@ -105,7 +105,7 @@ class HugoBoss extends Component {
                         }
                         <div className="col-lg-3 copy no__padding"></div>
                         {
-                            pageAcf.stwo_gallery.map((image, index) => 
+                            pageAcf.hugoboss_stwo_gallery.map((image, index) => 
                             <div
                             data-aos="fade-up"
                             data-aos-easing="ease-in-back"
@@ -145,12 +145,12 @@ class HugoBoss extends Component {
                                 <h1
 
                                     className="xxl__font"
-                                    dangerouslySetInnerHTML={{ __html: pageAcf.stwo_about }}
+                                    dangerouslySetInnerHTML={{ __html: pageAcf.hugoboss_stwo_about }}
                                 />
                             </div>
                         </div>
                         {
-                            pageAcf.sthree_gallery.map((image, index) => 
+                            pageAcf.hugoboss_sthree_gallery.map((image, index) => 
                             <>
                                 {
                                     index === 1
@@ -240,13 +240,11 @@ query HugoBossPageQuery {
                 }
             }           
             project_background
-            sone_copy
-            sone_gallery
-            stwo_copy
-            stwo_gallery
-            stwo_about
-            sthree_copy
-            sthree_gallery
+            hugoboss_sone_copy
+            hugoboss_sone_gallery
+            hugoboss_stwo_gallery
+            hugoboss_stwo_about
+            hugoboss_sthree_gallery
           }
           
           yoast_meta {
