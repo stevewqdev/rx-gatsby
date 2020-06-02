@@ -1,0 +1,32 @@
+.bbc-hd .single__project .image__from__gallery{
+    margin: 15px 0;
+}
+.bbc-hd .about{
+    margin: 70px 0 100px 0;
+}
+.bbc-hd .p-5{
+    padding: 0 3px 0 0!important;
+}
+.bbc-hd .p-5.inverse{
+    padding: 0 0 0 3px!important;
+}
+.bbc-hd .p-15{
+    padding: 0 15px 0 0!important;
+}
+.bbc-hd .p-15.inverse{
+    padding: 0 0 0 15px!important;
+}
+@media(max-width: 500px){
+    .bbc-hd .p-5{
+        padding: 0 0px 0 0!important;
+    }
+    .bbc-hd .p-5.inverse{
+        padding: 0 0 0 0px!important;
+    }
+    .bbc-hd .p-15{
+        padding: 0 0px 0 0!important;
+    }
+    .bbc-hd .p-15.inverse{
+        padding: 0 0 0 0px!important;
+    }   
+}

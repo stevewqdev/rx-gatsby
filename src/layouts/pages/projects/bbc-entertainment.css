@@ -1,0 +1,41 @@
+.bbc-entertainment #single__one {
+    padding-top: 100px;
+}
+.bbc-entertainment .single__project .image__from__gallery{
+    margin: 15px 0;
+}
+.bbc-entertainment #single__two {
+    margin: 15px 15px;
+}
+.bbc-entertainment .p-15{
+    padding: 0 15px 0 0;
+}
+.bbc-entertainment .p-15.inverse{
+    padding: 0 0 0 15px;
+}
+.bbc-entertainment .about{
+    margin: 150px 0 150px 0;
+}
+.bbc-entertainment .two__columns__copy{
+    margin-bottom: 15px;
+}
+@media(max-width: 500px){
+    .bbc-entertainment #single__one {
+        padding-top: 80px;
+    } 
+    .bbc-entertainment .p-15{
+        padding: 0 0px 0 0;
+    }
+    .bbc-entertainment .p-15.inverse{
+        padding: 0 0 0 0px;
+    }
+    .bbc-entertainment .about{
+        margin: 50px 0 50px 0;
+    }
+    .bbc-entertainment .two__columns__copy{
+        margin-bottom: 0px;
+    }
+    .bbc-entertainment .two__columns__copy img{
+        margin: 25px 0;
+    }
+}

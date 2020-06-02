@@ -640,6 +640,7 @@ body{
 .col-xs-3{
   width: 25%;
 }
+
 @media(max-width: 4000px){
   /* .project__template .container__custom{
     padding: 0 10%;
@@ -724,6 +725,12 @@ body{
   }
 
 }
+#single__one{
+  padding-top: 200px;
+}
+#single__one .simple__copy{
+  margin-bottom: 50px;
+}
 @media(max-width: 2000px)
 {
   .selected__projects {
@@ -800,7 +807,7 @@ body{
   font-family: MarkPro;
 }
 .simple__copy p{
-  max-width: 300px;
+  max-width: 250px;
 }
 .mix__blend__screen{
   mix-blend-mode: screen!important;
@@ -964,6 +971,12 @@ section#one{
   .raxo__rx__svg img{
     height: 65%;
     display: block;
+  }
+  #single__one{
+    padding-top: 80px;
+  }
+  #single__one .simple__copy{
+    margin-bottom: 30px;
   }
 }
 /* Featured video Component */

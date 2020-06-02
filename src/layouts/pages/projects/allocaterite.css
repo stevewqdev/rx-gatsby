@@ -1,0 +1,14 @@
+.allocaterite #single__one {
+    padding-top: 100px;
+}
+.allocaterite .single__project .image__from__gallery{
+    margin: 25px 0;
+}
+.allocaterite .about{
+    margin: 70px 0 100px 0;
+}
+@media(max-width: 500px){
+    .allocaterite #single__one {
+        padding-top: 80px;
+    } 
+}

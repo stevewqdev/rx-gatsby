@@ -1,0 +1,14 @@
+.clearvuze .single__project .image__from__gallery{
+    margin: 50px 0;
+}
+.clearvuze .about{
+    margin: 150px 0;
+}
+@media(max-width: 500px){
+    .clearvuze .single__project .image__from__gallery{
+        margin: 20px 0;
+    }
+    .clearvuze .about{
+        margin: 50px 0;
+    }
+}

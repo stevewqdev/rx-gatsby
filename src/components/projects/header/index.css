@@ -25,6 +25,10 @@
     background: #000000;
     color: white;
 }
+.project__header__component.c-050505{
+    background: #050505;
+    color: white;
+}
 .project__header__component.c-f8604d{
     background: #f8604d;
     color: white;
@@ -39,6 +43,22 @@
 }
 .project__header__component.c-233264{
     background: #233264;
+    color: white;
+}
+.project__header__component.c-060e14{
+    background: #060e14;
+    color: white;
+}
+.project__header__component.c-3c1c6d{
+    background: #3c1c6d;
+    color: white;
+}
+.project__header__component.c-060e14{
+    background: #060e14;
+    color: white;
+}
+.project__header__component.c-3524f5{
+    background: #3524f5;
     color: white;
 }
 .project__header__component.c-00b4a2{
