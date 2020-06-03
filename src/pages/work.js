@@ -126,7 +126,12 @@ class ContactPage extends Component {
                                         
                                         >
                                             <Link to={`/project/${project.node.slug.toLowerCase()}`}>
-                                                    <img src={`${project.node.acf.thumbnail_image.localFile.url}`} alt={`${project.node.title}`} />
+                                              {
+                                                project.node.acf.thumbnail_image !== null
+                                                ? <img src={`${project.node.acf.thumbnail_image.localFile.url}`} alt={`${project.node.title}`} />
+                                                : ""
+                                              }
+                                                
                                             </Link>
                                             <div className="work__list__project__info">
                                               <p
@@ -149,7 +154,11 @@ class ContactPage extends Component {
                                         
                                         >
                                            <Link to={`/project/${project.node.slug.toLowerCase()}`}>
-                                                    <img src={`${project.node.acf.thumbnail_image.localFile.url}`} alt={`${project.node.title}`} />
+                                              {
+                                                project.node.acf.thumbnail_image !== null
+                                                ? <img src={`${project.node.acf.thumbnail_image.localFile.url}`} alt={`${project.node.title}`} />
+                                                : ""
+                                              }
                                             </Link>
                                             <div className="work__list__project__info">
                                               <p
