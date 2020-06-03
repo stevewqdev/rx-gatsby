@@ -1,0 +1,126 @@
+.sermo #single__one .row-2{
+    margin: 100px 0;
+}
+.sermo #single__one .row-2 .image{
+    margin-top: -260px;
+}
+.sermo #single__one .row-3{
+    margin: -200px 0 0 0;
+}
+.sermo .about {
+    margin: 200px 0 80px;
+}
+.sermo #single__three .row-0 .copy{
+    margin-bottom: -200px;
+    position: relative;
+    top: 125px;
+}
+.sermo .row-2 {
+    margin-top: -250px;
+}
+.sermo .row-3 {
+    margin-top: -240px;
+}
+.sermo .row-4 {
+    margin-top: -250px;
+}
+.sermo .row-5 {
+    margin-top: 150px;
+}
+.sermo .row-6 {
+    margin-top: -240px;
+}
+.sermo .row-7 {
+    margin-top: 150px;
+}
+@media(max-width: 1024px){
+    .sermo .row-0 .copy {
+        top: 65px;
+    }
+    .sermo #single__three .row-0 .image{
+        position: relative;
+        left: -90px;
+    }
+    .sermo .row-2 {
+        margin-top: -100px;
+    }
+    .sermo .row-3 {
+        margin-top: -240px;
+    }
+    .sermo .row-4 {
+        margin-top: -100px;
+    }
+}
+@media(max-width: 768px){
+    .sermo .row-2 {
+        margin-top: -13px;
+    }
+    .sermo .row-4 {
+        margin-top: -12px;
+    }
+    .sermo .row-0 .copy {
+        top: 0;
+        margin-bottom: 40px;
+    }
+    .sermo #single__one .row-2 .image {
+        margin-top: -100px;
+    }
+    .sermo #single__one .row-3 {
+        margin: -60px 0 0 0;
+    }
+    .sermo #single__three .row-0 .image{
+        left: 0px;
+    }
+    .sermo .row-6 {
+        margin-top: -120px;
+    }
+    .sermo .row-7 {
+        margin-top: 80px;
+    }
+    .sermo .about {
+        margin: 100px 0 80px;
+    }
+}
+@media(max-width: 500px){
+    .sermo #single__one .row-2 .image {
+        margin-top: 0px;
+    }
+    .sermo #single__one .simple__copy {
+        margin-bottom: 80px;
+        margin-top: 0px;
+    }
+    .sermo .row-0 .copy {
+        top: 0;
+        margin-bottom: 0;
+    }
+    .sermo #single__three .row-0 .image {
+        left: 0px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    .sermo #single__three .copy{
+        margin: 30px 0;
+    }
+    .sermo #single__three .row-0 .copy{
+       justify-content: start!important;
+       align-items: flex-start;
+    }
+    .sermo .row-2 {
+        margin-top: 0;
+    }
+    .sermo .row-3 {
+        margin-top: 0;
+    }
+    .sermo .row-4 {
+        margin-top: 0;
+    }
+    .sermo .row-5 {
+        margin-top: 50px;
+    }
+    .sermo .row-6 {
+        margin-top: 0;
+    }
+    .sermo .about {
+        margin: 100px 0 40px;
+    }
+}

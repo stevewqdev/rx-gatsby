@@ -1,0 +1,26 @@
+.indago #single__one .custom__col{
+    margin: 40px 0;
+}
+.indago #single__one .col-one-2{
+    margin: 150px 0 220px;
+}
+.indago #single__two .custom__col{
+    margin: 20px 0;
+}
+.indago #single__two .col-two-0{
+    margin: 20px 0 0 0;
+}
+.indago #single__two .col-two-1{
+    margin: 0px 0 20px 0;
+}
+@media(max-width: 500px){
+    .indago #single__one .col-one-2 {
+        margin: 50px 0 50px;
+    }
+    .indago #single__one .custom__col{
+        margin: 20px 0;
+    }
+    .indago #single__two .col-two-0 {
+        padding: 0px;
+    }
+}

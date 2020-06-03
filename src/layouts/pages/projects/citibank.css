@@ -1,0 +1,40 @@
+
+.citibank .row-3{
+    margin-top: 150px ;
+}
+.citibank .row-4{
+    margin-top: 150px ;
+}
+.citibank .row-5{
+    margin-top: 150px ;
+}
+.citibank .row-4 .image{
+    margin-top: -170px ;
+}
+@media(max-width: 1024px){
+    .citibank .row-4 .image {
+        margin-top: -80px;
+    }
+}
+@media(max-width: 768px){
+    .citibank .row-4 .image {
+        margin-top: -100px;
+    }
+}
+@media(max-width: 500px){
+    .citibank .row-4 .image {
+        margin-top: 0px;
+    }
+    .citibank .row-3{
+        margin-top: 50px ;
+    }
+    .citibank .row-4{
+        margin-top: 50px ;
+    }
+    .citibank .row-5{
+        margin-top: 50px ;
+    }
+    .citibank .row .copy{
+        justify-content: start!important;
+    }
+}

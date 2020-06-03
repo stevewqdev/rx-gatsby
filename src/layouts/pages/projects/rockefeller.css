@@ -1,0 +1,38 @@
+.rockefeller .custom__col{
+    margin-bottom: 100px;
+}
+.rockefeller .custom__col.col-two-0:nth-child(1){
+    margin-bottom: 0px;
+}
+.rockefeller .custom__col.col-two-1{
+    margin-bottom: 0px;
+}
+.rockefeller .custom__col.col-two-2{
+    margin-top: -220px;
+}
+.rockefeller .custom__col.col-two-3{
+    margin-top: -100px;
+}
+.rockefeller .col-two-4 .simple__copy{
+    padding-right: 30px;
+}
+.rockefeller .col-two-6 .simple__copy{
+    padding-right: 30px;
+}
+@media(max-width: 500px){
+    .rockefeller  .simple__copy{
+        padding-right: 0px;
+    }
+    .rockefeller  .copy{
+        padding: 0px;
+    }
+    .rockefeller .custom__col{
+        margin-bottom: 50px;
+    }
+    .rockefeller .custom__col.col-two-2{
+        margin-top: 0px;
+    }
+    .rockefeller .custom__col.col-two-3{
+        margin-top: 0px;
+    }
+}

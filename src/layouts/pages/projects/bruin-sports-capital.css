@@ -1,0 +1,62 @@
+.bsc .row.inverse{
+    flex-direction: row-reverse;
+}
+.bsc .row.row-3.inverse{
+    flex-direction: row;
+}
+.bsc .row.basic .copy{
+    padding-left: 20px;
+}
+.bsc .row.inverse .copy{
+    padding-right: 20px;
+}
+.bsc .row.row-3.inverse .copy{
+    padding-left: 20px;
+}
+.bsc #single__one .row{
+    margin: 100px 0;
+}
+.bsc .about{ 
+    margin: 100px 0 150px;
+}
+.bsc #single__three .row-0{
+    margin-bottom: 100px;
+}
+.bsc #single__three .row-2{
+    margin-top: -150px;
+}
+.bsc #single__three .row-3{
+    margin-top: -80px;
+}
+@media(max-width: 500px){
+    .bsc #single__three .row-0{
+        margin-bottom: 20px;
+    }
+    .bsc #single__three .row-2{
+        margin-top: 20px;
+    }
+    .bsc #single__three .row-3{
+        margin-top: 20px;
+    }
+    .bsc #single__three .row-0{
+        margin-bottom: 50px;
+    }
+    .bsc .about{ 
+        margin: 50px 0 50px;
+    }
+    .bsc #single__one .row {
+        margin: 20px 0px;
+    }
+    .bsc .row.basic .copy{
+        padding-left: 0px;
+    }
+    .bsc .row.inverse .copy{
+        padding-right: 0px;
+    }
+    .bsc .row.row-3.inverse .copy{
+        padding-left: 0px;
+    }
+    .bsc .copy{
+        margin-top: 30px;
+    }
+}
