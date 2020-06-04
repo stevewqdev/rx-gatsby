@@ -4,11 +4,11 @@ import { graphql } from "gatsby"
 import {Helmet} from "react-helmet";
 import ProjectHero  from "../../components/projects/header/index"
 import Img from "gatsby-image"
-import "../../layouts/pages/projects/griz.css"
+import "../../layouts/pages/projects/the-long-way-back.css"
 import Vimeo from '@u-wave/react-vimeo';
 import RelatedProjects from "../../components/relatedProjects/index"
 
-class Griz extends Component {
+class TLWB extends Component {
  constructor(props) {
     super(props);
 
@@ -65,7 +65,7 @@ class Griz extends Component {
 
     return ( 
       <Layout>
-        <div className="project__template griz">
+        <div className="project__template tlwb">
           <Helmet>
             <meta charSet="utf-8" />
             <meta name="description" content={ pageData.yoast_meta.yoast_wpseo_metadesc }/>
@@ -86,30 +86,27 @@ class Griz extends Component {
             <div className="single__project" id="single__one">
                 <div className="container container__custom">
                     <div className="row one">
-                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy no__padding d-flex align-items-center"
-                                                            data-aos="fade-up"
-                                                            data-aos-easing="ease-in-back"
-                                                            data-aos-delay={`120`}
-                                                            data-aos-duration="1200"
-                                                            data-aos-offset="450"
-                        >
-                            <div
-                            className="simple__copy sm__font reg__font"
-                            dangerouslySetInnerHTML={{ __html: pageAcf.griz_sone_copy }}
-                            />
-                        </div>
-                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 full__width__image no__padding"
-                                                            data-aos="fade-up"
-                                                            data-aos-easing="ease-in-back"
-                                                            data-aos-delay={`120`}
-                                                            data-aos-duration="1200"
-                                                            data-aos-offset="450"
-                        >
-                            <Img fluid={pageAcf.griz_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
-                        </div>
-                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 no__padding simple__copy">
                         {
-                            pageAcf.griz_vimeo_id  
+                            pageAcf.tlwb_sone_gallery.map((image, index) => 
+                                <img src={image} className={'tlwb__row'} alt="The long way back image" key={index}
+                                
+                                data-aos="fade-up"
+                                data-aos-easing="ease-in-back"
+                                data-aos-delay={`120`}
+                                data-aos-duration="1200"
+                                data-aos-offset="450"
+                                />
+                            )
+                        }
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 no__padding simple__copy"
+                                                            data-aos="fade-up"
+                                                            data-aos-easing="ease-in-back"
+                                                            data-aos-delay={`120`}
+                                                            data-aos-duration="1200"
+                                                            data-aos-offset="450"
+                        >
+                        {
+                            pageAcf.tlwb_vimeo_id  
                             ? 
                                 <div className="iframe__video__wrapper"
                                 data-aos="fade-up"
@@ -126,7 +123,7 @@ class Griz extends Component {
                                     </div>
 
                                     <Vimeo
-                                    video={pageAcf.griz_vimeo_id}
+                                    video={pageAcf.tlwb_vimeo_id}
 
                                     volume={volume}
                                     paused={paused}
@@ -156,7 +153,7 @@ class Griz extends Component {
                                 <h1
 
                                     className="xxl__font"
-                                    dangerouslySetInnerHTML={{ __html: pageAcf.griz_about }}
+                                    dangerouslySetInnerHTML={{ __html: pageAcf.tlwb_about }}
                                 />
                             </div>
                         </div>
@@ -168,12 +165,12 @@ class Griz extends Component {
                 <div className="container container__custom">
                     <div className={`row`} >
                     {
-                        pageAcf.griz_section_three_content.map((element, index) => 
+                        pageAcf.tlwb_section_three_content.map((element, index) => 
                             <>
                                 {
                                     index === 0 || index === 1
                                     ?
-                                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 image no__padding" key={index}
+                                    <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding row-two-${index}`} key={index}
                                     data-aos="fade-up"
                                     data-aos-easing="ease-in-back"
                                     data-aos-delay={`120`}
@@ -189,28 +186,28 @@ class Griz extends Component {
                     }
                     </div>
                     {
-                        pageAcf.griz_section_three_content.map((element, index) => 
+                        pageAcf.tlwb_section_three_content.map((element, index) => 
                             <>
                                 {
                                     index === 2
                                     ?   
                                     <>
-                                        <div className={`row row-${index}`} key={index}>
-                                            <div className={`col-xs-12 col-sm-12 col-md-9 col-lg-9 image no__padding`}
+                                        <div className={`row row-two-${index}`} key={index}>
+                                            <div className={`col-xs-12 col-sm-12 col-md-6 col-lg-6 image no__padding`}
                                                                                 data-aos="fade-up"
-                                                                                data-aos-easing="ease-in-back"
-                                                                                data-aos-delay={`120`}
-                                                                                data-aos-duration="1200"
-                                                                                data-aos-offset="450"
+                                    data-aos-easing="ease-in-back"
+                                    data-aos-delay={`120`}
+                                    data-aos-duration="1200"
+                                    data-aos-offset="450"
                                             >
                                                 <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                             </div>
-                                            <div className={`col-xs-12 col-sm-12 col-md-3 col-lg-3 copy d-flex align-items-center`}
+                                            <div className={`col-xs-12 col-sm-12 col-md-6 col-lg-6 copy d-flex `}
                                                                                 data-aos="fade-up"
-                                                                                data-aos-easing="ease-in-back"
-                                                                                data-aos-delay={`120`}
-                                                                                data-aos-duration="1200"
-                                                                                data-aos-offset="450"
+                                    data-aos-easing="ease-in-back"
+                                    data-aos-delay={`120`}
+                                    data-aos-duration="1200"
+                                    data-aos-offset="450"
                                             >
                                                 <div
                                                 className="simple__copy sm__font reg__font"
@@ -221,26 +218,32 @@ class Griz extends Component {
                                     </>
                                     :""
                                 }
-                            </>
-                        )
-                    }
-                    <div className="row">
-                    {
-                        pageAcf.griz_section_three_content.map((element, index) => 
-                            <>
                                 {
                                     index === 3
                                     ?   
                                     <>
-                                        <div className={`col-xs-12 col-sm-12 col-md-6 col-lg-6 copy d-flex align-items-center`} key={index}></div>
-                                        <div className={`col-xs-12 col-sm-12 col-md-6 col-lg-6 image-${index} no__padding`} key={index}
-                                                                            data-aos="fade-up"
-                                                                            data-aos-easing="ease-in-back"
-                                                                            data-aos-delay={`120`}
-                                                                            data-aos-duration="1200"
-                                                                            data-aos-offset="450"
-                                        >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <div className={`row row-two-${index}`} key={index}>
+                                            <div className={`col-xs-12 col-sm-12 col-md-6 col-lg-6 copy d-flex `}
+                                                                                data-aos="fade-up"
+                                    data-aos-easing="ease-in-back"
+                                    data-aos-delay={`120`}
+                                    data-aos-duration="1200"
+                                    data-aos-offset="450"
+                                            >
+                                                <div
+                                                className="simple__copy sm__font reg__font"
+                                                dangerouslySetInnerHTML={{ __html: element.copy }}
+                                                />
+                                            </div>
+                                            <div className={` col-xs-12 col-sm-12 col-md-6 col-lg-6 image no__padding`}
+                                                                                data-aos="fade-up"
+                                    data-aos-easing="ease-in-back"
+                                    data-aos-delay={`120`}
+                                    data-aos-duration="1200"
+                                    data-aos-offset="450"
+                                            >
+                                                <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            </div>
                                         </div>
                                     </>
                                     :""
@@ -249,16 +252,17 @@ class Griz extends Component {
                                     index === 4
                                     ?   
                                     <>
-                                        <div className={`col-xs-12 col-sm-12 col-md-6 col-lg-6 image-${index} no__padding`} key={index}
-                                                                            data-aos="fade-up"
-                                                                            data-aos-easing="ease-in-back"
-                                                                            data-aos-delay={`120`}
-                                                                            data-aos-duration="1200"
-                                                                            data-aos-offset="450"
-                                        >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <div className={`row row-two-${index}`} key={index}>
+                                            <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding`}
+                                                                                data-aos="fade-up"
+                                                                                data-aos-easing="ease-in-back"
+                                                                                data-aos-delay={`120`}
+                                                                                data-aos-duration="1200"
+                                                                                data-aos-offset="450"
+                                            >
+                                                <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            </div>
                                         </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy d-flex align-items-center" key={index}></div>
                                     </>
                                     :""
                                 }
@@ -266,75 +270,47 @@ class Griz extends Component {
                                     index === 5
                                     ?   
                                     <>
-                                        <div className={`col-xs-12 col-sm-12 col-md-3 col-lg-3 copy copy-${index} d-flex align-items-center`}
-                                                                            data-aos="fade-up"
-                                                                            data-aos-easing="ease-in-back"
-                                                                            data-aos-delay={`120`}
-                                                                            data-aos-duration="1200"
-                                                                            data-aos-offset="450"
-                                        >
-                                            <div
-                                            className="simple__copy sm__font reg__font"
-                                            dangerouslySetInnerHTML={{ __html: element.copy }}
-                                            />
-                                        </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image no__padding"
-                                                                            data-aos="fade-up"
-                                                                            data-aos-easing="ease-in-back"
-                                                                            data-aos-delay={`120`}
-                                                                            data-aos-duration="1200"
-                                                                            data-aos-offset="450"
-                                        >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
-                                        </div>
-                                            
-                                    </>
-                                    :""
-                                }
-                                {
-                                    index === 6 
-                                    ?   
-                                    <>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 image no__padding" key={index}
-                                                                            data-aos="fade-up"
-                                                                            data-aos-easing="ease-in-back"
-                                                                            data-aos-delay={`120`}
-                                                                            data-aos-duration="1200"
-                                                                            data-aos-offset="450"
-                                        >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <div className={`row row-two-${index}`} key={index}>
+                                            <div className={`col-xs-12 col-sm-12 col-md-6 col-lg-6 image no__padding`}
+                                                                                data-aos="fade-up"
+                                    data-aos-easing="ease-in-back"
+                                    data-aos-delay={`120`}
+                                    data-aos-duration="1200"
+                                    data-aos-offset="450"
+                                            >
+                                                <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            </div>
+                                            <div className={`col-xs-12 col-sm-12 col-md-6 col-lg-6 copy d-flex `}
+                                                                                data-aos="fade-up"
+                                    data-aos-easing="ease-in-back"
+                                    data-aos-delay={`120`}
+                                    data-aos-duration="1200"
+                                    data-aos-offset="450"
+                                            >
+                                                <div
+                                                className="simple__copy sm__font reg__font"
+                                                dangerouslySetInnerHTML={{ __html: element.copy }}
+                                                />
+                                            </div>
                                         </div>
                                     </>
                                     :""
                                 }
                                 {
-                                    index === 7
+                                    index === 6
                                     ?   
                                     <>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 image no__padding" key={index}
-                                                                            data-aos="fade-up"
-                                                                            data-aos-easing="ease-in-back"
-                                                                            data-aos-delay={`120`}
-                                                                            data-aos-duration="1200"
-                                                                            data-aos-offset="450"
-                                        >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
-                                        </div>
-                                    </>
-                                    :""
-                                }
-                                {
-                                    index === 8
-                                    ?   
-                                    <>
-                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding" key={index}
-                                                                            data-aos="fade-up"
-                                                                            data-aos-easing="ease-in-back"
-                                                                            data-aos-delay={`120`}
-                                                                            data-aos-duration="1200"
-                                                                            data-aos-offset="450"
-                                        >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <div className={`row row-two-${index}`} key={index}>
+                                            <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding`}
+                                                                                data-aos="fade-up"
+                                                                                data-aos-easing="ease-in-back"
+                                                                                data-aos-delay={`120`}
+                                                                                data-aos-duration="1200"
+                                                                                data-aos-offset="450"
+                                            >
+                                                <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            </div>
+
                                         </div>
                                     </>
                                     :""
@@ -342,8 +318,48 @@ class Griz extends Component {
                             </>
                         )
                     }
-                    </div>
+                    <div className="row row__bottom">
+                    {
+                        pageAcf.tlwb_section_three_content.map((element, index) => 
+                            <>
+                            {
+                                index === 7 || index === 8
+                                ?
+                                <>
+                                    <div className={`row-two-${index} col-xs-12 col-sm-12 col-md-6 col-lg-6 image no__padding`}
+                                                                        data-aos="fade-up"
+                                                                        data-aos-easing="ease-in-back"
+                                                                        data-aos-delay={`120`}
+                                                                        data-aos-duration="1200"
+                                                                        data-aos-offset="450"
+                                    >
+                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                    </div>
+                                </>
+                                :""
+                            }
+                            {
+                                index === 9
+                                ?
+                                <>
+                                    <div className={`row-two-${index} col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding`}
+                                                                        data-aos="fade-up"
+                                                                        data-aos-easing="ease-in-back"
+                                                                        data-aos-delay={`120`}
+                                                                        data-aos-duration="1200"
+                                                                        data-aos-offset="450"
+                                    >
+                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                    </div>
+                                </>
+                                :""
+                            }
+                            </>
+                        )
+                    }
                 </div>
+                </div>
+
             </div>
             <RelatedProjects 
                 relatedcopy={pageAcf.related_extra_copy}
@@ -359,11 +375,11 @@ class Griz extends Component {
     )
   }
 }
-export default Griz
+export default TLWB
 
 export const pageQuery = graphql`
-query GrizPageQuery {
-    allWordpressWpProjects(filter: {wordpress_id: {eq: 1062}}) {
+query TLWBPageQuery {
+    allWordpressWpProjects(filter: {wordpress_id: {eq: 1078}}) {
       edges {
         node {
           id
@@ -397,20 +413,10 @@ query GrizPageQuery {
                 }
             }           
             project_background
-            griz_sone_copy
-            griz_image{
-                localFile {
-                    childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
-                        ...GatsbyImageSharpFluid_withWebp
-                    }
-                    }
-                    url
-                }
-            }
-            griz_vimeo_id
-            griz_about
-            griz_section_three_content{
+            tlwb_sone_gallery
+            tlwb_vimeo_id
+            tlwb_about
+            tlwb_section_three_content{
                 image{
                     localFile {
                         childImageSharp {

@@ -48,13 +48,25 @@ class GlobalPress extends Component {
                                 ?
                                 <>
                                     <div className={`row row-${index}`}>
-                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-two-${index} copy no__padding`} key={index}>
+                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-two-${index} copy no__padding`} key={index}
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <div
                                                 className="simple__copy sm__font reg__font"
                                                 dangerouslySetInnerHTML={{ __html: element.copy }}
                                             />
                                         </div>
-                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-two-${index} image no__padding`} key={index}>
+                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-two-${index} image no__padding`} key={index}
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
                                     </div>
@@ -66,10 +78,22 @@ class GlobalPress extends Component {
                                 ?
                                 <>
                                     <div className={`row row-${index}`}>
-                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-6 col-lg-6 col-two-${index} image no__padding`} key={index}>
+                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-6 col-lg-6 col-two-${index} image no__padding`} key={index}
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
-                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-6 col-lg-6 col-two-${index} copy `} key={index}>
+                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-6 col-lg-6 col-two-${index} copy `} key={index}
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <div
                                                 className="simple__copy sm__font reg__font"
                                                 dangerouslySetInnerHTML={{ __html: element.copy }}
@@ -84,7 +108,13 @@ class GlobalPress extends Component {
                                 ?
                                 <>
                                     <div className={`row row-${index}`}>
-                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-two-${index} image no__padding`} key={index}>
+                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-two-${index} image no__padding`} key={index}
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
                                     </div>
@@ -129,13 +159,25 @@ class GlobalPress extends Component {
                                 ?
                                 <>
                                     <div className={`row row-${index}`}>
-                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-three-${index} copy no__padding`} key={index}>
+                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-three-${index} copy no__padding`} key={index}
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <div
                                                 className="simple__copy sm__font reg__font"
                                                 dangerouslySetInnerHTML={{ __html: element.copy }}
                                             />
                                         </div>
-                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-three-${index} image no__padding`} key={index}>
+                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-three-${index} image no__padding`} key={index}
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
                                     </div>
@@ -147,10 +189,22 @@ class GlobalPress extends Component {
                                 ?
                                 <>
                                     <div className={`row row-${index}`}>
-                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-9 col-lg-9 col-three-${index} image no__padding`} key={index}>
+                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-9 col-lg-9 col-three-${index} image no__padding`} key={index}
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
-                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-3 col-lg-3 col-three-${index} copy `} key={index}>
+                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-3 col-lg-3 col-three-${index} copy `} key={index}
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <div
                                                 className="simple__copy sm__font reg__font"
                                                 dangerouslySetInnerHTML={{ __html: element.copy }}
@@ -165,13 +219,25 @@ class GlobalPress extends Component {
                                 ?
                                 <>
                                     <div className={`row row-${index}`}>
-                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-3 col-lg-3 col-three-${index} copy `} key={index}>
+                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-3 col-lg-3 col-three-${index} copy `} key={index}
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <div
                                                 className="simple__copy sm__font reg__font"
                                                 dangerouslySetInnerHTML={{ __html: element.copy }}
                                             />
                                         </div>
-                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-9 col-lg-9 col-three-${index} image no__padding`} key={index}>
+                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-9 col-lg-9 col-three-${index} image no__padding`} key={index}
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
                                     </div>
@@ -183,7 +249,13 @@ class GlobalPress extends Component {
                                 ?
                                 <>
                                     <div className={`row row-${index}`}>
-                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-three-${index} image no__padding`} key={index}>
+                                        <div className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-three-${index} image no__padding`} key={index}
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
                                     </div>

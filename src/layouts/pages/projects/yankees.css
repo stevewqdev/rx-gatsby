@@ -1,0 +1,93 @@
+.yankee .col-one-1{
+    margin-top: 20px;
+}
+.yankee .col-one-2{
+    margin:220px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.yankee .col-one-2 img{
+    width: 60%;
+}
+.yankee .col-one-3{
+    margin-bottom: 25px;
+}
+.yankee .col-two-0{
+    padding-right: 20px;
+}
+.yankee .col-two-1{
+    padding-right: 20px;
+}
+.yankee .col-two-2{
+    padding-right: 20px;
+}
+.yankee .col-two-3{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.yankee .col-two-4{
+    padding-right: 10px;
+}
+.yankee .col-two-5{
+    padding-left: 10px;
+}
+.yankee .col-two-6{
+    padding-right: 10px;
+    margin-top: 20px;
+}
+.yankee .col-two-7.copy{
+    padding-left: 0px;
+}
+.yankee .col-two-7{
+    margin-top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.yankee .col-two-8{
+    margin-top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.yankee .col-two-9{
+    margin-top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+@media(max-width: 500px){
+    .yankee .col-two-0 {
+        padding-right: 0px;
+    }
+    .yankee .col-two-1 {
+        padding-right: 0px;
+    }
+    .yankee .col-two-2 {
+        padding-right: 0px;
+    }
+    .yankee .copy{
+        padding: 0px;
+        align-items: flex-start!important;
+        margin: 30px 0;
+    }
+    .yankee .col-two-4 {
+        padding-right: 0px;
+    }
+    .yankee .col-two-5 {
+        padding-left: 0px;
+    }
+    .yankee .col-two-6 {
+        padding-right: 0px;
+    }
+    .yankee .col-two-7{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .yankee .col-two-8{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .yankee .col-two-9{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}

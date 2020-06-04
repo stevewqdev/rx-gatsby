@@ -43,7 +43,13 @@ class Indago extends Component {
                     <div className={`row`} >
                         {
                             pageAcf.indago_gallery.map((image, index) => 
-                                <div className={`custom__col col-lg-12 no__padding col-one-${index}`} key={index}>
+                                <div className={`custom__col col-lg-12 no__padding col-one-${index}`} key={index}
+                                data-aos="fade-up"
+                                data-aos-easing="ease-in-back"
+                                data-aos-delay={`120`}
+                                data-aos-duration="1200"
+                                data-aos-offset="450"
+                                >
                                     <img src={image} className={`full__width__image image mix-multiply`} alt=""/>
                                 </div>
                             )
@@ -61,10 +67,22 @@ class Indago extends Component {
                                     index === 0
                                     ?
                                     <>
-                                    <div className={`custom__col col-xs-12 col-sm-12 col-md-6 col-lg-6 col-two-${index} image no__padding`} key={index}>
+                                    <div className={`custom__col col-xs-12 col-sm-12 col-md-6 col-lg-6 col-two-${index} image no__padding`} key={index}
+                                                                        data-aos="fade-up"
+                                                                        data-aos-easing="ease-in-back"
+                                                                        data-aos-delay={`120`}
+                                                                        data-aos-duration="1200"
+                                                                        data-aos-offset="450"
+                                    >
                                         <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                     </div>
-                                    <div className={`custom__col col-xs-12 col-sm-12 col-md-6 col-lg-6 col-two-${index} copy`} key={index}>
+                                    <div className={`custom__col col-xs-12 col-sm-12 col-md-6 col-lg-6 col-two-${index} copy`} key={index}
+                                                                        data-aos="fade-up"
+                                                                        data-aos-easing="ease-in-back"
+                                                                        data-aos-delay={`120`}
+                                                                        data-aos-duration="1200"
+                                                                        data-aos-offset="450"
+                                    >
                                         <div
                                             className="simple__copy sm__font reg__font"
                                             dangerouslySetInnerHTML={{ __html: element.copy }}
@@ -80,7 +98,13 @@ class Indago extends Component {
                                     <div className={`custom__col col-xs-12 col-sm-12 col-md-6 col-lg-6 col-two-${index} no__padding image`} key={index}>
                                         
                                     </div>
-                                    <div className={`custom__col col-xs-12 col-sm-12 col-md-6 col-lg-6 col-two-${index} no__padding image`} key={index}>
+                                    <div className={`custom__col col-xs-12 col-sm-12 col-md-6 col-lg-6 col-two-${index} no__padding image`} key={index}
+                                                                        data-aos="fade-up"
+                                                                        data-aos-easing="ease-in-back"
+                                                                        data-aos-delay={`120`}
+                                                                        data-aos-duration="1200"
+                                                                        data-aos-offset="450"
+                                    >
                                         <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                     </div>
                                     </>
@@ -90,7 +114,13 @@ class Indago extends Component {
                                     index > 1
                                     ?
                                     <>
-                                    <div className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-two-${index} no__padding image`} key={index}>
+                                    <div className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-two-${index} no__padding image`} key={index}
+                                                                        data-aos="fade-up"
+                                                                        data-aos-easing="ease-in-back"
+                                                                        data-aos-delay={`120`}
+                                                                        data-aos-duration="1200"
+                                                                        data-aos-offset="450"
+                                    >
                                         <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                     </div>
                                     </>

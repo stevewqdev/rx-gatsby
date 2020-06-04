@@ -1,0 +1,21 @@
+.ray-d .about{
+    margin: 140px 0 150px 0;
+}
+.ray-d .column__custom{
+    margin: 20px 0;
+}
+.ray-d .column__custom.image-3{
+    margin: 20px 0 0px 0;
+}
+.ray-d .column__custom.image-4{
+    margin: 0px 0 20px 0;
+}
+@media(max-width: 500px){
+    .ray-d .about {
+        margin: 40px 0 50px 0;
+    }
+    .ray-d .simple__copy , .ray-d .copy {
+        padding: 0px!important;
+        align-items: flex-start!important;
+    }
+}

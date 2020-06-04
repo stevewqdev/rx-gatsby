@@ -1,0 +1,16 @@
+.univision .about{
+    margin: 100px 0 150px 0;
+}
+.univision .column__custom{
+    margin: 20px 0;
+}
+
+@media(max-width: 500px){
+    .univision .about {
+        margin: 40px 0 50px 0;
+    }
+    .univision .simple__copy , .univision .copy {
+        padding: 0px!important;
+        align-items: flex-start!important;
+    }
+}

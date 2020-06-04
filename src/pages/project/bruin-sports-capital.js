@@ -52,7 +52,13 @@ class BruinSports extends Component {
                                 {
                                    index === 0  || index === 1 || index === 3
                                    ?
-                                   <div className={`row row-${index} ${index % 2 === 0 ? "basic" : "inverse"}`} key={index}>
+                                   <div className={`row row-${index} ${index % 2 === 0 ? "basic" : "inverse"}`} key={index}
+                                   data-aos="fade-up"
+                                   data-aos-easing="ease-in-back"
+                                   data-aos-delay={`120`}
+                                   data-aos-duration="1200"
+                                   data-aos-offset="450"
+                                   >
                                         <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image no__padding">
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
@@ -68,7 +74,13 @@ class BruinSports extends Component {
                                 {
                                     index === 2
                                     ?
-                                    <div className={`row row-${index}`} key={index}>
+                                    <div className={`row row-${index}`} key={index}
+                                    data-aos="fade-up"
+                                    data-aos-easing="ease-in-back"
+                                    data-aos-delay={`120`}
+                                    data-aos-duration="1200"
+                                    data-aos-offset="450"
+                                    >
                                         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding">
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
@@ -112,7 +124,13 @@ class BruinSports extends Component {
                                 {
                                     index === 0
                                     ?
-                                    <div className={`row row-${index} `} key={index}>
+                                    <div className={`row row-${index} `} key={index}
+                                    data-aos="fade-up"
+                                    data-aos-easing="ease-in-back"
+                                    data-aos-delay={`120`}
+                                    data-aos-duration="1200"
+                                    data-aos-offset="450"
+                                    >
                                         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding">
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
@@ -123,12 +141,24 @@ class BruinSports extends Component {
                                     index === 1
                                     ?
                                     <div className={`row row-${index} `} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding">
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"
+                                        data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`120`}
+                                        data-aos-duration="1200"
+                                        data-aos-offset="450"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
                                         <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
                                         <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
-                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy no__padding">
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy no__padding"
+                                        data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay={`120`}
+                                        data-aos-duration="1200"
+                                        data-aos-offset="450"
+                                        >
                                         <   div
                                             className="simple__copy sm__font reg__font"
                                             dangerouslySetInnerHTML={{ __html: element.copy }}
@@ -142,11 +172,23 @@ class BruinSports extends Component {
                                     ?
                                     <div className={`row row-${index} `} key={index}>
                                         <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
-                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding">
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
                                         <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
-                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy no__padding">
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy no__padding"
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                         <   div
                                             className="simple__copy sm__font reg__font"
                                             dangerouslySetInnerHTML={{ __html: element.copy }}
@@ -161,10 +203,22 @@ class BruinSports extends Component {
                                     <div className={`row row-${index} `} key={index}>
                                         <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
                                         <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
-                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding">
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy no__padding">
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy no__padding"
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                         <   div
                                             className="simple__copy sm__font reg__font"
                                             dangerouslySetInnerHTML={{ __html: element.copy }}

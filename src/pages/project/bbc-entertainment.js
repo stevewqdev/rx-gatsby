@@ -161,6 +161,11 @@ class BbcEntertainment extends Component {
                         </div>
 
                         <div
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`120`}
+                            data-aos-duration="1200"
+                            data-aos-offset="450"
                             className="simple__copy sm__font reg__font two__columns__copy"
                             dangerouslySetInnerHTML={{ __html: pageAcf.bbce_sthree_copy }}
                         />

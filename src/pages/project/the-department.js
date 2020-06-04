@@ -4,11 +4,11 @@ import { graphql } from "gatsby"
 import {Helmet} from "react-helmet";
 import ProjectHero  from "../../components/projects/header/index"
 import Img from "gatsby-image"
-import "../../layouts/pages/projects/sermo.css"
+import "../../layouts/pages/projects/the-department.css"
 import Vimeo from '@u-wave/react-vimeo';
 import RelatedProjects from "../../components/relatedProjects/index"
 
-class Sermo extends Component {
+class TheDepartment extends Component {
  constructor(props) {
   super(props);
 
@@ -23,10 +23,10 @@ class Sermo extends Component {
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
-
+    console.log(pageAcf)
     return ( 
       <Layout>
-        <div className="project__template sermo">
+        <div className="project__template the-department">
           <Helmet>
             <meta charSet="utf-8" />
             <meta name="description" content={ pageData.yoast_meta.yoast_wpseo_metadesc }/>
@@ -47,113 +47,142 @@ class Sermo extends Component {
             <div className="single__project" id="single__one">
                 <div className="container container__custom">
                     {
-                        pageAcf.sermo_section_one_content.map((element, index) =>
+                        pageAcf.the_department_section_one_content.map((element, index) => 
                             <>
                                 {
-                                    index === 0
-                                    ?
-                                    <div className={`row one row-${index}`} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 copy no__padding" 
+                                   index === 0 
+                                   ?
+                                   <div className={`row row-${index} image-one-${index} ${index % 2 === 0 ? "basic" : "inverse"}`} key={index}>
+                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 copy no__padding d-flex align-items-center"
                                                                             data-aos="fade-up"
-                                    data-aos-easing="ease-in-back"
-                                    data-aos-delay={`120`}
-                                    data-aos-duration="1200"
-                                    data-aos-offset="450"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
                                         >
-                                            <div
+                                        <   div
                                             className="simple__copy sm__font reg__font"
                                             dangerouslySetInnerHTML={{ __html: element.copy }}
                                             />
                                         </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding" 
+                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding"
                                                                             data-aos="fade-up"
-                                    data-aos-easing="ease-in-back"
-                                    data-aos-delay={`120`}
-                                    data-aos-duration="1200"
-                                    data-aos-offset="450"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
                                         >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
                                     </div>
-                                    :""
+                                   :""
                                 }
                                 {
-                                    index === 1
-                                    ?
-                                    <div className={`row one row-${index}`} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding" 
+                                   index === 1
+                                   ?
+                                   <div className={`row row-${index} image-one-${index} ${index % 2 === 0 ? "basic" : "inverse"}`} key={index}>
+                                        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image no__padding"
                                                                             data-aos="fade-up"
-                                    data-aos-easing="ease-in-back"
-                                    data-aos-delay={`120`}
-                                    data-aos-duration="1200"
-                                    data-aos-offset="450"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
                                         >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
-                                    </div>
-                                    :""
-                                }
-                                {
-                                    index === 2
-                                    ?
-                                    <div className={`row one row-${index}`} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 copy no__padding" 
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy  d-flex "
                                                                             data-aos="fade-up"
-                                    data-aos-easing="ease-in-back"
-                                    data-aos-delay={`120`}
-                                    data-aos-duration="1200"
-                                    data-aos-offset="450"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
                                         >
-                                            <div
+                                        <   div
                                             className="simple__copy sm__font reg__font"
                                             dangerouslySetInnerHTML={{ __html: element.copy }}
                                             />
                                         </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding" 
-                                                                            data-aos="fade-up"
-                                    data-aos-easing="ease-in-back"
-                                    data-aos-delay={`120`}
-                                    data-aos-duration="1200"
-                                    data-aos-offset="450"
-                                        >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
-                                        </div>
                                     </div>
-                                    :""
+                                   :""
                                 }
                                 {
-                                    index === 3
-                                    ?
-                                    <div className={`row one row-${index}`} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 copy d-flex justify-content-end align-items-end no__padding" 
+                                   index === 2
+                                   ?
+                                   <div className={`row row-${index} image-one-${index} ${index % 2 === 0 ? "basic" : "inverse"}`} key={index}>
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy no__padding d-flex "
                                                                             data-aos="fade-up"
-                                    data-aos-easing="ease-in-back"
-                                    data-aos-delay={`120`}
-                                    data-aos-duration="1200"
-                                    data-aos-offset="450"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
                                         >
-                                            <div
+                                        <   div
                                             className="simple__copy sm__font reg__font"
                                             dangerouslySetInnerHTML={{ __html: element.copy }}
                                             />
                                         </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding" 
+                                        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image no__padding"
                                                                             data-aos="fade-up"
-                                    data-aos-easing="ease-in-back"
-                                    data-aos-delay={`120`}
-                                    data-aos-duration="1200"
-                                    data-aos-offset="450"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
                                         >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
                                     </div>
-                                    :""
+                                   :""
+                                }
+                                {
+                                   index === 3
+                                   ?
+                                   <div className={`row row-${index} image-one-${index} ${index % 2 === 0 ? "basic" : "inverse"}`} key={index}>
+                                        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image no__padding"
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        </div>
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy  d-flex "
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
+                                        <   div
+                                            className="simple__copy sm__font reg__font"
+                                            dangerouslySetInnerHTML={{ __html: element.copy }}
+                                            />
+                                        </div>
+                                    </div>
+                                   :""
+                                }
+                                {
+                                   index === 4
+                                   ?
+                                   <div className={`row row-${index} image-one-${index} ${index % 2 === 0 ? "basic" : "inverse"}`} key={index}>
+                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding"
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        </div>
+                                    </div>
+                                   :""
                                 }
                             </>
                         )
                     }
                 </div>
             </div> 
+       
             <div className="single__project includes__separator" id="single__two">
                 <div className="container container__custom">
                     <div className="row section__three__about">
@@ -169,51 +198,42 @@ class Sermo extends Component {
                                 <h1
 
                                     className="xxl__font"
-                                    dangerouslySetInnerHTML={{ __html: pageAcf.sermo_about }}
+                                    dangerouslySetInnerHTML={{ __html: pageAcf.the_department_about }}
                                 />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="single__project" id="single__three">
+
+            <div className="single__project " id="single__three">
                 <div className="container container__custom">
                     {
-                        pageAcf.sermo_section_three_content.map((element, index) =>
+                        pageAcf.the_department_section_three_content_copy.map((element, index) => 
                             <>
                                 {
                                     index === 0
                                     ?
-                                    <div className={`row one row-${index}`} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 copy no__padding d-flex align-item-end justify-content-end" 
+                                    <div className={`row row-${index} image-two-${index} `} key={index}>
+                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding"
                                                                             data-aos="fade-up"
-                                    data-aos-easing="ease-in-back"
-                                    data-aos-delay={`120`}
-                                    data-aos-duration="1200"
-                                    data-aos-offset="450"
-                                        >
-                                            <div
-                                            className="simple__copy sm__font reg__font"
-                                            dangerouslySetInnerHTML={{ __html: element.copy }}
-                                            />
-                                        </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding " 
-                                                                            data-aos="fade-up"
-                                    data-aos-easing="ease-in-back"
-                                    data-aos-delay={`120`}
-                                    data-aos-duration="1200"
-                                    data-aos-offset="450"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
                                         >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
                                     </div>
-                                    :""
+                                    : ""
                                 }
                                 {
                                     index === 1
                                     ?
-                                    <div className={`row one row-${index}`} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 image no__padding" 
+                                    <div className={`row row-${index} image-two-${index} `} key={index}>
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding" 
                                                                             data-aos="fade-up"
                                     data-aos-easing="ease-in-back"
                                     data-aos-delay={`120`}
@@ -222,14 +242,14 @@ class Sermo extends Component {
                                         >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy " 
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy " 
                                                                             data-aos="fade-up"
                                     data-aos-easing="ease-in-back"
                                     data-aos-delay={`120`}
                                     data-aos-duration="1200"
                                     data-aos-offset="450"
                                         >
-                                            <div
+                                        <   div
                                             className="simple__copy sm__font reg__font"
                                             dangerouslySetInnerHTML={{ __html: element.copy }}
                                             />
@@ -240,9 +260,8 @@ class Sermo extends Component {
                                 {
                                     index === 2
                                     ?
-                                    <div className={`row one row-${index}`} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6  no__padding"></div>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 image no__padding" 
+                                    <div className={`row row-${index} image-two-${index} `} key={index}>
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding" 
                                                                             data-aos="fade-up"
                                     data-aos-easing="ease-in-back"
                                     data-aos-delay={`120`}
@@ -251,14 +270,29 @@ class Sermo extends Component {
                                         >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy " 
+                                                                            data-aos="fade-up"
+                                    data-aos-easing="ease-in-back"
+                                    data-aos-delay={`120`}
+                                    data-aos-duration="1200"
+                                    data-aos-offset="450"
+                                        >
+                                        <   div
+                                            className="simple__copy sm__font reg__font"
+                                            dangerouslySetInnerHTML={{ __html: element.copy }}
+                                            />
+                                        </div>
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
                                     </div>
                                     :""
                                 }
                                 {
                                     index === 3
                                     ?
-                                    <div className={`row one row-${index}`} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 image no__padding" 
+                                    <div className={`row row-${index} image-two-${index} `} key={index}>
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding" 
                                                                             data-aos="fade-up"
                                     data-aos-easing="ease-in-back"
                                     data-aos-delay={`120`}
@@ -267,16 +301,29 @@ class Sermo extends Component {
                                         >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6  no__padding"></div>
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy " 
+                                                                            data-aos="fade-up"
+                                    data-aos-easing="ease-in-back"
+                                    data-aos-delay={`120`}
+                                    data-aos-duration="1200"
+                                    data-aos-offset="450"
+                                        >
+                                        <   div
+                                            className="simple__copy sm__font reg__font"
+                                            dangerouslySetInnerHTML={{ __html: element.copy }}
+                                            />
+                                        </div>
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
                                     </div>
                                     :""
                                 }
                                 {
                                     index === 4
                                     ?
-                                    <div className={`row one row-${index}`} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6  no__padding"></div>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 image no__padding" 
+                                    <div className={`row row-${index} image-two-${index} `} key={index}>
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding" 
                                                                             data-aos="fade-up"
                                     data-aos-easing="ease-in-back"
                                     data-aos-delay={`120`}
@@ -285,30 +332,14 @@ class Sermo extends Component {
                                         >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
-                                    </div>
-                                    :""
-                                }
-                                {
-                                    index === 5
-                                    ?
-                                    <div className={`row one row-${index}`} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 image no__padding" 
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy " 
                                                                             data-aos="fade-up"
                                     data-aos-easing="ease-in-back"
                                     data-aos-delay={`120`}
                                     data-aos-duration="1200"
                                     data-aos-offset="450"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
-                                        </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy " 
-                                                                            data-aos="fade-up"
-                                    data-aos-easing="ease-in-back"
-                                    data-aos-delay={`120`}
-                                    data-aos-duration="1200"
-                                    data-aos-offset="450"
-                                        >
-                                            <div
+                                        <   div
                                             className="simple__copy sm__font reg__font"
                                             dangerouslySetInnerHTML={{ __html: element.copy }}
                                             />
@@ -317,11 +348,10 @@ class Sermo extends Component {
                                     :""
                                 }
                                 {
-                                    index === 6
+                                    index === 5
                                     ?
-                                    <div className={`row one row-${index}`} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6  no__padding"></div>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 image no__padding" 
+                                    <div className={`row row-${index} image-two-${index} `} key={index}>
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding" 
                                                                             data-aos="fade-up"
                                     data-aos-easing="ease-in-back"
                                     data-aos-delay={`120`}
@@ -330,22 +360,20 @@ class Sermo extends Component {
                                         >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
-                                    </div>
-                                    :""
-                                }
-                                {
-                                    index > 6
-                                    ?
-                                    <div className={`row one row-${index}`} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding" 
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy " 
                                                                             data-aos="fade-up"
                                     data-aos-easing="ease-in-back"
                                     data-aos-delay={`120`}
                                     data-aos-duration="1200"
                                     data-aos-offset="450"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <   div
+                                            className="simple__copy sm__font reg__font"
+                                            dangerouslySetInnerHTML={{ __html: element.copy }}
+                                            />
                                         </div>
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
                                     </div>
                                     :""
                                 }
@@ -353,7 +381,8 @@ class Sermo extends Component {
                         )
                     }
                 </div>
-            </div> 
+            </div>
+
             <RelatedProjects 
                 relatedcopy={pageAcf.related_extra_copy}
                 relatedproject={pageAcf.related_project}
@@ -368,11 +397,11 @@ class Sermo extends Component {
     )
   }
 }
-export default Sermo
+export default TheDepartment
 
 export const pageQuery = graphql`
-query SermoPageQuery {
-    allWordpressWpProjects(filter: {wordpress_id: {eq: 1064}}) {
+query TheDepartmentPageQuery {
+    allWordpressWpProjects(filter: {wordpress_id: {eq: 1073}}) {
       edges {
         node {
           id
@@ -406,7 +435,7 @@ query SermoPageQuery {
                 }
             }           
             project_background
-            sermo_section_one_content{
+            the_department_section_one_content{
                 image{
                     localFile {
                         childImageSharp {
@@ -419,8 +448,8 @@ query SermoPageQuery {
                 }
                 copy
             }
-            sermo_about
-            sermo_section_three_content{
+            the_department_about
+            the_department_section_three_content_copy{
                 image{
                     localFile {
                         childImageSharp {

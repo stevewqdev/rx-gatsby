@@ -52,6 +52,17 @@ const RelatedProjects = props => {
       </div>
       <div className="container container__custom related__desktop">
         <div className="row">
+          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 related__section__title no__padding">
+            <h3
+              className="xxl__font bold__font"
+              data-aos="fade-up"
+              data-aos-easing="ease-in-back"
+              data-aos-delay={`100`}
+              data-aos-duration="1200"
+            >
+              Next Project
+            </h3>
+          </div>
           <div
             className="col-xs-12 col-sm-12 col-md-3 col-lg-3 related__project__title no__padding"
             data-aos="fade-up"

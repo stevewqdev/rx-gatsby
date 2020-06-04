@@ -1,0 +1,47 @@
+.sambazon .custom__column{
+    margin: 10px 0;
+}
+.sambazon .row__one__col{
+    margin: 10px 0;
+}
+.sambazon .about{
+    margin: 150px 0 250px 0;
+}
+.sambazon .col-two-0{
+    padding-right: 10px;
+}
+.sambazon .col-two-1{
+    padding-left: 10px;
+}
+.sambazon .col-two-2{
+    padding-right: 10px;
+}
+.sambazon .col-two-3{
+    padding-left: 10px;
+}
+.sambazon #single__two .simple__copy{
+    padding-left: 10px;
+}
+@media(max-width: 500px){
+    .sambazon .about{
+        margin: 50px 0 80px 0;
+    }
+    .sambazon .col-two-0{
+        padding-right:10px;
+    }
+    .sambazon .col-two-1{
+        padding-left: 0px;
+    }
+    .sambazon .col-two-2{
+        padding-right: 0px;
+    }
+    .sambazon .col-two-3{
+        padding-left: 0px;
+    }
+    .sambazon #single__two .simple__copy{
+        padding-left: 0px;
+    }
+    .sambazon .the__video{
+        height: 190px;
+    }
+}

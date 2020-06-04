@@ -48,13 +48,25 @@ class LayerN extends Component {
                                     index === 0
                                     ?
                                     <>
-                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 copy no__padding">
+                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 copy no__padding"
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <div
                                             className="simple__copy sm__font reg__font"
                                             dangerouslySetInnerHTML={{ __html: element.copy }}
                                             />
                                         </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 copy no__padding">
+                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 copy no__padding"
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
                                     </>
@@ -64,10 +76,22 @@ class LayerN extends Component {
                                     index === 1
                                     ?
                                     <>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy no__padding">
+                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy no__padding"
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy d-flex justify-content-center align-items-center no__padding">
+                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy d-flex justify-content-center align-items-center no__padding"
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <div
                                             className="simple__copy sm__font reg__font"
                                             dangerouslySetInnerHTML={{ __html: element.copy }}
@@ -80,13 +104,25 @@ class LayerN extends Component {
                                     index === 2
                                     ?
                                     <>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy no__padding d-flex align-items-center">
+                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy no__padding d-flex align-items-center"
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <div
                                             className="simple__copy sm__font reg__font"
                                             dangerouslySetInnerHTML={{ __html: element.copy }}
                                             />
                                         </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy no__padding">
+                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy no__padding"
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
                                     </>
@@ -96,7 +132,13 @@ class LayerN extends Component {
                                     index > 2
                                     ?
                                     <>
-                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 copy no__padding mix-multiply">
+                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 copy no__padding mix-multiply"
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
                                     </>
@@ -140,10 +182,22 @@ class LayerN extends Component {
                                     index === 0
                                     ?
                                     <>
-                                        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image no__padding">
+                                        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image no__padding"
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy  d-flex align-items-center">
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy  d-flex align-items-center"
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <div
                                             className="simple__copy sm__font reg__font"
                                             dangerouslySetInnerHTML={{ __html: element.copy }}
@@ -157,10 +211,22 @@ class LayerN extends Component {
                                     ?
                                     <>
 
-                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 full__width__image no__padding">
+                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 full__width__image no__padding"
+                                                                            data-aos="fade-up"
+                                    data-aos-easing="ease-in-back"
+                                    data-aos-delay={`120`}
+                                    data-aos-duration="1200"
+                                    data-aos-offset="450"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 copy no__padding d-flex align-items-center">
+                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 copy no__padding d-flex align-items-center"
+                                                                            data-aos="fade-up"
+                                    data-aos-easing="ease-in-back"
+                                    data-aos-delay={`120`}
+                                    data-aos-duration="1200"
+                                    data-aos-offset="450"
+                                        >
                                             <div
                                             className=" simple__copy sm__font reg__font"
                                             dangerouslySetInnerHTML={{ __html: element.copy }}
@@ -173,10 +239,22 @@ class LayerN extends Component {
                                     index === 2
                                     ?
                                     <>
-                                        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 full__width__image image no__padding">
+                                        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 full__width__image image no__padding" 
+                                                                            data-aos="fade-up"
+                                    data-aos-easing="ease-in-back"
+                                    data-aos-delay={`120`}
+                                    data-aos-duration="1200"
+                                    data-aos-offset="450"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy  d-flex align-items-center">
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy  d-flex align-items-center" 
+                                                                            data-aos="fade-up"
+                                    data-aos-easing="ease-in-back"
+                                    data-aos-delay={`120`}
+                                    data-aos-duration="1200"
+                                    data-aos-offset="450"
+                                        >
                                             <div
                                             className="simple__copy sm__font reg__font"
                                             dangerouslySetInnerHTML={{ __html: element.copy }}
@@ -189,7 +267,13 @@ class LayerN extends Component {
                                     index === 3
                                     ?
                                     <>
-                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12  no__padding mix-multiply">
+                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12  no__padding mix-multiply"
+                                                                            data-aos="fade-up"
+                                                                            data-aos-easing="ease-in-back"
+                                                                            data-aos-delay={`120`}
+                                                                            data-aos-duration="1200"
+                                                                            data-aos-offset="450"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
                                     </>
@@ -207,12 +291,24 @@ class LayerN extends Component {
                                 index === 4
                                 ?
                                 <div className={`row row-${index} `} key={index}>
-                                    <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding">
+                                    <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding" 
+                                                                        data-aos="fade-up"
+                                    data-aos-easing="ease-in-back"
+                                    data-aos-delay={`120`}
+                                    data-aos-duration="1200"
+                                    data-aos-offset="450"
+                                    >
                                         <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                     </div>
                                     <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
                                     <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
-                                    <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy ">
+                                    <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy " 
+                                                                        data-aos="fade-up"
+                                    data-aos-easing="ease-in-back"
+                                    data-aos-delay={`120`}
+                                    data-aos-duration="1200"
+                                    data-aos-offset="450"
+                                    >
                                     <   div
                                         className="simple__copy sm__font reg__font"
                                         dangerouslySetInnerHTML={{ __html: element.copy }}
@@ -226,11 +322,23 @@ class LayerN extends Component {
                                 ?
                                 <div className={`row row-${index} `} key={index}>
                                     <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
-                                    <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding">
+                                    <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"
+                                                                        data-aos="fade-up"
+                                    data-aos-easing="ease-in-back"
+                                    data-aos-delay={`120`}
+                                    data-aos-duration="1200"
+                                    data-aos-offset="450"
+                                    >
                                         <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                     </div>
                                     <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
-                                    <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy ">
+                                    <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy "
+                                                                        data-aos="fade-up"
+                                    data-aos-easing="ease-in-back"
+                                    data-aos-delay={`120`}
+                                    data-aos-duration="1200"
+                                    data-aos-offset="450"
+                                    >
                                         <div
                                         className="simple__copy sm__font reg__font"
                                         dangerouslySetInnerHTML={{ __html: element.copy }}
@@ -245,10 +353,22 @@ class LayerN extends Component {
                                 <div className={`row row-${index} `} key={index}>
                                     <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
                                     <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
-                                    <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding">
+                                    <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"
+                                                                        data-aos="fade-up"
+                                    data-aos-easing="ease-in-back"
+                                    data-aos-delay={`120`}
+                                    data-aos-duration="1200"
+                                    data-aos-offset="450"
+                                    >
                                         <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                     </div>
-                                    <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy ">
+                                    <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy "
+                                                                        data-aos="fade-up"
+                                    data-aos-easing="ease-in-back"
+                                    data-aos-delay={`120`}
+                                    data-aos-duration="1200"
+                                    data-aos-offset="450"
+                                    >
                                     <   div
                                         className="simple__copy sm__font reg__font"
                                         dangerouslySetInnerHTML={{ __html: element.copy }}

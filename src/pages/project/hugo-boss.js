@@ -54,7 +54,13 @@ class HugoBoss extends Component {
                                 {
                                     index === 0
                                     ?
-                                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy no__padding">
+                                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy no__padding"
+                                    data-aos="fade-up"
+                                    data-aos-easing="ease-in-back"
+                                    data-aos-delay={`120`}
+                                    data-aos-duration="1200"
+                                    data-aos-offset="450"
+                                    >
                                         <div
                                         className="simple__copy sm__font reg__font"
                                         dangerouslySetInnerHTML={{ __html: pageAcf.hugoboss_sone_copy }}
