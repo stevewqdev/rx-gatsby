@@ -44,7 +44,12 @@ class HomePage extends Component {
       document.querySelectorAll(".the__project")[0].classList.add("active");
     }
   }
-
+  activeButton(event){
+    event.target.children[0].classList.add("active");
+  }
+  unactiveButton(event){
+    event.target.children[0].classList.remove("active");
+  }
   projectRedirect(event){
     let redirectLink = event.target.getAttribute("datalink");
     setTimeout(function() {
@@ -55,7 +60,7 @@ class HomePage extends Component {
       }
     },10);
   }
-
+  
   componentDidMount(){
 
     document.querySelectorAll(".footer")[0].classList.add("dark");
@@ -285,14 +290,16 @@ class HomePage extends Component {
 
                       ></div>
                       <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__button__right">
-                        <Link to="/work">
+                        <Link to="/work"
+                          onMouseEnter={this.activeButton}
+                          onMouseLeave={this.unactiveButton}
+                        >
                           <button className="btn btn-default sm__font reg__font"
                           data-aos="fade-up"
                           data-aos-delay={`175`}
                           data-aos-duration="1200"
-                          
                           data-aos-easing="ease-in-out"
-                          
+
                           >See More</button>
                         </Link>
                       </div>

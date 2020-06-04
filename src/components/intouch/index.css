@@ -22,9 +22,14 @@ input{
     padding-bottom: 10px;
     width: 90%;
 }
-.form__messages{
+.form__messages .form__message{
     margin-bottom: 20px;
-    min-height: 15px;
+    font-size: 12px!important;
+    line-height: 15px!important;
+    letter-spacing: 0.3px!important;
+    font-family: 'Roboto'!important;
+    font-weight: 400!important;
+    color: #606060!important;
 }
 .getintouch__subtitle svg{
     margin-left: 15px;

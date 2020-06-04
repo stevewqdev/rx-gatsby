@@ -93,4 +93,9 @@
     .related__projects .separator {
         display: block;
     }
+    .related__projects h3 {
+        position: relative;
+        left: -2px;
+        top: 10px;
+    }
 }

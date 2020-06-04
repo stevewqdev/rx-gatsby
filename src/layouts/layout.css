@@ -1214,6 +1214,7 @@ button:before{
   justify-content: center;
   align-items: center;
 }
+
 button:after{
   content: "+";
   position: absolute;
@@ -1254,6 +1255,12 @@ button:hover:after{
   left: 0px;
 }
 button:hover:before{
+  left: 200px;
+}
+button.active:after{
+  left: 0px;
+}
+button.active:before{
   left: 200px;
 }
 .selected__projects.latest__projects .latest__projects__subtitle{
