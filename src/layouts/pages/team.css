@@ -212,6 +212,9 @@
         bottom: -8%;
         z-index: 2;
     }
+    .team__new__member__info__position{
+        font-family: "Roboto"!important;
+    }
     .team__new__member__info__name{
         font-family: 'MarkPro';
         font-weight: bold;
