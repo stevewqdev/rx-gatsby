@@ -103,6 +103,7 @@ class HomePage extends Component {
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
+    console.log(pageAcf);
     const customStyle =
     `
     @media(max-width: 500px){
@@ -316,14 +317,19 @@ class HomePage extends Component {
                                 <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 no__padding selected__projects__projects__left the__project ${index === 0 ? "active" : ""}`} onMouseEnter={this.activeProject} onMouseLeave={this.unactiveProject} onClick={this.projectRedirect} datalink={`/project/${project.post_name.toLowerCase()}`}>
                                   
                                   <div className="selected__projects__projects__left__img">
-                                    <img 
-                                    data-aos="fade-up"
-                                    data-aos-delay={`100`}
-                                    data-aos-duration="1200"
-                                    
-                                    data-aos-easing="ease-in-out"
-                                    
-                                    src={`${project.acf.thumbnail_image.localFile.url}`} alt={`${project.post_name}`}/>
+                                    {
+                                      project.acf.thumbnail_image.localFile !== null
+                                      ?
+                                        <img 
+                                        data-aos="fade-up"
+                                        data-aos-delay={`100`}
+                                        data-aos-duration="1200"
+                                        
+                                        data-aos-easing="ease-in-out"
+                                        
+                                        src={`${project.acf.thumbnail_image.localFile.url}`} alt={`${project.post_name}`}/>
+                                      : ""
+                                    }
                                   </div>
                                   <div className="selected__projects__projects__left__copy">
                                     <div

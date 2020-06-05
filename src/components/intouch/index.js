@@ -27,16 +27,18 @@ const GetInTouch = props => {
   function handleSubmit(e) {
     e.preventDefault()
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    if(email.length === 0){
+      setStatus("invalid")
+      setMessage("Please, add a valid email address")
+    }
     if (email && email.length > 0) {
       if (email.match(mailformat)) {
         addToMailchimp(email)
           .then(data => {
-            console.log(data)
             setStatus(data.result)
             setMessage(data.msg)
           })
           .catch(error => {
-            console.log(error)
             setStatus(error.result)
             setMessage(error.msg)
           })
