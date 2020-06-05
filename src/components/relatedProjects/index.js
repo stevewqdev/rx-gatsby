@@ -39,6 +39,7 @@ const RelatedProjects = props => {
     if (window.innerWidth > 800) {
       hrefRedirect()
     }
+    console.log(props);
   })
 
   return (
@@ -70,7 +71,7 @@ const RelatedProjects = props => {
             data-aos-delay={`150`}
             data-aos-duration="1200"
           >
-            <Link to={props.relatedprojectlink.split("projects/").pop()}>
+            <Link to={`/project/${props.relatedprojectlink.split("project/").pop()}`}>
               <p
                 className="bold__font md__font"
                 data-aos="fade-up"
@@ -112,20 +113,22 @@ const RelatedProjects = props => {
                 {props.relatedcopy}
               </p>
             </div>
-            <Link to={props.relatedprojectlink.split("projects/").pop()}>
-              {props.relatedthumbnail.localFile.childImageSharp !== null ? (
+            <Link to={`/project/${props.relatedprojectlink.split("project/").pop()}`}>
+              {
+                props.relatedthumbnail.localFile.childImageSharp !== null 
+                ? 
                 <Img
                   fluid={props.relatedthumbnail.localFile.childImageSharp.fluid}
                   alt={`Project  image`}
                   tabIndex={-1}
                 />
-              ) : (
+                : 
                 <img
                   src={props.relatedthumbnail.localFile.url}
                   alt={`Project  image`}
                   tabIndex={-1}
                 />
-              )}
+              }
             </Link>
           </div>
         </div>
@@ -151,20 +154,22 @@ const RelatedProjects = props => {
             data-aos-delay={`150`}
             data-aos-duration="1200"
           >
-            <Link to={props.relatedprojectlink.split("projects/").pop()}>
-              {props.relatedthumbnail.localFile.childImageSharp !== null ? (
+            <Link to={`/project/${props.relatedprojectlink.split("project/").pop()}`}>
+              {
+                props.relatedthumbnail.localFile.childImageSharp !== null 
+                ? 
                 <Img
                   fluid={props.relatedthumbnail.localFile.childImageSharp.fluid}
                   alt={`Project  image`}
                   tabIndex={-1}
                 />
-              ) : (
+                : 
                 <img
                   src={props.relatedthumbnail.localFile.url}
                   alt={`Project  image`}
                   tabIndex={-1}
                 />
-              )}
+              }
             </Link>
           </div>
           <div
@@ -174,7 +179,7 @@ const RelatedProjects = props => {
             data-aos-delay={`150`}
             data-aos-duration="1200"
           >
-            <Link to={props.relatedprojectlink.split("projects/").pop()}>
+            <Link to={`/project/${props.relatedprojectlink.split("project/").pop()}`}>
               <p
                 className="bold__font md__font"
                 data-aos="fade-up"

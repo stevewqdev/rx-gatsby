@@ -47,10 +47,20 @@ class RockSummer extends Component {
                                    index === 0
                                    ?
                                    <div className={`row row-${index} `} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 image no__padding ">
+                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 image no__padding "
+                                                                  data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy no__padding  d-flex align-items-center justify-content-center">
+                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy no__padding  d-flex align-items-center justify-content-center"
+                                                                  data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                                        >
                                             <div
                                             className="simple__copy sm__font reg__font"
                                             dangerouslySetInnerHTML={{ __html: element.copy }}
@@ -64,10 +74,20 @@ class RockSummer extends Component {
                                    index === 1
                                    ?
                                    <div className={`row row-${index} `} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image no__padding ">
+                                        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image no__padding "
+                                                                  data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy  d-flex align-items-center">
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy  d-flex align-items-center"
+                                                                  data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                                        >
                                             <div
                                             className="simple__copy sm__font reg__font"
                                             dangerouslySetInnerHTML={{ __html: element.copy }}
@@ -80,13 +100,25 @@ class RockSummer extends Component {
                                    index === 2
                                    ?
                                    <div className={`row row-${index} `} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy no__padding d-flex align-items-center">
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy no__padding d-flex align-items-center"
+                                        
+                                                                  data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                                        >
                                             <div
                                             className="simple__copy sm__font reg__font"
                                             dangerouslySetInnerHTML={{ __html: element.copy }}
                                             />
                                         </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image no__padding ">
+                                        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image no__padding "
+                                        
+                                                                  data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
                                     </div>
@@ -96,10 +128,20 @@ class RockSummer extends Component {
                                    index === 3
                                    ?
                                    <div className={`row row-${index} `} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image  no__padding">
+                                        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image  no__padding"
+                                                                  data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy d-flex align-items-center justify-content-center">
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy d-flex align-items-center justify-content-center"
+                                                                  data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                                        >
                                             <div
                                             className="simple__copy sm__font reg__font"
                                             dangerouslySetInnerHTML={{ __html: element.copy }}
@@ -147,7 +189,12 @@ class RockSummer extends Component {
                                     index === 0
                                     ?
                                     <div className={`row row-${index} `} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding">
+                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding"
+                                                                  data-aos="fade-up"
+                                                                  data-aos-easing="ease-in-back"
+                                                                  data-aos-delay={`120`}
+                                                                  data-aos-duration="1200"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
                                     </div>
@@ -157,7 +204,12 @@ class RockSummer extends Component {
                                    index === 1
                                    ?
                                    <div className={`row row-${index} `} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding ">
+                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding "
+                                                                  data-aos="fade-up"
+                                                                  data-aos-easing="ease-in-back"
+                                                                  data-aos-delay={`120`}
+                                                                  data-aos-duration="1200"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
                                     </div>
@@ -167,13 +219,25 @@ class RockSummer extends Component {
                                    index === 2
                                    ?
                                    <div className={`row row-${index} `} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy no__padding d-flex align-items-center">
+                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy no__padding d-flex align-items-center"
+                                        
+                                                                  data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                                        >
                                             <div
                                             className="simple__copy sm__font reg__font"
                                             dangerouslySetInnerHTML={{ __html: element.copy }}
                                             />
                                         </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image no__padding ">
+                                        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image no__padding "
+                                        
+                                                                  data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                                        >
                                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
                                         </div>
                                     </div>

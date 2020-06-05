@@ -35,7 +35,7 @@ class Team extends Component {
   componentDidMount(){
     let teamArray = [...document.getElementsByClassName("creative")];
     
-    this.parallaxContainer()
+    // this.parallaxContainer()
     teamArray.map(element => 
         element.classList.add("active")
     )
@@ -408,7 +408,7 @@ class Team extends Component {
                     <div className="row team__row__six">
                     {
                             pageAcf.team_members.map((member, index) => 
-                                index >= 14 & index  < 15
+                                index >= 14 & index  < 18
                                 ?
                                 <div className={`col-xs-12 col-sm-12 col-md-3 col-lg-3 team__member__block team__member__${index} no__padding`} key={index}>
                                     <div className={`team__new__member ${member.category}`}  onClick={this.toggleTeamMember}>
@@ -457,12 +457,12 @@ class Team extends Component {
                                 : ""
                             )
                         }
+                    </div>
+                    <div className="row team__row__six">
                         <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 dark__space no__padding"></div>
-                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 dark__space no__padding"></div>
-                        {
+                    {
                             pageAcf.team_members.map((member, index) => 
-                                index >= 15 & index  < 16
-                                
+                                index >= 18 & index  < 21
                                 ?
                                 <div className={`col-xs-12 col-sm-12 col-md-3 col-lg-3 team__member__block team__member__${index} no__padding`} key={index}>
                                     <div className={`team__new__member ${member.category}`}  onClick={this.toggleTeamMember}>
@@ -511,6 +511,7 @@ class Team extends Component {
                                 : ""
                             )
                         }
+                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 dark__space no__padding"></div>
                     </div>
                 </div>
           </section>

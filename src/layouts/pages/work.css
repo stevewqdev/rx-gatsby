@@ -90,7 +90,7 @@
 }
 @media(max-width: 1500px){
     .work__list__project:nth-child(odd){
-        margin-top: -7.5vh;
+        margin-top: -8.5vh;
     }
 
 }

@@ -103,7 +103,12 @@ class Awake extends Component {
 
                 </div>
                 <div className="row two">
-                  <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 copy no__padding">
+                  <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 copy no__padding"
+                    data-aos="fade-up"
+                    data-aos-easing="ease-in-back"
+                    data-aos-delay={`120`}
+                    data-aos-duration="1200"
+                  >
                       <div
                         className="simple__copy sm__font reg__font"
                         dangerouslySetInnerHTML={{ __html: pageAcf.awake_stwo_copy }}
@@ -112,6 +117,10 @@ class Awake extends Component {
                   {
                     pageAcf.awake_stwo_gallery.map((element, index) =>
                       <div key={index}
+                        data-aos="fade-up"
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay={`120`}
+                        data-aos-duration="1200"
                         className={`
                         col-xs-12 col-sm-12 col-md-12 no__padding image
                         ${index === 0 ? "col-lg-6" : ""}

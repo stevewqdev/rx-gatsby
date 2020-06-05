@@ -14,13 +14,26 @@
     fill: #000000;
 
 }
+form{
+    position: relative;
+}
 input{
     background: transparent;
     border: none;
     margin: 40px 0 10px!important;
     border-bottom: 3px solid #4C4C4C;
     padding-bottom: 10px;
-    width: 90%;
+    width: 100%;
+}
+.getintouch__subtitle{
+    position: absolute;
+    bottom: 0;
+    top: 25px;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .form__messages .form__message{
     margin-bottom: 20px;
@@ -30,6 +43,7 @@ input{
     font-family: 'Roboto'!important;
     font-weight: 400!important;
     color: #606060!important;
+    position: absolute;
 }
 .getintouch__subtitle svg{
     margin-left: 15px;

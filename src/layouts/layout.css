@@ -631,7 +631,14 @@ html {
     }
   }
 
-
+.roboto__font{
+  font-family: "Roboto"!important;
+  letter-spacing: 1px!important;
+  color: #606060!important;
+  position: relative;
+  top: 30px;
+  left: 7px;
+}
 body{
     font-family: 'MarkPro';
     font-weight: normal;
@@ -827,7 +834,7 @@ body{
 }
 @media(max-width: 2600px){
   #page__wrapper {
-    margin-bottom: 480px;
+    margin-bottom: 465px;
   }
 }
 
@@ -1300,8 +1307,9 @@ button.active:before{
   .container__custom {
     max-width: 650px;
   }
+  
   #page__wrapper {
-    margin-bottom: 51vw;
+    margin-bottom: 43vw;
   }
   .selected__projects__projects > div {
     padding: 0 3%;
@@ -1332,7 +1340,7 @@ button.active:before{
     height: calc(98% / 1.05)!important;
   }
   #page__wrapper {
-    margin-bottom: 450px;
+    margin-bottom: 400px;
 }
   .raxo__rx__svg svg{
     width: 400px;

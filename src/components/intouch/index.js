@@ -68,6 +68,9 @@ const GetInTouch = props => {
               className=""
               dangerouslySetInnerHTML={{ __html: inTouchCopy }}
             />
+            <p className="bold__font md__font roboto__font">
+              Always stay updated
+            </p>
 
             <form onSubmit={handleSubmit}>
               <input
@@ -108,38 +111,13 @@ const GetInTouch = props => {
                 className="dark__font md__font reg__font getintouch__subtitle submit__form"
                 onClick={submitForm}
               >
-                Submit
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24.768"
-                  height="17.04"
-                  viewBox="0 0 24.768 17.04"
-                >
-                  <g
-                    id="Grupo_194"
-                    data-name="Grupo 194"
-                    transform="translate(-975.103 -3648.156)"
-                  >
-                    <line
-                      id="Línea_6"
-                      data-name="Línea 6"
-                      x2="23.443"
-                      transform="translate(975.103 3656.726)"
-                      fill="none"
-                      stroke="#4c4c4c"
-                      strokeWidth="2"
-                    ></line>
-                    <path
-                      id="Trazado_93"
-                      data-name="Trazado 93"
-                      d="M0,6.835,7.864,0l7.864,6.835"
-                      transform="translate(998.546 3648.812) rotate(90)"
-                      fill="none"
-                      stroke="#4c4c4c"
-                      strokeWidth="2"
-                    ></path>
+              <svg xmlns="http://www.w3.org/2000/svg" width="49.737" height="39.268" viewBox="0 0 49.737 39.268">
+                <g id="Email_Adress" data-name="Email Adress" transform="translate(-373.559 -466.435)">
+                  <g id="Grupo_87" data-name="Grupo 87" >
+                    <path id="Trazado_96" data-name="Trazado 96" d="M402.657,482.634c2.64,0,4.949,0,8.52.27-2.85-2.34-5.34-4.74-7.92-7.29l-4.409-4.349,4.829-4.83L423.3,486.054,403.677,505.7l-4.829-4.83,4.409-4.38c2.58-2.519,5.07-4.949,7.92-7.26-3.571.241-5.88.241-8.52.241h-29.1v-6.84Z" fill="#606060"/>
                   </g>
-                </svg>
+                </g>
+              </svg>
               </p>
             </form>
           </div>

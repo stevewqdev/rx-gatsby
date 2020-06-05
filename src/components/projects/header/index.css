@@ -166,7 +166,10 @@
     background: #0c0816;
     color: white;
 }
-
+.project__header__component.c-001f64{
+    background: #001f64;
+    color: white;
+}
 .project__header__component .hero__title {
     margin-top: 20px;
 }
