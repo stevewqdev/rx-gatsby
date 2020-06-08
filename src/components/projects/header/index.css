@@ -307,7 +307,7 @@
     .project__header__component {
         position: relative;
         padding: 140px 0 40px;
-        margin-top: -370px;
+        margin-top: -380px;
     }
     .project__featured__image {
         padding-left: 0px;
@@ -318,7 +318,7 @@
         padding-top: 100px!important;
     }
     .project__info {
-        margin-top: 10px!important;
+        margin-top: 50px!important;
         padding-left: 0px!important;
     }
 }

@@ -709,6 +709,18 @@ body{
       margin: 0;
       letter-spacing: -3px;
   }
+  .ab__font{
+    font-size: 30px!important;
+    line-height: 36px;
+    margin: 0;
+    letter-spacing: -2px;
+  }
+  .gray__font{
+    color: #606060;
+  }
+  .white__font{
+    color: #ffffff;
+  }
   .xxl__font{
     font-size: 110px!important;
     line-height: 105px;
@@ -1351,6 +1363,10 @@ button.active:before{
     font-size: 27px!important;
     line-height: 30px;
   }
+  .footer__menu{
+    position: relative;
+    left: 50px;
+  }
   body, html{
     overflow-x: unset;
   }
@@ -1622,8 +1638,11 @@ body{
   }
 }
 @media (max-width: 920px) and (orientation: landscape) {
+  .cursor{
+    display: none;
+  }
   #page__wrapper {
-    margin-bottom: 90px!important;
+    margin-bottom: 60px!important;
   }
   /* home */
   .the__project.active img {
@@ -1644,7 +1663,7 @@ body{
     max-width: 550px;
   }
   .selected__projects {
-    height: 840px;
+    height: 540px;
   }
 }
 @media (max-width: 750px) and (orientation: landscape) {

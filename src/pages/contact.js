@@ -9,113 +9,242 @@ import "../layouts/pages/contact.css"
 
 class ContactPage extends Component {
   componentDidMount(){
-    document.querySelectorAll(".footer")[0].classList.add("dark");
-    document.querySelectorAll(".separator")[0].classList.remove("--black");
-    document.querySelectorAll(".separator")[0].classList.add("--white");
+
   }
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
-    
+    const customStyles =
+    `
+    .fixed.column__top__one{
+      position: absolute!important;
+    }
+    .fixed.column__top__two{
+      position: absolute!important;
+    }
+    @media(max-width: 4000px){
+      .main__section__wrapper {
+        height: 86vh;
+        margin-top: -100vh;
+        background: black;
+      }
+    }
+    @media(max-width: 3000px){
+      .main__section__wrapper {
+        height: 81vh;
+      }
+    }
+    @media(max-width: 2600px){
+      .main__section__wrapper {
+        height: 74vh;
+      }
+      .floating__web__info .copyright__column p {
+        top: -167px;
+        left: 50px;
+      }
+    }
+    @media(max-width: 2000px){
+      .main__section__wrapper{
+        height: 72vh;
+      }
+      .floating__web__info .copyright__column p {
+        left: 0px;
+      }
+      .floating__web__info .copyright__column p {
+        top: -150px;
+      }
+    }
+    @media(max-width: 1700px){
+      .main__section__wrapper {
+        height: 58vh;
+      }
+      .floating__web__info .copyright__column p {
+        top: -160px;
+      }
+    }
+    @media(max-width: 1440px){
+      .main__section__wrapper {
+        height: 64vh;
+      }
+    }
+    @media(max-width: 1024px){
+      .main__section__wrapper {
+          height: 77vh;
+      }
+      .info__address .contact__data__content:nth-child(2){
+        margin-top: 30px;
+      }
+      .info__address .contact__data__content:nth-child(3){
+        margin-top: 30px;
+      }
+    }
+    @media(max-width: 1024px){
+      .main__section__wrapper {
+        height: 110vh;
+      }
+    }
+    @media(max-width: 768px){
+      .main__section__wrapper {
+        height: 135vh;
+      }
+    }
+    @media(max-width: 500px){
+      .main__section__wrapper {
+        height: auto;
+      }
+      .raxo__info {
+        padding: 150px 0 50px 0px;
+      }
+    }
+    #gatsby-focus-wrapper{
+      background: black;
+    }
+    .fixed__footer{
+      position: relative!important;
+    }
+    .page__wrapper{
+      margin-bottom: 0px!important;
+    }
+    .get__in__touch__wrapper{
+      margin-top: -40px;
+    }
+    .get__in__touch__wrapper {
+      background: #000000;
+    }
+    .get__in__touch__wrapper h2{
+      display: none;
+    }
+    @media (max-width: 920px) and (orientation: landscape) {
+      .main__section__wrapper {
+        height: auto;
+      }
+      #page__wrapper {
+        margin-bottom: 0px!important;
+      }
+    }
+    `;
     
     return ( 
       <Layout>
           <Helmet>
             <meta charSet="utf-8" />
+            <style>{customStyles}</style>
             <meta name="description" content={ pageData.yoast_meta.yoast_wpseo_metadesc }/>
             <title>{ pageData.yoast_meta.yoast_wpseo_title }</title>
             <link rel="canonical" href={ pageData.yoast_meta.yoast_wpseo_canonical} />
           </Helmet>
-          <Hero 
-            theme={pageAcf.section_color}
-            image={pageAcf.fallback_image} 
-            video={pageAcf.video_background}
-            title={pageAcf.top_title}
-            firstSubtitle={pageAcf.first_subtitle}
-            secondSubtitle={pageAcf.second_subtitle}
-          >
-          </Hero>
           <div className="main__section__wrapper">
             <section id="two " className="raxo__info">
                 <div className="container container__custom">
                     <div className="row">
-                        <div className="col-xs-6 col-sm-6 col-lg-6 raxo__social__menu no__padding">
-                          <SocialMenu fontSize="lg__font bold__font no__decoration" layout={"full__screen__menu"}></SocialMenu>
+                        <div className="col-xs-12 col-sm-12 col-sm-6 col-lg-6 info__blocks no__padding">
+                          <div className="contact__data__block">
+                          {
+                            pageAcf.bussines_contact.map((element, index) => 
+                              <div className="contact__data__content" key={index}>
+                                  <>
+                                  {
+                                    element.bussines_info_block.map((sub, index) => 
+                                      <>
+                                      <h2 className="ab__font bold__font white__font"
+                                        data-aos="fade-up"
+                                        data-aos-easing="ease-in-back"
+                                        data-aos-delay="550"
+                                        data-aos-duration="1200"
+                                      >
+                                       {sub.title}
+                                      </h2>
+                                      <a href={`mailto:${sub.email}`}>
+                                        <h3 className="ab__font bold__font gray__font"
+                                          data-aos="fade-up"
+                                          data-aos-easing="ease-in-back"
+                                          data-aos-delay="550"
+                                          data-aos-duration="1200"
+                                        >
+                                          {sub.email}
+                                        </h3>
+                                      </a>
+                                      <a href={`tel:${sub.phone}`}>
+                                        <h3 className="ab__font bold__font gray__font"
+                                          data-aos="fade-up"
+                                          data-aos-easing="ease-in-back"
+                                          data-aos-delay="550"
+                                          data-aos-duration="1200"
+                                        >
+                                          {sub.phone}
+                                        </h3>
+                                      </a>
+                                      </>
+                                    )
+                                  }
+                                  </>
+                              </div>
+                            )
+                          }
+                          </div>
                         </div>
-                        <div className="col-xs-6  col-sm-6 col-lg-6 raxo__contact__info no__padding"
-
-                        >
-                          <a href={`mailto:${this.props.data.wordpressAcfOptions.options.contact_email}`} >
-                              <h2 className="lg__font bold__font"
-                              data-aos="fade-up"
-                              data-aos-easing="ease-in-back"
-                              data-aos-delay="500"
-                              data-aos-duration="1200"
-                              >
-                                  {this.props.data.wordpressAcfOptions.options.contact_email}
-                              </h2>
-                          </a>
-                          <a href={`tel:${this.props.data.wordpressAcfOptions.options.contact_phone}`}>
-                              <h2 className="lg__font bold__font"
+                        <div className="col-xs-12 col-sm-12 col-sm-6 col-lg-6 info__address no__padding">
+                          <div className="contact__data__block">
+                            <h2 className="ab__font bold__font white__font"
                               data-aos="fade-up"
                               data-aos-easing="ease-in-back"
                               data-aos-delay="550"
                               data-aos-duration="1200"
+                            >
+                              Find us here
+                            </h2>
+      
+                            
+                            {
+                              pageAcf.address.map((address, index) =>
+                                <div className="contact__data__content">
+                                  <h4 className="ab__font gray__font bold__font"
+                                  data-aos="fade-up"
+                                  data-aos-easing="ease-in-back"
+                                  data-aos-delay="550"
+                                  data-aos-duration="1200"
+                                  >
+                                  {address.office_address}
+                                  </h4>
+                                </div>
+                              )
+                            }
+                            <div className="contact__data__content">
+                              <h2 className="ab__font bold__font white__font invisible"
+                                data-aos="fade-up"
+                                data-aos-easing="ease-in-back"
+                                data-aos-delay="550"
+                                data-aos-duration="1200"
                               >
-                              {this.props.data.wordpressAcfOptions.options.contact_phone}
-                          </h2>
-                          </a>
-                        </div>
+                                Find us here
+                              </h2>
+                              <a href={`tel:${this.props.data.wordpressAcfOptions.options.contact_phone}`}>
+                                  <h4 className="ab__font gray__font bold__font"
+                                  data-aos="fade-up"
+                                  data-aos-easing="ease-in-back"
+                                  data-aos-delay="550"
+                                  data-aos-duration="1200"
+                                  >
+                                  {this.props.data.wordpressAcfOptions.options.contact_phone}
+                                  </h4>
+                              </a>
+                              <a href={`mailto:${this.props.data.wordpressAcfOptions.options.contact_email}`} >
+                                  <h4 className="ab__font gray__font bold__font"
+                                  data-aos="fade-up"
+                                  data-aos-easing="ease-in-back"
+                                  data-aos-delay="500"
+                                  data-aos-duration="1200"
+                                  >
+                                      {this.props.data.wordpressAcfOptions.options.contact_email}
+                                  </h4>
+                              </a>
+                            </div>
+                            
+                            </div>
+                          </div>
                     </div>
                 </div>
             </section>
-            <section id="three">
-              <div className="container container__custom raxo__addresses">
-                  {
-                    pageAcf.address.map((address, index) =>
-                        <div className="row raxo__theAddress" key={`${index}`}>
-                            <div className="col-lg-12 no__padding raxo__address__office"
-                            data-aos="fade-up"
-                            data-aos-easing="ease-in-back"
-                            data-aos-delay="300"
-                            data-aos-duration="1200"
-                            >
-                                <h3 className="xxl__font bold__font">
-                                  {address.office_address}
-                                </h3>
-                            </div>
-                            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 no__padding raxo__address__copy"
-                            data-aos="fade-up"
-                            data-aos-easing="ease-in-back"
-                            data-aos-delay="350"
-                            data-aos-duration="1200"
-                            >
-                            <div
-                            data-aos="fade-up"
-                            data-aos-easing="ease-in-back"
-                            data-aos-delay="400"
-                            data-aos-duration="1200"
-                            className="reg__font sm__font "
-                            dangerouslySetInnerHTML={{ __html: address.address_copy }}
-                            />
-                            </div>
-                            <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 no__padding raxo__address__map"
-                            data-aos="fade-up"
-                            data-aos-easing="ease-in-back"
-                            data-aos-delay="700"
-                            data-aos-duration="1200"
-   
-                            >
-                            <div
-                              className=""
-                              dangerouslySetInnerHTML={{ __html: address.google_iframe }}
-                              />
-                            </div>
-                        </div>
-                    )
-                  }
-              </div>
-          </section>
           </div>
       </Layout>
     )
@@ -153,6 +282,13 @@ query ContactQuery {
                 office_address
                 address_copy
                 google_iframe
+            }
+            bussines_contact{
+              bussines_info_block{
+                title
+                email
+                phone
+              }
             }
           }
         }

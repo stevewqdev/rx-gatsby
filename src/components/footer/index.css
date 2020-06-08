@@ -175,7 +175,7 @@ footer .menu__subitem{
 }
 @media (max-width: 920px) and (orientation: landscape) {
     .footer__menu{
-        top: 7px;
+        top: 0px;
         left: 40px;
         position: relative;
     }
