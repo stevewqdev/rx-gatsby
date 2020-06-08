@@ -526,6 +526,16 @@
 #recognition .recognition__one__copy{
     display: block;
 }
+.click__more{
+    font-size: 12px;
+    font-family: roboto;
+    position: absolute;
+    line-height: 15px;
+    color: white;
+    font-weight: 400;
+    bottom: 6px;
+    margin-left: 20px;
+}
 @media(max-width: 1440px){
     .service__list__3 .services__list__items .row p:first-child {
         right: 5%;
@@ -534,6 +544,9 @@
 @media(max-width: 1024px){
     .offices__three {
         margin-top: 0px;
+    }
+    .click__more{
+        bottom: -3px;
     }
     #clients .container__custom {
         max-width: 680px;
@@ -628,6 +641,9 @@
 @media(max-width: 500px){
     #columns .container__custom{
         padding: 0;
+    }
+    .click__more {
+        bottom: 2px;
     }
     .offices__one{
         display: none;
