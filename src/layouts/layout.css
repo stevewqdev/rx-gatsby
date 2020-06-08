@@ -5,6 +5,9 @@ html::-webkit-scrollbar-thumb {
   background-color: #FE0062;
   border-radius: 100px;
 } */
+body, html{
+  overflow-x: hidden;
+}
 .pointer__none{
   pointer-events: none!important;
 }
@@ -695,8 +698,8 @@ body{
     letter-spacing: -0.7px;
   }
   .xmd__font{
-    font-size: 40px!important;
-    line-height: 42px;
+    font-size: 42px!important;
+    line-height: 46px;
     margin: 0;
     letter-spacing: -3px;
   }
@@ -775,7 +778,7 @@ body{
 }
 @media(max-width: 1500px){
   .container__custom{
-    max-width: 950px;
+    max-width: 890px;
   }
 }
 @media (max-width: 1280px){
@@ -829,15 +832,24 @@ body{
     position: relative;
     right: 0%;
     z-index: 99;
-    margin-bottom: 500px;
+    margin-bottom: 410px;
+  }
+}
+@media(max-width: 3000px){
+  #page__wrapper{
+    margin-bottom: 395px;
   }
 }
 @media(max-width: 2600px){
   #page__wrapper {
-    margin-bottom: 465px;
+    margin-bottom: 405px;
   }
 }
-
+@media(max-width: 1440px){
+  #page__wrapper {
+    margin-bottom: 410px;
+  }
+}
 
 #page__wrapper.hide{
   position: relative;
@@ -948,9 +960,8 @@ section#one{
   align-items: center;
 }
 .video__background video{
-  width: 50%;
-  height: 95%;
-  object-fit: contain;
+  width: 100%;
+  object-fit: cover;
 }
 /* Fallback image background */
 .raxo__rx__svg{
@@ -1140,6 +1151,11 @@ section#one{
   transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1)!important;
 
 }
+.footer__menu p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .the__project  *{
   pointer-events: none;
 }
@@ -1300,7 +1316,10 @@ button.active:before{
 }
 @media(max-width: 1280px){
   #page__wrapper{
-    margin-bottom: 40%;
+    margin-bottom: 32.5%;
+  }
+  .floating__web__info .copyright__column p{
+    display: none;
   }
 }
 @media(max-width: 1024px){
@@ -1309,7 +1328,7 @@ button.active:before{
   }
   
   #page__wrapper {
-    margin-bottom: 43vw;
+    margin-bottom: 38vw;
   }
   .selected__projects__projects > div {
     padding: 0 3%;
@@ -1332,6 +1351,12 @@ button.active:before{
     font-size: 27px!important;
     line-height: 30px;
   }
+  body, html{
+    overflow-x: unset;
+  }
+  .roboto__font {
+    left: 4px;
+  }
   .selected__projects {
     height: 1160px;
   }
@@ -1340,7 +1365,7 @@ button.active:before{
     height: calc(98% / 1.05)!important;
   }
   #page__wrapper {
-    margin-bottom: 400px;
+    margin-bottom: 345px;
 }
   .raxo__rx__svg svg{
     width: 400px;

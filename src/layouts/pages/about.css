@@ -40,6 +40,10 @@
 .services__list__subtitle{
     max-width: 110px;
     padding: 35px 0 25px;
+    display: none;
+}
+.services__list__items{
+    margin-top: 30px
 }
 #columns{
     background: linear-gradient(to right, black 50%, black 50%);
@@ -106,7 +110,7 @@
 .service__list__3 .services__list__items .row{
     position: relative;
 }
-.service__list__3 .services__list__items .row p:last-child span{
+.service__list__3 .services__list__items .row p:first-child span{
     position: absolute;
     font-size: 13px;
     color: white;
@@ -297,6 +301,7 @@
 }
 .offices__one{
     margin-top: 25%;
+    display: none;
 }
 .offices__one .offices__first__copy h4{
     font-size: 18px;
@@ -306,10 +311,10 @@
     letter-spacing: -0.7px;
 }
 .offices__two{
-    margin-top: 10%;
+    margin-top: 150px;
 }
 .offices__two__copy{
-    margin-top: 15%;
+    margin-top: 0px;
 }
 .offices__two__copy p{
     padding-right: 30px;
@@ -494,25 +499,25 @@
 .services__list.c-f2ab3d .services__list__items .row .colored__scroll img{
     transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
 }
-.services__list.c-f2ab3d .services__list__items .row p.colored__scroll:last-child{
+.services__list.c-f2ab3d .services__list__items .row p.colored__scroll:first-child{
     color: #FEA904;
 }
 .services__list.c-f2ab3d .services__list__items .row .colored__scroll img{
     filter: invert(29%) sepia(92%) saturate(450%) hue-rotate(331deg) brightness(98%) contrast(93%);
 }
-.services__list.c-73faeb .services__list__items .row p.colored__scroll:last-child{
+.services__list.c-73faeb .services__list__items .row p.colored__scroll:first-child{
     color: #01FEEB;
 }
 .services__list.c-73faeb .services__list__items .row .colored__scroll img{
     filter: invert(84%) sepia(31%) saturate(612%) hue-rotate(110deg) brightness(105%) contrast(96%);
 }
-.services__list.c-ea3464 .services__list__items .row p.colored__scroll:last-child{
+.services__list.c-ea3464 .services__list__items .row p.colored__scroll:first-child{
     color: #FE0062;
 }
 .services__list.c-ea3464 .services__list__items .row .colored__scroll img{
     filter: invert(78%) sepia(72%) saturate(2119%) hue-rotate(322deg) brightness(95%) contrast(93%);
 }
-.services__list.c-1d61f5 .services__list__items .row p.colored__scroll:last-child{
+.services__list.c-1d61f5 .services__list__items .row p.colored__scroll:first-child{
     color: #005CFE;
 }
 .services__list.c-1d61f5 .services__list__items .row .colored__scroll img{
@@ -522,7 +527,7 @@
     display: block;
 }
 @media(max-width: 1440px){
-    .service__list__3 .services__list__items .row p:last-child {
+    .service__list__3 .services__list__items .row p:first-child {
         right: 5%;
     }
 }
@@ -550,7 +555,7 @@
         font-size: 50px!important;
         line-height: 52px;
     }
-    .service__list__3 .services__list__items .row p:last-child {
+    .service__list__3 .services__list__items .row p:first-child {
         right: 0%;
         position: static;
         bottom: -20px;
@@ -587,11 +592,11 @@
         display: flex;
         flex-direction: column;
     }
-    .service__list__3 .services__list__items .row p:last-child {
+    .service__list__3 .services__list__items .row p:first-child {
         margin-top: 0px;
         display: flex;
 }
-.service__list__3 .services__list__items .row p:last-child span {
+.service__list__3 .services__list__items .row p:first-child span {
     position: relative;
     bottom: 0px;
     margin-left: 0px;
@@ -773,25 +778,25 @@
         font-size: 35px!important;
         line-height: 40px;
     }
-    .services__list.c-f2ab3d .services__list__items .row p:last-child{
+    .services__list.c-f2ab3d .services__list__items .row p:first-child{
         color: #FEA904;
     }
     .services__list.c-f2ab3d .services__list__items .row img{
         filter: invert(29%) sepia(92%) saturate(450%) hue-rotate(331deg) brightness(98%) contrast(93%);
     }
-    .services__list.c-73faeb .services__list__items .row p:last-child{
+    .services__list.c-73faeb .services__list__items .row p:first-child{
         color: #01FEEB;
     }
     .services__list.c-73faeb .services__list__items .row img{
         filter: invert(84%) sepia(31%) saturate(612%) hue-rotate(110deg) brightness(105%) contrast(96%);
     }
-    .services__list.c-ea3464 .services__list__items .row p:last-child{
+    .services__list.c-ea3464 .services__list__items .row p:first-child{
         color: #FE0062;
     }
     .services__list.c-ea3464 .services__list__items .row  img{
         filter: invert(78%) sepia(72%) saturate(2119%) hue-rotate(322deg) brightness(95%) contrast(93%);
     }
-    .services__list.c-1d61f5 .services__list__items .row p:last-child{
+    .services__list.c-1d61f5 .services__list__items .row p:first-child{
         color: #005CFE;
     }
     .services__list.c-1d61f5 .services__list__items .row img{

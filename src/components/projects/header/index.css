@@ -170,6 +170,19 @@
     background: #001f64;
     color: white;
 }
+.project__header__component.c-076350{
+    background: #076350;
+    color: white;
+}
+.project__header__component.c-3c4d6c{
+    background: #3c4d6c;
+    color: white;
+}
+.project__header__component.c-f38b4b{
+    background: #f38b4b;
+    color: white;
+}
+
 .project__header__component .hero__title {
     margin-top: 20px;
 }

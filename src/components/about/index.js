@@ -89,7 +89,7 @@ const About = props => {
               data-aos-delay={`300`}
               data-aos-duration="1200"
               data-aos-easing="ease-in-out"
-              className="bold__font lg__font"
+              className={`bold__font ${props.fontSize === "xmd__font" ? "xmd__font" : "lg__font"} `}
               dangerouslySetInnerHTML={{ __html: props.customCopy }}
             />
           </div>

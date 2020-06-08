@@ -120,14 +120,68 @@ class ContactPage extends Component {
       document.getElementById("colored_floating").classList.remove("colored__floating__hidden")
     }
   }
+  parallaxContainer() {
+    if (window.innerWidth > 768) {
+      window.addEventListener(
+        "scroll",
+        function() {
+          var top =
+            (window.pageYOffset || document.scrollTop) -
+            (document.clientTop || 0)
+          var finalX = top / -7
+          if (document.getElementById("about") !== null) {
+            document.getElementById(
+              "about"
+            ).style.transform = `translateY(${finalX}px)`
+          }
+        },
+        { passive: true }
+      )
+    }
+  }
+
+  drawLines() {
+    var lines = [...document.querySelectorAll(".includes__separator")]
+    if (lines.length > 0) {
+      lines.map((line, index) => {
+        var isDrawed = false
+        if (!isDrawed) {
+          window.addEventListener(
+            "scroll",
+            function() {
+              var top =
+                (window.pageYOffset || document.scrollTop) -
+                (document.clientTop || 0)
+              let innerLine = line.querySelectorAll(".separator")[0]
+              if (innerLine) {
+                if (top + 400 > line.offsetTop ) {
+                  innerLine.classList.add("full")
+                }
+              }
+            },
+            { passive: true }
+          )
+        }
+      })
+    }
+  }
 
   componentDidMount(){
+    this.drawLines();
+    this.parallaxContainer();
+
+    setTimeout(function() {
+      document
+        .querySelectorAll("#about .separator")[0]
+        .classList.add("full")
+    }, 1500)
+
     if (window.innerWidth > 768) {
       let lastColoredItems = document.querySelectorAll(".services__list__items"); 
       Array.from(lastColoredItems).map(element => {
         window.addEventListener("scroll", function(){
           var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
-          let currentColoredElement = element.children[0].children[element.children[0].children.length - 1];
+          let currentColoredElement = element.children[0].children[0];
             if(top  > currentColoredElement.offsetTop + 4000){ 
               currentColoredElement.classList.add("colored__scroll");
             }
@@ -138,7 +192,7 @@ class ContactPage extends Component {
     if (window.innerWidth < 768) {
         let lastColoredItems = document.querySelectorAll(".services__list__items"); 
         Array.from(lastColoredItems).map(element => {
-          let currentColoredElement = element.children[0].children[element.children[0].children.length - 1];
+          let currentColoredElement = element.children[0].children[0];
           currentColoredElement.classList.add("colored__scroll");
         })
     }
@@ -147,26 +201,60 @@ class ContactPage extends Component {
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
+    const customStyles =
+    `
+    .about__wrapper {
+      padding-top: 180px;
+    }
+    .main__section__wrapper{
+      margin-top: -100vh;
+    }
+    #about{
+      padding-bottom: 150px;
+    }
+    .hero__component {
+      margin-top: 350px;
+      position: relative;
+    }
+    #offices{
+      margin-top: -110px;
+    }
+    .top__below__about{
+      margin: 150px 0 180px;
+    }
+    .top__below__about .hero__extra__info{
+      margin-top: 70px;
+    }
+    @media(max-width: 500px){
+      .main__section__wrapper {
+        margin-top: -105vh;
+      }
+      #about .xmd__font {
+        font-size: 20px!important;
+        line-height: 28px;
+        margin: 0;
+        letter-spacing: -1px;
+      }
+      .offices__two__copy {
+        margin-bottom: 50px;
+      }
+    }
+    `
     
     return ( 
       <Layout>
           <Helmet>
             <meta charSet="utf-8" />
+            <style>{customStyles}</style>
             <meta name="description" content={ pageData.yoast_meta.yoast_wpseo_metadesc }/>
             <title>{ pageData.yoast_meta.yoast_wpseo_title }</title>
             <link rel="canonical" href={ pageData.yoast_meta.yoast_wpseo_canonical} />
           </Helmet>
-          <Hero 
-            theme={pageAcf.section_color}
-            image={pageAcf.fallback_image} 
-            video={pageAcf.video_background}
-            title={pageAcf.top_title}
-            firstSubtitle={pageAcf.first_subtitle}
-            secondSubtitle={pageAcf.second_subtitle}
-            extraInfo={pageAcf.about_copy}
-          >
-          </Hero>
+          
+                    
+
           <div className="main__section__wrapper">
+            <About customCopy={pageAcf.main_about_copy} fontSize={`xmd__font`}></About>
             <section id="columns">
               <div className="container-fluid">
                 <div className="row">
@@ -317,14 +405,56 @@ class ContactPage extends Component {
                 </div>
               </div>
             </section>
-            <About customCopy={pageAcf.main_about_copy}></About>
+            
+            <section className="top__below__about">
+              <div className="container container__custom">
+                <div className="row">
+                  <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 hero__title no__padding">
+                    <div className="separator --black "></div>
+                      {pageAcf.top_title ? (
+                        <h1
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay="500"
+                          data-aos-duration="1200"
+                          className="xxl__font"
+                          dangerouslySetInnerHTML={{ __html: pageAcf.top_title }}
+                        />
+                      ) : (
+                        ""
+                      )}
+                    </div>
+                  </div>
+                <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 no__padding"></div>
+              </div>
+            </section>
+
             <section id="offices">
               <div className="container container__custom">
+                <div className="row">
+                    <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 no__padding"></div>
+                    <div className="col-xs-12 col-sm-12 col-md-9 col-lg-6 hero__extra__info no__padding">
+                      {pageAcf.about_copy ? (
+                        <div
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay="700"
+                          data-aos-duration="1200"
+                          className="sm__font reg__font"
+                          dangerouslySetInnerHTML={{ __html: pageAcf.about_copy }}
+                        />
+                      ) : (
+                        ""
+                      )}
+                    </div>
+                    <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 no__padding"></div>
+                </div>
                 <div className="row offices__one">
                   <div className="col-s-12 col-sm-12 col-md-3 col-lg-3"></div>
                   <div className="col-s-12 col-sm-12 col-md-3 col-lg-3"></div>
                   <div className="col-s-12 col-sm-12 col-md-3 col-lg-3"></div>
-                  <div className="col-s-12 col-sm-12 col-md-3 col-lg-3 offices__first__copy">
+                  <div className="col-s-12 col-sm-12 col-md-3 col-lg-3"></div>
+                  {/* <div className="col-s-12 col-sm-12 col-md-3 col-lg-3 offices__first__copy">
                     <div
                       data-aos="fade-up"
                       data-aos-easing="ease-in-back"
@@ -333,7 +463,7 @@ class ContactPage extends Component {
                       className="row reg__font sm__font reg__font"
                       dangerouslySetInnerHTML={{ __html: pageAcf.pre_office_copy }}
                     />
-                  </div>
+                  </div> */}
                 </div>
                 <div className="row offices__two">
                   <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 offices__two__copy">
@@ -354,7 +484,7 @@ class ContactPage extends Component {
                       </svg>
                     </div>
                   </div>
-                  <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 offices__two__photo"
+                  <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9  no__padding"
                   
                   
                   >

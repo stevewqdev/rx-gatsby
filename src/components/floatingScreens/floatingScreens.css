@@ -131,7 +131,7 @@
 
 .floating__web__info .brand__social{
     position: relative;
-    top: -4.5%;
+    top: -150px;
 }
 .brand__menu__toggle svg{
     width: 18px;
@@ -141,7 +141,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 0 30px 0;
+    margin: 0 0 40px 0;
 }
 
 .floating__web__info .copy__one__column, .floating__web__info .copy__two__column{
@@ -153,7 +153,7 @@
 
 .floating__web__info .copyright__column p{
     position: relative;
-    top: -35px;
+    top: -165px;
     left: unset;
     font-size: 12px;
     line-height: 15px;
@@ -182,20 +182,48 @@
 .menu__subitem {
     margin-left: 15px;
 }
+@media(max-width:1700px){
+    .floating__web__info .brand__social {
+        position: relative;
+        top: -180px;
+    }
+    .floating__web__info .brand__social .brand__social__network {
+        margin: 0 0 30px 0;
+    }
+    .floating__web__info .copyright__column p{
+        top: -165px;
+    }
+}
 @media(max-width:1024px){
     .floating__web__info p{
         width: 60%;
+    }
+    .floating__web__info .brand__social {
+        top: -165px;
+    }
+    .floating__web__info .copyright__column p{
+        display: none;
     }
 }
 @media(max-width: 768px){
     .floating__web__info p{
         width: 100%;
     }
+    .floating__web__info .brand__social {
+        top: -160px;
+    }
     .floating__web__info .copyright__column p{
         display: none;
     }
 }
 @media(max-width: 500px){
+    .floating__web__info .copyright__column p{
+        display: flex;
+    }
+    .floating__web__info .copyright__column p {
+        top: -84px;
+        left: -285px;
+    }
     .column__top__one, .column__top__two{
         position: absolute!important;
     }
@@ -242,7 +270,7 @@
         mix-blend-mode: unset!important;
     }
     .floating__web__info .brand__social .brand__social__network {
-        margin: 0 35px 0 0;
+        margin: 0 25px 0 0;
     }
     .menu__email, .menu__social{
         display: none;

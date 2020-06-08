@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Layout from "../layouts/index"
 import Link from 'gatsby-link'
 import Hero from "../components/hero/index"

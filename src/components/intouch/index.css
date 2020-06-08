@@ -1,5 +1,5 @@
 .get_in_touch .row{
-    padding: 60px 0px;
+    padding: 40px 0px 25px 0;
 }
 .get_in_touch a{
     color: #606060;
@@ -70,7 +70,7 @@ input{
 @media(max-width:768px){
     .get__wrapper h2{
         position: relative;
-        left: -20px;
+        left: 5px;
     }
 }
 @media(max-width:500px){

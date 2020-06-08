@@ -1,0 +1,78 @@
+.steelbridge #single__one .col-xs-12{
+    margin: 50px 0 0 0;
+}
+.steelbridge #single__one .col-xs-12:nth-child(6){
+    margin: 0px 0 0 0;
+}
+.steelbridge .about{
+    margin: -150px 0 50px 0;
+}
+.steelbridge #single__two .col-xs-12{
+    margin: 150px 0 0 0;
+}
+.steelbridge #single__two .copy{
+    margin: 50px 0 0 0;
+}
+
+.steelbridge #single__two .row-4{
+    margin-top: -200px;
+}
+.steelbridge #single__two .row-5{
+    margin-top: -325px;
+}
+.steelbridge #single__two .row-6{
+    margin-top: -280px;
+}
+.steelbridge #single__two .row-4 .copy{
+    margin: 150px 0 0 0;
+}
+.steelbridge #single__two .row-5 .copy{
+    margin: 150px 0 0 0;
+}
+.steelbridge #single__two .row-6 .copy{
+    margin: 150px 0 0 0;
+}
+@media(max-width: 768px){
+    .steelbridge #single__two .col-xs-12 {
+        margin: 50px 0 0 0;
+    }
+    .steelbridge .about{
+        margin: 20px 0 50px 0;
+    }
+}
+@media(max-width: 500px){
+    .steelbridge .about{
+        margin: 0px 0 50px 0;
+    }
+    .steelbridge #single__one .col-xs-12:nth-child(4) {
+        align-items: start!important;
+        justify-content: start!important;
+    }
+    .steelbridge #single__one .col-xs-12 {
+        margin: 30px 0 0 0;
+    }
+    .steelbridge #single__two .col-xs-12 {
+        margin: 30px 0 0 0;
+    }
+    .steelbridge #single__two .copy{
+        padding: 0px!important;
+    }
+    .steelbridge #single__two .row-4 {
+        margin-top: 0px;
+    }
+    .steelbridge #single__two .row-5 {
+        margin-top: 0;
+    }
+    .steelbridge #single__two .row-6 {
+        margin-top: 0;
+    }
+    .steelbridge #single__two .row-4 .copy {
+        margin: 0px 0 0 0;
+    }
+    .steelbridge #single__two .row-5 .copy {
+        margin: 60px 0 0 0;
+    }
+    .steelbridge #single__two .row-6 .copy {
+        margin: 80px 0 0 0;
+    }
+}

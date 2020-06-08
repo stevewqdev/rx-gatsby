@@ -58,6 +58,9 @@ class ContactPage extends Component {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
     const latestProjects = this.props.data.allWordpressWpProjects.edges; 
+
+    console.log(latestProjects);
+
     const customStyles =
     `
     .fixed.column__top__one{
