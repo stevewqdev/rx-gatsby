@@ -732,8 +732,15 @@ body{
   }
   .container__custom{
     padding: 0px 0px;
-    max-width: 890px;
+    max-width: 1250px;
   }
+  @media(max-width: 2000px){
+    .container__custom{
+      padding: 0px 0px;
+      max-width: 890px;
+    }
+  }
+
   .featured__video {
     margin-top: 10%;
   }
@@ -1001,6 +1008,9 @@ section#one{
   .raxo__rx__svg img{
     height: 65%;
     display: block;
+  }
+  .menu__agreements{
+    display: none;
   }
   #single__one{
     padding-top: 80px;

@@ -67,7 +67,7 @@
     margin-bottom: 50px;
 }
 .work__list__description{
-    margin-top: 15px;
+    margin-top: 10px;
     color: #606060;
 }
 .work__list__project a{
@@ -145,7 +145,7 @@
         font-size: 14px;
     }
     .hero__component.workPage {
-        margin-top: -119.5vh!important;
+        margin-top: -126.5vh!important;
         padding-bottom: 0px;
     }
 

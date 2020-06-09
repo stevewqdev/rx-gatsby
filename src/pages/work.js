@@ -85,9 +85,38 @@ class ContactPage extends Component {
     .main__section__wrapper {
       background: #000000;
     }
-    .work__list .row{
-      max-width: 890px;
-      margin: auto;
+
+    @media(max-width: 4000px){
+      .hero__component {
+        margin-top: -105vh;
+        min-height: 480px;
+      }
+      .work__list .row{
+        max-width: 1250px;
+        margin: auto;
+      }
+      .hero__component .row {
+        max-width: 1250px;
+        margin: auto;
+      }
+    }
+    @media(max-width: 2600px){
+
+    }
+    @media(max-width: 2000px){
+      .hero__component {
+        margin-top: -111vh;
+        min-height: 480px;
+      }
+      .work__list .row{
+        max-width: 890px;
+        margin: auto;
+      }
+      
+    }
+
+    .hero__component .separator {
+      margin-bottom: 23px;
     }
     @media(max-width: 1024px){
       .work__list .row{
@@ -97,10 +126,18 @@ class ContactPage extends Component {
       .work__list__project a {
         height: 355px;
       }
+      .hero__component {
+        margin-top: -102vh;
+        min-height: 370px;
+      }
     }
     @media(max-width: 768px){
       .work__list__project a {
         height: auto;
+      }
+      .hero__component {
+        margin-top: -100vh;
+        min-height: 200px;
       }
     }
     @media(max-width: 500px){
