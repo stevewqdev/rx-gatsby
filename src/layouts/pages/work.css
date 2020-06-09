@@ -17,7 +17,7 @@
 }
 .work__list{
     background: #000000;
-    padding: 100px 0;
+    padding: 0px 0;
     overflow: hidden;
 }
 .work__list__project img{
@@ -48,6 +48,11 @@
     opacity: 1;
     transition: opacity  ease-in-out 0.5s;
 }
+.work__list__title{
+    font-family: "Roboto";
+    font-weight: bold;
+    letter-spacing: 1px;
+}
 .work__list__project__info{
     display: flex;
     color: white;
@@ -58,14 +63,16 @@
     pointer-events: none;
     z-index: 5;
     transition: opacity  ease-in-out 0.5s;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 .work__list__description{
     margin-top: 15px;
+    color: #606060;
 }
 .work__list__project a{
     display: block;
-    height: auto;
+    height: 435px;
     overflow: hidden;
     width: 100%;
 }
@@ -77,27 +84,18 @@
     width: 100%;
 }
 @media(max-width: 4000px){
-    .work__list__project:nth-child(odd){
-        margin-top: -2.5vh;
-    }
+
 }
 @media(max-width: 2000px){
-    .work__list__project:nth-child(odd){
-        margin-top: -5.5vh;
-    }
+
 
 }
 @media(max-width: 1500px){
-    .work__list__project:nth-child(odd){
-        margin-top: -8.5vh;
-    }
 
 }
 
 @media(max-width: 1280px){
-    .work__list__project:nth-child(odd){
-        margin-top: -5vh;
-    }
+
 
 }
 /* .work__list__project__img::after{
@@ -127,31 +125,37 @@
     .work__list__project__img img {
         min-height: 250px;
     }
+    .work__list__project__info {
+        margin-bottom: 30px;
+    }
     .work__list {
         padding: 60px 0;
     }
     .hero__component {
         padding-bottom: 0px;
     }
-    .work__list__project:nth-child(odd) {
-        margin-top: -6.5vh;
+    .work__list__title{
+        font-size: 15px;
+    }
+    .work__list__description {
+        margin-top: 5px;
     }
 }
 @media(max-width: 500px){
     .work__list__project__info .md__font {
         font-size: 14px;
     }
-        .hero__component.workPage {
-          margin-top: -119.5vh!important;
-          padding-bottom: 0px;
-        }
-    
+    .hero__component.workPage {
+        margin-top: -119.5vh!important;
+        padding-bottom: 0px;
+    }
+
     .work__list__project__info {
         flex-direction: column;
     }
     .work__list {
         margin-bottom: 0px;
-        padding: 70px 0 70px;
+        padding: 0px 0 70px;
     }
     .work__list__project__img img {
         min-height: 130px;
@@ -164,9 +168,7 @@
 
         margin-bottom: 10px;
     }
-    .work__list__project:nth-child(odd) {
-        margin-top: 0;
-    }
+
     .work__list__project.lower__project {
         margin-top: 0%;
     }
@@ -179,9 +181,7 @@
     .work__list {
         padding: 20px 0 70px;
     }
-    .work__list__project:nth-child(odd) {
-        margin-top: -18vh;
-    }
+
 }
 @media (max-width: 750px) and (orientation: landscape) {
     .work__list__project__img {

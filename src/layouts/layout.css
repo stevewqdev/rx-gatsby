@@ -1336,7 +1336,7 @@ button.active:before{
 }
 @media(max-width: 1024px){
   .container__custom {
-    max-width: 650px;
+    max-width: 685px;
   }
   
   #page__wrapper {
@@ -1355,7 +1355,7 @@ button.active:before{
 }
 @media(max-width: 992px){
   .container__custom{
-    padding: 0 10%;
+    padding: 0 0%;
   }
 }
 @media(max-width: 768px){
@@ -1391,7 +1391,8 @@ button.active:before{
     line-height: 47px;
   }
   .container__custom {
-    max-width: 82%;
+    max-width: 495px;
+    padding: 0;
   }
 
   .selected__projects .selected__projects__copy p {

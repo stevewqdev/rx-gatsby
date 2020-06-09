@@ -63,6 +63,12 @@ class ContactPage extends Component {
 
     const customStyles =
     `
+    .hero__component .hero__subtitle {
+      padding-top: 0px;
+    }
+    .hero__title h1{
+      display: none;
+    }
     .fixed.column__top__one{
       position: absolute!important;
     }
@@ -82,6 +88,20 @@ class ContactPage extends Component {
     .work__list .row{
       max-width: 890px;
       margin: auto;
+    }
+    @media(max-width: 1024px){
+      .work__list .row{
+        max-width: 685px;
+        margin: auto;
+      }
+      .work__list__project a {
+        height: 355px;
+      }
+    }
+    @media(max-width: 768px){
+      .work__list__project a {
+        height: auto;
+      }
     }
     @media(max-width: 500px){
       .work__list .container__custom{
@@ -115,63 +135,34 @@ class ContactPage extends Component {
                 <div className="row">
                     {
                         latestProjects.map((project, index) => 
-                            
-                                index % 2 === 0 
-                                ? 
-                                    <div className={`col-xs-6 col-sm-6 col-md-6 pgrid__base__thumbnail --pr-one no__padding work__list__project project-${index}`} key={index}>
-                                        <div className="work__list__project__img"
-                                        data-aos="fade-up"
-                                        data-aos-easing="ease-in-back"
-                                        data-aos-delay={`${(index + 1) * 100}`}
-                                        data-aos-duration="1200"
-                                        
-                                        >
-                                            <Link to={`/project/${project.node.slug.toLowerCase()}`}>
-                                              {
-                                                project.node.acf.thumbnail_image !== null
-                                                ? <img src={`${project.node.acf.thumbnail_image.localFile.url}`} alt={`${project.node.title}`} />
-                                                : ""
-                                              }
-                                                
-                                            </Link>
-                                            <div className="work__list__project__info">
-                                              <p
-                                                  className="bold__font md__font work__list__title"
-                                                  dangerouslySetInnerHTML={{ __html: project.node.title }}
-                                              />
-                                              <p 
-                                              className=" reg__font sm__font work__list__description">{project.node.acf.subtitle}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                :
-                                    <div className={`col-xs-6 col-sm-6 col-md-6 pgrid__base__thumbnail --pr-one no__padding work__list__project lower__project project-${index}`} key={index} >
-                                        <div className="work__list__project__img"
-                                        
-                                        data-aos="fade-up"
-                                        data-aos-easing="ease-in-back"
-                                        data-aos-delay={`${(index + 1) * 100}`}
-                                        data-aos-duration="1200"
-                                        
-                                        >
-                                           <Link to={`/project/${project.node.slug.toLowerCase()}`}>
-                                              {
-                                                project.node.acf.thumbnail_image !== null
-                                                ? <img src={`${project.node.acf.thumbnail_image.localFile.url}`} alt={`${project.node.title}`} />
-                                                : ""
-                                              }
-                                            </Link>
-                                            <div className="work__list__project__info">
-                                              <p
-                                                  className="bold__font md__font work__list__title"
-                                                  dangerouslySetInnerHTML={{ __html: project.node.title }}
-                                              />
-                                              <p 
-                                              className=" reg__font sm__font work__list__description">{project.node.acf.subtitle}</p>
-                                            </div>
-                          
-                                        </div>
-                                    </div> 
+
+                          <div className={`col-xs-6 col-sm-6 col-md-6 pgrid__base__thumbnail --pr-one no__padding work__list__project project-${index}`} key={index}>
+                              <div className="work__list__project__img"
+                              data-aos="fade-up"
+                              data-aos-easing="ease-in-back"
+                              data-aos-delay={`${(index + 1) * 100}`}
+                              data-aos-duration="1200"
+                              
+                              >
+                                  <Link to={`/project/${project.node.slug.toLowerCase()}`}>
+                                    {
+                                      project.node.acf.thumbnail_image !== null
+                                      ? <img src={`${project.node.acf.thumbnail_image.localFile.url}`} alt={`${project.node.title}`} />
+                                      : ""
+                                    }
+                                      
+                                  </Link>
+                                  <div className="work__list__project__info">
+                                    <p
+                                        className="bold__font md__font work__list__title"
+                                        dangerouslySetInnerHTML={{ __html: project.node.title }}
+                                    />
+                                    <p 
+                                    className=" reg__font sm__font work__list__description">{project.node.acf.subtitle}</p>
+                                  </div>
+                              </div>
+                          </div>
+      
                         )
                     }
                 </div>
