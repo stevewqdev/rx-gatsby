@@ -2,7 +2,6 @@
     .work__list__project__img img{
         width: 100%;
         object-fit: cover;
-        min-height: 650px;
     }
     .work__list__project__img *{
         cursor: none!important;
@@ -155,7 +154,7 @@
         padding: 70px 0 70px;
     }
     .work__list__project__img img {
-        min-height: 160px;
+        min-height: 130px;
     }
  
     .work__list__project__info{

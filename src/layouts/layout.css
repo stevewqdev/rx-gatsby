@@ -722,8 +722,8 @@ body{
     color: #ffffff;
   }
   .xxl__font{
-    font-size: 110px!important;
-    line-height: 105px;
+    font-size: 90px!important;
+    line-height: 85px;
     margin: 0;
     letter-spacing: -5px;
   }
@@ -732,7 +732,7 @@ body{
   }
   .container__custom{
     padding: 0px 0px;
-    max-width: 1280px;
+    max-width: 890px;
   }
   .featured__video {
     margin-top: 10%;
@@ -1473,6 +1473,9 @@ button.active:before{
   }
   .xs__font{
       font-size: 9px;
+  }
+  #about   .container__custom {
+    padding: 70px 25px 0px 25px;
   }
   .container__custom {
     padding: 0 45px 0 41px;

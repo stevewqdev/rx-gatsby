@@ -79,17 +79,15 @@ class ContactPage extends Component {
     .main__section__wrapper {
       background: #000000;
     }
-    @media (max-width: 1500px){
-      .container__custom {
-          max-width: 930px;
+    .work__list .row{
+      max-width: 890px;
+      margin: auto;
+    }
+    @media(max-width: 500px){
+      .work__list .container__custom{
+        padding: 0 25px 0 25px;
       }
     }
-    @media (max-width: 1280px){
-      .container__custom {
-          max-width: 815px;
-      }
-    }
-
     `
     ;
     return ( 

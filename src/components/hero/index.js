@@ -39,8 +39,7 @@ const Hero = props => {
     >
       <div className="container-fluid">
         <div className="row">
-          <div className=" col-xs-2 col-sm-2 col-md-2 col-lg-2 no__padding"></div>
-          <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 hero__title no__padding">
+          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 hero__title no__padding">
             <div className="separator --black "></div>
             {props.title ? (
               <h1
@@ -55,10 +54,9 @@ const Hero = props => {
               ""
             )}
           </div>
-          <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2 no__padding"></div>
         </div>
         <div className="row">
-          <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2 no__padding"></div>
+          
           <div className="col-xs-6 col-sm-4 col-md-2 col-lg-2 hero__subtitle hero__first__subtitle no__padding">
             {props.firstSubtitle ? (
               <p
@@ -74,7 +72,8 @@ const Hero = props => {
               ""
             )}
           </div>
-          <div className="col-xs-6 col-sm-4 col-md-2 col-lg-2 hero__subtitle hero__second__subtitle no__padding">
+          <div className="col-xs-2 col-sm-2 col-md-1 col-lg-1 no__padding"></div>
+          <div className="col-xs-6 col-sm-4 col-md-3 col-lg-3 hero__subtitle hero__second__subtitle no__padding">
             {props.secondSubtitle ? (
               <p
                 data-aos="fade-up"
@@ -95,7 +94,7 @@ const Hero = props => {
           <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2 no__padding"></div>
           <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2 no__padding"></div>
           <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2 no__padding"></div>
-          <div className="col-xs-12 col-sm-12 col-md-4 hero__extra__info no__padding">
+          <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 hero__extra__info no__padding">
             {props.extraInfo ? (
               <div
                 data-aos="fade-up"

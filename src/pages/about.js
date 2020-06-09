@@ -204,13 +204,17 @@ class ContactPage extends Component {
     const customStyles =
     `
     .about__wrapper {
-      padding-top: 180px;
+      padding-top: 0;
     }
     .main__section__wrapper{
       margin-top: -100vh;
     }
     #about{
-      padding-bottom: 150px;
+      padding-bottom: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .hero__component {
       margin-top: 350px;
@@ -220,7 +224,7 @@ class ContactPage extends Component {
       margin-top: -110px;
     }
     .top__below__about{
-      margin: 150px 0 180px;
+      margin: 150px 0 150px;
     }
     .top__below__about .hero__extra__info{
       margin-top: 70px;
@@ -237,6 +241,23 @@ class ContactPage extends Component {
       }
       .offices__two__copy {
         margin-bottom: 50px;
+      }
+      .top__below__about {
+        margin: 60px 0 0px;
+      }
+      .service__list__4{
+        margin-top: 50px;
+      }
+      .service__list__4 .colored__scroll{
+        margin-bottom: 0px;
+      }
+      .colored__scroll{
+        margin-bottom: 20px;
+      }
+    }
+    @media (max-width: 820px) and (orientation: landscape) {
+      #about{
+        padding: 130px 0 50px;
       }
     }
     `
@@ -273,10 +294,9 @@ class ContactPage extends Component {
                   <div className="col-lg-12 divider"></div>
                   <div className="colored__columns__wrapper">
 
-                  <div className={`col-xs-6 col-sm-6 col-md-2 col-lg-2 space__column`} ></div>
                   {
                     pageAcf.colored_columns.map((column, index) => 
-                      <div className={`col-xs-6 col-sm-6 col-md-2 col-lg-2 colored__column column-${index} order-${index} c-${column.color.replace('#','')} `} 
+                      <div className={`col-xs-6 col-sm-6 col-md-3 col-lg-3 colored__column column-${index} order-${index} c-${column.color.replace('#','')} `} 
                       key={index}
                       onMouseEnter={this.makeColumnBlack}
                       onMouseLeave={this.removeColumnBlack}
@@ -401,7 +421,6 @@ class ContactPage extends Component {
                   }
                  
                   </div>
-                  <div className={`col-xs-6 col-sm-6 col-md-2 col-lg-2 space__column`} ></div>
                 </div>
               </div>
             </section>

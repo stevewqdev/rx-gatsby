@@ -13,7 +13,7 @@
     flex-direction: column;
 }
 #we_can_help{
-    padding: 10% 0;
+    padding: 10% 0 200px;
     background: black;
     color: white;
 }
@@ -27,11 +27,19 @@
     left: 5px;
     width: auto;
 }
+.service__list__2{
+    margin-top: -300px;
+}
 .colored__columns__wrapper{
     display: flex;
+    width: 100%;
+    max-width: 890px;
+    margin: auto;
+
 }
 .services__list{
     margin-top: 70px;
+    padding-right: 30px;
 }
 .services__list.lower__list{
     margin-top: 35%;
@@ -104,7 +112,7 @@
 }
 .colored__column{
     padding: 10% 20px!important;
-    max-height: 1400px;
+    max-height: 900px;
     height: 100vh;
 }
 .service__list__3 .services__list__items .row{
@@ -128,8 +136,8 @@
 }
 @media(max-width: 4000px){
     .colored__column h4{
-        font-size: 60px;
-        line-height: 62px!important;
+        font-size: 40px;
+        line-height: 42px!important;
         font-weight:600!important;
         font-family: 'MarkPro';
         margin: 0px;
@@ -140,6 +148,10 @@
         opacity: 0;
         transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
         letter-spacing: -3px;
+    }
+    .colored__column__copy{
+        position: relative;
+        top: 100px;
     }
     .colored__floating h4{
         font-size: 60px;
@@ -153,7 +165,11 @@
 }
 @media(max-width: 1700px){
     .colored__column h4{
-        font-size: 3vw;
+        font-size: 2.5vw;
+    }
+    .colored__column__copy{
+        position: relative;
+        top: 0px;
     }
     .colored__floating h4 {
         font-size: 3vw;
@@ -197,25 +213,40 @@
         position: absolute;
         z-index: 2;
         max-width: 800px;
-        top: 8.9vw;
+        top: 3.6vw;
         width: 100%;
         pointer-events: none;
         transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
         z-index: 5;
         margin-left: 20px;
-        left: 33.5%;
+        left: 38.5%;
     }
 }
 @media(max-width: 3000px){
     .colored__floating{
-        left: 27.5%;
+        left: 35.2%;
+        top: 5.2vw;
+    }
+}
+@media(max-width: 2600px){
+    .colored__floating{
+        left: 33.1%;
+        top: 5.8vw;
     }
 }
 @media(max-width: 2000px){
     .colored__floating{
-        left: 16.7%;
+        left: 18.7%;
+        top: 3.8vw;
     }
 }
+@media(max-width: 1280px){
+    .colored__floating{
+        left: 14.7%;
+        top: 3.8vw;
+    }
+}
+
 .service__list__4{
     opacity: 1;
 }
@@ -444,7 +475,7 @@
         padding: 0% 0px 400px;
     }
     #clients .container__custom{
-        max-width: 1455px;
+        max-width: 950px;
     }
 }
 @media(max-width: 2000px){
@@ -456,7 +487,7 @@
         padding: 0% 0px 300px;
     }
     #clients .container__custom{
-        max-width: 1085px;
+        max-width: 990px;
     }
 }
 #recognition_list{
@@ -545,6 +576,9 @@
     .offices__three {
         margin-top: 0px;
     }
+    .colored__columns__wrapper {
+        max-width: 690px;
+    }
     .click__more{
         bottom: -3px;
     }
@@ -569,20 +603,22 @@
         line-height: 52px;
     }
     .service__list__3 .services__list__items .row p:first-child {
-        right: 0%;
-        position: static;
-        bottom: -20px;
-        flex-direction: column;
-        left: 0px;
+  
     }
     .offices__two__copy {
         margin-top: 3%;
       }
 }
 @media(max-width: 768px){
+    .colored__columns__wrapper {
+        max-width: 500px;
+    }
     .colored__column h4 {
         font-size: 20px;
         line-height: 30px!important;
+    }
+    .colored__floating{
+        max-width: 300px;
     }
     .recognition__wrapper {
         padding-bottom: 50px;
@@ -605,9 +641,7 @@
         display: flex;
         flex-direction: column;
     }
-    .service__list__3 .services__list__items .row p:first-child {
-        margin-top: 0px;
-        display: flex;
+    
 }
 .service__list__3 .services__list__items .row p:first-child span {
     position: relative;
@@ -627,17 +661,11 @@
 .recognition__list__one{
     top: 25px;
 }
-.colored__floating {
 
-    max-width: 300px;
-}
-.colored__column h4 {
-    font-size: 3vw;
-}
 .colored__sub__svg h4{
     font-size: 13px;
 }
-}
+
 @media(max-width: 500px){
     #columns .container__custom{
         padding: 0;
