@@ -1,7 +1,7 @@
 @media(max-width:4000px ){
     .work__list__project__img img{
         width: 100%;
-        object-fit: cover;
+        object-fit: contain;
     }
     .work__list__project__img *{
         cursor: none!important;
@@ -12,7 +12,7 @@
 }
 @media(max-width:1700px ){
     .work__list__project__img img{
-        min-height: 490px;
+        min-height: auto;
     }
 }
 .work__list{
@@ -72,7 +72,6 @@
 }
 .work__list__project a{
     display: block;
-    height: 435px;
     overflow: hidden;
     width: 100%;
 }
