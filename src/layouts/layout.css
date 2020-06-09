@@ -734,12 +734,8 @@ body{
     padding: 0px 0px;
     max-width: 1250px;
   }
-  @media(max-width: 2000px){
-    .container__custom{
-      padding: 0px 0px;
-      max-width: 890px;
-    }
-  }
+  
+
 
   .featured__video {
     margin-top: 10%;
@@ -753,6 +749,13 @@ body{
     margin-bottom: 5%;
   }
 
+}
+
+@media(max-width: 1700px){
+  .container__custom{
+    padding: 0px 0px;
+    max-width: 890px;
+  }
 }
 #single__one{
   padding-top: 200px;

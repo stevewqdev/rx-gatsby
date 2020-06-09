@@ -38,7 +38,7 @@
         margin: auto;
     }
 }
-@media(max-width: 2000px){
+@media(max-width: 1700px){
     .colored__columns__wrapper{
         max-width: 890px;
     }
@@ -241,6 +241,12 @@
     }
 }
 @media(max-width: 2000px){
+    .colored__floating{
+        left: 18.7%;
+        top: 9.4vw;
+    }
+}
+@media(max-width: 1440px){
     .colored__floating{
         left: 18.7%;
         top: 3.8vw;

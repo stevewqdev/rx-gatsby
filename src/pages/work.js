@@ -108,13 +108,13 @@ class ContactPage extends Component {
         margin-top: -111vh;
         min-height: 480px;
       }
+    }
+    @media(max-width: 1700px){
       .work__list .row{
         max-width: 890px;
         margin: auto;
       }
-      
     }
-
     .hero__component .separator {
       margin-bottom: 23px;
     }

@@ -18,6 +18,11 @@
 }
 @media(max-width: 2000px){
     .hero__component .row{
+        margin: auto;
+    }
+}
+@media(max-width: 1700px){
+    .hero__component .row{
         max-width: 890px!important;
         margin: auto;
     }
