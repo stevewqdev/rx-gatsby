@@ -97,6 +97,7 @@ class Post extends Component {
               title={post.title}
               firstSubtitle={this.state.topDate}
               category={"News"}
+              isPost={true}
             >
           </Hero>
           <div className={`main__section__wrapper post__wrapper template__${this.state.template}`}>

@@ -46,7 +46,7 @@ const Hero = props => {
       id="hero__component"
     >
       {
-        props.image !== "" 
+        props.image !== "" && props.isPost
         ?
         <>
           <Img className={'header__hero__full'} fluid={props.image.childImageSharp.fluid} />
