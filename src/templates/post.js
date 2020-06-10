@@ -49,6 +49,15 @@ class Post extends Component {
 
   }
   render() {
+    const customStyles =
+    `
+    .fixed.column__top__one{
+      position: absolute!important;
+    }
+    .fixed.column__top__two{
+      position: absolute!important;
+    }
+    `;
     // This variable will return all the fields related to the post
     const post = this.state.post
     // We create an object for the image data, you can add as many properties you need
@@ -87,6 +96,7 @@ class Post extends Component {
             <meta name="description" content={ post.yoast_meta.yoast_wpseo_metadesc }/>
             <title>{ post.yoast_meta.yoast_wpseo_title }</title>
             <link rel="canonical" href={ post.yoast_meta.yoast_wpseo_canonical} />
+            <style>{customStyles}</style>
           </Helmet>
           <Hero 
               classes={"internal__post"}
