@@ -1,0 +1,116 @@
+.header__hero__full{
+    position: absolute!important;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+.internal__post .hero__first__subtitle{
+    position: relative;
+    top: 100px;
+}
+.hero__component {
+    position: relative!important;
+    margin-top: -100vh;
+    overflow: hidden;
+}
+.post{
+    min-height: 100vh;
+    margin: 70px auto;
+}
+.post__content p{
+    margin: 30px 0;
+}
+.main__section__wrapper.post__wrapper {
+    padding-bottom: 80px;
+}
+.post__date p{
+    font-family: "Roboto"!important;
+    letter-spacing: 0.2px;
+    line-height: 22px;
+}
+.post__content p{
+    font-family: "Roboto"!important;
+    letter-spacing: 0.2px;
+    line-height: 22px;
+}
+.hero__component.template__default .separator {
+    margin-bottom: 0px;
+}
+.hero__component.template__default .hero__title {
+    margin-top: 13px;
+}
+.hero__component.template__default{
+    min-height: auto;
+    padding-top: 170px;
+    background: #F4F4F4;
+    padding-bottom: 20px;
+}
+.hero__component.template__default .separator.--white{
+    background: black;
+}
+.hero__component.template__default h1{
+    margin-top: 50px;
+    color: black;
+}
+.hero__component.template__default .hero__title{
+    color: black;
+}
+.hero__component.template__default .hero__title p:nth-child(2){
+    margin-top: 5px;
+}
+.template__default.internal__post .header__hero__full{
+    display: none;
+}
+.template__default.internal__post .bottom__info{
+    display: none;
+}
+.template__default .post__content__wrapper{
+    position: relative;
+    top: -55px;
+    padding-left: 10px;
+}
+.template__default .row{
+    width: 100%;
+    margin: auto;
+}
+.template__default .post__thumbnail__caption{
+    margin-top: 20px;
+}
+@media(max-width: 500px){
+    .hero__component {
+        margin-top: -107vh;
+    }
+    .template__default .post {
+        margin: 0px 0;
+    padding: 0 25px;
+    }
+    .template__default .post__content__wrapper {
+        position: relative;
+        top: 5px;
+        padding-left: 0px;
+        padding: 0;
+    }
+    .template__default .post__content__container{
+        padding: 0px;
+    }
+    .hero__component.template__default .hero__title {
+        padding: 0px;
+    }
+}
+@media (max-width: 920px) and (orientation: landscape){
+    .post.container__custom {
+        max-width: 680px;
+    }
+    .hero__component.template__default .separator.full {
+        width: 100%;
+    }
+    .template__default.hero__title{
+        padding: 0px;
+    }
+    .hero__component.template__default .hero__title{
+        padding: 0px;
+    }
+    .internal__post .hero__first__subtitle {
+        top: 0px;
+    }
+}

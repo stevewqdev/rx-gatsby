@@ -12,8 +12,9 @@ module.exports = `
               template
               format
               title
-              date(formatString: "MMMM DD, YYYY")
+              date(formatString: "MM.DD.YYYY")
               link
+
               categories {
                 slug
                 description
@@ -34,6 +35,9 @@ module.exports = `
                 }
                 url
                 wordpress_id
+              }
+              acf {
+                template
               }
             }
           }

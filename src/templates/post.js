@@ -6,11 +6,51 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import Hero from "../components/hero/index"
 import {Helmet} from "react-helmet"; 
+import "./posts.css"; 
+import moment from 'moment'
 
 class Post extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      topDate: "",
+      bottomDate: "",
+      post: this.props.data.wordpressPost,
+      template: "",
+    };
+  }
+
+
+  componentDidMount(){
+    document.querySelectorAll(".footer")[0].classList.add("dark");
+    document.querySelectorAll(".separator")[0].classList.remove("--black");
+    document.querySelectorAll(".separator")[0].classList.add("--white");
+
+    let params = new URLSearchParams(window.location.search);
+    var postTemplate = params.get('template');
+    //var postTemplate = this.props.data.wordpressPost.acf.template;
+    if(postTemplate !== "legacy"){
+        postTemplate = "default"
+    }
+
+    var dateString = this.state.post.date;
+    var dateObj = new Date(dateString);
+    var topDate = moment(dateObj);
+    var topMomentString = topDate.format('MM.DD.YYYY');
+
+    var bottomDate = moment(dateObj);
+    var bottomMomentString = `${bottomDate.format('ddd MMM DD, LT z')} (${bottomDate.fromNow()}) `;
+
+    this.setState({
+      topDate: topMomentString,
+      bottomDate: bottomMomentString,
+      template: postTemplate,
+    })
+
+  }
   render() {
     // This variable will return all the fields related to the post
-    const post = this.props.data.wordpressPost
+    const post = this.state.post
     // We create an object for the image data, you can add as many properties you need
     var postMedia = {
       image: false,
@@ -39,6 +79,7 @@ class Post extends Component {
       // This mean the post only contains the 'uncategorized' category
       noCategory = true;
     }
+
     return (
       <Layout>
           <Helmet>
@@ -48,78 +89,65 @@ class Post extends Component {
             <link rel="canonical" href={ post.yoast_meta.yoast_wpseo_canonical} />
           </Helmet>
           <Hero 
-              theme={"dark"}
-              image={""} 
+              classes={"internal__post"}
+              theme={`dark template__${this.state.template}`}
+              template={`template__${this.state.template}`}
+              image={post.featured_media.localFile} 
               video={""}
               title={post.title}
-              firstSubtitle={post.author.name}
-              secondSubtitle={post.date}
+              firstSubtitle={this.state.topDate}
+              category={"News"}
             >
           </Hero>
-          <div className="main__section__wrapper">
-            <div className="post container__base container container__custom">
-              <div className="post__image">
-                {
-                  postMedia.image 
-                  ? 
-                    postMedia.dynamicResolutions
-                    ?  <Img className={'dynamic__image'} fluid={post.featured_media.localFile.childImageSharp.fluid} />
-                    : <>
-                        <picture>
-                          <source srcSet={postMedia.webpImage} type="image/webp" />
-                          <source srcSet={postMedia.image} type="image/jpeg" />
-                          <img src={postMedia.image} alt={postMedia.altText} /> 
-                        </picture>
-                      </>
-                  : <div className="post__image --noImage"></div>
-                }
-              </div>
-              <div className="post__content__wrapper">
-                <div className="post__date">
-                  <p><small><b>{post.author.name}, {post.date}</b></small></p>
-                </div>
-                <div className="post__title">
-                  <h1 dangerouslySetInnerHTML={{__html: post.title}}/>
-                </div>
-                <div className="post__content">
-                  <div dangerouslySetInnerHTML={{__html: post.content}}/>
-                </div>
-                <hr></hr>
-                <div className="post__meta">
-                  <div className="post__category">
-                    <div className="post__category__wrapper">
-                      {
-                        /* 
-                          Here we check if the variable noCategory exist
-                          and based on that we show a message or we show
-                          the categories
-                        */
-                        noCategory
-                        ? <div key="nocat-1">
-                            <p>
-                              <strong> This post its no categorized yet </strong>
-                            </p>
-                          </div>
-                        : post.categories.map( (categorie, index) => (
-                          categorie.slug === 'uncategorized'
-                          ? ''
-                          : <div className="category__item" key={categorie-index}>
-                              <p>
-                                <strong> {categorie.slug} </strong>
-                              </p>
-                            </div>
-                        ))
-                      }
+          <div className={`main__section__wrapper post__wrapper template__${this.state.template}`}>
+            {
+              this.state.template === "legacy"
+              ? 
+              <>
+                <div className="post container__base container container__custom">
+                  <div className="row">
+                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 no__padding">
+                      <div className="post__content__wrapper">
+                        <div className="post__date">
+                          <p className="sm__font bold__font">{this.state.bottomDate}</p>
+                        </div>
+                        <div className="post__content  md__font reg__font">
+                          <div dangerouslySetInnerHTML={{__html: post.content}}/>
+                        </div>
+                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <Link to={`../`}>
-                <button className={`btn btn-default sm__font reg__font inner__post__return__button`}>
-                    Return to Blog
-                </button>
-              </Link>
-            </div>
+              </>
+              :
+              <>
+                <div className="post container__base container container__custom">
+                  <div className="row">
+                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6  no__padding post__thumbnail">
+                      <Img className={''} fluid={post.featured_media.localFile.childImageSharp.fluid} />
+                      <p
+                        data-aos="fade-up"
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay="500"
+                        data-aos-duration="1200"
+                        className="sm__font reg__font post__thumbnail__caption"
+                        dangerouslySetInnerHTML={{ __html: post.featured_media.caption }}
+                      />
+                    </div>
+                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 post__content__container">
+                      <div className="post__content__wrapper">
+                        <div className="post__date">
+                          <p className="sm__font bold__font">{this.state.bottomDate}</p>
+                        </div>
+                        <div className="post__content  md__font reg__font">
+                          <div dangerouslySetInnerHTML={{__html: post.content}}/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </>
+            }
           </div>
       </Layout>
     )
@@ -156,12 +184,15 @@ export const postQuery = graphql`
     wordpressPost(id: { eq: $id }) {
       title
       content
-      date(formatString: "MMMM DD, YYYY")
+      date
       status
       yoast_meta {
         yoast_wpseo_metadesc
         yoast_wpseo_title
         yoast_wpseo_canonical
+      }
+      acf {
+        template
       }
       featured_media{
         source_url
