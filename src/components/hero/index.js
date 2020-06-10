@@ -4,6 +4,8 @@ import Img from 'gatsby-image'
 import "./index.css"
 
 const Hero = props => {
+
+
   function parallaxContainer() {
     if (window.innerWidth > 768) {
       window.addEventListener(
@@ -32,6 +34,8 @@ const Hero = props => {
         .classList.add("full")
     }, 1500)
     
+    
+
     if(props.classes !== "internal__post"){
       parallaxContainer() 
     }
@@ -42,7 +46,7 @@ const Hero = props => {
       id="hero__component"
     >
       {
-        props.image !== null 
+        props.image !== "" 
         ?
         <>
           <Img className={'header__hero__full'} fluid={props.image.childImageSharp.fluid} />
