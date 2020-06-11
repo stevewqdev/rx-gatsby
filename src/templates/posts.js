@@ -12,7 +12,7 @@ const PostsIndex = ({ pageContext }) => {
 const { group, index, first, last, pageCount } = pageContext
 const previousUrl = index - 1 === 1 ? '/' : (index - 1).toString()
 const nextUrl = (index + 1).toString()
-const [pages, setPages] = useState(Math.floor(parseInt(group.length) / 10));
+const [pages, setPages] = useState(Math.ceil(parseInt(group.length) / 10));
 
 let pageArray = [];
 
@@ -43,9 +43,9 @@ return (
                         {group.map(({ node }, order) => 
                           <>
                             {
-                              order  > 0 && order < (element + 1)
+                              parseInt(order) > parseInt(element - 10 ) && parseInt(order ) < (parseInt(element + 1))
                               ?
-                              <div>
+                              <div key={order} className={`new-${order}`}>
                                 <Link to={`/news/${node.slug}`}  >
                                   <img src={node.featured_media.source_url} alt={node.featured_media.alt_text} />
                                 </Link>
@@ -64,22 +64,13 @@ return (
                         <div>
                           <img src={bside} alt="Bside - Raxo's blog Name "/>
                         </div>
-                        {element}
-                        {element + 10}
+       
                         {group.map(({ node }, order) => 
                           <>
                             {
-                              parseInt(order) > element && parseInt(order) < (element + 10)
+                              parseInt(order) > parseInt(element - 10 ) && parseInt(order ) < (parseInt(element + 1))
                               ?
-                              <>
-                              {order}
-                              </>
-                              :""
-                            }
-                            {
-                              order > (element + 1) && order < (element + 10)
-                              ?
-                              <div>
+                              <div key={order} className={`new-${order}`}>
                                 <Link to={`/news/${node.slug}`}  >
                                   <img src={node.featured_media.source_url} alt={node.featured_media.alt_text} />
                                 </Link>
