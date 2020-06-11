@@ -869,6 +869,13 @@
     .chose__us{
         padding-top: 75px;
     }
+    .recognition__wrapper.chose__us {
+        padding-top: 110px!important;
+        padding-bottom: 50px!important;
+    }
+    #offices .container__custom, .top__below__about .container__custom, #we_can_help .container__custom, #recognition .container__custom,  #recognition_list .container__custom, #clients .container__custom{
+        padding: 0 45px 0 25px;
+    }
     .recognition__list__item.active h3 {
         color: white;
     }
