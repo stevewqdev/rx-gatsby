@@ -20,6 +20,14 @@ for (let index = 0; index < pages; index++) {
   pageArray.push((index+1) * 10);
 }
 
+useEffect(() => {
+  let grids = [...document.querySelectorAll(".grid")];
+  grids.map((grid, index) => {
+    let gridSize = grid.querySelectorAll("div").length - 1;
+    grid.classList.add(`grid-${gridSize}`);
+  })
+})
+
 return (
     <Layout>
         <Helmet>
@@ -35,15 +43,20 @@ return (
                   index % 2 === 0
                   ?
                   <>
-                    <div className="template__one">
-                      <div class={`grid grid-10`}>
-                        <div>
+                    <div className="template__one"
+                    data-aos="fade-up"
+                    data-aos-easing="ease-in-back"
+                    data-aos-duration="500"
+                    >
+                      <div class={`grid `} id={`grid-element`}>
+                        <div 
+                        >
                           <img src={bside} alt="Bside - Raxo's blog Name "/>
                         </div>
                         {group.map(({ node }, order) => 
                           <>
                             {
-                              parseInt(order) > parseInt(element - 10 ) && parseInt(order ) < (parseInt(element + 1))
+                              parseInt(order) >=  parseInt(element - 10 ) && parseInt(order + 1) < (parseInt(element + 1)) 
                               ?
                               <div key={order} className={`new-${order}`}>
                                 <Link to={`/news/${node.slug}`}  >
@@ -59,8 +72,12 @@ return (
                   </>
                   : 
                   <>
-                    <div className="template__two">
-                      <div class={`grid grid-10`}>
+                    <div className="template__two"
+                    data-aos="fade-up"
+                    data-aos-easing="ease-in-back"
+                    data-aos-duration="500"
+                    >
+                      <div class={`grid`}>
                         <div>
                           <img src={bside} alt="Bside - Raxo's blog Name "/>
                         </div>
@@ -68,7 +85,7 @@ return (
                         {group.map(({ node }, order) => 
                           <>
                             {
-                              parseInt(order) > parseInt(element - 10 ) && parseInt(order ) < (parseInt(element + 1))
+                              parseInt(order) >=  parseInt(element - 10 ) && parseInt(order + 1) < (parseInt(element + 1)) 
                               ?
                               <div key={order} className={`new-${order}`}>
                                 <Link to={`/news/${node.slug}`}  >

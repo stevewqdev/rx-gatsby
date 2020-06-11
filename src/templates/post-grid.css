@@ -1,14 +1,17 @@
 
 .main__section__wrapper.blog__page{
     margin-top: -100vh;
-    padding: 100px 0;
+    padding: 150px 0;
 }
 .grid img{
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
-
+.grid{
+    grid-gap: 15px!important;
+    margin-bottom: 15px;
+}
 .grid-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -105,14 +108,14 @@
   grid-template-areas: "one one two three" "one one four eight" "five six seven eight" "nine six . .";
 }
 .grid-8 div:nth-child(1) { grid-area: one; }
-.grid-8 div:nth-child(1) { grid-area: two; }
-.grid-8 div:nth-child(1) { grid-area: three; }
-.grid-8 div:nth-child(1) { grid-area: four; }
-.grid-8 div:nth-child(1) { grid-area: five; }
-.grid-8 div:nth-child(1) { grid-area: six; }
-.grid-8 div:nth-child(1) { grid-area: seven; }
-.grid-8 div:nth-child(1) { grid-area: eight; }
-.grid-8 div:nth-child(1) { grid-area: nine; }
+.grid-8 div:nth-child(2) { grid-area: two; }
+.grid-8 div:nth-child(3) { grid-area: three; }
+.grid-8 div:nth-child(4) { grid-area: four; }
+.grid-8 div:nth-child(5) { grid-area: five; }
+.grid-8 div:nth-child(6) { grid-area: six; }
+.grid-8 div:nth-child(7) { grid-area: seven; }
+.grid-8 div:nth-child(8) { grid-area: eight; }
+.grid-8 div:nth-child(9) { grid-area: nine; }
 
 .grid-9 {
   display: grid;
