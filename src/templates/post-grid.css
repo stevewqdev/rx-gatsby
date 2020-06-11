@@ -7,6 +7,40 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    position: relative;
+}
+.grid div{
+    position: relative;
+}
+.grid .blog__content{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    z-index: 5;
+    padding: 0 10px;
+}
+.grid .blog__content:before{
+    display: none;
+}
+.grid p{
+    font-family: "Roboto"!important;
+    margin: 3.5px 0;
+    letter-spacing: 0.3px;
+}
+.grid div:nth-child(1):before{
+    display: none;
+}
+.grid div:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, black, transparent 23%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
 }
 .grid{
     grid-gap: 15px!important;

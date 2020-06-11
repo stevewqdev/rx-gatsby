@@ -450,6 +450,96 @@ force = false
 
 [[redirects]]
 from = "/creative-work/clearvuze"
-to = "/project/clearvuze"
+to = "/project/clearvuze-2"
+status = 301
+force = false
+
+[[redirects]]
+from = "/work/humanified/"
+to = "/project/humanifed"
+status = 301
+force = false
+
+[[redirects]]
+from = "/creative-work/city-cancer-challenge.html"
+to = "/work"
+status = 301
+force = false
+
+[[redirects]]
+from = "/creative-work/hugo-boss-design-animation.html"
+to = "/project/hugo-boss"
+status = 301
+force = false
+
+[[redirects]]
+from = "/creative-work/onboard-informatics-design-web-development.html"
+to = "/work"
+status = 301
+force = false
+
+[[redirects]]
+from = "/portfolio/bbc-entertainment-2/"
+to = "/project/london-calling"
+status = 301
+force = false
+
+[[redirects]]
+from = "/projects/fusion-beauty.html"
+to = "/project/fusion-beauty"
+status = 301
+force = false
+
+[[redirects]]
+from = "/creative-work/repair-the-world"
+to = "/project/repair-the-world"
+status = 301
+force = false
+
+[[redirects]]
+from = "/creative-work/yankees-creative-design.html"
+to = "/project/yankees"
+status = 301
+force = false
+
+[[redirects]]
+from = "/creative-work/indago-design-animation.html"
+to = "/project/indago"
+status = 301
+force = false
+
+[[redirects]]
+from = "/creative-work/bbc-entertainment-design-animation-tv.html"
+to = "/project/bbc-hd"
+status = 301
+force = false
+
+[[redirects]]
+from = "/creative-work/investigation-13-entertainment-design-animation.html"
+to = "/project/investigation-13"
+status = 301
+force = false
+
+[[redirects]]
+from = "/creative-work/steelbridge-labs-incubator-branding-web-design"
+to = "/work"
+status = 301
+force = false
+
+[[redirects]]
+from = "/creative-work/engine-shop-branding-design-web-development.html"
+to = "/project/engineshop"
+status = 301
+force = false
+
+[[redirects]]
+from = "/creative-work/humanifed-branding-web-design-app-development.html"
+to = "/project/humanifed"
+status = 301
+force = false
+
+[[redirects]]
+from = "/creative-work/bbc-entertainment-mina-jack-animation-design-tv.html"
+to = "/project/mina-and-jack"
 status = 301
 force = false

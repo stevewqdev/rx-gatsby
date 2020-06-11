@@ -26,6 +26,8 @@ useEffect(() => {
     let gridSize = grid.querySelectorAll("div").length - 1;
     grid.classList.add(`grid-${gridSize}`);
   })
+
+  console.log(group)
 })
 
 return (
@@ -62,6 +64,11 @@ return (
                                 <Link to={`/news/${node.slug}`}  >
                                   <img src={node.featured_media.source_url} alt={node.featured_media.alt_text} />
                                 </Link>
+                                <div className="blog__content">
+                                  <p className="sm__font reg__font white__font">{node.date}</p>
+                                  <p className="sm__font reg__font white__font">{node.categories[0].slug}</p>
+                                  <p className="md__font bold__font white__font" dangerouslySetInnerHTML={{__html: node.title}}/>
+                                </div>
                               </div>
                               :""
                             }
@@ -91,6 +98,11 @@ return (
                                 <Link to={`/news/${node.slug}`}  >
                                   <img src={node.featured_media.source_url} alt={node.featured_media.alt_text} />
                                 </Link>
+                                <div className="blog__content">
+                                  <p className="sm__font reg__font white__font">{node.date}</p>
+                                  <p className="sm__font reg__font white__font">{node.categories[0].slug}</p>
+                                  <p className="md__font bold__font white__font" dangerouslySetInnerHTML={{__html: node.title}}/>
+                                </div>
                               </div>
                               :""
                             }
