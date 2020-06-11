@@ -220,8 +220,10 @@ class ContactPage extends Component {
       margin-top: 350px;
       position: relative;
     }
-    #offices{
-      margin-top: -110px;
+    @media(max-width: 4000px){
+      #offices{
+        margin-top: 0px;
+      }
     }
     .top__below__about{
       margin: 150px 0 150px;
@@ -229,8 +231,13 @@ class ContactPage extends Component {
     .top__below__about .hero__extra__info{
       margin-top: 70px;
     }
+    @media(max-width: 1024px){
+      .top__below__about {
+        margin: 80px 0 80px;
+      }
+    }
     @media(max-width: 500px){
-      .main__section__wrapper {
+      .main__section__wrapper { 
         margin-top: -105vh;
       }
       #about .xmd__font {

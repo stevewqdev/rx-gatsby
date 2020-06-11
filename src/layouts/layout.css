@@ -700,8 +700,8 @@ body{
     letter-spacing: -0.7px;
   }
   .xmd__font{
-    font-size: 42px!important;
-    line-height: 46px;
+    font-size: 60px!important;
+    line-height: 62px;
     margin: 0;
     letter-spacing: -3px;
   }
@@ -752,7 +752,14 @@ body{
   }
 
 }
-
+@media(max-width: 2500px){
+  .xmd__font{
+    font-size: 42px!important;
+    line-height: 46px;
+    margin: 0;
+    letter-spacing: -3px;
+  }
+}
 @media(max-width: 1700px){
   .container__custom{
     padding: 0px 0px;

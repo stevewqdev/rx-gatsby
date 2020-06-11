@@ -28,7 +28,7 @@ exports.createPages = ({ graphql, actions }) => {
           edges: posts,
           createPage: createPage,
           pageTemplate: "src/templates/posts.js",
-          pageLength: 3,
+          pageLength: 1000,
           pathPrefix: "news",
         })
 

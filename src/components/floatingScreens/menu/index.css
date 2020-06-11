@@ -100,7 +100,7 @@
     }
     .menu__email {
         position: relative;
-        margin-top: 160px;
+        margin-top: 61px;
     }
 }
 @media(max-width: 2000px){
@@ -120,11 +120,15 @@
     }
     .menu__email {
         position: relative;
-        margin-top: 235px;
+        margin-top: 65px;
     }
 }
-
-
+@media (max-width: 1024px){
+    .menu__email {
+        position: relative;
+        margin-top: 125px;
+    }
+}
 .menu__full__screen .copy__one__column__extra__menu .menu__section__title{
     margin: 20px 0;
 }
