@@ -46,7 +46,7 @@ export default class cursor extends Component {
   componentDidMount() {
     const script = document.createElement("script")
 
-    script.src = "https://raxo.tv/custom-cursor/cursor.js"
+    script.src = "https://motion.raxo.tv/custom-cursor/cursor.js"
     script.async = true
 
     document.body.appendChild(script)
