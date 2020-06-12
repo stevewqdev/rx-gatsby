@@ -1022,10 +1022,10 @@ section#one{
     display: block;
   }
   .featured__video .container__custom {
-    padding: 0 45px 0 25px;
+    padding: 0 45px 0 30px;
 }
 .selected__projects .container__custom {
-  padding: 0 45px 0 25px;
+  padding: 0 45px 0 30px;
 }
   .menu__agreements{
     display: none;
@@ -1478,7 +1478,7 @@ button.active:before{
   .selected__projects__projects__left img{
     width: calc(100% )!important;
     height: auto!important;
-    padding-right: 20px;
+    padding-right: 0px;
   }
   .the__project.active .selected__projects__projects__left__copy{
     display: none;
@@ -1489,7 +1489,7 @@ button.active:before{
   .the__project.active img{
     width: calc(100% )!important;
     height: auto!important;
-    padding-right: 20px;
+    padding-right: 0px;
   }
   .selected__projects__button__right{
     display: none;
@@ -1504,10 +1504,10 @@ button.active:before{
       font-size: 9px;
   }
   #about   .container__custom {
-    padding: 70px 25px 0px 25px;
+    padding: 70px 30px 0px 30px;
   }
   .container__custom {
-    padding: 0 45px 0 41px;
+    padding: 0 30px 0 30px;
   }
   .lg__font {
     font-size: 23px!important;

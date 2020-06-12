@@ -551,7 +551,7 @@ class Ultra extends Component {
                         index === 5 
                         ?
                         <>
-                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 image no__padding"
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 image "
                         data-aos="fade-up"
                         data-aos-easing="ease-in-back"
                         data-aos-delay={`120`}

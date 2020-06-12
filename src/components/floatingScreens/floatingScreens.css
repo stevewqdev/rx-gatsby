@@ -234,7 +234,7 @@
         left: -40px;
     }
     .floating__web__info .brand {
-        padding: 25px;
+        padding: 25px 30px;
     }
     .floating__web__info .brand > div{
         position: static;
@@ -247,7 +247,7 @@
         pointer-events: none;
     }
     .floating__web__info .copy__one__column, .floating__web__info .copy__two__column {
-        padding: 10px 10px;
+        padding: 10px 15px;
     }
     .copy__two__column{
         position: absolute!important;

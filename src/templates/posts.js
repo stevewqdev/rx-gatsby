@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Layout from "../layouts/index"
-import Link from 'gatsby-link'
+import { Link } from "gatsby"
 import {Helmet} from "react-helmet"; 
 import "./post-grid.css"
 import bside from "../images/beside.jpg"

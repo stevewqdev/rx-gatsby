@@ -140,7 +140,7 @@ class ContactPage extends Component {
     }
     @media(max-width: 500px){
       .work__list .container__custom{
-        padding: 0 25px 0 25px;
+        padding: 0 25px 0 27px;
       }
     }
     `

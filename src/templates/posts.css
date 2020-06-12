@@ -82,7 +82,7 @@
     }
     .template__default .post {
         margin: 0px 0;
-    padding: 0 25px;
+        padding: 0 30px;
     }
     .template__default .post__content__wrapper {
         position: relative;

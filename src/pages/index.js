@@ -62,10 +62,10 @@ class HomePage extends Component {
 
     document.querySelectorAll(".footer")[0].classList.add("dark");
     var scene = document.getElementById('scene');
-    var parallaxInstance = new Parallax(scene, {
-      relativeInput: true,
-      pointerEvents: false,
-    });
+    // var parallaxInstance = new Parallax(scene, {
+    //   relativeInput: true,
+    //   pointerEvents: false,
+    // });
 
     if (window.innerWidth < 500) {
       this.setState({
