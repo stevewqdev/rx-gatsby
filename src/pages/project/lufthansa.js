@@ -3,9 +3,7 @@ import Layout from "../../layouts/index"
 import { graphql } from "gatsby"
 import {Helmet} from "react-helmet";
 import ProjectHero  from "../../components/projects/header/index"
-import Img from "gatsby-image"
 import "../../layouts/pages/projects/lufthansa.css"
-import Vimeo from '@u-wave/react-vimeo';
 import RelatedProjects from "../../components/relatedProjects/index"
 
 class Lufthansa extends Component {
@@ -52,7 +50,7 @@ class Lufthansa extends Component {
                                             section__one__image-${index}
                                         
                                         `}>
-                                            <img src={image} alt="London Calling Project Image"/>
+                                            <img src={image} alt="Illustration from Lufthansa project"/>
                                         </div>
                                     :""
                                 }
@@ -72,7 +70,7 @@ class Lufthansa extends Component {
                                                 section__one__image-${index}
                                             
                                             `}>
-                                                <img src={image} alt="London Calling Project Image"/>
+                                                <img src={image} alt="Illustration from Lufthansa project"/>
                                             </div>
                                         </>
                                     :""
@@ -90,7 +88,7 @@ class Lufthansa extends Component {
                                             section__one__image-${index}
                                         
                                         `}>
-                                            <img src={image} alt="London Calling Project Image"/>
+                                            <img src={image} alt="Illustration from Lufthansa project"/>
                                         </div>
                                         </>
                                     :""
@@ -111,7 +109,7 @@ class Lufthansa extends Component {
                                             section__one__image-${index}
                                         
                                         `}>
-                                            <img src={image} alt="London Calling Project Image"/>
+                                            <img src={image} alt="Illustration from Lufthansa project"/>
                                         </div>
                                     </>
                                     :""
@@ -131,7 +129,7 @@ class Lufthansa extends Component {
                                             section__one__image-${index}
                                         
                                         `}>
-                                            <img src={image} alt="London Calling Project Image"/>
+                                            <img src={image} alt="Illustration from Lufthansa project"/>
                                         </div>
                                     </>
                                     :""
@@ -186,7 +184,7 @@ class Lufthansa extends Component {
                                                 section__three__image-${index}
                                             
                                             `}>
-                                                <img src={image} alt="London Calling Project Image"/>
+                                                <img src={image} alt="Illustration from Lufthansa project"/>
                                           </div>
                                         : ""
                                     }
@@ -206,7 +204,7 @@ class Lufthansa extends Component {
                                             section__one__image-${index}
                                         
                                         `}>
-                                            <img src={image} alt="London Calling Project Image"/>
+                                            <img src={image} alt="Illustration from Lufthansa project"/>
                                         </div>
                                     </>
                                         :""
@@ -223,7 +221,7 @@ class Lufthansa extends Component {
                                                 section__three__image-${index}
                                             
                                             `}>
-                                                <img src={image} alt="London Calling Project Image"/>
+                                                <img src={image} alt="Illustration from Lufthansa project"/>
                                           </div>
                                         : ""
                                     }
@@ -266,7 +264,7 @@ query LufthansaPageQuery {
             related_project_thumbnail {
                 localFile{
                   childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -280,7 +278,7 @@ query LufthansaPageQuery {
             featured_image {
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }

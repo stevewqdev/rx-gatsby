@@ -56,7 +56,7 @@ class Cbeebies extends Component {
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
-    const { videoIndex, paused, volume } = this.state;
+    const {  paused, volume } = this.state;
 
     return ( 
       <Layout>
@@ -90,7 +90,7 @@ class Cbeebies extends Component {
                     
                     </div>
                     <div className="col-lg-12 image no__padding">
-                        <Img fluid={pageAcf.cbb_sone_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                        <Img fluid={pageAcf.cbb_sone_image.localFile.childImageSharp.fluid} alt={`Illustration from Cbeebies project`} tabIndex={-1}/>
                     </div>
                 </div>
               </div>
@@ -129,7 +129,7 @@ class Cbeebies extends Component {
                         ? 
                           <>
                             <div className="col-lg-12 no__padding">
-                              <Img fluid={element.main_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                              <Img fluid={element.main_image.localFile.childImageSharp.fluid} alt={`Illustration from Cbeebies project`} tabIndex={-1}/>
                             </div>
                           </>
                         : ""
@@ -145,7 +145,7 @@ class Cbeebies extends Component {
                             />
                           </div>
                           <div className={`col-xs-12 col-sm-12 col-md-9 col-lg-9 image hidden-${index} no__padding`}>
-                            <Img fluid={element.main_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            <Img fluid={element.main_image.localFile.childImageSharp.fluid} alt={`Illustration from Cbeebies project`} tabIndex={-1}/>
                           </div>
                           <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 video no__padding hidden-${index}`} >
                             {
@@ -165,7 +165,7 @@ class Cbeebies extends Component {
                           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 end__image no__padding">
                             {
                               element.end_image
-                              ?<Img fluid={element.end_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                              ?<Img fluid={element.end_image.localFile.childImageSharp.fluid} alt={`Illustration from Cbeebies project`} tabIndex={-1}/>
                               :""
                             }
                             
@@ -174,7 +174,7 @@ class Cbeebies extends Component {
                         : 
                         <>
                           <div className={`col-xs-12 col-sm-12 col-md-9 col-lg-9 image hidden-${index} no__padding`}>
-                            <Img fluid={element.main_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            <Img fluid={element.main_image.localFile.childImageSharp.fluid} alt={`Illustration from Cbeebies project`} tabIndex={-1}/>
                           </div>
                           <div className={`col-xs-12 col-sm-12 col-md-3 col-lg-3 copy hidden-${index}`}>
                             <div
@@ -199,7 +199,7 @@ class Cbeebies extends Component {
                           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 end__image no__padding">
                             {
                               element.end_image
-                              ?<Img fluid={element.end_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                              ?<Img fluid={element.end_image.localFile.childImageSharp.fluid} alt={`Illustration from Cbeebies project`} tabIndex={-1}/>
                               :""
                             }                         
                           </div>
@@ -244,7 +244,7 @@ query CbeebiesPageQuery {
             related_project_thumbnail {
                 localFile{
                   childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -258,7 +258,7 @@ query CbeebiesPageQuery {
             featured_image {
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -270,7 +270,7 @@ query CbeebiesPageQuery {
             cbb_sone_image{
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -282,7 +282,7 @@ query CbeebiesPageQuery {
                 main_image{
                     localFile {
                         childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                         }
@@ -292,7 +292,7 @@ query CbeebiesPageQuery {
                 end_image{
                     localFile {
                         childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                         }

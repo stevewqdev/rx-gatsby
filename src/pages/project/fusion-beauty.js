@@ -3,23 +3,11 @@ import Layout from "../../layouts/index"
 import { graphql } from "gatsby"
 import {Helmet} from "react-helmet";
 import ProjectHero  from "../../components/projects/header/index"
-import Img from "gatsby-image"
 import "../../layouts/pages/projects/fusion-beauty.css"
-import Vimeo from '@u-wave/react-vimeo';
 import RelatedProjects from "../../components/relatedProjects/index"
 
 class FusionBeauty extends Component {
- constructor(props) {
-  super(props);
 
-  }
- 
-
-
-  componentDidMount(){
-  }
-
-   
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
@@ -82,7 +70,7 @@ class FusionBeauty extends Component {
                                     `
                                 }
                                 >
-                                    <img src={image} alt="Project Image"/>
+                                    <img src={image} alt="Illustration from Fusion Beauty project"/>
                                 </div>
                                 {
                                     index === 2
@@ -122,7 +110,7 @@ class FusionBeauty extends Component {
                                     `
                                 }
                                 >
-                                    <img src={image} alt="Project Image"/>
+                                    <img src={image} alt="Illustration from Fusion Beauty project"/>
                                 </div>
     
                             </>
@@ -190,7 +178,7 @@ class FusionBeauty extends Component {
                                     }
                                 >
         
-                                    <img src={image} alt="Project Image"/>
+                                    <img src={image} alt="Illustration from Fusion Beauty project"/>
                                 </div>
                                 {
                                     index === 3
@@ -234,7 +222,7 @@ query FusionBeautyPageQuery {
             related_project_thumbnail {
                 localFile{
                   childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -248,7 +236,7 @@ query FusionBeautyPageQuery {
             featured_image {
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }

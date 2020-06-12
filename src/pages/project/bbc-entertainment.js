@@ -3,19 +3,10 @@ import Layout from "../../layouts/index"
 import { graphql } from "gatsby"
 import {Helmet} from "react-helmet";
 import ProjectHero  from "../../components/projects/header/index"
-import Img from "gatsby-image"
 import "../../layouts/pages/projects/bbc-entertainment.css"
-import Vimeo from '@u-wave/react-vimeo';
 import RelatedProjects from "../../components/relatedProjects/index"
 
 class BbcEntertainment extends Component {
- constructor(props) {
-  super(props);
-
-  }
- 
-
-
   componentDidMount(){
   }
 
@@ -86,7 +77,7 @@ class BbcEntertainment extends Component {
                                     `
                                 }
                                 >
-                                    <img src={image} alt="Project Image"/>
+                                    <img src={image} alt="Illustration from BBC Entertainment project"/>
                                 </div>
 
                             </>
@@ -122,7 +113,7 @@ class BbcEntertainment extends Component {
                                     `
                                 }
                                 >
-                                    <img src={image} alt="Project Image"/>
+                                    <img src={image} alt="Illustration from BBC Entertainment project"/>
                                 </div>
                                 {
                                     index === 2
@@ -195,7 +186,7 @@ class BbcEntertainment extends Component {
                                     }
                                 >
         
-                                    <img src={image} alt="Project Image"/>
+                                    <img src={image} alt="Illustration from BBC Entertainment project"/>
                                 </div>
 
                             </>
@@ -235,7 +226,7 @@ query BbcEntertainmentPageQuery {
             related_project_thumbnail {
                 localFile{
                   childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -249,7 +240,7 @@ query BbcEntertainmentPageQuery {
             featured_image {
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }

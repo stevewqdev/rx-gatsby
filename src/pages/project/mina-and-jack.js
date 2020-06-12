@@ -51,15 +51,11 @@ class MinaAndJack extends Component {
     });
   }
 
-  componentDidMount(){
-    //document.querySelectorAll(".floating__web__info")[1].classList.add("mix__blend__screen");
-  }
-
    
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
-    const { videoIndex, paused, volume } = this.state;
+    const {  paused, volume } = this.state;
 
     return ( 
       <Layout>
@@ -110,7 +106,7 @@ class MinaAndJack extends Component {
                       data-aos-delay={`${(index+1)*100}`}
                       data-aos-duration="1200"
                     >
-                      <img src={image} alt="Project Image"/>
+                      <img src={image} alt="Illustration from Mina&Jack project"/>
                     </div>
                   )
                 }
@@ -121,7 +117,7 @@ class MinaAndJack extends Component {
                 data-aos-easing="ease-in-back"
                 data-aos-delay={`150`}
                 data-aos-duration="1200">
-                <img src={pageAcf.stwo_gif.localFile.url} alt="Project gif"/>
+                <img src={pageAcf.stwo_gif.localFile.url} alt="Illustration from Mina&Jack project"/>
               </div>
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding  section__two__copy">
                 <div
@@ -139,7 +135,7 @@ class MinaAndJack extends Component {
                 data-aos-delay={`190`}
                 data-aos-duration="1200"
               >
-                <Img fluid={pageAcf.stwo_mainimage.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                <Img fluid={pageAcf.stwo_mainimage.localFile.childImageSharp.fluid} alt={`Illustration from Mina & Jack project`} tabIndex={-1}/>
               </div>
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding  section__two__copy inverse">
                 <div
@@ -157,7 +153,7 @@ class MinaAndJack extends Component {
                   data-aos-delay={`150`}
                   data-aos-duration="1200"
               >
-                <img src={pageAcf.stwo_gif_second.localFile.url} alt="Project gif"/>
+                <img src={pageAcf.stwo_gif_second.localFile.url} alt="Illustration from Mina&Jack project"/>
               </div>
               </div>
             </div>
@@ -183,7 +179,7 @@ class MinaAndJack extends Component {
                     data-aos-delay={`190`}
                     data-aos-duration="1200"
                 >
-                  <Img fluid={pageAcf.about_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                  <Img fluid={pageAcf.about_image.localFile.childImageSharp.fluid} alt={`Illustration from Mina & Jack project`} tabIndex={-1}/>
                 </div>
               </div>
             </div>
@@ -248,7 +244,7 @@ class MinaAndJack extends Component {
                     data-aos-delay={`120`}
                     data-aos-duration="1200"
                 >
-                  <Img fluid={pageAcf.ssix_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                  <Img fluid={pageAcf.ssix_image.localFile.childImageSharp.fluid} alt={`Illustration from Mina & Jack project`} tabIndex={-1}/>
                 </div>
 
                 <div className="col-xs-12 col-sm-12 col-md-5 col-lg-3 no__padding  section__two__copy copy__on__top ">
@@ -270,7 +266,7 @@ class MinaAndJack extends Component {
                     data-aos-delay={`${(index + 1 ) * 100}`}
                     data-aos-duration="1200"
                     >
-                      <img src={image} alt="Project Image"/>
+                      <img src={image} alt="Illustration from Mina&Jack project"/>
                     </div>
                   )
                 }
@@ -298,7 +294,7 @@ class MinaAndJack extends Component {
                                 data-aos-delay={`150`}
                                 data-aos-duration="1200"
                 >
-                  <Img fluid={pageAcf.sseven_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                  <Img fluid={pageAcf.sseven_image.localFile.childImageSharp.fluid} alt={`Illustration from Mina & Jack project`} tabIndex={-1}/>
                 </div>
                 {
                   pageAcf.sseven_gallery.map((image, index) => 
@@ -308,7 +304,7 @@ class MinaAndJack extends Component {
                     data-aos-delay={`${(index + 1 ) * 100}`}
                     data-aos-duration="1200"
                     >
-                      <img src={image} alt="Project Image"/>
+                      <img src={image} alt="Illustration from Mina&Jack project"/>
                     </div>
                   )
                 }
@@ -326,7 +322,7 @@ class MinaAndJack extends Component {
                 data-aos-delay={`120`}
                 data-aos-duration="1200"
                 >
-                  <Img fluid={pageAcf.seight_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                  <Img fluid={pageAcf.seight_image.localFile.childImageSharp.fluid} alt={`Illustration from Mina & Jack project`} tabIndex={-1}/>
                 </div>
 
                 <div className="col-xs-12 col-sm-12 col-md-5 col-lg-3 no__padding  section__two__copy copy__on__top ">
@@ -348,7 +344,7 @@ class MinaAndJack extends Component {
                     data-aos-delay={`${(index + 1 ) * 100}`}
                     data-aos-duration="1200"
                     >
-                      <img src={image} alt="Project Image"/>
+                      <img src={image} alt="Illustration from Mina&Jack project"/>
                     </div>
                   )
                 }
@@ -365,7 +361,7 @@ class MinaAndJack extends Component {
                 data-aos-delay={`120`}
                 data-aos-duration="1200"
                 >
-                  <Img fluid={pageAcf.snine_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                  <Img fluid={pageAcf.snine_image.localFile.childImageSharp.fluid} alt={`Illustration from Mina & Jack project`} tabIndex={-1}/>
                   <div className="section__nine__floating__text">
                     <div
                     data-aos="fade-up"
@@ -392,7 +388,7 @@ class MinaAndJack extends Component {
                     data-aos-delay={`${(index + 1 ) * 100}`}
                     data-aos-duration="1200"
                     >
-                      <img src={image} alt="Project Image"/>
+                      <img src={image} alt="Illustration from Mina&Jack project"/>
                     </div>
                   )
                 }
@@ -427,7 +423,7 @@ query MinaAndJackPageQuery {
             about_image {
               localFile {
                 childImageSharp {
-                  fluid(maxWidth: 2000, quality: 100) {
+                  fluid(maxWidth: 1300, quality: 80) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
@@ -440,7 +436,7 @@ query MinaAndJackPageQuery {
             related_project_thumbnail {
               localFile{
                 childImageSharp {
-                  fluid(maxWidth: 2000, quality: 100) {
+                  fluid(maxWidth: 1300, quality: 80) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
@@ -455,7 +451,7 @@ query MinaAndJackPageQuery {
             seight_image {
               localFile {
                 childImageSharp {
-                  fluid(maxWidth: 2000, quality: 100) {
+                  fluid(maxWidth: 1300, quality: 80) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
@@ -478,7 +474,7 @@ query MinaAndJackPageQuery {
             video_iframe_poster{
               localFile {
                 childImageSharp {
-                  fluid(maxWidth: 2000, quality: 100) {
+                  fluid(maxWidth: 1300, quality: 80) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
@@ -488,7 +484,7 @@ query MinaAndJackPageQuery {
             featured_image {
               localFile {
                 childImageSharp {
-                  fluid(maxWidth: 2000, quality: 100) {
+                  fluid(maxWidth: 1300, quality: 80) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
@@ -499,7 +495,7 @@ query MinaAndJackPageQuery {
             snine_image {
             localFile {
                 childImageSharp {
-                  fluid(maxWidth: 2000, quality: 100) {
+                  fluid(maxWidth: 1300, quality: 80) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
@@ -509,7 +505,7 @@ query MinaAndJackPageQuery {
             sseven_image {
             localFile {
                 childImageSharp {
-                  fluid(maxWidth: 2000, quality: 100) {
+                  fluid(maxWidth: 1300, quality: 80) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
@@ -519,7 +515,7 @@ query MinaAndJackPageQuery {
             ssix_image {
             localFile {
                 childImageSharp {
-                  fluid(maxWidth: 2000, quality: 100) {
+                  fluid(maxWidth: 1300, quality: 80) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
@@ -529,7 +525,7 @@ query MinaAndJackPageQuery {
             stwo_gif {
             localFile {
                 childImageSharp {
-                  fluid(maxWidth: 2000, quality: 100) {
+                  fluid(maxWidth: 1300, quality: 80) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
@@ -539,7 +535,7 @@ query MinaAndJackPageQuery {
             stwo_gif_second {
             localFile {
                 childImageSharp {
-                  fluid(maxWidth: 2000, quality: 100) {
+                  fluid(maxWidth: 1300, quality: 80) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
@@ -549,7 +545,7 @@ query MinaAndJackPageQuery {
             stwo_mainimage {
             localFile {
                 childImageSharp {
-                  fluid(maxWidth: 2000, quality: 100) {
+                  fluid(maxWidth: 1300, quality: 80) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
@@ -559,7 +555,7 @@ query MinaAndJackPageQuery {
             video_iframe_poster {
             localFile {
                 childImageSharp {
-                  fluid(maxWidth: 2000, quality: 100) {
+                  fluid(maxWidth: 1300, quality: 80) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }

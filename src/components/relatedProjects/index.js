@@ -39,7 +39,6 @@ const RelatedProjects = props => {
     if (window.innerWidth > 800) {
       hrefRedirect()
     }
-    console.log(props);
   })
 
   return (
@@ -119,13 +118,13 @@ const RelatedProjects = props => {
                 ? 
                 <Img
                   fluid={props.relatedthumbnail.localFile.childImageSharp.fluid}
-                  alt={`Project  image`}
+                  alt={`${props.relatedproject} project`}
                   tabIndex={-1}
                 />
                 : 
                 <img
                   src={props.relatedthumbnail.localFile.url}
-                  alt={`Project  image`}
+                  alt={`${props.relatedproject} project`}
                   tabIndex={-1}
                 />
               }
@@ -160,13 +159,13 @@ const RelatedProjects = props => {
                 ? 
                 <Img
                   fluid={props.relatedthumbnail.localFile.childImageSharp.fluid}
-                  alt={`Project  image`}
+                  alt={`${props.relatedproject} project`}
                   tabIndex={-1}
                 />
                 : 
                 <img
                   src={props.relatedthumbnail.localFile.url}
-                  alt={`Project  image`}
+                  alt={`${props.relatedproject} project`}
                   tabIndex={-1}
                 />
               }

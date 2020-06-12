@@ -5,14 +5,9 @@ import {Helmet} from "react-helmet";
 import ProjectHero  from "../../components/projects/header/index"
 import Img from "gatsby-image"
 import "../../layouts/pages/projects/yankees.css"
-import Vimeo from '@u-wave/react-vimeo';
 import RelatedProjects from "../../components/relatedProjects/index"
 
 class Yankee extends Component {
-
-  componentDidMount(){
-  }
-
    
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
@@ -295,7 +290,7 @@ query YankeePageQuery {
             related_project_thumbnail {
                 localFile{
                   childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -309,7 +304,7 @@ query YankeePageQuery {
             featured_image {
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -322,7 +317,7 @@ query YankeePageQuery {
                 image{
                     localFile {
                         childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                         }

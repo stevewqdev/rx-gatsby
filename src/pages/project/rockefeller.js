@@ -5,15 +5,11 @@ import {Helmet} from "react-helmet";
 import ProjectHero  from "../../components/projects/header/index"
 import Img from "gatsby-image"
 import "../../layouts/pages/projects/rockefeller.css"
-import Vimeo from '@u-wave/react-vimeo';
 import RelatedProjects from "../../components/relatedProjects/index"
 
 class Rockefeller extends Component {
 
-  componentDidMount(){
-  }
 
-   
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
@@ -55,7 +51,7 @@ class Rockefeller extends Component {
                                         />
                                     </div>
                                     <div className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-two-${index} image no__padding`} key={index}>
-                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rockefeller project`} tabIndex={-1}/>
                                     </div>
 
                                     </>
@@ -66,7 +62,7 @@ class Rockefeller extends Component {
                                     ?
                                     <>
                                     <div className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-two-${index} no__padding image`} key={index}>
-                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rockefeller project`} tabIndex={-1}/>
                                     </div>
                                     </>
                                     :""
@@ -76,7 +72,7 @@ class Rockefeller extends Component {
                                     ?
                                     <>
                                     <div className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-two-${index} image no__padding`} key={index}>
-                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rockefeller project`} tabIndex={-1}/>
                                     </div>
 
                                     </>
@@ -87,7 +83,7 @@ class Rockefeller extends Component {
                                     ?
                                     <>
                                     <div className={`custom__col col-xs-12 col-sm-12 col-md-9 col-lg-9 col-two-${index} image no__padding`} key={index}>
-                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rockefeller project`} tabIndex={-1}/>
                                     </div>
                                     <div className={`custom__col col-xs-12 col-sm-12 col-md-3 col-lg-3 col-two-${index} copy `} key={index}>
                                         <div
@@ -109,7 +105,7 @@ class Rockefeller extends Component {
                                         />
                                     </div>
                                     <div className={`custom__col col-xs-12 col-sm-12 col-md-9 col-lg-9 col-two-${index} image no__padding`} key={index}>
-                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rockefeller project`} tabIndex={-1}/>
                                     </div>
                                     </>
                                     :""
@@ -119,7 +115,7 @@ class Rockefeller extends Component {
                                     ?
                                     <>
                                     <div className={`custom__col col-xs-12 col-sm-12 col-md-9 col-lg-9 col-two-${index} image no__padding`} key={index}>
-                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rockefeller project`} tabIndex={-1}/>
                                     </div>
                                     <div className={`custom__col col-xs-12 col-sm-12 col-md-3 col-lg-3 col-two-${index} copy `} key={index}>
                                         <div
@@ -141,7 +137,7 @@ class Rockefeller extends Component {
                                         />
                                     </div>
                                     <div className={`custom__col col-xs-12 col-sm-12 col-md-9 col-lg-9 col-two-${index} image no__padding`} key={index}>
-                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rockefeller project`} tabIndex={-1}/>
                                     </div>
                                     </>
                                     :""
@@ -151,7 +147,7 @@ class Rockefeller extends Component {
                                     ?
                                     <>
                                     <div className={`custom__col col-xs-12 col-sm-12 col-md-9 col-lg-9 col-two-${index} image no__padding`} key={index}>
-                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rockefeller project`} tabIndex={-1}/>
                                     </div>
                                     <div className={`custom__col col-xs-12 col-sm-12 col-md-3 col-lg-3 col-two-${index} copy `} key={index}>
                                         <div
@@ -167,7 +163,7 @@ class Rockefeller extends Component {
                                     ?
                                     <>
                                     <div className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-two-${index} image no__padding`} key={index}>
-                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rockefeller project`} tabIndex={-1}/>
                                     </div>
                                     </>
                                     :""
@@ -208,7 +204,7 @@ query RockefellerPageQuery {
             related_project_thumbnail {
                 localFile{
                   childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -222,7 +218,7 @@ query RockefellerPageQuery {
             featured_image {
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -234,7 +230,7 @@ query RockefellerPageQuery {
                 image{
                     localFile {
                         childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                         }

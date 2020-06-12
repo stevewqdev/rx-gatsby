@@ -5,7 +5,6 @@ import { graphql } from "gatsby"
 import About from "../components/about/index"
 import {Helmet} from "react-helmet";
 import Parallax from 'parallax-js'
-import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 class HomePage extends Component {
   constructor(props) {
@@ -14,9 +13,7 @@ class HomePage extends Component {
   }
 
   playVideo(event){
-    console.log("click");
     if (!event.target.paused) {
-      document.querySelectorAll(".poster__animated")[0].classList.remove("hidden");
       if (window.innerWidth < 500) {
         event.target.pause();
       }
@@ -103,7 +100,6 @@ class HomePage extends Component {
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
-    console.log(pageAcf);
     const customStyle =
     `
     @media(max-width: 500px){
@@ -481,7 +477,7 @@ export const pageQuery = graphql`
                 thumbnail_image {
                   localFile {
                     childImageSharp {
-                      fluid(maxWidth: 1000, quality: 100) {
+                      fluid(maxWidth: 800, quality: 90) {
                         ...GatsbyImageSharpFluid_withWebp
                       }
                     }

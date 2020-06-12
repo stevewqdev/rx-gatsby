@@ -4,7 +4,6 @@ import { graphql } from "gatsby"
 import Hero from "../components/hero/index"
 import {Helmet} from "react-helmet";
 import About from "../components/about/index"
-import { Link } from "gatsby"
 
 
 import "../layouts/pages/management-agreements.css"

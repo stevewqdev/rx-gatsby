@@ -5,58 +5,13 @@ import {Helmet} from "react-helmet";
 import ProjectHero  from "../../components/projects/header/index"
 import Img from "gatsby-image"
 import "../../layouts/pages/projects/coloredge.css"
-import Vimeo from '@u-wave/react-vimeo';
 import RelatedProjects from "../../components/relatedProjects/index"
 
 class Coloredge extends Component {
- constructor(props) {
-  super(props);
 
-    this.state = {
-      videoIndex: 0,
-      volume: 1,
-      paused: false,
-    };
-
-    this.handlePause = this.handlePause.bind(this);
-    this.handlePlayerPause = this.handlePlayerPause.bind(this);
-    this.handlePlayerPlay = this.handlePlayerPlay.bind(this);
-    this.handleVolume = this.handleVolume.bind(this);
-  }
- 
-  selectVideo(index) {
-    this.setState({ videoIndex: index });
-  }
-
-  handlePause(event) {
-    this.setState({
-      paused: event.target.checked,
-    });
-  }
-
-  handlePlayerPause() {
-    this.setState({ paused: true });
-  }
-
-  handlePlayerPlay() {
-    this.setState({ paused: false });
-  }
-
-  handleVolume(event) {
-    this.setState({
-      volume: parseFloat(event.target.value),
-    });
-  }
-
-  componentDidMount(){
-    //document.querySelectorAll(".floating__web__info")[1].classList.add("mix__blend__screen");
-  }
-
-   
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
-    const { videoIndex, paused, volume } = this.state;
     return ( 
       <Layout>
         <div className="project__template coloredge">
@@ -89,7 +44,7 @@ class Coloredge extends Component {
                         
                         </div>
                         <div className="col-lg-12 image no__padding">
-                            <Img fluid={pageAcf.ce_sone_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            <Img fluid={pageAcf.ce_sone_image.localFile.childImageSharp.fluid} alt={`Illustration from Coloredge project`} tabIndex={-1}/>
                         </div>
                     </div>
                     <div className="row two">
@@ -101,7 +56,7 @@ class Coloredge extends Component {
                         
                         </div>
                         <div className="col-lg-12 image no__padding">
-                            <Img fluid={pageAcf.ce_stwo_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            <Img fluid={pageAcf.ce_stwo_image.localFile.childImageSharp.fluid} alt={`Illustration from Coloredge project`} tabIndex={-1}/>
                         </div>
                     </div>
                     <div className="row three">
@@ -113,7 +68,7 @@ class Coloredge extends Component {
                         
                         </div>
                         <div className="col-lg-12 image no__padding">
-                            <Img fluid={pageAcf.ce_stwo_image_two.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            <Img fluid={pageAcf.ce_stwo_image_two.localFile.childImageSharp.fluid} alt={`Illustration from Coloredge project`} tabIndex={-1}/>
                         </div>
                     </div>
                 </div>
@@ -153,7 +108,7 @@ class Coloredge extends Component {
                             data-aos-delay={`120`}
                             data-aos-duration="1200"
                           >
-                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Coloredge project`} tabIndex={-1}/>
                           </div>
                           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 copy d-flex align-items-center"
                             data-aos="fade-up"
@@ -163,7 +118,7 @@ class Coloredge extends Component {
                           >
                             <div
                               className="simple__copy sm__font reg__font"
-                              dangerouslySetInnerHTML={{ __html: pageAcf.ce_stwo_copy_two }}
+                              dangerouslySetInnerHTML={{ __html: element.copy }}
                             />
                           </div>
                         </>
@@ -177,7 +132,7 @@ class Coloredge extends Component {
                           >
                             <div
                               className="simple__copy sm__font reg__font"
-                              dangerouslySetInnerHTML={{ __html: pageAcf.ce_stwo_copy_two }}
+                              dangerouslySetInnerHTML={{ __html:  element.copy }}
                             />
                           </div>
                           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 image"
@@ -186,7 +141,7 @@ class Coloredge extends Component {
                             data-aos-delay={`120`}
                             data-aos-duration="1200"
                           >
-                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Coloredge project`} tabIndex={-1}/>
                           </div>
 
                         </>
@@ -197,7 +152,7 @@ class Coloredge extends Component {
                 </div>
                 <div className="row floating__image">
                   <div className="col-lg-12 image no__padding">
-                    <Img fluid={pageAcf.ce_sthree_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                    <Img fluid={pageAcf.ce_sthree_image.localFile.childImageSharp.fluid} alt={`Illustration from Coloredge project`} tabIndex={-1}/>
                   </div>
                 </div>
                 <div className="row three">
@@ -210,7 +165,7 @@ class Coloredge extends Component {
                     </div>
                     
                     <div className="col-lg-12 image no__padding">
-                        <Img fluid={pageAcf.ce_sfour_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                        <Img fluid={pageAcf.ce_sfour_image.localFile.childImageSharp.fluid} alt={`Illustration from Coloredge project`} tabIndex={-1}/>
                     </div>
 
 
@@ -245,7 +200,7 @@ class Coloredge extends Component {
                             data-aos-delay={`120`}
                             data-aos-duration="1200"
                           >
-                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Coloredge project`} tabIndex={-1}/>
                           </div>
                           </>
                         : ""
@@ -260,7 +215,7 @@ class Coloredge extends Component {
                               data-aos-delay={`120`}
                               data-aos-duration="1200"
                             >
-                              <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                              <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Coloredge project`} tabIndex={-1}/>
                             </div>
                             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 copy d-flex align-items-center"
                               data-aos="fade-up"
@@ -298,7 +253,7 @@ class Coloredge extends Component {
                             data-aos-delay={`120`}
                             data-aos-duration="1200"
                           >
-                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Coloredge project`} tabIndex={-1}/>
                           </div>
                           </>
                         : ""
@@ -313,7 +268,7 @@ class Coloredge extends Component {
                               data-aos-delay={`120`}
                               data-aos-duration="1200"
                             >
-                              <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                              <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Coloredge project`} tabIndex={-1}/>
                             </div>
                             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 copy d-flex align-items-center"
                               data-aos="fade-up"
@@ -339,7 +294,7 @@ class Coloredge extends Component {
                               data-aos-delay={`120`}
                               data-aos-duration="1200"
                             >
-                              <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                              <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Coloredge project`} tabIndex={-1}/>
                             </div>
                           </>
                         : ""
@@ -365,7 +320,7 @@ class Coloredge extends Component {
                             data-aos-delay={`120`}
                             data-aos-duration="1200"
                           >
-                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Coloredge project`} tabIndex={-1}/>
                           </div>
                           </>
                         : ""
@@ -380,7 +335,7 @@ class Coloredge extends Component {
                               data-aos-delay={`120`}
                               data-aos-duration="1200"
                             >
-                              <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                              <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Coloredge project`} tabIndex={-1}/>
                             </div>
                             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 copy d-flex align-items-center"
                               data-aos="fade-up"
@@ -418,7 +373,7 @@ class Coloredge extends Component {
                             data-aos-delay={`120`}
                             data-aos-duration="1200"
                           >
-                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                             <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Coloredge project`} tabIndex={-1}/>
                           </div>
                           </>
                         : ""
@@ -461,7 +416,7 @@ query ColoredgePageQuery {
             related_project_thumbnail {
                 localFile{
                   childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -475,7 +430,7 @@ query ColoredgePageQuery {
             featured_image {
                 localFile {
                     childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                     }
@@ -487,7 +442,7 @@ query ColoredgePageQuery {
             ce_sone_image{
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -498,7 +453,7 @@ query ColoredgePageQuery {
             ce_stwo_image{
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -509,7 +464,7 @@ query ColoredgePageQuery {
             ce_stwo_image_two{
                 localFile {
                     childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                     }
@@ -522,7 +477,7 @@ query ColoredgePageQuery {
                 image{
                     localFile {
                         childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                         }
@@ -533,7 +488,7 @@ query ColoredgePageQuery {
             ce_sthree_image{
                 localFile {
                     childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                     }
@@ -543,7 +498,7 @@ query ColoredgePageQuery {
             ce_sfour_image{
                 localFile {
                     childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                     }
@@ -553,7 +508,7 @@ query ColoredgePageQuery {
                 image{
                     localFile {
                         childImageSharp {
-                            fluid(maxWidth: 2000, quality: 100) {
+                            fluid(maxWidth: 1300, quality: 80) {
                                 ...GatsbyImageSharpFluid_withWebp
                             }
                         }

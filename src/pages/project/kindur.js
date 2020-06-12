@@ -51,15 +51,10 @@ class Kindur extends Component {
       });
     }
 
-
-  componentDidMount(){
-  }
-
-   
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
-    const { videoIndex, paused, volume } = this.state;
+    const {  paused, volume } = this.state;
 
     return ( 
       <Layout>
@@ -111,7 +106,7 @@ class Kindur extends Component {
                           data-aos-duration="1200"
                           data-aos-offset="450"
                           >
-                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Kindur project`} tabIndex={-1}/>
                           </div>
                         </>
                         : ""
@@ -127,7 +122,7 @@ class Kindur extends Component {
                           data-aos-duration="1200"
                           data-aos-offset="450"
                           >
-                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Kindur project`} tabIndex={-1}/>
                           </div>
                           <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy d-flex align-items-center"
                           data-aos="fade-up"
@@ -167,7 +162,7 @@ class Kindur extends Component {
                           data-aos-duration="1200"
                           data-aos-offset="450"
                           >
-                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Kindur project`} tabIndex={-1}/>
                           </div>
                         </>
                         : ""
@@ -183,7 +178,7 @@ class Kindur extends Component {
                           data-aos-duration="1200"
                           data-aos-offset="450"
                           >
-                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Kindur project`} tabIndex={-1}/>
                           </div>
                           <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy d-flex align-items-center"
                           data-aos="fade-up"
@@ -211,7 +206,7 @@ class Kindur extends Component {
                           data-aos-duration="1200"
                           data-aos-offset="450"
                           >
-                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Kindur project`} tabIndex={-1}/>
                           </div>
                         </>
                         : ""
@@ -239,7 +234,7 @@ class Kindur extends Component {
                           data-aos-duration="1200"
                           data-aos-offset="450"
                           >
-                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Kindur project`} tabIndex={-1}/>
                           </div>
                         </>
                         : ""
@@ -268,7 +263,7 @@ class Kindur extends Component {
                           data-aos-duration="1200"
                           data-aos-offset="450"
                           >
-                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Kindur project`} tabIndex={-1}/>
                           </div>
                           <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
                         </>
@@ -286,7 +281,7 @@ class Kindur extends Component {
                           data-aos-duration="1200"
                           data-aos-offset="450"
                           >
-                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Kindur project`} tabIndex={-1}/>
                           </div>
                           <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
                           <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
@@ -306,7 +301,7 @@ class Kindur extends Component {
                           data-aos-duration="1200"
                           data-aos-offset="450"
                           >
-                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Kindur project`} tabIndex={-1}/>
                           </div>
                           <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
                         </>
@@ -402,7 +397,7 @@ class Kindur extends Component {
                               data-aos-duration="1200"
                               data-aos-offset="450"
                               >
-                                <img src={image} alt="Kindur Project Image"/>
+                                <img src={image} alt="Illustration form kindur project"/>
                               </div>
                             </>
                             :""
@@ -418,7 +413,7 @@ class Kindur extends Component {
                               data-aos-duration="1200"
                               data-aos-offset="450"
                               >
-                                <img src={image} alt="Kindur Project Image"/>
+                                <img src={image} alt="Illustration form kindur project"/>
                               </div>
                             </>
                             :""
@@ -460,7 +455,7 @@ query KindurPageQuery {
             related_project_thumbnail {
                 localFile{
                   childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -474,7 +469,7 @@ query KindurPageQuery {
             featured_image {
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -486,7 +481,7 @@ query KindurPageQuery {
                 image{
                     localFile{
                         childImageSharp {
-                          fluid(maxWidth: 2000, quality: 100) {
+                          fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                           }
                         }

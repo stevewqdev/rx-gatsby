@@ -50,19 +50,12 @@ class Univision extends Component {
       volume: parseFloat(event.target.value),
     });
   }
-
- 
-
-
-  componentDidMount(){
-  }
-
    
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
-    const { videoIndex, paused, volume } = this.state;
-    console.log(pageData);
+    const {  paused, volume } = this.state;
+
     return ( 
       <Layout>
         <div className="project__template univision">
@@ -171,7 +164,7 @@ class Univision extends Component {
                                     data-aos-duration="1200"
                                     data-aos-offset="450"
                                     >
-                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Univision`} tabIndex={-1}/>
                                     </div>
                                     : "" 
                                 }
@@ -198,7 +191,7 @@ class Univision extends Component {
                                                                             data-aos-duration="1200"
                                                                             data-aos-offset="450"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Univision`} tabIndex={-1}/>
                                         </div>
                                     </>
                                     : "" 
@@ -221,7 +214,7 @@ class Univision extends Component {
                                                                             data-aos-duration="1200"
                                                                             data-aos-offset="450"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Univision`} tabIndex={-1}/>
                                         </div>
                                     </>
                                     :""
@@ -245,7 +238,7 @@ class Univision extends Component {
                                                                             data-aos-duration="1200"
                                                                             data-aos-offset="450"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Univision`} tabIndex={-1}/>
                                         </div>
                                     </>
                                     :""
@@ -261,7 +254,7 @@ class Univision extends Component {
                                                                             data-aos-duration="1200"
                                                                             data-aos-offset="450"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Univision`} tabIndex={-1}/>
                                         </div>
                                     </>
                                     :""
@@ -277,7 +270,7 @@ class Univision extends Component {
                                                                             data-aos-duration="1200"
                                                                             data-aos-offset="450"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Univision`} tabIndex={-1}/>
                                         </div>
                                     </>
                                     :""
@@ -293,7 +286,7 @@ class Univision extends Component {
                                                                             data-aos-duration="1200"
                                                                             data-aos-offset="450"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Univision`} tabIndex={-1}/>
                                         </div>
                                     </>
                                     :""
@@ -309,7 +302,7 @@ class Univision extends Component {
                                     data-aos-duration="1200"
                                     data-aos-offset="450"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Univision`} tabIndex={-1}/>
                                         </div>
                                         <div className={`column__custom col-xs-12 col-sm-12 col-md-3 col-lg-3 copy copy-${index} d-flex align-items-center `}
                                                                             data-aos="fade-up"
@@ -350,7 +343,7 @@ class Univision extends Component {
                                     data-aos-duration="1200"
                                     data-aos-offset="450"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Univision`} tabIndex={-1}/>
                                         </div>
                                     </>
                                     :""
@@ -392,7 +385,7 @@ query UnivisionPageQuery {
             related_project_thumbnail {
                 localFile{
                   childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -406,7 +399,7 @@ query UnivisionPageQuery {
             featured_image {
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -421,7 +414,7 @@ query UnivisionPageQuery {
                 image{
                     localFile {
                         childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                         }

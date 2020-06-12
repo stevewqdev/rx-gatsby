@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import Img from "gatsby-image"
 import "./index.css"
 
@@ -135,6 +135,8 @@ const ProjectHero = props => {
             data-aos-easing="ease-in-back"
             data-aos-delay={`230`}
             data-aos-duration="1200"
+            role="button"
+            tabIndex={0}
           >
             <Img
               fluid={props.projectThumbnail.localFile.childImageSharp.fluid}

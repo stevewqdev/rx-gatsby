@@ -56,9 +56,8 @@ class Ultra extends Component {
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
-    const { videoIndex, paused, volume } = this.state;
+    const {  paused, volume } = this.state;
 
-    console.log(pageAcf);
     return ( 
       <Layout>
         <div className="project__template ultra">
@@ -115,9 +114,9 @@ class Ultra extends Component {
                                 {
                                   element.image.localFile.childImageSharp !== null
                                   ?
-                                  <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                  <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Ultra`} tabIndex={-1}/>
                                   : 
-                                  <img src={element.image.localFile.url} alt={`Project  image`} tabIndex={-1} />
+                                  <img src={element.image.localFile.url} alt={`Illustration from Ultra`} tabIndex={-1} />
                                 }
                                 </div>
                               </>
@@ -179,9 +178,9 @@ class Ultra extends Component {
                                 {
                                   element.image.localFile.childImageSharp !== null
                                   ?
-                                  <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                  <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Ultra`} tabIndex={-1}/>
                                   : 
-                                  <img src={element.image.localFile.url} alt={`Project  image`} tabIndex={-1} />
+                                  <img src={element.image.localFile.url} alt={`Illustration from Ultra`} tabIndex={-1} />
                                 }
                                 </div>
                               </>
@@ -242,9 +241,9 @@ class Ultra extends Component {
                                 {
                                   element.image.localFile.childImageSharp !== null
                                   ?
-                                  <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                  <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Ultra`} tabIndex={-1}/>
                                   : 
-                                  <img src={element.image.localFile.url} alt={`Project  image`} tabIndex={-1} />
+                                  <img src={element.image.localFile.url} alt={`Illustration from Ultra`} tabIndex={-1} />
                                 }
                                 </div>
                               </>
@@ -305,9 +304,9 @@ class Ultra extends Component {
                                 {
                                   element.image.localFile.childImageSharp !== null
                                   ?
-                                  <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                  <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Ultra`} tabIndex={-1}/>
                                   : 
-                                  <img src={element.image.localFile.url} alt={`Project  image`} tabIndex={-1} />
+                                  <img src={element.image.localFile.url} alt={`Illustration from Ultra`} tabIndex={-1} />
                                 }
                                 </div>
                               </>
@@ -373,7 +372,7 @@ class Ultra extends Component {
                                         data-aos-duration="1200"
                                         data-aos-offset="300"
                   >
-                    <Img fluid={pageAcf.ultra_two_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                    <Img fluid={pageAcf.ultra_two_image.localFile.childImageSharp.fluid} alt={`Illustration from Ultra`} tabIndex={-1}/>
                   </div>
                   <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy "
                                         data-aos="fade-up"
@@ -396,7 +395,7 @@ class Ultra extends Component {
                         data-aos-duration="1200"
                         data-aos-offset="300"
                       >
-                        <img src={element} alt="Ultra Image"/>
+                        <img src={element} alt="Illustration from Ultra"/>
                       </div>
                     )
                   }
@@ -420,7 +419,7 @@ class Ultra extends Component {
                                                 data-aos-duration="1200"
                                                 data-aos-offset="300"
                         >
-                          <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                          <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Ultra`} tabIndex={-1}/>
                         </div>
                         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 copy "
                                 data-aos="fade-up"
@@ -460,7 +459,7 @@ class Ultra extends Component {
                                 data-aos-duration="1200"
                                 data-aos-offset="300"
                         >
-                          <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                          <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Ultra`} tabIndex={-1}/>
                         </div>
                         </>
                         :""
@@ -479,9 +478,9 @@ class Ultra extends Component {
                           {
                             element.image.localFile.childImageSharp !== null
                             ?
-                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Ultra`} tabIndex={-1}/>
                             : 
-                            <img src={element.image.localFile.url} alt={`Project  image`} tabIndex={-1} />
+                            <img src={element.image.localFile.url} alt={`Illustration from Ultra`} tabIndex={-1} />
                           }
                   
                         </div>
@@ -511,7 +510,7 @@ class Ultra extends Component {
                                 data-aos-duration="1200"
                                 data-aos-offset="300"
                         >
-                          <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                          <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Ultra`} tabIndex={-1}/>
                         </div>
                         </>
                         :""
@@ -542,7 +541,7 @@ class Ultra extends Component {
                         data-aos-duration="1200"
                         data-aos-offset="300"
                         >
-                          <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                          <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Ultra`} tabIndex={-1}/>
                         </div>
 
                         </>
@@ -559,7 +558,7 @@ class Ultra extends Component {
                         data-aos-duration="1200"
                         data-aos-offset="300"
                         >
-                          <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                          <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Ultra`} tabIndex={-1}/>
                         </div>
                         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 copy no__padding"
                         data-aos="fade-up"
@@ -599,7 +598,7 @@ class Ultra extends Component {
                         data-aos-duration="1200"
                         data-aos-offset="300"
                         >
-                          <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                          <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Ultra`} tabIndex={-1}/>
                         </div>
                         </>
                         :""
@@ -640,7 +639,7 @@ query UltraPageQuery {
             related_project_thumbnail {
                 localFile{
                   childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -654,7 +653,7 @@ query UltraPageQuery {
             featured_image {
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -666,7 +665,7 @@ query UltraPageQuery {
                 image{
                     localFile {
                         childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                         }
@@ -680,7 +679,7 @@ query UltraPageQuery {
             ultra_two_image{
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -693,7 +692,7 @@ query UltraPageQuery {
                 image{
                     localFile {
                         childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                         }

@@ -315,6 +315,7 @@
     position: relative;
     left: 0px;
     top: 50px;
+    display: none;
 }
 
 .colored__floating p{

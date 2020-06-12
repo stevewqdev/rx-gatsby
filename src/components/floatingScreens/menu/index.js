@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import MainMenu from "../../menu/index"
 import SocialMenu from "../../socialMenu/index"
-import { Link } from "gatsby"
 import "./index.css"
 import "../../floatingScreens/floatingScreens.css"
 
@@ -28,6 +27,8 @@ export default class MainMenuFloatingScreen extends Component {
       document
         .querySelectorAll(".menu__full__screen .brand__menu")[0]
         .classList.add("hidden")
+
+      return false;
     })
   }
   render() {

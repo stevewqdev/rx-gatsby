@@ -58,7 +58,7 @@ class SimplyIra extends Component {
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
-    const { videoIndex, paused, volume } = this.state;
+    const {  paused, volume } = this.state;
 
     return ( 
       <Layout>
@@ -100,7 +100,7 @@ class SimplyIra extends Component {
                                                                             data-aos-duration="1200"
                                                                             data-aos-offset="450"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Simply Ira project`} tabIndex={-1}/>
                                         </div>
                                         <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy no__padding d-flex align-items-center justify-content-center"
                                                                             data-aos="fade-up"
@@ -128,7 +128,7 @@ class SimplyIra extends Component {
                                                                             data-aos-duration="1200"
                                                                             data-aos-offset="450"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Simply Ira project`} tabIndex={-1}/>
                                         </div>
                                         <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy d-flex justify-content-center align-items-center "
                                                                             data-aos="fade-up"
@@ -168,7 +168,7 @@ class SimplyIra extends Component {
                                                                             data-aos-duration="1200"
                                                                             data-aos-offset="450"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Simply Ira project`} tabIndex={-1}/>
                                         </div>
                                     </>
                                     : ""
@@ -184,7 +184,7 @@ class SimplyIra extends Component {
                                                                             data-aos-duration="1200"
                                                                             data-aos-offset="450"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Simply Ira project`} tabIndex={-1}/>
                                         </div>
                                     </>
                                     : ""
@@ -234,7 +234,7 @@ class SimplyIra extends Component {
                                                                             data-aos-duration="1200"
                                                                             data-aos-offset="450"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Simply Ira project`} tabIndex={-1}/>
                                         </div>
                                     </>
                                     : ""
@@ -264,7 +264,7 @@ class SimplyIra extends Component {
                                     data-aos-duration="1200"
                                     data-aos-offset="450"
                                     >
-                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Simply Ira project`} tabIndex={-1}/>
                                     </div>
                                     <div className="spacer col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
                                     <div className="spacer col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
@@ -296,7 +296,7 @@ class SimplyIra extends Component {
                                     data-aos-duration="1200"
                                     data-aos-offset="450"
                                     >
-                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Simply Ira project`} tabIndex={-1}/>
                                     </div>
                                     <div className=" spacer col-xs-12 col-sm-12 col-md-3 col-lg-3 image no__padding"></div>
                                     <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy "
@@ -327,7 +327,7 @@ class SimplyIra extends Component {
                                     data-aos-duration="1200"
                                     data-aos-offset="450"
                                     >
-                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Simply Ira project`} tabIndex={-1}/>
                                     </div>
                                     <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy "
                                                                         data-aos="fade-up"
@@ -355,7 +355,7 @@ class SimplyIra extends Component {
                                     data-aos-duration="1200"
                                     data-aos-offset="450"
                                     >
-                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Simply Ira project`} tabIndex={-1}/>
                                     </div>
                                     <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy "
                                                                         data-aos="fade-up"
@@ -422,7 +422,7 @@ class SimplyIra extends Component {
                               data-aos-duration="1200"
                               data-aos-offset="450"
                               >
-                                <img src={image} alt="Kindur Project Image"/>
+                                <img src={image} alt="Illustration from Simply Ira project"/>
                               </div>
                             </>
                             :""
@@ -438,7 +438,7 @@ class SimplyIra extends Component {
                               data-aos-duration="1200"
                               data-aos-offset="450"
                               >
-                                <img src={image} alt="Kindur Project Image"/>
+                                <img src={image} alt="Illustration from Simply Ira project"/>
                               </div>
                             </>
                             :""
@@ -481,7 +481,7 @@ query SimplyIraPageQuery {
             related_project_thumbnail {
                 localFile{
                   childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -495,7 +495,7 @@ query SimplyIraPageQuery {
             featured_image {
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -507,7 +507,7 @@ query SimplyIraPageQuery {
                 image{
                     localFile{
                         childImageSharp {
-                          fluid(maxWidth: 2000, quality: 100) {
+                          fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                           }
                         }
@@ -521,7 +521,7 @@ query SimplyIraPageQuery {
                 image{
                     localFile{
                         childImageSharp {
-                          fluid(maxWidth: 2000, quality: 100) {
+                          fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                           }
                         }

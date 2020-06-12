@@ -2,17 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import Layout from "../layouts/index"
 import Link from 'gatsby-link'
-import Hero from "../components/hero/index"
-import PaginationController from '../components/blog/paginationController/index'
 import {Helmet} from "react-helmet"; 
 import "./post-grid.css"
 import bside from "../images/beside.jpg"
 
 const PostsIndex = ({ pageContext }) => {
-const { group, index, first, last, pageCount } = pageContext
-const previousUrl = index - 1 === 1 ? '/' : (index - 1).toString()
-const nextUrl = (index + 1).toString()
-const [pages, setPages] = useState(Math.ceil(parseInt(group.length) / 10));
+const { group } = pageContext
+const [pages] = useState(Math.ceil(parseInt(group.length) / 10));
+const [styles, SetStyles ] = useState("");
 
 let pageArray = [];
 
@@ -26,6 +23,9 @@ useEffect(() => {
     let gridSize = grid.querySelectorAll(".grid__container").length - 1;
     grid.classList.add(`grid-${gridSize}`);
   })
+
+  SetStyles(`.fixed.column__top__one{position: absolute!important;} .fixed.column__top__two{position: absolute!important;}"`);
+
 })
 
 return (
@@ -34,6 +34,7 @@ return (
             <meta charSet="utf-8" />
             <meta name="description" content={ "The Raxo blog is a place" }/>
             <title>RAXO ~ News</title>
+            <style>{styles}</style>
             <link rel="canonical" href={ "/news"} />
         </Helmet>
         <div className="main__section__wrapper blog__page">

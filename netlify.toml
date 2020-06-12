@@ -543,3 +543,6 @@ from = "/creative-work/bbc-entertainment-mina-jack-animation-design-tv.html"
 to = "/project/mina-and-jack"
 status = 301
 force = false
+
+[[plugins]]
+  package = "netlify-plugin-gatsby-cache"

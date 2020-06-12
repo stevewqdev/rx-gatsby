@@ -3,7 +3,6 @@ import Layout from "../../layouts/index"
 import { graphql } from "gatsby"
 import {Helmet} from "react-helmet";
 import ProjectHero  from "../../components/projects/header/index"
-import Img from "gatsby-image"
 import "../../layouts/pages/projects/sambazon.css"
 import Vimeo from '@u-wave/react-vimeo';
 import RelatedProjects from "../../components/relatedProjects/index"
@@ -55,9 +54,7 @@ class Sambazon extends Component {
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
-    const { videoIndex, paused, volume } = this.state;
-
-    console.log(pageData);
+    const {  paused, volume } = this.state;
 
     return ( 
       <Layout>
@@ -85,7 +82,7 @@ class Sambazon extends Component {
                     <div className={`row`} >
                         {
                             pageAcf.sambazon_sone_gallery.map((image, index) => 
-                                <img src={image} className="row__one__col" alt="Sambazon Project Image" key={index}
+                                <img src={image} className="row__one__col" alt="Sambazon Project Illustration" key={index}
                                 
                                 data-aos="fade-up"
                                 data-aos-easing="ease-in-back"
@@ -164,7 +161,7 @@ class Sambazon extends Component {
                                                                         data-aos-duration="1200"
                                                                         data-aos-offset="450"
                                     >
-                                        <img src={image} alt="Sambazon Project Image" key={index}/>
+                                        <img src={image} alt="Sambazon Project Illustration" key={index}/>
                                     </div>
                                     </>
                                     :" "
@@ -180,7 +177,7 @@ class Sambazon extends Component {
                                                                         data-aos-duration="1200"
                                                                         data-aos-offset="450"
                                     >
-                                        <img src={image} alt="Sambazon Project Image" key={index}/>
+                                        <img src={image} alt="Sambazon Project Illustration" key={index}/>
                                     </div>
                                     </>
                                     :" "
@@ -196,7 +193,7 @@ class Sambazon extends Component {
                                                                         data-aos-duration="1200"
                                                                         data-aos-offset="450"
                                     >
-                                        <img src={image} alt="Sambazon Project Image" key={index}/>
+                                        <img src={image} alt="Sambazon Project Illustration" key={index}/>
                                     </div>
                                     </>
                                     :" "
@@ -212,7 +209,7 @@ class Sambazon extends Component {
                                                                         data-aos-duration="1200"
                                                                         data-aos-offset="450"
                                     >
-                                        <img src={image} alt="Sambazon Project Image" key={index}/>
+                                        <img src={image} alt="Sambazon Project Illustration" key={index}/>
                                     </div>
                                     </>
                                     :" "
@@ -228,7 +225,7 @@ class Sambazon extends Component {
                                     data-aos-duration="1200"
                                     data-aos-offset="450"
                                     >
-                                        <img src={image} alt="Sambazon Project Image" key={index}/>
+                                        <img src={image} alt="Sambazon Project Illustration" key={index}/>
                                     </div>
                                     <div className={`custom__column no__padding col-xs-12 col-sm-12 col-md-6 col-lg-6 copy d-flex `}
                                                                         data-aos="fade-up"
@@ -260,7 +257,7 @@ class Sambazon extends Component {
                                     data-aos-duration="1200"
                                     data-aos-offset="450"
                                     >
-                                        <img src={image} alt="Sambazon Project Image" key={index}/>
+                                        <img src={image} alt="Sambazon Project Illustration" key={index}/>
                                     </div>
                                     </>
                                     :" "
@@ -276,7 +273,7 @@ class Sambazon extends Component {
                                                                         data-aos-duration="1200"
                                                                         data-aos-offset="450"
                                     >
-                                        <img src={image} alt="Sambazon Project Image" key={index}/>
+                                        <img src={image} alt="Sambazon Project Illustration" key={index}/>
                                     </div>
                                     </>
                                     :" "
@@ -318,7 +315,7 @@ query SambazonPageQuery {
             related_project_thumbnail {
                 localFile{
                   childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -332,7 +329,7 @@ query SambazonPageQuery {
             featured_image {
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }

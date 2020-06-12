@@ -1,16 +1,12 @@
 import React, { Component } from "react"
 import Layout from "../layouts/index"
 import { graphql } from "gatsby"
-import Hero from "../components/hero/index"
-import SocialMenu from "../components/socialMenu"
 import {Helmet} from "react-helmet"; 
 
 import "../layouts/pages/contact.css"
 
 class ContactPage extends Component {
-  componentDidMount(){
 
-  }
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;

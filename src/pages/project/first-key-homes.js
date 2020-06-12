@@ -5,58 +5,13 @@ import {Helmet} from "react-helmet";
 import ProjectHero  from "../../components/projects/header/index"
 import Img from "gatsby-image"
 import "../../layouts/pages/projects/fkh.css"
-import Vimeo from '@u-wave/react-vimeo';
 import RelatedProjects from "../../components/relatedProjects/index"
 
 class FKH extends Component {
- constructor(props) {
-  super(props);
 
-    this.state = {
-      videoIndex: 0,
-      volume: 1,
-      paused: false,
-    };
-
-    this.handlePause = this.handlePause.bind(this);
-    this.handlePlayerPause = this.handlePlayerPause.bind(this);
-    this.handlePlayerPlay = this.handlePlayerPlay.bind(this);
-    this.handleVolume = this.handleVolume.bind(this);
-  }
- 
-  selectVideo(index) {
-    this.setState({ videoIndex: index });
-  }
-
-  handlePause(event) {
-    this.setState({
-      paused: event.target.checked,
-    });
-  }
-
-  handlePlayerPause() {
-    this.setState({ paused: true });
-  }
-
-  handlePlayerPlay() {
-    this.setState({ paused: false });
-  }
-
-  handleVolume(event) {
-    this.setState({
-      volume: parseFloat(event.target.value),
-    });
-  }
-
-  componentDidMount(){
-    //document.querySelectorAll(".floating__web__info")[1].classList.add("mix__blend__screen");
-  }
-
-   
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
-    const { videoIndex, paused, volume } = this.state;
 
     return ( 
       <Layout>
@@ -92,7 +47,7 @@ class FKH extends Component {
                                             data-aos-duration="1200"
                                            
                       >
-                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from First Key Homes project`} tabIndex={-1}/>
                       </div>
                       <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 copy"
                                             data-aos="fade-up"
@@ -145,7 +100,7 @@ class FKH extends Component {
                       data-aos-delay={`150`}
                       data-aos-duration="1200"
                       >
-                        <Img fluid={pageAcf.fkh_about_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                        <Img fluid={pageAcf.fkh_about_image.localFile.childImageSharp.fluid} alt={`Illustration from First Key Homes project`} tabIndex={-1}/>
                       </div>
                   </div>
                   <div className="row one">
@@ -158,7 +113,7 @@ class FKH extends Component {
                                                                data-aos-delay={`${(index + 1) * 100}`}
                                                                data-aos-duration="1200"
                                 >
-                                    <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                    <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from First Key Homes project`} tabIndex={-1}/>
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3 no__padding"></div>
                                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3 no__padding"></div>
@@ -189,7 +144,7 @@ class FKH extends Component {
                                     data-aos-delay={`${(index + 1) * 100}`}
                                     data-aos-duration="1200"
                                 >
-                                    <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                    <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from First Key Homes project`} tabIndex={-1}/>
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3 no__padding"></div>
                                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3 copy no__padding"
@@ -220,7 +175,7 @@ class FKH extends Component {
                                 data-aos-delay={`${(index + 1) * 100}`}
                                 data-aos-duration="1200"
                                 >
-                                    <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                    <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from First Key Homes project`} tabIndex={-1}/>
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3 copy no__padding"
                                 
@@ -271,7 +226,7 @@ query FKHPageQuery {
             related_project_thumbnail {
                 localFile{
                   childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -285,7 +240,7 @@ query FKHPageQuery {
             featured_image {
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -297,7 +252,7 @@ query FKHPageQuery {
                 image{
                     localFile {
                         childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                         }
@@ -310,7 +265,7 @@ query FKHPageQuery {
             fkh_about_image{
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -321,7 +276,7 @@ query FKHPageQuery {
                 image{
                     localFile {
                         childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                         }
@@ -334,7 +289,7 @@ query FKHPageQuery {
                 image{
                     localFile {
                         childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                         }
@@ -347,7 +302,7 @@ query FKHPageQuery {
                 image{
                     localFile {
                         childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                         }

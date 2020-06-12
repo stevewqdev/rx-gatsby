@@ -3,23 +3,11 @@ import Layout from "../../layouts/index"
 import { graphql } from "gatsby"
 import {Helmet} from "react-helmet";
 import ProjectHero  from "../../components/projects/header/index"
-import Img from "gatsby-image"
 import "../../layouts/pages/projects/hugo-boss.css"
-import Vimeo from '@u-wave/react-vimeo';
 import RelatedProjects from "../../components/relatedProjects/index"
 
 class HugoBoss extends Component {
- constructor(props) {
-  super(props);
 
-  }
- 
-
-
-  componentDidMount(){
-  }
-
-   
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
@@ -99,7 +87,7 @@ class HugoBoss extends Component {
                                     `
                                 }
                                 >
-                                    <img src={image} alt="Project Image"/>
+                                    <img src={image} alt="Illustration from Hugo Boss project"/>
                                 </div>
                                 {
                                     index === 1
@@ -129,7 +117,7 @@ class HugoBoss extends Component {
                                 `
                             }
                              >
-                                <img src={image} alt="Project Image"/>
+                                <img src={image} alt="Illustration from Hugo Boss project"/>
                             </div>
                             )
                         }
@@ -185,7 +173,7 @@ class HugoBoss extends Component {
                                     }
                                 >
         
-                                    <img src={image} alt="Project Image"/>
+                                    <img src={image} alt="Illustration from Hugo Boss project"/>
                                 </div>
                             </>
                             )
@@ -224,7 +212,7 @@ query HugoBossPageQuery {
             related_project_thumbnail {
                 localFile{
                   childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -238,7 +226,7 @@ query HugoBossPageQuery {
             featured_image {
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }

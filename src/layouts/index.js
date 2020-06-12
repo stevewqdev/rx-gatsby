@@ -42,6 +42,8 @@ const Layout = ({ children, location }) => {
           }
         }, 620)
       })
+
+      return false;
     })
   }
   // This function adds and remove an absolute position in the main content, this way the top section hides behind the other sections
@@ -94,6 +96,8 @@ const Layout = ({ children, location }) => {
             },
             { passive: true }
           )
+
+          return false;
         }
       })
     }
@@ -205,7 +209,9 @@ const Layout = ({ children, location }) => {
         } finally {
           document.body.removeChild(textarea)
         }
+
       })
+      return false; 
     })
   }
 
@@ -220,7 +226,6 @@ const Layout = ({ children, location }) => {
     addShareLink()
     AOS.init({
       disable: "mobile",
-      mirror: true,
       once: true, // whether animation should happen only once - while scrolling down
       mirror: true, // whether elements should animate out while scrolling past them
     })

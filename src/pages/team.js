@@ -17,12 +17,18 @@ class Team extends Component {
             if(top >= document.querySelectorAll(".team__new")[0].offsetTop ){
                 Array.from(document.querySelectorAll(".team__new__member__info__name")).map((element, index) => {
                     element.style.transform=`translateY(${finalX}px)`;
+
+                    return false;
                 })
                 Array.from(document.querySelectorAll(".team__new__member__info__position")).map((element, index) => {
                     element.style.transform=`translateY(${finalX}px)`;
+
+                    return false;
                 })
                 Array.from(document.querySelectorAll(".team__email")).map((element, index) => {
                     element.style.transform=`translateY(${finalX}px)`;
+
+                    return false;
                 })
                 
                 
@@ -559,7 +565,7 @@ query TeamQuery {
                 photo{
                     localFile {
                         childImageSharp {
-                          fluid(maxWidth: 1000, quality: 100) {
+                          fluid(maxWidth: 300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                           }
                         }

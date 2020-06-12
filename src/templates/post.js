@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import Layout from "../layouts/index"
 import { graphql } from "gatsby"
 import PropTypes from "prop-types"
-import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import Hero from "../components/hero/index"
 import {Helmet} from "react-helmet"; 
@@ -82,13 +81,6 @@ class Post extends Component {
         postMedia.dynamicResolutions = post.featured_media.localFile.childImageSharp.fluid;
       }
     }
-    // We check if the post contains any category besides the uncategorized
-    var noCategory = false; 
-    if(post.categories.length === 1 && post.categories[0].slug === 'uncategorized'){
-      // This mean the post only contains the 'uncategorized' category
-      noCategory = true;
-    }
-
     return (
       <Layout>
           <Helmet>
@@ -212,7 +204,7 @@ export const postQuery = graphql`
         description
         localFile {
           childImageSharp {
-            fluid(maxWidth: 2000, quality: 100) {
+            fluid(maxWidth: 1300, quality: 80) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

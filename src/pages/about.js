@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import Layout from "../layouts/index"
 import { graphql } from "gatsby"
-import Hero from "../components/hero/index"
 import {Helmet} from "react-helmet";
 import About from "../components/about/index"
 import Img from "gatsby-image"
@@ -9,7 +8,6 @@ import SVGONE from "../images/svg/Icon-01.svg";
 import SVGTWO from "../images/svg/Icon-02.svg";
 import SVGTHREE from "../images/svg/Icon-03.svg";
 import SVGFOUR from "../images/svg/Icon-04.svg";
-import { motion } from "framer-motion"
 
 
 import "../layouts/pages/about.css"
@@ -22,15 +20,21 @@ class ContactPage extends Component {
 
     [...document.getElementsByClassName("button__office")].map(button =>{
       button.classList.remove("active");
+
+      return false; 
     })
 
     Array.from(document.getElementsByClassName("show")).map(element =>{
       element.classList.remove("show");
       element.classList.remove("active");
+
+      return false; 
     })
     Array.from(document.getElementsByClassName("hide")).map(element =>{
       element.classList.remove("hide");
       element.classList.remove("active");
+
+      return false; 
     })
 
     event.target.classList.add("active");
@@ -43,14 +47,20 @@ class ContactPage extends Component {
         city.classList.add("show");
         city.classList.remove("hide")
       }
+
+      return false; 
     })
   }
   hideListElements(){
     [...document.getElementsByClassName("recognition__list__item")].map(element => {
       element.classList.remove("active");
+
+      return false; 
     })
     Array.from(document.getElementsByClassName("recognition__list__copy")).map(element => {
       element.classList.remove("active");
+
+      return false; 
     })
   }
   toggleListElement(event){
@@ -58,12 +68,16 @@ class ContactPage extends Component {
     
     [...document.getElementsByClassName("recognition__list__item")].map(element => {
       element.classList.remove("active");
+
+      return false; 
     })
 
     event.target.classList.add("active");
 
     [...document.getElementsByClassName("recognition__list__copy")].map(element => {
       element.classList.remove("active");
+
+      return false; 
     })
 
     document.getElementsByClassName(itemId)[0].classList.add("active");
@@ -162,6 +176,7 @@ class ContactPage extends Component {
             { passive: true }
           )
         }
+        return false;
       })
     }
   }
@@ -186,6 +201,8 @@ class ContactPage extends Component {
               currentColoredElement.classList.add("colored__scroll");
             }
         }, {passive: true});
+
+        return false;
       })
     }
 
@@ -835,7 +852,7 @@ query AboutPageQuery {
                 photo{
                     localFile {
                         childImageSharp {
-                          fluid(maxWidth: 1000, quality: 100) {
+                          fluid(maxWidth: 1000, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                           }
                         }
@@ -848,7 +865,7 @@ query AboutPageQuery {
             office_photo{
                 localFile {
                     childImageSharp {
-                      fluid(maxWidth: 1000, quality: 100) {
+                      fluid(maxWidth: 1000, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                       }
                     }

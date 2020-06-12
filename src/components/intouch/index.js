@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import AnchorLink from "react-anchor-link-smooth-scroll"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 
 import "./index.css"
@@ -26,7 +25,7 @@ const GetInTouch = props => {
 
   function handleSubmit(e) {
     e.preventDefault()
-    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    var mailformat = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\w{2,3})+$/
     if(email.length === 0){
       setStatus("invalid")
       setMessage("Please, add a valid email address")
@@ -75,6 +74,7 @@ const GetInTouch = props => {
             </p>
 
             <form onSubmit={handleSubmit}>
+              <label htmlFor="email" style={{"display":"none"}}></label>
               <input
                 type="email"
                 className="lg__font dark__font bold__font email__input"

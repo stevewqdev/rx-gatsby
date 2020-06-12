@@ -52,6 +52,7 @@ export default class MainFloatingScreen extends Component {
                     className="brand__menu__toggle --closed d-flex align-items-center"
                     onClick={this.toggleMenu}
                     role="button"
+                    tabIndex={0}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

@@ -3,61 +3,14 @@ import Layout from "../../layouts/index"
 import { graphql } from "gatsby"
 import {Helmet} from "react-helmet";
 import ProjectHero  from "../../components/projects/header/index"
-import Img from "gatsby-image"
 import "../../layouts/pages/projects/awake.css"
-import Vimeo from '@u-wave/react-vimeo';
 import RelatedProjects from "../../components/relatedProjects/index"
 
 class Awake extends Component {
- constructor(props) {
-  super(props);
-
-    this.state = {
-      videoIndex: 0,
-      volume: 1,
-      paused: false,
-    };
-
-    this.handlePause = this.handlePause.bind(this);
-    this.handlePlayerPause = this.handlePlayerPause.bind(this);
-    this.handlePlayerPlay = this.handlePlayerPlay.bind(this);
-    this.handleVolume = this.handleVolume.bind(this);
-  }
- 
-  selectVideo(index) {
-    this.setState({ videoIndex: index });
-  }
-
-  handlePause(event) {
-    this.setState({
-      paused: event.target.checked,
-    });
-  }
-
-  handlePlayerPause() {
-    this.setState({ paused: true });
-  }
-
-  handlePlayerPlay() {
-    this.setState({ paused: false });
-  }
-
-  handleVolume(event) {
-    this.setState({
-      volume: parseFloat(event.target.value),
-    });
-  }
-
-  componentDidMount(){
-    //document.querySelectorAll(".floating__web__info")[1].classList.add("mix__blend__screen");
-  }
-
    
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
-    const { videoIndex, paused, volume } = this.state;
-
     return ( 
       <Layout>
         <div className="project__template awake">
@@ -96,7 +49,7 @@ class Awake extends Component {
                         ${index === 1 ? "col-lg-6" : ""}
                         ${index === 2 ? "col-lg-12 bottom__image" : ""}
                         `}>
-                        <img src={element} alt="Awake Image"/>
+                        <img src={element} alt="Illustration from Awake project"/>
                       </div>
                     )
                   }
@@ -126,7 +79,7 @@ class Awake extends Component {
                         ${index === 0 ? "col-lg-6" : ""}
                         ${index > 0 ? "col-lg-12" : ""}
                         `}>
-                        <img src={element} alt="Awake Image"/>
+                        <img src={element} alt="Illustration from Awake project"/>
                       </div>
                     )
                   }
@@ -175,7 +128,7 @@ class Awake extends Component {
                           data-aos-duration="1200"
                           
                           >
-                          <img src={element} alt="Awake Image"/>
+                          <img src={element} alt="Illustration from Awake project"/>
                         </div>
                         :""
                       }
@@ -192,7 +145,7 @@ class Awake extends Component {
                           data-aos-delay={`120`}
                           data-aos-duration="1200"
                         >
-                          <img src={element} alt="Awake Image"/>
+                          <img src={element} alt="Illustration from Awake project"/>
                         </div>
                         </div>
                         :""
@@ -208,7 +161,7 @@ class Awake extends Component {
                           data-aos-delay={`120`}
                           data-aos-duration="1200"
                         >
-                          <img src={element} alt="Awake Image"/>
+                          <img src={element} alt="Illustration from Awake project"/>
                         </div>
                         :""
                       }
@@ -249,7 +202,7 @@ query AwakePageQuery {
             related_project_thumbnail {
                 localFile{
                   childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -263,7 +216,7 @@ query AwakePageQuery {
             featured_image {
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }

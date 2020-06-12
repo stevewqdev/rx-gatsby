@@ -48,15 +48,11 @@ class MinaAndJack extends Component {
     });
   }
 
-  componentDidMount(){
-    //document.querySelectorAll(".floating__web__info")[1].classList.add("mix__blend__screen");
-  }
 
-   
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
-    const { videoIndex, paused, volume } = this.state;
+    const {  paused, volume } = this.state;
 
     return ( 
       <Layout>
@@ -88,7 +84,7 @@ class MinaAndJack extends Component {
                             data-aos-duration="1200"
                             data-aos-offset="350"
                         >
-                            <Img fluid={pageAcf.sone_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            <Img fluid={pageAcf.sone_image.localFile.childImageSharp.fluid} alt={`Illustration from London Calling project`} tabIndex={-1}/>
                         </div>
                     </div>
                 </div>
@@ -138,7 +134,7 @@ class MinaAndJack extends Component {
                             data-aos-delay={`${(index + 1) * 100}`}
                             data-aos-duration="1200"
                             >
-                                <Img fluid={image.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                <Img fluid={image.image.localFile.childImageSharp.fluid} alt={`Illustration from London Calling project`} tabIndex={-1}/>
                             </div>
                             )
                         }
@@ -158,7 +154,7 @@ class MinaAndJack extends Component {
                                 section__three__image-${index}
                             
                             `}>
-                                <img src={image} alt="London Calling Project Image"/>
+                                <img src={image} alt="London Calling Project illustration"/>
                             </div>
                             )
                         }
@@ -192,7 +188,7 @@ class MinaAndJack extends Component {
                                 data-aos-delay={`${(index + 1) * 100}`}
                                 data-aos-duration="1200"
                                 >
-                                    <Img fluid={image.images.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                    <Img fluid={image.images.localFile.childImageSharp.fluid} alt={`Illustration from London Calling project`} tabIndex={-1}/>
                                 </div>
                             )
                         }
@@ -239,7 +235,7 @@ class MinaAndJack extends Component {
                                 section__three__image-${index}
                             
                             `}>
-                              <img src={image} alt="London Calling Project Image"/>
+                              <img src={image} alt="London Calling Project illustration"/>
                             </div>
                         )
                     }
@@ -258,7 +254,7 @@ class MinaAndJack extends Component {
                         data-aos-duration="1200"
                         data-aos-offset="350"
                     >
-                        <Img fluid={pageAcf.ssix_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                        <Img fluid={pageAcf.ssix_image.localFile.childImageSharp.fluid} alt={`Illustration from London Calling project`} tabIndex={-1}/>
                     </div>
                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 copy no__padding"
                                             data-aos="fade-up"
@@ -281,7 +277,7 @@ class MinaAndJack extends Component {
                         data-aos-duration="1200"
                         data-aos-offset="350"
                     >
-                        <Img fluid={pageAcf.ssix_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                        <Img fluid={pageAcf.ssix_image.localFile.childImageSharp.fluid} alt={`Illustration from London Calling project`} tabIndex={-1}/>
                     </div>
                 </div>
               </div>
@@ -317,7 +313,7 @@ query LondonCallingPageQuery {
             related_project_thumbnail {
                 localFile{
                   childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -331,7 +327,7 @@ query LondonCallingPageQuery {
             featured_image {
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -342,7 +338,7 @@ query LondonCallingPageQuery {
             sone_image{
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -355,7 +351,7 @@ query LondonCallingPageQuery {
                 image{
                     localFile {
                         childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                         }
@@ -369,7 +365,7 @@ query LondonCallingPageQuery {
                 images{
                     localFile {
                         childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                         }
@@ -382,7 +378,7 @@ query LondonCallingPageQuery {
             ssix_image{
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -393,7 +389,7 @@ query LondonCallingPageQuery {
             end_image{
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }

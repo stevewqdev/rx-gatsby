@@ -5,19 +5,13 @@ import {Helmet} from "react-helmet";
 import ProjectHero  from "../../components/projects/header/index"
 import Img from "gatsby-image"
 import "../../layouts/pages/projects/rock-summer.css"
-import Vimeo from '@u-wave/react-vimeo';
 import RelatedProjects from "../../components/relatedProjects/index"
 
 class RockSummer extends Component {
 
-  componentDidMount(){
-  }
-
-   
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
-    console.log(pageData);
     return ( 
       <Layout>
         <div className="project__template rock-summer">
@@ -53,7 +47,7 @@ class RockSummer extends Component {
                           data-aos-delay={`120`}
                           data-aos-duration="1200"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rock Summer project`} tabIndex={-1}/>
                                         </div>
                                         <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy no__padding  d-flex align-items-center justify-content-center"
                                                                   data-aos="fade-up"
@@ -80,7 +74,7 @@ class RockSummer extends Component {
                           data-aos-delay={`120`}
                           data-aos-duration="1200"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rock Summer project`} tabIndex={-1}/>
                                         </div>
                                         <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy  d-flex align-items-center"
                                                                   data-aos="fade-up"
@@ -119,7 +113,7 @@ class RockSummer extends Component {
                           data-aos-delay={`120`}
                           data-aos-duration="1200"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rock Summer project`} tabIndex={-1}/>
                                         </div>
                                     </div>
                                    :""
@@ -134,7 +128,7 @@ class RockSummer extends Component {
                           data-aos-delay={`120`}
                           data-aos-duration="1200"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rock Summer project`} tabIndex={-1}/>
                                         </div>
                                         <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy d-flex align-items-center justify-content-center"
                                                                   data-aos="fade-up"
@@ -195,7 +189,7 @@ class RockSummer extends Component {
                                                                   data-aos-delay={`120`}
                                                                   data-aos-duration="1200"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rock Summer project`} tabIndex={-1}/>
                                         </div>
                                     </div>
                                     : ""
@@ -210,7 +204,7 @@ class RockSummer extends Component {
                                                                   data-aos-delay={`120`}
                                                                   data-aos-duration="1200"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rock Summer project`} tabIndex={-1}/>
                                         </div>
                                     </div>
                                    :""
@@ -238,7 +232,7 @@ class RockSummer extends Component {
                           data-aos-delay={`120`}
                           data-aos-duration="1200"
                                         >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rock Summer project`} tabIndex={-1}/>
                                         </div>
                                     </div>
                                    :""
@@ -279,7 +273,7 @@ query RockSummerPageQuery {
             related_project_thumbnail {
                 localFile{
                   childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -293,7 +287,7 @@ query RockSummerPageQuery {
             featured_image {
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -305,7 +299,7 @@ query RockSummerPageQuery {
                 image{
                     localFile {
                         childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                         }
@@ -319,7 +313,7 @@ query RockSummerPageQuery {
                 image{
                     localFile {
                         childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                         }

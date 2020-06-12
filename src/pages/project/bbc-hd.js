@@ -3,23 +3,10 @@ import Layout from "../../layouts/index"
 import { graphql } from "gatsby"
 import {Helmet} from "react-helmet";
 import ProjectHero  from "../../components/projects/header/index"
-import Img from "gatsby-image"
 import "../../layouts/pages/projects/bbc-hd.css"
-import Vimeo from '@u-wave/react-vimeo';
 import RelatedProjects from "../../components/relatedProjects/index"
 
 class BbcHd extends Component {
- constructor(props) {
-  super(props);
-
-  }
- 
-
-
-  componentDidMount(){
-  }
-
-   
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
@@ -94,7 +81,7 @@ class BbcHd extends Component {
                                     `
                                 }
                                 >
-                                    <img src={image} alt="Project Image"/>
+                                    <img src={image} alt="Illustration from BBC HD project"/>
                                 </div>
                             </>
                             )
@@ -123,7 +110,7 @@ class BbcHd extends Component {
                                     `
                                 }
                                 >
-                                    <img src={image} alt="Project Image"/>
+                                    <img src={image} alt="Illustration from BBC HD project"/>
                                 </div>
                             </>
                             )
@@ -187,7 +174,7 @@ class BbcHd extends Component {
                                     }
                                 >
         
-                                    <img src={image} alt="Project Image"/>
+                                    <img src={image} alt="Illustration from BBC HD project"/>
                                 </div>
                             </>
                             )
@@ -226,7 +213,7 @@ query BbcHdPageQuery {
             related_project_thumbnail {
                 localFile{
                   childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -240,7 +227,7 @@ query BbcHdPageQuery {
             featured_image {
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }

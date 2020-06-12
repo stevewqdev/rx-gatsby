@@ -61,7 +61,7 @@ class TLWB extends Component {
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
-    const { videoIndex, paused, volume } = this.state;
+    const {  paused, volume } = this.state;
 
     return ( 
       <Layout>
@@ -88,7 +88,7 @@ class TLWB extends Component {
                     <div className="row one">
                         {
                             pageAcf.tlwb_sone_gallery.map((image, index) => 
-                                <img src={image} className={'tlwb__row'} alt="The long way back image" key={index}
+                                <img src={image} className={'tlwb__row'} alt="The long way back illustration of the work done" key={index}
                                 
                                 data-aos="fade-up"
                                 data-aos-easing="ease-in-back"
@@ -177,7 +177,7 @@ class TLWB extends Component {
                                     data-aos-duration="1200"
                                     data-aos-offset="450"
                                     >
-                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`The long way back illustration of the work done`} tabIndex={-1}/>
                                     </div>
                                     : "" 
                                 }
@@ -200,7 +200,7 @@ class TLWB extends Component {
                                     data-aos-duration="1200"
                                     data-aos-offset="450"
                                             >
-                                                <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                                <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`The long way back illustration of the work done`} tabIndex={-1}/>
                                             </div>
                                             <div className={`col-xs-12 col-sm-12 col-md-6 col-lg-6 copy d-flex `}
                                                                                 data-aos="fade-up"
@@ -242,7 +242,7 @@ class TLWB extends Component {
                                     data-aos-duration="1200"
                                     data-aos-offset="450"
                                             >
-                                                <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                                <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`The long way back illustration of the work done`} tabIndex={-1}/>
                                             </div>
                                         </div>
                                     </>
@@ -260,7 +260,7 @@ class TLWB extends Component {
                                                                                 data-aos-duration="1200"
                                                                                 data-aos-offset="450"
                                             >
-                                                <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                                <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`The long way back illustration of the work done`} tabIndex={-1}/>
                                             </div>
                                         </div>
                                     </>
@@ -278,7 +278,7 @@ class TLWB extends Component {
                                     data-aos-duration="1200"
                                     data-aos-offset="450"
                                             >
-                                                <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                                <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`The long way back illustration of the work done`} tabIndex={-1}/>
                                             </div>
                                             <div className={`col-xs-12 col-sm-12 col-md-6 col-lg-6 copy d-flex `}
                                                                                 data-aos="fade-up"
@@ -308,7 +308,7 @@ class TLWB extends Component {
                                                                                 data-aos-duration="1200"
                                                                                 data-aos-offset="450"
                                             >
-                                                <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                                <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`The long way back illustration of the work done`} tabIndex={-1}/>
                                             </div>
 
                                         </div>
@@ -333,7 +333,7 @@ class TLWB extends Component {
                                                                         data-aos-duration="1200"
                                                                         data-aos-offset="450"
                                     >
-                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`The long way back illustration of the work done`} tabIndex={-1}/>
                                     </div>
                                 </>
                                 :""
@@ -349,7 +349,7 @@ class TLWB extends Component {
                                                                         data-aos-duration="1200"
                                                                         data-aos-offset="450"
                                     >
-                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                                        <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`The long way back illustration of the work done`} tabIndex={-1}/>
                                     </div>
                                 </>
                                 :""
@@ -391,7 +391,7 @@ query TLWBPageQuery {
             related_project_thumbnail {
                 localFile{
                   childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -405,7 +405,7 @@ query TLWBPageQuery {
             featured_image {
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -420,7 +420,7 @@ query TLWBPageQuery {
                 image{
                     localFile {
                         childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                         }

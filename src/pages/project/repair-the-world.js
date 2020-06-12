@@ -5,58 +5,13 @@ import {Helmet} from "react-helmet";
 import ProjectHero  from "../../components/projects/header/index"
 import Img from "gatsby-image"
 import "../../layouts/pages/projects/rtw.css"
-import Vimeo from '@u-wave/react-vimeo';
 import RelatedProjects from "../../components/relatedProjects/index"
 
 class MinaAndJack extends Component {
- constructor(props) {
-  super(props);
-
-    this.state = {
-      videoIndex: 0,
-      volume: 1,
-      paused: false,
-    };
-
-    this.handlePause = this.handlePause.bind(this);
-    this.handlePlayerPause = this.handlePlayerPause.bind(this);
-    this.handlePlayerPlay = this.handlePlayerPlay.bind(this);
-    this.handleVolume = this.handleVolume.bind(this);
-  }
- 
-  selectVideo(index) {
-    this.setState({ videoIndex: index });
-  }
-
-  handlePause(event) {
-    this.setState({
-      paused: event.target.checked,
-    });
-  }
-
-  handlePlayerPause() {
-    this.setState({ paused: true });
-  }
-
-  handlePlayerPlay() {
-    this.setState({ paused: false });
-  }
-
-  handleVolume(event) {
-    this.setState({
-      volume: parseFloat(event.target.value),
-    });
-  }
-
-  componentDidMount(){
-    //document.querySelectorAll(".floating__web__info")[1].classList.add("mix__blend__screen");
-  }
-
    
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
-    const { videoIndex, paused, volume } = this.state;
 
 
     return ( 
@@ -90,7 +45,7 @@ class MinaAndJack extends Component {
                   data-aos-delay={`120`}
                   data-aos-duration="1200"
                   >
-                    <Img fluid={pageAcf.sone_image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                    <Img fluid={pageAcf.sone_image.localFile.childImageSharp.fluid} alt={`RTW illustration`} tabIndex={-1}/>
                   </div>
                   <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy "
                   data-aos="fade-up"
@@ -120,7 +75,7 @@ class MinaAndJack extends Component {
                           data-aos-duration="1200"
                           
                           >
-                            <img src={element} alt="RTW Project Image"/>
+                            <img src={element} alt="RTW illustration"/>
                           </div>
                         </>
                         :""
@@ -135,7 +90,7 @@ class MinaAndJack extends Component {
                           data-aos-delay={`${(index + 1) * 100}`}
                           data-aos-duration="1200"
                           >
-                            <img src={element} alt="RTW Project Image"/>
+                            <img src={element} alt="RTW illustration"/>
                           </div>
                         </>
                         :""
@@ -182,7 +137,7 @@ class MinaAndJack extends Component {
                   >
                     {
                       pageAcf.rtwsthree_gallery.map((element, index) =>
-                        <img  key={index} src={element} alt="RTW Project Image"/>
+                        <img  key={index} src={element} alt="RTW illustration"/>
                       )
                     }
                   </div>
@@ -202,7 +157,7 @@ class MinaAndJack extends Component {
                           data-aos-duration="1200"
                           
                           >
-                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`RTW illustration`} tabIndex={-1}/>
                           </div>
                           <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 image"
                           data-aos="fade-up"
@@ -239,7 +194,7 @@ class MinaAndJack extends Component {
                             
                           
                           >
-                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Project  image`} tabIndex={-1}/>
+                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`RTW illustration`} tabIndex={-1}/>
                           </div>
                         </>
                       }
@@ -280,7 +235,7 @@ query RTWPageQuery {
             related_project_thumbnail {
                 localFile{
                   childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
@@ -294,7 +249,7 @@ query RTWPageQuery {
             featured_image {
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -305,7 +260,7 @@ query RTWPageQuery {
             sone_image{
                 localFile {
                     childImageSharp {
-                    fluid(maxWidth: 2000, quality: 100) {
+                    fluid(maxWidth: 1300, quality: 80) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }
@@ -320,7 +275,7 @@ query RTWPageQuery {
                 image{
                     localFile {
                         childImageSharp {
-                        fluid(maxWidth: 2000, quality: 100) {
+                        fluid(maxWidth: 1300, quality: 80) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                         }

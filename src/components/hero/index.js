@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import Img from 'gatsby-image'
 
 import "./index.css"

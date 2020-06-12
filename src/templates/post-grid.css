@@ -3,34 +3,35 @@
     margin-top: -100vh;
     padding: 150px 0;
 }
-.grid img{
+.blog__page .grid img{
     height: 100%;
     object-fit: cover;
     object-position: center;
     position: relative;
 }
-.grid div{
+.blog__page .grid div{
     position: relative;
 }
-.grid .blog__content{
+.blog__page .grid .blog__content{
     position: absolute;
     bottom: 10px;
     left: 0;
     z-index: 5;
     padding: 0 10px;
+    pointer-events: none;
 }
-.grid .blog__content:before{
+.blog__page .grid .blog__content:before{
     display: none;
 }
-.grid p{
+.blog__page .grid p{
     font-family: "Roboto"!important;
     margin: 3.5px 0;
     letter-spacing: 0.3px;
 }
-.grid div:nth-child(1):before{
+.blog__page .grid div:nth-child(1):before{
     display: none;
 }
-.grid div:before{
+.blog__page .grid div:before{
     content: "";
     width: 100%;
     height: 100%;
@@ -43,7 +44,7 @@
     z-index: 2;
     pointer-events: none;
 }
-.grid{
+.blog__page .grid{
     grid-gap: 15px!important;
     margin-bottom: 15px;
 }
