@@ -565,7 +565,7 @@ query TeamQuery {
                 photo{
                     localFile {
                         childImageSharp {
-                          fluid(maxWidth: 300, quality: 80) {
+                          fluid(maxWidth: 600, quality: 100) {
                             ...GatsbyImageSharpFluid_withWebp
                           }
                         }
