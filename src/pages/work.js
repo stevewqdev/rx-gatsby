@@ -45,9 +45,9 @@ class ContactPage extends Component {
     }
   }
   componentDidMount(){
-    if (window.innerWidth > 800) {
-      this.hrefRedirect();
-    }
+    // if (window.innerWidth > 800) {
+    //   this.hrefRedirect();
+    // }
     this.parallaxContainer();
     document.querySelectorAll(".footer")[0].classList.add("dark");
     document.querySelectorAll(".separator")[0].classList.remove("--black");

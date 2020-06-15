@@ -36,9 +36,9 @@ const RelatedProjects = props => {
   }
 
   useEffect(() => {
-    if (window.innerWidth > 800) {
-      hrefRedirect()
-    }
+    // if (window.innerWidth > 800) {
+    //   hrefRedirect()
+    // }
   })
 
   return (

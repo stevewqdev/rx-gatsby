@@ -989,6 +989,7 @@ section#one{
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
 }
 .video__background video{
   width: 100%;

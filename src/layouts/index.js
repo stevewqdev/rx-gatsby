@@ -221,7 +221,7 @@ const Layout = ({ children, location }) => {
     }
     removeFixed()
     drawLines()
-    hrefRedirect()
+
     changePositionFooter()
     addShareLink()
     AOS.init({
