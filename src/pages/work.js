@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Hero from "../components/hero/index"
 import {Helmet} from "react-helmet";
 import { Link } from "gatsby"
+import AOS from "aos"
 
 
 import "../layouts/pages/work.css"
@@ -45,9 +46,10 @@ class ContactPage extends Component {
     }
   }
   componentDidMount(){
-    // if (window.innerWidth > 800) {
-    //   this.hrefRedirect();
-    // }
+    setTimeout(function(){
+      AOS.refreshHard();
+    }, 200)
+    
     this.parallaxContainer();
     document.querySelectorAll(".footer")[0].classList.add("dark");
     document.querySelectorAll(".separator")[0].classList.remove("--black");
@@ -55,6 +57,8 @@ class ContactPage extends Component {
   }
 
   render() {
+    
+
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
     const latestProjects = this.props.data.allWordpressWpProjects.edges; 

@@ -123,10 +123,7 @@ class HomePage extends Component {
         </Helmet>
         
         <section id="one">
-          <div className="row">
-            
-
-            
+          <div className="row">           
             {
               this.state.isMobile
               ?
@@ -154,6 +151,9 @@ class HomePage extends Component {
                     </video>
                     :""
                   }
+                </div>
+                <div className="col-lg-12 fallback__image__home">
+                  <img src={pageAcf.main_section_fallback_image.source_url} alt={pageAcf.main_section_fallback_image.title}/>
                 </div>
               </div>
             }
@@ -450,6 +450,10 @@ export const pageQuery = graphql`
           acf {
             top_title
             video_background{
+              source_url
+              title
+            }
+            main_section_fallback_image{
               source_url
               title
             }

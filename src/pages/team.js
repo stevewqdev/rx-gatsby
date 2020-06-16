@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Hero from "../components/hero/index"
 import {Helmet} from "react-helmet";
 import Img from "gatsby-image"
+import AOS from "aos"
 
 
 import "../layouts/pages/team.css"
@@ -39,6 +40,9 @@ class Team extends Component {
   }
 
   componentDidMount(){
+    setTimeout(function(){
+        AOS.refreshHard();
+    }, 200)
     let teamArray = [...document.getElementsByClassName("creative")];
     
     // this.parallaxContainer()

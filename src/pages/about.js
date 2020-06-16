@@ -8,6 +8,7 @@ import SVGONE from "../images/svg/Icon-01.svg";
 import SVGTWO from "../images/svg/Icon-02.svg";
 import SVGTHREE from "../images/svg/Icon-03.svg";
 import SVGFOUR from "../images/svg/Icon-04.svg";
+import AOS from "aos"
 
 
 import "../layouts/pages/about.css"
@@ -182,6 +183,10 @@ class ContactPage extends Component {
   }
 
   componentDidMount(){
+    setTimeout(function(){
+      AOS.refreshHard();
+    }, 200)
+
     this.drawLines();
     this.parallaxContainer();
 

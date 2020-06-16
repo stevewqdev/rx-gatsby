@@ -2,11 +2,16 @@ import React, { Component } from "react"
 import Layout from "../layouts/index"
 import { graphql } from "gatsby"
 import {Helmet} from "react-helmet"; 
+import AOS from "aos"
 
 import "../layouts/pages/contact.css"
 
 class ContactPage extends Component {
-
+  componentDidMount(){
+    setTimeout(function(){
+      AOS.refreshHard();
+    }, 200)
+  }
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
@@ -147,6 +152,7 @@ class ContactPage extends Component {
                                         data-aos-easing="ease-in-back"
                                         data-aos-delay="550"
                                         data-aos-duration="1200"
+                                        data-aos-offset="200"
                                       >
                                        {sub.title}
                                       </h2>
@@ -156,6 +162,7 @@ class ContactPage extends Component {
                                           data-aos-easing="ease-in-back"
                                           data-aos-delay="550"
                                           data-aos-duration="1200"
+                                          data-aos-offset="200"
                                         >
                                           {sub.email}
                                         </h3>
@@ -166,6 +173,7 @@ class ContactPage extends Component {
                                           data-aos-easing="ease-in-back"
                                           data-aos-delay="550"
                                           data-aos-duration="1200"
+                                          data-aos-offset="200"
                                         >
                                           {sub.phone}
                                         </h3>
@@ -186,6 +194,7 @@ class ContactPage extends Component {
                               data-aos-easing="ease-in-back"
                               data-aos-delay="550"
                               data-aos-duration="1200"
+                              data-aos-offset="200"
                             >
                               Find us here
                             </h2>
@@ -199,6 +208,7 @@ class ContactPage extends Component {
                                   data-aos-easing="ease-in-back"
                                   data-aos-delay="550"
                                   data-aos-duration="1200"
+                                  data-aos-offset="200"
                                   >
                                   {address.office_address}
                                   </h4>
@@ -211,6 +221,7 @@ class ContactPage extends Component {
                                 data-aos-easing="ease-in-back"
                                 data-aos-delay="550"
                                 data-aos-duration="1200"
+                                data-aos-offset="200"
                               >
                                 Find us here
                               </h2>
@@ -220,6 +231,7 @@ class ContactPage extends Component {
                                   data-aos-easing="ease-in-back"
                                   data-aos-delay="550"
                                   data-aos-duration="1200"
+                                  data-aos-offset="200"
                                   >
                                   {this.props.data.wordpressAcfOptions.options.contact_phone}
                                   </h4>
@@ -230,6 +242,7 @@ class ContactPage extends Component {
                                   data-aos-easing="ease-in-back"
                                   data-aos-delay="500"
                                   data-aos-duration="1200"
+                                  data-aos-offset="200"
                                   >
                                       {this.props.data.wordpressAcfOptions.options.contact_email}
                                   </h4>
