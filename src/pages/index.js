@@ -216,6 +216,7 @@ class HomePage extends Component {
                             className="mobile-hidden"
                             onClick={this.playVideo}
                             onTouchStart={this.playVideo}
+                            poster={pageAcf.reel_video_poster.source_url}
                           >
                             <source src={pageAcf.reel_video.source_url}  type="video/mp4" />
                           </video>
