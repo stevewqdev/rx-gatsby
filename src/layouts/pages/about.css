@@ -18,8 +18,8 @@
     color: white;
 }
 .recognition__wrapper.chose__us{
-    padding-top: 190px;
-    padding-bottom: 150px;
+    padding-top: 130px;
+    padding-bottom: 70px;
 }
 #we_can_help .lg__font{
     font-size: 57px!important;
@@ -470,9 +470,17 @@
         margin-top: 40px!important;
     }
 }
-.recognition__wrapper{
-    padding-top: 80px;
-    padding-bottom: 100px;
+@media(max-width: 4000px){
+    .recognition__wrapper{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+@media(max-width: 1500px){
+    .recognition__wrapper {
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
 }
 .recognition__list__item h3{
 /* cursor: pointer; */}

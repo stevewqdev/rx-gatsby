@@ -25,7 +25,7 @@ const GetInTouch = props => {
 
   function handleSubmit(e) {
     e.preventDefault()
-    var mailformat = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\w{2,3})+$/
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if(email.length === 0){
       setStatus("invalid")
       setMessage("Please, add a valid email address")
