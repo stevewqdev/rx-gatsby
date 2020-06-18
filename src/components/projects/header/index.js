@@ -135,7 +135,6 @@ const ProjectHero = props => {
             data-aos-easing="ease-in-back"
             data-aos-delay={`230`}
             data-aos-duration="1200"
-            role="button"
             tabIndex={0}
           >
             <Img

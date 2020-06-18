@@ -57,6 +57,7 @@ export default class MainMenuFloatingScreen extends Component {
                   className="brand__menu bold__font "
                   onClick={this.toggleMenu}
                   role="button"
+                  aria-label="Close Menu"
                 >
                   <div className="brand__menu__toggle --opened d-flex align-items-center">
                     <svg
