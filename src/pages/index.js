@@ -4,12 +4,12 @@ import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import About from "../components/about/index"
 import {Helmet} from "react-helmet";
-import Parallax from 'parallax-js'
+import Img from "gatsby-image"
 
 class HomePage extends Component {
   constructor(props) {
     super(props);
-    this.state = {isMobile: false};
+    this.state = {isMobile: false, isLoaded: false};
   }
 
   playVideo(event){
@@ -28,12 +28,16 @@ class HomePage extends Component {
   activeProject(event){
     Array.from(document.querySelectorAll(".the__project")).map(element => {
       element.classList.remove("active")
+
+      return true;
     })
     event.target.classList.add("active")
   }
   unactiveProject(event){
     Array.from(document.querySelectorAll(".the__project")).map(element => {
       element.classList.remove("active")
+
+      return true; 
     })
     event.target.classList.remove("active")
 
@@ -61,11 +65,6 @@ class HomePage extends Component {
   componentDidMount(){
 
     document.querySelectorAll(".footer")[0].classList.add("dark");
-    var scene = document.getElementById('scene');
-    // var parallaxInstance = new Parallax(scene, {
-    //   relativeInput: true,
-    //   pointerEvents: false,
-    // });
 
     if (window.innerWidth < 500) {
       this.setState({
@@ -96,6 +95,13 @@ class HomePage extends Component {
         },10);
       })
     });
+    setTimeout(function(){
+      this.setState({
+        isLoaded : true, 
+      })
+    }.bind(this), 1000)
+
+
   }
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
@@ -112,6 +118,7 @@ class HomePage extends Component {
     `
     ;
 
+
     return ( 
       <Layout>
         <Helmet>
@@ -124,13 +131,7 @@ class HomePage extends Component {
         
         <section id="one">
           <div className="row">           
-            {
-              this.state.isMobile
-              ?
-              <div className="col-lg-12 raxo__rx__svg">
-                <img src={pageAcf.fallback_image.source_url} alt={pageAcf.fallback_image.title}/>
-              </div>
-              : 
+
               <div className="col-lg-12">
                 <div className="video__background" id="scene">
                   {
@@ -142,9 +143,8 @@ class HomePage extends Component {
                       autoPlay 
                       loop 
                       muted
-                      
+                      preload="none"
                       playsInline
-                      className="mobile-hidden"
                       id="parallaxVideo"
                     >
                       <source src={pageAcf.video_background.source_url} type="video/mp4" />
@@ -153,10 +153,35 @@ class HomePage extends Component {
                   }
                 </div>
                 <div className="col-lg-12 fallback__image__home">
-                  <img src={pageAcf.main_section_fallback_image.source_url} alt={pageAcf.main_section_fallback_image.title}/>
+                  {
+                    pageAcf.main_section_fallback_image.localFile !== null
+                    ? 
+                    <>
+                      {
+                      pageAcf.main_section_fallback_image.localFile.childImageSharp !== null 
+                      ?
+                      <>
+                        <Img 
+                        data-aos="fade-up"
+                        data-aos-delay={`100`}
+                        data-aos-duration="1200"
+                        data-aos-easing="ease-in-out"
+                        fluid={pageAcf.main_section_fallback_image.localFile.childImageSharp.fluid} alt={`${pageAcf.main_section_fallback_image.title}`} alt={`${pageAcf.main_section_fallback_image.title}`} tabIndex={-1}/>
+                      </>
+                      : 
+                      <img 
+                      data-aos="fade-up"
+                      data-aos-delay={`100`}
+                      data-aos-duration="1200"
+                      data-aos-easing="ease-in-out"
+                      src={`${pageAcf.main_section_fallback_image.source_url}`} alt={`${pageAcf.main_section_fallback_image.title}`} />
+                      } 
+                    </>
+                    : ""
+                  }
                 </div>
               </div>
-            }
+            
 
           </div>
         </section>
@@ -202,7 +227,7 @@ class HomePage extends Component {
                     data-aos-offset="300"
                     >
                       {
-                        pageAcf.reel_video
+                        pageAcf.reel_video && this.state.isLoaded
                         ?
                         <>
                         <div className="video__home__wrapper">
@@ -213,6 +238,7 @@ class HomePage extends Component {
                             className="reel_video"
                             playsInline
                             controls
+                            preload="none"
                             className="mobile-hidden"
                             onClick={this.playVideo}
                             onTouchStart={this.playVideo}
@@ -316,15 +342,28 @@ class HomePage extends Component {
                                   <div className="selected__projects__projects__left__img">
                                     {
                                       project.acf.thumbnail_image.localFile !== null
-                                      ?
+                                      ? 
+                                      <>
+                                       {
+                                        project.acf.thumbnail_image.localFile.childImageSharp !== null 
+                                        ?
+                                        <>
+                                          <Img 
+                                          data-aos="fade-up"
+                                          data-aos-delay={`100`}
+                                          data-aos-duration="1200"
+                                          data-aos-easing="ease-in-out"
+                                          fluid={project.acf.thumbnail_image.localFile.childImageSharp.fluid} alt={`${project.title}`} tabIndex={-1}/>
+                                        </>
+                                        : 
                                         <img 
                                         data-aos="fade-up"
                                         data-aos-delay={`100`}
                                         data-aos-duration="1200"
-                                        
                                         data-aos-easing="ease-in-out"
-                                        
-                                        src={`${project.acf.thumbnail_image.localFile.url}`} alt={`${project.post_name}`}/>
+                                        src={`${project.acf.thumbnail_image.localFile.url}`} alt={`${project.title}`} />
+                                       } 
+                                      </>
                                       : ""
                                     }
                                   </div>
@@ -455,10 +494,26 @@ export const pageQuery = graphql`
               title
             }
             main_section_fallback_image{
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 3000, quality: 90) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+                url
+              }
               source_url
               title
             }
             fallback_image{
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 800, quality: 90) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+                url
+              }
               source_url
               title
             }

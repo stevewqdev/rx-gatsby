@@ -58,16 +58,17 @@ class ContactPage extends Component {
     }
     @media(max-width: 1700px){
       .main__section__wrapper {
-        height: 58vh;
+        min-height: 100vh;
+      }
+      .fixed.column__top__one{
+        display: block;
       }
       .floating__web__info .copyright__column p {
         top: -160px;
       }
     }
     @media(max-width: 1440px){
-      .main__section__wrapper {
-        height: 64vh;
-      }
+
     }
     @media(max-width: 1024px){
       .main__section__wrapper {

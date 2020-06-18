@@ -5,6 +5,7 @@ import Hero from "../components/hero/index"
 import {Helmet} from "react-helmet";
 import { Link } from "gatsby"
 import AOS from "aos"
+import Img from "gatsby-image"
 
 
 import "../layouts/pages/work.css"
@@ -62,6 +63,8 @@ class ContactPage extends Component {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
     const latestProjects = this.props.data.allWordpressWpProjects.edges; 
+
+    console.log(latestProjects);
 
     const customStyles =
     `
@@ -185,11 +188,21 @@ class ContactPage extends Component {
                               >
                                   <Link to={`/project/${project.node.slug.toLowerCase()}`}>
                                     {
-                                      project.node.acf.thumbnail_image !== null
-                                      ? <img src={`${project.node.acf.thumbnail_image.localFile.url}`} alt={`${project.node.title}`} />
+                                      project.node.acf.thumbnail_image.localFile !== null
+                                      ? 
+                                      <>
+                                       {
+                                        project.node.acf.thumbnail_image.localFile.childImageSharp !== null 
+                                        ?
+                                        <>
+                                          <Img fluid={project.node.acf.thumbnail_image.localFile.childImageSharp.fluid} alt={`${project.node.title}`} tabIndex={-1}/>
+                                        </>
+                                        : 
+                                        <img src={`${project.node.acf.thumbnail_image.localFile.url}`} alt={`${project.node.title}`} />
+                                       } 
+                                      </>
                                       : ""
                                     }
-                                      
                                   </Link>
                                   <div className="work__list__project__info">
                                     <p
@@ -225,11 +238,21 @@ query WorkQuery {
             subtitle
             thumbnail_image {
               localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1000, quality: 80) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
                 url
               }
             }
             featured_image {
               localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1000, quality: 80) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
                 url
               }
             }

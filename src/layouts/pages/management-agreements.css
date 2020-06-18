@@ -6,13 +6,13 @@
     color: white;
 }
 .management__page{
-    padding: 170px 0 450px;
+    padding: 170px 0 250px;
 }
 .management__page .about__wrapper {
     padding-top: 10%;
 }
 .standard__web{
-    margin-top: 300px;
+    margin-top: 160px;
 }
 .standard__web ul{
     list-style-type: none;

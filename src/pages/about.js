@@ -22,20 +22,20 @@ class ContactPage extends Component {
     [...document.getElementsByClassName("button__office")].map(button =>{
       button.classList.remove("active");
 
-      return false; 
+      return true; 
     })
 
     Array.from(document.getElementsByClassName("show")).map(element =>{
       element.classList.remove("show");
       element.classList.remove("active");
 
-      return false; 
+      return true; 
     })
     Array.from(document.getElementsByClassName("hide")).map(element =>{
       element.classList.remove("hide");
       element.classList.remove("active");
 
-      return false; 
+      return true; 
     })
 
     event.target.classList.add("active");
@@ -216,6 +216,8 @@ class ContactPage extends Component {
         Array.from(lastColoredItems).map(element => {
           let currentColoredElement = element.children[0].children[0];
           currentColoredElement.classList.add("colored__scroll");
+
+          return true;
         })
     }
 
@@ -805,7 +807,7 @@ class ContactPage extends Component {
                       data-aos-delay={`${(index + 1) * 100}`}
                       data-aos-duration="1200"
                       >
-                        <img src={client.logo.localFile.url} alt="Client Logo"/>
+                        <img loading="lazy" src={client.logo.localFile.url} alt="Client Logo"/>
                       </div>
                     :""
                   )

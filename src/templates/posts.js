@@ -5,6 +5,9 @@ import { Link } from "gatsby"
 import {Helmet} from "react-helmet"; 
 import "./post-grid.css"
 import bside from "../images/beside.jpg"
+import bsideWebp from "../images/beside.webp"
+
+import Img from "gatsby-image"
 
 const PostsIndex = ({ pageContext }) => {
 const { group } = pageContext
@@ -22,6 +25,8 @@ useEffect(() => {
   grids.map((grid, index) => {
     let gridSize = grid.querySelectorAll(".grid__container").length - 1;
     grid.classList.add(`grid-${gridSize}`);
+
+    return true;
   })
 
   SetStyles(`.fixed.column__top__one{position: absolute!important;} .fixed.column__top__two{position: absolute!important;}"`);
@@ -52,7 +57,11 @@ return (
                       <div class={`grid `} id={`grid-element`}>
                         <div className="grid__container"
                         >
-                          <img src={bside} alt="Bside - Raxo's blog Name "/>
+                          <picture>
+                            <source srcset={bsideWebp} type="image/webp" />
+                            <source srcset={bside} type="image/jpeg" /> 
+                            <img src={bside} alt="Alt Text!" />
+                          </picture>
                         </div>
                         {group.map(({ node }, order) => 
                           <>
@@ -61,7 +70,7 @@ return (
                               ?
                               <div key={order} className={`new-${order} grid__container`}>
                                 <Link to={`/news/${node.slug}`}  >
-                                  <img src={node.featured_media.source_url} alt={node.featured_media.alt_text} />
+                                  <Img fluid={node.featured_media.localFile.childImageSharp.fluid} alt={`Illustration from Univision`} tabIndex={-1}/>
                                 </Link>
                                 <div className="blog__content">
                                   <p className="sm__font reg__font white__font date">{node.date}</p>
@@ -85,7 +94,11 @@ return (
                     >
                       <div className={`grid`}>
                         <div className="grid__container">
-                          <img src={bside} alt="Bside - Raxo's blog Name "/>
+                          <picture>
+                            <source srcset={bsideWebp} type="image/webp" />
+                            <source srcset={bside} type="image/jpeg" /> 
+                            <img src={bside} alt="Alt Text!" />
+                          </picture>
                         </div>
        
                         {group.map(({ node }, order) => 
@@ -95,7 +108,7 @@ return (
                               ?
                               <div key={order} className={`new-${order} grid__container`}>
                                 <Link to={`/news/${node.slug}`}  >
-                                  <img src={node.featured_media.source_url} alt={node.featured_media.alt_text} />
+                                  <Img fluid={node.featured_media.localFile.childImageSharp.fluid} alt={`Illustration from Univision`} tabIndex={-1}/>
                                 </Link>
                                 <div className="blog__content">
                                   <p className="sm__font reg__font white__font date">{node.date}</p>

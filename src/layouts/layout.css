@@ -1031,10 +1031,13 @@ section#one{
 @media(max-width: 500px){
   .raxo__rx__svg img{
     height: 65%;
-    display: block;
+    display: none;
   }
   .fallback__image__home{
-    display: none;
+    display: block;
+  }
+  .fallback__image__home .gatsby-image-wrapper{
+    height: 100vh;
   }
   .featured__video .container__custom {
     padding: 0 45px 0 30px;

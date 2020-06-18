@@ -25,6 +25,19 @@ module.exports = `
                 alt_text
                 caption
                 description
+                localFile {
+                    childImageSharp {
+                      fluid(maxWidth: 1920) {
+                          base64
+                          aspectRatio
+                          src
+                          srcSet
+                          srcWebp
+                          srcSetWebp
+                          sizes
+                      }
+                  }
+                }
               }
               author {
                 name

@@ -1,46 +1,9 @@
-import React, { useEffect } from "react"
+import React from "react"
 import Img from "gatsby-image"
 import "./index.css"
 import { Link } from "gatsby"
 
 const RelatedProjects = props => {
-  function hrefRedirect() {
-    let aElements = [...document.querySelectorAll(".related__projects a")]
-
-    aElements.forEach(element => {
-      element.addEventListener("click", function(event) {
-        event.preventDefault()
-        document
-          .querySelectorAll(".page__wrapper")[0]
-          .classList.add("on-transition")
-
-        let redirectLink = event.target.getAttribute("href")
-        setTimeout(function() {
-          if (redirectLink === null) {
-            window.location.href = `/`
-          } else {
-            if (
-              redirectLink.includes("facebook") ||
-              redirectLink.includes("twitter") ||
-              redirectLink.includes("instagram") ||
-              redirectLink.includes("behance") ||
-              redirectLink.includes("vimeo")
-            ) {
-            } else {
-              window.location.href = `${event.target.getAttribute("href")}`
-            }
-          }
-        }, 10)
-      })
-    })
-  }
-
-  useEffect(() => {
-    // if (window.innerWidth > 800) {
-    //   hrefRedirect()
-    // }
-  })
-
   return (
     <div className="related__projects includes__separator">
       <div className="container container__custom related__mobile">

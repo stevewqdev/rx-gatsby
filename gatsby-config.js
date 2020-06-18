@@ -5,8 +5,13 @@ module.exports = {
     title: `Raxo`,
     description: `Branding - Design - Development`,
     author: `RAXO TEAM`,
+    siteUrl: `https://www.raxo.tv`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {}
+    },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
@@ -26,6 +31,8 @@ module.exports = {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: "GTM-W5WQF9T",
+        includeInDevelopment: false,
+
         // datalayer to be set before GTM is loaded
         // should be a stringified object or object
         //

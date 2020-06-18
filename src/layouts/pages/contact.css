@@ -22,6 +22,12 @@
         align-items: center;
     }
 }
+.contact__data__content a:hover{
+    text-decoration: none;
+}
+.contact__data__content a:hover h3{
+    color: #FE0062!important;
+}
 .raxo__info{
     padding: 150px 0 0px 0;
 }

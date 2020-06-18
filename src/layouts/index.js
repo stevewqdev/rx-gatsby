@@ -14,38 +14,38 @@ import "../fonts/stylesheet.css"
 
 const Layout = ({ children, location }) => {
   // This function controls the redirect on the menu, to avoid a direct redirection, first closes the menu and after that it makes the redirection.
-  function hrefRedirect() {
-    let aElements = [...document.querySelectorAll(".menu__full__screen a")]
+  // function hrefRedirect() {
+  //   let aElements = [...document.querySelectorAll(".menu__full__screen a")]
 
-    aElements.forEach(element => {
-      element.addEventListener("click", function(event) {
-        event.preventDefault()
-        document
-          .querySelectorAll(".page__wrapper")[0]
-          .classList.add("on-transition")
+  //   aElements.forEach(element => {
+  //     element.addEventListener("click", function(event) {
+  //       event.preventDefault()
+  //       document
+  //         .querySelectorAll(".page__wrapper")[0]
+  //         .classList.add("on-transition")
 
-        let redirectLink = event.target.getAttribute("href")
-        setTimeout(function() {
-          if (redirectLink === null) {
-            window.location.href = `/`
-          } else {
-            if (
-              redirectLink.includes("facebook") ||
-              redirectLink.includes("twitter") ||
-              redirectLink.includes("instagram") ||
-              redirectLink.includes("behance") ||
-              redirectLink.includes("vimeo")
-            ) {
-            } else {
-              window.location.href = `${event.target.getAttribute("href")}`
-            }
-          }
-        }, 620)
-      })
+  //       let redirectLink = event.target.getAttribute("href")
+  //       setTimeout(function() {
+  //         if (redirectLink === null) {
+  //           window.location.href = `/`
+  //         } else {
+  //           if (
+  //             redirectLink.includes("facebook") ||
+  //             redirectLink.includes("twitter") ||
+  //             redirectLink.includes("instagram") ||
+  //             redirectLink.includes("behance") ||
+  //             redirectLink.includes("vimeo")
+  //           ) {
+  //           } else {
+  //             window.location.href = `${event.target.getAttribute("href")}`
+  //           }
+  //         }
+  //       }, 620)
+  //     })
 
-      return false;
-    })
-  }
+  //     return false;
+  //   })
+  // }
   // This function adds and remove an absolute position in the main content, this way the top section hides behind the other sections
   function removeFixed() {
     let mainElement = document.querySelectorAll(".main__section__wrapper")
@@ -204,7 +204,6 @@ const Layout = ({ children, location }) => {
         try {
           return document.execCommand("copy") // Security exception may be thrown by some browsers.
         } catch (ex) {
-          console.warn("Copy to clipboard failed.", ex)
           return false
         } finally {
           document.body.removeChild(textarea)
