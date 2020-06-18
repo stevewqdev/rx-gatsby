@@ -1057,7 +1057,7 @@ section#one{
 }
 /* Featured video Component */
 
-.featured__video .featured__video__copy h4{
+.featured__video .featured__video__copy h5{
   font-size: 18px;
   font-weight: bold;
   line-height: 20px;
@@ -1092,7 +1092,8 @@ section#one{
     right: 0;
     width: 100%;
     object-fit: cover;
-/* cursor: pointer; */    transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1)!important;
+    /* cursor: pointer; */    transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1)!important;
+    max-height: 700px;
   }
   .container-fluid{
     max-width: 1945px;
@@ -1105,7 +1106,9 @@ section#one{
   width: calc(100% / 1);
 }
 @media(max-width: 1700px){
-
+  .featured__video .featured__video__source video{
+    max-height: 510px;
+  }
 }
 /* Selected projects Section */
 .video__home__wrapper{
@@ -1393,7 +1396,9 @@ button.active:before{
   .container__custom {
     max-width: 685px;
   }
-  
+  .featured__video .featured__video__source video{
+    max-height: 430px;
+  }
   #page__wrapper {
     margin-bottom: 38vw;
   }
@@ -1429,7 +1434,7 @@ button.active:before{
     left: 4px;
   }
   .selected__projects {
-    height: 1160px;
+    height: 809px;
   }
   .the__project.active img {
     width: calc(98% / 1.05)!important;
@@ -1454,7 +1459,7 @@ button.active:before{
     max-width: 100%;
   } 
   .selected__projects__projects > div {
-    padding: 5% 4%;
+    padding: 10px 0px;
   }
   .md__font {
     font-size: 16px;
@@ -1464,7 +1469,7 @@ button.active:before{
     margin-top: 5%;
   }
   .selected__projects {
-    padding-top: 55%;
+    padding-top: 40px;
   }
   .selected__projects.latest__projects .pgrid__base__thumbnail p {
     top: 130px;

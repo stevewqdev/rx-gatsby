@@ -19,7 +19,6 @@ class ContactPage extends Component {
     `
     .fixed.column__top__one{
       position: absolute!important;
-      display: none;
     }
     .fixed.column__top__two{
       position: absolute!important;

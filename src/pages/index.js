@@ -13,16 +13,18 @@ class HomePage extends Component {
   }
 
   playVideo(event){
-    if (!event.target.paused) {
-      if (window.innerWidth < 500) {
-        event.target.pause();
-      }
-    } else{
-      document.querySelectorAll(".poster__animated")[0].classList.add("hidden");
-      if (window.innerWidth < 500) {
-        event.target.play();
-      }
-    }
+    event.target.play();
+    document.querySelectorAll(".poster__animated")[0].classList.add("hidden");
+    // if (!event.target.paused) {
+    //   if (window.innerWidth < 500) {
+    //     event.target.pause();
+    //   }
+    // } else{
+    //   document.querySelectorAll(".poster__animated")[0].classList.add("hidden");
+    //   if (window.innerWidth < 500) {
+    //     event.target.play();
+    //   }
+    // }
   }
 
   activeProject(event){
@@ -232,7 +234,6 @@ class HomePage extends Component {
                         <>
                         <div className="video__home__wrapper">
                           <div className="poster__animated">
-                            <img src={pageAcf.reel_video_poster.source_url} alt=""/>
                           </div>
                           <video
                             className="reel_video"
@@ -324,7 +325,7 @@ class HomePage extends Component {
                           data-aos-duration="1200"
                           data-aos-easing="ease-in-out"
 
-                          >See More</button>
+                          >Our Work</button>
                         </Link>
                       </div>
                     </div>
