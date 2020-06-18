@@ -204,15 +204,15 @@ class ContactPage extends Component {
                             {
                               pageAcf.address.map((address, index) =>
                                 <div className="contact__data__content">
-                                  <h4 className="ab__font gray__font bold__font"
+                                  <h4
+                                  className="ab__font gray__font bold__font"
                                   data-aos="fade-up"
                                   data-aos-easing="ease-in-back"
                                   data-aos-delay="550"
                                   data-aos-duration="1200"
                                   data-aos-offset="200"
-                                  >
-                                  {address.office_address}
-                                  </h4>
+                                  dangerouslySetInnerHTML={{ __html: address.office_address}}
+                                  />
                                 </div>
                               )
                             }
@@ -227,26 +227,27 @@ class ContactPage extends Component {
                                 Find us here
                               </h2>
                               <a href={`tel:${this.props.data.wordpressAcfOptions.options.contact_phone}`}>
-                                  <h4 className="ab__font gray__font bold__font"
-                                  data-aos="fade-up"
-                                  data-aos-easing="ease-in-back"
-                                  data-aos-delay="550"
-                                  data-aos-duration="1200"
-                                  data-aos-offset="200"
-                                  >
-                                  {this.props.data.wordpressAcfOptions.options.contact_phone}
-                                  </h4>
-                              </a>
-                              <a href={`mailto:${this.props.data.wordpressAcfOptions.options.contact_email}`} >
-                                  <h4 className="ab__font gray__font bold__font"
+                                  <h4
+                                  className="ab__font gray__font bold__font"
                                   data-aos="fade-up"
                                   data-aos-easing="ease-in-back"
                                   data-aos-delay="500"
                                   data-aos-duration="1200"
                                   data-aos-offset="200"
-                                  >
-                                      {this.props.data.wordpressAcfOptions.options.contact_email}
-                                  </h4>
+                                  dangerouslySetInnerHTML={{ __html: this.props.data.wordpressAcfOptions.options.contact_phone}}
+                                  />
+                              </a>
+                              <a href={`mailto:${this.props.data.wordpressAcfOptions.options.contact_email}`} >
+                                  <h4
+                                  className="ab__font gray__font bold__font"
+                                  data-aos="fade-up"
+                                  data-aos-easing="ease-in-back"
+                                  data-aos-delay="500"
+                                  data-aos-duration="1200"
+                                  data-aos-offset="200"
+                                  dangerouslySetInnerHTML={{ __html: this.props.data.wordpressAcfOptions.options.contact_email }}
+                                  />
+
                               </a>
                             </div>
                             
