@@ -9,7 +9,8 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-preact`
+      resolve: `gatsby-plugin-preact`,
+      options: {},
     },
     {
       resolve: `gatsby-plugin-sitemap`,

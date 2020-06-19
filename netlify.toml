@@ -546,3 +546,7 @@ force = false
 
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"
+
+[build]
+  publish = "public/"
+  command = "npm run build"
