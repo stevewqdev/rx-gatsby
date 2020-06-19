@@ -1486,7 +1486,7 @@ button.active:before{
 }
 @media(max-width: 500px){
   .menu__full__screen.floating__web__info .copyright__column p{
-    display: block;
+    display: none;
   }
 
   .brand__menu__toggle p{
