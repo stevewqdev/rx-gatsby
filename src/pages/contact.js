@@ -196,7 +196,7 @@ class ContactPage extends Component {
                               data-aos-duration="1200"
                               data-aos-offset="200"
                             >
-                              FIND US HERE
+                              Find Us Here
                             </h2>
       
                             
