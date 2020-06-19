@@ -19,6 +19,7 @@ class ContactPage extends Component {
     `
     .fixed.column__top__one{
       position: absolute!important;
+      display: none!important;
     }
     .fixed.column__top__two{
       position: absolute!important;
@@ -59,9 +60,7 @@ class ContactPage extends Component {
       .main__section__wrapper {
         min-height: 100vh;
       }
-      .fixed.column__top__one{
-        display: block;
-      }
+
       .floating__web__info .copyright__column p {
         top: -160px;
       }
@@ -197,7 +196,7 @@ class ContactPage extends Component {
                               data-aos-duration="1200"
                               data-aos-offset="200"
                             >
-                              Find us here
+                              FIND US HERE
                             </h2>
       
                             
