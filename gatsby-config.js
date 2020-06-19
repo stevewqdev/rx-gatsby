@@ -9,8 +9,11 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-preact`
+    },
+    {
       resolve: `gatsby-plugin-sitemap`,
-      options: {}
+      options: {},
     },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
@@ -93,7 +96,6 @@ module.exports = {
         verboseOutput: true,
         perPage: 100,
         concurrentRequests: 1000,
-
       },
     },
     `gatsby-transformer-sharp`,

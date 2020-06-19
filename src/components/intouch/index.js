@@ -25,8 +25,8 @@ const GetInTouch = props => {
 
   function handleSubmit(e) {
     e.preventDefault()
-    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if(email.length === 0){
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    if (email.length === 0) {
       setStatus("invalid")
       setMessage("Please, add a valid email address")
     }
@@ -74,7 +74,7 @@ const GetInTouch = props => {
             </p>
 
             <form onSubmit={handleSubmit}>
-              <label htmlFor="email" style={{"display":"none"}}></label>
+              <label htmlFor="email" style={{ display: "none" }}></label>
               <input
                 type="email"
                 className="lg__font dark__font bold__font email__input"
@@ -113,13 +113,27 @@ const GetInTouch = props => {
                 className="dark__font md__font reg__font getintouch__subtitle submit__form"
                 onClick={submitForm}
               >
-              <svg xmlns="http://www.w3.org/2000/svg" width="49.737" height="39.268" viewBox="0 0 49.737 39.268">
-                <g id="Email_Adress" data-name="Email Adress" transform="translate(-373.559 -466.435)">
-                  <g id="Grupo_87" data-name="Grupo 87" >
-                    <path id="Trazado_96" data-name="Trazado 96" d="M402.657,482.634c2.64,0,4.949,0,8.52.27-2.85-2.34-5.34-4.74-7.92-7.29l-4.409-4.349,4.829-4.83L423.3,486.054,403.677,505.7l-4.829-4.83,4.409-4.38c2.58-2.519,5.07-4.949,7.92-7.26-3.571.241-5.88.241-8.52.241h-29.1v-6.84Z" fill="#606060"/>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="49.737"
+                  height="39.268"
+                  viewBox="0 0 49.737 39.268"
+                >
+                  <g
+                    id="Email_Adress"
+                    data-name="Email Adress"
+                    transform="translate(-373.559 -466.435)"
+                  >
+                    <g id="Grupo_87" data-name="Grupo 87">
+                      <path
+                        id="Trazado_96"
+                        data-name="Trazado 96"
+                        d="M402.657,482.634c2.64,0,4.949,0,8.52.27-2.85-2.34-5.34-4.74-7.92-7.29l-4.409-4.349,4.829-4.83L423.3,486.054,403.677,505.7l-4.829-4.83,4.409-4.38c2.58-2.519,5.07-4.949,7.92-7.26-3.571.241-5.88.241-8.52.241h-29.1v-6.84Z"
+                        fill="#606060"
+                      />
+                    </g>
                   </g>
-                </g>
-              </svg>
+                </svg>
               </p>
             </form>
           </div>

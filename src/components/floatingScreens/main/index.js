@@ -55,7 +55,6 @@ export default class MainFloatingScreen extends Component {
                     tabIndex={0}
                     aria-label="Open Menu"
                   >
-                    
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="23.309"

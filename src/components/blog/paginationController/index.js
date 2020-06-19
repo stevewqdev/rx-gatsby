@@ -5,7 +5,11 @@ class InternalButton extends Component {
   render() {
     const props = this.props
     return (
-      <button class={'page__button'} tabIndex={-1} className={props.buttonClass}>
+      <button
+        class={"page__button"}
+        tabIndex={-1}
+        className={props.buttonClass}
+      >
         <Link to={props.redirectionLink}>{props.buttonText}</Link>
       </button>
     )

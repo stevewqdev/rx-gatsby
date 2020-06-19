@@ -1,22 +1,21 @@
 import React, { Component } from "react"
 import Layout from "../layouts/index"
 import { graphql } from "gatsby"
-import {Helmet} from "react-helmet"; 
+import { Helmet } from "react-helmet"
 import AOS from "aos"
 
 import "../layouts/pages/contact.css"
 
 class ContactPage extends Component {
-  componentDidMount(){
-    setTimeout(function(){
-      AOS.refreshHard();
+  componentDidMount() {
+    setTimeout(function() {
+      AOS.refreshHard()
     }, 200)
   }
   render() {
-    const pageData = this.props.data.allWordpressPage.edges[0].node; 
-    const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
-    const customStyles =
-    `
+    const pageData = this.props.data.allWordpressPage.edges[0].node
+    const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf
+    const customStyles = `
     .fixed.column__top__one{
       position: absolute!important;
       display: none!important;
@@ -123,139 +122,153 @@ class ContactPage extends Component {
         margin-bottom: 0px!important;
       }
     }
-    `;
-    
-    return ( 
+    `
+
+    return (
       <Layout>
-          <Helmet>
-            <meta charSet="utf-8" />
-            <style>{customStyles}</style>
-            <meta name="description" content={ pageData.yoast_meta.yoast_wpseo_metadesc }/>
-            <title>{ pageData.yoast_meta.yoast_wpseo_title }</title>
-            <link rel="canonical" href={ pageData.yoast_meta.yoast_wpseo_canonical} />
-          </Helmet>
-          <div className="main__section__wrapper">
-            <section id="two " className="raxo__info">
-                <div className="container container__custom">
-                    <div className="row">
-                        <div className="col-xs-12 col-sm-12 col-sm-6 col-lg-6 info__blocks no__padding">
-                          <div className="contact__data__block">
-                          {
-                            pageAcf.bussines_contact.map((element, index) => 
-                              <div className="contact__data__content" key={index}>
-                                  <>
-                                  {
-                                    element.bussines_info_block.map((sub, index) => 
-                                      <>
-                                      <h2 className="ab__font bold__font white__font"
-                                        data-aos="fade-up"
-                                        data-aos-easing="ease-in-back"
-                                        data-aos-delay="550"
-                                        data-aos-duration="1200"
-                                        data-aos-offset="200"
-                                      >
-                                       {sub.title}
-                                      </h2>
-                                      <a href={`mailto:${sub.email}`}>
-                                        <h3 className="ab__font bold__font gray__font"
-                                          data-aos="fade-up"
-                                          data-aos-easing="ease-in-back"
-                                          data-aos-delay="550"
-                                          data-aos-duration="1200"
-                                          data-aos-offset="200"
-                                        >
-                                          {sub.email}
-                                        </h3>
-                                      </a>
-                                      <a href={`tel:${sub.phone}`}>
-                                        <h3 className="ab__font bold__font gray__font"
-                                          data-aos="fade-up"
-                                          data-aos-easing="ease-in-back"
-                                          data-aos-delay="550"
-                                          data-aos-duration="1200"
-                                          data-aos-offset="200"
-                                        >
-                                          {sub.phone}
-                                        </h3>
-                                      </a>
-                                      </>
-                                    )
-                                  }
-                                  </>
-                              </div>
-                            )
-                          }
-                          </div>
-                        </div>
-                        <div className="col-xs-12 col-sm-12 col-sm-6 col-lg-6 info__address no__padding">
-                          <div className="contact__data__block">
-                            <h2 className="ab__font bold__font white__font"
-                              data-aos="fade-up"
-                              data-aos-easing="ease-in-back"
-                              data-aos-delay="550"
-                              data-aos-duration="1200"
-                              data-aos-offset="200"
-                            >
-                              Find Us Here
-                            </h2>
-      
-                            
-                            {
-                              pageAcf.address.map((address, index) =>
-                                <div className="contact__data__content">
-                                  <h4
-                                  className="ab__font gray__font bold__font"
-                                  data-aos="fade-up"
-                                  data-aos-easing="ease-in-back"
-                                  data-aos-delay="550"
-                                  data-aos-duration="1200"
-                                  data-aos-offset="200"
-                                  dangerouslySetInnerHTML={{ __html: address.office_address}}
-                                  />
-                                </div>
-                              )
-                            }
-                            <div className="contact__data__content">
-                              <h2 className="ab__font bold__font white__font invisible"
+        <Helmet>
+          <meta charSet="utf-8" />
+          <style>{customStyles}</style>
+          <meta
+            name="description"
+            content={pageData.yoast_meta.yoast_wpseo_metadesc}
+          />
+          <title>{pageData.yoast_meta.yoast_wpseo_title}</title>
+          <link
+            rel="canonical"
+            href={pageData.yoast_meta.yoast_wpseo_canonical}
+          />
+        </Helmet>
+        <div className="main__section__wrapper">
+          <section id="two " className="raxo__info">
+            <div className="container container__custom">
+              <div className="row">
+                <div className="col-xs-12 col-sm-12 col-sm-6 col-lg-6 info__blocks no__padding">
+                  <div className="contact__data__block">
+                    {pageAcf.bussines_contact.map((element, index) => (
+                      <div className="contact__data__content" key={index}>
+                        <>
+                          {element.bussines_info_block.map((sub, index) => (
+                            <>
+                              <h2
+                                className="ab__font bold__font white__font"
                                 data-aos="fade-up"
                                 data-aos-easing="ease-in-back"
                                 data-aos-delay="550"
                                 data-aos-duration="1200"
                                 data-aos-offset="200"
                               >
-                                Find us here
+                                {sub.title}
                               </h2>
-                              <a href={`tel:${this.props.data.wordpressAcfOptions.options.contact_phone}`}>
-                                  <h4
-                                  className="ab__font gray__font bold__font"
+                              <a href={`mailto:${sub.email}`}>
+                                <h3
+                                  className="ab__font bold__font gray__font"
                                   data-aos="fade-up"
                                   data-aos-easing="ease-in-back"
-                                  data-aos-delay="500"
+                                  data-aos-delay="550"
                                   data-aos-duration="1200"
                                   data-aos-offset="200"
-                                  dangerouslySetInnerHTML={{ __html: this.props.data.wordpressAcfOptions.options.contact_phone}}
-                                  />
+                                >
+                                  {sub.email}
+                                </h3>
                               </a>
-                              <a href={`mailto:${this.props.data.wordpressAcfOptions.options.contact_email}`} >
-                                  <h4
-                                  className="ab__font gray__font bold__font"
+                              <a href={`tel:${sub.phone}`}>
+                                <h3
+                                  className="ab__font bold__font gray__font"
                                   data-aos="fade-up"
                                   data-aos-easing="ease-in-back"
-                                  data-aos-delay="500"
+                                  data-aos-delay="550"
                                   data-aos-duration="1200"
                                   data-aos-offset="200"
-                                  dangerouslySetInnerHTML={{ __html: this.props.data.wordpressAcfOptions.options.contact_email }}
-                                  />
-
+                                >
+                                  {sub.phone}
+                                </h3>
                               </a>
-                            </div>
-                            
-                            </div>
-                          </div>
-                    </div>
+                            </>
+                          ))}
+                        </>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-            </section>
-          </div>
+                <div className="col-xs-12 col-sm-12 col-sm-6 col-lg-6 info__address no__padding">
+                  <div className="contact__data__block">
+                    <h2
+                      className="ab__font bold__font white__font"
+                      data-aos="fade-up"
+                      data-aos-easing="ease-in-back"
+                      data-aos-delay="550"
+                      data-aos-duration="1200"
+                      data-aos-offset="200"
+                    >
+                      Find Us Here
+                    </h2>
+
+                    {pageAcf.address.map((address, index) => (
+                      <div className="contact__data__content">
+                        <h4
+                          className="ab__font gray__font bold__font"
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay="550"
+                          data-aos-duration="1200"
+                          data-aos-offset="200"
+                          dangerouslySetInnerHTML={{
+                            __html: address.office_address,
+                          }}
+                        />
+                      </div>
+                    ))}
+                    <div className="contact__data__content">
+                      <h2
+                        className="ab__font bold__font white__font invisible"
+                        data-aos="fade-up"
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay="550"
+                        data-aos-duration="1200"
+                        data-aos-offset="200"
+                      >
+                        Find us here
+                      </h2>
+                      <a
+                        href={`tel:${this.props.data.wordpressAcfOptions.options.contact_phone}`}
+                      >
+                        <h4
+                          className="ab__font gray__font bold__font"
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay="500"
+                          data-aos-duration="1200"
+                          data-aos-offset="200"
+                          dangerouslySetInnerHTML={{
+                            __html: this.props.data.wordpressAcfOptions.options
+                              .contact_phone,
+                          }}
+                        />
+                      </a>
+                      <a
+                        href={`mailto:${this.props.data.wordpressAcfOptions.options.contact_email}`}
+                      >
+                        <h4
+                          className="ab__font gray__font bold__font"
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay="500"
+                          data-aos-duration="1200"
+                          data-aos-offset="200"
+                          dangerouslySetInnerHTML={{
+                            __html: this.props.data.wordpressAcfOptions.options
+                              .contact_email,
+                          }}
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </Layout>
     )
   }
@@ -263,9 +276,8 @@ class ContactPage extends Component {
 export default ContactPage
 
 export const pageQuery = graphql`
-query ContactQuery {
-
-    allWordpressPage(filter: {slug: {eq: "contact"}}) {
+  query ContactQuery {
+    allWordpressPage(filter: { slug: { eq: "contact" } }) {
       edges {
         node {
           id
@@ -277,7 +289,7 @@ query ContactQuery {
             yoast_wpseo_title
             yoast_wpseo_canonical
           }
-          acf{
+          acf {
             top_title
             first_subtitle
             second_subtitle
@@ -288,13 +300,13 @@ query ContactQuery {
               id
             }
             section_color
-            address{
-                office_address
-                address_copy
-                google_iframe
+            address {
+              office_address
+              address_copy
+              google_iframe
             }
-            bussines_contact{
-              bussines_info_block{
+            bussines_contact {
+              bussines_info_block {
                 title
                 email
                 phone
@@ -305,10 +317,10 @@ query ContactQuery {
       }
     }
     wordpressAcfOptions {
-        options {
-          contact_email
-          contact_phone
-        }
+      options {
+        contact_email
+        contact_phone
+      }
     }
-  }  
+  }
 `

@@ -97,7 +97,7 @@ const Layout = ({ children, location }) => {
             { passive: true }
           )
 
-          return false;
+          return false
         }
       })
     }
@@ -208,9 +208,8 @@ const Layout = ({ children, location }) => {
         } finally {
           document.body.removeChild(textarea)
         }
-
       })
-      return false; 
+      return false
     })
   }
 

@@ -28,7 +28,7 @@ export default class MainMenuFloatingScreen extends Component {
         .querySelectorAll(".menu__full__screen .brand__menu")[0]
         .classList.add("hidden")
 
-      return false;
+      return false
     })
   }
   render() {

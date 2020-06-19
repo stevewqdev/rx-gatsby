@@ -8,9 +8,9 @@ const RelatedProjects = props => {
     <div className="related__projects includes__separator">
       <div className="container container__custom related__mobile">
         <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 related__section__title no__padding">
-              <div className="separator --white "></div>
-            </div>
+          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 related__section__title no__padding">
+            <div className="separator --white "></div>
+          </div>
         </div>
       </div>
       <div className="container container__custom related__desktop">
@@ -33,7 +33,11 @@ const RelatedProjects = props => {
             data-aos-delay={`150`}
             data-aos-duration="1200"
           >
-            <Link to={`/project/${props.relatedprojectlink.split("project/").pop()}`}>
+            <Link
+              to={`/project/${props.relatedprojectlink
+                .split("project/")
+                .pop()}`}
+            >
               <p
                 className="bold__font md__font"
                 data-aos="fade-up"
@@ -75,22 +79,24 @@ const RelatedProjects = props => {
                 {props.relatedcopy}
               </p>
             </div>
-            <Link to={`/project/${props.relatedprojectlink.split("project/").pop()}`}>
-              {
-                props.relatedthumbnail.localFile.childImageSharp !== null 
-                ? 
+            <Link
+              to={`/project/${props.relatedprojectlink
+                .split("project/")
+                .pop()}`}
+            >
+              {props.relatedthumbnail.localFile.childImageSharp !== null ? (
                 <Img
                   fluid={props.relatedthumbnail.localFile.childImageSharp.fluid}
                   alt={`${props.relatedproject} project`}
                   tabIndex={-1}
                 />
-                : 
+              ) : (
                 <img
                   src={props.relatedthumbnail.localFile.url}
                   alt={`${props.relatedproject} project`}
                   tabIndex={-1}
                 />
-              }
+              )}
             </Link>
           </div>
         </div>
@@ -116,22 +122,24 @@ const RelatedProjects = props => {
             data-aos-delay={`150`}
             data-aos-duration="1200"
           >
-            <Link to={`/project/${props.relatedprojectlink.split("project/").pop()}`}>
-              {
-                props.relatedthumbnail.localFile.childImageSharp !== null 
-                ? 
+            <Link
+              to={`/project/${props.relatedprojectlink
+                .split("project/")
+                .pop()}`}
+            >
+              {props.relatedthumbnail.localFile.childImageSharp !== null ? (
                 <Img
                   fluid={props.relatedthumbnail.localFile.childImageSharp.fluid}
                   alt={`${props.relatedproject} project`}
                   tabIndex={-1}
                 />
-                : 
+              ) : (
                 <img
                   src={props.relatedthumbnail.localFile.url}
                   alt={`${props.relatedproject} project`}
                   tabIndex={-1}
                 />
-              }
+              )}
             </Link>
           </div>
           <div
@@ -141,7 +149,11 @@ const RelatedProjects = props => {
             data-aos-delay={`150`}
             data-aos-duration="1200"
           >
-            <Link to={`/project/${props.relatedprojectlink.split("project/").pop()}`}>
+            <Link
+              to={`/project/${props.relatedprojectlink
+                .split("project/")
+                .pop()}`}
+            >
               <p
                 className="bold__font md__font"
                 data-aos="fade-up"

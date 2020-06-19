@@ -1,28 +1,33 @@
 import React, { Component } from "react"
 import Layout from "../../layouts/index"
 import { graphql } from "gatsby"
-import {Helmet} from "react-helmet";
-import ProjectHero  from "../../components/projects/header/index"
+import { Helmet } from "react-helmet"
+import ProjectHero from "../../components/projects/header/index"
 import Img from "gatsby-image"
 import "../../layouts/pages/projects/rock-summer.css"
 import RelatedProjects from "../../components/relatedProjects/index"
 
 class RockSummer extends Component {
-
   render() {
-    const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
-    const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
-    return ( 
+    const pageData = this.props.data.allWordpressWpProjects.edges[0].node
+    const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf
+    return (
       <Layout>
         <div className="project__template rock-summer">
           <Helmet>
             <meta charSet="utf-8" />
-            <meta name="description" content={ pageData.yoast_meta.yoast_wpseo_metadesc }/>
-            <title>{ pageData.yoast_meta.yoast_wpseo_title }</title>
-            <link rel="canonical" href={ pageData.yoast_meta.yoast_wpseo_canonical} />
+            <meta
+              name="description"
+              content={pageData.yoast_meta.yoast_wpseo_metadesc}
+            />
+            <title>{pageData.yoast_meta.yoast_wpseo_title}</title>
+            <link
+              rel="canonical"
+              href={pageData.yoast_meta.yoast_wpseo_canonical}
+            />
           </Helmet>
 
-          <ProjectHero 
+          <ProjectHero
             title={pageAcf.frontend_title}
             clientName={pageAcf.client}
             projectInfo={pageData.content}
@@ -33,225 +38,262 @@ class RockSummer extends Component {
 
           <div className="main__section__wrapper">
             <div className="single__project" id="single__one">
-                <div className="container container__custom">
-                    {
-                        pageAcf.rs_section_one_content.map((element, index) => 
-                            <>
-                                {
-                                   index === 0
-                                   ?
-                                   <div className={`row row-${index} `} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 image no__padding "
-                                                                  data-aos="fade-up"
+              <div className="container container__custom">
+                {pageAcf.rs_section_one_content.map((element, index) => (
+                  <>
+                    {index === 0 ? (
+                      <div className={`row row-${index} `} key={index}>
+                        <div
+                          className="col-xs-12 col-sm-12 col-md-6 col-lg-6 image no__padding "
+                          data-aos="fade-up"
                           data-aos-easing="ease-in-back"
                           data-aos-delay={`120`}
                           data-aos-duration="1200"
-                                        >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rock Summer project`} tabIndex={-1}/>
-                                        </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy no__padding  d-flex align-items-center justify-content-center"
-                                                                  data-aos="fade-up"
-                          data-aos-easing="ease-in-back"
-                          data-aos-delay={`120`}
-                          data-aos-duration="1200"
-                                        >
-                                            <div
-                                            className="simple__copy sm__font reg__font"
-                                            dangerouslySetInnerHTML={{ __html: element.copy }}
-                                            />
-                                        </div>
-
-                                    </div>
-                                   :""
-                                }
-                                {
-                                   index === 1
-                                   ?
-                                   <div className={`row row-${index} `} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image no__padding "
-                                                                  data-aos="fade-up"
-                          data-aos-easing="ease-in-back"
-                          data-aos-delay={`120`}
-                          data-aos-duration="1200"
-                                        >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rock Summer project`} tabIndex={-1}/>
-                                        </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy  d-flex align-items-center"
-                                                                  data-aos="fade-up"
-                          data-aos-easing="ease-in-back"
-                          data-aos-delay={`120`}
-                          data-aos-duration="1200"
-                                        >
-                                            <div
-                                            className="simple__copy sm__font reg__font"
-                                            dangerouslySetInnerHTML={{ __html: element.copy }}
-                                            />
-                                        </div>
-                                    </div>
-                                   :""
-                                }
-                                {
-                                   index === 2
-                                   ?
-                                   <div className={`row row-${index} `} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy no__padding d-flex align-items-center"
-                                        
-                                                                  data-aos="fade-up"
-                          data-aos-easing="ease-in-back"
-                          data-aos-delay={`120`}
-                          data-aos-duration="1200"
-                                        >
-                                            <div
-                                            className="simple__copy sm__font reg__font"
-                                            dangerouslySetInnerHTML={{ __html: element.copy }}
-                                            />
-                                        </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image no__padding "
-                                        
-                                                                  data-aos="fade-up"
-                          data-aos-easing="ease-in-back"
-                          data-aos-delay={`120`}
-                          data-aos-duration="1200"
-                                        >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rock Summer project`} tabIndex={-1}/>
-                                        </div>
-                                    </div>
-                                   :""
-                                }
-                                {
-                                   index === 3
-                                   ?
-                                   <div className={`row row-${index} `} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image  no__padding"
-                                                                  data-aos="fade-up"
-                          data-aos-easing="ease-in-back"
-                          data-aos-delay={`120`}
-                          data-aos-duration="1200"
-                                        >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rock Summer project`} tabIndex={-1}/>
-                                        </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy d-flex align-items-center justify-content-center"
-                                                                  data-aos="fade-up"
-                          data-aos-easing="ease-in-back"
-                          data-aos-delay={`120`}
-                          data-aos-duration="1200"
-                                        >
-                                            <div
-                                            className="simple__copy sm__font reg__font"
-                                            dangerouslySetInnerHTML={{ __html: element.copy }}
-                                            />
-                                        </div>
-
-                                    </div>
-                                   :""
-                                }
-                            </>
-                        )
-                    }
-                </div>
-            </div> 
-       
-            <div className="single__project includes__separator" id="single__two">
-                <div className="container container__custom">
-                    <div className="row section__three__about">
-                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 full__width__image no__padding about">
-                            <div className="separator --black"></div>
-                            <div
-                                data-aos="fade-up"
-                                data-aos-easing="ease-in-back"
-                                data-aos-delay={`120`}
-                                data-aos-duration="1200"
-                                data-aos-offset="350"
-                            >
-                                <h1
-
-                                    className="xxl__font"
-                                    dangerouslySetInnerHTML={{ __html: pageAcf.rs_about }}
-                                />
-                            </div>
+                        >
+                          <Img
+                            fluid={
+                              element.image.localFile.childImageSharp.fluid
+                            }
+                            alt={`Illustration from Rock Summer project`}
+                            tabIndex={-1}
+                          />
                         </div>
+                        <div
+                          className="col-xs-12 col-sm-12 col-md-6 col-lg-6 copy no__padding  d-flex align-items-center justify-content-center"
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                        >
+                          <div
+                            className="simple__copy sm__font reg__font"
+                            dangerouslySetInnerHTML={{ __html: element.copy }}
+                          />
+                        </div>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                    {index === 1 ? (
+                      <div className={`row row-${index} `} key={index}>
+                        <div
+                          className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image no__padding "
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                        >
+                          <Img
+                            fluid={
+                              element.image.localFile.childImageSharp.fluid
+                            }
+                            alt={`Illustration from Rock Summer project`}
+                            tabIndex={-1}
+                          />
+                        </div>
+                        <div
+                          className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy  d-flex align-items-center"
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                        >
+                          <div
+                            className="simple__copy sm__font reg__font"
+                            dangerouslySetInnerHTML={{ __html: element.copy }}
+                          />
+                        </div>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                    {index === 2 ? (
+                      <div className={`row row-${index} `} key={index}>
+                        <div
+                          className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy no__padding d-flex align-items-center"
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                        >
+                          <div
+                            className="simple__copy sm__font reg__font"
+                            dangerouslySetInnerHTML={{ __html: element.copy }}
+                          />
+                        </div>
+                        <div
+                          className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image no__padding "
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                        >
+                          <Img
+                            fluid={
+                              element.image.localFile.childImageSharp.fluid
+                            }
+                            alt={`Illustration from Rock Summer project`}
+                            tabIndex={-1}
+                          />
+                        </div>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                    {index === 3 ? (
+                      <div className={`row row-${index} `} key={index}>
+                        <div
+                          className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image  no__padding"
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                        >
+                          <Img
+                            fluid={
+                              element.image.localFile.childImageSharp.fluid
+                            }
+                            alt={`Illustration from Rock Summer project`}
+                            tabIndex={-1}
+                          />
+                        </div>
+                        <div
+                          className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy d-flex align-items-center justify-content-center"
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                        >
+                          <div
+                            className="simple__copy sm__font reg__font"
+                            dangerouslySetInnerHTML={{ __html: element.copy }}
+                          />
+                        </div>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                  </>
+                ))}
+              </div>
+            </div>
+
+            <div
+              className="single__project includes__separator"
+              id="single__two"
+            >
+              <div className="container container__custom">
+                <div className="row section__three__about">
+                  <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 full__width__image no__padding about">
+                    <div className="separator --black"></div>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-easing="ease-in-back"
+                      data-aos-delay={`120`}
+                      data-aos-duration="1200"
+                      data-aos-offset="350"
+                    >
+                      <h1
+                        className="xxl__font"
+                        dangerouslySetInnerHTML={{ __html: pageAcf.rs_about }}
+                      />
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
 
             <div className="single__project " id="single__three">
-                <div className="container container__custom">
-                    {
-                        pageAcf.rs_section_three_content.map((element, index) => 
-                            <>
-                                {
-                                    index === 0
-                                    ?
-                                    <div className={`row row-${index} `} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding"
-                                                                  data-aos="fade-up"
-                                                                  data-aos-easing="ease-in-back"
-                                                                  data-aos-delay={`120`}
-                                                                  data-aos-duration="1200"
-                                        >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rock Summer project`} tabIndex={-1}/>
-                                        </div>
-                                    </div>
-                                    : ""
-                                }
-                                {
-                                   index === 1
-                                   ?
-                                   <div className={`row row-${index} `} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding "
-                                                                  data-aos="fade-up"
-                                                                  data-aos-easing="ease-in-back"
-                                                                  data-aos-delay={`120`}
-                                                                  data-aos-duration="1200"
-                                        >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rock Summer project`} tabIndex={-1}/>
-                                        </div>
-                                    </div>
-                                   :""
-                                }
-                                {
-                                   index === 2
-                                   ?
-                                   <div className={`row row-${index} `} key={index}>
-                                        <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy no__padding d-flex align-items-center"
-                                        
-                                                                  data-aos="fade-up"
+              <div className="container container__custom">
+                {pageAcf.rs_section_three_content.map((element, index) => (
+                  <>
+                    {index === 0 ? (
+                      <div className={`row row-${index} `} key={index}>
+                        <div
+                          className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding"
+                          data-aos="fade-up"
                           data-aos-easing="ease-in-back"
                           data-aos-delay={`120`}
                           data-aos-duration="1200"
-                                        >
-                                            <div
-                                            className="simple__copy sm__font reg__font"
-                                            dangerouslySetInnerHTML={{ __html: element.copy }}
-                                            />
-                                        </div>
-                                        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image no__padding "
-                                        
-                                                                  data-aos="fade-up"
+                        >
+                          <Img
+                            fluid={
+                              element.image.localFile.childImageSharp.fluid
+                            }
+                            alt={`Illustration from Rock Summer project`}
+                            tabIndex={-1}
+                          />
+                        </div>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                    {index === 1 ? (
+                      <div className={`row row-${index} `} key={index}>
+                        <div
+                          className="col-xs-12 col-sm-12 col-md-12 col-lg-12 image no__padding "
+                          data-aos="fade-up"
                           data-aos-easing="ease-in-back"
                           data-aos-delay={`120`}
                           data-aos-duration="1200"
-                                        >
-                                            <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Rock Summer project`} tabIndex={-1}/>
-                                        </div>
-                                    </div>
-                                   :""
-                                }
-                            </>
-                        )
-                    }
-                </div>
+                        >
+                          <Img
+                            fluid={
+                              element.image.localFile.childImageSharp.fluid
+                            }
+                            alt={`Illustration from Rock Summer project`}
+                            tabIndex={-1}
+                          />
+                        </div>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                    {index === 2 ? (
+                      <div className={`row row-${index} `} key={index}>
+                        <div
+                          className="col-xs-12 col-sm-12 col-md-3 col-lg-3 copy no__padding d-flex align-items-center"
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                        >
+                          <div
+                            className="simple__copy sm__font reg__font"
+                            dangerouslySetInnerHTML={{ __html: element.copy }}
+                          />
+                        </div>
+                        <div
+                          className="col-xs-12 col-sm-12 col-md-9 col-lg-9 image no__padding "
+                          data-aos="fade-up"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay={`120`}
+                          data-aos-duration="1200"
+                        >
+                          <Img
+                            fluid={
+                              element.image.localFile.childImageSharp.fluid
+                            }
+                            alt={`Illustration from Rock Summer project`}
+                            tabIndex={-1}
+                          />
+                        </div>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                  </>
+                ))}
+              </div>
             </div>
 
-            <RelatedProjects 
-                relatedcopy={pageAcf.related_extra_copy}
-                relatedproject={pageAcf.related_project}
-                relatedthumbnail={pageAcf.related_project_thumbnail}
-                relatedprojectlink={pageAcf.related_project_url}
+            <RelatedProjects
+              relatedcopy={pageAcf.related_extra_copy}
+              relatedproject={pageAcf.related_project}
+              relatedthumbnail={pageAcf.related_project_thumbnail}
+              relatedprojectlink={pageAcf.related_project_url}
             ></RelatedProjects>
           </div>
-
-
         </div>
       </Layout>
     )
@@ -260,8 +302,8 @@ class RockSummer extends Component {
 export default RockSummer
 
 export const pageQuery = graphql`
-query RockSummerPageQuery {
-    allWordpressWpProjects(filter: {wordpress_id: {eq: 1068}}) {
+  query RockSummerPageQuery {
+    allWordpressWpProjects(filter: { wordpress_id: { eq: 1068 } }) {
       edges {
         node {
           id
@@ -271,7 +313,33 @@ query RockSummerPageQuery {
             related_extra_copy
             related_project
             related_project_thumbnail {
-                localFile{
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1300, quality: 80) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+                url
+              }
+            }
+            related_project_url
+            frontend_title
+            client
+            project_focus
+            featured_image {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1300, quality: 80) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+                url
+              }
+            }
+            project_background
+            rs_section_one_content {
+              image {
+                localFile {
                   childImageSharp {
                     fluid(maxWidth: 1300, quality: 80) {
                       ...GatsbyImageSharpFluid_withWebp
@@ -279,51 +347,25 @@ query RockSummerPageQuery {
                   }
                   url
                 }
-            }
-            related_project_url
-            frontend_title
-            client
-            project_focus
-            featured_image {
-                localFile {
-                    childImageSharp {
-                    fluid(maxWidth: 1300, quality: 80) {
-                        ...GatsbyImageSharpFluid_withWebp
-                    }
-                    }
-                    url
-                }
-            }           
-            project_background
-            rs_section_one_content{
-                image{
-                    localFile {
-                        childImageSharp {
-                        fluid(maxWidth: 1300, quality: 80) {
-                            ...GatsbyImageSharpFluid_withWebp
-                        }
-                        }
-                        url
-                    }
-                }
-                copy
+              }
+              copy
             }
             rs_about
-            rs_section_three_content{
-                image{
-                    localFile {
-                        childImageSharp {
-                        fluid(maxWidth: 1300, quality: 80) {
-                            ...GatsbyImageSharpFluid_withWebp
-                        }
-                        }
-                        url
+            rs_section_three_content {
+              image {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 1300, quality: 80) {
+                      ...GatsbyImageSharpFluid_withWebp
                     }
+                  }
+                  url
                 }
-                copy
+              }
+              copy
             }
           }
-          
+
           yoast_meta {
             yoast_wpseo_canonical
             yoast_wpseo_metadesc

@@ -1,11 +1,9 @@
 import React, { useEffect } from "react"
-import Img from 'gatsby-image'
+import Img from "gatsby-image"
 
 import "./index.css"
 
 const Hero = props => {
-
-
   function parallaxContainer() {
     if (window.innerWidth > 768) {
       window.addEventListener(
@@ -26,18 +24,15 @@ const Hero = props => {
     }
   }
 
-
   useEffect(() => {
     setTimeout(function() {
       document
         .querySelectorAll(".hero__component .separator")[0]
         .classList.add("full")
     }, 1500)
-    
-    
 
-    if(props.classes !== "internal__post"){
-      parallaxContainer() 
+    if (props.classes !== "internal__post") {
+      parallaxContainer()
     }
   })
   return (
@@ -45,74 +40,75 @@ const Hero = props => {
       className={`hero__component ${props.theme} ${props.classes} `}
       id="hero__component"
     >
-      {
-        props.image !== "" && props.isPost
-        ?
+      {props.image !== "" && props.isPost ? (
         <>
-          <Img className={'header__hero__full'} fluid={props.image.childImageSharp.fluid} />
+          <Img
+            className={"header__hero__full"}
+            fluid={props.image.childImageSharp.fluid}
+          />
         </>
-        : ""
-      }
+      ) : (
+        ""
+      )}
       <div className="container-fluid">
         <div className="row">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 hero__title no__padding">
             <div className="separator --black "></div>
-            {
-              props.template === "template__default"
-              ?
+            {props.template === "template__default" ? (
               <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 "></div>
-              <div className="col-xs-6 col-sm-6 col-md-6 col-lg-3 hero__title">
-                <p
-                  data-aos="fade-up"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="800"
-                  data-aos-duration="1200"
-                  className="bold__font md__font"
-                >
-                  News
-                </p>
-                {props.category ? (
+                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 "></div>
+                <div className="col-xs-6 col-sm-6 col-md-6 col-lg-3 hero__title">
                   <p
                     data-aos="fade-up"
                     data-aos-easing="ease-in-back"
                     data-aos-delay="800"
                     data-aos-duration="1200"
-                    className="reg__font sm__font"
+                    className="bold__font md__font"
                   >
-                    {props.category}
+                    News
                   </p>
-                ) : (
-                  ""
-                )}
+                  {props.category ? (
+                    <p
+                      data-aos="fade-up"
+                      data-aos-easing="ease-in-back"
+                      data-aos-delay="800"
+                      data-aos-duration="1200"
+                      className="reg__font sm__font"
+                    >
+                      {props.category}
+                    </p>
+                  ) : (
+                    ""
+                  )}
                 </div>
-              <div className="col-xs-6 col-sm-6 col-md-6 col-lg-3 hero__title">
-                <p
-                  data-aos="fade-up"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="800"
-                  data-aos-duration="1200"
-                  className="bold__font md__font"
-                >
-                  Date
-                </p>
-                {props.firstSubtitle ? (
+                <div className="col-xs-6 col-sm-6 col-md-6 col-lg-3 hero__title">
                   <p
                     data-aos="fade-up"
                     data-aos-easing="ease-in-back"
                     data-aos-delay="800"
                     data-aos-duration="1200"
-                    className="reg__font sm__font"
+                    className="bold__font md__font"
                   >
-                    {props.firstSubtitle}
+                    Date
                   </p>
-                ) : (
-                  ""
-                )}
+                  {props.firstSubtitle ? (
+                    <p
+                      data-aos="fade-up"
+                      data-aos-easing="ease-in-back"
+                      data-aos-delay="800"
+                      data-aos-duration="1200"
+                      className="reg__font sm__font"
+                    >
+                      {props.firstSubtitle}
+                    </p>
+                  ) : (
+                    ""
+                  )}
+                </div>
               </div>
-              </div>
-              : ""
-            }
+            ) : (
+              ""
+            )}
             {props.title ? (
               <h1
                 data-aos="fade-up"

@@ -2,159 +2,177 @@ import React, { Component } from "react"
 import Layout from "../layouts/index"
 import { graphql } from "gatsby"
 import PropTypes from "prop-types"
-import Img from 'gatsby-image'
+import Img from "gatsby-image"
 import Hero from "../components/hero/index"
-import {Helmet} from "react-helmet"; 
-import "./posts.css"; 
-import moment from 'moment'
+import { Helmet } from "react-helmet"
+import "./posts.css"
+import moment from "moment"
 
 class Post extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       topDate: "",
       bottomDate: "",
       post: this.props.data.wordpressPost,
       template: "",
-    };
+    }
   }
 
+  componentDidMount() {
+    document.querySelectorAll(".footer")[0].classList.add("dark")
+    document.querySelectorAll(".separator")[0].classList.remove("--black")
+    document.querySelectorAll(".separator")[0].classList.add("--white")
 
-  componentDidMount(){
-    document.querySelectorAll(".footer")[0].classList.add("dark");
-    document.querySelectorAll(".separator")[0].classList.remove("--black");
-    document.querySelectorAll(".separator")[0].classList.add("--white");
-
-    let params = new URLSearchParams(window.location.search);
-    var postTemplate = params.get('template');
+    let params = new URLSearchParams(window.location.search)
+    var postTemplate = params.get("template")
     //var postTemplate = this.props.data.wordpressPost.acf.template;
-    if(postTemplate !== "legacy"){
-        postTemplate = "default"
+    if (postTemplate !== "legacy") {
+      postTemplate = "default"
     }
 
-    var dateString = this.state.post.date;
-    var dateObj = new Date(dateString);
-    var topDate = moment(dateObj);
-    var topMomentString = topDate.format('MM.DD.YYYY');
+    var dateString = this.state.post.date
+    var dateObj = new Date(dateString)
+    var topDate = moment(dateObj)
+    var topMomentString = topDate.format("MM.DD.YYYY")
 
-    var bottomDate = moment(dateObj);
-    var bottomMomentString = `${bottomDate.format('ddd MMM DD, LT z')} (${bottomDate.fromNow()}) `;
+    var bottomDate = moment(dateObj)
+    var bottomMomentString = `${bottomDate.format(
+      "ddd MMM DD, LT z"
+    )} (${bottomDate.fromNow()}) `
 
     this.setState({
       topDate: topMomentString,
       bottomDate: bottomMomentString,
       template: postTemplate,
     })
-
   }
   render() {
-    const customStyles =
-    `
+    const customStyles = `
     .fixed.column__top__one{
       position: absolute!important;
     }
     .fixed.column__top__two{
       position: absolute!important;
     }
-    `;
+    `
     // This variable will return all the fields related to the post
     const post = this.state.post
     // We create an object for the image data, you can add as many properties you need
     var postMedia = {
       image: false,
       webpImage: false,
-      altText: '',
-      dynamicResolutions: false
-    }; 
+      altText: "",
+      dynamicResolutions: false,
+    }
     // We will check if the post has any featured image set
-    if(post.featured_media){
+    if (post.featured_media) {
       // We save the image url into the object
       postMedia.image = post.featured_media.source_url
       postMedia.webpImage = post.featured_media.source_url
       // We check if the image contains the alt text and we save it into the object
-      if(post.featured_media.alt_text.length > 0){
-        postMedia.altText = post.featured_media.alt_text;
-      }else{
-        postMedia.altText = 'At the moment this image does not have a description';
+      if (post.featured_media.alt_text.length > 0) {
+        postMedia.altText = post.featured_media.alt_text
+      } else {
+        postMedia.altText =
+          "At the moment this image does not have a description"
       }
-      if(post.featured_media.localFile.childImageSharp.fluid){
-        postMedia.dynamicResolutions = post.featured_media.localFile.childImageSharp.fluid;
+      if (post.featured_media.localFile.childImageSharp.fluid) {
+        postMedia.dynamicResolutions =
+          post.featured_media.localFile.childImageSharp.fluid
       }
     }
     return (
       <Layout>
-          <Helmet>
-            <meta charSet="utf-8" />
-            <meta name="description" content={ post.yoast_meta.yoast_wpseo_metadesc }/>
-            <title>{ post.yoast_meta.yoast_wpseo_title }</title>
-            <link rel="canonical" href={ post.yoast_meta.yoast_wpseo_canonical} />
-            <style>{customStyles}</style>
-          </Helmet>
-          <Hero 
-              classes={"internal__post"}
-              theme={`dark template__${this.state.template}`}
-              template={`template__${this.state.template}`}
-              image={post.featured_media.localFile} 
-              video={""}
-              title={post.title}
-              firstSubtitle={this.state.topDate}
-              category={"News"}
-              isPost={true}
-            >
-          </Hero>
-          <div className={`main__section__wrapper post__wrapper template__${this.state.template}`}>
-            {
-              this.state.template === "legacy"
-              ? 
-              <>
-                <div className="post container__base container container__custom">
-                  <div className="row">
-                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 no__padding">
-                      <div className="post__content__wrapper">
-                        <div className="post__date">
-                          <p className="sm__font bold__font">{this.state.bottomDate}</p>
-                        </div>
-                        <div className="post__content  md__font reg__font">
-                          <div dangerouslySetInnerHTML={{__html: post.content}}/>
-                        </div>
-                       </div>
-                    </div>
-                  </div>
-                </div>
-              </>
-              :
-              <>
-                <div className="post container__base container container__custom">
-                  <div className="row">
-                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6  no__padding post__thumbnail">
-                      <Img className={''} fluid={post.featured_media.localFile.childImageSharp.fluid} />
-                      <p
-                        data-aos="fade-up"
-                        data-aos-easing="ease-in-back"
-                        data-aos-delay="500"
-                        data-aos-duration="1200"
-                        className="sm__font reg__font post__thumbnail__caption"
-                        dangerouslySetInnerHTML={{ __html: post.featured_media.caption }}
-                      />
-                    </div>
-                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 post__content__container">
-                      <div className="post__content__wrapper">
-                        <div className="post__date">
-                          <p className="sm__font bold__font">{this.state.bottomDate}</p>
-                        </div>
-                        <div className="post__content  md__font reg__font">
-                          <div dangerouslySetInnerHTML={{__html: post.content}}/>
-                        </div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <meta
+            name="description"
+            content={post.yoast_meta.yoast_wpseo_metadesc}
+          />
+          <title>{post.yoast_meta.yoast_wpseo_title}</title>
+          <link rel="canonical" href={post.yoast_meta.yoast_wpseo_canonical} />
+          <style>{customStyles}</style>
+        </Helmet>
+        <Hero
+          classes={"internal__post"}
+          theme={`dark template__${this.state.template}`}
+          template={`template__${this.state.template}`}
+          image={post.featured_media.localFile}
+          video={""}
+          title={post.title}
+          firstSubtitle={this.state.topDate}
+          category={"News"}
+          isPost={true}
+        ></Hero>
+        <div
+          className={`main__section__wrapper post__wrapper template__${this.state.template}`}
+        >
+          {this.state.template === "legacy" ? (
+            <>
+              <div className="post container__base container container__custom">
+                <div className="row">
+                  <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 no__padding">
+                    <div className="post__content__wrapper">
+                      <div className="post__date">
+                        <p className="sm__font bold__font">
+                          {this.state.bottomDate}
+                        </p>
+                      </div>
+                      <div className="post__content  md__font reg__font">
+                        <div
+                          dangerouslySetInnerHTML={{ __html: post.content }}
+                        />
                       </div>
                     </div>
                   </div>
                 </div>
-              </>
-            }
-          </div>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="post container__base container container__custom">
+                <div className="row">
+                  <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6  no__padding post__thumbnail">
+                    <Img
+                      className={""}
+                      fluid={
+                        post.featured_media.localFile.childImageSharp.fluid
+                      }
+                    />
+                    <p
+                      data-aos="fade-up"
+                      data-aos-easing="ease-in-back"
+                      data-aos-delay="500"
+                      data-aos-duration="1200"
+                      className="sm__font reg__font post__thumbnail__caption"
+                      dangerouslySetInnerHTML={{
+                        __html: post.featured_media.caption,
+                      }}
+                    />
+                  </div>
+                  <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 post__content__container">
+                    <div className="post__content__wrapper">
+                      <div className="post__date">
+                        <p className="sm__font bold__font">
+                          {this.state.bottomDate}
+                        </p>
+                      </div>
+                      <div className="post__content  md__font reg__font">
+                        <div
+                          dangerouslySetInnerHTML={{ __html: post.content }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+        </div>
       </Layout>
     )
-  }  
+  }
 }
 Post.propTypes = {
   data: PropTypes.object.isRequired,
@@ -197,7 +215,7 @@ export const postQuery = graphql`
       acf {
         template
       }
-      featured_media{
+      featured_media {
         source_url
         alt_text
         caption
@@ -223,6 +241,6 @@ export const postQuery = graphql`
       categories {
         slug
       }
-    } 
+    }
   }
 `
