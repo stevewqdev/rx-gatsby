@@ -1061,7 +1061,7 @@ section#one{
 }
 /* Featured video Component */
 
-.featured__video .featured__video__copy h5{
+.featured__video .featured__video__copy h3{
   font-size: 18px;
   font-weight: bold;
   line-height: 20px;
