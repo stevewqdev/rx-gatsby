@@ -13,40 +13,6 @@ import "../layouts/layout.css"
 import "../fonts/stylesheet.css"
 
 const Layout = ({ children, location }) => {
-  // This function controls the redirect on the menu, to avoid a direct redirection, first closes the menu and after that it makes the redirection.
-  // function hrefRedirect() {
-  //   let aElements = [...document.querySelectorAll(".menu__full__screen a")]
-
-  //   aElements.forEach(element => {
-  //     element.addEventListener("click", function(event) {
-  //       event.preventDefault()
-  //       document
-  //         .querySelectorAll(".page__wrapper")[0]
-  //         .classList.add("on-transition")
-
-  //       let redirectLink = event.target.getAttribute("href")
-  //       setTimeout(function() {
-  //         if (redirectLink === null) {
-  //           window.location.href = `/`
-  //         } else {
-  //           if (
-  //             redirectLink.includes("facebook") ||
-  //             redirectLink.includes("twitter") ||
-  //             redirectLink.includes("instagram") ||
-  //             redirectLink.includes("behance") ||
-  //             redirectLink.includes("vimeo")
-  //           ) {
-  //           } else {
-  //             window.location.href = `${event.target.getAttribute("href")}`
-  //           }
-  //         }
-  //       }, 620)
-  //     })
-
-  //     return false;
-  //   })
-  // }
-  // This function adds and remove an absolute position in the main content, this way the top section hides behind the other sections
   function removeFixed() {
     let mainElement = document.querySelectorAll(".main__section__wrapper")
     window.onscroll = function() {
@@ -227,6 +193,20 @@ const Layout = ({ children, location }) => {
       once: true, // whether animation should happen only once - while scrolling down
       mirror: true, // whether elements should animate out while scrolling past them
     })
+
+    setTimeout(function(){ 
+      var linkMont = document.createElement('link');
+      linkMont.id = 'montserrat__font';
+      linkMont.rel = 'stylesheet';
+      linkMont.href = 'https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap';
+      document.head.appendChild(linkMont);
+  
+      var linkMul = document.createElement('link');
+      linkMul.id = 'muli__font';
+      linkMul.rel = 'stylesheet';
+      linkMul.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap';
+      document.head.appendChild(linkMul);
+    }, 100);
   })
   // Next query will return the site data, the master acf fields for whole website data, the logo and the favicon.
   const data = useStaticQuery(graphql`
