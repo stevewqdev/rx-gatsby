@@ -47,21 +47,24 @@ class Ultra extends Component {
       volume: parseFloat(event.target.value),
     });
   }
-
-  componentDidMount(){
-    //document.querySelectorAll(".floating__web__info")[1].classList.add("mix__blend__screen");
-  }
-
    
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node; 
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf;
     const {  paused, volume } = this.state;
 
+    const customStyle =
+    `
+    .hidden {
+      display: none;
+    }
+    `
+
     return ( 
       <Layout>
         <div className="project__template ultra">
           <Helmet>
+            <style>{customStyle}</style>
             <meta charSet="utf-8" />
             <meta name="description" content={ pageData.yoast_meta.yoast_wpseo_metadesc }/>
             <title>{ pageData.yoast_meta.yoast_wpseo_title }</title>
@@ -150,8 +153,8 @@ class Ultra extends Component {
                    {
                      index === 1
                      ?
-                      <>
-                          <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 copy hidden-${index} no__padding`}
+                      < >
+                          <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 copy hidden-${index} no__padding hidden`}
                           
                           data-aos="fade-up"
                           data-aos-easing="ease-in-back"
@@ -168,7 +171,7 @@ class Ultra extends Component {
                             element.image
                             ? 
                               <>
-                                <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 image hidden-${index} no__padding`}
+                                <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 image hidden hidden-${index} no__padding`}
                                   data-aos="fade-up"
                                   data-aos-easing="ease-in-back"
                                   data-aos-delay={`220`}
@@ -551,7 +554,7 @@ class Ultra extends Component {
                         index === 5 
                         ?
                         <>
-                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 image "
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 image no__padding"
                         data-aos="fade-up"
                         data-aos-easing="ease-in-back"
                         data-aos-delay={`120`}
@@ -560,7 +563,7 @@ class Ultra extends Component {
                         >
                           <Img fluid={element.image.localFile.childImageSharp.fluid} alt={`Illustration from Ultra`} tabIndex={-1}/>
                         </div>
-                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 copy no__padding"
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 copy "
                         data-aos="fade-up"
                         data-aos-easing="ease-in-back"
                         data-aos-delay={`220`}

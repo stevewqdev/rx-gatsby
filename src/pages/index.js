@@ -15,16 +15,6 @@ class HomePage extends Component {
   playVideo(event){
     event.target.play();
     document.querySelectorAll(".poster__animated")[0].classList.add("hidden");
-    // if (!event.target.paused) {
-    //   if (window.innerWidth < 500) {
-    //     event.target.pause();
-    //   }
-    // } else{
-    //   document.querySelectorAll(".poster__animated")[0].classList.add("hidden");
-    //   if (window.innerWidth < 500) {
-    //     event.target.play();
-    //   }
-    // }
   }
 
   activeProject(event){
@@ -64,8 +54,20 @@ class HomePage extends Component {
     },10);
   }
   
+  triggerVideoPoster(){
+    let videoSource = this.props.data.allWordpressPage.edges[0].node.acf.reel_video_poster.source_url;
+    let Element = document.getElementById("f__video");
+    window.addEventListener("scroll",function() {
+        var top = (window.pageYOffset || document.scrollTop) - (document.clientTop || 0)
+        if (top > Element.offsetTop + 450) {
+          document.getElementById('reel_video').setAttribute('poster', videoSource);
+        }
+      },
+      { passive: true }
+    )
+  }
   componentDidMount(){
-
+    this.triggerVideoPoster();
     document.querySelectorAll(".footer")[0].classList.add("dark");
 
     if (window.innerWidth < 500) {
@@ -101,10 +103,6 @@ class HomePage extends Component {
       this.setState({
         isLoaded : true, 
       })
-    }.bind(this), 1000)
-    // We add the poster to the video after the page its loaded
-    setTimeout(function(){
-      document.getElementById('reel_video').setAttribute('poster', this.props.data.allWordpressPage.edges[0].node.acf.reel_video_poster.source_url);
     }.bind(this), 1000)
   }
   render() {
@@ -191,7 +189,7 @@ class HomePage extends Component {
         </section>
         <div className="main__section__wrapper">
             <About></About>
-            <section className="featured__video includes__separator">
+            <section className="featured__video includes__separator" id="f__video">
               <div className="container container__custom">
                 <div className="row">
                   <div className="col-lg-12 no__padding">

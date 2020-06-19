@@ -47,10 +47,11 @@
 .related__projects a{
     color: white;
 }
-.related__projects img{
+.related__projects .gatsby-image-wrapper{
     opacity: 0.4!important;
+    transition: opacity 0.5s ease-in-out;
 }
-.related__projects a:hover img{
+.related__projects a:hover .gatsby-image-wrapper{
     opacity: 1!important;
 }
 .related__projects a{

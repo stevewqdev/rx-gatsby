@@ -650,7 +650,11 @@ body{
 .col-xs-3{
   width: 25%;
 }
-
+@-moz-document url-prefix() {
+  .poster__animated {
+    display: none;
+  }
+}
 @media(max-width: 4000px){
   /* .project__template .container__custom{
     padding: 0 10%;
