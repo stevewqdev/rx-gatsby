@@ -195,6 +195,9 @@
     }
 }
 @media(max-width: 768px){
+    .menu__email {
+        margin-top: 0px;
+    }
     .menu__full__screen .main__page__menu a {
         font-size: calc(1vw + 2.5vh);
         line-height: calc(0.5vw + 4vh);

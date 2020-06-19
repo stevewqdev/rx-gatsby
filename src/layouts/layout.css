@@ -1395,6 +1395,7 @@ button.active:before{
   .floating__web__info .copyright__column p{
     display: none;
   }
+
 }
 @media(max-width: 1024px){
   .container__custom {
@@ -1423,6 +1424,9 @@ button.active:before{
   }
 }
 @media(max-width: 768px){
+  .menu__agreements{
+    display: none;
+  }
   .lg__font {
     font-size: 27px!important;
     line-height: 30px;
@@ -1481,6 +1485,10 @@ button.active:before{
   } 
 }
 @media(max-width: 500px){
+  .menu__full__screen.floating__web__info .copyright__column p{
+    display: block;
+  }
+
   .brand__menu__toggle p{
     display: none;
   }
@@ -1709,6 +1717,12 @@ body{
   }
 }
 @media (max-width: 920px) and (orientation: landscape) {
+  .menu__full__screen.floating__web__info .copyright__column p{
+    display: none;
+  }
+  .menu__full__screen.floating__web__info .menu__agreements{
+    display: none;
+  }
   .cursor{
     display: none;
   }
