@@ -227,6 +227,12 @@ class ContactPage extends Component {
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf;
     const customStyles =
     `
+    .fixed.column__top__one{
+      position: absolute!important;
+    }
+    .fixed.column__top__two{
+      position: absolute!important;
+    }
     .about__wrapper {
       padding-top: 0;
     }

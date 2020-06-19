@@ -59,6 +59,12 @@ class Team extends Component {
     html, body{
         overflow-x: hidden!important;
     }
+    .fixed.column__top__one{
+        position: absolute!important;
+    }
+    .fixed.column__top__two{
+    position: absolute!important;
+    }
     `;
     return ( 
       <Layout>

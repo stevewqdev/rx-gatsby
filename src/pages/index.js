@@ -102,8 +102,10 @@ class HomePage extends Component {
         isLoaded : true, 
       })
     }.bind(this), 1000)
-
-
+    // We add the poster to the video after the page its loaded
+    setTimeout(function(){
+      document.getElementById('reel_video').setAttribute('poster', this.props.data.allWordpressPage.edges[0].node.acf.reel_video_poster.source_url);
+    }.bind(this), 1000)
   }
   render() {
     const pageData = this.props.data.allWordpressPage.edges[0].node; 
@@ -235,7 +237,8 @@ class HomePage extends Component {
                         <div className="video__home__wrapper">
                           <div className="poster__animated">
                           </div>
-                          <video
+                          <video 
+                            id="reel_video"
                             className="reel_video"
                             playsInline
                             controls
@@ -243,7 +246,6 @@ class HomePage extends Component {
                             className="mobile-hidden"
                             onClick={this.playVideo}
                             onTouchStart={this.playVideo}
-                            poster={pageAcf.reel_video_poster.source_url}
                           >
                             <source src={pageAcf.reel_video.source_url}  type="video/mp4" />
                           </video>

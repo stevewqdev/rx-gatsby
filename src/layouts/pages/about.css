@@ -173,7 +173,7 @@
         position: relative;
         top: 100px;
     }
-    .colored__floating h4{
+    .colored__floating h2{
         font-size: 60px;
         line-height: 62px;
         font-weight: bold;
@@ -191,7 +191,7 @@
         position: relative;
         top: 0px;
     }
-    .colored__floating h4 {
+    .colored__floating h2 {
         font-size: 3vw;
         top: 15px;
         position: relative;
@@ -379,7 +379,7 @@
     padding-right: 30px;
 
 }
-.offices__two__copy h5{
+.offices__two__copy h2{
     font-size: 18px;
     font-weight: bold;
     font-family: MarkPro;
@@ -484,8 +484,11 @@
 }
 .recognition__list__item h3{
 /* cursor: pointer; */}
+.recognition__list__item h3{
+    color: white!important;
+}
 .recognition__list__item.active h3{
-    color: #FE0062;
+    color: #FE0062!important;
 }
 .recognition__list__item{
 /* cursor: pointer; */}
@@ -553,6 +556,7 @@
     background: black;
     color: white;
 }
+
 .recognition_list__top{
     left: 5px;
     position: relative;
@@ -828,7 +832,7 @@
         opacity: 1;
         font-size:8.5px;
     }
-    .colored__floating h4 {
+    .colored__floating h2 {
         font-size: 37px;
         line-height: 40px;
     }
@@ -948,7 +952,7 @@
     .colored__floating {
         left: 13.7%;
     }
-    .colored__floating h4 {
+    .colored__floating h2 {
         letter-spacing: -1px;
     }
     .colored__columns__wrapper {
