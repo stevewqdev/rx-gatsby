@@ -179,12 +179,30 @@ const Layout = ({ children, location }) => {
     })
   }
 
+  function hideCopyrights(){
+    window.addEventListener(
+      "scroll",
+      function() {
+        var top =
+          (window.pageYOffset || document.scrollTop) - (document.clientTop || 0)
+        if (top > 1500) {
+          document.querySelectorAll(".main__floating__menu .copyright__inner")[0].style.opacity = "0";
+        }else{
+          document.querySelectorAll(".main__floating__menu .copyright__inner")[0].style.opacity = "1";
+        }
+      },
+      { passive: true }
+    )
+  }
+
   useEffect(() => {
     if (window.innerWidth > 768) {
       init()
     }
     removeFixed()
     drawLines()
+
+    hideCopyrights();
 
     changePositionFooter()
     addShareLink()

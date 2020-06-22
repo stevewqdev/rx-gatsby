@@ -117,6 +117,7 @@ class HomePage extends Component {
         this.setState({
           isLoaded: true,
         })
+        console.log("video Loaded");
       }.bind(this),
       1000
     )
@@ -153,7 +154,7 @@ class HomePage extends Component {
           <div className="row">
             <div className="col-lg-12">
               <div className="video__background" id="scene">
-                {pageAcf.video_background ? (
+                { pageAcf.video_background && this.state.isLoaded  ? (
                   <video
                     data-depth="0.2"
                     autoPlay

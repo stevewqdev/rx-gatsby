@@ -21,6 +21,7 @@
     .copyright__inner{
         right: 25%;
         width: 260px;
+        transition: all ease-in-out 0.5s;
     }
 }
 @media(max-width: 3000px){
