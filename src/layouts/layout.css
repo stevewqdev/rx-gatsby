@@ -8,6 +8,9 @@ html::-webkit-scrollbar-thumb {
 body, html{
   overflow-x: hidden;
 }
+*{
+  outline: none!important;
+}
 .pointer__none{
   pointer-events: none!important;
 }

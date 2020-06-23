@@ -12,6 +12,16 @@
 }
 .project__header__component .container__custom .row {
     border-top: solid 2px #ffffff;
+    position: relative;
+}
+.project__header__component .container__custom .row .btw__link{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+}
+.project__header__component .container__custom .row .btw__link a{
+    color: white;
+    text-decoration: none;
 }
 .project__header__component.c-f84b2c{
     background: #f84b2c;

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import Img from "gatsby-image"
+import { Link } from "gatsby"
 import "./index.css"
 
 const ProjectHero = props => {
@@ -19,6 +20,11 @@ const ProjectHero = props => {
     >
       <div className="container container__custom">
         <div className="row">
+          <p className="btw__link  xsm__font bold__font">
+            <Link to="/work/" activeStyle={{ color: "white" }} >
+              Back to Work
+            </Link>
+          </p>
           <div className="col-lg-12 hero__title no__padding">
             {props.title ? (
               <h1

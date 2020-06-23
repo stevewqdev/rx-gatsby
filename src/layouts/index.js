@@ -225,6 +225,7 @@ const Layout = ({ children, location }) => {
       linkMul.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap';
       document.head.appendChild(linkMul);
     }, 100);
+
   })
   // Next query will return the site data, the master acf fields for whole website data, the logo and the favicon.
   const data = useStaticQuery(graphql`
