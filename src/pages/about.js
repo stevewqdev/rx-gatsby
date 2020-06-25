@@ -788,16 +788,6 @@ class ContactPage extends Component {
             <div className="container container__custom">
               <div className="row">
                 <div className="col-lg-12 no__padding">
-                  <p
-                    className="sm__font reg__font recognition_list__top"
-                    data-aos="fade-up"
-                    data-aos-easing="ease-in-back"
-                    data-aos-delay={`200`}
-                    data-aos-duration="1200"
-                  >
-                    List of services of <br />
-                    Art Direction
-                  </p>
                 </div>
               </div>
               <div className="row recognition__list__wrapper">
