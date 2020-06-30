@@ -305,6 +305,7 @@ const Layout = ({ children, location }) => {
         <html lang="en" />
         <script>
         {`var ss = ss || [];
+          var _ss = ss || [];
           _ss.push(['_setDomain', 'https://koi-3qnmlpda8k.marketingautomation.services/net']);
           _ss.push(['_setAccount', 'KOI-49PC6D4KZS']);
           _ss.push(['_trackPageView']);
