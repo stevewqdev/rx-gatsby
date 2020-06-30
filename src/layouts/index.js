@@ -302,7 +302,9 @@ const Layout = ({ children, location }) => {
       <Helmet>
         <link rel="icon" href={siteFavicon} />
         <html lang="en" />
-        <script
+
+      </Helmet>
+      <script
             dangerouslySetInnerHTML={{
                 __html: `
                 var ss = ss || [];
@@ -318,8 +320,7 @@ const Layout = ({ children, location }) => {
                 })();
                 `,
             }}
-        />
-      </Helmet>
+      />
       <Cursor></Cursor>
       <MainFloatingMenu
         agreements={siteDataAcf.management_agreements_info}
