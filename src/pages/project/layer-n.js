@@ -11,6 +11,15 @@ class LayerN extends Component {
   render() {
     const pageData = this.props.data.allWordpressWpProjects.edges[0].node
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf
+    const style =
+    `
+    .single__project.includes__separator{
+      background: #e7e7e8;
+    }
+    .main__section__wrapper {
+      background: #e7e7e8;
+    }
+    `;
 
     return (
       <Layout>
@@ -21,6 +30,7 @@ class LayerN extends Component {
               name="description"
               content={pageData.yoast_meta.yoast_wpseo_metadesc}
             />
+            <style>{style}</style>
             <title>{pageData.yoast_meta.yoast_wpseo_title}</title>
             <link
               rel="canonical"
@@ -509,7 +519,7 @@ export const pageQuery = graphql`
               image {
                 localFile {
                   childImageSharp {
-                    fluid(maxWidth: 1300, quality: 80) {
+                    fluid(maxWidth: 1800, quality: 95) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
