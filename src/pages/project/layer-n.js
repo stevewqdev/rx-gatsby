@@ -255,7 +255,7 @@ class LayerN extends Component {
                             data-aos-offset="450"
                           >
                             <img
-                              src={element.image.localFile.localFile.url}
+                              src={element.image.localFile.url}
                               alt="Illustration from Layer N project"
                             />
 
