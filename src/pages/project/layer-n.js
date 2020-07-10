@@ -254,13 +254,11 @@ class LayerN extends Component {
                             data-aos-duration="1200"
                             data-aos-offset="450"
                           >
-                            <Img
-                              fluid={
-                                element.image.localFile.childImageSharp.fluid
-                              }
-                              alt={`Illustration from Layer N project`}
-                              tabIndex={-1}
+                            <img
+                              src={element.image.localFile.localFile.url}
+                              alt="Illustration from Layer N project"
                             />
+
                           </div>
                           <div
                             className="col-xs-12 col-sm-12 col-md-12 col-lg-12 copy no__padding d-flex align-items-center"
