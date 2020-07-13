@@ -316,6 +316,13 @@ const Layout = ({ children, location }) => {
             var scr = document.getElementsByTagName('script')[0];
             scr.parentNode.insertBefore(ss, scr);
         })();
+
+        var callThisOnReturn = function(resp) {
+          if (resp) {
+              var SharpSpringTracking = resp.trackingID;
+          }
+        };
+        _ss.push(['_setResponseCallback', callThisOnReturn]); 
         `
         }
         </script>

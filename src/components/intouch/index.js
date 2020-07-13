@@ -23,7 +23,25 @@ const GetInTouch = props => {
     handleSubmit(e)
   }
 
+  function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+        	c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+	}
+    return "";
+  }
+
   function handleSubmit(e) {
+    var SharpSpringTracking = getCookie('__ss_tk')
+
     e.preventDefault()
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     if (email.length === 0) {
@@ -31,11 +49,19 @@ const GetInTouch = props => {
       setMessage("Please, add a valid email address")
     }
     if (email && email.length > 0) {
+      
       if (email.match(mailformat)) {
+
+        // Add Lead to SharpSpring
+        var xhr = new XMLHttpRequest()
+        xhr.open('POST', `https://app-3qnmlpda8k.marketingautomation.services/webforms/receivePostback/MzawMLEwMjQ0AgA/f5912f45-8e1c-4154-8046-9f834913f89c/jsonp/?email=${email}&trackingid__sb=${SharpSpringTracking}`);
+        xhr.send()
+
         addToMailchimp(email)
           .then(data => {
             setStatus(data.result)
-            setMessage(data.msg)
+            setMessage(data.msg) 
+            
           })
           .catch(error => {
             setStatus(error.result)
@@ -136,15 +162,7 @@ const GetInTouch = props => {
                 </svg>
               </p>
             </form>
-            <script>
-            {`
-            var __ss_noform = __ss_noform || [];
-            __ss_noform.push(['baseURI', 'https://app-3QNMLPDA8K.marketingautomation.services/webforms/receivePostback/MzawMLEwMjQ0AgA/']);
-            __ss_noform.push(['endpoint', 'f5912f45-8e1c-4154-8046-9f834913f89c']);
-                `
-            }
-            </script>
-            <script type="text/javascript" src="https://koi-3QNMLPDA8K.marketingautomation.services/client/noform.js?ver=1.24" ></script>
+
           </div>
         </div>
       </div>
