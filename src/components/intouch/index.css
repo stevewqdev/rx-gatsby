@@ -14,6 +14,26 @@
     fill: #000000;
 
 }
+.get_in_touch .name__wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.get_in_touch .email__wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.get_in_touch input{
+    width: 97%;
+}
+.get_in_touch svg{
+    height: 25px;
+}
+.get_in_touch form{
+    display: flex;
+    justify-content: space-between;
+}
 form{
     position: relative;
 }
@@ -60,12 +80,14 @@ input{
 }
 .form__success{
     color: yellowgreen;
+    left: 0;
 }
 .form__email__wrong{
     color: red;
 }
 .form__error{
     color: red;
+
 }
 @media(max-width:768px){
     .get__wrapper h2{
@@ -82,6 +104,14 @@ input{
     }
     .get_in_touch .row {
         padding: 40px 40px;
+    }
+    .get_in_touch input{
+        width: 100%;
+    }
+    .get_in_touch form{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
     }
 }
 @media (max-width: 920px) and (orientation: landscape) {

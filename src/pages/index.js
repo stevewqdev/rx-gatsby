@@ -117,7 +117,6 @@ class HomePage extends Component {
         this.setState({
           isLoaded: true,
         })
-        console.log("video Loaded");
       }.bind(this),
       1000
     )

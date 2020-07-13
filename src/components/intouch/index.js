@@ -16,8 +16,11 @@ const GetInTouch = props => {
   `)
 
   const [email, setEmail] = useState("")
+  const [name, setName] = useState("")
   const [status, setStatus] = useState("")
   const [message, setMessage] = useState("")
+  const [nameStatus, setNameStatus] = useState("")
+  const [nameMessage, setNameMessage] = useState("")
 
   function submitForm(e) {
     handleSubmit(e)
@@ -44,39 +47,61 @@ const GetInTouch = props => {
 
     e.preventDefault()
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    
     if (email.length === 0) {
       setStatus("invalid")
       setMessage("Please, add a valid email address")
+    }else{
+      setStatus("invalid")
+      setMessage("")
     }
-    if (email && email.length > 0) {
+
+    if (name.length === 0 && name.length < 4) {
+      setNameStatus("invalid")
+      setNameMessage("Please, add a your name and lastname")
+    }else{
+      setNameStatus("invalid")
+      setNameMessage("")
+    }
+    if (email && email.length > 0 && name && name.length) {
       
       if (email.match(mailformat)) {
+        var fields = { 
+          FNAME: `${name.split(" ")[0]}`,
+          LNAME: `${name.split(" ")[1]}`
+        }
 
         // Add Lead to SharpSpring
         var xhr = new XMLHttpRequest()
-        xhr.open('POST', `https://app-3qnmlpda8k.marketingautomation.services/webforms/receivePostback/MzawMLEwMjQ0AgA/f5912f45-8e1c-4154-8046-9f834913f89c/jsonp/?email=${email}&trackingid__sb=${SharpSpringTracking}`);
+        xhr.open('POST', `https://app-3qnmlpda8k.marketingautomation.services/webforms/receivePostback/MzawMLEwMjQ0AgA/f5912f45-8e1c-4154-8046-9f834913f89c/jsonp/?firstName=${name.split(" ")[0]}&LastName=${name.split(" ")[1]}&email=${email}&trackingid__sb=${SharpSpringTracking}`);
         xhr.send()
 
-        addToMailchimp(email)
+        addToMailchimp(email, fields)
           .then(data => {
             setStatus(data.result)
             setMessage(data.msg) 
-            
+            setName("");
+            setEmail("");
           })
           .catch(error => {
             setStatus(error.result)
             setMessage(error.msg)
           })
-      } else {
-        setStatus("invalid")
-        setMessage("Please, add a valid email address")
-      }
+        } else {
+          setStatus("invalid")
+          setMessage("Please, add a valid email address")
+
+          setNameStatus("invalid")
+          setNameMessage("Please, add a your name and lastname")
+        }
     }
   }
   function handleEmailChange(e) {
     setEmail(e.currentTarget.value)
   }
-
+  function handleNameChange(e) {
+    setName(e.currentTarget.value)
+  }
   let inTouchCopy = false
 
   if (data.wordpressAcfOptions) {
@@ -101,40 +126,75 @@ const GetInTouch = props => {
 
             <form onSubmit={handleSubmit}>
               <label htmlFor="email" style={{ display: "none" }}></label>
-              <input
-                type="email"
-                className="lg__font dark__font bold__font email__input"
-                name="email"
-                placeholder="Email Address"
-                onChange={handleEmailChange}
-              />
-              <div className="form__messages">
-                {status === "success" ? (
-                  <div
-                    className={`form__${status} form__message sm__font bold__font form__is__sent`}
-                    dangerouslySetInnerHTML={{ __html: message }}
-                  />
-                ) : (
-                  ""
-                )}
-                {status === "error" ? (
-                  <div
-                    className={`form__${status} form__message sm__font bold__font`}
-                    dangerouslySetInnerHTML={{ __html: message }}
-                  />
-                ) : (
-                  ""
-                )}
-                {status === "invalid" ? (
-                  <div
-                    className={`form__email__wrong form__message sm__font bold__font`}
-                  >
-                    {message}
-                  </div>
-                ) : (
-                  ""
-                )}
+              <div className="name__wrapper">
+                <input
+                  type="text"
+                  className="ab__font dark__font bold__font name__input"
+                  name="name"
+                  placeholder="Your Name"
+                  onChange={handleNameChange}
+                  value={name}
+                />
+                <div className="form__messages">
+
+                  {nameStatus === "error" ? (
+                    <div
+                      className={`form__${status} form__message sm__font bold__font`}
+                      dangerouslySetInnerHTML={{ __html: nameMessage }}
+                    />
+                  ) : (
+                    ""
+                  )}
+                  {nameStatus === "invalid" ? (
+                    <div
+                      className={`form__email__wrong form__message sm__font bold__font`}
+                    >
+                      {nameMessage}
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </div>
               </div>
+              <div className="email__wrapper">
+                <input
+                  type="email"
+                  className="ab__font dark__font bold__font email__input"
+                  name="email"
+                  placeholder="Email Address"
+                  onChange={handleEmailChange}
+                  value={email}
+                />
+
+                <div className="form__messages">
+                  {status === "success" ? (
+                    <div
+                      className={`form__${status} form__message sm__font bold__font form__is__sent`}
+                      dangerouslySetInnerHTML={{ __html: message }}
+                    />
+                  ) : (
+                    ""
+                  )}
+                  {status === "error" ? (
+                    <div
+                      className={`form__${status} form__message sm__font bold__font`}
+                      dangerouslySetInnerHTML={{ __html: message }}
+                    />
+                  ) : (
+                    ""
+                  )}
+                  {status === "invalid" ? (
+                    <div
+                      className={`form__email__wrong form__message sm__font bold__font`}
+                    >
+                      {message}
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </div>
+              </div>
+              
               <p
                 className="dark__font md__font reg__font getintouch__subtitle submit__form"
                 onClick={submitForm}
@@ -161,6 +221,8 @@ const GetInTouch = props => {
                   </g>
                 </svg>
               </p>
+            
+              
             </form>
 
           </div>

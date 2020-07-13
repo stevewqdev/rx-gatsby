@@ -870,7 +870,7 @@ body{
     position: relative;
     right: 0%;
     z-index: 99;
-    margin-bottom: 410px;
+    margin-bottom: 385px;
   }
   .fallback__image__home{
     padding: 0;
@@ -885,17 +885,17 @@ body{
 }
 @media(max-width: 3000px){
   #page__wrapper{
-    margin-bottom: 395px;
+    margin-bottom: 375px;
   }
 }
 @media(max-width: 2600px){
   #page__wrapper {
-    margin-bottom: 405px;
+    margin-bottom: 385px;
   }
 }
 @media(max-width: 1440px){
   #page__wrapper {
-    margin-bottom: 410px;
+    margin-bottom: 385px;
   }
 }
 
@@ -1393,7 +1393,7 @@ button.active:before{
 }
 @media(max-width: 1280px){
   #page__wrapper{
-    margin-bottom: 32.5%;
+    margin-bottom: 30.5%;
   }
   .floating__web__info .copyright__column p{
     display: none;
@@ -1408,7 +1408,7 @@ button.active:before{
     max-height: 430px;
   }
   #page__wrapper {
-    margin-bottom: 38vw;
+    margin-bottom: 35vw;
   }
   .selected__projects__projects > div {
     padding: 0 3%;
@@ -1730,7 +1730,7 @@ body{
     display: none;
   }
   #page__wrapper {
-    margin-bottom: 60px!important;
+    margin-bottom: 90px!important;
   }
   /* home */
   .the__project.active img {
@@ -1751,12 +1751,17 @@ body{
     max-width: 550px;
   }
   .selected__projects {
-    height: 540px;
+    height: 730px;
+  }
+}
+@media (max-width: 823px) and (orientation: landscape) {
+  #page__wrapper {
+    margin-bottom: 75px!important;
   }
 }
 @media (max-width: 750px) and (orientation: landscape) {
   #page__wrapper {
-    margin-bottom: 280px;
+    margin-bottom: 105px!important;
   }
 }
 @media (max-width: 750px) and (orientation: landscape) {
@@ -1770,9 +1775,22 @@ body{
     width: 100%;
   }
 }
+@media (max-width: 640px) and (orientation: landscape) {
+  #page__wrapper {
+    margin-bottom: 90px!important;
+  }
+}
 @media (max-width: 600px) and (orientation: landscape) {
   .brand__menu__toggle p{
     display: none;
+  }
+  .footer__menu {
+    left: 100px;
+  }
+  .footer__copyright {
+      width: 50%!important;
+      position: relative;
+      top: 15px;
   }
 }
 @media (max-width: 600px) and (orientation: landscape) {
