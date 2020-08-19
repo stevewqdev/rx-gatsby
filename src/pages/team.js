@@ -577,6 +577,65 @@ class Team extends Component {
                 )}
                 <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 dark__space no__padding"></div>
               </div>
+              <div className="row team__row__six">
+                {pageAcf.team_members.map((member, index) =>
+                  (index >= 21) & (index < 27) ? (
+                    <div
+                      className={`col-xs-12 col-sm-12 col-md-3 col-lg-3 team__member__block team__member__${index} no__padding`}
+                      key={index}
+                    >
+                      <div
+                        className={`team__new__member ${member.category}`}
+                        onClick={this.toggleTeamMember}
+                      >
+                        <div className={`team__new__member__background`}>
+                          {member.photo ? (
+                            <Img
+                              fluid={
+                                member.photo.localFile.childImageSharp.fluid
+                              }
+                              alt={`${member.name} photo`}
+                              tabIndex={-1}
+                            />
+                          ) : (
+                            ""
+                          )}
+                        </div>
+                        <div className="team__new__member__info">
+                          <p
+                            className="xxl__font team__new__member__info__name"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-duration="500"
+                          >
+                            {member.name}
+                          </p>
+                          <div className="team__information">
+                            <p
+                              className="sm__font bold__font reg__font team__new__member__info__position"
+                              data-aos="fade-up"
+                              data-aos-easing="ease-in-back"
+                              data-aos-duration="500"
+                            >
+                              {member.position}
+                            </p>
+                            <p
+                              className="sm__font reg__font team__new__member__info__position team__email"
+                              data-aos="fade-up"
+                              data-aos-easing="ease-in-back"
+                              data-aos-duration="500"
+                            >
+                              {member.email}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )
+                )}
+              </div>
             </div>
           </section>
         </div>
