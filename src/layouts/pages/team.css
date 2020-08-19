@@ -1,6 +1,15 @@
 .team__section{
     background: linear-gradient(to right, #EA3464 20%, #000000 80%);
 }
+.team__new__member__info{
+    width: 100%;
+}
+.team__information{
+    width: 100%;
+    text-align: right;
+    padding-right: 5px;
+    position: relative;
+}
 .team__column__one{
     background: #FE0062;
     padding: 20% 0px;
@@ -212,7 +221,7 @@
     .team__information{
         position: absolute;
         width: 50%;
-        right: 0;
+        right: 20px;
         bottom: -8%;
         z-index: 2;
     }
@@ -224,8 +233,12 @@
         font-weight: bold;
         position: absolute;
         z-index: 2;
-        top: 55%;
-        left: 5px;
+        top: 64%;
+        left: -15px;
+        width: 100%;
+        text-align: right;
+        padding: 0 10px;
+        font-size: 55px!important;
     }
     .team__member__block{
         background: #F4F4F4;
@@ -266,7 +279,7 @@
         min-height: calc(17.3vw);
     }
     .team__information {
-        bottom: 0%;
+        bottom: -3%;
     }
     .team__member__14, .team__member__15 {
         height: 23vw;
@@ -300,6 +313,7 @@
     }
 }
 @media(max-width: 1440px){
+   
     .team__member__14, .team__member__15 {
         top: -203px;
         min-height: 340px;
@@ -330,6 +344,9 @@
     }
 }
 @media(max-width: 1024px){
+    .team__new__member__info__name {
+        font-size: 39px!important;
+    }
     .team__member__21 {
         top: -375px;
         min-height: 260px;
@@ -353,6 +370,14 @@
     
 }
 @media(max-width: 768px){
+    .team__new__member__info__name {
+        font-size: 30px!important;
+    }
+    .team__new__member__info__position{
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 0.3px;
+    }
     .team__member__12 {
         height: 30vw;
     }
@@ -378,6 +403,7 @@
     }
 }
 @media(max-width: 500px){
+
     .team__new__member {
         min-height: 378px;
     }
@@ -398,7 +424,7 @@
         top: -46px!important;
     }
     .team__new__member .xxl__font {
-        font-size: 60px!important;
+        font-size: 70px!important;
     }
     .team__information {
         bottom:9%;
@@ -408,6 +434,14 @@
     }
     .team__new__member__info__name {
         top: 66%;
+    }
+    .team__new__member__info__position {
+        font-size: 15px;
+        line-height: 16px;
+        letter-spacing: 0.3px;
+    }
+    .team__member__20{
+        margin-top: 109px;
     }
     .team__member__block {
         padding-top: 20px!important;
