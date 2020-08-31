@@ -455,6 +455,12 @@ status = 301
 force = false
 
 [[redirects]]
+from = "/work/humanifed/"
+to = "/project/humanifed"
+status = 301
+force = false
+
+[[redirects]]
 from = "/work/humanified/"
 to = "/project/humanifed"
 status = 301
