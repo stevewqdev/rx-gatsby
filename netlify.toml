@@ -18,7 +18,7 @@ force = false
 
 [[redirects]]
 from = "/#/creative-work/humanifed-branding-web-design-app-development"
-to = "/project/humanifed"
+to = "/project/humanified"
 status = 301
 force = false
 
@@ -246,7 +246,7 @@ force = false
 
 [[redirects]]
 from = "/creative-work/humanifed-branding-web-design-app-development"
-to = "/project/humanifed"
+to = "/project/humanified"
 status = 301
 force = false
 
@@ -456,13 +456,13 @@ force = false
 
 [[redirects]]
 from = "/work/humanifed/"
-to = "/project/humanifed"
+to = "/project/humanified"
 status = 301
 force = false
 
 [[redirects]]
 from = "/work/humanified/"
-to = "/project/humanifed"
+to = "/project/humanified"
 status = 301
 force = false
 
@@ -540,7 +540,7 @@ force = false
 
 [[redirects]]
 from = "/creative-work/humanifed-branding-web-design-app-development.html"
-to = "/project/humanifed"
+to = "/project/humanified"
 status = 301
 force = false
 
