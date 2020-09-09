@@ -1,4 +1,10 @@
 [[redirects]]
+from = "/news"
+to = "/"
+status = 301
+force = false
+
+[[redirects]]
 from = "/#/creative-work/allocate"
 to = "/project/allocaterite"
 status = 301
