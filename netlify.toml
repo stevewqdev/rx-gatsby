@@ -1,10 +1,4 @@
 [[redirects]]
-from = "https://raxo.tv/*"
-to = "https://raxo.co"
-status = 301
-force = false
-
-[[redirects]]
 from = "/news"
 to = "/"
 status = 301
