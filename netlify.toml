@@ -1,6 +1,11 @@
 [[redirects]]
+from = "/"
+to = "https://www.raxo.co"
+status = 301
+force = false
+
 from = "/news"
-to = "/"
+to = "https://www.raxo.co"
 status = 301
 force = false
 
