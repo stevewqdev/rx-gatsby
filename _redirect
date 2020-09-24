@@ -1,10 +1,3 @@
 # Redirect domain aliases to primary domain
 https://www.raxo.tv/* https://raxo.co/:splat 301!
 https://raxo.tv/* https://raxo.co/:splat 301!
-http://www.raxo.tv/* https://raxo.co/:splat 301!
-http://raxo.tv/* https://raxo.co/:splat 301!
-https://raxo.tv/* https://raxo.co/:splat 301!
-http://raxo.tv/ https://raxo.co/ 301!
-https://raxo.tv https://raxo.co/ 301!
-raxo.tv/ https://raxo.co/ 301!
-raxo.tv https://raxo.co/ 301!
