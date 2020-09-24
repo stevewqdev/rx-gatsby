@@ -196,6 +196,21 @@ const Layout = ({ children, location }) => {
   }
 
   useEffect(() => {
+
+    console.log(window.location.href);
+
+    var redirect = window.location.href;
+
+    if(redirect.includes("raxo.tv")){
+      //redirect = redirect.replace("localhost", "raxo.co");
+
+      //console.log(redirect);
+      redirect = redirect.replace("raxo.tv", "raxo.co");
+
+      window.location.replace(redirect);
+
+    }
+
     if (window.innerWidth > 768) {
       init()
     }
