@@ -8,11 +8,12 @@ module.exports = {
     siteUrl: `https://www.raxo.tv`,
   },
   plugins: [
-    `gatsby-plugin-netlify`,
+    
     {
       resolve: `gatsby-plugin-preact`,
       options: {},
     },
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {},
