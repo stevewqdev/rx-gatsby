@@ -1,4 +1,5 @@
 [[redirects]]
+
 from = "https://raxo.tv/*"
 to = "https://raxo.co"
 status = 301
