@@ -13,6 +13,7 @@
     "gatsby": "^2.23.1",
     "gatsby-image": "^2.3.1",
     "gatsby-paginate": "^1.1.1",
+    "gatsby-plugin-facebook-multi-pixels": "^1.1.2",
     "gatsby-plugin-google-analytics": "^2.3.2",
     "gatsby-plugin-google-tagmanager": "^2.3.3",
     "gatsby-plugin-mailchimp": "^5.2.2",

@@ -99,6 +99,18 @@ module.exports = {
         display: `minimal-ui`,
       },
     },
+    {
+      resolve: `gatsby-plugin-facebook-multi-pixels`,
+      options: [
+        {
+          dev: false,
+          alias: 'pixelA',
+          pixelId: '252005222796558',
+          viewContent: true,
+          pageView: true,
+        },
+      ],
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
