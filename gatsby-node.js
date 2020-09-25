@@ -10,7 +10,12 @@ const queryAll = require(`./src/queries/queryAll.js`)
 const createPaginatedPages = require(`gatsby-paginate`)
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
+
+  createRedirect({ fromPath: 'https://raxo.tv/*', toPath: 'https://raxo.co/:splat', isPermanent: true, force: true })
+  
+  createRedirect({ fromPath: 'https://www.raxo.tv/*', toPath: 'https://raxo.co/:splat', isPermanent: true, force: true })
+
 
   return new Promise((resolve, reject) => {
     // We set the variables for the default templates

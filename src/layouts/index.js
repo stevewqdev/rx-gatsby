@@ -13,6 +13,8 @@ import "../layouts/layout.css"
 import "../fonts/stylesheet.css"
 
 const Layout = ({ children, location }) => {
+  const [load, setLoad] = useState(false);
+
   function removeFixed() {
     let mainElement = document.querySelectorAll(".main__section__wrapper")
     window.onscroll = function() {
@@ -195,12 +197,8 @@ const Layout = ({ children, location }) => {
     )
   }
 
-  const [load, setLoad] = useState(false);
-
   useEffect(() => {
-
     //console.log(window.location.href);
-
     var redirect = window.location.href;
 
     if(redirect.includes("raxo.tv")){
@@ -377,7 +375,9 @@ const Layout = ({ children, location }) => {
     </>
   )
 }
+
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
+
 export default Layout
