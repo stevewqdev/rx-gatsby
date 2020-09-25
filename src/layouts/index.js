@@ -195,9 +195,11 @@ const Layout = ({ children, location }) => {
     )
   }
 
+  const [load, setLoad] = useState(false);
+
   useEffect(() => {
 
-    console.log(window.location.href);
+    //console.log(window.location.href);
 
     var redirect = window.location.href;
 
@@ -209,6 +211,10 @@ const Layout = ({ children, location }) => {
 
       window.location.replace(redirect);
 
+    }
+
+    if(redirect.includes("raxo.co")){
+      setLoad(true); 
     }
 
     if (window.innerWidth > 768) {
@@ -314,54 +320,60 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
-      
-      <Helmet>
-        <link rel="icon" href={siteFavicon} />
-        <html lang="en" />
-        <script>
-        {`
-            var _ss = _ss || [];
-            _ss.push(['_setDomain', 'https://koi-3QNMLPDA8K.marketingautomation.services/net']);
-            _ss.push(['_setAccount', 'KOI-49PC6D4KZS']);
-            _ss.push(['_trackPageView']);
-        (function() {
-            var ss = document.createElement('script');
-            ss.type = 'text/javascript'; ss.async = true;
-            ss.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'koi-3QNMLPDA8K.marketingautomation.services/client/ss.js?ver=2.4.0';
-            var scr = document.getElementsByTagName('script')[0];
-            scr.parentNode.insertBefore(ss, scr);
-        })();
+      {
+        load
+        ?
+        <>
+          <Helmet>
+            <link rel="icon" href={siteFavicon} />
+            <html lang="en" />
+            <script>
+            {`
+                var _ss = _ss || [];
+                _ss.push(['_setDomain', 'https://koi-3QNMLPDA8K.marketingautomation.services/net']);
+                _ss.push(['_setAccount', 'KOI-49PC6D4KZS']);
+                _ss.push(['_trackPageView']);
+            (function() {
+                var ss = document.createElement('script');
+                ss.type = 'text/javascript'; ss.async = true;
+                ss.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'koi-3QNMLPDA8K.marketingautomation.services/client/ss.js?ver=2.4.0';
+                var scr = document.getElementsByTagName('script')[0];
+                scr.parentNode.insertBefore(ss, scr);
+            })();
 
-        var callThisOnReturn = function(resp) {
-          if (resp) {
-              var SharpSpringTracking = resp.trackingID;
-          }
-        };
-        _ss.push(['_setResponseCallback', callThisOnReturn]); 
-        `
-        }
-        </script>
-      </Helmet>
+            var callThisOnReturn = function(resp) {
+              if (resp) {
+                  var SharpSpringTracking = resp.trackingID;
+              }
+            };
+            _ss.push(['_setResponseCallback', callThisOnReturn]); 
+            `
+            }
+            </script>
+          </Helmet>
 
-      <Cursor></Cursor>
-      <MainFloatingMenu
-        agreements={siteDataAcf.management_agreements_info}
-        siteLogo={siteLogo}
-        siteAcf={siteDataAcf}
-      ></MainFloatingMenu>
-      <div className="page__wrapper" id="page__wrapper">
-        <MainFloatingScreen
-          siteLogo={siteLogo}
-          siteAcf={siteDataAcf}
-        ></MainFloatingScreen>
-        <div id="top"></div>
-        <main>{children}</main>
+          <Cursor></Cursor>
+          <MainFloatingMenu
+            agreements={siteDataAcf.management_agreements_info}
+            siteLogo={siteLogo}
+            siteAcf={siteDataAcf}
+          ></MainFloatingMenu>
+          <div className="page__wrapper" id="page__wrapper">
+            <MainFloatingScreen
+              siteLogo={siteLogo}
+              siteAcf={siteDataAcf}
+            ></MainFloatingScreen>
+            <div id="top"></div>
+            <main>{children}</main>
 
-        <Footer
-          copyright={siteDataAcf.copyright_info}
-          menu={legalMenu}
-        ></Footer>
-      </div>
+            <Footer
+              copyright={siteDataAcf.copyright_info}
+              menu={legalMenu}
+            ></Footer>
+          </div>
+        </>
+        : ""
+      }
     </>
   )
 }
