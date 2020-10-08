@@ -211,7 +211,7 @@ const Layout = ({ children, location }) => {
 
     }
 
-    if(redirect.includes("raxo.co")){
+    if(redirect.includes("raxo.co") || redirect.includes("localhost")){
       setLoad(true); 
     }
 

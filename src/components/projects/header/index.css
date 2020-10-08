@@ -295,6 +295,9 @@
     }
 }
 @media(max-width: 500px){
+    .project__header__component .container__custom .row .btw__link a{
+        font-size: 10px;
+    }
     .project__header__component{
         position: relative;
         padding: 140px 0 40px;
