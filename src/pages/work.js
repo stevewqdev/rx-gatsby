@@ -77,7 +77,7 @@ class ContactPage extends Component {
 
     const customStyles = `
     .floating__web__info .copy__one__column p {
-      width: 50%;
+      width: 100%;
     }
     @media(max-width: 768px){
       .floating__web__info .copy__one__column p {
@@ -88,6 +88,7 @@ class ContactPage extends Component {
       .floating__web__info .copy__one__column p {
         width: 170%;
       }
+    }
     .hero__component .hero__subtitle {
       padding-top: 0px;
     }
