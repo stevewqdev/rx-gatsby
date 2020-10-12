@@ -7,6 +7,9 @@
     padding-left: 8px;
     margin-bottom: 20px;
 }
+.jatp  .project__header__component .hero__title h1{
+    font-size: 70px!important;
+}
 .jatp #section__one .row.one .copy{
     margin-bottom: 80px;
 }
@@ -82,6 +85,12 @@
     .video{
         height: 400px;
     }
+    .jatp  .project__header__component .hero__title h1{
+        font-size: 50px!important;
+    }
+    .jatp .project__info {
+        margin-top: 140px;
+    }
 }
 @media(max-width: 768px){
     .video{
@@ -101,6 +110,9 @@
     }
 }
 @media(max-width: 500px){
+    .jatp  .project__header__component .hero__title h1{
+        font-size: 30px!important;
+    }
     .video {
         height: 200px;
     }
