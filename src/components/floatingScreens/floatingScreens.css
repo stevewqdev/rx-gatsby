@@ -231,6 +231,9 @@
         display: none;
     }
 }
+.copy__one__column a:hover{
+    color: unset;
+}
 .menu__full__screen.floating__web__info p{
     width: 100%;
   }
@@ -239,6 +242,12 @@
     font-weight: bold;
     text-decoration: underline;
     pointer-events: all;
+  }
+  .menu__full__screen.floating__web__info .copy__one__column .absolute{
+    z-index: 9999;
+  }
+  .menu__full__screen.floating__web__info .copy__one__column .absolute a:hover{
+      color: black;
   }
 @media(max-width: 768px){
 
