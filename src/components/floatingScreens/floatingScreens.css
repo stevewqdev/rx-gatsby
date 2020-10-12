@@ -83,6 +83,11 @@
     color: #F4F4F4;
 }
 
+.floating__web__info .copy__one__column p{
+    color: #F4F4F4;
+    width: 50%;
+}
+
 .floating__web__info p{
     color: #F4F4F4;
     width: 70%;
@@ -173,6 +178,26 @@
     background: #F4F4F4;
     left: -0px;
 }
+.floating__web__info.menu__full__screen a{
+    text-decoration: none;
+    font-weight: initial;
+}
+.floating__web__info.menu__full__screen .menu__agreements a{
+    text-decoration: underline;
+}
+.floating__web__info.menu__full__screen .copy__one__column.absolute a{
+    text-decoration: underline;
+
+}
+.floating__web__info.menu__full__screen .copyright__column p:before{
+    content: "";
+    width: 70%;
+    position: absolute;
+    bottom: -10px;
+    height: 2px;
+    background: #F4F4F4;
+    left: -0px;
+}
 .black svg path{
     fill: black!important
     ;
@@ -206,9 +231,21 @@
         display: none;
     }
 }
+.menu__full__screen.floating__web__info p{
+    width: 100%;
+  }
+  .menu__full__screen.floating__web__info .copy__one__column .absolute a{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+    pointer-events: all;
+  }
 @media(max-width: 768px){
-    .floating__web__info p{
-        width: 100%;
+
+
+    .menu__full__screen.floating__web__info p {
+        width: 170%;
+        font-size: 12px!important;
     }
     .floating__web__info .brand__social {
         top: -160px;
@@ -218,6 +255,9 @@
     }
 }
 @media(max-width: 500px){
+    .floating__web__info .copy__one__column p {
+        width: 170%;
+    }
     .floating__web__info .copyright__column p{
         display: flex;
     }

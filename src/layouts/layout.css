@@ -658,6 +658,12 @@ body{
     display: none;
   }
 }
+
+.copy__one__column a{
+  pointer-events: all;
+  text-decoration: underline;
+  font-weight: bold;
+}
 @media(max-width: 4000px){
   /* .project__template .container__custom{
     padding: 0 10%;

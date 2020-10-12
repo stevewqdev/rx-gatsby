@@ -1,0 +1,43 @@
+.pnp .project__header__component{
+    background: #005381;
+    color: white;
+}
+.pnp .video{
+    margin: 20px 0;
+}
+.pnp .section__two__about {
+    margin: 100px 0;
+}
+.pnp .separator {
+    margin-bottom: 50px;
+}
+.pnp .row-3{
+    margin-top: 150px;
+}
+.pnp .right{
+    margin-top: 150px;
+    padding-left: 35px;
+}
+@media(max-width: 768px){
+    .pnp .section__two__about {
+        margin: 5px 0;
+    }
+    .pnp .separator {
+        margin-bottom: 50px;
+    }
+    .pnp .row-3{
+        margin-top: 50px;
+    }
+    .pnp .right{
+        margin-top: 50px;
+        padding-left: 0px;
+    }
+}
+@media(max-width: 500px){
+    .pnp #section__one .copy{
+        margin-bottom: 20px;
+    } 
+    .pnp .separator {
+        margin-top: 50px;
+    }
+}

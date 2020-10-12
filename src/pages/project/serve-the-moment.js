@@ -71,7 +71,7 @@ class STM extends Component {
                               fluid={
                                 element.image.localFile.childImageSharp.fluid
                               }
-                              alt={`Illustration from Layer N project`}
+                              alt={`Illustration from STM project`}
                               tabIndex={-1}
                             />
                           </div>
@@ -93,7 +93,7 @@ class STM extends Component {
                               fluid={
                                 element.image.localFile.childImageSharp.fluid
                               }
-                              alt={`Illustration from Layer N project`}
+                              alt={`Illustration from STM project`}
                               tabIndex={-1}
                             />
                           </div>
@@ -141,7 +141,7 @@ class STM extends Component {
                               fluid={
                                 element.image.localFile.childImageSharp.fluid
                               }
-                              alt={`Illustration from Layer N project`}
+                              alt={`Illustration from STM project`}
                               tabIndex={-1}
                             />
                           </div>
@@ -163,7 +163,7 @@ class STM extends Component {
                               fluid={
                                 element.image.localFile.childImageSharp.fluid
                               }
-                              alt={`Illustration from Layer N project`}
+                              alt={`Illustration from STM project`}
                               tabIndex={-1}
                             />
                           </div>
@@ -224,7 +224,7 @@ class STM extends Component {
                               fluid={
                                 element.image.localFile.childImageSharp.fluid
                               }
-                              alt={`Illustration from Layer N project`}
+                              alt={`Illustration from STM project`}
                               tabIndex={-1}
                             />
                           </div>
@@ -257,7 +257,7 @@ class STM extends Component {
                           >
                             <img
                               src={element.image.localFile.url}
-                              alt="Illustration from Layer N project"
+                              alt="Illustration from STM project"
                             />
 
                           </div>
@@ -292,7 +292,7 @@ class STM extends Component {
                               fluid={
                                 element.image.localFile.childImageSharp.fluid
                               }
-                              alt={`Illustration from Layer N project`}
+                              alt={`Illustration from STM project`}
                               tabIndex={-1}
                             />
                           </div>
@@ -315,7 +315,7 @@ class STM extends Component {
                                 fluid={
                                 element.image.localFile.childImageSharp.fluid
                                 }
-                                alt={`Illustration from Layer N project`}
+                                alt={`Illustration from STM project`}
                                 tabIndex={-1}
                             />
                             </div>
@@ -363,7 +363,7 @@ class STM extends Component {
                                     fluid={
                                     element.image.localFile.childImageSharp.fluid
                                     }
-                                    alt={`Illustration from Layer N project`}
+                                    alt={`Illustration from STM project`}
                                     tabIndex={-1}
                                 />
                             </div>
@@ -386,7 +386,7 @@ class STM extends Component {
                                 fluid={
                                 element.image.localFile.childImageSharp.fluid
                                 }
-                                alt={`Illustration from Layer N project`}
+                                alt={`Illustration from STM project`}
                                 tabIndex={-1}
                             />
                             </div>
@@ -424,7 +424,7 @@ class STM extends Component {
                                 fluid={
                                 element.image.localFile.childImageSharp.fluid
                                 }
-                                alt={`Illustration from Layer N project`}
+                                alt={`Illustration from STM project`}
                                 tabIndex={-1}
                             />
                             </div>
@@ -453,7 +453,7 @@ class STM extends Component {
                             fluid={
                               element.image.localFile.childImageSharp.fluid
                             }
-                            alt={`Illustration from Layer N project`}
+                            alt={`Illustration from STM project`}
                             tabIndex={-1}
                           />
                         </div>
@@ -491,7 +491,7 @@ class STM extends Component {
                             fluid={
                               element.image.localFile.childImageSharp.fluid
                             }
-                            alt={`Illustration from Layer N project`}
+                            alt={`Illustration from STM project`}
                             tabIndex={-1}
                           />
                         </div>
