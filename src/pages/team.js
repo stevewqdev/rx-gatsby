@@ -70,6 +70,19 @@ class Team extends Component {
     .fixed.column__top__two{
     position: absolute!important;
     }
+    .floating__web__info .copy__one__column p {
+      width: 100%;
+    }
+    @media(max-width: 768px){
+      .floating__web__info .copy__one__column p {
+        width: 160%;
+      }
+    }
+    @media(max-width: 768px){
+      .floating__web__info .copy__one__column p {
+        width: 170%;
+      }
+    }
     `
     return (
       <Layout>

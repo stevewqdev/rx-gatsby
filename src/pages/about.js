@@ -286,6 +286,19 @@ class ContactPage extends Component {
       justify-content: center;
       align-items: center;
     }
+    .floating__web__info .copy__one__column p {
+      width: 100%;
+    }
+    @media(max-width: 768px){
+      .floating__web__info .copy__one__column p {
+        width: 160%;
+      }
+    }
+    @media(max-width: 768px){
+      .floating__web__info .copy__one__column p {
+        width: 170%;
+      }
+    }
     .hero__component {
       margin-top: 350px;
       position: relative;

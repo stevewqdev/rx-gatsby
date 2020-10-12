@@ -76,6 +76,18 @@ class ContactPage extends Component {
     const latestProjects = this.props.data.allWordpressWpProjects.edges
 
     const customStyles = `
+    .floating__web__info .copy__one__column p {
+      width: 50%;
+    }
+    @media(max-width: 768px){
+      .floating__web__info .copy__one__column p {
+        width: 160%;
+      }
+    }
+    @media(max-width: 768px){
+      .floating__web__info .copy__one__column p {
+        width: 170%;
+      }
     .hero__component .hero__subtitle {
       padding-top: 0px;
     }
@@ -157,6 +169,8 @@ class ContactPage extends Component {
       .work__list .container__custom{
         padding: 0 25px 0 27px;
       }
+    }
+
     }
     `
     return (
