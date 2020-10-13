@@ -191,7 +191,7 @@
 }
 .floating__web__info.menu__full__screen .copyright__column p:before{
     content: "";
-    width: 70%;
+    width: 78%;
     position: absolute;
     bottom: -10px;
     height: 2px;
