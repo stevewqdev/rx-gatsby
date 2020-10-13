@@ -208,6 +208,17 @@
 .menu__subitem {
     margin-left: 15px;
 }
+
+.top__menu__info a{
+    position: absolute;
+    right: -170px;
+    font-size: 25px;
+    top: 15px;
+    font-weight: bold;
+    z-index: 9999;
+    pointer-events: all;
+    text-decoration: underline;
+  }
 @media(max-width:1700px){
     .floating__web__info .brand__social {
         position: relative;
@@ -235,7 +246,7 @@
     color: unset;
 }
 .menu__full__screen.floating__web__info p{
-    width: 100%;
+    width: 90%;
   }
   .menu__full__screen.floating__web__info .copy__one__column .absolute a{
     color: black;
@@ -250,8 +261,14 @@
       color: black;
   }
 @media(max-width: 768px){
-
-
+    .floating__web__info .top__menu__info a {
+        font-size: 15px;
+        top: 13px;
+        right: -120px;
+    }
+    .menu__full__screen.floating__web__info .top__menu__info a{
+        right: -200%;
+    }
     .menu__full__screen.floating__web__info p {
         width: 170%;
         font-size: 12px!important;
@@ -264,6 +281,14 @@
     }
 }
 @media(max-width: 500px){
+    .floating__web__info .top__menu__info a {
+        right: unset;
+        position: static;
+        font-size: 12px;
+    }
+    .menu__full__screen.floating__web__info .top__menu__info a{
+        right: unset;
+    }
     .floating__web__info .copy__one__column p {
         width: 170%;
     }

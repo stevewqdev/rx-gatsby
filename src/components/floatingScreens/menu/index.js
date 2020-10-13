@@ -103,7 +103,7 @@ export default class MainMenuFloatingScreen extends Component {
             </div>
             <div className="col-xs-6 col-sm-2 col-md-2 col-lg-2 relative copy__one__column sm__font reg__font">
               <div className="absolute">
-                <p
+                <p className="top__menu__info"
                   dangerouslySetInnerHTML={{
                     __html: this.props.siteAcf.web_info_column_one,
                   }}
