@@ -71,7 +71,7 @@ class Team extends Component {
     position: absolute!important;
     }
     .floating__web__info .copy__one__column p {
-      width: 100%;
+      width: 90%;
     }
     @media(max-width: 768px){
       .floating__web__info .copy__one__column p {
