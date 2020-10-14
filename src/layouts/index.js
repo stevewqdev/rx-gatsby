@@ -13,7 +13,7 @@ import "../layouts/layout.css"
 import "../fonts/stylesheet.css"
 
 const Layout = ({ children, location }) => {
-  const [load, setLoad] = useState(false);
+  // const [load, setLoad] = useState(true);
 
   function removeFixed() {
     let mainElement = document.querySelectorAll(".main__section__wrapper")
@@ -198,22 +198,22 @@ const Layout = ({ children, location }) => {
   }
 
   useEffect(() => {
-    //console.log(window.location.href);
-    var redirect = window.location.href;
+    // //console.log(window.location.href);
+    // var redirect = window.location.href;
 
-    if(redirect.includes("raxo.tv")){
-      //redirect = redirect.replace("localhost", "raxo.co");
+    // if(redirect.includes("raxo.tv")){
+    //   //redirect = redirect.replace("localhost", "raxo.co");
 
-      //console.log(redirect);
-      redirect = redirect.replace("raxo.tv", "raxo.co");
+    //   //console.log(redirect);
+    //   redirect = redirect.replace("raxo.tv", "raxo.co");
 
-      window.location.replace(redirect);
+    //   window.location.replace(redirect);
 
-    }
+    // }
 
-    if(redirect.includes("raxo.co") || redirect.includes("localhost")){
-      setLoad(true); 
-    }
+    // if(redirect.includes("raxo.co") || redirect.includes("localhost")){
+    //   setLoad(true); 
+    // }
 
     if (window.innerWidth > 768) {
       init()
@@ -319,8 +319,7 @@ const Layout = ({ children, location }) => {
   return (
     <>
       {
-        load
-        ?
+
         <>
           <Helmet>
             <link rel="icon" href={siteFavicon} />
@@ -370,7 +369,7 @@ const Layout = ({ children, location }) => {
             ></Footer>
           </div>
         </>
-        : ""
+      
       }
     </>
   )
