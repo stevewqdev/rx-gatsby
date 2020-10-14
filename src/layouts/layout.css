@@ -1488,7 +1488,11 @@ button.active:before{
     bottom: unset;
   } 
 }
-@media(max-width: 500px){
+@media(max-width: 600px){
+  .video__background{
+    z-index: 99999999;
+    pointer-events: all;
+  }
   .menu__full__screen.floating__web__info .copyright__column p{
     display: none;
   }

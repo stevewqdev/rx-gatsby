@@ -76,7 +76,7 @@ class HomePage extends Component {
     this.triggerVideoPoster()
     document.querySelectorAll(".footer")[0].classList.add("dark")
 
-    if (window.innerWidth < 500) {
+    if (window.innerWidth < 600) {
       this.setState({
         isMobile: true,
       })
@@ -122,6 +122,7 @@ class HomePage extends Component {
     )
   }
   render() {
+
     const pageData = this.props.data.allWordpressPage.edges[0].node
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf
     const customStyle = `
@@ -154,20 +155,42 @@ class HomePage extends Component {
             <div className="col-lg-12">
               <div className="video__background" id="scene">
                 { pageAcf.video_background && this.state.isLoaded  ? (
-                  <video
-                    data-depth="0.2"
-                    autoPlay
-                    loop
-                    muted
-                    preload="none"
-                    playsInline
-                    id="parallaxVideo"
-                  >
-                    <source
-                      src={pageAcf.video_background.source_url}
-                      type="video/mp4"
-                    />
-                  </video>
+                  <>
+                  {
+                    this.state.isMobile
+                    ?
+                      <video
+                        data-depth="0.2"
+                        autoPlay
+                        loop
+                        muted
+                        preload="none"
+                        playsInline
+                        id="parallaxVideo"
+                        className="background__video__mobile__home"
+                      >
+                        <source
+                          src={pageAcf.video_background.source_url}
+                          type="video/mp4"
+                        />
+                      </video>
+                    : <video
+                        data-depth="0.2"
+                        autoPlay
+                        loop
+                        muted
+                        preload="none"
+                        playsInline
+                        id="parallaxVideo"
+                        className="background__video__desktop_home"
+                      >
+                        <source
+                          src={pageAcf.video_background.source_url}
+                          type="video/mp4"
+                        />
+                      </video>
+                  }
+                  </>
                 ) : (
                   ""
                 )}
