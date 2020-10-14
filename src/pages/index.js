@@ -12,6 +12,14 @@ class HomePage extends Component {
     this.state = { isMobile: false, isLoaded: false }
   }
 
+  playVideoHero(event) {
+    if (event.target.paused) {
+      event.target.play();
+    } else {
+      //event.target.pause();
+    } 
+  }
+
   playVideo(event) {
     event.target.play()
     document.querySelectorAll(".poster__animated")[0].classList.add("hidden")
@@ -80,6 +88,7 @@ class HomePage extends Component {
       this.setState({
         isMobile: true,
       })
+      
     }
 
     let aElements = [
@@ -119,6 +128,14 @@ class HomePage extends Component {
         })
       }.bind(this),
       1000
+    )
+    setTimeout(
+      function() {
+
+        document.querySelectorAll(".background__video__mobile__home")[0].click();
+        
+      }.bind(this),
+      1500
     )
   }
   render() {
@@ -161,12 +178,13 @@ class HomePage extends Component {
                     ?
                       <video
                         data-depth="0.2"
-                        autoPlay
                         loop
                         muted
                         preload="none"
                         playsInline
                         id="parallaxVideo"
+                        onTap={this.playVideoHero}
+                        onClick={this.playVideoHero}
                         className="background__video__mobile__home"
                       >
                         <source
