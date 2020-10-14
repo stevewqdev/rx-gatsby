@@ -142,6 +142,9 @@ class HomePage extends Component {
 
     const pageData = this.props.data.allWordpressPage.edges[0].node
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf
+
+    console.log(pageAcf);
+
     const customStyle = `
     @media(max-width: 500px){
       html{
@@ -492,7 +495,7 @@ class HomePage extends Component {
                                   data-aos-easing="ease-in-out"
                                   className="bold__font md__font"
                                   dangerouslySetInnerHTML={{
-                                    __html: project.post_name,
+                                    __html: project.acf.frontend_title,
                                   }}
                                 />
                               </div>
@@ -634,6 +637,7 @@ export const pageQuery = graphql`
               post_name
               post_content
               acf {
+                frontend_title
                 thumbnail_image {
                   localFile {
                     childImageSharp {
