@@ -1,8 +1,6 @@
 import React from "react"
 import AddCultureLayout from "../layouts/addCultureLayout/index"
-import Header from '../components/addCulture/header/index'
 import AddCultureHero from '../components/addCulture/hero/index'
-import AddCultureFooter from '../components/addCulture/footer';
 import { graphql, Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import MouseTooltip from "react-sticky-mouse-tooltip"
@@ -78,7 +76,6 @@ export default class PostsIndex extends React.Component {
           <link rel="canonical" href={"/news"} />
         </Helmet>
         <div className="main__section__wrapper blog__page">
-          <Header />
           <AddCultureHero />
           <div className="addCultureContainer">
             <div className="featuredContent">
@@ -214,9 +211,7 @@ export default class PostsIndex extends React.Component {
                 </MouseTooltip>
               </div>
             </div>
-          </div>
-
-          <AddCultureFooter />
+          </div>          
         </div>
       </AddCultureLayout>
     )
