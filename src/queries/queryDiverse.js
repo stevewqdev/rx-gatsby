@@ -10,7 +10,7 @@ module.exports = `
           slug
           date(formatString: "MM.DD.YYYY")
           content
-          featured_media{
+          featured_media {
             source_url
             alt_text
             caption

@@ -1,0 +1,21 @@
+.categoryHero {
+  padding: 10% 15%;
+}
+
+.heroContainer {
+  position: relative;
+}
+
+.categoryCircle {
+  position: absolute;
+  left: -23px;
+  top: -20px;
+}
+
+.heroContainer p {
+  margin: 40px auto;
+  font-family: "ITC Avant Garde Pro Md", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+}
