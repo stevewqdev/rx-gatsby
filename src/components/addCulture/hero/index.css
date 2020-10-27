@@ -1,0 +1,53 @@
+#addCultureHero {
+  background: linear-gradient(#adaea5 60%, #222220 40%);
+  height: 100vh;
+  position: static;
+}
+
+.addCultureHeroContent {
+  padding: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.addCultureHeroContent .scrollIndicator {
+  position: relative;
+  right: 17%;
+  top: 22vh;
+}
+
+.addCultureHeroContent .whoWeAre {
+  font-size: 20px;
+  font-family: "ITC Avant Garde Pro Md", sans-serif;
+  font-weight: 700;
+  line-height: 20px;
+  font-style: normal;
+  color: #222220;
+}
+
+.addCultureHeroContent .heroText {
+  font-family: "ITC Avant Garde Pro Md", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  color: #f4f4f4;
+  line-height: 106px;
+  font-size: 120px;
+  margin-left: -30px;
+}
+
+.addCultureHeroContent .heroText span {
+  color: #ffc6c6;
+}
+
+.addCultureSymbol {
+  position: relative;
+}
+
+.addCultureSymbol img {
+  position: relative;
+  left: 90%;
+  bottom: 10%;
+  height: auto;
+  width: 100%;
+}

@@ -1,0 +1,34 @@
+.popularSlider {
+  position: relative;
+  right: 20%;
+  bottom: 20%;
+}
+
+.popularSlider .slick-active img {
+  max-width: 1500px;
+  width: 100%;
+  transform: translate3d(-100px, -50px, 50px);
+}
+
+.popularSlider .slick-active .content {
+  position: relative;
+}
+
+.popularSlider .popular-next {
+  transform: translate3d(-100px, 30px, 10px);
+  perspective: 100px;
+  opacity: 1;
+  position: relative;
+  bottom: -20%;
+  left: 70%;
+}
+
+.popularSlider .popular-next .img {
+  width: 150px;
+  height: 150px;
+}
+
+.popularSlider .popular-next .content,
+.popularSlider .popular-prev .content {
+  display: none;
+}

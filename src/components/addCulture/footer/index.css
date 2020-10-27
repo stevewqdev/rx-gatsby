@@ -1,0 +1,25 @@
+.adcFooterWrapper {
+  background: #adaea5;
+  position: relative;
+}
+
+.contentWrapper {
+  padding: 10% 12%;
+  font-family: "ITC Avant Garde Pro Md", sans-serif;
+  color: #222220;
+}
+
+.footerGreeting {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 30px;
+  margin-bottom: 5%;
+}
+
+.join {
+  font-size: 40px;
+  line-height: 36px;
+  font-style: normal;
+  font-weight: bold;
+}

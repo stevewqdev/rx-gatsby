@@ -1,0 +1,31 @@
+.blog__nav {
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+}
+
+.navToggler {
+  flex-grow: 0.3;
+}
+
+.brand__logo {
+  flex-grow: 2;
+  font-family: "ITC Avant Garde Pro Md", sans-serif;
+  color: #222220;
+  text-decoration: none;
+}
+
+.brand__logo:hover {
+  text-decoration: none !important;
+}
+
+.explore {
+  font-family: "ITC Avant Garde Pro Bk", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18.32px;
+  font-style: normal;
+}
