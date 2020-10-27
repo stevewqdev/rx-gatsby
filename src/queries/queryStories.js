@@ -2,7 +2,7 @@
 
 module.exports = `
   {
-    allWordpressWpAddcultureposts(filter: {categories: {elemMatch: {name: {eq: "Ad+d Culture Stories"}}}}) {
+    allWordpressWpAddcultureposts(filter: {categories: {elemMatch: {name: {eq: "Add Culture Stories"}}}}) {
       edges {
         node {
           id
