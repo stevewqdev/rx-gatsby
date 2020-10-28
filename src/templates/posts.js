@@ -36,15 +36,17 @@ export default class PostsIndex extends React.Component {
   showTooltip(event) {
     const tooltip = document.getElementById(`${event.target.id}-container`);
     tooltip.classList.add('show');
-    if(tooltip.classList.contains('minority')) {
-      tooltip.classList.add('minorityImg');
-    } else if(tooltip.classList.contains('diverse')) {
-      tooltip.classList.add('diverseImg');
-    } else if(tooltip.classList.contains('why')) {
-      tooltip.classList.add('whyImg');
-    } else if(tooltip.classList.contains('representation')) {
-      tooltip.classList.add('representationImg');
-    }
+    // if(tooltip.classList.contains('minority')) {
+    //   tooltip.classList.add('minorityImg');
+    // } else if(tooltip.classList.contains('diverse')) {
+    //   tooltip.classList.add('diverseImg');
+    // } else if(tooltip.classList.contains('why')) {
+    //   tooltip.classList.add('whyImg');
+    // } else if(tooltip.classList.contains('stories')) {
+    //   tooltip.classList.add('storiesImg')
+    // } else if(tooltip.classList.contains('representation')) {
+    //   tooltip.classList.add('representationImg');
+    // }
     this.setState(
       prevState => ({ 
         isMouseTooltipVisible: !prevState.isMouseTooltipVisible 
@@ -80,7 +82,7 @@ export default class PostsIndex extends React.Component {
           <div className="addCultureContainer">
             <div className="featuredContent">
               <h1 className="featuredText">FEATURE <br/> THIS <br/> MONTH</h1>
-                <AddCultureSlider />
+                <AddCultureSlider className="slider" />
             </div>
   
             <div id="blogPosts" className="addCultureBlogPosts">
@@ -149,7 +151,7 @@ export default class PostsIndex extends React.Component {
                 </h1>
               </div>
               <div className="categoriesNav">
-                <Link to="/" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryOne">
+                <Link to="/news/minority" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryOne">
                   <p className="categoryNumber">01</p>
                   <h2 className="categoryName">MINORITY <br/> OWNED <br/> AGENCIES</h2>
                 </Link>
@@ -158,10 +160,10 @@ export default class PostsIndex extends React.Component {
                   offsetX={-200}
                   offsetY={-200}               
                 >
-                  <div className="category minority" id="categoryOne-container">
+                  <div className="category minorityImg" id="categoryOne-container">
                   </div>
                 </MouseTooltip>
-                <Link to="/" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryTwo">
+                <Link to="/news/diverse" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryTwo">
                   <p className="categoryNumber">02</p>
                   <h2 className="categoryName">DIVERSE <br/> CREATORS</h2>
                 </Link>
@@ -170,10 +172,10 @@ export default class PostsIndex extends React.Component {
                   offsetX={-200}
                   offsetY={-200}              
                 >
-                  <div className="category diverse" id="categoryTwo-container">
+                  <div className="category diverseImg" id="categoryTwo-container">
                   </div>
                 </MouseTooltip>
-                <Link to="/" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryThree">
+                <Link to="/news/why" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryThree">
                   <p className="categoryNumber">03</p>
                   <h2 className="categoryName">WHY <br/> AD+D <br/> CULTURE</h2>
                 </Link>
@@ -182,10 +184,10 @@ export default class PostsIndex extends React.Component {
                   offsetX={-200}
                   offsetY={-200}               
                 >
-                  <div className="category why" id="categoryThree-container">
+                  <div className="category whyImg" id="categoryThree-container">
                   </div>
                 </MouseTooltip>
-                <Link to="/" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryFour">
+                <Link to="/news/stories" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryFour">
                   <p className="categoryNumber">04</p>
                   <h2 className="categoryName">AD+D <br/> CULTURE <br/> STORIES</h2>
                 </Link>
@@ -194,10 +196,10 @@ export default class PostsIndex extends React.Component {
                   offsetX={-200}
                   offsetY={-200}                
                 >
-                  <div className="category stories" id="categoryFour-container">
+                  <div className="category storiesImg" id="categoryFour-container">
                   </div>
                 </MouseTooltip>
-                <Link to="/" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryFive">
+                <Link to="/news/representation" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryFive">
                   <p className="categoryNumber">05</p>
                   <h2 className="categoryName">REPRESENTATION <br/> DONE RIGHT</h2>
                 </Link>
@@ -206,7 +208,7 @@ export default class PostsIndex extends React.Component {
                   offsetX={-200}
                   offsetY={-200}               
                 >
-                  <div className="category representation" id="categoryFive-container">
+                  <div className="category representationImg" id="categoryFive-container">
                   </div>
                 </MouseTooltip>
               </div>

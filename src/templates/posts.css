@@ -190,7 +190,7 @@
   height: 400px;
   opacity: 0;
   pointer-events: none;
-  transition: all 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+  transition: opacity 0.6s cubic-bezier(0.83, 0, 0.17, 1);
 }
 .category.show {
   opacity: 1;
@@ -212,6 +212,13 @@
 
 .whyImg {
   background: url("../images/addCulture/categories/why.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.storiesImg {
+  background: url("../images/addCulture/categories/stories.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

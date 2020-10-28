@@ -27,7 +27,7 @@ export default function Stories({ pageContext }) {
         <link rel="canonical" href={"/news/stories"} />
       </Helmet>
       <div className="main__section__wrapper blog__page">
-        <div className="categoryHero stories">
+        <div className="categoryHero storiesBanner">
           <div className="heroContainer">
             <CategoryCircle tabIndex="0" alt="circle" className="categoryCircle" />
             <p>04</p>

@@ -27,7 +27,7 @@ export default function Diverse({ pageContext }) {
         <link rel="canonical" href={"/news/diverse"} />
       </Helmet>
       <div className="main__section__wrapper blog__page">
-        <div className="categoryHero diverse">
+        <div className="categoryHero diverseBanner">
           <div className="heroContainer">
             <CategoryCircle tabIndex="0" alt="circle" className="categoryCircle" />
             <p>02</p>

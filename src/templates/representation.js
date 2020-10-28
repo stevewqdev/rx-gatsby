@@ -27,7 +27,7 @@ export default function Representation({ pageContext }) {
         <link rel="canonical" href={"/news/representation"} />
       </Helmet>
       <div className="main__section__wrapper blog__page">
-        <div className="categoryHero representation">
+        <div className="categoryHero representationBanner">
           <div className="heroContainer">
             <CategoryCircle tabIndex="0" alt="circle" className="categoryCircle" />
             <p>05</p>

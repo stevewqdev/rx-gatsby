@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Layout from "../layouts/index"
+import AddCultureLayout from "../layouts/addCultureLayout/index"
 import { graphql } from "gatsby"
 import PropTypes from "prop-types"
 import Img from "gatsby-image"
@@ -83,7 +83,7 @@ class Post extends Component {
       }
     }
     return (
-      <Layout>
+      <AddCultureLayout>
         <Helmet>
           <meta charSet="utf-8" />
           <meta
@@ -170,7 +170,7 @@ class Post extends Component {
             </>
           )}
         </div>
-      </Layout>
+      </AddCultureLayout>
     )
   }
 }

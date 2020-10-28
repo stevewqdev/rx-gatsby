@@ -27,7 +27,7 @@ export default function Why({ pageContext }) {
         <link rel="canonical" href={"/news/why"} />
       </Helmet>
       <div className="main__section__wrapper blog__page">
-        <div className="categoryHero why">
+        <div className="categoryHero whyBanner">
           <div className="heroContainer">
             <CategoryCircle tabIndex="0" alt="circle" className="categoryCircle" />
             <p>03</p>

@@ -4,6 +4,10 @@ import Arrow from '../../../images/addCulture/arrow.svg'
 import './index.css';
 
 export default function Header() {
+  // function bgColor() {
+  //   const sliders = document.querySelectorAll('.slider');
+  //   if()
+  // }
 
   return (
     <>

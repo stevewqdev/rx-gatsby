@@ -25,6 +25,7 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     // We set the variables for the default templates
     const postTemplate = path.resolve("./src/templates/post.js")
+    const adcPostTemplate = path.resolve('./src/templates/adcPost.js')
 
     resolve(
       graphql(queryAll).then(result => {
@@ -39,95 +40,103 @@ exports.createPages = ({ graphql, actions }) => {
           createPage: createPage,
           pageTemplate: "src/templates/posts.js",
           pageLength: 1000,
-          pathPrefix: "news",
+          pathPrefix: "add-culture",
         })
 
         // Loop through the posts
         posts.forEach(edge => {
           createPage({
-            path: `/news/${edge.node.slug}/`,
-            component: slash(postTemplate),
+            path: `/add-culture/post/${edge.node.slug}/`,
+            component: slash(adcPostTemplate),
             context: {
               id: edge.node.id,
             },
           })
         })
-      }),
+      })
+    )
+    resolve(
       graphql(queryMinority).then(result => {
         if(result.errors) reject(result.errors)
-        const posts = result.data.allWordpressWpAddcultureposts.edges
-
+        const minorityPosts = result.data.allWordpressWpAddcultureposts.edges
+        console.log(minorityPosts.featured_media);
         createPaginatedPages({
-          edges: posts,
+          edges: minorityPosts,
           createPage: createPage,
           pageTemplate: "src/templates/minority.js",
           pageLength: 1000,
-          pathPrefix: "news/minority",
+          pathPrefix: "add-culture/minority",
         })
 
         // Loop through the posts
-        posts.forEach(edge => {
+        minorityPosts.forEach(edge => {
           createPage({
-            path: `/news/${edge.node.slug}/`,
-            component: slash(postTemplate),
+            path: `/add-culture/post/${edge.node.slug}/`,
+            component: slash(adcPostTemplate),
             context: {
               id: edge.node.id,
             },
           })
         })
-      }),
+      })
+    )
+    resolve(
       graphql(queryDiverse).then(result => {
         if(result.errors) reject(result.errors)
-        const posts = result.data.allWordpressWpAddcultureposts.edges
+        const diversePosts = result.data.allWordpressWpAddcultureposts.edges
 
         createPaginatedPages({
-          edges: posts,
+          edges: diversePosts,
           createPage: createPage,
           pageTemplate: "src/templates/diverse.js",
           pageLength: 1000,
-          pathPrefix: "news/diverse",
+          pathPrefix: "add-culture/diverse",
         })
 
         // Loop through the posts
-        posts.forEach(edge => {
+        diversePosts.forEach(edge => {
           createPage({
-            path: `/news/${edge.node.slug}/`,
-            component: slash(postTemplate),
+            path: `/add-culture/post/${edge.node.slug}/`,
+            component: slash(adcPostTemplate),
             context: {
               id: edge.node.id,
             },
           })
         })
-      }),
+      })
+    )
+    resolve(
       graphql(queryWhy).then(result => {
         if(result.errors) reject(result.errors)
-        const posts = result.data.allWordpressWpAddcultureposts.edges
+        const whyPosts = result.data.allWordpressWpAddcultureposts.edges
 
         createPaginatedPages({
-          edges: posts,
+          edges: whyPosts,
           createPage: createPage,
           pageTemplate: "src/templates/why.js",
           pageLength: 1000,
-          pathPrefix: "news/why",
+          pathPrefix: "add-culture/why",
         })
 
         // Loop through the posts
-        posts.forEach(edge => {
+        whyPosts.forEach(edge => {
           createPage({
-            path: `/news/${edge.node.slug}/`,
-            component: slash(postTemplate),
+            path: `/add-culture/post/${edge.node.slug}/`,
+            component: slash(adcPostTemplate),
             context: {
               id: edge.node.id,
             },
           })
         })
-      }),
+      })
+    )
+    resolve(
       graphql(queryStories).then(result => {
         if(result.errors) reject(result.errors)
-        const posts = result.data.allWordpressWpAddcultureposts.edges
+        const storiesPosts = result.data.allWordpressWpAddcultureposts.edges
 
         createPaginatedPages({
-          edges: posts,
+          edges: storiesPosts,
           createPage: createPage,
           pageTemplate: "src/templates/stories.js",
           pageLength: 1000,
@@ -135,33 +144,35 @@ exports.createPages = ({ graphql, actions }) => {
         })
 
         // Loop through the posts
-        posts.forEach(edge => {
+        storiesPosts.forEach(edge => {
           createPage({
-            path: `/news/${edge.node.slug}/`,
-            component: slash(postTemplate),
+            path: `/add-culture/post/${edge.node.slug}/`,
+            component: slash(adcPostTemplate),
             context: {
               id: edge.node.id,
             },
           })
         })
-      }),
+      })
+    )
+    resolve(
       graphql(queryRepresentation).then(result => {
         if(result.errors) reject(result.errors)
-        const posts = result.data.allWordpressWpAddcultureposts.edges
-
+        const representationPosts = result.data.allWordpressWpAddcultureposts.edges
+        console.log(representationPosts);
         createPaginatedPages({
-          edges: posts,
+          edges: representationPosts,
           createPage: createPage,
           pageTemplate: "src/templates/representation.js",
           pageLength: 1000,
-          pathPrefix: "news/representation",
+          pathPrefix: "add-culture/representation",
         })
 
         // Loop through the posts
-        posts.forEach(edge => {
+        representationPosts.forEach(edge => {
           createPage({
-            path: `/news/${edge.node.slug}/`,
-            component: slash(postTemplate),
+            path: `/add-culture/post/${edge.node.slug}/`,
+            component: slash(adcPostTemplate),
             context: {
               id: edge.node.id,
             },

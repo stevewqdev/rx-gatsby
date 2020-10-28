@@ -11,6 +11,7 @@ import './minority.css'
 
 export default function Minority({ pageContext }) {
   const { group } = pageContext;
+  console.log(group);
   const [pages] = useState(Math.ceil(parseInt(group.length) / 8))
   let pageArray = []
   for (let index = 0; index < pages; index++) {
@@ -27,7 +28,7 @@ export default function Minority({ pageContext }) {
         <link rel="canonical" href={"/news/minority"} />
       </Helmet>
       <div className="main__section__wrapper blog__page">
-        <div className="categoryHero minority">
+        <div className="categoryHero minorityBanner">
           <div className="heroContainer">
             <CategoryCircle tabIndex="0" alt="circle" className="categoryCircle" />
             <p>01</p>
