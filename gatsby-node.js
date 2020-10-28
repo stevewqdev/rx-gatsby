@@ -52,9 +52,7 @@ exports.createPages = ({ graphql, actions }) => {
             },
           })
         })
-      })
-    )
-    resolve(
+      }),
       graphql(queryMinority).then(result => {
         if(result.errors) reject(result.errors)
         const posts = result.data.allWordpressWpAddcultureposts.edges
@@ -77,9 +75,7 @@ exports.createPages = ({ graphql, actions }) => {
             },
           })
         })
-      })
-    )
-    resolve(
+      }),
       graphql(queryDiverse).then(result => {
         if(result.errors) reject(result.errors)
         const posts = result.data.allWordpressWpAddcultureposts.edges
@@ -102,9 +98,7 @@ exports.createPages = ({ graphql, actions }) => {
             },
           })
         })
-      })
-    )
-    resolve(
+      }),
       graphql(queryWhy).then(result => {
         if(result.errors) reject(result.errors)
         const posts = result.data.allWordpressWpAddcultureposts.edges
@@ -127,9 +121,7 @@ exports.createPages = ({ graphql, actions }) => {
             },
           })
         })
-      })
-    )
-    resolve(
+      }),
       graphql(queryStories).then(result => {
         if(result.errors) reject(result.errors)
         const posts = result.data.allWordpressWpAddcultureposts.edges
@@ -152,9 +144,7 @@ exports.createPages = ({ graphql, actions }) => {
             },
           })
         })
-      })
-    )
-    resolve(
+      }),
       graphql(queryRepresentation).then(result => {
         if(result.errors) reject(result.errors)
         const posts = result.data.allWordpressWpAddcultureposts.edges

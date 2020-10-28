@@ -14,7 +14,7 @@ module.exports = `
             name
             slug
           }
-          featured_media{
+          featured_media {
             source_url
             alt_text
             caption
@@ -22,13 +22,7 @@ module.exports = `
             localFile {
                 childImageSharp {
                   fluid(maxWidth: 1920) {
-                      base64
-                      aspectRatio
-                      src
-                      srcSet
-                      srcWebp
-                      srcSetWebp
-                      sizes
+                    ...GatsbyImageSharpFluid_withWebp
                   }
               }
             }

@@ -239,6 +239,7 @@ export const postQuery = graphql`
         wordpress_id
       }
       categories {
+        name
         slug
       }
     }
