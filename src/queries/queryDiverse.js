@@ -22,7 +22,13 @@ module.exports = `
             localFile {
                 childImageSharp {
                   fluid(maxWidth: 1920) {
-                    ...GatsbyImageSharpFluid_withWebp
+                      base64
+                      aspectRatio
+                      src
+                      srcSet
+                      srcWebp
+                      srcSetWebp
+                      sizes
                   }
               }
             }
