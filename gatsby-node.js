@@ -43,16 +43,16 @@ exports.createPages = ({ graphql, actions }) => {
           pathPrefix: "add-culture",
         })
 
-        // Loop through the posts
-        posts.forEach(edge => {
-          createPage({
-            path: `/add-culture/post/${edge.node.slug}/`,
-            component: slash(adcPostTemplate),
-            context: {
-              id: edge.node.id,
-            },
-          })
-        })
+        // // Loop through the posts
+        // posts.forEach(edge => {
+        //   createPage({
+        //     path: `/add-culture/post/${edge.node.slug}/`,
+        //     component: slash(adcPostTemplate),
+        //     context: {
+        //       id: edge.node.id,
+        //     },
+        //   })
+        // })
       })
     )
     resolve(
