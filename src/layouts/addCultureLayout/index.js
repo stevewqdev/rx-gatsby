@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import '../../fonts/addCulture/stylesheet.css'
 import '../../fonts/addCulture/lato/stylesheet.css'
+import '../../fonts/addCulture/helvetica/stylesheet.css'
 import Header from "../../components/addCulture/header"
 import AddCultureFooter from "../../components/addCulture/footer"
 

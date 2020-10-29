@@ -7,8 +7,8 @@ import MouseTooltip from "react-sticky-mouse-tooltip"
 import Img from "gatsby-image"
 import AddCultureSlider from "../components/addCulture/slider/index"
 import PopularSlider from '../components/addCulture/slider/popular'
-import Scroll from '../images/addCulture/scroll.svg'
-import Line from '../images/addCulture/line.svg'
+import ScrollIndicator from '../images/addCulture/scrollIndicator.svg'
+import ScrollIndicatorDark from '../images/addCulture/scrollIndicatorDark.svg'
 import IdentityPlus from '../images/addCulture/identityPlus.svg';
 import IdentityScratch from '../images/addCulture/identityScratch.svg';
 import IdentityTriangle from '../images/addCulture/identityTriangle.svg';
@@ -87,6 +87,9 @@ export default class PostsIndex extends React.Component {
   
             <div id="blogPosts" className="addCultureBlogPosts">
               <div className="row">
+                <div className="scrollIndicatorDark">
+                  <ScrollIndicatorDark tabIndex="0" alt="Scroll" />
+                </div>
                 <div className="postsGrid">
                   {postsData.map((post, i) => (
                     <>
@@ -115,8 +118,8 @@ export default class PostsIndex extends React.Component {
             <div className="popular">
               <div className="popularContent">
                 <div className="scrollIndicator">
-                  <Scroll tabIndex="0" alt="Scroll" />
-                  <Line tabIndex="0" alt="Line" style={{marginTop: '10px', marginLeft: '6px'}} />
+                  <ScrollIndicator tabIndex="0" alt="Scroll" />
+                  
                 </div>
                 <h1 className="popularHeading">POPULAR <br/> THIS <br/> MONTH</h1>
                 {/* <PopularSlider /> */}
@@ -125,6 +128,9 @@ export default class PostsIndex extends React.Component {
 
             <div className="blogIdentity">
               <div className="row">
+                <div className="scrollIndicatorDark">
+                  <ScrollIndicatorDark tabIndex="0" alt="Scroll" />
+                </div>
                 <IdentityTriangle tabIndex="0" alt="Triangle" style={{ marginTop: '15%', marginLeft: '8%', position: 'absolute' }} />
                 <IdentityTopEllipses tabIndex="0" alt="Top Ellipses" style={{ position: 'absolute', left: '60%' }} />
                 <IdentityInverseVector tabIndex="0" alt="Inverse Vector" style={{position: 'absolute', right: '0', top: '15%'}} />

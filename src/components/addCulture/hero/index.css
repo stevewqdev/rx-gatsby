@@ -7,6 +7,7 @@
 .addCultureHeroContent {
   padding: 15%;
   display: flex;
+  position: relative;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -15,6 +16,21 @@
   position: relative;
   right: 17%;
   top: 22vh;
+}
+
+.addCultureText {
+  width: 100%;
+  margin-top: 8%;
+}
+
+.addCultureText .about {
+  position: relative;
+}
+
+.about .heroLine {
+  position: absolute;
+  left: -3.2em;
+  bottom: -2.3em;
 }
 
 .addCultureHeroContent .whoWeAre {
@@ -34,20 +50,16 @@
   line-height: 106px;
   font-size: 120px;
   margin-left: -30px;
+  margin-top: 5%;
 }
 
 .addCultureHeroContent .heroText span {
   color: #ffc6c6;
 }
 
-.addCultureSymbol {
-  position: relative;
-}
-
 .addCultureSymbol img {
-  position: relative;
-  left: 90%;
-  bottom: 10%;
+  position: absolute;
+  right: 0;
   height: auto;
-  width: 100%;
+  width: 25%;
 }

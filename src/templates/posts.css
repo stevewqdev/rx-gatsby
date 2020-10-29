@@ -116,6 +116,12 @@
   position: relative;
 }
 
+.scrollIndicatorDark {
+  position: absolute;
+  left: 3.5%;
+  top: 45%;
+}
+
 .addCultureContainer .identityContent {
   margin: 20% 40%;
   color: #222220;

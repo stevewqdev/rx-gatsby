@@ -15,8 +15,10 @@ export default function AddCultureHero() {
           <Line tabIndex="0" alt="Line" style={{marginTop: '10px', marginLeft: '6px'}} />
         </div>
         <div className="addCultureText">
-          <HeroLine tabIndex="0" alt="Hero Line" style={{position: 'absolute', top: '24vh', left: '12.5vw'}}/>
-          <h6 className="whoWeAre">WE ARE <br/> AD+D CULTURE</h6>
+          <div className="about">
+            <HeroLine tabIndex="0" alt="Hero Line" className="heroLine"/>
+            <h6 className="whoWeAre">WE ARE <br/> AD+D CULTURE</h6>
+          </div>
           <h1 className="heroText">
             AMPLIFYING <br/>
             THE VOICES <br/>
