@@ -157,7 +157,7 @@ export default class PostsIndex extends React.Component {
                 </h1>
               </div>
               <div className="categoriesNav">
-                <Link to="/news/minority" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryOne">
+                <Link to="/add-culture/minority" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryOne">
                   <p className="categoryNumber">01</p>
                   <h2 className="categoryName">MINORITY <br/> OWNED <br/> AGENCIES</h2>
                 </Link>
@@ -169,7 +169,7 @@ export default class PostsIndex extends React.Component {
                   <div className="category minorityImg" id="categoryOne-container">
                   </div>
                 </MouseTooltip>
-                <Link to="/news/diverse" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryTwo">
+                <Link to="/add-culture/diverse" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryTwo">
                   <p className="categoryNumber">02</p>
                   <h2 className="categoryName">DIVERSE <br/> CREATORS</h2>
                 </Link>
@@ -181,7 +181,7 @@ export default class PostsIndex extends React.Component {
                   <div className="category diverseImg" id="categoryTwo-container">
                   </div>
                 </MouseTooltip>
-                <Link to="/news/why" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryThree">
+                <Link to="/add-culture/why" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryThree">
                   <p className="categoryNumber">03</p>
                   <h2 className="categoryName">WHY <br/> AD+D <br/> CULTURE</h2>
                 </Link>
@@ -193,7 +193,7 @@ export default class PostsIndex extends React.Component {
                   <div className="category whyImg" id="categoryThree-container">
                   </div>
                 </MouseTooltip>
-                <Link to="/news/stories" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryFour">
+                <Link to="/add-culture/stories" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryFour">
                   <p className="categoryNumber">04</p>
                   <h2 className="categoryName">AD+D <br/> CULTURE <br/> STORIES</h2>
                 </Link>
@@ -205,7 +205,7 @@ export default class PostsIndex extends React.Component {
                   <div className="category storiesImg" id="categoryFour-container">
                   </div>
                 </MouseTooltip>
-                <Link to="/news/representation" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryFive">
+                <Link to="/add-culture/representation" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryFive">
                   <p className="categoryNumber">05</p>
                   <h2 className="categoryName">REPRESENTATION <br/> DONE RIGHT</h2>
                 </Link>
