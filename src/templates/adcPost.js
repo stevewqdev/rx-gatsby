@@ -34,7 +34,11 @@ export default class AddCulturePost extends Component {
           <div className="postHeroContent">
             <div className="categoryContainer">
               <HeroLine tabIndex="0" alt="line" className="heroLine" />
-              <p>{this.state.post.categories[0].name}</p>
+              {this.state.post.categories !== null ? (
+                <p>{this.state.post.categories[0].name}</p>
+              ) : (
+                ''
+              )}
             </div>
             <p className="postHeroDate">{this.state.post.date}—</p>
             <h1 className="postHeroTitle">{this.state.post.title}</h1>
@@ -56,10 +60,14 @@ export default class AddCulturePost extends Component {
           <div className="row">
             <div className="col-lg-4 col-sm-12">
               <div className="postInfoContainer">
-                <div className="authorContainer">
-                  <p className="postAuthor">BY <span>{this.state.post.author.name}</span></p>
-                  <AuthorLine tabIndex="0" alt="Author Line" className="authorLine" />
-                </div>
+                {this.state.post.author !== null ? (
+                  <div className="authorContainer">
+                    <p className="postAuthor">BY <span>{this.state.post.author.name}</span></p>
+                    <AuthorLine tabIndex="0" alt="Author Line" className="authorLine" />
+                  </div>
+                ) : (
+                  ''
+                )}
                 <p className="postExcerpt" dangerouslySetInnerHTML={{ __html: this.state.post.excerpt }} />
 
                 <div className="socials">
