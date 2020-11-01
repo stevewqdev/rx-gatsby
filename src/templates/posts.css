@@ -1,116 +1,238 @@
-.header__hero__full{
-    position: absolute!important;
-    top: 0px;
-    width: 100%;
-    height: 100%;
+.addCultureContainer {
+  background: #222220;
+  font-family: "ITC Avant Garde Pro Md", sans-serif;
 }
-.internal__post .hero__first__subtitle{
-    position: relative;
-    top: 100px;
+
+.featuredContent {
+  position: relative;
+  padding: 5%;
 }
-.hero__component {
-    position: relative!important;
-    margin-top: -100vh;
-    overflow: hidden;
+
+.featuredContent .featuredText {
+  position: absolute;
+  z-index: 10;
+  left: 15%;
+  top: 30%;
+  font-size: 120px;
+  line-height: 100px;
+  font-weight: bold;
+  color: #f4f4f4;
+  font-family: "ITC Avant Garde Pro Md", sans-serif;
 }
-.post{
-    min-height: 100vh;
-    margin: 70px auto;
+
+#blogPosts {
+  background: #e5e5e5;
+  padding: 10%;
 }
-.post__content p{
-    margin: 30px 0;
+
+.postsGrid {
+  max-width: 1150px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.main__section__wrapper.post__wrapper {
-    padding-bottom: 80px;
+
+.postsGrid .adcSinglePost {
+  border-top: 1px solid #222220;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 3%;
 }
-.post__date p{
-    font-family: "Roboto"!important;
-    letter-spacing: 0.2px;
-    line-height: 22px;
+
+.postsGrid .adcSinglePost.post-0 {
+  width: 670px;
+  flex-direction: row;
 }
-.post__content p{
-    font-family: "Roboto"!important;
-    letter-spacing: 0.2px;
-    line-height: 22px;
+
+.adcSinglePost.post-0 .gatsby-image-wrapper {
+  width: 100%;
+  margin-top: 15px;
 }
-.hero__component.template__default .separator {
-    margin-bottom: 0px;
+
+.postsGrid .adcSinglePost .catAndDateContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 15px;
+  flex-wrap: nowrap;
 }
-.hero__component.template__default .hero__title {
-    margin-top: 13px;
+
+.postsGrid .adcSinglePost .catAndDateContainer .postCategory {
+  font-family: "ITC Avant Garde Pro Md", sans-serif;
+  text-decoration: underline;
+  font-weight: bold;
+  color: #cd4275;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-right: 15px;
 }
-.hero__component.template__default{
-    min-height: auto;
-    padding-top: 170px;
-    background: #F4F4F4;
-    padding-bottom: 20px;
+
+.postsGrid .adcSinglePost .catAndDateContainer .postDate {
+  font-family: "ITC Avant Garde Pro Md", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #222220;
 }
-.hero__component.template__default .separator.--white{
-    background: black;
+
+.contentContainer .postTitle {
+  padding-top: 20%;
+  padding-bottom: 10%;
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
 }
-.hero__component.template__default h1{
-    margin-top: 50px;
-    color: black;
+
+/* popular */
+
+.popular {
+  background: #222220;
 }
-.hero__component.template__default .hero__title{
-    color: black;
+.popularContent {
+  padding: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.hero__component.template__default .hero__title p:nth-child(2){
-    margin-top: 5px;
+
+.popular .scrollIndicator {
+  position: relative;
+  right: 17%;
+  top: 22vh;
 }
-.template__default.internal__post .header__hero__full{
-    display: none;
+
+.popularContent .popularHeading {
+  font-family: "ITC Avant Garde Pro Md", sans-serif;
+  font-size: 120px;
+  line-height: 100px;
+  color: #f4f4f4;
+  position: relative;
+  z-index: 9999;
 }
-.template__default.internal__post .bottom__info{
-    display: none;
+
+.addCultureContainer .blogIdentity {
+  background: #adaea5;
+  position: relative;
 }
-.template__default .post__content__wrapper{
-    position: relative;
-    top: -57px;
-    padding-left: 10px;
+
+.scrollIndicatorDark {
+  position: absolute;
+  left: 3.5%;
+  top: 45%;
 }
-.template__default .row{
-    width: 100%;
-    margin: auto;
+
+.addCultureContainer .identityContent {
+  margin: 20% 40%;
+  color: #222220;
 }
-.template__default .post__thumbnail__caption{
-    margin-top: 20px;
+
+.blogIdentity .identityHeading {
+  font-size: 150px;
+  line-height: 126px;
+  font-weight: bold;
+  position: relative;
+  font-family: "ITC Avant Garde Pro Md", sans-serif;
 }
-@media(max-width: 500px){
-    .hero__component {
-        margin-top: -107vh;
-    }
-    .template__default .post {
-        margin: 0px 0;
-        padding: 0 30px;
-    }
-    .template__default .post__content__wrapper {
-        position: relative;
-        top: 5px;
-        padding-left: 0px;
-        padding: 0;
-    }
-    .template__default .post__content__container{
-        padding: 0px;
-    }
-    .hero__component.template__default .hero__title {
-        padding: 0px;
-    }
+
+.blogIdentity .identityText {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 28px;
 }
-@media (max-width: 920px) and (orientation: landscape){
-    .post.container__custom {
-        max-width: 680px;
-    }
-    .hero__component.template__default .separator.full {
-        width: 100%;
-    }
-    .template__default.hero__title{
-        padding: 0px;
-    }
-    .hero__component.template__default .hero__title{
-        padding: 0px;
-    }
-    .internal__post .hero__first__subtitle {
-        top: 0px;
-    }
+
+.blogCategories {
+  background: #222220;
+}
+
+.blogCategories .categoriesHeader {
+  margin: 15% 10% 0 10%;
+  color: #f4f4f4;
+}
+
+.categoriesHeader p {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 30px;
+  margin-bottom: 5%;
+}
+
+.categoriesHeader h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 36px;
+}
+
+.categoriesHeader h1 > span {
+  color: #ffc6c6;
+}
+
+.categoriesNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  position: relative;
+  padding: 10% 5%;
+}
+
+.categoriesNav .categorySelector {
+  margin-left: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #f4f4f4;
+  height: 20vh;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  z-index: 9999;
+}
+
+.category {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+}
+.category.show {
+  opacity: 1;
+}
+
+.minorityImg {
+  background: url("../images/addCulture/categories/minority.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.diverseImg {
+  background: url("../images/addCulture/categories/diverse.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.whyImg {
+  background: url("../images/addCulture/categories/why.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.storiesImg {
+  background: url("../images/addCulture/categories/stories.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.representationImg {
+  background: url("../images/addCulture/categories/representation.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }

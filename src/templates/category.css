@@ -1,0 +1,92 @@
+.categoryHero {
+  padding: 12% 10%;
+  height: 60vh;
+  margin-left: 15%;
+}
+
+.heroContainer {
+  position: relative;
+  font-family: "ITC Avant Garde Pro Md", sans-serif;
+  color: #f4f4f4;
+}
+
+.categoryCircle {
+  position: absolute;
+  left: -23px;
+  top: -20px;
+}
+
+.heroContainer p {
+  margin: 40px auto;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffc6c6;
+}
+
+.heroContainer .categoryLine {
+  position: relative;
+  left: -25%;
+  top: -20px;
+}
+
+.categoryPosts {
+  margin-left: 15%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.adcSinglePost {
+  border-top: 1px solid #222220;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 3%;
+}
+
+.adcSinglePost.post-1 {
+  width: 670px;
+  flex-direction: row;
+}
+
+.adcSinglePost.post-1 .gatsby-image-wrapper {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.catAndDate {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 15px;
+  flex-wrap: nowrap;
+}
+
+.postCategory {
+  font-family: "ITC Avant Garde Pro Md", sans-serif;
+  text-decoration: underline;
+  font-weight: bold;
+  color: #cd4275;
+  text-transform: uppercase;
+  font-size: 11px;
+  margin-right: 10px;
+}
+
+.postDate {
+  font-family: "ITC Avant Garde Pro Md", sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  color: #222220;
+  opacity: 0.7;
+}
+
+.contentContainer .postTitle {
+  padding-top: 20%;
+  padding-bottom: 10%;
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
+}

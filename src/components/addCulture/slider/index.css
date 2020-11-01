@@ -1,0 +1,45 @@
+.slick-track {
+  max-width: 100% !important;
+  transform: translate3d(0, 0, 0) !important;
+  perspective: 100px;
+}
+
+.slick-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  width: 100% !important;
+  transform: translate3d(0, 0, 0);
+  transition: transform 1s, opacity 1s;
+}
+
+.slick-snext,
+.slick-sprev,
+.slick-snext2,
+.slick-sprev2 {
+  display: block;
+}
+
+.slick-current {
+  opacity: 1;
+  position: relative;
+  display: block;
+  z-index: 2;
+  transform: translate3d(0, 0, -40px);
+}
+
+.slick-snext {
+  opacity: 1;
+  transform: translate3d(200%, 0, -250px);
+  z-index: 1;
+  perspective: 1000px;
+}
+
+.slick-sprev {
+  opacity: 1;
+  transform: translate3d(-250%, 0, -300px);
+}
