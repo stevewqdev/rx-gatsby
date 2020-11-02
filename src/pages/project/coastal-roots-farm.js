@@ -63,7 +63,7 @@ class CoastalRootFarm extends Component {
                                     />
                                 </div>
                                 <div
-                                className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-two-${index} image no__padding `}
+                                className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-two-${index} image no__padding mix-multiply`}
                                 key={index}
                                 data-aos="fade-up"
                                 data-aos-easing="ease-in-back"
@@ -103,7 +103,7 @@ class CoastalRootFarm extends Component {
                                         />
                                     </div>
                                     <div
-                                    className={`custom__col col-xs-12 col-sm-12 col-md-9 col-lg-9  image no__padding`}
+                                    className={`custom__col col-xs-12 col-sm-12 col-md-9 col-lg-9  image no__padding mix-multiply`}
                                     key={index}
                                     data-aos="fade-up"
                                     data-aos-easing="ease-in-back"
@@ -128,7 +128,7 @@ class CoastalRootFarm extends Component {
                                 ?
                                 <>
                                     <div
-                                    className={`custom__col col-xs-12 col-sm-12 col-md-9 col-lg-9  image no__padding column__third__coastal`}
+                                    className={`custom__col col-xs-12 col-sm-12 col-md-9 col-lg-9  image no__padding column__third__coastal mix-multiply`}
                                     key={index}
                                     data-aos="fade-up"
                                     data-aos-easing="ease-in-back"
@@ -183,7 +183,7 @@ class CoastalRootFarm extends Component {
                                     />
                                 </div>
                                 <div
-                                className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-two-${index} image no__padding column__fourth__coastal`}
+                                className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-two-${index} image no__padding column__fourth__coastal mix-multiply`}
                                 key={index}
                                 data-aos="fade-up"
                                 data-aos-easing="ease-in-back"
@@ -240,7 +240,7 @@ class CoastalRootFarm extends Component {
                                 ? 
                                 <>
                                 <div
-                                className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-two-${index} image no__padding `}
+                                className={`custom__col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-two-${index} image no__padding mix-multiply`}
                                 key={index}
                                 data-aos="fade-up"
                                 data-aos-easing="ease-in-back"

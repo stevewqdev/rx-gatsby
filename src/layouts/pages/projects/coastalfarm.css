@@ -9,8 +9,12 @@
 .coastalFarms #single__two{
     margin-top: 200px;
 }
+.column__second__coastal{
+    margin-top: 80px;
+}
 .column__third__coastal{
     margin-bottom: 80px;
+    margin-top: 80px;
 }
 .column__fourth__coastal{
     margin-top: 30px;
@@ -41,6 +45,13 @@
         margin-top: 50px;
     }
     .coastal__column__end{
+        margin-top: 50px;
+    }
+    .column__second__coastal{
+        margin-top: 50px;
+    }
+    .column__third__coastal{
+        margin-bottom: 50px;
         margin-top: 50px;
     }
 }
