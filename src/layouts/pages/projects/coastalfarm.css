@@ -9,7 +9,7 @@
 .coastalFarms #single__two{
     margin-top: 200px;
 }
-.column__second__coastal{
+.column__second__coastal__second{
     margin-top: 80px;
 }
 .column__third__coastal{
@@ -37,7 +37,7 @@
     .coastal__column__centered.column__right{
         padding-left: 0px;
     }
-    .column__second__coastal{
+    .column__second__coastal__second{
         margin-top: 50px;
     }
     .column__third__coastal {
@@ -47,7 +47,7 @@
     .coastal__column__end{
         margin-top: 50px;
     }
-    .column__second__coastal{
+    .column__second__coastal__second{
         margin-top: 50px;
     }
     .column__third__coastal{

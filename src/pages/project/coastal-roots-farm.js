@@ -103,7 +103,7 @@ class CoastalRootFarm extends Component {
                                         />
                                     </div>
                                     <div
-                                    className={`custom__col col-xs-12 col-sm-12 col-md-9 col-lg-9  image no__padding mix-multiply`}
+                                    className={`custom__col col-xs-12 col-sm-12 col-md-9 col-lg-9  image no__padding mix-multiply column__second__coastal__second`}
                                     key={index}
                                     data-aos="fade-up"
                                     data-aos-easing="ease-in-back"
