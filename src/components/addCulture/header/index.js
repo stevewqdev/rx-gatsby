@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <>
-    <nav className="navbar container-fluid">
+    <nav className="navbar">
       <div className="navContent">
         <div className="navToggler">
         <Frame alt="frame" tabIndex="0" />
@@ -19,7 +19,7 @@ export default function Header() {
         <a className="brand__logo" href="/news">
           <h1>AD+D <br/> CULTURE</h1>
         </a>
-        <div>
+        <div className="storiesLink">
           <p className="explore"><span> <Arrow tabIndex="0" alt="Explore Stories" /> </span>EXPLORE <strong>STORIES</strong>  </p>
         </div>
       </div>

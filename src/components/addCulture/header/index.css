@@ -1,4 +1,4 @@
-.navbar.container-fluid {
+.navbar {
   padding: 30px 40px;
   position: fixed;
   width: 100%;
@@ -37,4 +37,39 @@
   font-size: 15px;
   line-height: 18.32px;
   font-style: normal;
+}
+
+@media (max-width: 480px) {
+  .navToggler {
+    flex-grow: 0.5;
+  }
+  .explore {
+    display: none;
+  }
+}
+
+@media (max-width: 375px) and (max-height: 667px) {
+  .explore {
+    display: none;
+  }
+}
+@media (max-width: 375px) and (max-height: 812px) {
+  .explore {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .navToggler {
+    flex-grow: 0.8;
+  }
+}
+
+@media (max-width: 280px) {
+  .navToggler {
+    flex-grow: 0.5;
+  }
+  .brand__logo {
+    flex-grow: 1;
+  }
 }

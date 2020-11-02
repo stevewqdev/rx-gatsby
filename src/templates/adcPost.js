@@ -63,7 +63,7 @@ export default class AddCulturePost extends Component {
 
         <div className="postContent">
           <div className="row">
-            <div className="col-lg-4 col-sm-12">
+            <div className="col-xl-6 col-lg-4 col-sm-12">
               <div className="postInfoContainer">
                 {this.state.post.author !== null ? (
                   <div className="authorContainer">
@@ -91,14 +91,14 @@ export default class AddCulturePost extends Component {
                 </div>
               </div>
             </div>
-            <div className="col-lg-8 col-sm-12">
+            <div className="col-xl-6 col-lg-8 col-sm-12">
               <div className="postContainer">
                 <div className="content" dangerouslySetInnerHTML={{ __html: this.state.post.content }} />
 
                 {this.state.post.tags !== null ? (
                   <div className="postTagsContainer">
                     {this.state.post.tags.map((tag) => (
-                      <p className="postTag">{tag.name}</p>
+                      <Link to={`/add-culture/filter?${tag.name}`} className="postTag">{tag.name}</Link>
                     ))}
                   </div>
                 ) : (
@@ -116,9 +116,10 @@ export default class AddCulturePost extends Component {
               <h2 className="featured">Feature this month <br/> on <span>Add Culture</span></h2>
             </div>
             
-              <div className="postsGrid" style={{marginTop: '8%'}}>
+              <div className="featuredGrid" style={{marginTop: '8%'}}>
                 {this.state.featuredPosts.map(({ node }, i) => (
                   <>
+                  <Link to={`/add-culture/post/${node.slug}`}>
                     <div className={`adcSinglePost post-${i}`}>
                       <div className="contentContainer">
                         <div className="catAndDateContainer">
@@ -138,6 +139,7 @@ export default class AddCulturePost extends Component {
                         ''
                       )}
                     </div>
+                    </Link>
                   </>
                 ))}
               </div>
@@ -183,6 +185,7 @@ export const postQuery = graphql`
       }
       tags {
         name
+        slug
       }
     }
     allWordpressWpAddcultureposts(filter: {categories: {elemMatch: {slug: {eq: "featured"}}}}) {

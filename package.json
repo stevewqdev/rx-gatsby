@@ -8,6 +8,7 @@
     "@u-wave/react-vimeo": "^0.8.3",
     "@vimeo/player": "^2.11.0",
     "aos": "^2.3.4",
+    "axios": "^0.21.0",
     "bootstrap": "^4.4.1",
     "dotenv": "^8.2.0",
     "gatsby": "^2.23.1",
@@ -39,6 +40,7 @@
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
+    "react-paginate": "^6.5.0",
     "react-slick": "^0.27.12",
     "react-sticky-mouse-tooltip": "0.0.1",
     "slick-carousel": "^1.8.1"

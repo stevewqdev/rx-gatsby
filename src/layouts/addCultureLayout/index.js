@@ -105,12 +105,12 @@ const AddCultureLayout = ({ children, location }) => {
             <html lang="en" />
           </Helmet>
           <Cursor></Cursor>
-          <Header/>
           <div className="addCultureWrapper" id="addCultureWrapper">
+            <Header/>
             <div id="top"></div>
             <main>{children}</main>
+            <AddCultureFooter/>
           </div>
-          <AddCultureFooter/>
         </>
       }
     </>

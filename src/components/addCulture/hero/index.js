@@ -1,7 +1,6 @@
 import React from "react"
 import './index.css';
-import Scroll from '../../../images/addCulture/scroll.svg';
-import Line from '../../../images/addCulture/line.svg';
+import ScrollIndicator from '../../../images/addCulture/scrollIndicator.svg'
 import HeroLine from '../../../images/addCulture/heroLine.svg';
 import Plus from '../../../images/addCulture/plus.png';
 
@@ -11,8 +10,7 @@ export default function AddCultureHero() {
     <div id="addCultureHero">
       <div className="addCultureHeroContent">
         <div className="scrollIndicator">
-          <Scroll tabIndex="0" alt="Scroll" />
-          <Line tabIndex="0" alt="Line" style={{marginTop: '10px', marginLeft: '6px'}} />
+          <ScrollIndicator tabIndex="0" alt="Scroll" />
         </div>
         <div className="addCultureText">
           <div className="about">

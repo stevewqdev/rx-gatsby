@@ -228,10 +228,16 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  text-decoration: none;
   font-family: "HelveticaNeue", sans-serif;
   border: 1px solid rgba(205, 66, 117, 0.5);
   box-sizing: border-box;
   border-radius: 8px;
+  transition: all 0.5s ease-in;
+}
+
+.postTag:hover {
+  text-decoration: none;
 }
 
 .postBottomLine {
@@ -240,6 +246,7 @@
 
 .relatedPostsSection {
   padding: 0 10%;
+  margin-bottom: 5%;
   font-family: "ITC Avant Garde Pro Md", sans-serif;
   color: #222220;
 }
@@ -264,4 +271,675 @@
 .relatedHeading .featured span {
   color: #cd4275;
   text-decoration: underline;
+}
+
+.featuredGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.featuredGrid .adcSinglePost {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 100%;
+}
+
+.featuredGrid .adcSinglePost.post-0 {
+  flex-direction: row;
+  width: 570px;
+}
+.featuredGrid .adcSinglePost.post-1 {
+  flex-direction: column;
+  width: 250px;
+}
+
+@media (max-width: 4000px) {
+  .postHeader {
+    height: initial;
+  }
+  .postHeroTitle {
+    font-size: 150px;
+    line-height: 126px;
+  }
+
+  .categoryContainer p {
+    font-size: 30px;
+    width: 100%;
+    line-height: 25px;
+  }
+  .postHeroDate {
+    font-size: 130px;
+    top: 20%;
+  }
+  .postHeroImage .gatsby-image-wrapper {
+    width: 2000px;
+    height: 1500px;
+    right: -50%;
+  }
+  .postContainer {
+    padding: 15% 10%;
+  }
+
+  .content p {
+    padding-right: 0;
+  }
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4,
+  .content h5,
+  .content h6 {
+    padding-right: 0;
+  }
+
+  .featuredGrid .adcSinglePost.post-0 {
+    width: 1950px;
+  }
+
+  .featuredGrid .adcSinglePost.adcSinglePost.post-1,
+  .featuredGrid .adcSinglePost.adcSinglePost.post-2 {
+    width: 600px;
+  }
+}
+
+@media (max-width: 2560px) {
+  .postHeroImage .gatsby-image-wrapper {
+    width: 1500px;
+    height: 1000px;
+    right: -70%;
+  }
+  .postContainer {
+    padding: 30% 20%;
+  }
+  .postHeroDate {
+    font-size: 100px;
+    top: 18%;
+    left: -5%;
+  }
+  .scrollIndicator {
+    left: -18% !important;
+  }
+
+  .featuredGrid .adcSinglePost.post-0 {
+    width: 1200px;
+  }
+
+  .featuredGrid .adcSinglePost.adcSinglePost.post-1,
+  .featuredGrid .adcSinglePost.adcSinglePost.post-2 {
+    width: 400px;
+  }
+}
+
+@media (max-width: 1920px) {
+  .postHeader {
+    height: 100vh;
+  }
+  .postHeroDate {
+    font-size: 80px;
+    top: 15%;
+    left: -10%;
+  }
+
+  .postHeroTitle {
+    font-size: 120px;
+    line-height: 90px;
+  }
+  .postHeroImage .gatsby-image-wrapper {
+    width: 1200px;
+    height: 800px;
+    right: -80%;
+  }
+  .postContainer {
+    padding: 30% 10%;
+  }
+  .content p {
+    padding-right: 40%;
+  }
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4,
+  .content h5,
+  .content h6 {
+    padding-right: 25%;
+  }
+
+  .featuredGrid .adcSinglePost.post-0 {
+    width: 800px;
+  }
+
+  .featuredGrid .adcSinglePost.adcSinglePost.post-1,
+  .featuredGrid .adcSinglePost.adcSinglePost.post-2 {
+    width: 350px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .postHeroDate {
+    font-size: 80px;
+    top: 14%;
+    left: -10%;
+  }
+
+  .postHeroTitle {
+    font-size: 100px;
+    line-height: 85px;
+  }
+  .postHeroImage .gatsby-image-wrapper {
+    width: 1000px;
+    height: 600px;
+    right: -140%;
+  }
+  .postContainer {
+    padding-right: 65%;
+  }
+  .featuredGrid .adcSinglePost.post-0 {
+    width: 520px;
+  }
+
+  .featuredGrid .adcSinglePost.adcSinglePost.post-1,
+  .featuredGrid .adcSinglePost.adcSinglePost.post-2 {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .postHeroDate {
+    font-size: 60px;
+    top: 14%;
+    left: -10%;
+  }
+
+  .postContainer {
+    padding-right: 90%;
+  }
+
+  .postHeroTitle {
+    font-size: 80px;
+    line-height: 70px;
+  }
+  .postHeroImage .gatsby-image-wrapper {
+    width: 800px;
+    height: 600px;
+    right: -140%;
+  }
+  .featuredGrid .adcSinglePost.post-0 {
+    width: 600px;
+  }
+
+  .featuredGrid .adcSinglePost.adcSinglePost.post-1,
+  .featuredGrid .adcSinglePost.adcSinglePost.post-2 {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .headerContainer {
+    flex-direction: column;
+  }
+  .postHeader {
+    padding: 10% 0;
+  }
+  .postHeroDate {
+    font-size: 30px;
+    position: initial;
+    text-align: center;
+  }
+
+  .postContainer {
+    padding-right: 10%;
+  }
+
+  .postHeroContent {
+    z-index: 10;
+    top: 35vh;
+  }
+
+  .postHeroContent .postHeroTitle {
+    padding: 0 5%;
+    font-size: 20px;
+    line-height: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .postHeroImage .gatsby-image-wrapper {
+    position: relative !important;
+    right: 0;
+    top: -35vh;
+    z-index: 0;
+    width: 100%;
+    height: 115vh;
+  }
+
+  .heroLine {
+    display: none;
+  }
+
+  .categoryContainer {
+    position: initial;
+    margin-bottom: 10%;
+  }
+
+  .categoryContainer p {
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .scrollIndicator {
+    display: none;
+  }
+  .socials {
+    flex-direction: row;
+    margin-top: 20%;
+  }
+
+  .postInfoContainer {
+    padding: 30% 10%;
+    width: 100%;
+  }
+
+  .postContainer {
+    width: 100%;
+  }
+
+  .content {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .content p {
+    padding: 5% 0;
+  }
+
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4,
+  .content h5,
+  .content h6 {
+    padding: 0;
+    margin-right: 0;
+  }
+
+  .relatedHeading .wantMore {
+    margin-bottom: 10%;
+    font-size: 12px;
+  }
+  .relatedHeading .featured {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .featuredGrid .adcSinglePost .catAndDateContainer .postCategory,
+  .featuredGrid .adcSinglePost .catAndDateContainer .postDate {
+    font-size: 12px !important;
+  }
+
+  .featuredGrid .adcSinglePost {
+    width: 200px;
+  }
+  .featuredGrid .adcSinglePost.post-0 {
+    width: 400px;
+  }
+
+  .featuredGrid .adcSinglePost.post-1 {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerContainer {
+    flex-direction: column;
+  }
+  .postHeader {
+    padding: 10% 0;
+  }
+  .postHeroDate {
+    font-size: 30px;
+    position: initial;
+    text-align: center;
+  }
+
+  .postHeroContent {
+    z-index: 10;
+    top: 35vh;
+  }
+
+  .postHeroContent .postHeroTitle {
+    padding: 0 5%;
+    font-size: 20px;
+    line-height: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .postHeroImage .gatsby-image-wrapper {
+    position: relative !important;
+    right: 0;
+    top: -35vh;
+    z-index: 0;
+    width: 100%;
+    height: 110vh;
+  }
+
+  .heroLine {
+    display: none;
+  }
+
+  .categoryContainer {
+    position: initial;
+    margin-bottom: 10%;
+  }
+
+  .categoryContainer p {
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .scrollIndicator {
+    display: none;
+  }
+  .postInfoContainer {
+    padding: 5% 10%;
+  }
+  .socials {
+    flex-direction: row;
+    margin-top: 20%;
+  }
+  .postContainer {
+    padding: 5% 10%;
+    width: 100%;
+  }
+
+  .postContainer {
+    padding: 5% 10%;
+    width: 100%;
+  }
+
+  .content {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .content p {
+    padding: 5% 0;
+  }
+
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4,
+  .content h5,
+  .content h6 {
+    padding: 0;
+    margin-right: 0;
+  }
+
+  .relatedHeading .wantMore {
+    margin-bottom: 10%;
+    font-size: 12px;
+  }
+  .relatedHeading .featured {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .featuredGrid .adcSinglePost .catAndDateContainer .postCategory,
+  .featuredGrid .adcSinglePost .catAndDateContainer .postDate {
+    font-size: 12px !important;
+  }
+
+  .featuredGrid .adcSinglePost {
+    width: 300px;
+  }
+
+  .featuredGrid .adcSinglePost.post-0 {
+    flex-direction: column;
+    width: 300px;
+  }
+
+  .featuredGrid .adcSinglePost.adcSinglePost.post-1,
+  .featuredGrid .adcSinglePost.adcSinglePost.post-2 {
+    width: 300px;
+  }
+}
+
+@media (max-width: 540px) {
+  .headerContainer {
+    flex-direction: column;
+  }
+  .postHeader {
+    padding: 10% 0;
+  }
+  .postHeroDate {
+    font-size: 30px;
+    position: initial;
+    text-align: center;
+  }
+
+  .postHeroContent {
+    z-index: 10;
+    top: 35vh;
+  }
+
+  .postHeroContent .postHeroTitle {
+    padding: 0 5%;
+    font-size: 20px;
+    line-height: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .postHeroImage .gatsby-image-wrapper {
+    position: relative !important;
+    right: 0;
+    top: -35vh;
+    z-index: 0;
+    width: 100%;
+    height: 105vh;
+  }
+  .heroLine {
+    display: none;
+  }
+
+  .categoryContainer {
+    position: initial;
+    margin-bottom: 10%;
+  }
+
+  .categoryContainer p {
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .scrollIndicator {
+    display: none;
+  }
+
+  .postInfoContainer {
+    padding: 5% 10%;
+  }
+  .socials {
+    flex-direction: row;
+    margin-top: 20%;
+  }
+  .postContainer {
+    padding: 5% 10%;
+    width: 100%;
+  }
+
+  .content {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .content p {
+    padding: 5% 0;
+  }
+
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4,
+  .content h5,
+  .content h6 {
+    padding: 0;
+    margin-right: 0;
+  }
+
+  .relatedHeading .wantMore {
+    margin-bottom: 10%;
+    font-size: 12px;
+  }
+  .relatedHeading .featured {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .featuredGrid .adcSinglePost .catAndDateContainer .postCategory,
+  .featuredGrid .adcSinglePost .catAndDateContainer .postDate {
+    font-size: 12px !important;
+  }
+
+  .featuredGrid {
+    margin-bottom: 10%;
+  }
+
+  .featuredGrid .adcSinglePost {
+    width: 210px !important;
+  }
+
+  .featuredGrid .adcSinglePost.post-2 {
+    width: 210px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerContainer {
+    flex-direction: column;
+  }
+  .postHeader {
+    padding: 10% 0;
+  }
+
+  .postHeroDate {
+    font-size: 30px;
+    position: initial;
+    text-align: center;
+  }
+
+  .postHeroContent {
+    z-index: 10;
+    top: 35vh;
+  }
+
+  .postHeroContent .postHeroTitle {
+    padding: 0 5%;
+    font-size: 20px;
+    line-height: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .postHeroImage .gatsby-image-wrapper {
+    position: relative !important;
+    right: 0;
+    top: -35vh;
+    z-index: 0;
+    width: 100%;
+    height: 105vh;
+  }
+
+  .heroLine {
+    display: none;
+  }
+
+  .categoryContainer {
+    position: initial;
+    margin-bottom: 10%;
+  }
+
+  .categoryContainer p {
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .scrollIndicator {
+    display: none;
+  }
+
+  .postInfoContainer,
+  .postContainer {
+    padding: 10%;
+  }
+  .postExcerpt {
+    font-size: 18px;
+  }
+
+  .socials {
+    flex-direction: row;
+    margin-top: 20%;
+  }
+
+  .content {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .content p {
+    padding: 5% 0;
+  }
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4,
+  .content h5,
+  .content h6 {
+    padding: 0;
+    margin-right: 0;
+  }
+  .relatedHeading .wantMore {
+    margin-bottom: 10%;
+    font-size: 12px;
+  }
+  .relatedHeading .featured {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .featuredGrid .adcSinglePost .catAndDateContainer .postCategory,
+  .featuredGrid .adcSinglePost .catAndDateContainer .postDate {
+    font-size: 12px !important;
+  }
+
+  .featuredGrid {
+    justify-content: center;
+  }
+
+  .featuredGrid .adcSinglePost,
+  .featuredGrid .adcSinglePost.post-0,
+  .featuredGrid .adcSinglePost.post-1,
+  .featuredGrid .adcSinglePost.post-2 {
+    width: 300px !important;
+  }
+
+  /* .featuredGrid .adcSinglePost.post-0 {
+    flex-direction: column;
+    width: 300px;
+  }
+
+  .featuredGrid .adcSinglePost.adcSinglePost.post-1,
+  .featuredGrid .adcSinglePost.adcSinglePost.post-2 {
+    width: 300px;
+  } */
+}
+
+@media (max-width: 375px) {
+  .postHeroImage .gatsby-image-wrapper {
+    height: 110vh;
+  }
 }

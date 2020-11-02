@@ -1,39 +1,60 @@
 import React from 'react';
 import Slider from 'react-slick';
-import SliderTest from '../../../images/addCulture/sliderTest.svg';
-import NextArrow from '../../../images/addCulture/nextArrow.svg'
-import PrevArrow from '../../../images/addCulture/prevArrow.svg'
+import Img from 'gatsby-image';
+import { Link } from 'gatsby';
+import NextArrow from '../../../images/addCulture/nextArrow.png'
+import PrevArrow from '../../../images/addCulture/prevArrow.png'
 import './index.css';
 
 export default class AddCultureSlider extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      featured: this.props.featured
+    }
+  }
+  
+
   render() {
+    
     const settings = {
       dots: false,
       arrows: true,
       infinite: true,
       speed: 300,
-      centerMode: true,
+      centerMode: false,
       className: 'featuredSlider',
       slidesToShow: 1,
-      nextArrow: <NextArrow tabIndex="0" alt="Next post" />,
-      prevArrow: <PrevArrow tabIndex="0" alt="Previous post" />,
-      onInit: function slider3d() {
-        let slides = document.querySelectorAll('.featuredSlider .slick-slide');
+      nextArrow: <img src={NextArrow} alt="Next post"/>,
+      prevArrow: <img src={PrevArrow} alt="Previous post" />,
+      onInit: function addClasses() {
+        let slides = document.querySelectorAll('.featuredSlider .slick-slide');        
         slides.forEach((slide, i, slides) => {
           let prevSlide = slides[i - 1];
           let nextSlide = slides[i + 1];
-          if(slide.classList.contains('slick-active')) {
+          if(slide[i] === slides.length - 1) {
+            nextSlide = slides[0];
+          }
+          if (slide.classList.contains('slick-active')) {
             prevSlide.classList.add('slick-sprev');
             nextSlide.classList.add('slick-snext');
           }
         })
       },
-      afterChange: function slider3d() {
-        let slides = document.querySelectorAll('.slick-slide');
+      beforeChange: function removeClasses() {
+        let slides = document.querySelectorAll('.featuredSlider .slick-slide');
         slides.forEach((slide, i, slides) => {
+          if(slide.classList.contains('slick-sprev')) {
+            slide.classList.remove('slick-sprev');
+          } else if(slide.classList.contains('slick-snext')) {
+            slide.classList.remove('slick-next');
+          }
           let prevSlide = slides[i - 1];
           let nextSlide = slides[i + 1];
-          if(slide.classList.contains('slick-active')) {
+          if(slide[i] === slides.length - 1) {
+            nextSlide = slides[0];
+          }
+          if (slide.classList.contains('slick-active')) {
             prevSlide.classList.add('slick-sprev');
             nextSlide.classList.add('slick-snext');
           }
@@ -41,34 +62,21 @@ export default class AddCultureSlider extends React.Component {
       },
     }
     return (
-      <div>
         <Slider {...settings}>
-          <div>
-            <SliderTest tabIndex="0" alt="Slider Test"/>
-            <div className="catAndDate">
-              <p>Culture <span>07.04.20</span></p>
+          {this.state.featured.map((post) => (
+            <div>
+              <Img fluid={post.featured_media.localFile.childImageSharp.fluid} className="featuredImage" alt={post.title} />
+              <div className="featuredPreview">
+                <div className="catAndDate">
+                  <p className="featuredCat">{post.categories[0].name}</p>
+                  <p className="featuredDate">{post.date}</p>
+                </div>
+                <h1 className="titleText">{post.title}</h1>
+                <Link to={`/add-culture/post/${post.slug}`}>READ MORE+</Link>
+              </div>
             </div>
-            <h1 className="titleText">HERE IS A TITLE FOR THE NOTE <br/> AND SOME MORE TEXT MORE TEXT</h1>
-            <a href="/news">READ MORE+</a>
-          </div>
-          <div>
-            <SliderTest tabIndex="0" alt="Slider Test"/>
-            <div className="catAndDate">
-              <p>Culture <span>07.04.20</span></p>
-            </div>
-            <h1 className="titleText">HERE IS A TITLE FOR THE NOTE <br/> AND SOME MORE TEXT MORE TEXT</h1>
-            <a href="/news">READ MORE+</a>
-          </div>
-          <div>
-            <SliderTest tabIndex="0" alt="Slider Test"/>
-            <div className="catAndDate">
-              <p>Culture <span>07.04.20</span></p>
-            </div>
-            <h1 className="titleText">HERE IS A TITLE FOR THE NOTE <br/> AND SOME MORE TEXT MORE TEXT</h1>
-            <a href="/news">READ MORE+</a>
-          </div>
+          ))}
         </Slider>
-      </div>
     )
   }
 }

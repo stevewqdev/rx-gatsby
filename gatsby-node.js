@@ -12,6 +12,7 @@ const queryDiverse = require(`./src/queries/queryDiverse.js`);
 const queryWhy = require(`./src/queries/queryWhy.js`);
 const queryStories = require(`./src/queries/queryStories.js`);
 const queryRepresentation = require(`./src/queries/queryRepresentation.js`);
+const queryFilter = require(`./src/queries/queryFilter.js`)
 const createPaginatedPages = require(`gatsby-paginate`)
 
 exports.createPages = ({ graphql, actions }) => {
@@ -24,7 +25,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     // We set the variables for the default templates
-    const postTemplate = path.resolve("./src/templates/post.js")
+    // const postTemplate = path.resolve("./src/templates/post.js")
     const adcPostTemplate = path.resolve('./src/templates/adcPost.js')
 
     resolve(
@@ -32,8 +33,8 @@ exports.createPages = ({ graphql, actions }) => {
         if (result.errors) reject(result.errors)
         // Posts detail
         // Here we retrieve all the posts
-        const posts = result.data.allWordpressPost.edges
-
+        const posts = result.data.allWordpressWpAddcultureposts.edges
+        console.log(posts);
         // And we paginate them
         createPaginatedPages({
           edges: posts,
@@ -56,10 +57,22 @@ exports.createPages = ({ graphql, actions }) => {
       })
     )
     resolve(
+      graphql(queryFilter).then(result => {
+        if(result.errors) reject(result.errors)
+        const tagPosts = result.data.allWordpressWpAddcultureposts.edges;
+        createPaginatedPages({
+          edges: tagPosts,
+          createPage: createPage,
+          pageTemplate: "src/templates/filter.js",
+          pageLength: 1000,
+          pathPrefix: "add-culture/filter/"
+        })
+      })
+    )
+    resolve(
       graphql(queryMinority).then(result => {
         if(result.errors) reject(result.errors)
         const minorityPosts = result.data.allWordpressWpAddcultureposts.edges
-        console.log(minorityPosts.featured_media);
         createPaginatedPages({
           edges: minorityPosts,
           createPage: createPage,
@@ -140,7 +153,7 @@ exports.createPages = ({ graphql, actions }) => {
           createPage: createPage,
           pageTemplate: "src/templates/stories.js",
           pageLength: 1000,
-          pathPrefix: "news/stories",
+          pathPrefix: "add-culture/stories",
         })
 
         // Loop through the posts
@@ -159,7 +172,6 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(queryRepresentation).then(result => {
         if(result.errors) reject(result.errors)
         const representationPosts = result.data.allWordpressWpAddcultureposts.edges
-        console.log(representationPosts);
         createPaginatedPages({
           edges: representationPosts,
           createPage: createPage,

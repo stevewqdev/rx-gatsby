@@ -1,67 +1,122 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Slider from 'react-slick'
-import PopularSliderTest from '../../../images/addCulture/popularSliderTest.png'
-import NextArrow from '../../../images/addCulture/nextArrow.svg'
-import PrevArrow from '../../../images/addCulture/prevArrow.svg'
+import Img from 'gatsby-image'
+import { Link } from 'gatsby';
+import NextArrow from '../../../images/addCulture/nextArrow.png'
+import PrevArrow from '../../../images/addCulture/prevArrow.png'
 import './popular.css'
 
-export default class PopularSlider extends React.Component {
+export default class PopularSlider extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      popular: this.props.popular,
+    }
+  }
+
   render() {
     const settings = {
       dots: false,
       arrows: true,
-      infinite: false,
+      infinite: true,
       speed: 300,
-      centerMode: true,
+      centerMode: false,
       className: 'popularSlider',
-      slidesToShow: 1,
-      nextArrow: <NextArrow tabIndex="0" alt="Next post" />,
-      prevArrow: <PrevArrow tabIndex="0" alt="Previous post" />,
-      onInit: function popular3d() {
-        let slides = document.querySelectorAll('.slick-slide');
-        slides.forEach((slide, i, slides) => {
-          let prevSlide = slides[i - 1];
-          let nextSlide = slides[i + 1];
-          if(slide.classList.contains('slick-active')) {
-            prevSlide.classList.add('popular-prev');
-            nextSlide.classList.add('popular-next');
+      slidesToShow: 3,
+      slidesToScroll: 4,
+      nextArrow: <img src={NextArrow} alt="Next post" />,
+      prevArrow: <img className="slick-prev" src={PrevArrow} alt="Previous post" />,
+      onInit: function showData() {
+        const posts = document.querySelectorAll('.popularSlider .slick-slide');
+        let title = '';
+        let category = '';
+        let date = '';
+        let slug = '';
+        let featuredImage = '';
+        let placeholderContainer = document.getElementById('placeholderContainer');
+        posts.forEach((post) => {
+          if(post.classList.contains('slick-active')) {
+            title = post.querySelector('.titleText').textContent;
+            category = post.querySelector('.popularCat').textContent;
+            date = post.querySelector('.popularDate').textContent;
+            slug = post.querySelector('.content a').getAttribute('href');
+            featuredImage = post.querySelectorAll('img').getAttribute('src');
+            const printData = `
+            <img src="${featuredImage}" alt="${title}" />
+            <div className="infoContainer">
+              <p className="popularCategory">${category}</p>
+              <p className="popDate">${date}</p>
+            </div>
+            <h1 className="postTitleText">${title}</h1>
+            <Link to="${slug}">READ MORE+</Link>
+          `;
+          console.log(printData);
+          placeholderContainer.innerHTML += printData;
+            
+            // // image.forEach((img) => {
+            // //   featuredImage = img[2].currentSrc;
+            // // })
           }
         })
+    
+        
       },
-    }
+      // afterChange: function showData() {
+      //   const posts = document.querySelectorAll('.popularSlider .slick-slide');
+      //   let title = '';
+      //   let category = '';
+      //   let date = '';
+      //   let slug = '';
+      //   let featuredImage = '';
+      //   let placeholderContainer = document.getElementById('placeholderContainer');
+      //   posts.forEach((post) => {
+      //     if(post.classList.contains('slick-active')) {
+      //       title = post.querySelector('.titleText').textContent;
+      //       category = post.querySelector('.popularCat').textContent;
+      //       date = post.querySelector('.popularDate').textContent;
+      //       slug = post.querySelector('.content a').getAttribute('href');
+      //       featuredImage = post.querySelector('img').getAttribute('src');
+            
+      //     }
+      //   })
+    
+      //   const printData = `
+      //     <img src=${featuredImage} alt=${title} className="popularImage" />
+      //     <div className="infoContainer">
+      //       <p className="popularCategory">${category}</p>
+      //       <p className="popDate">${date}</p>
+      //     </div>
+      //     <h1 className="postTitleText">${title}</h1>
+      //     <Link to='/add-culture/post/${slug}'>READ MORE+</Link>
+      //   `;
+      //   placeholderContainer.innerHTML = '';
+      //   placeholderContainer.innerHTML += printData;
+      // }
+  }
   return (
-    <div style={{maxWidth: '100vw', width: '100%'}}>
+    <div className="activePlaceholder">
+      <div id="placeholderContainer"></div>
       <Slider {...settings}>
-      <div>
-        <img src={PopularSliderTest} alt="Popular"/>
-        <div className="content">
-          <div className="catAndDate">
-            <p>Culture <span>07.04.20</span></p>
-          </div>
-          <h1 className="titleText">HERE IS A TITLE FOR THE NOTE <br/> AND SOME MORE TEXT MORE TEXT</h1>
-          <a href="/news">READ MORE+</a>
-        </div>
-      </div>
-      <div>
-        <img src={PopularSliderTest} alt="Popular"/>
-        <div className="content">
-          <div className="catAndDate">
-            <p>Culture <span>07.04.20</span></p>
-          </div>
-          <h1 className="titleText">HERE IS A TITLE FOR THE NOTE <br/> AND SOME MORE TEXT MORE TEXT</h1>
-          <a href="/news">READ MORE+</a>
-        </div>
-      </div>
-      <div>
-        <img src={PopularSliderTest} alt="Popular"/>
-        <div className="content">
-          <div className="catAndDate">
-            <p>Culture <span>07.04.20</span></p>
-          </div>
-          <h1 className="titleText">HERE IS A TITLE FOR THE NOTE <br/> AND SOME MORE TEXT MORE TEXT</h1>
-          <a href="/news">READ MORE+</a>
-        </div>
-      </div>
+        {
+          this.state.popular.map((post) => (
+            <div>
+              <Img fluid={post.featured_media.localFile.childImageSharp.fluid} className="popularImage" alt={post.title}/>
+              <div className="content">
+                <div className="catAndDate">
+                  {post.categories.map((category) => (
+                    category.name !== 'Featured' || category.name !== 'Popular' ? (
+                      <p className="popularCat">{category.name}</p>
+                    ) : (
+                      <p className="popularCat">Uncategorized</p>
+                    )
+                  ))}
+                  <p className="popularDate">{post.date}</p>
+                </div>
+                <h1 className="titleText">{post.title}</h1>
+                <Link to={`/add-culture/post/${post.slug}`}>READ MORE+</Link>
+              </div>
+            </div>
+          ))}
     </Slider>
   </div>
   )

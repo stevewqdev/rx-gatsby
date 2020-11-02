@@ -1,9 +1,10 @@
-import React from "react"
+import React, { Component } from "react"
 import AddCultureLayout from "../layouts/addCultureLayout/index"
 import AddCultureHero from '../components/addCulture/hero/index'
 import { graphql, Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import MouseTooltip from "react-sticky-mouse-tooltip"
+import ReactPaginate from 'react-paginate'
 import Img from "gatsby-image"
 import AddCultureSlider from "../components/addCulture/slider/index"
 import PopularSlider from '../components/addCulture/slider/popular'
@@ -21,12 +22,15 @@ import IdentityEllipse from '../images/addCulture/identityEllipse.svg';
 import IdentityVector from '../images/addCulture/identityVector5.svg'
 import './posts.css'
 
-export default class PostsIndex extends React.Component {
+export default class PostsIndex extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isMouseTooltipVisible: false,
-      posts: [],
+      posts: this.props.data.allWordpressWpAddcultureposts.edges,
+      offset: 0,
+      perPage: 8,
+      currentPage: 0
     }
 
     this.showTooltip = this.showTooltip.bind(this)
@@ -36,17 +40,6 @@ export default class PostsIndex extends React.Component {
   showTooltip(event) {
     const tooltip = document.getElementById(`${event.target.id}-container`);
     tooltip.classList.add('show');
-    // if(tooltip.classList.contains('minority')) {
-    //   tooltip.classList.add('minorityImg');
-    // } else if(tooltip.classList.contains('diverse')) {
-    //   tooltip.classList.add('diverseImg');
-    // } else if(tooltip.classList.contains('why')) {
-    //   tooltip.classList.add('whyImg');
-    // } else if(tooltip.classList.contains('stories')) {
-    //   tooltip.classList.add('storiesImg')
-    // } else if(tooltip.classList.contains('representation')) {
-    //   tooltip.classList.add('representationImg');
-    // }
     this.setState(
       prevState => ({ 
         isMouseTooltipVisible: !prevState.isMouseTooltipVisible 
@@ -62,13 +55,78 @@ export default class PostsIndex extends React.Component {
       }));
   }
 
+  formatData() {
+    const data = this.state.posts;
+    const slice = data.slice(this.state.offset, this.state.offset + this.state.perPage);
+    const postData = slice.map(({ node }, i) => <React.Fragment>
+      <Link to={`/add-culture/post/${node.slug}`}>
+        <div className={`adcSinglePost post-${i}`}>
+          <div className="contentContainer">
+            <div className="catAndDateContainer">
+              <Link to={`/add-culture/post/${node.categories[0].slug.toLowerCase()}`} className="postCategory">{node.categories[0].name}</Link>
+              <p className="postDate">{node.date}</p>
+            </div>
+            <h2 className="postTitle">{node.title}</h2>
+          </div>
+          
+          {node.featured_media.localFile.childImageSharp !== null ? (
+            <Img fluid={node.featured_media.localFile.childImageSharp.fluid} />
+          ) : (
+            ''
+          )}
+        </div>
+      </Link>
+    </React.Fragment>)
+
+    this.setState({
+      pageCount: Math.ceil(data.length / this.state.perPage),
+      postData
+    })
+  }
+
+  handlePageClick = (e) => {
+    const selectedPage = e.selected;
+    console.log(this.state.perPage)
+    const offset = selectedPage * this.state.perPage;
+
+    this.setState({
+      currentPage: selectedPage,
+      offset: offset,
+    }, () => {
+      this.formatData();
+    })
+  }
   
   componentDidMount() {
-    this.getPosts();
+    this.formatData();
   }
 
   render() {
     const postsData = this.props.data.allWordpressWpAddcultureposts.edges;
+    const featured = [];
+    const popular = [];
+    function getFeatured() {
+      postsData.map(({node}) => {
+        node.categories.map((category) => {
+          if(category.name === 'Featured') {
+            return featured.push(node);
+          }
+        })
+      })
+    }
+
+    function getPopular() {
+      postsData.map(({node}) => {
+        node.categories.map((category) => {
+          if(category.name === 'Popular') {
+            return popular.push(node);
+          }
+        })
+      })
+    }
+    getFeatured();
+    getPopular();
+
     return (
       <AddCultureLayout>
         <Helmet>
@@ -81,36 +139,33 @@ export default class PostsIndex extends React.Component {
           <AddCultureHero />
           <div className="addCultureContainer">
             <div className="featuredContent">
-              <h1 className="featuredText">FEATURE <br/> THIS <br/> MONTH</h1>
-                <AddCultureSlider className="slider" />
+              <h1 className="featuredText">FEATURED <br/> THIS <br/> MONTH</h1>
+                <AddCultureSlider className="slider" featured={featured} />
             </div>
-  
+            
             <div id="blogPosts" className="addCultureBlogPosts">
               <div className="row">
                 <div className="scrollIndicatorDark">
                   <ScrollIndicatorDark tabIndex="0" alt="Scroll" />
                 </div>
-                <div className="postsGrid">
-                  {postsData.map((post, i) => (
-                    <>
-                      <div className={`adcSinglePost post-${i}`}>
-                        <div className="contentContainer">
-                          <div className="catAndDateContainer">
-                            <Link to={`/post/${post.node.categories[0].slug.toLowerCase()}`} className="postCategory">{post.node.categories[0].name}</Link>
-                            <p className="postDate">{post.node.date}</p>
-                          </div>
-                          <h2 className="postTitle">{post.node.title}</h2>
-                        </div>
-                        
-                        {post.node.featured_media.localFile.childImageSharp !== null ? (
-                          <Img fluid={post.node.featured_media.localFile.childImageSharp.fluid} />
-                        ) : (
-                          ''
-                        )}
-                      </div>
-                    </>
-                  ))}
+                <div className="col-lg-12 col-md-12">
+                  <div className="postsGrid">
+                  {this.state.postData}
+                  <ReactPaginate
+                    previousLabel={""}
+                    nextLabel={""}
+                    breakLabel={"..."}
+                    breakClassName={"break-me"}
+                    pageCount={this.state.pageCount}
+                    marginPagesDisplayed={2}
+                    pageRangeDisplayed={5}
+                    onPageChange={this.handlePageClick}
+                    containerClassName={"pagination"}
+                    subContainerClassName={"pages pagination"}
+                    activeClassName={"active"}/>
+                  </div>
                 </div>
+                
               </div>
               
             </div>
@@ -122,7 +177,7 @@ export default class PostsIndex extends React.Component {
                   
                 </div>
                 <h1 className="popularHeading">POPULAR <br/> THIS <br/> MONTH</h1>
-                {/* <PopularSlider /> */}
+                  {/* <PopularSlider popular={popular} /> */}
               </div>
             </div>
 
@@ -131,17 +186,17 @@ export default class PostsIndex extends React.Component {
                 <div className="scrollIndicatorDark">
                   <ScrollIndicatorDark tabIndex="0" alt="Scroll" />
                 </div>
-                <IdentityTriangle tabIndex="0" alt="Triangle" style={{ marginTop: '15%', marginLeft: '8%', position: 'absolute' }} />
-                <IdentityTopEllipses tabIndex="0" alt="Top Ellipses" style={{ position: 'absolute', left: '60%' }} />
-                <IdentityInverseVector tabIndex="0" alt="Inverse Vector" style={{position: 'absolute', right: '0', top: '15%'}} />
-                <IdentityLine tabIndex="0" alt="Line" style={{ position: 'absolute', marginLeft: '-3%' }} />
-                <IdentityCircles tabIndex="0" alt="Circles" style={{position: 'absolute', marginLeft: '8%', bottom: '5%'}} />
-                <IdentityHalfCircle tabIndex="0" alt="Bottom Circle" style={{position: 'absolute', bottom: '0', marginLeft: '17%'}} />
+                <IdentityTriangle className="identityTriangle" tabIndex="0" alt="Triangle"/>
+                <IdentityTopEllipses className="identityTopEllipses" tabIndex="0" alt="Top Ellipses" />
+                <IdentityInverseVector className="identityInverseVector" tabIndex="0" alt="Inverse Vector" />
+                <IdentityLine className="identityLine" tabIndex="0" alt="Line" />
+                <IdentityCircles className="identityCircles" tabIndex="0" alt="Circles" />
+                <IdentityHalfCircle className="identityHalfCircle" tabIndex="0" alt="Bottom Circle" />
                 <div className="identityContent">
-                  <IdentityScratch tabIndex="0" alt="Identity Scratch" style={{position: 'absolute', left: '36%', bottom: '29%'}} />
-                  <IdentityPlus tabIndex="0" alt="Plus Symbol" style={{position: 'absolute', zIndex: '0', right: '10%'}} />
-                  <IdentityEllipse tabIndex="0" alt="Ellipse" style={{position: 'absolute', left: '70%', bottom: '12%'}} />
-                  <IdentityVector tabIndex="0" alt="Vector" style={{ position: 'absolute', left: '28%', bottom: '18%' }} />
+                  <IdentityScratch className="identityScratch" tabIndex="0" alt="Identity Scratch" />
+                  <IdentityPlus className="identityPlus" tabIndex="0" alt="Plus Symbol" />
+                  <IdentityEllipse className="identityEllipse" tabIndex="0" alt="Ellipse" />
+                  <IdentityVector className="identityVector" tabIndex="0" alt="Vector" />
                   <h1 class="identityHeading">AD+D <br/> CULTURE</h1>
                   <p class="identityText">
                     AMPLIFYING THE VOICES <br/> THAT SET THE TONE
@@ -259,3 +314,4 @@ export const blogQuery = graphql`
       }
     }
   }`;
+  
