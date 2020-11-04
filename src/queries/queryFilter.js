@@ -14,6 +14,11 @@ module.exports = `
             name
             slug
           }
+          tags {
+            id
+            name
+            slug
+          }
           featured_media{
             source_url
             alt_text

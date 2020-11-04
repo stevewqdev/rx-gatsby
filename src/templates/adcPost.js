@@ -23,7 +23,7 @@ export default class AddCulturePost extends Component {
     }
   }
   componentDidMount() {
-    console.log(this.state.featuredPosts);
+    console.log(this.state.post);
   }
   render() {
     return (
@@ -98,7 +98,7 @@ export default class AddCulturePost extends Component {
                 {this.state.post.tags !== null ? (
                   <div className="postTagsContainer">
                     {this.state.post.tags.map((tag) => (
-                      <Link to={`/add-culture/filter?${tag.name}`} className="postTag">{tag.name}</Link>
+                      <Link to={`/add-culture/filter?${tag.slug}`} className="postTag">{tag.name}</Link>
                     ))}
                   </div>
                 ) : (
@@ -184,6 +184,7 @@ export const postQuery = graphql`
         slug
       }
       tags {
+        id
         name
         slug
       }

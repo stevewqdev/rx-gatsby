@@ -70,7 +70,6 @@ export default class Diverse extends Component {
   
   componentDidMount() {
     this.formatData();
-    console.log(this.state.posts);
   }
 
   render() {

@@ -1,0 +1,359 @@
+.filterLine {
+  position: absolute;
+  z-index: 1;
+  width: 15%;
+}
+
+.filterWrapper {
+  background: #e5e5e5;
+  padding: 10%;
+  font-family: "ITC Avant Garde Pro Md", sans-serif;
+  position: relative;
+}
+
+.filterHeaderContainer {
+  margin: 5% 10%;
+}
+
+.filterHeaderContainer p {
+  color: #cd4275;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: bold;
+}
+
+.filterHeaderContainer h1 {
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: bold;
+  font-style: normal;
+  color: #222220;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.filterHeaderContainer h1 > span {
+  font-size: 16px;
+  position: absolute;
+  bottom: 35%;
+  left: 31%;
+}
+
+.filterTerms {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.filterTerms p {
+  color: #222220;
+}
+
+.filterTerms ul {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  list-style-type: none;
+  color: #cd4275;
+}
+
+.filterTerms ul li {
+  margin-right: 20px;
+}
+
+.filterPosts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.filterPosts .adcSinglePost {
+  width: 500px;
+  flex-direction: row;
+  padding: 15px 0;
+}
+
+.filterPosts .adcSinglePost .contentContainer {
+  order: 2;
+  margin-left: 10px;
+}
+
+.filterPosts .adcSinglePost .gatsby-image-wrapper {
+  width: 100%;
+  max-width: 300px;
+  order: 1;
+  height: auto;
+}
+
+@media (max-width: 4000px) {
+  .filterWrapper {
+    padding: 10% 2%;
+  }
+
+  .filterHeaderContainer p {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .filterHeaderContainer h1 {
+    font-size: 100px;
+    line-height: 120px;
+  }
+  .filterHeaderContainer h1 > span {
+    left: 15%;
+    font-size: 30px;
+  }
+  .filterTerms {
+    font-size: 25px;
+  }
+  .filterPosts .adcSinglePost {
+    width: 1900px;
+    justify-content: flex-start;
+  }
+  .filterPosts
+    .adcSinglePost
+    .contentContainer
+    .catAndDateContainer
+    .postCategory,
+  .filterPosts .adcSinglePost .contentContainer .catAndDateContainer .postDate {
+    font-size: 20px;
+  }
+  .filterPosts .adcSinglePost .contentContainer .postTitle {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 2560px) {
+  .filterWrapper {
+    padding: 10% 2%;
+  }
+  .filterHeaderContainer h1 > span {
+    left: 23%;
+    bottom: 28%;
+  }
+  .filterPosts .adcSinglePost {
+    width: 1200px;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 1920px) {
+  .filterWrapper {
+    padding: 10% 2%;
+  }
+  .filterHeaderContainer h1 > span {
+    left: 30%;
+  }
+  .filterPosts .adcSinglePost {
+    width: 900px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .filterWrapper {
+    padding: 10% 5%;
+  }
+  .filterHeaderContainer h1 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .filterHeaderContainer h1 > span {
+    left: 26%;
+    bottom: 25%;
+  }
+  .filterPosts .adcSinglePost {
+    width: 630px;
+  }
+
+  .filterPosts
+    .adcSinglePost
+    .contentContainer
+    .catAndDateContainer
+    .postCategory,
+  .filterPosts .adcSinglePost .contentContainer .catAndDateContainer .postDate {
+    font-size: 15px;
+  }
+  .filterPosts .adcSinglePost .contentContainer .postTitle {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .filterHeaderContainer h1 > span {
+    left: 29%;
+  }
+  .filterPosts .adcSinglePost {
+    width: 550px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .filterWrapper {
+    padding: 15% 5%;
+  }
+  .filterHeaderContainer h1 > span {
+    left: 37%;
+  }
+  .filterTerms {
+    font-size: 18px;
+  }
+  .filterPosts .adcSinglePost {
+    width: 450px;
+  }
+  .filterPosts
+    .adcSinglePost
+    .contentContainer
+    .catAndDateContainer
+    .postCategory,
+  .filterPosts .adcSinglePost .contentContainer .catAndDateContainer .postDate {
+    font-size: 12px;
+  }
+  .filterPosts .adcSinglePost .contentContainer .postTitle {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filterLine {
+    display: none;
+  }
+  .filterWrapper {
+    padding: 20% 5%;
+  }
+  .filterHeaderContainer {
+    margin: 0;
+  }
+  .filterHeaderContainer h1 > span {
+    font-size: 16px;
+    left: 38.5%;
+  }
+
+  .filterPosts .adcSinglePost {
+    width: 680px;
+  }
+}
+
+@media (max-width: 540px) {
+  .filterWrapper {
+    padding: 30% 5%;
+  }
+
+  .filterPosts .adcSinglePost {
+    width: 480px;
+  }
+
+  .filterPosts .adcSinglePost .gatsby-image-wrapper {
+    max-width: 180px;
+  }
+
+  .filterTerms {
+    flex-direction: column;
+  }
+
+  .filterTerms ul {
+    width: 480px;
+    justify-content: flex-end;
+  }
+
+  .filterHeaderContainer h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filterWrapper {
+    padding: 35% 5%;
+  }
+  .filterHeaderContainer h1 > span {
+    left: 49%;
+  }
+  .filterPosts {
+    flex-direction: column;
+  }
+
+  .filterPosts .adcSinglePost {
+    flex-direction: column;
+    width: 370px;
+  }
+
+  .filterTerms ul {
+    width: 370px;
+  }
+
+  .filterPosts .adcSinglePost .contentContainer,
+  .filterPosts .adcSinglePost .gatsby-image-wrapper {
+    order: 1;
+  }
+
+  .filterPosts .adcSinglePost .gatsby-image-wrapper {
+    max-width: initial;
+  }
+}
+
+@media (max-width: 375px) {
+  .filterHeaderContainer h1 > span {
+    left: 53%;
+  }
+  .filterTerms {
+    font-size: 15px;
+  }
+  .filterTerms ul {
+    width: 320px;
+  }
+  .filterPosts .adcSinglePost {
+    width: 340px;
+  }
+}
+
+@media (max-width: 360px) {
+  .filterHeaderContainer h1 > span {
+    left: 55%;
+  }
+  .filterTerms ul {
+    width: 320px;
+  }
+  .filterPosts .adcSinglePost {
+    width: 320px;
+  }
+}
+
+@media (max-width: 320px) {
+  .filterWrapper {
+    padding: 45% 5%;
+  }
+  .filterHeaderContainer h1 > span {
+    left: 62%;
+  }
+  .filterTerms ul {
+    width: 280px;
+  }
+
+  .filterTerms ul li {
+    font-size: 12px;
+  }
+  .filterPosts .adcSinglePost {
+    width: 280px;
+  }
+}
+
+@media (max-width: 280px) {
+  .filterHeaderContainer h1 > span {
+    left: 70%;
+  }
+  .filterTerms ul {
+    width: 250px;
+  }
+  .filterTerms ul li {
+    font-size: 10px;
+  }
+  .filterPosts .adcSinglePost {
+    width: 250px;
+  }
+}
