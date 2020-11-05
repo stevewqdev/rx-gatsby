@@ -272,7 +272,7 @@ export default class PostsIndex extends Component {
                   
                 </div>
                 <h1 data-aos="fade-right" data-duration="4000" className="popularHeading">POPULAR <br/> THIS <br/> MONTH</h1>
-                  {/* <PopularSlider popular={popular} /> */}
+                  <PopularSlider popular={popular} />
               </div>
             </div>
 

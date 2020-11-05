@@ -316,10 +316,15 @@
     font-size: 130px;
     top: 20%;
   }
+
+  .bottomLine {
+    width: initial;
+    bottom: 0;
+  }
   .postHeroImage .gatsby-image-wrapper {
-    width: 2000px;
+    width: 2200px;
     height: 1500px;
-    right: -50%;
+    right: -70%;
   }
   .postContainer {
     padding: 15% 10%;
@@ -354,12 +359,21 @@
     right: -70%;
   }
   .postContainer {
-    padding: 30% 20%;
+    padding: 15% 20%;
   }
   .postHeroDate {
     font-size: 100px;
     top: 18%;
     left: -5%;
+  }
+
+  .bottomLine {
+    width: initial;
+    bottom: -10%;
+  }
+  .postHeroTitle {
+    font-size: 110px;
+    line-height: 80px;
   }
   .scrollIndicator {
     left: -18% !important;
@@ -376,6 +390,9 @@
 }
 
 @media (max-width: 1920px) {
+  .postContainer {
+    padding: 15% 20%;
+  }
   .postHeader {
     height: 100vh;
   }
@@ -386,27 +403,16 @@
   }
 
   .postHeroTitle {
-    font-size: 120px;
-    line-height: 90px;
+    font-size: 100px;
+    line-height: 80px;
   }
   .postHeroImage .gatsby-image-wrapper {
     width: 1200px;
-    height: 800px;
-    right: -80%;
-  }
-  .postContainer {
-    padding: 30% 10%;
+    height: 700px;
+    right: -90%;
   }
   .content p {
-    padding-right: 40%;
-  }
-  .content h1,
-  .content h2,
-  .content h3,
-  .content h4,
-  .content h5,
-  .content h6 {
-    padding-right: 25%;
+    padding-right: 20%;
   }
 
   .featuredGrid .adcSinglePost.post-0 {
@@ -422,13 +428,21 @@
 @media (max-width: 1440px) {
   .postHeroDate {
     font-size: 80px;
-    top: 14%;
+    top: 20%;
     left: -10%;
+  }
+  .categoryContainer p {
+    width: 50%;
+    line-height: 32px;
+  }
+
+  .bottomLine {
+    bottom: -25%;
   }
 
   .postHeroTitle {
-    font-size: 100px;
-    line-height: 85px;
+    font-size: 80px;
+    line-height: 70px;
   }
   .postHeroImage .gatsby-image-wrapper {
     width: 1000px;
@@ -436,7 +450,7 @@
     right: -140%;
   }
   .postContainer {
-    padding-right: 65%;
+    padding-right: 50%;
   }
   .featuredGrid .adcSinglePost.post-0 {
     width: 520px;
@@ -449,6 +463,9 @@
 }
 
 @media (max-width: 1366px) {
+  /* .postHeader {
+    height: 85vh;
+  } */
   .postHeroDate {
     font-size: 60px;
     top: 20%;
@@ -456,7 +473,7 @@
   }
 
   .postContainer {
-    padding-right: 90%;
+    padding-right: 60%;
   }
 
   .postHeroTitle {
@@ -487,21 +504,21 @@
 @media (max-width: 1280px) {
   .postHeroDate {
     font-size: 60px;
-    top: 14%;
-    left: -10%;
+    top: 23%;
+    left: -8%;
   }
 
   .postContainer {
-    padding-right: 90%;
+    padding-right: 70%;
   }
 
   .postHeroTitle {
-    font-size: 80px;
-    line-height: 70px;
+    font-size: 60px;
+    line-height: 50px;
   }
   .postHeroImage .gatsby-image-wrapper {
     width: 800px;
-    height: 600px;
+    height: 500px;
     right: -140%;
   }
   .featuredGrid .adcSinglePost.post-0 {

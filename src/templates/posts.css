@@ -343,6 +343,10 @@ a {
   .postsGrid .adcSinglePost {
     height: 100%;
   }
+
+  .postsGrid .adcSinglePost.post-0 {
+    width: 710px;
+  }
   .featuredContent .featuredText {
     font-size: 150px;
     line-height: 126px;
@@ -391,11 +395,11 @@ a {
   }
   .postsGrid .adcSinglePost {
     height: 100%;
-    width: 400px;
+    width: 450px;
   }
 
   .postsGrid .adcSinglePost.post-0 {
-    width: 1230px;
+    width: 1380px;
   }
 
   .scrollIndicatorDark {
@@ -425,12 +429,26 @@ a {
     width: 300px;
   }
 
+  .postsGrid .adcSinglePost {
+    width: 330px;
+  }
+
   .postsGrid .adcSinglePost.post-0 {
-    width: 920px;
+    width: 1030px;
   }
 
   .identityCircles {
     margin-left: 4%;
+  }
+}
+
+@media (max-width: 1600px) {
+  .postsGrid .adcSinglePost {
+    width: 270px;
+  }
+
+  .postsGrid .adcSinglePost.post-0 {
+    width: 850px;
   }
 }
 
@@ -439,8 +457,12 @@ a {
     font-size: 100px;
     line-height: 85px;
   }
+
+  .postsGrid .adcSinglePost {
+    width: 250px;
+  }
   .postsGrid .adcSinglePost.post-0 {
-    width: 680px;
+    width: 770px;
   }
   .identityTriangle {
     margin-left: 8%;
