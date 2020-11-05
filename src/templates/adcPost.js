@@ -139,7 +139,7 @@ export default class AddCulturePost extends Component {
               <h2 className="featured">Feature this month <br/> on <span>Add Culture</span></h2>
             </div>
             
-              <div className="featuredGrid" styles={{ marginTop: '8%' }}>
+              <div className="featuredGrid">
                 {this.state.featuredPosts.map(({ node }, i) => (
                   <>
                   <Link to={`/add-culture/post/${node.slug}`}>
@@ -240,3 +240,5 @@ export const postQuery = graphql`
     }
   }
 `
+
+// styles={{ marginTop: '8%' }}
