@@ -43,6 +43,12 @@ export default class AddCulturePost extends Component {
 
   componentDidMount() {
     document.querySelector(".navbar").style.background = "#222220"
+    document.querySelector(
+      ".navbarMenuBurger .menuBurgerLineOne"
+    ).style.background = "#fcc6c6"
+    document.querySelector(
+      ".navbarMenuBurger .menuBurgerLineTwo"
+    ).style.background = "#fcc6c6"
     document.querySelector(".brand__logo h1").style.color = "#FFC6C6"
     document.querySelector(".storiesLink p").style.color = "#FFC6C6"
     this.postInfoHandler()
