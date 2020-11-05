@@ -240,5 +240,3 @@ export const postQuery = graphql`
     }
   }
 `
-
-// styles={{ marginTop: '8%' }}

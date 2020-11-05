@@ -15,8 +15,8 @@ export default function Header() {
       <div className="navContent">
         <div class="navbarMenuBurger">
           <div class="menuBurger">
-            <div data-aos="fade-right" data-duration="4000" class="menuBurgerLineOne" style="width:38px"></div>
-            <div data-aos="fade-right" data-duration="4300" class="menuBurgerLineTwo" style="width:29px"></div>
+            <div data-aos="fade-right" data-duration="4000" class="menuBurgerLineOne" style={{width: '38px'}}></div>
+            <div data-aos="fade-right" data-duration="4300" class="menuBurgerLineTwo" style={{width: '29px'}}></div>
           </div>
         </div>
         <a data-aos="fade-right" data-duration="4000" className="brand__logo" href="/add-culture">
