@@ -59,7 +59,7 @@ export default class PostsIndex extends Component {
 
       if(elemRect.top < 0){
         // codigo si el elemento ya llego al top de la pantalla
-        document.querySelector('.navbar').style.background = '#f4f4f4';
+        document.querySelector('.navbar').style.background = '#e5e5e5';
         document.querySelector('.navbarMenuBurger .menuBurgerLineOne').style.background = '#222220';
         document.querySelector('.navbarMenuBurger .menuBurgerLineTwo').style.background = '#222220';
         document.querySelector('.brand__logo h1').style.color = '#222220';
@@ -350,7 +350,7 @@ export const blogQuery = graphql`
         node {
           title
           slug
-          date(formatString: "MM.DD.YYYY")
+          date(formatString: "MM.DD.YY")
           categories {
             name
             slug
