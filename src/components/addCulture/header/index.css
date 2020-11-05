@@ -1,9 +1,10 @@
 .navbar {
-  padding: 30px 40px;
+  padding: 20px 40px;
   position: fixed;
   width: 100%;
   background: #e5e5e5;
   z-index: 99;
+  transition: all 0.3s ease-in;
 }
 
 .navContent {
@@ -13,8 +14,18 @@
   align-items: center;
 }
 
-.navToggler {
-  flex-grow: 0.3;
+.navbarMenuBurger {
+  width: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navbarMenuBurger .menuBurgerLineOne,
+.navbarMenuBurger .menuBurgerLineTwo {
+  height: 2px;
+  background: #222220;
+  margin: 5px 5px 5px 0px;
 }
 
 .brand__logo {
@@ -33,7 +44,7 @@
 }
 
 .explore {
-  font-family: "ITC Avant Garde Pro Bk", sans-serif;
+  font-family: "HelveticaNeue", sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 18.32px;

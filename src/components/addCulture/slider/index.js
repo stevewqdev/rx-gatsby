@@ -5,6 +5,7 @@ import { Link } from 'gatsby';
 import NextArrow from '../../../images/addCulture/nextArrow.png'
 import PrevArrow from '../../../images/addCulture/prevArrow.png'
 import './index.css';
+import AOS from 'aos'
 
 export default class AddCultureSlider extends React.Component {
   constructor(props) {
@@ -14,6 +15,9 @@ export default class AddCultureSlider extends React.Component {
     }
   }
   
+  componentDidMount() {
+    AOS.init();
+  }
 
   render() {
     
@@ -66,7 +70,7 @@ export default class AddCultureSlider extends React.Component {
           {this.state.featured.map((post) => (
             <div>
               <Img fluid={post.featured_media.localFile.childImageSharp.fluid} className="featuredImage" alt={post.title} />
-              <div className="featuredPreview">
+              <div data-aos="fade-right" data-duration="4000" className="featuredPreview">
                 <div className="catAndDate">
                   <p className="featuredCat">{post.categories[0].name}</p>
                   <p className="featuredDate">{post.date}</p>

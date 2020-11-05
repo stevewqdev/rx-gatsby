@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import AddCultureLayout from '../layouts/addCultureLayout/index';
+import Header from '../components/addCulture/header';
 import HeroLine from '../images/addCulture/heroPostLine.svg'
 import PostHeroLine from '../images/addCulture/postHeroLine.svg'
 import ScrollIndicator from '../images/addCulture/scrollIndicator.svg'
@@ -22,12 +23,34 @@ export default class AddCulturePost extends Component {
       featuredPosts: this.props.data.allWordpressWpAddcultureposts.edges,
     }
   }
+
+  postInfoHandler() {
+    window.addEventListener("scroll", function() {
+      var element =  document.getElementById('postInfoContainer');
+      var bodyRect = document.body.getBoundingClientRect(),
+          elemRect = element.getBoundingClientRect(),
+          offset   = elemRect.top - bodyRect.top;
+
+      if (elemRect.top < 0) {
+        // codigo si el elemento ya llego al top de la pantalla
+        element.style.position = 'sticky';
+        element.style.top = '0px';
+      } else {
+        element.style.position = 'initial';
+      }
+    })
+  }
+
   componentDidMount() {
-    console.log(this.state.post);
+    document.querySelector('.navbar').style.background = '#222220';
+    document.querySelector('.brand__logo h1').style.color = '#FFC6C6';
+    document.querySelector('.storiesLink p').style.color = '#FFC6C6';
+    this.postInfoHandler();
   }
   render() {
     return (
       <AddCultureLayout>
+        <Header />
         <div className="postHeader">
           <div className="headerContainer">
           <div className="scrollIndicator">
@@ -64,7 +87,7 @@ export default class AddCulturePost extends Component {
         <div className="postContent">
           <div className="row">
             <div className="col-xl-6 col-lg-4 col-sm-12">
-              <div className="postInfoContainer">
+              <div id="postInfoContainer" className="postInfoContainer">
                 {this.state.post.author !== null ? (
                   <div className="authorContainer">
                     <p className="postAuthor">BY <span>{this.state.post.author.name}</span></p>

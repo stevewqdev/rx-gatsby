@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import Img from "gatsby-image"
 import AddCultureLayout from "../layouts/addCultureLayout/index"
+import Header from '../components/addCulture/header/index'
 import CategoryCircle from '../images/addCulture/categories/categoryCircle.svg'
 import CategoryLine from '../images/addCulture/categories/categoryLine.svg'
 import ScrollIndicatorDark from '../images/addCulture/scrollIndicatorDark.svg'
@@ -69,6 +70,7 @@ export default class Representation extends Component {
   }
   
   componentDidMount() {
+    document.querySelector('.navbar').style.background = '#f4f4f4';
     this.formatData();
     console.log(this.state.posts);
   }
@@ -83,6 +85,7 @@ export default class Representation extends Component {
           <link rel="canonical" href={"/news/representation"} />
         </Helmet>
         <div className="main__section__wrapper blog__page">
+          <Header />
           <div className="categoryHero representationBanner">
             <div className="heroContainer">
               <CategoryCircle tabIndex="0" alt="circle" className="categoryCircle" />

@@ -3,6 +3,7 @@ import Img from 'gatsby-image';
 import ReactPaginate from 'react-paginate';
 import { Link } from 'gatsby';
 import AddCultureLayout from '../layouts/addCultureLayout/index';
+import Header from '../components/addCulture/header';
 import CategoryCircle from '../images/addCulture/categories/categoryCircle.svg';
 import FilterLine from '../images/addCulture/filterLine.svg';
 import './filter.css';
@@ -93,12 +94,14 @@ export default class Filter extends Component {
   }
 
   componentDidMount() {
+    document.querySelector('.navbar').style.background = '#e5e5e5';
     this.formatData();
   }
 
   render() {
     return (
       <AddCultureLayout>
+        <Header />
         <FilterLine alt="Filter Line" tabIndex="0" className="filterLine" />
         <div className="filterWrapper">
           <div className="filterHeader">

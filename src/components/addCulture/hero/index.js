@@ -1,10 +1,17 @@
-import React from "react"
+import React, { useEffect } from "react"
 import './index.css';
 import ScrollIndicator from '../../../images/addCulture/scrollIndicator.svg'
 import HeroLine from '../../../images/addCulture/heroLine.svg';
 import Plus from '../../../images/addCulture/plus.png';
+import AOS from 'aos';
 
 export default function AddCultureHero() {
+
+  useEffect(() => {
+    AOS.init();
+  })
+
+
   return (
     <>
     <div id="addCultureHero">
@@ -15,7 +22,7 @@ export default function AddCultureHero() {
         <div className="addCultureText">
           <div className="about">
             <HeroLine tabIndex="0" alt="Hero Line" className="heroLine"/>
-            <h6 className="whoWeAre">WE ARE <br/> AD+D CULTURE</h6>
+            <h6 data-aos="fade-right" data-duration="4000" className="whoWeAre">WE ARE <br/> AD+D CULTURE</h6>
           </div>
           <h1 className="heroText">
             AMPLIFYING <br/>
@@ -27,7 +34,7 @@ export default function AddCultureHero() {
           </h1>
         </div>
         <div className="addCultureSymbol">
-          <img src={Plus} />
+          <img data-aos="fade-left" data-duration="4000" src={Plus} />
         </div>
       </div>
     </div>
