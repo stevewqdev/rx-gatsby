@@ -51,7 +51,7 @@ export default class AddCultureSlider extends React.Component {
           if(slide.classList.contains('slick-sprev')) {
             slide.classList.remove('slick-sprev');
           } else if(slide.classList.contains('slick-snext')) {
-            slide.classList.remove('slick-next');
+            slide.classList.remove('slick-snext');
           }
           let prevSlide = slides[i - 1];
           let nextSlide = slides[i + 1];
@@ -64,6 +64,20 @@ export default class AddCultureSlider extends React.Component {
           }
         })
       },
+      afterChange: function addClasses() {
+        let slides = document.querySelectorAll('.featuredSlider .slick-slide');        
+        slides.forEach((slide, i, slides) => {
+          let prevSlide = slides[i - 1];
+          let nextSlide = slides[i + 1];
+          if(slide[i] === slides.length - 1) {
+            nextSlide = slides[0];
+          }
+          if (slide.classList.contains('slick-active')) {
+            prevSlide.classList.add('slick-sprev');
+            nextSlide.classList.add('slick-snext');
+          }
+        })
+      }
     }
     return (
         <Slider {...settings}>
