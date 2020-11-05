@@ -8,7 +8,6 @@ const path = require(`path`)
 const slash = require(`slash`)
 const queryAll = require(`./src/queries/queryAll.js`)
 const queryMinority = require(`./src/queries/queryMinority.js`);
-const queryDiverse = require(`./src/queries/queryDiverse.js`);
 const queryWhy = require(`./src/queries/queryWhy.js`);
 const queryStories = require(`./src/queries/queryStories.js`);
 const queryRepresentation = require(`./src/queries/queryRepresentation.js`);
@@ -83,31 +82,6 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Loop through the posts
         minorityPosts.forEach(edge => {
-          createPage({
-            path: `/add-culture/post/${edge.node.slug}/`,
-            component: slash(adcPostTemplate),
-            context: {
-              id: edge.node.id,
-            },
-          })
-        })
-      })
-    )
-    resolve(
-      graphql(queryDiverse).then(result => {
-        if(result.errors) reject(result.errors)
-        const diversePosts = result.data.allWordpressWpAddcultureposts.edges
-
-        createPaginatedPages({
-          edges: diversePosts,
-          createPage: createPage,
-          pageTemplate: "src/templates/diverse.js",
-          pageLength: 1000,
-          pathPrefix: "add-culture/diverse",
-        })
-
-        // Loop through the posts
-        diversePosts.forEach(edge => {
           createPage({
             path: `/add-culture/post/${edge.node.slug}/`,
             component: slash(adcPostTemplate),

@@ -297,20 +297,8 @@ export default class PostsIndex extends Component {
                   <div className="category minorityImg" id="categoryOne-container">
                   </div>
                 </MouseTooltip>
-                <Link data-aos="fade-down" data-duration="4200" to="/add-culture/diverse" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryTwo">
-                  <p className="categoryNumber">02</p>
-                  <h2 className="categoryName">DIVERSE <br/> CREATORS</h2>
-                </Link>
-                <MouseTooltip
-                  visible={this.state.isMouseTooltipVisible}
-                  offsetX={-200}
-                  offsetY={-200}              
-                >
-                  <div className="category diverseImg" id="categoryTwo-container">
-                  </div>
-                </MouseTooltip>
                 <Link data-aos="fade-down" data-duration="4400" to="/add-culture/why" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryThree">
-                  <p className="categoryNumber">03</p>
+                  <p className="categoryNumber">02</p>
                   <h2 className="categoryName">WHY <br/> AD+D <br/> CULTURE</h2>
                 </Link>
                 <MouseTooltip
@@ -322,7 +310,7 @@ export default class PostsIndex extends Component {
                   </div>
                 </MouseTooltip>
                 <Link data-aos="fade-down" data-duration="4600" to="/add-culture/stories" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryFour">
-                  <p className="categoryNumber">04</p>
+                  <p className="categoryNumber">03</p>
                   <h2 className="categoryName">AD+D <br/> CULTURE <br/> STORIES</h2>
                 </Link>
                 <MouseTooltip
@@ -334,7 +322,7 @@ export default class PostsIndex extends Component {
                   </div>
                 </MouseTooltip>
                 <Link data-aos="fade-down" data-duration="4800" to="/add-culture/representation" onMouseEnter={this.showTooltip} onMouseLeave={this.hideTooltip} className="categorySelector" id="categoryFive">
-                  <p className="categoryNumber">05</p>
+                  <p className="categoryNumber">04</p>
                   <h2 className="categoryName">REPRESENTATION <br/> DONE RIGHT</h2>
                 </Link>
                 <MouseTooltip

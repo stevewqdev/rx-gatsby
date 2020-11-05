@@ -305,13 +305,6 @@ a {
   background-repeat: no-repeat;
 }
 
-.diverseImg {
-  background: url("../images/addCulture/categories/diverse.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
 .whyImg {
   background: url("../images/addCulture/categories/why.jpg");
   background-size: cover;
