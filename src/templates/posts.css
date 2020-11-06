@@ -136,11 +136,11 @@ a {
 .popular {
   background: #222220;
   height: 100vh;
+  padding: 5%;
 }
 .popularContent {
-  display: flex;
-  flex-direction: row;
   position: relative;
+  height: 100%;
 }
 
 .popular .scrollIndicator {
@@ -152,11 +152,11 @@ a {
 .popularContent .popularHeading {
   font-family: "ITC Avant Garde Pro Md", sans-serif;
   font-size: 120px;
-  padding: 10%;
+  padding: 5%;
   line-height: 100px;
   color: #f4f4f4;
-  position: relative;
-  z-index: 9999;
+  position: absolute;
+  z-index: 10;
 }
 
 .addCultureContainer .blogIdentity {
@@ -284,7 +284,7 @@ a {
   height: 20vh;
   transition: all 0.5s ease-in-out;
   position: relative;
-  z-index: 9999;
+  z-index: 10;
 }
 
 .category {

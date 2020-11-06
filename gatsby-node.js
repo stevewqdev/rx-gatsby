@@ -7,25 +7,34 @@ const Promise = require(`bluebird`)
 const path = require(`path`)
 const slash = require(`slash`)
 const queryAll = require(`./src/queries/queryAll.js`)
-const queryMinority = require(`./src/queries/queryMinority.js`);
-const queryWhy = require(`./src/queries/queryWhy.js`);
-const queryStories = require(`./src/queries/queryStories.js`);
-const queryRepresentation = require(`./src/queries/queryRepresentation.js`);
+const queryMinority = require(`./src/queries/queryMinority.js`)
+const queryWhy = require(`./src/queries/queryWhy.js`)
+const queryStories = require(`./src/queries/queryStories.js`)
+const queryRepresentation = require(`./src/queries/queryRepresentation.js`)
 const queryFilter = require(`./src/queries/queryFilter.js`)
 const createPaginatedPages = require(`gatsby-paginate`)
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions
 
-  createRedirect({ fromPath: 'https://raxo.tv/*', toPath: 'https://raxo.co/:splat', isPermanent: true, force: true })
-  
-  createRedirect({ fromPath: 'https://www.raxo.tv/*', toPath: 'https://raxo.co/:splat', isPermanent: true, force: true })
+  createRedirect({
+    fromPath: "https://raxo.tv/*",
+    toPath: "https://raxo.co/:splat",
+    isPermanent: true,
+    force: true,
+  })
 
+  createRedirect({
+    fromPath: "https://www.raxo.tv/*",
+    toPath: "https://raxo.co/:splat",
+    isPermanent: true,
+    force: true,
+  })
 
   return new Promise((resolve, reject) => {
     // We set the variables for the default templates
     // const postTemplate = path.resolve("./src/templates/post.js")
-    const adcPostTemplate = path.resolve('./src/templates/adcPost.js')
+    const adcPostTemplate = path.resolve("./src/templates/adcPost.js")
 
     resolve(
       graphql(queryAll).then(result => {
@@ -33,7 +42,6 @@ exports.createPages = ({ graphql, actions }) => {
         // Posts detail
         // Here we retrieve all the posts
         const posts = result.data.allWordpressWpAddcultureposts.edges
-        console.log(posts);
         // And we paginate them
         createPaginatedPages({
           edges: posts,
@@ -57,20 +65,20 @@ exports.createPages = ({ graphql, actions }) => {
     )
     resolve(
       graphql(queryFilter).then(result => {
-        if(result.errors) reject(result.errors)
-        const tagPosts = result.data.allWordpressWpAddcultureposts.edges;
+        if (result.errors) reject(result.errors)
+        const tagPosts = result.data.allWordpressWpAddcultureposts.edges
         createPaginatedPages({
           edges: tagPosts,
           createPage: createPage,
           pageTemplate: "src/templates/filter.js",
           pageLength: 1000,
-          pathPrefix: "add-culture/filter/"
+          pathPrefix: "add-culture/filter/",
         })
       })
     )
     resolve(
       graphql(queryMinority).then(result => {
-        if(result.errors) reject(result.errors)
+        if (result.errors) reject(result.errors)
         const minorityPosts = result.data.allWordpressWpAddcultureposts.edges
         createPaginatedPages({
           edges: minorityPosts,
@@ -94,7 +102,7 @@ exports.createPages = ({ graphql, actions }) => {
     )
     resolve(
       graphql(queryWhy).then(result => {
-        if(result.errors) reject(result.errors)
+        if (result.errors) reject(result.errors)
         const whyPosts = result.data.allWordpressWpAddcultureposts.edges
 
         createPaginatedPages({
@@ -119,7 +127,7 @@ exports.createPages = ({ graphql, actions }) => {
     )
     resolve(
       graphql(queryStories).then(result => {
-        if(result.errors) reject(result.errors)
+        if (result.errors) reject(result.errors)
         const storiesPosts = result.data.allWordpressWpAddcultureposts.edges
 
         createPaginatedPages({
@@ -144,8 +152,9 @@ exports.createPages = ({ graphql, actions }) => {
     )
     resolve(
       graphql(queryRepresentation).then(result => {
-        if(result.errors) reject(result.errors)
-        const representationPosts = result.data.allWordpressWpAddcultureposts.edges
+        if (result.errors) reject(result.errors)
+        const representationPosts =
+          result.data.allWordpressWpAddcultureposts.edges
         createPaginatedPages({
           edges: representationPosts,
           createPage: createPage,
