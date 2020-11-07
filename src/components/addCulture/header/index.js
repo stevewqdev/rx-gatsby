@@ -62,7 +62,7 @@ export default class Header extends Component {
     return (
       <>
         <nav className="navbar">
-          <div className="navContent">
+          <div className="navContent container-fluid">
             <div className="navbarMenuBurger show" onClick={this.toggleMenu}>
               <div className="menuBurger">
                 <div

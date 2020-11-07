@@ -12,6 +12,8 @@ import AddCultureSlider from "../components/addCulture/slider/index"
 import PopularSlider from "../components/addCulture/slider/popular"
 import ScrollIndicator from "../images/addCulture/scrollIndicator.svg"
 import ScrollIndicatorDark from "../images/addCulture/scrollIndicatorDark.svg"
+import PopularLeftMark from "../images/addCulture/popularLeftMark.svg"
+import PopularRightMark from "../images/addCulture/popularRIghtMark.svg"
 import "./posts.css"
 import AOS from "aos"
 
@@ -41,6 +43,8 @@ export default class PostsIndex extends Component {
 
       if (elemRect.top < 0) {
         // codigo si el elemento ya llego al top de la pantalla
+        element.classList.add("dark")
+        document.querySelector(".featuredText").classList.add("lightFont")
         document.querySelector(".navbar").style.background = "#222220"
         document.querySelector(
           ".navbarMenuBurger .menuBurgerLineOne"
@@ -50,6 +54,9 @@ export default class PostsIndex extends Component {
         ).style.background = "#fcc6c6"
         document.querySelector(".brand__logo h1").style.color = "#fcc6c6"
         document.querySelector(".explore").style.color = "#fcc6c6"
+      } else {
+        element.classList.remove("dark")
+        document.querySelector(".featuredText").classList.remove("lightFont")
       }
     })
   }
@@ -57,6 +64,7 @@ export default class PostsIndex extends Component {
   postsScrollHandler() {
     window.addEventListener("scroll", function() {
       var element = document.getElementById("blogPosts")
+      let posts = document.querySelectorAll(".adcSinglePost")
       var bodyRect = document.body.getBoundingClientRect(),
         elemRect = element.getBoundingClientRect(),
         offset = elemRect.top - bodyRect.top
@@ -72,6 +80,19 @@ export default class PostsIndex extends Component {
         ).style.background = "#222220"
         document.querySelector(".brand__logo h1").style.color = "#222220"
         document.querySelector(".explore").style.color = "#222220"
+        element.classList.add("light")
+
+        posts.forEach(post => {
+          post.classList.remove("adcSinglePostDark")
+          post.children[0].children[0].children[1].style.color = "#222220"
+        })
+      } else {
+        element.classList.remove("light")
+        element.classList.remove("lightFont")
+        posts.forEach(post => {
+          post.classList.add("adcSinglePostDark")
+          post.children[0].children[0].children[1].style.color = "#e5e5e5"
+        })
       }
     })
   }
@@ -94,6 +115,9 @@ export default class PostsIndex extends Component {
         ).style.background = "#fcc6c6"
         document.querySelector(".brand__logo h1").style.color = "#fcc6c6"
         document.querySelector(".explore").style.color = "#fcc6c6"
+        element.classList.add("dark")
+      } else {
+        element.classList.remove("dark")
       }
     })
   }
@@ -269,59 +293,90 @@ export default class PostsIndex extends Component {
           <AddCultureHero />
           <div className="addCultureContainer">
             <div id="featured" className="featuredContent">
-              <h1
-                data-aos="fade-left"
-                data-duration="4000"
-                className="featuredText"
+              <svg
+                className="featuredLine"
+                width="1920"
+                height="902"
+                viewBox="0 0 1920 902"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                FEATURED <br /> THIS <br /> MONTH
-              </h1>
-              <AddCultureSlider className="slider" featured={featured} />
+                <path
+                  d="M-574 138.186C-423.06 20.3917 -218.503 -25.6335 -31.669 16.1161C113.117 48.4859 242.484 129.254 360.17 219.603C534.405 353.358 689.664 510.619 865.063 642.829C1040.46 775.04 1243 883.79 1462.09 899.08C1681.48 914.391 1895.26 835.459 2101 757.78"
+                  stroke="#FFC6C6"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+              <div className="container-fluid">
+                <h1
+                  data-aos="fade-left"
+                  data-duration="4000"
+                  className="featuredText"
+                >
+                  FEATURED <br /> THIS <br /> MONTH
+                </h1>
+                <AddCultureSlider className="slider" featured={featured} />
+              </div>
             </div>
 
             <div id="blogPosts" className="addCultureBlogPosts">
-              <div className="row">
-                <div
-                  data-aos="fade-left"
-                  data-duration="4000"
-                  className="scrollIndicatorDark"
-                >
-                  <ScrollIndicatorDark tabIndex="0" alt="Scroll" />
-                </div>
-                <div className="col-lg-12 col-md-12">
-                  <div className="postsGrid">
-                    {this.state.postData}
-                    <ReactPaginate
-                      previousLabel={""}
-                      nextLabel={""}
-                      breakLabel={"..."}
-                      breakClassName={"break-me"}
-                      pageCount={this.state.pageCount}
-                      marginPagesDisplayed={2}
-                      pageRangeDisplayed={5}
-                      onPageChange={this.handlePageClick}
-                      containerClassName={"pagination"}
-                      subContainerClassName={"pages pagination"}
-                      activeClassName={"active"}
-                    />
+              <div className="container-fluid">
+                <div className="row">
+                  <div
+                    data-aos="fade-left"
+                    data-duration="4000"
+                    className="scrollIndicatorDark"
+                  >
+                    <ScrollIndicatorDark tabIndex="0" alt="Scroll" />
+                  </div>
+                  <div className="col-lg-12 col-md-12">
+                    <div className="postsGrid">
+                      {this.state.postData}
+                      <ReactPaginate
+                        previousLabel={""}
+                        nextLabel={""}
+                        breakLabel={"..."}
+                        breakClassName={"break-me"}
+                        pageCount={this.state.pageCount}
+                        marginPagesDisplayed={2}
+                        pageRangeDisplayed={5}
+                        onPageChange={this.handlePageClick}
+                        containerClassName={"pagination"}
+                        subContainerClassName={"pages pagination"}
+                        activeClassName={"active"}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             <div id="popular" className="popular">
-              <div className="scrollIndicator">
-                <ScrollIndicator tabIndex="0" alt="Scroll" />
-              </div>
-              <div className="popularContent">
-                <h1
-                  data-aos="fade-right"
-                  data-duration="4000"
-                  className="popularHeading"
-                >
-                  POPULAR <br /> THIS <br /> MONTH
-                </h1>
-                <PopularSlider popular={popular} />
+              <div className="container-fluid">
+                <div className="scrollIndicator">
+                  <ScrollIndicator tabIndex="0" alt="Scroll" />
+                </div>
+                <div className="popularContent">
+                  <PopularRightMark
+                    className="popularRightMark"
+                    tabIndex="0"
+                    alt="left mark"
+                  />
+                  <h1
+                    data-aos="fade-right"
+                    data-duration="4000"
+                    className="popularHeading"
+                  >
+                    POPULAR <br /> THIS <br /> MONTH
+                  </h1>
+                  <PopularSlider popular={popular} />
+                  <PopularLeftMark
+                    className="popularLeftMark"
+                    tabIndex="0"
+                    alt="left mark"
+                  />
+                </div>
               </div>
             </div>
 
@@ -459,6 +514,7 @@ export const blogQuery = graphql`
           }
           featured_media {
             id
+            source_url
             localFile {
               id
               childImageSharp {

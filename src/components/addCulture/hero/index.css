@@ -65,6 +65,9 @@
 }
 
 @media (max-width: 4000px) {
+  .addCultureHeroContent {
+    padding: 0;
+  }
   #addCultureHero {
     background: linear-gradient(#adaea5 50%, #222220 50%);
   }
@@ -75,7 +78,8 @@
     left: -18%;
   }
   .addCultureText {
-    margin-top: 15%;
+    margin-top: 55%;
+    margin-left: 11.5%;
   }
   .addCultureHeroContent .whoWeAre {
     top: 3%;
@@ -87,7 +91,7 @@
     line-height: 150px;
   }
   .addCultureSymbol img {
-    bottom: 0;
+    top: 52%;
   }
 }
 
@@ -112,6 +116,7 @@
   }
   .addCultureText {
     margin-top: 5%;
+    margin-left: 0;
   }
   .about .heroLine {
     left: -40px;
@@ -121,6 +126,10 @@
     font-size: 170px;
     line-height: 140px;
     margin-top: 5%;
+  }
+
+  .addCultureSymbol img {
+    top: initial;
   }
 }
 
@@ -157,12 +166,22 @@
     background: linear-gradient(#adaea5 60%, #222220 40%);
   }
   .about .heroLine {
-    left: -3em;
+    left: -1.5em;
     bottom: -2em;
+    width: 147px;
+  }
+  .addCultureHeroContent .whoWeAre {
+    font-size: 14px;
+    line-height: 14px;
   }
   .addCultureText .heroText {
-    font-size: 140px;
-    line-height: 115px;
+    font-size: 100px;
+    line-height: 82px;
+    margin-top: 12%;
+  }
+
+  .addCultureSymbol img {
+    width: 23%;
   }
 }
 

@@ -3,13 +3,42 @@ a {
   color: #222220;
 }
 
+.dark {
+  background: #222220 !important;
+}
+
+.light {
+  background: #e5e5e5 !important;
+}
+
+.gray {
+  background: #adaea5 !important;
+}
+
+.lightFont {
+  color: #f4f4f4 !important;
+}
+
+.adcSinglePostDark {
+  border-color: #e5e5e5 !important;
+  color: #e5e5e5 !important;
+}
+
 .addCultureContainer {
-  background: #222220;
   font-family: "ITC Avant Garde Pro Md", sans-serif;
+  transition: background-color, 0.65s ease-in-out;
+  background: #f4f4f4;
 }
 
 .featuredContent {
   position: relative;
+  transition: background-color, 0.65s ease-in-out;
+}
+
+.featuredContent .featuredLine {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
 }
 
 .featuredContent .featuredText {
@@ -20,13 +49,15 @@ a {
   font-size: 120px;
   line-height: 100px;
   font-weight: bold;
-  color: #f4f4f4;
   font-family: "ITC Avant Garde Pro Md", sans-serif;
+  color: #222220;
+  transition: color 1s ease-in-out !important;
 }
 
 #blogPosts {
-  background: #e5e5e5;
   padding: 10%;
+  background: #222220;
+  transition: background-color 0.65s ease-in-out !important;
 }
 
 .postsGrid {
@@ -135,8 +166,6 @@ a {
 
 .popular {
   background: #222220;
-  height: 100vh;
-  padding: 5%;
 }
 .popularContent {
   position: relative;
@@ -151,12 +180,26 @@ a {
 
 .popularContent .popularHeading {
   font-family: "ITC Avant Garde Pro Md", sans-serif;
-  font-size: 120px;
-  padding: 5%;
-  line-height: 100px;
+  font-size: 100px;
+  line-height: 85px;
   color: #f4f4f4;
   position: absolute;
   z-index: 10;
+  left: 8%;
+  top: 10%;
+}
+
+.popularContent .popularRightMark {
+  top: -30px;
+  position: absolute;
+  right: 0px;
+  margin-right: 50px;
+}
+
+.popularContent .popularLeftMark {
+  position: absolute;
+  left: 3%;
+  bottom: 18%;
 }
 
 .addCultureContainer .blogIdentity {
@@ -336,24 +379,43 @@ a {
     top: 43.5%;
   }
   .postsGrid {
-    max-width: 1200px;
+    max-width: initial;
     margin: 0 auto;
   }
 
   .postsGrid .adcSinglePost {
     height: 100%;
+    width: 350px;
   }
 
   .postsGrid .adcSinglePost.post-0 {
-    width: 710px;
+    width: 1130px;
   }
   .featuredContent .featuredText {
-    font-size: 150px;
-    line-height: 126px;
+    font-size: 120px;
+    line-height: 106px;
+    left: 32%;
+    top: 20%;
   }
 
   .scrollIndicatorDark {
     left: 1.5%;
+  }
+
+  .popular {
+    padding: 5% 0;
+  }
+
+  .popularContent .popularLeftMark {
+    top: 90%;
+    left: 0;
+    bottom: initial;
+  }
+
+  .popularContent .popularRightMark {
+    right: 0;
+    top: -3vh;
+    bottom: initial;
   }
 
   .identityTriangle {
@@ -390,16 +452,26 @@ a {
 }
 
 @media (max-width: 2560px) {
+  .featuredContent .featuredText {
+    left: 21%;
+  }
   .postsGrid {
     max-width: initial;
   }
   .postsGrid .adcSinglePost {
     height: 100%;
-    width: 450px;
+    width: 350px;
   }
 
   .postsGrid .adcSinglePost.post-0 {
-    width: 1380px;
+    width: 1130px;
+  }
+
+  .popularContent .popularRightMark {
+    right: 0;
+    margin-right: 0;
+    top: -5vh;
+    bottom: initial;
   }
 
   .scrollIndicatorDark {
@@ -424,17 +496,37 @@ a {
 }
 
 @media (max-width: 1920px) {
-  .postsGrid .adcSinglePost {
-    height: 100%;
-    width: 300px;
+  .featuredContent .featuredText {
+    left: 12%;
+  }
+
+  #blogPosts .container-fluid {
+    max-width: 1400px;
   }
 
   .postsGrid .adcSinglePost {
-    width: 330px;
+    height: 100%;
+    width: 250px;
   }
 
   .postsGrid .adcSinglePost.post-0 {
-    width: 1030px;
+    width: 800px;
+  }
+
+  .popularContent .popularLeftMark {
+    top: 85%;
+    left: 5%;
+  }
+
+  .popularContent .popularHeading {
+    left: 13%;
+  }
+
+  .popularContent .popularRightMark {
+    right: 5vw;
+    margin-right: 0;
+    top: -10vh;
+    bottom: initial;
   }
 
   .identityCircles {
@@ -456,13 +548,28 @@ a {
   .featuredContent .featuredText {
     font-size: 100px;
     line-height: 85px;
+    left: 12%;
   }
 
+  #blogPosts .container-fluid {
+    max-width: 1100px;
+  }
   .postsGrid .adcSinglePost {
-    width: 250px;
+    width: 200px;
   }
   .postsGrid .adcSinglePost.post-0 {
-    width: 770px;
+    width: 635px;
+  }
+
+  .popularContent .popularRightMark {
+    right: 3vw;
+    top: -14vh;
+  }
+
+  .popularContent .popularHeading {
+    top: 5%;
+    font-size: 80px;
+    line-height: 70px;
   }
   .identityTriangle {
     margin-left: 8%;
@@ -521,12 +628,30 @@ a {
     font-size: 12px;
     color: #222220;
   }
+
+  .popularContent .popularHeading {
+    font-size: 70px;
+    line-height: 60px;
+  }
 }
 
 @media (max-width: 1280px) {
   .popularContent .popularHeading {
-    font-size: 100px;
-    line-height: 90px;
+    font-size: 80px;
+    line-height: 70px;
+  }
+
+  .popularContent .popularRightMark {
+    top: -30px;
+    position: absolute;
+    right: 0px;
+    margin-right: 50px;
+  }
+
+  .popularContent .popularLeftMark {
+    position: absolute;
+    left: 3%;
+    bottom: 18%;
   }
 
   .postsGrid .adcSinglePost {

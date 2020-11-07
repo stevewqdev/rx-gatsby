@@ -1,10 +1,80 @@
+.activePlaceholder {
+  padding: 20%;
+}
+
+#placeholderContainer {
+  width: 100%;
+  height: 70vh;
+  margin-left: auto;
+  position: relative;
+  left: 20%;
+  top: -35vh;
+}
+
+#placeholderContainer img {
+  position: absolute;
+  top: 10%;
+  left: -5%;
+  width: 900px;
+  height: 600px;
+}
+
+#placeholderContainer .content {
+  position: absolute;
+  top: 67%;
+  left: -40%;
+  color: #f4f4f4;
+  opacity: 1;
+  font-family: "ITC Avant Garde Pro Md", sans-serif;
+  text-transform: uppercase;
+  line-height: initial;
+}
+
+#placeholderContainer .content .infoContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  width: 30%;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#placeholderContainer .content .infoContainer .popularCategory {
+  text-decoration: underline;
+  color: #fcc6c6;
+}
+
+#placeholderContainer .content .postTitleText {
+  font-weight: 300;
+  width: 50%;
+  position: relative;
+  margin-left: 0;
+  font-size: 28px;
+}
+
+#placeholderContainer a {
+  font-size: 14px;
+  line-height: 30px;
+}
+
 .popularSlider {
   width: 600px;
   margin-left: auto;
-  position: relative;
+  position: absolute;
   top: 65%;
-  left: -4em;
+  left: 50%;
 }
+
+.popularSlider .slick-slide {
+  padding: 0 5px;
+}
+
+/* .popularSlider .slick-slide .gatsby-image-wrapper {
+  width: 137px;
+  height: 145px;
+} */
 
 .popularSlider .slick-slide .content {
   display: none;
@@ -13,14 +83,124 @@
 
 .popularSlider .slick-prev,
 .popularSlider .slick-next {
-  width: 60px;
+  width: 45px;
+  top: 70px;
   height: auto;
 }
 
 .popularSlider .slick-prev {
-  left: -80px;
+  left: -70px;
 }
 
 .popularSlider .slick-next {
-  right: -80px;
+  right: -70px;
+}
+
+@media (max-width: 4000px) {
+  #placeholderContainer {
+    height: initial;
+    top: -14vh;
+  }
+  #placeholderContainer img {
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  #placeholderContainer .content {
+    top: 18vh;
+  }
+
+  .popularSlider {
+    top: 85%;
+    left: 65%;
+  }
+}
+
+@media (max-width: 2560px) {
+  #placeholderContainer {
+    top: -28vh;
+  }
+  #placeholderContainer .content {
+    top: 35vh;
+  }
+}
+
+@media (max-width: 1920px) {
+  #placeholderContainer {
+    top: -38vh;
+  }
+
+  #placeholderContainer .content {
+    top: 45vh;
+    left: -32%;
+  }
+
+  .popularSlider {
+    left: 63%;
+  }
+}
+
+@media (max-width: 1440px) {
+  #placeholderContainer img {
+    width: 700px;
+    height: 500px;
+    top: 5vh;
+    left: 8vw;
+  }
+
+  .popularSlider {
+    left: 52%;
+    top: 80%;
+  }
+
+  #placeholderContainer .content {
+    top: 38vh;
+  }
+}
+
+@media (max-width: 1366px) {
+  .activePlaceholder {
+    padding: 25%;
+  }
+  #placeholderContainer img {
+    top: -22%;
+    left: 5%;
+    width: 800px;
+    height: 500px;
+  }
+
+  #placeholderContainer .content {
+    top: 40%;
+    left: -55%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .activePlaceholder {
+    padding: 20%;
+  }
+
+  #placeholderContainer img {
+    top: 10%;
+    left: -5%;
+    width: 750px;
+    height: 500px;
+  }
+
+  #placeholderContainer .content {
+    top: 63%;
+  }
+
+  #placeholderContainer .content .infoContainer {
+    font-size: 14px;
+  }
+  #placeholderContainer .content .postTitleText {
+    font-size: 22px;
+  }
+
+  .popularSlider {
+    left: 45%;
+  }
 }
