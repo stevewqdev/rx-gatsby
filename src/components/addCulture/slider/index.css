@@ -229,6 +229,7 @@
   }
   .featuredSlider .slick-current .featuredPreview {
     top: -200px;
+    left: -3%;
   }
   .featuredSlider .slick-current .featuredPreview .catAndDate .featuredCat,
   .featuredSlider .slick-current .featuredPreview .catAndDate .featuredDate {

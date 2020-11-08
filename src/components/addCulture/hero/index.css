@@ -182,6 +182,7 @@
 
   .addCultureSymbol img {
     width: 23%;
+    top: 20vh;
   }
 }
 

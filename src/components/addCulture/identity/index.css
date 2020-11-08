@@ -1,0 +1,35 @@
+.identityPath {
+  stroke-dasharray: 3630.01220703125;
+  stroke-dashoffset: 3630.01220703125;
+  animation: line 5s linear forwards;
+}
+
+.pathPlus {
+  stroke-dasharray: 18847;
+  stroke-dashoffset: 18847;
+  animation: plus 5s linear forwards;
+}
+
+.scratchPath {
+  stroke-dasharray: 1810;
+  stroke-dashoffset: 1810;
+  animation: plus 5s linear forwards;
+}
+
+@keyframes line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes plus {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scratch {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

@@ -65,7 +65,7 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .postsGrid .adcSinglePost {
@@ -286,7 +286,7 @@ a {
 }
 
 .blogCategories .categoriesHeader {
-  margin: 15% 10% 0 10%;
+  padding: 15% 10% 0 10%;
   color: #f4f4f4;
 }
 
@@ -545,10 +545,14 @@ a {
 }
 
 @media (max-width: 1440px) {
+  .featuredContent .container-fluid {
+    padding-top: 5%;
+  }
   .featuredContent .featuredText {
     font-size: 100px;
     line-height: 85px;
-    left: 12%;
+    left: 13%;
+    top: 25%;
   }
 
   #blogPosts .container-fluid {
@@ -563,11 +567,16 @@ a {
 
   .popularContent .popularRightMark {
     right: 3vw;
-    top: -14vh;
+    top: -5vh;
+  }
+
+  .popularContent .popularLeftMark {
+    top: 80%;
   }
 
   .popularContent .popularHeading {
     top: 5%;
+    left: 12.5%;
     font-size: 80px;
     line-height: 70px;
   }
