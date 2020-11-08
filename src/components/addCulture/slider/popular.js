@@ -15,7 +15,7 @@ export default class PopularSlider extends Component {
   }
 
   render() {
-    const settings = {
+    const popularSettings = {
       dots: false,
       arrows: true,
       infinite: true,
@@ -93,7 +93,7 @@ export default class PopularSlider extends Component {
         <div className="activePlaceholder">
           <div id="placeholderContainer"></div>
         </div>
-        <Slider {...settings}>
+        <Slider {...popularSettings}>
           {this.state.popular.map(post => (
             <div>
               <Img
