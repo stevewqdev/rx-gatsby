@@ -5,11 +5,9 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import Cursor from "../../components/cursor/cursor"
 import "../../layouts/addCultureLayout/index.css"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-import '../../fonts/addCulture/stylesheet.css'
-import '../../fonts/addCulture/lato/stylesheet.css'
-import '../../fonts/addCulture/helvetica/stylesheet.css'
+import "../../fonts/addCulture/stylesheet.css"
+import "../../fonts/addCulture/lato/stylesheet.css"
+import "../../fonts/addCulture/helvetica/stylesheet.css"
 import AddCultureFooter from "../../components/addCulture/footer"
 
 const AddCultureLayout = ({ children, location }) => {
@@ -97,7 +95,6 @@ const AddCultureLayout = ({ children, location }) => {
   return (
     <>
       {
-
         <>
           <Helmet>
             {/* <link rel="icon" href="" /> */}
@@ -107,7 +104,7 @@ const AddCultureLayout = ({ children, location }) => {
           <div className="addCultureWrapper" id="addCultureWrapper">
             <div id="top"></div>
             <main>{children}</main>
-            <AddCultureFooter/>
+            <AddCultureFooter />
           </div>
         </>
       }
