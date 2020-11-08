@@ -4,14 +4,39 @@ import Img from "gatsby-image"
 import { Link } from "gatsby"
 import NextArrow from "../../../images/addCulture/nextArrow.png"
 import PrevArrow from "../../../images/addCulture/prevArrow.png"
+import AOS from "aos"
 import "./popular.css"
 
 export default class PopularSlider extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      popular: this.props.popular,
+      popular: [],
     }
+  }
+
+  getPopular() {
+    const popular = []
+    this.props.popular.map(({ node }) => {
+      return node.categories.map(category => {
+        if (category.name === "Popular") {
+          popular.push(node)
+          return this.setState(
+            {
+              popular: popular,
+            },
+            function() {
+              console.log(this.state.popular)
+            }
+          )
+        }
+      })
+    })
+  }
+
+  componentDidMount() {
+    this.getPopular()
+    AOS.init()
   }
 
   render() {
@@ -39,6 +64,7 @@ export default class PopularSlider extends Component {
         let featuredImage = posts[0]
           .getElementsByClassName("srcImage")[0]
           .getAttribute("src")
+        console.log(featuredImage)
         let placeholderContainer = document.getElementById(
           "placeholderContainer"
         )

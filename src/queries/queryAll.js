@@ -14,6 +14,7 @@ module.exports = `
             }
             featured_media {
               id
+              source_url
               localFile {
                 id
                 childImageSharp {

@@ -25,6 +25,8 @@ export default class PostsIndex extends Component {
     this.state = {
       isMouseTooltipVisible: false,
       posts: this.props.data.allWordpressWpAddcultureposts.edges,
+      featuredPosts: [],
+      popularPosts: [],
       offset: 0,
       perPage: 8,
       currentPage: 0,
@@ -255,31 +257,6 @@ export default class PostsIndex extends Component {
   }
 
   render() {
-    const postsData = this.props.data.allWordpressWpAddcultureposts.edges
-    const featured = []
-    const popular = []
-    function getFeatured() {
-      postsData.map(({ node }) => {
-        node.categories.map(category => {
-          if (category.name === "Featured") {
-            return featured.push(node)
-          }
-        })
-      })
-    }
-
-    function getPopular() {
-      postsData.map(({ node }) => {
-        node.categories.map(category => {
-          if (category.name === "Popular") {
-            return popular.push(node)
-          }
-        })
-      })
-    }
-    getFeatured()
-    getPopular()
-
     return (
       <AddCultureLayout>
         <Helmet>
@@ -316,7 +293,10 @@ export default class PostsIndex extends Component {
                 >
                   FEATURED <br /> THIS <br /> MONTH
                 </h1>
-                <AddCultureSlider className="slider" featured={featured} />
+                <AddCultureSlider
+                  className="slider"
+                  featured={this.props.data.allWordpressWpAddcultureposts.edges}
+                />
               </div>
             </div>
 
@@ -370,7 +350,11 @@ export default class PostsIndex extends Component {
                   >
                     POPULAR <br /> THIS <br /> MONTH
                   </h1>
-                  <PopularSlider popular={popular} />
+                  <PopularSlider
+                    popular={
+                      this.props.data.allWordpressWpAddcultureposts.edges
+                    }
+                  />
                   <PopularLeftMark
                     className="popularLeftMark"
                     tabIndex="0"
