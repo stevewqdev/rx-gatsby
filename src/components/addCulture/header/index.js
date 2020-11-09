@@ -6,6 +6,31 @@ import "./index.css"
 import AOS from "aos"
 
 export default class Header extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isMenuMouseTooltipVisible: false,
+    }
+    this.showTooltipMenu = this.showTooltipMenu.bind(this)
+    this.hideTooltipMenu = this.hideTooltipMenu.bind(this)
+  }
+
+  showTooltipMenu(event) {
+    const tooltip = document.getElementById(`${event.target.id}-menu-container`)
+    tooltip.classList.add("show")
+    this.setState(prevState => ({
+      isMenuMouseTooltipVisible: !prevState.isMenuMouseTooltipVisible,
+    }))
+  }
+
+  hideTooltipMenu(event) {
+    const tooltip = document.getElementById(`${event.target.id}-menu-container`)
+    tooltip.classList.remove("show")
+    this.setState(prevState => ({
+      isMenuMouseTooltipVisible: !prevState.isMenuMouseTooltipVisible,
+    }))
+  }
+
   toggleMenu(event) {
     if (event.target.classList.contains("show")) {
       document.getElementById("categoriesMenu").classList.remove("show")
@@ -14,18 +39,6 @@ export default class Header extends Component {
       document.getElementById("categoriesMenu").classList.add("show")
       document.querySelector(".categoriesNavMenu").classList.add("show")
       document.getElementById("toggleClose").classList.add("show")
-    }
-  }
-
-  removeMuted(event) {
-    if (event.target.classList.contains("text-muted")) {
-      document.querySelector(".category").classList.remove("text-muted")
-    }
-  }
-
-  addMuted(event) {
-    if (event.target.classList.contains("text-muted")) {
-      document.querySelector(".category").classList.add("text-muted")
     }
   }
 
@@ -101,9 +114,9 @@ export default class Header extends Component {
                     data-aos="fade-down"
                     data-duration="4000"
                     to="/add-culture/minority"
-                    onMouseEnter={this.showTooltip}
-                    onMouseLeave={this.hideTooltip}
-                    className="categorySelector text-muted"
+                    onMouseEnter={this.showTooltipMenu}
+                    onMouseLeave={this.hideTooltipMenu}
+                    className="categorySelector"
                     id="categoryOne"
                   >
                     <p className="categoryNumber">01</p>
@@ -112,21 +125,21 @@ export default class Header extends Component {
                     </h2>
                   </Link>
                   <MouseTooltip
-                    visible={this.state.isMouseTooltipVisible}
+                    visible={this.state.isMenuMouseTooltipVisible}
                     offsetX={-200}
                     offsetY={-200}
                   >
                     <div
                       className="category minorityImg"
-                      id="categoryOne-container"
+                      id="categoryOne-menu-container"
                     ></div>
                   </MouseTooltip>
                   <Link
                     data-aos="fade-down"
                     data-duration="4400"
                     to="/add-culture/why"
-                    onMouseEnter={this.showTooltip}
-                    onMouseLeave={this.hideTooltip}
+                    onMouseEnter={this.showTooltipMenu}
+                    onMouseLeave={this.hideTooltipMenu}
                     className="categorySelector"
                     id="categoryThree"
                   >
@@ -136,21 +149,21 @@ export default class Header extends Component {
                     </h2>
                   </Link>
                   <MouseTooltip
-                    visible={this.state.isMouseTooltipVisible}
+                    visible={this.state.isMenuMouseTooltipVisible}
                     offsetX={-200}
                     offsetY={-200}
                   >
                     <div
                       className="category whyImg"
-                      id="categoryThree-container"
+                      id="categoryThree-menu-container"
                     ></div>
                   </MouseTooltip>
                   <Link
                     data-aos="fade-down"
                     data-duration="4600"
                     to="/add-culture/stories"
-                    onMouseEnter={this.showTooltip}
-                    onMouseLeave={this.hideTooltip}
+                    onMouseEnter={this.showTooltipMenu}
+                    onMouseLeave={this.hideTooltipMenu}
                     className="categorySelector"
                     id="categoryFour"
                   >
@@ -160,21 +173,21 @@ export default class Header extends Component {
                     </h2>
                   </Link>
                   <MouseTooltip
-                    visible={this.state.isMouseTooltipVisible}
+                    visible={this.state.isMenuMouseTooltipVisible}
                     offsetX={-200}
                     offsetY={-200}
                   >
                     <div
                       className="category storiesImg"
-                      id="categoryFour-container"
+                      id="categoryFour-menu-container"
                     ></div>
                   </MouseTooltip>
                   <Link
                     data-aos="fade-down"
                     data-duration="4800"
                     to="/add-culture/representation"
-                    onMouseEnter={this.showTooltip}
-                    onMouseLeave={this.hideTooltip}
+                    onMouseEnter={this.showTooltipMenu}
+                    onMouseLeave={this.hideTooltipMenu}
                     className="categorySelector"
                     id="categoryFive"
                   >
@@ -184,13 +197,13 @@ export default class Header extends Component {
                     </h2>
                   </Link>
                   <MouseTooltip
-                    visible={this.state.isMouseTooltipVisible}
+                    visible={this.state.isMenuMouseTooltipVisible}
                     offsetX={-200}
                     offsetY={-200}
                   >
                     <div
                       className="category representationImg"
-                      id="categoryFive-container"
+                      id="categoryFive-menu-container"
                     ></div>
                   </MouseTooltip>
                 </div>
