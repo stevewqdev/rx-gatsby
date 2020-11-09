@@ -1,41 +1,47 @@
 import React, { Component } from "react"
 import ScrollIndicatorDark from "../../../images/addCulture/scrollIndicatorDark.svg"
-import IdentityPlus from "../../../images/addCulture/identityPlus.svg"
-import IdentityScratch from "../../../images/addCulture/identityScratch.svg"
 import IdentityTriangle from "../../../images/addCulture/identityTriangle.svg"
 import IdentityTopEllipses from "../../../images/addCulture/identityTopEllipses.svg"
 import IdentityInverseVector from "../../../images/addCulture/identityInverseVector.svg"
-import IdentityLine from "../../../images/addCulture/identityLine.svg"
 import IdentityCircles from "../../../images/addCulture/identityCircles.svg"
 import IdentityHalfCircle from "../../../images/addCulture/identityHalfCircle.svg"
 import IdentityEllipse from "../../../images/addCulture/identityEllipse.svg"
 import IdentityVector from "../../../images/addCulture/identityVector5.svg"
 import "./index.css"
+import AOS from "aos"
 
 export default class Identity extends Component {
   componentDidMount() {
-    let path = document.querySelector(".scratchPath")
-    let length = path.getTotalLength()
-    console.log(length)
+    AOS.init()
   }
   render() {
     return (
       <div id="identity" className="blogIdentity">
         <div className="row">
-          <div className="scrollIndicatorDark">
+          <div
+            data-aos="fade-right"
+            data-duration="4000"
+            className="scrollIndicatorDark"
+          >
             <ScrollIndicatorDark tabIndex="0" alt="Scroll" />
           </div>
           <IdentityTriangle
+            data-aos="fade-right"
+            data-duration="4000"
             className="identityTriangle"
             tabIndex="0"
             alt="Triangle"
           />
           <IdentityTopEllipses
+            data-aos="fade-down"
+            data-duration="4000"
             className="identityTopEllipses"
             tabIndex="0"
             alt="Top Ellipses"
           />
           <IdentityInverseVector
+            data-aos="fade-left"
+            data-duration="4000"
             className="identityInverseVector"
             tabIndex="0"
             alt="Inverse Vector"
@@ -59,11 +65,15 @@ export default class Identity extends Component {
           </svg>
 
           <IdentityCircles
+            data-aos="fade-down"
+            data-duration="4000"
             className="identityCircles"
             tabIndex="0"
             alt="Circles"
           />
           <IdentityHalfCircle
+            data-aos="fade-up"
+            data-duration="4000"
             className="identityHalfCircle"
             tabIndex="0"
             alt="Bottom Circle"
@@ -122,11 +132,15 @@ export default class Identity extends Component {
             </svg>
 
             <IdentityEllipse
+              data-aos="fade-up"
+              data-duration="4000"
               className="identityEllipse"
               tabIndex="0"
               alt="Ellipse"
             />
             <IdentityVector
+              data-aos="fade-up"
+              data-duration="4000"
               className="identityVector"
               tabIndex="0"
               alt="Vector"

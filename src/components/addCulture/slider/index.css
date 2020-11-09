@@ -50,6 +50,7 @@
   top: -200px;
   color: #f4f4f4;
   font-family: "ITC Avant Garde Pro Md", sans-serif;
+  text-transform: uppercase;
 }
 
 .featuredSlider .slick-current .featuredPreview .catAndDate {

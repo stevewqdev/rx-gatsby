@@ -38,6 +38,7 @@ export default class Header extends Component {
       document.getElementById("toggleClose").classList.remove("show")
     } else {
       document.getElementById("categoriesMenu").classList.add("show")
+      document.querySelector(".categoriesNavMenu").classList.add("show")
       document.getElementById("toggleClose").classList.add("show")
     }
   }

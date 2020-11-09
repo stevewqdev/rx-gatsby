@@ -195,18 +195,10 @@
     line-height: 20px;
   }
   .addCultureText .heroText {
-    font-size: 120px;
-    line-height: 105px;
+    margin-top: 6%;
   }
   .addCultureSymbol img {
-    width: 25%;
-    bottom: 0;
-  }
-}
-
-@media (max-width: 1366px) and (max-height: 693px) {
-  .addCultureText {
-    margin-top: 0;
+    width: 20%;
   }
 }
 
@@ -215,9 +207,17 @@
     bottom: -1.8em;
     left: -2.8em;
   }
-  .addCultureText .heroText {
-    font-size: 125px;
-    line-height: 100px;
+  .addCultureText {
+    margin-top: 8%;
+    margin-left: 5%;
+  }
+  .addCultureHeroContent .whoWeAre {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .addCultureSymbol img {
+    top: 25vh;
   }
 }
 

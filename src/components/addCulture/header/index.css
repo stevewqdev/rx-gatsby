@@ -55,30 +55,25 @@
   margin-top: 15px;
 }
 .categoriesMenu {
-  display: none;
-  transition: left 1s ease-in;
-  left: -2000px;
-}
-
-.categoriesMenu.show {
   position: fixed;
-  display: block;
+  clip-path: circle(0% at 5% 8%);
+  transition: all 0.5s ease-in-out;
   width: 100%;
-  left: 0;
-  right: 0px;
-  top: 0px;
+  height: 100%;
   background: #222220;
-  height: 100vh;
   z-index: 9999;
 }
-
+.show {
+  clip-path: circle(100%);
+}
 .categoriesNavMenu {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   flex-wrap: wrap;
   position: relative;
   padding: 10% 5%;
+  font-family: "ITC Avant Garde Pro Md", sans-serif;
 }
 
 .categoriesNavMenu .categorySelector {

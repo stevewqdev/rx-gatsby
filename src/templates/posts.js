@@ -293,10 +293,10 @@ export default class PostsIndex extends Component {
                 >
                   FEATURED <br /> THIS <br /> MONTH
                 </h1>
-                <AddCultureSlider
+                {/* <AddCultureSlider
                   className="slider"
                   featured={this.props.data.allWordpressWpAddcultureposts.edges}
-                />
+                /> */}
               </div>
             </div>
 

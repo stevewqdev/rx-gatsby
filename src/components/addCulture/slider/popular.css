@@ -172,8 +172,12 @@
   }
 
   #placeholderContainer .content {
-    top: 40%;
-    left: -55%;
+    top: 41vh;
+    left: -44%;
+  }
+
+  .popularSlider {
+    left: 47%;
   }
 }
 
@@ -190,7 +194,8 @@
   }
 
   #placeholderContainer .content {
-    top: 63%;
+    top: 40vh;
+    left: -32%;
   }
 
   #placeholderContainer .content .infoContainer {
