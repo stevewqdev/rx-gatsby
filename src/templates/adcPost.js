@@ -183,41 +183,46 @@ export default class AddCulturePost extends Component {
           <div className="featuredGrid">
             {this.state.featuredPosts.map(({ node }, i) => (
               <>
-                <Link to={`/add-culture/post/${node.slug}`}>
-                  <div className={`adcSinglePost post-${i}`}>
-                    <div className="contentContainer">
-                      <div className="catAndDateContainer">
-                        {node.categories[0] === "Featured" ? (
-                          <Link
-                            to={`/post/${node.categories[1].slug.toLowerCase()}`}
-                            className="postCategory"
-                          >
-                            {node.categories[1].name}
-                          </Link>
-                        ) : (
-                          <Link
-                            to={`/post/${node.categories[0].slug.toLowerCase()}`}
-                            className="postCategory"
-                          >
-                            {node.categories[0].name}
-                          </Link>
-                        )}
-                        <p className="postDate">{node.date}</p>
+                {i < 3 ? (
+                  <Link to={`/add-culture/post/${node.slug}`}>
+                    <div className={`adcSinglePost post-${i}`}>
+                      <div className="contentContainer">
+                        <div className="catAndDateContainer">
+                          {node.categories[1] === "Featured" ? (
+                            <Link
+                              to={`/post/${node.categories[0].slug.toLowerCase()}`}
+                              className="postCategory"
+                            >
+                              {node.categories[0].name}
+                            </Link>
+                          ) : (
+                            <Link
+                              to={`/post/${node.categories[1].slug.toLowerCase()}`}
+                              className="postCategory"
+                            >
+                              {node.categories[1].name}
+                            </Link>
+                          )}
+                          <p className="postDate">{node.date}</p>
+                        </div>
+                        <h2 className="postTitle">{node.title}</h2>
                       </div>
-                      <h2 className="postTitle">{node.title}</h2>
-                    </div>
 
-                    {node.featured_media.localFile.childImageSharp !== null ? (
-                      <Img
-                        fluid={
-                          node.featured_media.localFile.childImageSharp.fluid
-                        }
-                      />
-                    ) : (
-                      ""
-                    )}
-                  </div>
-                </Link>
+                      {node.featured_media.localFile.childImageSharp !==
+                      null ? (
+                        <Img
+                          fluid={
+                            node.featured_media.localFile.childImageSharp.fluid
+                          }
+                        />
+                      ) : (
+                        ""
+                      )}
+                    </div>
+                  </Link>
+                ) : (
+                  ""
+                )}
               </>
             ))}
           </div>
