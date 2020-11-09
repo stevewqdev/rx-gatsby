@@ -6,32 +6,6 @@ import "./index.css"
 import AOS from "aos"
 
 export default class Header extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      isMouseTooltipVisible: false,
-    }
-
-    this.showTooltip = this.showTooltip.bind(this)
-    this.hideTooltip = this.hideTooltip.bind(this)
-  }
-
-  showTooltip(event) {
-    const tooltip = document.getElementById(`${event.target.id}-container`)
-    tooltip.classList.add("show")
-    this.setState(prevState => ({
-      isMouseTooltipVisible: !prevState.isMouseTooltipVisible,
-    }))
-  }
-
-  hideTooltip(event) {
-    const tooltip = document.getElementById(`${event.target.id}-container`)
-    tooltip.classList.remove("show")
-    this.setState(prevState => ({
-      isMouseTooltipVisible: !prevState.isMouseTooltipVisible,
-    }))
-  }
-
   toggleMenu(event) {
     if (event.target.classList.contains("show")) {
       document.getElementById("categoriesMenu").classList.remove("show")

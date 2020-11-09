@@ -300,6 +300,7 @@
   .featuredSlider .slick-current .featuredPreview .titleText {
     font-size: 60px;
     line-height: 50px;
+    width: 100%;
   }
   .featuredSlider .slick-current .featuredPreview a {
     font-size: 40px;

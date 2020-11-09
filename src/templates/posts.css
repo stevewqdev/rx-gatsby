@@ -685,7 +685,7 @@ a {
   }
 
   .popularContent .popularRightMark {
-    top: -30px;
+    top: -90px;
     position: absolute;
     right: 0px;
     margin-right: 50px;
@@ -707,7 +707,7 @@ a {
 
   .popularContent .popularHeading {
     font-size: 60px;
-    top: 18%;
+    top: 0;
     line-height: 50px;
   }
 
@@ -716,6 +716,9 @@ a {
     line-height: 70px;
   }
 
+  .identityPlus {
+    width: 230px;
+  }
   .identityScratch {
     left: 36%;
   }
@@ -729,13 +732,38 @@ a {
     position: relative;
     padding-top: 10%;
   }
+
+  #blogPosts .container-fluid {
+    max-width: 800px;
+  }
+
+  .scrollIndicatorDark {
+    top: 44%;
+  }
+
   .postsGrid .adcSinglePost {
-    width: 250px;
+    width: 150px;
     margin-bottom: 5%;
   }
 
   .postsGrid .adcSinglePost.post-0 {
-    width: 540px;
+    width: 450px;
+  }
+
+  .popular {
+    height: 55vh;
+  }
+
+  .popular .container-fluid {
+    margin-top: 10%;
+  }
+
+  .popularContent .popularHeading {
+    left: 17%;
+  }
+
+  .popularContent .popularLeftMark {
+    bottom: 15%;
   }
 
   .blogIdentity {
@@ -783,22 +811,37 @@ a {
     display: none;
   }
   .postsGrid .adcSinglePost {
-    width: 300px;
+    width: 250px;
     margin-bottom: 5%;
   }
 
   .postsGrid .adcSinglePost.post-0 {
-    width: 300px;
+    width: 250px;
     flex-direction: column;
   }
 
   .scrollIndicatorDark {
-    left: 5%;
+    left: 8%;
+  }
+
+  .popularContent .popularLeftMark,
+  .popularContent .popularRightMark {
+    display: none;
+  }
+
+  .popularContent .popularHeading {
+    left: 10%;
+    font-size: 50px;
+    line-height: 40px;
+  }
+
+  .identityScratch {
+    top: 40%;
   }
 
   .identityTriangle {
     margin-top: 30%;
-    margin-left: 12%;
+    margin-left: 15%;
   }
 
   .identityTopEllipses {
@@ -807,7 +850,7 @@ a {
   }
 
   .identityCircles {
-    left: 2%;
+    left: 3.5%;
   }
 }
 

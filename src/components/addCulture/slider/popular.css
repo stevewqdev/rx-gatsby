@@ -209,3 +209,43 @@
     left: 45%;
   }
 }
+
+@media (max-width: 1024px) {
+  #placeholderContainer img {
+    width: 550px;
+    height: 350px;
+    top: 20vh;
+    left: 5%;
+  }
+
+  #placeholderContainer .content {
+    top: 35vh;
+    left: -25%;
+  }
+
+  #placeholderContainer .content p {
+    padding: 0;
+  }
+
+  .popularSlider {
+    width: 400px;
+    left: 52%;
+    top: 65%;
+  }
+
+  #placeholderContainer .content .postTitleText {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  #placeholderContainer .content {
+    left: -38%;
+    top: 39vh;
+  }
+
+  .popularSlider {
+    top: 90%;
+    left: 37%;
+  }
+}

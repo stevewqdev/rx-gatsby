@@ -224,6 +224,7 @@
 @media (max-width: 1024px) {
   #addCultureHero {
     height: 100vh;
+    background: linear-gradient(#adaea5 50%, #222220 50%);
   }
   .addCultureHeroContent {
     top: 23%;
@@ -232,7 +233,12 @@
     top: 15vh;
   }
   .scrollIndicator {
-    left: -8%;
+    left: 0%;
+  }
+
+  .addCultureText {
+    margin-left: 13%;
+    margin-top: 10%;
   }
   .addCultureHeroContent .whoWeAre {
     margin-top: 0;
@@ -242,8 +248,13 @@
     left: -2.5em;
   }
   .addCultureText .heroText {
-    font-size: 100px;
-    line-height: 80px;
+    font-size: 70px;
+    line-height: 60px;
+  }
+
+  .addCultureSymbol img {
+    width: 23%;
+    top: 10vh;
   }
 }
 
@@ -269,6 +280,10 @@
   .addCultureText .heroText {
     font-size: 70px;
     line-height: 60px;
+  }
+
+  .addCultureSymbol img {
+    top: 12vh;
   }
 }
 
