@@ -1,0 +1,11 @@
+.newsletterWrapper {
+  width: 100%;
+}
+
+.inputText {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  font-style: normal;
+  text-transform: uppercase;
+}
