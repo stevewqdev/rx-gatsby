@@ -337,3 +337,14 @@
     width: 20px;
   }
 }
+
+@media (max-width: 280px) {
+  .activePlaceholder {
+    padding: 30% 0;
+  }
+  .popularSlider {
+    top: 170%;
+    width: 110px;
+    left: 30%;
+  }
+}

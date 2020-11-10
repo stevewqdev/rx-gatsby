@@ -1077,9 +1077,18 @@ a {
     margin-top: 140%;
   }
 
+  .identityPlus {
+    top: 18%;
+  }
+
+  .identityScratch {
+    top: 37%;
+    height: 120px;
+  }
+
   .categoriesHeader .categoriesHeading {
-    font-size: 30px;
-    line-height: 25px;
+    font-size: 25px;
+    line-height: 20px;
   }
 }
 @media (max-width: 1366px) and (orientation: landscape) {

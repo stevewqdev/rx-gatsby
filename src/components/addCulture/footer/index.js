@@ -18,7 +18,7 @@ export default class AddCultureFooter extends Component {
                 <h1 className="join">
                   JOIN OUR NEWSLETTER <br /> TO STAY UP TO DATE
                 </h1>
-                <FooterArrow tabIndex="0" alt="Arrow" />
+                <FooterArrow className="footerArrow" tabIndex="0" alt="Arrow" />
               </div>
               <div className="col-lg-6 col-sm-12 d-flex align-items-end">
                 <Newsletter></Newsletter>

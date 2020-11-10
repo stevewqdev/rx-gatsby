@@ -17,9 +17,20 @@
   margin-bottom: 5%;
 }
 
+.footerArrow {
+  width: 200px;
+}
+
 .join {
   font-size: 40px;
   line-height: 36px;
   font-style: normal;
   font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .join {
+    font-size: 22px;
+    line-height: 20px;
+  }
 }

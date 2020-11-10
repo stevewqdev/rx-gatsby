@@ -9,3 +9,10 @@
   font-style: normal;
   text-transform: uppercase;
 }
+
+@media (max-width: 480px) {
+  .inputText {
+    font-size: 10px;
+    line-height: 10px;
+  }
+}
