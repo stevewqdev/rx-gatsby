@@ -415,7 +415,7 @@
     height: 100vh;
   } */
   .slick-list {
-    height: 70vh;
+    height: 80vh;
   }
   .featuredSlider .slick-current {
     width: 350px !important;
@@ -429,7 +429,7 @@
     transform: translate3d(40%, 0, -100px);
   }
   .featuredSlider .slick-sprev {
-    transform: translate3d(-40%, 0, -100px);
+    transform: translate3d(-30%, 0, -100px);
   }
 
   .featuredSlider .slick-current .featuredPreview {
@@ -441,9 +441,14 @@
     justify-content: center;
   }
 
+  .featuredSlider .slick-current .featuredPreview .titleText {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
   .featuredSlider .slick-prev,
   .featuredSlider .slick-next {
-    top: 50% !important;
+    top: 45% !important;
   }
 
   .featuredSlider .slick-next {
@@ -459,7 +464,7 @@
     top: -20%;
   }
   .featuredSlider .slick-current .featuredImage {
-    margin-left: 5%;
+    margin-left: 2%;
   }
 
   .featuredSlider .slick-sprev {
@@ -470,10 +475,18 @@
   .featuredSlider .slick-next {
     top: 55% !important;
   }
+  .featuredSlider .slick-prev {
+    left: 25vw !important;
+  }
 
   .featuredSlider .slick-current .featuredPreview {
     top: 150px;
-    left: 5%;
+    left: 0;
+  }
+
+  .featuredSlider .slick-current .featuredPreview .titleText {
+    font-size: 25px;
+    line-height: 25px;
   }
 }
 
@@ -519,16 +532,16 @@
     height: 80vh;
   }
   .featuredSlider .slick-sprev {
-    transform: translate3d(-30%, 0, -90px);
+    transform: translate3d(-45%, 0, -90px);
   }
   .featuredSlider .slick-snext {
-    transform: translate3d(35%, 0, -90px);
+    transform: translate3d(45%, 0, -90px);
   }
   .featuredSlider .slick-current {
     width: 320px !important;
   }
   .featuredSlider .slick-current .featuredImage {
-    margin-left: 0;
+    margin-left: -15px;
   }
 
   .featuredSlider .slick-current .featuredPreview {
@@ -574,6 +587,7 @@
   }
   .featuredSlider .slick-current .featuredImage {
     width: 100%;
+    margin-left: 0;
   }
   .featuredSlider .slick-current .featuredPreview {
     left: 0;
@@ -581,11 +595,8 @@
   .featuredSlider .slick-prev {
     left: 25vw !important;
   }
-  /* .featuredSlider .slick-sprev {
-    transform: translate3d(-30%, 0, -90px);
-  } */
   .featuredSlider .slick-snext {
-    transform: translate3d(25%, 0, -90px);
+    transform: translate3d(45%, 0, -90px);
   }
   .featuredSlider .slick-current .featuredPreview .catAndDate .featuredCat,
   .featuredSlider .slick-current .featuredPreview .catAndDate .featuredDate {

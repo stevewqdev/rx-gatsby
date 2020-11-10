@@ -191,11 +191,13 @@
     left: 0;
   }
   .addCultureHeroContent .whoWeAre {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 16px;
   }
   .addCultureText .heroText {
-    margin-top: 6%;
+    margin-top: 4%;
+    font-size: 80px;
+    line-height: 70px;
   }
   .addCultureSymbol img {
     width: 20%;
@@ -293,9 +295,13 @@
   }
   .addCultureHeroContent {
     top: 20%;
+    text-align: center;
   }
   .addCultureHeroContent .scrollIndicator {
     top: 10vh;
+  }
+  .addCultureText {
+    margin-left: 0;
   }
   .about .heroLine {
     bottom: -2.2em;
@@ -309,7 +315,7 @@
   .addCultureText .heroText {
     font-size: 60px;
     line-height: 50px;
-    margin-left: -5px;
+    margin-left: 0;
   }
   .addCultureSymbol {
     display: none;
@@ -326,9 +332,9 @@
   .addCultureHeroContent .scrollIndicator {
     display: none;
   }
-  .about {
+  /* .about {
     left: 6%;
-  }
+  } */
   .about .heroLine {
     bottom: -2.5em;
     left: -1.6em;

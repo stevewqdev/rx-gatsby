@@ -861,11 +861,21 @@ a {
     top: 0;
   }
   .postsGrid .adcSinglePost {
-    width: 200px;
+    width: 300px;
   }
 
   .postsGrid .adcSinglePost.post-0 {
-    width: 200px;
+    width: 300px;
+  }
+
+  .popular {
+    height: 100vh;
+  }
+
+  .popularContent .popularHeading {
+    position: relative;
+    text-align: center;
+    left: initial;
   }
 
   .blogIdentity .identityHeading {
@@ -914,10 +924,6 @@ a {
     width: initial;
   }
 
-  .postsGrid .adcSinglePost.post-0 {
-    width: initial;
-  }
-
   .popularContent .popularHeading {
     font-size: 40px;
     line-height: 35px;
@@ -929,6 +935,9 @@ a {
   .blogIdentity {
     height: 100vh;
   }
+  .scrollIndicatorDark {
+    left: 8%;
+  }
   .blogIdentity .identityHeading {
     font-size: 50px;
     margin-top: 120%;
@@ -936,8 +945,8 @@ a {
   }
 
   .blogIdentity .identityText {
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 15px;
+    line-height: 15px;
   }
 
   .identityTriangle {
@@ -952,27 +961,42 @@ a {
   }
 
   .identityLine {
-    margin-left: -40%;
+    margin-left: -70%;
+    margin-top: 30%;
+    height: 600px;
   }
   .identityHalfCircle {
     margin-left: 25%;
+    height: 50px;
   }
   .identityCircles {
-    margin-left: 12%;
+    margin-left: 5%;
   }
   .identityScratch {
-    left: 25%;
+    left: 30%;
+    height: 170px;
+    top: 46%;
   }
   .identityPlus {
     width: 30%;
-    right: 8%;
   }
 
   .identityEllipse {
     bottom: 0;
+    height: 50px;
   }
   .identityVector {
     left: 45%;
+    height: 50px;
+  }
+
+  .categoriesHeader h1 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+  .categoryName {
+    font-size: 22px;
+    line-height: 22px;
   }
 }
 
@@ -985,6 +1009,10 @@ a {
   .scrollIndicatorDark {
     left: 8%;
   }
+
+  .postsGrid .adcSinglePost.post-0 {
+    width: 270px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -996,11 +1024,33 @@ a {
     margin: 0 auto;
   }
   .blogIdentity .identityHeading {
-    margin-top: 100%;
+    margin-top: 130%;
+    font-size: 40px;
+    line-height: 35px;
+  }
+
+  .blogIdentity .identityText {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .identityScratch {
+    height: 130px;
   }
 }
 
 @media (max-width: 320px) {
+  .featuredContent {
+    padding: 25% 0;
+  }
+
+  #blogPosts {
+    padding: 25% 0;
+  }
+
+  .postsGrid .adcSinglePost.post-0 {
+    width: 290px;
+  }
   .blogIdentity .identityHeading {
     font-size: 40px;
     line-height: 35px;
@@ -1015,6 +1065,12 @@ a {
 }
 
 @media (max-width: 280px) {
+  #blogPosts {
+    padding: 30% 0;
+  }
+  .postsGrid .adcSinglePost.post-0 {
+    width: 250px;
+  }
   .blogIdentity .identityHeading {
     font-size: 30px;
     line-height: 25px;

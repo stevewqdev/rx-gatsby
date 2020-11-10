@@ -26,21 +26,21 @@ const Newsletter = props => {
     handleSubmit(e)
   }
 
-  function getCookie(cname) {
-    var name = cname + "="
-    var decodedCookie = decodeURIComponent(document.cookie)
-    var ca = decodedCookie.split(";")
-    for (var i = 0; i < ca.length; i++) {
-      var c = ca[i]
-      while (c.charAt(0) == " ") {
-        c = c.substring(1)
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length)
-      }
-    }
-    return ""
-  }
+  // function getCookie(cname) {
+  //   var name = cname + "="
+  //   var decodedCookie = decodeURIComponent(document.cookie)
+  //   var ca = decodedCookie.split(";")
+  //   for (var i = 0; i < ca.length; i++) {
+  //     var c = ca[i]
+  //     while (c.charAt(0) == " ") {
+  //       c = c.substring(1)
+  //     }
+  //     if (c.indexOf(name) == 0) {
+  //       return c.substring(name.length, c.length)
+  //     }
+  //   }
+  //   return ""
+  // }
 
   function handleSubmit(e) {
     // var SharpSpringTracking = getCookie("__ss_tk")
@@ -65,11 +65,11 @@ const Newsletter = props => {
     // }
     if (email && email.length > 0 && name && name.length) {
       if (email.match(mailformat)) {
-        var fields = {
-          // FNAME: `${name.split(" ")[0]}`,
-          // LNAME: `${name.split(" ")[1]}`,
-          "group[7812]": "1",
-        }
+        // var fields = {
+        //   // FNAME: `${name.split(" ")[0]}`,
+        //   // LNAME: `${name.split(" ")[1]}`,
+        //   "group[7812]": "1",
+        // }
 
         // Add Lead to SharpSpring
         // var xhr = new XMLHttpRequest()
@@ -85,14 +85,13 @@ const Newsletter = props => {
 
         addToMailchimp(
           email,
-          fields,
           "https://raxo.us18.list-manage.com/subscribe/post?u=0a73a5fcd4be545fba0c4bac9&amp;id=d80e65e5f2&SIGNUP=Blogsite"
         )
           .then(data => {
             console.log(data)
             setStatus(data.result)
             setMessage(data.msg)
-            setName("")
+            // setName("")
             setEmail("")
           })
           .catch(error => {

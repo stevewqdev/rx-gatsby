@@ -103,9 +103,15 @@
   }
 }
 
+@media (max-width: 540px) {
+  .brand__logo {
+    width: 35%;
+  }
+}
+
 @media (max-width: 480px) {
-  .navToggler {
-    flex-grow: 0.5;
+  .brand__logo {
+    width: 60%;
   }
   .explore {
     display: none;
@@ -124,16 +130,20 @@
 }
 
 @media (max-width: 360px) {
-  .navToggler {
-    flex-grow: 0.8;
+  .navbar {
+    padding: 20px;
   }
 }
 
 @media (max-width: 280px) {
-  .navToggler {
-    flex-grow: 0.5;
+  .navbarMenuBurger {
+    width: 100%;
   }
   .brand__logo {
-    flex-grow: 1;
+    width: 50%;
+  }
+
+  .brand__logo h1 {
+    font-size: 18px;
   }
 }
