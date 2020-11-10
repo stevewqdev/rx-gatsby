@@ -83,7 +83,11 @@ const Newsletter = props => {
         // )
         // xhr.send()
 
-        addToMailchimp(email, fields)
+        addToMailchimp(
+          email,
+          fields,
+          "https://raxo.us18.list-manage.com/subscribe/post?u=0a73a5fcd4be545fba0c4bac9&amp;id=d80e65e5f2&SIGNUP=Blogsite"
+        )
           .then(data => {
             console.log(data)
             setStatus(data.result)
