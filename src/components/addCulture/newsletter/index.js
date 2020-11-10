@@ -121,10 +121,10 @@ const Newsletter = props => {
       <div className="container newsletterContainer" id="newsletter">
         <div className="row">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 getWrapper">
-            <div
+            {/* <div
               className=""
               dangerouslySetInnerHTML={{ __html: inTouchCopy }}
-            />
+            /> */}
 
             <form onSubmit={handleSubmit}>
               <label htmlFor="email" style={{ display: "none" }}></label>
