@@ -291,6 +291,8 @@
 .featuredGrid .adcSinglePost {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  border-top: 1px solid #222220;
   width: 250px;
   height: 100%;
 }
@@ -463,6 +465,15 @@
 
   .content p {
     padding-right: 40%;
+  }
+
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4,
+  .content h5,
+  .content h6 {
+    padding-right: 30%;
   }
 
   .featuredGrid .adcSinglePost.post-0 {
