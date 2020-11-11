@@ -45,7 +45,6 @@ export default class PostsIndex extends Component {
 
       if (elemRect.top < 0) {
         // codigo si el elemento ya llego al top de la pantalla
-        document.querySelector(".addCultureContainer").classList.add("dark")
         document.querySelector(".navbar").style.background = "#222220"
         document.querySelector(
           ".navbarMenuBurger .menuBurgerLineOne"
@@ -56,14 +55,13 @@ export default class PostsIndex extends Component {
         document.querySelector(".brand__logo h1").style.color = "#fcc6c6"
         document.querySelector(".explore").style.color = "#fcc6c6"
       } else {
-        document.querySelector(".addCultureContainer").classList.remove("dark")
       }
     })
   }
 
   postsScrollHandler() {
     window.addEventListener("scroll", function() {
-      var element = document.getElementById("blogPosts")
+      var element = document.getElementById("postsAnchor")
       let posts = document.querySelectorAll(".adcSinglePost")
       var bodyRect = document.body.getBoundingClientRect(),
         elemRect = element.getBoundingClientRect(),
@@ -87,7 +85,7 @@ export default class PostsIndex extends Component {
         })
       } else {
         document.querySelector(".addCultureContainer").classList.remove("light")
-        element.classList.remove("lightFont")
+        document.getElementById("blogPosts").classList.remove("lightFont")
         posts.forEach(post => {
           post.classList.add("adcSinglePostDark")
           post.children[0].children[0].children[1].style.color = "#e5e5e5"
@@ -98,7 +96,7 @@ export default class PostsIndex extends Component {
 
   popularScrollhandler() {
     window.addEventListener("scroll", function() {
-      var element = document.getElementById("popular")
+      var element = document.getElementById("popularAnchor")
       var bodyRect = document.body.getBoundingClientRect(),
         elemRect = element.getBoundingClientRect(),
         offset = elemRect.top - bodyRect.top
@@ -114,16 +112,14 @@ export default class PostsIndex extends Component {
         ).style.background = "#fcc6c6"
         document.querySelector(".brand__logo h1").style.color = "#fcc6c6"
         document.querySelector(".explore").style.color = "#fcc6c6"
-        document.querySelector(".addCultureContainer").classList.add("dark")
-      } else {
-        document.querySelector(".addCultureContainer").classList.remove("dark")
+        document.querySelector(".addCultureContainer").classList.remove("light")
       }
     })
   }
 
   identityScrollhandler() {
     window.addEventListener("scroll", function() {
-      var element = document.getElementById("identity")
+      var element = document.getElementById("identityAnchor")
       var bodyRect = document.body.getBoundingClientRect(),
         elemRect = element.getBoundingClientRect(),
         offset = elemRect.top - bodyRect.top
@@ -148,7 +144,7 @@ export default class PostsIndex extends Component {
 
   categoriesScrollhandler() {
     window.addEventListener("scroll", function() {
-      var element = document.getElementById("categories")
+      var element = document.getElementById("categoriesAnchor")
       var bodyRect = document.body.getBoundingClientRect(),
         elemRect = element.getBoundingClientRect(),
         offset = elemRect.top - bodyRect.top
@@ -164,9 +160,7 @@ export default class PostsIndex extends Component {
         ).style.background = "#fcc6c6"
         document.querySelector(".brand__logo h1").style.color = "#fcc6c6"
         document.querySelector(".explore").style.color = "#fcc6c6"
-        document.querySelector(".addCultureContainer").classList.add("dark")
-      } else {
-        document.querySelector(".addCultureContainer").classList.remove("dark")
+        document.querySelector(".addCultureContainer").classList.remove("gray")
       }
     })
   }
@@ -303,6 +297,8 @@ export default class PostsIndex extends Component {
               </div>
             </div>
 
+            <div className="anchor" id="postsAnchor"></div>
+
             <div id="blogPosts" className="addCultureBlogPosts">
               <div className="container-fluid">
                 <div className="row">
@@ -334,6 +330,8 @@ export default class PostsIndex extends Component {
                 </div>
               </div>
             </div>
+
+            <div className="anchor" id="popularAnchor"></div>
 
             <div id="popular" className="popular">
               <div className="container-fluid">
@@ -367,7 +365,12 @@ export default class PostsIndex extends Component {
               </div>
             </div>
 
+            <div className="anchor" id="identityAnchor"></div>
+
             <Identity />
+
+            <div className="categories" id="categoriesAnchor"></div>
+
             <div id="categories" className="blogCategories">
               <div className="categoriesHeader">
                 <p data-aos="fade-right" data-duration="4000">

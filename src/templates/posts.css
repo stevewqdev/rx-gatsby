@@ -3,6 +3,10 @@ a {
   color: #222220;
 }
 
+.anchor {
+  margin: 5% auto;
+}
+
 .dark {
   background: #222220 !important;
 }
