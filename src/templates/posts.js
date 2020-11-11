@@ -14,6 +14,8 @@ import ScrollIndicator from "../images/addCulture/scrollIndicator.svg"
 import ScrollIndicatorDark from "../images/addCulture/scrollIndicatorDark.svg"
 import PopularLeftMark from "../images/addCulture/popularLeftMark.svg"
 import PopularRightMark from "../images/addCulture/popularRIghtMark.svg"
+import "slick-carousel/slick/slick-theme.css"
+import "slick-carousel/slick/slick.css"
 import "./posts.css"
 import AOS from "aos"
 

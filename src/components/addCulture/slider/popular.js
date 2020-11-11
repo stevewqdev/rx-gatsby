@@ -5,9 +5,6 @@ import { Link } from "gatsby"
 import NextArrow from "../../../images/addCulture/nextArrow.png"
 import PrevArrow from "../../../images/addCulture/prevArrow.png"
 import AOS from "aos"
-
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
 import "./popular.css"
 
 export default class PopularSlider extends Component {
