@@ -12,6 +12,7 @@ export default class PopularSlider extends Component {
     super(props)
     this.state = {
       popular: [],
+      render: false,
     }
   }
 
@@ -35,6 +36,9 @@ export default class PopularSlider extends Component {
   }
 
   componentDidMount() {
+    this.setState({
+      render: true,
+    })
     this.getPopular()
     AOS.init()
   }
@@ -114,47 +118,54 @@ export default class PopularSlider extends Component {
         placeholderContainer.innerHTML += printData
       },
     }
-    return (
-      <Slider {...popularSettings}>
-        {this.state.popular.map(post => (
-          <div>
-            <Img
-              fluid={post.featured_media.localFile.childImageSharp.fluid}
-              className="popularImage"
-              alt={post.title}
-            />
-            <img
-              id="popularImage"
-              src={post.featured_media.source_url}
-              className="srcImage d-none"
-              alt={post.title}
-            />
-            <div className="content">
-              <div className="catAndDate">
-                {post.categories.map(category =>
-                  category.name !== "Featured" ||
-                  category.name !== "Popular" ? (
-                    <p id="category" className="popularCat">
-                      {category.name}
-                    </p>
-                  ) : (
-                    ""
-                  )
-                )}
-                <p id="date" className="popularDate">
-                  {post.date}
-                </p>
+    const { render } = this.state
+    if (render) {
+      return (
+        <Slider {...popularSettings}>
+          {this.state.popular.map(post => (
+            <div>
+              <Img
+                fluid={post.featured_media.localFile.childImageSharp.fluid}
+                className="popularImage"
+                alt={post.title}
+              />
+              <img
+                id="popularImage"
+                src={post.featured_media.source_url}
+                className="srcImage d-none"
+                alt={post.title}
+              />
+              <div className="content">
+                <div className="catAndDate">
+                  {post.categories.map(category =>
+                    category.name !== "Featured" ||
+                    category.name !== "Popular" ? (
+                      <p id="category" className="popularCat">
+                        {category.name}
+                      </p>
+                    ) : (
+                      ""
+                    )
+                  )}
+                  <p id="date" className="popularDate">
+                    {post.date}
+                  </p>
+                </div>
+                <h1 id="title" className="titleText">
+                  {post.title}
+                </h1>
+                <Link
+                  className="postLink"
+                  to={`/add-culture/post/${post.slug}`}
+                >
+                  READ MORE+
+                </Link>
               </div>
-              <h1 id="title" className="titleText">
-                {post.title}
-              </h1>
-              <Link className="postLink" to={`/add-culture/post/${post.slug}`}>
-                READ MORE+
-              </Link>
             </div>
-          </div>
-        ))}
-      </Slider>
-    )
+          ))}
+        </Slider>
+      )
+    }
+    return null
   }
 }
