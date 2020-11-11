@@ -26,19 +26,16 @@ export default class AddCulturePost extends Component {
 
   bgChange() {
     window.addEventListener("scroll", function() {
-      var element = document.querySelector(".bottomLine")
+      var element = document.getElementById("postContentAnchor")
       var bodyRect = document.body.getBoundingClientRect(),
         elemRect = element.getBoundingClientRect(),
         offset = elemRect.top - bodyRect.top
 
-      if (elemRect.top < 0) {
+      if (elemRect.top < 100) {
         // codigo si el elemento ya llego al top de la pantalla
         document.querySelector(".postWrapper").classList.add("light")
-        // element.style.position = "sticky"
-        // element.style.top = "0px"
       } else {
         document.querySelector(".postWrapper").classList.remove("light")
-        // element.style.position = "initial"
       }
     })
   }
@@ -98,6 +95,8 @@ export default class AddCulturePost extends Component {
 
             <PostHeroLine tabIndex="0" alt="line" className="bottomLine" />
           </div>
+
+          <div className="anchor" id="postContentAnchor"></div>
 
           <div className="postContent">
             <div className="container-fluid">

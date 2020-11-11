@@ -55,7 +55,7 @@ export default class PostsIndex extends Component {
         elemRect = element.getBoundingClientRect(),
         offset = elemRect.top - bodyRect.top
 
-      if (elemRect.top < 0) {
+      if (elemRect.top < 100) {
         // codigo si el elemento ya llego al top de la pantalla
         document.querySelector(".navbar").style.background = "#222220"
         document.querySelector(
@@ -88,7 +88,7 @@ export default class PostsIndex extends Component {
         elemRect = element.getBoundingClientRect(),
         offset = elemRect.top - bodyRect.top
 
-      if (elemRect.top < 0) {
+      if (elemRect.top < 100) {
         // codigo si el elemento ya llego al top de la pantalla
         document.querySelector(".navbar").style.background = "#e5e5e5"
         document.querySelector(
@@ -122,7 +122,7 @@ export default class PostsIndex extends Component {
         elemRect = element.getBoundingClientRect(),
         offset = elemRect.top - bodyRect.top
 
-      if (elemRect.top < 0) {
+      if (elemRect.top < 100) {
         // codigo si el elemento ya llego al top de la pantalla
         document.querySelector(".navbar").style.background = "#222220"
         document.querySelector(
@@ -145,7 +145,7 @@ export default class PostsIndex extends Component {
         elemRect = element.getBoundingClientRect(),
         offset = elemRect.top - bodyRect.top
 
-      if (elemRect.top < 0) {
+      if (elemRect.top < 100) {
         // codigo si el elemento ya llego al top de la pantalla
         document.querySelector(".navbar").style.background = "#adaea5"
         document.querySelector(
@@ -170,7 +170,7 @@ export default class PostsIndex extends Component {
         elemRect = element.getBoundingClientRect(),
         offset = elemRect.top - bodyRect.top
 
-      if (elemRect.top < 0) {
+      if (elemRect.top < 100) {
         // codigo si el elemento ya llego al top de la pantalla
         document.querySelector(".navbar").style.background = "#222220"
         document.querySelector(

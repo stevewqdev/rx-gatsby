@@ -153,7 +153,8 @@
   opacity: 0.7;
   font-size: 22px;
   line-height: 40px;
-  font-weight: normal;
+  font-weight: 100;
+  font-display: swap;
   font-style: normal;
 }
 
@@ -253,8 +254,7 @@
 }
 
 .relatedPostsSection {
-  padding: 0 10%;
-  margin-bottom: 5%;
+  padding: 5% 10%;
   font-family: "ITC Avant Garde Pro Md", sans-serif;
   color: #222220;
 }
@@ -278,7 +278,6 @@
 
 .relatedHeading .featured span {
   color: #cd4275;
-  text-decoration: underline;
 }
 
 .featuredGrid {
@@ -459,7 +458,11 @@
   }
 
   .postContainer {
-    padding: 15% 40%;
+    padding: 12%;
+  }
+
+  .content p {
+    padding-right: 40%;
   }
 
   .featuredGrid .adcSinglePost.post-0 {
