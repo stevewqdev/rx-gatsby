@@ -24,6 +24,22 @@ export default class AddCulturePost extends Component {
     }
   }
 
+  formatCategories() {
+    let featured = this.state.featuredPosts
+
+    featured.map(({ node }) => {
+      node.categories.map(category => {
+        if (category.name === "Minority Owned Agencies") {
+          category.name = "Min. Owned Agencies"
+        } else if (category.name === "Representation Done Right") {
+          category.name = "Rep. Done Right"
+        } else if (category.name === "Add Culture Stories") {
+          category.name = "Stories"
+        }
+      })
+    })
+  }
+
   bgChange() {
     window.addEventListener("scroll", function() {
       var element = document.getElementById("postContentAnchor")
@@ -51,6 +67,7 @@ export default class AddCulturePost extends Component {
     document.querySelector(".brand__logo h1").style.color = "#FFC6C6"
     document.querySelector(".storiesLink p").style.color = "#FFC6C6"
     this.bgChange()
+    this.formatCategories()
   }
   render() {
     return (
@@ -125,18 +142,18 @@ export default class AddCulturePost extends Component {
                     />
 
                     <div className="socials">
-                      <Link to="https://twitter.com">
+                      <a to="https://twitter.com">
                         <TwitterIcon tabIndex="0" alt="Twitter" />
-                      </Link>
-                      <Link to="https://facebook.com">
+                      </a>
+                      <a to="https://facebook.com">
                         <FacebookIcon tabIndex="0" alt="Facebook" />
-                      </Link>
-                      <Link to="https://linkedin.com">
+                      </a>
+                      <a to="https://linkedin.com">
                         <LinkedInIcon tabIndex="0" alt="LinkedIn" />
-                      </Link>
-                      <Link to="#">
+                      </a>
+                      <a to="#">
                         <ShareIcon tabIndex="0" alt="Share" />
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>

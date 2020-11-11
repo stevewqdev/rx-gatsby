@@ -202,12 +202,28 @@ export default class PostsIndex extends Component {
     }))
   }
 
+  formatCategories(arr) {
+    arr.map(({ node }) => {
+      node.categories.map(category => {
+        if (category.name === "Minority Owned Agencies") {
+          category.name = "Min. Agencies"
+        } else if (category.name === "Representation Done Right") {
+          category.name = "Rep. Done Right"
+        } else if (category.name === "Add Culture Stories") {
+          category.name = "Stories"
+        }
+      })
+    })
+  }
+
   formatData() {
     const data = this.state.posts
     const slice = data.slice(
       this.state.offset,
       this.state.offset + this.state.perPage
     )
+
+    this.formatCategories(slice)
     const postData = slice.map(({ node }, i) => (
       <React.Fragment>
         <Link to={`/add-culture/post/${node.slug}`}>
@@ -218,12 +234,21 @@ export default class PostsIndex extends Component {
           >
             <div className="contentContainer">
               <div className="catAndDateContainer">
-                <Link
-                  to={`/add-culture/post/${node.categories[0].slug.toLowerCase()}`}
-                  className="postCategory"
-                >
-                  {node.categories[0].name}
-                </Link>
+                {node.categories[1] === "Featured" ? (
+                  <Link
+                    to={`/post/${node.categories[0].slug.toLowerCase()}`}
+                    className="postCategory"
+                  >
+                    {node.categories[0].name}
+                  </Link>
+                ) : (
+                  <Link
+                    to={`/post/${node.categories[1].slug.toLowerCase()}`}
+                    className="postCategory"
+                  >
+                    {node.categories[1].name}
+                  </Link>
+                )}
                 <p className="postDate">{node.date}</p>
               </div>
               <h2 className="postTitle">{node.title}</h2>
