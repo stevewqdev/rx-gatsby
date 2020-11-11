@@ -81,38 +81,38 @@ export default class PopularSlider extends Component {
         `
         placeholderContainer.innerHTML += printData
       },
-      beforeChange: function clear() {
-        document.getElementById("placeholderContainer").innerHTML = ""
-      },
-      afterChange: function showData() {
-        const posts = document.querySelectorAll(".popularSlider .slick-active")
+      // beforeChange: function clear() {
+      //   document.getElementById("placeholderContainer").innerHTML = ""
+      // },
+      // afterChange: function showData() {
+      //   const posts = document.querySelectorAll(".popularSlider .slick-active")
 
-        let title = posts[0].getElementsByClassName("titleText")[0].textContent
-        let category = posts[0].getElementsByClassName("popularCat")[0]
-          .textContent
-        let date = posts[0].getElementsByClassName("popularDate")[0].textContent
-        let slug = posts[0]
-          .getElementsByClassName("postLink")[0]
-          .getAttribute("href")
-        let featuredImage = posts[0]
-          .getElementsByClassName("srcImage")[0]
-          .getAttribute("src")
-        let placeholderContainer = document.getElementById(
-          "placeholderContainer"
-        )
-        const printData = `
-          <img class="placeHolderImg" src=${featuredImage} alt=${title} />
-          <div class="content">
-            <div class="infoContainer">
-              <p class="popularCategory">${category}</p>
-              <p class="popDate">${date}</p>
-            </div>
-            <h1 class="postTitleText">${title}</h1>
-            <a href=${slug}>READ MORE+</a>
-          </div>
-        `
-        placeholderContainer.innerHTML += printData
-      },
+      //   let title = posts[0].getElementsByClassName("titleText")[0].textContent
+      //   let category = posts[0].getElementsByClassName("popularCat")[0]
+      //     .textContent
+      //   let date = posts[0].getElementsByClassName("popularDate")[0].textContent
+      //   let slug = posts[0]
+      //     .getElementsByClassName("postLink")[0]
+      //     .getAttribute("href")
+      //   let featuredImage = posts[0]
+      //     .getElementsByClassName("srcImage")[0]
+      //     .getAttribute("src")
+      //   let placeholderContainer = document.getElementById(
+      //     "placeholderContainer"
+      //   )
+      //   const printData = `
+      //     <img class="placeHolderImg" src=${featuredImage} alt=${title} />
+      //     <div class="content">
+      //       <div class="infoContainer">
+      //         <p class="popularCategory">${category}</p>
+      //         <p class="popDate">${date}</p>
+      //       </div>
+      //       <h1 class="postTitleText">${title}</h1>
+      //       <a href=${slug}>READ MORE+</a>
+      //     </div>
+      //   `
+      //   placeholderContainer.innerHTML += printData
+      // },
     }
     return (
       <>
