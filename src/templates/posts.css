@@ -536,6 +536,9 @@ a {
 }
 
 @media (max-width: 1600px) {
+  .anchor {
+    margin: 10% auto;
+  }
   .featuredContent .featuredText {
     font-size: 100px;
     line-height: 85px;

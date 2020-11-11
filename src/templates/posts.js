@@ -36,6 +36,18 @@ export default class PostsIndex extends Component {
     this.hideTooltip = this.hideTooltip.bind(this)
   }
 
+  // navbarHandler() {
+  //   window.addEventListener('scroll', function() {
+  //     let element = document.querySelector('.navbar');
+  //     var bodyRect = document.body.getBoundingClientRect(),
+  //       elemRect = element.getBoundingClientRect(),
+  //       offset = elemRect.top - bodyRect.top;
+
+  //       if(elemRect.top === )
+
+  //   })
+  // }
+
   featuredHandler() {
     window.addEventListener("scroll", function() {
       var element = document.getElementById("featured")
@@ -55,6 +67,15 @@ export default class PostsIndex extends Component {
         document.querySelector(".brand__logo h1").style.color = "#fcc6c6"
         document.querySelector(".explore").style.color = "#fcc6c6"
       } else {
+        document.querySelector(".navbar").style.background = "#adaea5"
+        document.querySelector(
+          ".navbarMenuBurger .menuBurgerLineOne"
+        ).style.background = "#222220"
+        document.querySelector(
+          ".navbarMenuBurger .menuBurgerLineTwo"
+        ).style.background = "#222220"
+        document.querySelector(".brand__logo h1").style.color = "#222220"
+        document.querySelector(".explore").style.color = "#222220"
       }
     })
   }
