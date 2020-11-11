@@ -17,13 +17,18 @@ export default class PopularSlider extends Component {
 
   getPopular() {
     const popular = []
-    this.props.popular.map(({ node }) => {
-      return node.categories.map(category => {
+    this.props.popular.forEach(({ node }) => {
+      node.categories.forEach(category => {
         if (category.name === "Popular") {
           popular.push(node)
-          return this.setState({
-            popular: popular,
-          })
+          return this.setState(
+            {
+              popular: popular,
+            },
+            function() {
+              console.log(popular)
+            }
+          )
         }
       })
     })
@@ -46,68 +51,68 @@ export default class PopularSlider extends Component {
       slidesToScroll: 1,
       nextArrow: <img src={NextArrow} tabIndex="0" alt="Next post" />,
       prevArrow: <img src={PrevArrow} tabIndex="0" alt="Previous post" />,
-      // onInit: function showData() {
-      //   const posts = document.querySelectorAll(".popularSlider .slick-active")
+      onInit: function showData() {
+        const posts = document.querySelectorAll(".popularSlider .slick-active")
 
-      //   let title = posts[0].getElementsByClassName("titleText")[0].textContent
-      //   let category = posts[0].getElementsByClassName("popularCat")[0]
-      //     .textContent
-      //   let date = posts[0].getElementsByClassName("popularDate")[0].textContent
-      //   let slug = posts[0]
-      //     .getElementsByClassName("postLink")[0]
-      //     .getAttribute("href")
-      //   let featuredImage = posts[0]
-      //     .getElementsByClassName("srcImage")[0]
-      //     .getAttribute("src")
-      //   console.log(featuredImage)
-      //   let placeholderContainer = document.getElementById(
-      //     "placeholderContainer"
-      //   )
-      //   const printData = `
-      //     <img data-aos="fade-left" data-duration="4000" class="placeHolderImg" src=${featuredImage} alt=${title} />
-      //     <div data-aos="fade-right" data-duration="4000" class="content">
-      //       <div class="infoContainer">
-      //         <p class="popularCategory">${category}</p>
-      //         <p class="popDate">${date}</p>
-      //       </div>
-      //       <h1 class="postTitleText">${title}</h1>
-      //       <a href=${slug}>READ MORE+</a>
-      //     </div>
-      //   `
-      //   placeholderContainer.innerHTML += printData
-      // },
-      // beforeChange: function clear() {
-      //   document.getElementById("placeholderContainer").innerHTML = ""
-      // },
-      // afterChange: function showData() {
-      //   const posts = document.querySelectorAll(".popularSlider .slick-active")
+        let title = posts[0].getElementsByClassName("titleText")[0].textContent
+        let category = posts[0].getElementsByClassName("popularCat")[0]
+          .textContent
+        let date = posts[0].getElementsByClassName("popularDate")[0].textContent
+        let slug = posts[0]
+          .getElementsByClassName("postLink")[0]
+          .getAttribute("href")
+        let featuredImage = posts[0]
+          .getElementsByClassName("srcImage")[0]
+          .getAttribute("src")
+        console.log(featuredImage)
+        let placeholderContainer = document.getElementById(
+          "placeholderContainer"
+        )
+        const printData = `
+          <img data-aos="fade-left" data-duration="4000" class="placeHolderImg" src=${featuredImage} alt=${title} />
+          <div data-aos="fade-right" data-duration="4000" class="content">
+            <div class="infoContainer">
+              <p class="popularCategory">${category}</p>
+              <p class="popDate">${date}</p>
+            </div>
+            <h1 class="postTitleText">${title}</h1>
+            <a href=${slug}>READ MORE+</a>
+          </div>
+        `
+        placeholderContainer.innerHTML += printData
+      },
+      beforeChange: function clear() {
+        document.getElementById("placeholderContainer").innerHTML = ""
+      },
+      afterChange: function showData() {
+        const posts = document.querySelectorAll(".popularSlider .slick-active")
 
-      //   let title = posts[0].getElementsByClassName("titleText")[0].textContent
-      //   let category = posts[0].getElementsByClassName("popularCat")[0]
-      //     .textContent
-      //   let date = posts[0].getElementsByClassName("popularDate")[0].textContent
-      //   let slug = posts[0]
-      //     .getElementsByClassName("postLink")[0]
-      //     .getAttribute("href")
-      //   let featuredImage = posts[0]
-      //     .getElementsByClassName("srcImage")[0]
-      //     .getAttribute("src")
-      //   let placeholderContainer = document.getElementById(
-      //     "placeholderContainer"
-      //   )
-      //   const printData = `
-      //     <img class="placeHolderImg" src=${featuredImage} alt=${title} />
-      //     <div class="content">
-      //       <div class="infoContainer">
-      //         <p class="popularCategory">${category}</p>
-      //         <p class="popDate">${date}</p>
-      //       </div>
-      //       <h1 class="postTitleText">${title}</h1>
-      //       <a href=${slug}>READ MORE+</a>
-      //     </div>
-      //   `
-      //   placeholderContainer.innerHTML += printData
-      // },
+        let title = posts[0].getElementsByClassName("titleText")[0].textContent
+        let category = posts[0].getElementsByClassName("popularCat")[0]
+          .textContent
+        let date = posts[0].getElementsByClassName("popularDate")[0].textContent
+        let slug = posts[0]
+          .getElementsByClassName("postLink")[0]
+          .getAttribute("href")
+        let featuredImage = posts[0]
+          .getElementsByClassName("srcImage")[0]
+          .getAttribute("src")
+        let placeholderContainer = document.getElementById(
+          "placeholderContainer"
+        )
+        const printData = `
+          <img class="placeHolderImg" src=${featuredImage} alt=${title} />
+          <div class="content">
+            <div class="infoContainer">
+              <p class="popularCategory">${category}</p>
+              <p class="popDate">${date}</p>
+            </div>
+            <h1 class="postTitleText">${title}</h1>
+            <a href=${slug}>READ MORE+</a>
+          </div>
+        `
+        placeholderContainer.innerHTML += printData
+      },
     }
     return (
       <>
@@ -117,34 +122,29 @@ export default class PopularSlider extends Component {
         <Slider {...popularSettings}>
           {this.state.popular.map(post => (
             <div>
-              <Img
+              {/* <Img
                 fluid={post.featured_media.localFile.childImageSharp.fluid}
                 className="popularImage"
                 alt={post.title}
-              />
-              {/* <img
+              /> */}
+              <img
                 id="popularImage"
                 src={post.featured_media.source_url}
-                className="srcImage d-none"
+                className="srcImage"
                 alt={post.title}
-              /> */}
+              />
               <div className="content">
                 <div className="catAndDate">
-                  {/* <p id="category" className="popularCat">
-                    {post.categories[0].name}
-                  </p> */}
-                  {/* {post.categories.map(category =>
+                  {post.categories.map(category =>
                     category.name !== "Featured" ||
                     category.name !== "Popular" ? (
                       <p id="category" className="popularCat">
                         {category.name}
                       </p>
                     ) : (
-                      <p id="category" className="popularCat">
-                        Uncategorized
-                      </p>
+                      ""
                     )
-                  )} */}
+                  )}
                   <p id="date" className="popularDate">
                     {post.date}
                   </p>
