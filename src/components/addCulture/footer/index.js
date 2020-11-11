@@ -20,7 +20,7 @@ export default class AddCultureFooter extends Component {
                 </h1>
                 <FooterArrow className="footerArrow" tabIndex="0" alt="Arrow" />
               </div>
-              <div className="col-lg-6 col-sm-12 d-flex align-items-end">
+              <div className="col-lg-6 col-sm-12 d-flex align-items-center">
                 <Newsletter></Newsletter>
               </div>
             </div>

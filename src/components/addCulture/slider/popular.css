@@ -142,6 +142,23 @@
   }
 }
 
+@media (max-width: 1600px) {
+  #placeholderContainer img {
+    width: 800px;
+    height: 500px;
+    top: 5vh;
+    left: 8vw;
+  }
+  #placeholderContainer .content {
+    top: 40vh;
+    left: -32%;
+  }
+  .popularSlider {
+    left: 55%;
+    top: 75%;
+  }
+}
+
 @media (max-width: 1440px) {
   #placeholderContainer img {
     width: 700px;

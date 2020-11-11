@@ -21,14 +21,9 @@ export default class PopularSlider extends Component {
       return node.categories.map(category => {
         if (category.name === "Popular") {
           popular.push(node)
-          return this.setState(
-            {
-              popular: popular,
-            },
-            function() {
-              console.log(this.state.popular)
-            }
-          )
+          return this.setState({
+            popular: popular,
+          })
         }
       })
     })

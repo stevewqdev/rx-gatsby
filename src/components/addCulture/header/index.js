@@ -87,7 +87,7 @@ export default class Header extends Component {
                   {" "}
                   <Arrow tabIndex="0" alt="Explore Stories" />{" "}
                 </span>
-                EXPLORE <strong>STORIES</strong>{" "}
+                BACK TO <strong>RAXO.CO</strong>{" "}
               </p>
             </div>
           </div>
@@ -111,8 +111,6 @@ export default class Header extends Component {
               <div className="col-lg-12 col-sm-12 ml-auto">
                 <div className="categoriesNavMenu">
                   <Link
-                    data-aos="fade-down"
-                    data-duration="4000"
                     to="/add-culture/minority"
                     onMouseEnter={this.showTooltipMenu}
                     onMouseLeave={this.hideTooltipMenu}
@@ -135,8 +133,6 @@ export default class Header extends Component {
                     ></div>
                   </MouseTooltip>
                   <Link
-                    data-aos="fade-down"
-                    data-duration="4400"
                     to="/add-culture/why"
                     onMouseEnter={this.showTooltipMenu}
                     onMouseLeave={this.hideTooltipMenu}
@@ -159,8 +155,6 @@ export default class Header extends Component {
                     ></div>
                   </MouseTooltip>
                   <Link
-                    data-aos="fade-down"
-                    data-duration="4600"
                     to="/add-culture/stories"
                     onMouseEnter={this.showTooltipMenu}
                     onMouseLeave={this.hideTooltipMenu}
@@ -183,8 +177,6 @@ export default class Header extends Component {
                     ></div>
                   </MouseTooltip>
                   <Link
-                    data-aos="fade-down"
-                    data-duration="4800"
                     to="/add-culture/representation"
                     onMouseEnter={this.showTooltipMenu}
                     onMouseLeave={this.hideTooltipMenu}

@@ -45,8 +45,7 @@ export default class PostsIndex extends Component {
 
       if (elemRect.top < 0) {
         // codigo si el elemento ya llego al top de la pantalla
-        element.classList.add("dark")
-        document.querySelector(".featuredText").classList.add("lightFont")
+        document.querySelector(".addCultureContainer").classList.add("dark")
         document.querySelector(".navbar").style.background = "#222220"
         document.querySelector(
           ".navbarMenuBurger .menuBurgerLineOne"
@@ -57,8 +56,7 @@ export default class PostsIndex extends Component {
         document.querySelector(".brand__logo h1").style.color = "#fcc6c6"
         document.querySelector(".explore").style.color = "#fcc6c6"
       } else {
-        element.classList.remove("dark")
-        document.querySelector(".featuredText").classList.remove("lightFont")
+        document.querySelector(".addCultureContainer").classList.remove("dark")
       }
     })
   }
@@ -82,14 +80,13 @@ export default class PostsIndex extends Component {
         ).style.background = "#222220"
         document.querySelector(".brand__logo h1").style.color = "#222220"
         document.querySelector(".explore").style.color = "#222220"
-        element.classList.add("light")
-
+        document.querySelector(".addCultureContainer").classList.add("light")
         posts.forEach(post => {
           post.classList.remove("adcSinglePostDark")
           post.children[0].children[0].children[1].style.color = "#222220"
         })
       } else {
-        element.classList.remove("light")
+        document.querySelector(".addCultureContainer").classList.remove("light")
         element.classList.remove("lightFont")
         posts.forEach(post => {
           post.classList.add("adcSinglePostDark")
@@ -117,9 +114,9 @@ export default class PostsIndex extends Component {
         ).style.background = "#fcc6c6"
         document.querySelector(".brand__logo h1").style.color = "#fcc6c6"
         document.querySelector(".explore").style.color = "#fcc6c6"
-        element.classList.add("dark")
+        document.querySelector(".addCultureContainer").classList.add("dark")
       } else {
-        element.classList.remove("dark")
+        document.querySelector(".addCultureContainer").classList.remove("dark")
       }
     })
   }
@@ -142,6 +139,9 @@ export default class PostsIndex extends Component {
         ).style.background = "#222220"
         document.querySelector(".brand__logo h1").style.color = "#222220"
         document.querySelector(".explore").style.color = "#222220"
+        document.querySelector(".addCultureContainer").classList.add("gray")
+      } else {
+        document.querySelector(".addCultureContainer").classList.remove("gray")
       }
     })
   }
@@ -164,6 +164,9 @@ export default class PostsIndex extends Component {
         ).style.background = "#fcc6c6"
         document.querySelector(".brand__logo h1").style.color = "#fcc6c6"
         document.querySelector(".explore").style.color = "#fcc6c6"
+        document.querySelector(".addCultureContainer").classList.add("dark")
+      } else {
+        document.querySelector(".addCultureContainer").classList.remove("dark")
       }
     })
   }

@@ -8,6 +8,13 @@
   line-height: 30px;
   font-style: normal;
   text-transform: uppercase;
+  border-bottom: 1px solid #222220 !important;
+  opacity: 0.5;
+  transition: all 0.5s ease-in;
+}
+
+.inputText:focus {
+  opacity: 1;
 }
 
 @media (max-width: 480px) {

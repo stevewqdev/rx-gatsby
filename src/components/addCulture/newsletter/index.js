@@ -175,7 +175,7 @@ const Newsletter = props => {
                 onClick={submitForm}
               >
                 <svg
-                  width="36"
+                  width="28"
                   height="20"
                   viewBox="0 0 36 20"
                   fill="none"

@@ -47,7 +47,7 @@
   position: relative;
   z-index: 9999;
   left: -5%;
-  top: -200px;
+  top: -250px;
   color: #f4f4f4;
   font-family: "ITC Avant Garde Pro Md", sans-serif;
   text-transform: uppercase;
@@ -219,6 +219,12 @@
   }
 }
 
+@media (max-width: 1600px) {
+  .featuredSlider .slick-current {
+    width: 1400px !important;
+  }
+}
+
 @media (max-width: 1440px) {
   .featuredSlider .slick-current {
     width: 1300px !important;
@@ -229,17 +235,17 @@
     height: auto;
   }
   .featuredSlider .slick-current .featuredPreview {
-    top: -200px;
+    top: -250px;
     left: -3%;
   }
   .featuredSlider .slick-current .featuredPreview .catAndDate .featuredCat,
   .featuredSlider .slick-current .featuredPreview .catAndDate .featuredDate {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .featuredSlider .slick-current .featuredPreview .titleText {
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 40px;
+    line-height: 40px;
   }
 
   .featuredSlider .slick-current .featuredPreview a {
