@@ -214,6 +214,7 @@
   }
   .addCultureSymbol img {
     width: 20%;
+    top: 16vh;
   }
 }
 
@@ -223,7 +224,7 @@
     left: -2.8em;
   }
   .addCultureText {
-    margin-top: 8%;
+    margin-top: 13%;
     margin-left: 5%;
   }
   .addCultureHeroContent .whoWeAre {
@@ -253,7 +254,7 @@
 
   .addCultureText {
     margin-left: 13%;
-    margin-top: 10%;
+    margin-top: 12%;
   }
   .addCultureHeroContent .whoWeAre {
     margin-top: 0;

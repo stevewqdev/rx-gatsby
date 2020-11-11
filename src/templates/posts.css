@@ -817,7 +817,10 @@ a {
   }
 
   .postsGrid .adcSinglePost.post-0 {
-    width: 450px;
+    width: 455px;
+  }
+  .adcSinglePost.post-0 .gatsby-image-wrapper {
+    width: 66%;
   }
 
   .popular {
@@ -833,7 +836,7 @@ a {
   }
 
   .popularContent .popularLeftMark {
-    bottom: 15%;
+    left: 5%;
   }
 
   .blogIdentity {
@@ -936,6 +939,9 @@ a {
 
   .postsGrid .adcSinglePost.post-0 {
     width: 300px;
+  }
+  .adcSinglePost.post-0 .gatsby-image-wrapper {
+    width: 100%;
   }
 
   .popular {

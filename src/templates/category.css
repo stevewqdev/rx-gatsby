@@ -168,12 +168,28 @@
 }
 
 @media (max-width: 1440px) {
-  .categoryHero {
-    margin-left: 10%;
+  .categoryResults .container-fluid {
+    max-width: initial;
   }
-
+  .categoryHero {
+    margin-left: 13%;
+  }
   .categoryPosts {
     margin: 0 12%;
+  }
+  .categoryPosts .adcSinglePost {
+    width: 220px;
+  }
+
+  /* .categoryPosts .adcSinglePost .gatsby-image-wrapper {
+    height: 100%;
+  } */
+
+  .categoryPosts .adcSinglePost.post-1 {
+    width: 600px;
+  }
+  .categoryPosts .adcSinglePost.post-1 .gatsby-image-wrapper {
+    width: 190%;
   }
 }
 
