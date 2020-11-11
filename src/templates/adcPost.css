@@ -1,5 +1,13 @@
-.postHeader {
+.light {
+  background: #e5e5e5;
+}
+
+.postWrapper {
   background: #222220;
+  transition: all 1s ease-in-out;
+}
+
+.postHeader {
   padding: 15%;
   height: 100vh;
   position: relative;
@@ -41,7 +49,6 @@
   font-size: 16px;
   font-weight: bold;
   font-style: normal;
-  text-decoration: underline;
   line-height: 22px;
   width: 18%;
 }
@@ -422,6 +429,45 @@
   .featuredGrid .adcSinglePost.adcSinglePost.post-1,
   .featuredGrid .adcSinglePost.adcSinglePost.post-2 {
     width: 350px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .categoryContainer {
+    top: 25%;
+  }
+  .categoryContainer p {
+    width: 50%;
+    line-height: 14px;
+    font-size: 14px;
+  }
+  .postHeroDate {
+    font-size: 80px;
+    top: 56%;
+  }
+  .postHeroTitle {
+    font-size: 80px;
+    line-height: 70px;
+    width: 100%;
+    top: 55%;
+  }
+  .postHeroImage .gatsby-image-wrapper {
+    height: 550px;
+  }
+  .bottomLine {
+    bottom: -20%;
+  }
+
+  .postContainer {
+    padding: 15% 40%;
+  }
+
+  .featuredGrid .adcSinglePost.post-0 {
+    width: 750px;
+  }
+  .featuredGrid .adcSinglePost.adcSinglePost.post-1,
+  .featuredGrid .adcSinglePost.adcSinglePost.post-2 {
+    width: 220px;
   }
 }
 
