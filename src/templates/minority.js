@@ -24,8 +24,8 @@ export default class Minority extends Component {
   }
 
   formatCategories(arr) {
-    arr.map(({ node }) => {
-      node.categories.map(category => {
+    arr.forEach(({ node }) => {
+      node.categories.forEach(category => {
         if (category.name === "Minority Owned Agencies") {
           category.name = "Min. Owned Agencies"
         }

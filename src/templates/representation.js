@@ -24,8 +24,8 @@ export default class Representation extends Component {
   }
 
   formatCategories(arr) {
-    arr.map(({ node }) => {
-      node.categories.map(category => {
+    arr.forEach(({ node }) => {
+      node.categories.forEach(category => {
         if (category.name === "Representation Done Right") {
           category.name = "Rep. Done Right"
         }

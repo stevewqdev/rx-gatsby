@@ -24,8 +24,8 @@ export default class Stories extends Component {
   }
 
   formatCategories(arr) {
-    arr.map(({ node }) => {
-      node.categories.map(category => {
+    arr.forEach(({ node }) => {
+      node.categories.forEach(category => {
         if (category.name === "Add Culture Stories") {
           category.name = "Stories"
         }

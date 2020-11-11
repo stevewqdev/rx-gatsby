@@ -203,8 +203,8 @@ export default class PostsIndex extends Component {
   }
 
   formatCategories(arr) {
-    arr.map(({ node }) => {
-      node.categories.map(category => {
+    arr.forEach(({ node }) => {
+      node.categories.forEach(category => {
         if (category.name === "Minority Owned Agencies") {
           category.name = "Min. Agencies"
         } else if (category.name === "Representation Done Right") {
