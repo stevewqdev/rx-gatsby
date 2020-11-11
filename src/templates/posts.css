@@ -715,6 +715,10 @@ a {
     width: 590px;
   }
 
+  .adcSinglePost.post-0 .gatsby-image-wrapper {
+    width: 80%;
+  }
+
   .scrollIndicatorDark {
     top: 40%;
     left: 4.5%;
