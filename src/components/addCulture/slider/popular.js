@@ -122,12 +122,12 @@ export default class PopularSlider extends Component {
                 className="popularImage"
                 alt={post.title}
               />
-              <img
+              {/* <img
                 id="popularImage"
                 src={post.featured_media.source_url}
                 className="srcImage d-none"
                 alt={post.title}
-              />
+              /> */}
               <div className="content">
                 <div className="catAndDate">
                   {/* <p id="category" className="popularCat">
