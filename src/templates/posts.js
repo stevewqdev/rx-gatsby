@@ -223,7 +223,7 @@ export default class PostsIndex extends Component {
       this.state.offset + this.state.perPage
     )
 
-    this.formatCategories(slice)
+    // this.formatCategories(slice)
     const postData = slice.map(({ node }, i) => (
       <React.Fragment>
         <Link to={`/add-culture/post/${node.slug}`}>
