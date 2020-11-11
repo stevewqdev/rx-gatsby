@@ -403,6 +403,9 @@ export default class PostsIndex extends Component {
                   >
                     POPULAR <br /> THIS <br /> MONTH
                   </h1>
+                  <div className="activePlaceholder">
+                    <div id="placeholderContainer"></div>
+                  </div>
                   <PopularSlider
                     popular={
                       this.props.data.allWordpressWpAddcultureposts.edges
