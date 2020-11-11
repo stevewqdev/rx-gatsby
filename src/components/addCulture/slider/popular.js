@@ -130,7 +130,10 @@ export default class PopularSlider extends Component {
               />
               <div className="content">
                 <div className="catAndDate">
-                  {post.categories.map(category =>
+                  <p id="category" className="popularCat">
+                    {post.categories[0].name}
+                  </p>
+                  {/* {post.categories.map(category =>
                     category.name !== "Featured" ||
                     category.name !== "Popular" ? (
                       <p id="category" className="popularCat">
@@ -141,7 +144,7 @@ export default class PopularSlider extends Component {
                         Uncategorized
                       </p>
                     )
-                  )}
+                  )} */}
                   <p id="date" className="popularDate">
                     {post.date}
                   </p>

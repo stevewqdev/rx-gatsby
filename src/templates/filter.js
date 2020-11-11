@@ -4,7 +4,7 @@ import ReactPaginate from "react-paginate"
 import { Link } from "gatsby"
 import AddCultureLayout from "../layouts/addCultureLayout/index"
 import Header from "../components/addCulture/header"
-import CategoryCircle from "../images/addCulture/categories/categoryCircle.svg"
+// import CategoryCircle from "../images/addCulture/categories/categoryCircle.svg"
 import FilterLine from "../images/addCulture/filterLine.svg"
 import "./filter.css"
 
@@ -26,7 +26,19 @@ export default class Filter extends Component {
     this.formatData = this.formatData.bind(this)
   }
 
+  // formatCategories(arr) {
+  //   arr.forEach(({ node }) => {
+  //     node.categories.forEach(category => {
+  //       if (category.name === "Minority Owned Agencies") {
+  //         category.name = "Min. Owned Agencies"
+  //       }
+  //     })
+  //   })
+  // }
+
   formatData() {
+    this.removeActiveClass()
+    document.querySelector(".all").classList.add("blog__active")
     // Format search term
     const searchTerm = this.props.location.search.split("?")
     const search = searchTerm[1]
@@ -38,8 +50,8 @@ export default class Filter extends Component {
 
     const data = []
     // map data and filter posts by search term
-    this.state.allPosts.map(({ node }) => {
-      node.tags.map(tag => {
+    this.state.allPosts.forEach(({ node }) => {
+      node.tags.forEach(tag => {
         if (tag.slug === search) {
           data.push(node)
         }
@@ -48,10 +60,12 @@ export default class Filter extends Component {
     this.setState({ filteredPosts: data })
 
     // make filtered data ready for pagination
+
     const slice = data.slice(
       this.state.offset,
       this.state.offset + this.state.perPage
     )
+    // this.formatCategories(slice)
     const postData = slice.map(post => (
       <React.Fragment>
         <Link to={`/add-culture/post/${post.slug}`}>
@@ -111,15 +125,26 @@ export default class Filter extends Component {
     )
   }
 
+  removeActiveClass() {
+    let link = document.querySelector(".blog__active")
+    if (link) {
+      link.classList.remove("blog__active")
+    } else {
+      return
+    }
+  }
+
   filterNewestPosts(e) {
+    this.removeActiveClass()
+    e.target.classList.add("blog__active")
     const searchTerm = this.props.location.search.split("?")
     const search = searchTerm[1]
     let args = e.target.textContent
     let newest = []
 
     if (args === "Newest") {
-      this.state.allPosts.map(({ node }, i) => {
-        node.tags.map(tag => {
+      this.state.allPosts.forEach(({ node }, i) => {
+        node.tags.forEach(tag => {
           if (tag.name === search && i < 10) {
             newest.push(node)
           }
@@ -130,6 +155,7 @@ export default class Filter extends Component {
         this.state.offset,
         this.state.offset + this.state.perPage
       )
+      // this.formatCategories(slice)
       const postData = slice.map(post =>
         post ? (
           <React.Fragment>
@@ -180,16 +206,18 @@ export default class Filter extends Component {
   }
 
   filterFeaturedPosts(e) {
+    this.removeActiveClass()
+    e.target.classList.add("blog__active")
     const searchTerm = this.props.location.search.split("?")
     const search = searchTerm[1]
     let args = e.target.textContent
     let featured = []
 
     if (args === "Featured") {
-      this.state.allPosts.map(({ node }) => {
-        node.tags.map(tag => {
+      this.state.allPosts.forEach(({ node }) => {
+        node.tags.forEach(tag => {
           if (tag.name === search) {
-            node.categories.map(cat => {
+            node.categories.forEach(cat => {
               if (cat.name === "Featured") {
                 featured.push(node)
               }
@@ -202,6 +230,7 @@ export default class Filter extends Component {
         this.state.offset,
         this.state.offset + this.state.perPage
       )
+      // this.formatCategories(slice)
       const postData = slice.map(post =>
         post ? (
           <React.Fragment>
@@ -252,16 +281,18 @@ export default class Filter extends Component {
   }
 
   filterPopularPosts(e) {
+    this.removeActiveClass()
+    e.target.classList.add("blog__active")
     const searchTerm = this.props.location.search.split("?")
     const search = searchTerm[1]
     let args = e.target.textContent
     let popular = []
 
     if (args === "Popular") {
-      this.state.allPosts.map(({ node }) => {
-        node.tags.map(tag => {
+      this.state.allPosts.forEach(({ node }) => {
+        node.tags.forEach(tag => {
           if (tag.name === search) {
-            node.categories.map(cat => {
+            node.categories.forEach(cat => {
               if (cat.name === "Popular") {
                 popular.push(node)
               }
@@ -274,6 +305,7 @@ export default class Filter extends Component {
         this.state.offset,
         this.state.offset + this.state.perPage
       )
+      // this.formatCategories(slice)
       const postData = slice.map(post =>
         post ? (
           <React.Fragment>
@@ -334,43 +366,65 @@ export default class Filter extends Component {
         <Header />
         <FilterLine alt="Filter Line" tabIndex="0" className="filterLine" />
         <div className="filterWrapper">
-          <div className="filterHeader">
-            <div className="filterHeaderContainer">
-              <p>Results for</p>
-              <h1>
-                {this.state.search}
-                <span>/ {this.state.filteredPosts.length}</span>
-              </h1>
+          <div className="container-fluid">
+            <div className="filterHeader">
+              <div className="filterHeaderContainer">
+                <p>Results for</p>
+                <h1>
+                  {this.state.search}
+                  <span>/ {this.state.filteredPosts.length}</span>
+                </h1>
+              </div>
+
+              <div className="filterTerms">
+                <p>Filter by:</p>
+                <ul>
+                  <li>
+                    <a
+                      className="all blog__active"
+                      href="#"
+                      onClick={this.formatData}
+                    >
+                      All
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" onClick={this.filterNewestPosts}>
+                      Newest
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" onClick={this.filterPopularPosts}>
+                      Popular
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" onClick={this.filterFeaturedPosts}>
+                      Featured
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <div className="filterTerms">
-              <p>Filter by:</p>
-              <ul>
-                <li onClick={this.formatData}>All</li>
-                <li onClick={this.filterNewestPosts}>Newest</li>
-                <li onClick={this.filterPopularPosts}>Popular</li>
-                <li onClick={this.filterFeaturedPosts}>Featured</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-lg-12 col-md-12">
-              <div className="filterPosts">
-                {this.state.postData}
-                <ReactPaginate
-                  previousLabel={""}
-                  nextLabel={""}
-                  breakLabel={"..."}
-                  breakClassName={"break-me"}
-                  pageCount={this.state.pageCount}
-                  marginPagesDisplayed={2}
-                  pageRangeDisplayed={5}
-                  onPageChange={this.handlePageClick}
-                  containerClassName={"pagination"}
-                  subContainerClassName={"pages pagination"}
-                  activeClassName={"active"}
-                />
+            <div className="row">
+              <div className="col-lg-12 col-md-12">
+                <div className="filterPosts">
+                  {this.state.postData}
+                  <ReactPaginate
+                    previousLabel={""}
+                    nextLabel={""}
+                    breakLabel={"..."}
+                    breakClassName={"break-me"}
+                    pageCount={this.state.pageCount}
+                    marginPagesDisplayed={2}
+                    pageRangeDisplayed={5}
+                    onPageChange={this.handlePageClick}
+                    containerClassName={"pagination"}
+                    subContainerClassName={"pages pagination"}
+                    activeClassName={"active"}
+                  />
+                </div>
               </div>
             </div>
           </div>
