@@ -125,5 +125,6 @@ export default class AddCultureSlider extends React.Component {
         </Slider>
       )
     }
+    return null
   }
 }
