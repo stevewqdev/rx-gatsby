@@ -2,6 +2,10 @@
   background: #e5e5e5;
 }
 
+.fontDark {
+  color: #222220 !important;
+}
+
 .postWrapper {
   background: #222220;
   transition: all 1s ease-in-out;
@@ -130,7 +134,8 @@
   font-style: normal;
   font-size: 25px;
   line-height: 25px;
-  color: #222220;
+  color: #e5e5e5;
+  transition: all 0.65s ease-in-out;
   opacity: 0.8;
 }
 
@@ -149,13 +154,14 @@
 
 .content {
   font-family: "HelveticaNeue", sans-serif;
-  color: #222220;
-  opacity: 0.7;
+  color: #e5e5e5;
+  opacity: 1;
   font-size: 22px;
   line-height: 40px;
-  font-weight: 100;
+  font-weight: 300;
   font-display: swap;
   font-style: normal;
+  transition: all 0.65s ease-in-out;
 }
 
 .content h1,
@@ -223,9 +229,11 @@
 .postTagsContainer {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: flex-start;
   position: static;
   padding: 16px 0px 0px;
+  margin-right: 20px;
 }
 
 .postTag {

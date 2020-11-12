@@ -82,13 +82,13 @@ export default class Header extends Component {
               data-duration="4000"
               className="storiesLink"
             >
-              <p className="explore">
+              <Link to="/" className="explore">
                 <span>
                   {" "}
                   <Arrow tabIndex="0" alt="Explore Stories" />{" "}
                 </span>
                 BACK TO <strong>RAXO.CO</strong>{" "}
-              </p>
+              </Link>
             </div>
           </div>
         </nav>

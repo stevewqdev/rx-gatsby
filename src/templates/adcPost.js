@@ -50,8 +50,12 @@ export default class AddCulturePost extends Component {
       if (elemRect.top < 100) {
         // codigo si el elemento ya llego al top de la pantalla
         document.querySelector(".postWrapper").classList.add("light")
+        document.querySelector(".content").classList.add("fontDark")
+        document.querySelector(".postExcerpt").classList.add("fontDark")
       } else {
         document.querySelector(".postWrapper").classList.remove("light")
+        document.querySelector(".content").classList.remove("fontDark")
+        document.querySelector(".postExcerpt").classList.remove("fontDark")
       }
     })
   }
@@ -65,7 +69,7 @@ export default class AddCulturePost extends Component {
       ".navbarMenuBurger .menuBurgerLineTwo"
     ).style.background = "#fcc6c6"
     document.querySelector(".brand__logo h1").style.color = "#FFC6C6"
-    document.querySelector(".storiesLink p").style.color = "#FFC6C6"
+    document.querySelector(".storiesLink a").style.color = "#FFC6C6"
     this.bgChange()
     this.formatCategories()
   }
@@ -209,14 +213,14 @@ export default class AddCulturePost extends Component {
                           <div className="catAndDateContainer">
                             {node.categories[1] === "Featured" ? (
                               <Link
-                                to={`/post/${node.categories[0].slug.toLowerCase()}`}
+                                to={`/add-culture/${node.categories[0].slug.toLowerCase()}`}
                                 className="postCategory"
                               >
                                 {node.categories[0].name}
                               </Link>
                             ) : (
                               <Link
-                                to={`/post/${node.categories[1].slug.toLowerCase()}`}
+                                to={`/add-culture/${node.categories[1].slug.toLowerCase()}`}
                                 className="postCategory"
                               >
                                 {node.categories[1].name}

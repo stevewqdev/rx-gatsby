@@ -40,7 +40,6 @@ a {
 
 .featuredContent .featuredLine {
   position: absolute;
-  z-index: 10;
   width: 100%;
 }
 
@@ -393,9 +392,9 @@ a {
     width: 1130px;
   }
   .featuredContent .featuredText {
-    font-size: 120px;
-    line-height: 106px;
-    left: 32%;
+    font-size: 90px;
+    line-height: 80px;
+    left: 31.5%;
     top: 20%;
   }
 
@@ -455,6 +454,8 @@ a {
 @media (max-width: 2560px) {
   .featuredContent .featuredText {
     left: 21%;
+    font-size: 100px;
+    line-height: 90px;
   }
   .postsGrid {
     max-width: initial;
@@ -619,8 +620,8 @@ a {
     padding-top: 5%;
   }
   .featuredContent .featuredText {
-    font-size: 100px;
-    line-height: 85px;
+    font-size: 90px;
+    line-height: 75px;
     left: 13%;
     top: 27%;
   }

@@ -113,7 +113,14 @@
 .featuredSlider .slick-current .featuredImage {
   width: 1200px;
   margin-left: 13%;
-  height: 850px;
+  max-height: 720px;
+  height: 100%;
+}
+
+.featuredSlider .slick-sprev .featuredImage,
+.featuredSlider .slick-snext .featuredImage {
+  max-height: 380px;
+  height: 100%;
 }
 
 .featuredSlider .slick-snext {
@@ -137,11 +144,11 @@
   .featuredSlider .slick-current .featuredImage {
     width: 100%;
     margin-left: 10%;
-    height: auto;
+    max-height: 680px;
   }
 
   .featuredSlider .slick-current .featuredPreview {
-    top: -350px;
+    top: -200px;
   }
 
   .featuredSlider .slick-current .featuredPreview .catAndDate .featuredCat,
@@ -157,6 +164,12 @@
   .featuredSlider .slick-current .featuredPreview a {
     font-size: 30px;
   }
+
+  .featuredSlider .slick-sprev .featuredImage,
+  .featuredSlider .slick-snext .featuredImage {
+    max-height: 650px;
+    height: 100%;
+  }
   .featuredSlider .slick-prev,
   .featuredSlider .slick-next {
     top: 65% !important;
@@ -167,11 +180,10 @@
   .featuredSlider .slick-current .featuredImage {
     width: 100%;
     margin-left: 10%;
-    height: auto;
   }
 
   .featuredSlider .slick-current .featuredPreview {
-    top: -350px;
+    top: -180px;
   }
   .featuredSlider .slick-current .featuredPreview .catAndDate .featuredCat,
   .featuredSlider .slick-current .featuredPreview .catAndDate .featuredDate {
@@ -199,10 +211,11 @@
   .featuredSlider .slick-current .featuredImage {
     width: 100%;
     margin-left: 10%;
-    height: auto;
+    max-height: 800px;
+    height: 100%;
   }
   .featuredSlider .slick-current .featuredPreview {
-    top: -300px;
+    top: -200px;
   }
   .featuredSlider .slick-current .featuredPreview .catAndDate .featuredCat,
   .featuredSlider .slick-current .featuredPreview .catAndDate .featuredDate {
@@ -217,11 +230,26 @@
   .featuredSlider .slick-current .featuredPreview a {
     font-size: 30px;
   }
+
+  .featuredSlider .slick-prev,
+  .featuredSlider .slick-next {
+    top: 70% !important;
+  }
 }
 
 @media (max-width: 1600px) {
   .featuredSlider .slick-current {
     width: 1400px !important;
+  }
+  .featuredSlider .slick-current .featuredImage {
+    width: 100%;
+    margin-left: 10%;
+    max-height: 700px;
+    height: 100%;
+  }
+  .featuredSlider .slick-prev,
+  .featuredSlider .slick-next {
+    top: 70% !important;
   }
 }
 
@@ -232,28 +260,64 @@
   .featuredSlider .slick-current .featuredImage {
     width: 100%;
     margin-left: 15%;
-    height: auto;
+    max-height: 650px;
+    height: 100%;
   }
   .featuredSlider .slick-current .featuredPreview {
-    top: -250px;
+    top: -200px;
     left: -3%;
   }
   .featuredSlider .slick-current .featuredPreview .catAndDate .featuredCat,
   .featuredSlider .slick-current .featuredPreview .catAndDate .featuredDate {
-    font-size: 25px;
+    font-size: 22px;
   }
 
   .featuredSlider .slick-current .featuredPreview .titleText {
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 35px;
+    line-height: 35px;
   }
 
   .featuredSlider .slick-current .featuredPreview a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .featuredSlider .slick-current .featuredImage {
+    max-height: 600px;
+    height: 100%;
+  }
+
+  .featuredSlider .slick-current .featuredPreview .catAndDate .featuredCat,
+  .featuredSlider .slick-current .featuredPreview .catAndDate .featuredDate {
     font-size: 20px;
+  }
+
+  .featuredSlider .slick-current .featuredPreview .titleText {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .featuredSlider .slick-current .featuredPreview a {
+    font-size: 18px;
+  }
+
+  .featuredSlider .slick-prev,
+  .featuredSlider .slick-next {
+    top: 65% !important;
   }
 }
 
 @media (max-width: 1280px) {
+  .featuredSlider .slick-current .featuredImage {
+    max-height: 550px;
+    height: 100%;
+  }
+  .featuredSlider .slick-current .featuredPreview {
+    top: -150px;
+    left: -3%;
+  }
+
   .featuredSlider .slick-current .featuredPreview .catAndDate .featuredCat,
   .featuredSlider .slick-current .featuredPreview .catAndDate .featuredDate {
     font-size: 25px;
@@ -626,12 +690,11 @@
   .featuredSlider .slick-current .featuredImage {
     width: 100%;
     margin-left: 12%;
-    height: auto;
   }
 
-  .featuredSlider .slick-current .featuredPreview {
+  /* .featuredSlider .slick-current .featuredPreview {
     top: -200px;
-  }
+  } */
 
   .featuredSlider .slick-prev,
   .featuredSlider .slick-next {
