@@ -502,16 +502,16 @@ a {
   }
 
   #blogPosts .container-fluid {
-    max-width: 1400px;
+    max-width: 1500px;
   }
 
   .postsGrid .adcSinglePost {
     height: 100%;
-    width: 250px;
+    width: 280px;
   }
 
   .postsGrid .adcSinglePost.post-0 {
-    width: 800px;
+    width: 860px;
   }
 
   .popularContent .popularLeftMark {
@@ -528,6 +528,11 @@ a {
     margin-right: 0;
     top: -10vh;
     bottom: initial;
+  }
+
+  .identityTriangle {
+    margin-left: 6%;
+    margin-top: 8%;
   }
 
   .identityCircles {

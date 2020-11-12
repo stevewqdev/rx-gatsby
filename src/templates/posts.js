@@ -142,6 +142,7 @@ export default class PostsIndex extends Component {
         ).style.background = "#222220"
         document.querySelector(".brand__logo h1").style.color = "#222220"
         document.querySelector(".explore").style.color = "#222220"
+        document.querySelector(".addCultureContainer").classList.remove("light")
         document.querySelector(".addCultureContainer").classList.add("gray")
       } else {
         document.querySelector(".addCultureContainer").classList.remove("gray")

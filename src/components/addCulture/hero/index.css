@@ -135,7 +135,7 @@
 
 @media (max-width: 1920px) {
   .addCultureText {
-    margin-top: 5%;
+    margin-top: 0;
   }
 
   .scrollIndicator {
@@ -156,8 +156,8 @@
   }
 
   .addCultureSymbol img {
-    width: 30%;
-    bottom: 0;
+    width: 20%;
+    bottom: 15vh;
   }
 }
 
