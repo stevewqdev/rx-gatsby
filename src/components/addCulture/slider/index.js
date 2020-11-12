@@ -12,6 +12,7 @@ export default class AddCultureSlider extends React.Component {
     super(props)
     this.state = {
       featured: [],
+      render: false,
     }
   }
 
@@ -32,6 +33,9 @@ export default class AddCultureSlider extends React.Component {
   componentDidMount() {
     this.getFeatured()
     AOS.init()
+    this.setState({
+      render: true,
+    })
   }
 
   render() {
@@ -93,30 +97,33 @@ export default class AddCultureSlider extends React.Component {
         })
       },
     }
-    return (
-      <Slider {...settings}>
-        {this.state.featured.map(post => (
-          <div>
-            <Img
-              fluid={post.featured_media.localFile.childImageSharp.fluid}
-              className="featuredImage"
-              alt={post.title}
-            />
-            <div
-              data-aos="fade-right"
-              data-duration="4000"
-              className="featuredPreview"
-            >
-              <div className="catAndDate">
-                <p className="featuredCat">{post.categories[0].name}</p>
-                <p className="featuredDate">{post.date}</p>
+    const { render } = this.state
+    if (render) {
+      return (
+        <Slider {...settings}>
+          {this.state.featured.map(post => (
+            <div>
+              <Img
+                fluid={post.featured_media.localFile.childImageSharp.fluid}
+                className="featuredImage"
+                alt={post.title}
+              />
+              <div
+                data-aos="fade-right"
+                data-duration="4000"
+                className="featuredPreview"
+              >
+                <div className="catAndDate">
+                  <p className="featuredCat">{post.categories[0].name}</p>
+                  <p className="featuredDate">{post.date}</p>
+                </div>
+                <h1 className="titleText">{post.title}</h1>
+                <Link to={`/add-culture/post/${post.slug}`}>READ MORE+</Link>
               </div>
-              <h1 className="titleText">{post.title}</h1>
-              <Link to={`/add-culture/post/${post.slug}`}>READ MORE+</Link>
             </div>
-          </div>
-        ))}
-      </Slider>
-    )
+          ))}
+        </Slider>
+      )
+    }
   }
 }

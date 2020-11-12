@@ -27,8 +27,8 @@ export default class AddCulturePost extends Component {
   formatCategories() {
     let featured = this.state.featuredPosts
 
-    featured.map(({ node }) => {
-      node.categories.map(category => {
+    featured.forEach(({ node }) => {
+      node.categories.forEach(category => {
         if (category.name === "Minority Owned Agencies") {
           category.name = "Min. Owned Agencies"
         } else if (category.name === "Representation Done Right") {
