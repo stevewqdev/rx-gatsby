@@ -31,11 +31,11 @@ export default class AddCultureSlider extends React.Component {
   }
 
   componentDidMount() {
-    this.getFeatured()
-    AOS.init()
     this.setState({
       render: true,
     })
+    this.getFeatured()
+    AOS.init()
   }
 
   render() {
