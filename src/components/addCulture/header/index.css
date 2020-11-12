@@ -124,6 +124,9 @@
 }
 
 @media (max-width: 480px) {
+  .navbar {
+    padding: 30px;
+  }
   .brand__logo {
     width: 60%;
   }

@@ -677,13 +677,13 @@
     padding: 10% 0;
   }
   .postHeroDate {
-    font-size: 30px;
+    font-size: 50px;
     position: initial;
     text-align: center;
   }
 
   .postContainer {
-    padding-right: 10%;
+    padding-right: 0;
   }
 
   .postHeroContent {
@@ -693,8 +693,8 @@
 
   .postHeroContent .postHeroTitle {
     padding: 0 5%;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 50px;
+    line-height: 50px;
     width: 100%;
     text-align: center;
   }
@@ -718,13 +718,16 @@
   }
 
   .categoryContainer p {
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     width: 100%;
   }
 
   .scrollIndicator {
     display: none;
+  }
+  .postContent .container-fluid {
+    max-width: 750px;
   }
   .socials {
     flex-direction: row;
@@ -758,6 +761,10 @@
     margin-right: 0;
   }
 
+  .relatedPostsSection {
+    max-width: 700px;
+  }
+
   .relatedHeading .wantMore {
     margin-bottom: 10%;
     font-size: 12px;
@@ -772,15 +779,12 @@
     font-size: 12px !important;
   }
 
-  .featuredGrid .adcSinglePost {
-    width: 200px;
+  .featuredGrid .adcSinglePost.adcSinglePost.post-1,
+  .featuredGrid .adcSinglePost.adcSinglePost.post-2 {
+    width: 170px;
   }
   .featuredGrid .adcSinglePost.post-0 {
-    width: 400px;
-  }
-
-  .featuredGrid .adcSinglePost.post-1 {
-    width: 200px;
+    width: 330px;
   }
 }
 
@@ -791,24 +795,24 @@
   .postHeader {
     padding: 10% 0;
   }
-  .postHeroDate {
+  /* .postHeroDate {
     font-size: 30px;
     position: initial;
     text-align: center;
-  }
+  } */
 
   .postHeroContent {
     z-index: 10;
     top: 35vh;
   }
 
-  .postHeroContent .postHeroTitle {
+  /* .postHeroContent .postHeroTitle {
     padding: 0 5%;
     font-size: 20px;
     line-height: 20px;
     width: 100%;
     text-align: center;
-  }
+  } */
 
   .postHeroImage .gatsby-image-wrapper {
     position: relative !important;
@@ -837,6 +841,10 @@
   .scrollIndicator {
     display: none;
   }
+
+  .postContent .container-fluid {
+    max-width: 680px;
+  }
   .postInfoContainer {
     padding: 5% 10%;
   }
@@ -872,6 +880,10 @@
     margin-right: 0;
   }
 
+  .relatedPostsSection {
+    max-width: 510px;
+  }
+
   .relatedHeading .wantMore {
     margin-bottom: 10%;
     font-size: 12px;
@@ -886,18 +898,21 @@
     font-size: 12px !important;
   }
 
-  .featuredGrid .adcSinglePost {
-    width: 300px;
+  .featuredGrid a {
+    margin-bottom: 20px;
   }
-
   .featuredGrid .adcSinglePost.post-0 {
     flex-direction: column;
-    width: 300px;
+    width: 100%;
+  }
+
+  .featuredGrid .adcSinglePost.post-0 .gatsby-image-wrapper {
+    width: 100%;
   }
 
   .featuredGrid .adcSinglePost.adcSinglePost.post-1,
   .featuredGrid .adcSinglePost.adcSinglePost.post-2 {
-    width: 300px;
+    width: 100%;
   }
 }
 
@@ -908,24 +923,24 @@
   .postHeader {
     padding: 10% 0;
   }
-  .postHeroDate {
+  /* .postHeroDate {
     font-size: 30px;
     position: initial;
     text-align: center;
-  }
+  } */
 
   .postHeroContent {
     z-index: 10;
     top: 35vh;
   }
 
-  .postHeroContent .postHeroTitle {
+  /* .postHeroContent .postHeroTitle {
     padding: 0 5%;
     font-size: 20px;
     line-height: 20px;
     width: 100%;
     text-align: center;
-  }
+  } */
 
   .postHeroImage .gatsby-image-wrapper {
     position: relative !important;
@@ -944,11 +959,11 @@
     margin-bottom: 10%;
   }
 
-  .categoryContainer p {
+  /* .categoryContainer p {
     font-size: 20px;
     text-align: center;
     width: 100%;
-  }
+  } */
 
   .scrollIndicator {
     display: none;
@@ -956,6 +971,10 @@
 
   .postInfoContainer {
     padding: 5% 10%;
+  }
+
+  .postContent .container-fluid {
+    max-width: 400px;
   }
   .socials {
     flex-direction: row;
@@ -982,6 +1001,10 @@
   .content h6 {
     padding: 0;
     margin-right: 0;
+  }
+
+  .relatedPostsSection {
+    max-width: 300px;
   }
 
   .relatedHeading .wantMore {
@@ -1002,12 +1025,8 @@
     margin-bottom: 10%;
   }
 
-  .featuredGrid .adcSinglePost {
-    width: 210px !important;
-  }
-
-  .featuredGrid .adcSinglePost.post-2 {
-    width: 210px;
+  .featuredGrid .adcSinglePost.post-0 {
+    width: 300px;
   }
 }
 
@@ -1019,11 +1038,11 @@
     padding: 10% 0;
   }
 
-  .postHeroDate {
+  /* .postHeroDate {
     font-size: 30px;
     position: initial;
     text-align: center;
-  }
+  } */
 
   .postHeroContent {
     z-index: 10;
@@ -1032,8 +1051,8 @@
 
   .postHeroContent .postHeroTitle {
     padding: 0 5%;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 35px;
+    line-height: 30px;
     width: 100%;
     text-align: center;
   }
