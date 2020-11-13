@@ -171,15 +171,17 @@ export default class AddCulturePost extends Component {
                     />
 
                     {this.state.post.tags !== null ? (
-                      <div className="postTagsContainer">
-                        {this.state.post.tags.map(tag => (
-                          <Link
-                            to={`/add-culture/filter?${tag.slug}`}
-                            className="postTag"
-                          >
-                            {tag.name}
-                          </Link>
-                        ))}
+                      <div className="col-lg-6 col-sm-12">
+                        <div className="postTagsContainer">
+                          {this.state.post.tags.map(tag => (
+                            <Link
+                              to={`/add-culture/filter?${tag.slug}`}
+                              className="postTag"
+                            >
+                              {tag.name}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     ) : (
                       ""
