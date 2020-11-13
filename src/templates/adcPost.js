@@ -61,7 +61,7 @@ export default class AddCulturePost extends Component {
   }
 
   componentDidMount() {
-    window.scrollTo(0, 0)
+    // window.scrollTo(0, 0)
     document.querySelector(".navbar").style.background = "#222220"
     document.querySelector(
       ".navbarMenuBurger .menuBurgerLineOne"
@@ -233,7 +233,7 @@ export default class AddCulturePost extends Component {
                           <h2 className="postTitle">{node.title}</h2>
                         </div>
 
-                        {node.featured_media ? (
+                        {node.featured_media !== null ? (
                           <Img
                             fluid={
                               node.featured_media.localFile.childImageSharp
