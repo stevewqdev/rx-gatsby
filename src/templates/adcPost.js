@@ -49,11 +49,11 @@ export default class AddCulturePost extends Component {
 
       if (elemRect.top < 100) {
         // codigo si el elemento ya llego al top de la pantalla
-        document.querySelector(".postWrapper").classList.add("light")
+        document.querySelector(".postWrapper").classList.add("lightAdd")
         document.querySelector(".content").classList.add("fontDark")
         document.querySelector(".postExcerpt").classList.add("fontDark")
       } else {
-        document.querySelector(".postWrapper").classList.remove("light")
+        document.querySelector(".postWrapper").classList.remove("lightAdd")
         document.querySelector(".content").classList.remove("fontDark")
         document.querySelector(".postExcerpt").classList.remove("fontDark")
       }
