@@ -61,6 +61,7 @@ export default class AddCulturePost extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0)
     document.querySelector(".navbar").style.background = "#222220"
     document.querySelector(
       ".navbarMenuBurger .menuBurgerLineOne"

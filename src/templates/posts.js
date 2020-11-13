@@ -282,6 +282,7 @@ export default class PostsIndex extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0)
     document.querySelector(".navbar").style.background = "#adaea5"
     this.formatData()
     this.featuredHandler()
