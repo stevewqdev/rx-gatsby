@@ -100,8 +100,7 @@ export default class AddCulturePost extends Component {
                 <h1 className="postHeroTitle">{this.state.post.title}</h1>
               </div>
               <div className="postHeroImage">
-                {this.state.post.featured_media.localFile.childImageSharp !==
-                null ? (
+                {this.state.post.featured_media !== null ? (
                   <Img
                     fluid={
                       this.state.post.featured_media.localFile.childImageSharp
@@ -233,8 +232,7 @@ export default class AddCulturePost extends Component {
                           <h2 className="postTitle">{node.title}</h2>
                         </div>
 
-                        {node.featured_media.localFile.childImageSharp !==
-                        null ? (
+                        {node.featured_media !== null ? (
                           <Img
                             fluid={
                               node.featured_media.localFile.childImageSharp
