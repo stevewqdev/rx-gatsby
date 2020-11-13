@@ -42,6 +42,7 @@ export default class Minority extends Component {
 
     this.formatCategories(slice)
 
+    console.log(slice)
     const postData = slice.map(({ node }, i) => (
       <React.Fragment>
         <Link to={`/add-culture/post/${node.slug}`}>
@@ -57,14 +58,19 @@ export default class Minority extends Component {
                     {node.categories[1].name}
                   </Link>
                 ) : (
-                  ""
+                  <Link
+                    to={`/add-culture/post/${node.categories[0].slug.toLowerCase()}`}
+                    className="postCategory"
+                  >
+                    {node.categories[0].name}
+                  </Link>
                 )}
                 <p className="postDate">{node.date}</p>
               </div>
               <h2 className="postTitle">{node.title}</h2>
             </div>
 
-            {node.featured_media.localFile.childImageSharp !== null ? (
+            {node.featured_media !== null ? (
               <Img
                 fluid={node.featured_media.localFile.childImageSharp.fluid}
               />

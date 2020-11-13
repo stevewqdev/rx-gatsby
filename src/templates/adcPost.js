@@ -72,6 +72,7 @@ export default class AddCulturePost extends Component {
     document.querySelector(".storiesLink a").style.color = "#FFC6C6"
     this.bgChange()
     this.formatCategories()
+    console.log(this.state.post)
   }
   render() {
     return (
@@ -232,7 +233,8 @@ export default class AddCulturePost extends Component {
                           <h2 className="postTitle">{node.title}</h2>
                         </div>
 
-                        {node.featured_media !== null ? (
+                        {node.featured_media.localFile.childImageSharp !==
+                        null ? (
                           <Img
                             fluid={
                               node.featured_media.localFile.childImageSharp

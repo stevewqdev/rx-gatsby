@@ -82,7 +82,6 @@ const AddCultureLayout = ({ children, location }) => {
   // ENDS SMOOTH SCROLLING //
 
   useEffect(() => {
-    // window.scrollTo(0, 0)
     if (window.innerWidth > 768) {
       init()
     }

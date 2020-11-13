@@ -23,22 +23,13 @@ export default class Why extends Component {
     }
   }
 
-  // formatCategories(arr) {
-  //   arr.map(({ node }) => {
-  //     node.categories.map(category => {
-  //       if (category.name === "Representation Done Right") {
-  //         category.name = "Rep. Done Right"
-  //       }
-  //     })
-  //   })
-  // }
-
   formatData() {
     const data = this.state.posts
     const slice = data.slice(
       this.state.offset,
       this.state.offset + this.state.perPage
     )
+    console.log(slice)
     const postData = slice.map(({ node }, i) => (
       <React.Fragment>
         <Link to={`/add-culture/post/${node.slug}`}>
@@ -54,14 +45,19 @@ export default class Why extends Component {
                     {node.categories[1].name}
                   </Link>
                 ) : (
-                  ""
+                  <Link
+                    to={`/add-culture/post/${node.categories[0].slug.toLowerCase()}`}
+                    className="postCategory"
+                  >
+                    {node.categories[0].name}
+                  </Link>
                 )}
                 <p className="postDate">{node.date}</p>
               </div>
               <h2 className="postTitle">{node.title}</h2>
             </div>
 
-            {node.featured_media.localFile.childImageSharp !== null ? (
+            {node.featured_media !== null ? (
               <Img
                 fluid={node.featured_media.localFile.childImageSharp.fluid}
               />
@@ -98,7 +94,6 @@ export default class Why extends Component {
   componentDidMount() {
     document.querySelector(".navbar").style.background = "#f4f4f4"
     this.formatData()
-    console.log(this.state.posts)
   }
 
   render() {

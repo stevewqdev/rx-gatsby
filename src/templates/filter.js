@@ -66,6 +66,7 @@ export default class Filter extends Component {
       this.state.offset + this.state.perPage
     )
     // this.formatCategories(slice)
+    console.log(slice)
     const postData = slice.map(post => (
       <React.Fragment>
         <Link to={`/add-culture/post/${post.slug}`}>
@@ -93,7 +94,7 @@ export default class Filter extends Component {
               <h2 className="postTitle">{post.title}</h2>
             </div>
 
-            {post.featured_media.localFile.childImageSharp !== null ? (
+            {post.featured_media !== null ? (
               <Img
                 fluid={post.featured_media.localFile.childImageSharp.fluid}
               />
@@ -156,6 +157,7 @@ export default class Filter extends Component {
         this.state.offset + this.state.perPage
       )
       // this.formatCategories(slice)
+      console.log(slice)
       const postData = slice.map(post =>
         post ? (
           <React.Fragment>
@@ -184,7 +186,7 @@ export default class Filter extends Component {
                   <h2 className="postTitle">{post.title}</h2>
                 </div>
 
-                {post.featured_media.localFile.childImageSharp !== null ? (
+                {post.featured_media !== null ? (
                   <Img
                     fluid={post.featured_media.localFile.childImageSharp.fluid}
                   />
@@ -231,6 +233,7 @@ export default class Filter extends Component {
         this.state.offset + this.state.perPage
       )
       // this.formatCategories(slice)
+      console.log(slice)
       const postData = slice.map(post =>
         post ? (
           <React.Fragment>
@@ -259,7 +262,7 @@ export default class Filter extends Component {
                   <h2 className="postTitle">{post.title}</h2>
                 </div>
 
-                {post.featured_media.localFile.childImageSharp !== null ? (
+                {post.featured_media !== null ? (
                   <Img
                     fluid={post.featured_media.localFile.childImageSharp.fluid}
                   />
@@ -306,6 +309,7 @@ export default class Filter extends Component {
         this.state.offset + this.state.perPage
       )
       // this.formatCategories(slice)
+      console.log(slice)
       const postData = slice.map(post =>
         post ? (
           <React.Fragment>
@@ -334,7 +338,7 @@ export default class Filter extends Component {
                   <h2 className="postTitle">{post.title}</h2>
                 </div>
 
-                {post.featured_media.localFile.childImageSharp !== null ? (
+                {post.featured_media !== null ? (
                   <Img
                     fluid={post.featured_media.localFile.childImageSharp.fluid}
                   />
