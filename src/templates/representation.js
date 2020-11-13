@@ -62,7 +62,7 @@ export default class Representation extends Component {
               <h2 className="postTitle">{node.title}</h2>
             </div>
 
-            {node.featured_media.localFile.childImageSharp !== null ? (
+            {node.featured_media ? (
               <Img
                 fluid={node.featured_media.localFile.childImageSharp.fluid}
               />

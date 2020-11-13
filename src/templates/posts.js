@@ -248,7 +248,7 @@ export default class PostsIndex extends Component {
               <h2 className="postTitle">{node.title}</h2>
             </div>
 
-            {node.featured_media !== null ? (
+            {node.featured_media ? (
               <Img
                 fluid={node.featured_media.localFile.childImageSharp.fluid}
               />
