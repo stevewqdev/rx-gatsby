@@ -63,7 +63,7 @@ export default class Stories extends Component {
               <h2 className="postTitle">{node.title}</h2>
             </div>
 
-            {node.featured_media ? (
+            {node.featured_media !== null ? (
               <Img
                 fluid={node.featured_media.localFile.childImageSharp.fluid}
               />

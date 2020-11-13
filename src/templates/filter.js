@@ -184,7 +184,7 @@ export default class Filter extends Component {
                   <h2 className="postTitle">{post.title}</h2>
                 </div>
 
-                {post.featured_media ? (
+                {post.featured_media !== null ? (
                   <Img
                     fluid={post.featured_media.localFile.childImageSharp.fluid}
                   />
