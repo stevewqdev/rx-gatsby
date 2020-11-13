@@ -209,7 +209,6 @@ export default class PostsIndex extends Component {
       this.state.offset,
       this.state.offset + this.state.perPage
     )
-    console.log(slice)
 
     this.formatCategories(slice)
     const postData = slice.map(({ node }, i) => (
