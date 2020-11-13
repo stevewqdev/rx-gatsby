@@ -62,7 +62,7 @@ export default class Representation extends Component {
               <h2 className="postTitle">{node.title}</h2>
             </div>
 
-            {node.featured_media !== null ? (
+            {node.featured_media.localFile.childImageSharp !== null ? (
               <Img
                 fluid={node.featured_media.localFile.childImageSharp.fluid}
               />
@@ -99,6 +99,7 @@ export default class Representation extends Component {
   componentDidMount() {
     document.querySelector(".navbar").style.background = "#f4f4f4"
     this.formatData()
+    console.log(this.state.posts)
   }
 
   render() {

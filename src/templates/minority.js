@@ -41,7 +41,6 @@ export default class Minority extends Component {
     )
 
     this.formatCategories(slice)
-    console.log(slice)
 
     const postData = slice.map(({ node }, i) => (
       <React.Fragment>
@@ -65,7 +64,7 @@ export default class Minority extends Component {
               <h2 className="postTitle">{node.title}</h2>
             </div>
 
-            {node.featured_media !== null ? (
+            {node.featured_media.localFile.childImageSharp !== null ? (
               <Img
                 fluid={node.featured_media.localFile.childImageSharp.fluid}
               />
@@ -109,12 +108,9 @@ export default class Minority extends Component {
       <AddCultureLayout>
         <Helmet>
           <meta charSet="utf-8" />
-          <meta
-            name="description"
-            content={"Minority Owned Agencies - Add Culture"}
-          />
+          <meta name="description" content={"Minority - Add Culture"} />
           <title>Minority ~ Add Culture</title>
-          <link rel="canonical" href={"/add-culture/minority"} />
+          <link rel="canonical" href={"/news/minority"} />
         </Helmet>
         <div className="main__section__wrapper blog__page">
           <Header />

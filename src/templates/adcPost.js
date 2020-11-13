@@ -49,11 +49,11 @@ export default class AddCulturePost extends Component {
 
       if (elemRect.top < 100) {
         // codigo si el elemento ya llego al top de la pantalla
-        document.querySelector(".postWrapper").classList.add("lightAdd")
+        document.querySelector(".postWrapper").classList.add("light")
         document.querySelector(".content").classList.add("fontDark")
         document.querySelector(".postExcerpt").classList.add("fontDark")
       } else {
-        document.querySelector(".postWrapper").classList.remove("lightAdd")
+        document.querySelector(".postWrapper").classList.remove("light")
         document.querySelector(".content").classList.remove("fontDark")
         document.querySelector(".postExcerpt").classList.remove("fontDark")
       }
@@ -61,7 +61,6 @@ export default class AddCulturePost extends Component {
   }
 
   componentDidMount() {
-    // window.scrollTo(0, 0)
     document.querySelector(".navbar").style.background = "#222220"
     document.querySelector(
       ".navbarMenuBurger .menuBurgerLineOne"
@@ -101,7 +100,8 @@ export default class AddCulturePost extends Component {
                 <h1 className="postHeroTitle">{this.state.post.title}</h1>
               </div>
               <div className="postHeroImage">
-                {this.state.post.featured_media !== null ? (
+                {this.state.post.featured_media.localFile.childImageSharp !==
+                null ? (
                   <Img
                     fluid={
                       this.state.post.featured_media.localFile.childImageSharp
@@ -233,7 +233,8 @@ export default class AddCulturePost extends Component {
                           <h2 className="postTitle">{node.title}</h2>
                         </div>
 
-                        {node.featured_media !== null ? (
+                        {node.featured_media.localFile.childImageSharp !==
+                        null ? (
                           <Img
                             fluid={
                               node.featured_media.localFile.childImageSharp

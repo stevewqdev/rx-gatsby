@@ -65,7 +65,6 @@ export default class Filter extends Component {
       this.state.offset,
       this.state.offset + this.state.perPage
     )
-    console.log(slice)
     // this.formatCategories(slice)
     const postData = slice.map(post => (
       <React.Fragment>
@@ -93,7 +92,8 @@ export default class Filter extends Component {
               </div>
               <h2 className="postTitle">{post.title}</h2>
             </div>
-            {post.featured_media ? (
+
+            {post.featured_media.localFile.childImageSharp !== null ? (
               <Img
                 fluid={post.featured_media.localFile.childImageSharp.fluid}
               />
@@ -184,7 +184,7 @@ export default class Filter extends Component {
                   <h2 className="postTitle">{post.title}</h2>
                 </div>
 
-                {post.featured_media !== null ? (
+                {post.featured_media.localFile.childImageSharp !== null ? (
                   <Img
                     fluid={post.featured_media.localFile.childImageSharp.fluid}
                   />
@@ -259,7 +259,7 @@ export default class Filter extends Component {
                   <h2 className="postTitle">{post.title}</h2>
                 </div>
 
-                {post.featured_media ? (
+                {post.featured_media.localFile.childImageSharp !== null ? (
                   <Img
                     fluid={post.featured_media.localFile.childImageSharp.fluid}
                   />
@@ -306,7 +306,6 @@ export default class Filter extends Component {
         this.state.offset + this.state.perPage
       )
       // this.formatCategories(slice)
-      console.log(slice)
       const postData = slice.map(post =>
         post ? (
           <React.Fragment>
@@ -335,7 +334,7 @@ export default class Filter extends Component {
                   <h2 className="postTitle">{post.title}</h2>
                 </div>
 
-                {post.featured_media ? (
+                {post.featured_media.localFile.childImageSharp !== null ? (
                   <Img
                     fluid={post.featured_media.localFile.childImageSharp.fluid}
                   />
