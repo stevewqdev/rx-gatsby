@@ -209,6 +209,7 @@ export default class PostsIndex extends Component {
       this.state.offset,
       this.state.offset + this.state.perPage
     )
+    console.log(slice)
 
     this.formatCategories(slice)
     const postData = slice.map(({ node }, i) => (
@@ -247,7 +248,7 @@ export default class PostsIndex extends Component {
               <h2 className="postTitle">{node.title}</h2>
             </div>
 
-            {node.featured_media.localFile.childImageSharp !== null ? (
+            {node.featured_media !== null ? (
               <Img
                 fluid={node.featured_media.localFile.childImageSharp.fluid}
               />
@@ -282,6 +283,7 @@ export default class PostsIndex extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0)
     document.querySelector(".navbar").style.background = "#adaea5"
     this.formatData()
     this.featuredHandler()

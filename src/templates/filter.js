@@ -92,8 +92,7 @@ export default class Filter extends Component {
               </div>
               <h2 className="postTitle">{post.title}</h2>
             </div>
-
-            {post.featured_media.localFile.childImageSharp !== null ? (
+            {post.featured_media !== null ? (
               <Img
                 fluid={post.featured_media.localFile.childImageSharp.fluid}
               />
@@ -184,7 +183,7 @@ export default class Filter extends Component {
                   <h2 className="postTitle">{post.title}</h2>
                 </div>
 
-                {post.featured_media.localFile.childImageSharp !== null ? (
+                {post.featured_media !== null ? (
                   <Img
                     fluid={post.featured_media.localFile.childImageSharp.fluid}
                   />
@@ -259,7 +258,7 @@ export default class Filter extends Component {
                   <h2 className="postTitle">{post.title}</h2>
                 </div>
 
-                {post.featured_media.localFile.childImageSharp !== null ? (
+                {post.featured_media !== null ? (
                   <Img
                     fluid={post.featured_media.localFile.childImageSharp.fluid}
                   />
@@ -334,7 +333,7 @@ export default class Filter extends Component {
                   <h2 className="postTitle">{post.title}</h2>
                 </div>
 
-                {post.featured_media.localFile.childImageSharp !== null ? (
+                {post.featured_media !== null ? (
                   <Img
                     fluid={post.featured_media.localFile.childImageSharp.fluid}
                   />
@@ -356,6 +355,7 @@ export default class Filter extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0)
     document.querySelector(".navbar").style.background = "#e5e5e5"
     this.formatData()
   }

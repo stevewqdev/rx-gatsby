@@ -46,6 +46,8 @@
 
 .categoryPosts a {
   margin-bottom: 20px;
+  content: "";
+  flex: auto;
 }
 
 .categoryPosts .adcSinglePost {

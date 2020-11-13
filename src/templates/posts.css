@@ -68,6 +68,8 @@ a {
 }
 
 .postsGrid a {
+  content: "";
+  flex: auto;
   margin-bottom: 20px;
 }
 

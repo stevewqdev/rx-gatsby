@@ -64,7 +64,7 @@ export default class Minority extends Component {
               <h2 className="postTitle">{node.title}</h2>
             </div>
 
-            {node.featured_media.localFile.childImageSharp !== null ? (
+            {node.featured_media !== null ? (
               <Img
                 fluid={node.featured_media.localFile.childImageSharp.fluid}
               />
@@ -99,6 +99,7 @@ export default class Minority extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0)
     document.querySelector(".navbar").style.background = "#f4f4f4"
     this.formatData()
   }

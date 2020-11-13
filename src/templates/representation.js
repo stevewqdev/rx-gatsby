@@ -97,9 +97,9 @@ export default class Representation extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0)
     document.querySelector(".navbar").style.background = "#f4f4f4"
     this.formatData()
-    console.log(this.state.posts)
   }
 
   render() {
