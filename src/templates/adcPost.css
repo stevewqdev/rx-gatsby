@@ -297,6 +297,11 @@
   margin-top: 8%;
 }
 
+.featuredGrid a {
+  content: "";
+  flex: auto;
+}
+
 .featuredGrid .adcSinglePost {
   display: flex;
   flex-direction: column;

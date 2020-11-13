@@ -181,16 +181,20 @@ const Layout = ({ children, location }) => {
     })
   }
 
-  function hideCopyrights(){
+  function hideCopyrights() {
     window.addEventListener(
       "scroll",
       function() {
         var top =
           (window.pageYOffset || document.scrollTop) - (document.clientTop || 0)
         if (top > 1500) {
-          document.querySelectorAll(".main__floating__menu .copyright__inner")[0].style.opacity = "0";
-        }else{
-          document.querySelectorAll(".main__floating__menu .copyright__inner")[0].style.opacity = "1";
+          document.querySelectorAll(
+            ".main__floating__menu .copyright__inner"
+          )[0].style.opacity = "0"
+        } else {
+          document.querySelectorAll(
+            ".main__floating__menu .copyright__inner"
+          )[0].style.opacity = "1"
         }
       },
       { passive: true }
@@ -212,7 +216,7 @@ const Layout = ({ children, location }) => {
     // }
 
     // if(redirect.includes("raxo.co") || redirect.includes("localhost")){
-    //   setLoad(true); 
+    //   setLoad(true);
     // }
 
     if (window.innerWidth > 768) {
@@ -221,7 +225,7 @@ const Layout = ({ children, location }) => {
     removeFixed()
     drawLines()
 
-    hideCopyrights();
+    hideCopyrights()
 
     changePositionFooter()
     addShareLink()
@@ -231,20 +235,21 @@ const Layout = ({ children, location }) => {
       mirror: true, // whether elements should animate out while scrolling past them
     })
 
-    setTimeout(function(){ 
-      var linkMont = document.createElement('link');
-      linkMont.id = 'montserrat__font';
-      linkMont.rel = 'stylesheet';
-      linkMont.href = 'https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap';
-      document.head.appendChild(linkMont);
-  
-      var linkMul = document.createElement('link');
-      linkMul.id = 'muli__font';
-      linkMul.rel = 'stylesheet';
-      linkMul.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap';
-      document.head.appendChild(linkMul);
-    }, 100);
+    setTimeout(function() {
+      var linkMont = document.createElement("link")
+      linkMont.id = "montserrat__font"
+      linkMont.rel = "stylesheet"
+      linkMont.href =
+        "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
+      document.head.appendChild(linkMont)
 
+      var linkMul = document.createElement("link")
+      linkMul.id = "muli__font"
+      linkMul.rel = "stylesheet"
+      linkMul.href =
+        "https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      document.head.appendChild(linkMul)
+    }, 100)
   })
   // Next query will return the site data, the master acf fields for whole website data, the logo and the favicon.
   const data = useStaticQuery(graphql`
@@ -319,24 +324,23 @@ const Layout = ({ children, location }) => {
   return (
     <>
       {
-
         <>
           <Helmet>
             <link rel="icon" href={siteFavicon} />
             <html lang="en" />
             <script>
-            {`
-                var _ss = _ss || [];
-                _ss.push(['_setDomain', 'https://koi-3QNMLPDA8K.marketingautomation.services/net']);
-                _ss.push(['_setAccount', 'KOI-49PC6D4KZS']);
-                _ss.push(['_trackPageView']);
-            (function() {
-                var ss = document.createElement('script');
-                ss.type = 'text/javascript'; ss.async = true;
-                ss.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'koi-3QNMLPDA8K.marketingautomation.services/client/ss.js?ver=2.4.0';
-                var scr = document.getElementsByTagName('script')[0];
-                scr.parentNode.insertBefore(ss, scr);
-            })();
+              {`
+                 var _ss = _ss || [];
+                 _ss.push(['_setDomain', 'https://koi-3QNMLPDA8K.marketingautomation.services/net']);
+                 _ss.push(['_setAccount', 'KOI-4A1I4J0QBS']);
+                 _ss.push(['_trackPageView']);
+             (function() {
+                 var ss = document.createElement('script');
+                 ss.type = 'text/javascript'; ss.async = true;
+                 ss.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'koi-3QNMLPDA8K.marketingautomation.services/client/ss.js?ver=2.4.0';
+                 var scr = document.getElementsByTagName('script')[0];
+                 scr.parentNode.insertBefore(ss, scr);
+             })();
 
             var callThisOnReturn = function(resp) {
               if (resp) {
@@ -344,8 +348,7 @@ const Layout = ({ children, location }) => {
               }
             };
             _ss.push(['_setResponseCallback', callThisOnReturn]); 
-            `
-            }
+            `}
             </script>
           </Helmet>
 
@@ -369,7 +372,6 @@ const Layout = ({ children, location }) => {
             ></Footer>
           </div>
         </>
-      
       }
     </>
   )
