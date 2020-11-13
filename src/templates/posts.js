@@ -305,7 +305,7 @@ export default class PostsIndex extends Component {
           <Header />
           <AddCultureHero />
           <div className="addCultureContainer">
-            <div id="featured" className="featuredContent">
+            {/* <div id="featured" className="featuredContent">
               <svg
                 className="featuredLine"
                 width="1920"
@@ -334,7 +334,7 @@ export default class PostsIndex extends Component {
                   featured={this.props.data.allWordpressWpAddcultureposts.edges}
                 />
               </div>
-            </div>
+            </div> */}
 
             <div className="anchor" id="postsAnchor"></div>
 

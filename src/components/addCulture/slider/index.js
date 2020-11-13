@@ -103,7 +103,7 @@ export default class AddCultureSlider extends React.Component {
         <Slider {...settings}>
           {this.state.featured.map(post => (
             <div>
-              {post.featured_media.localFile.childImageSharp !== null ? (
+              {post.featured_media !== null ? (
                 <Img
                   fluid={post.featured_media.localFile.childImageSharp.fluid}
                   className="featuredImage"
