@@ -153,6 +153,16 @@
   margin-bottom: 10%;
 }
 
+.hoverRect {
+  fill: #222220;
+  transition: all 0.5s ease-in;
+}
+
+.hoverPath {
+  fill: white !important;
+  transition: all 0.5s ease-in;
+}
+
 .content {
   font-family: "HelveticaNeue", sans-serif;
   color: #e5e5e5;

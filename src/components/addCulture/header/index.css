@@ -4,7 +4,7 @@
   width: 100%;
   background: #e5e5e5;
   z-index: 99;
-  transition: all 0.3s ease-in;
+  transition: all 1s ease-in;
 }
 
 .navContent {

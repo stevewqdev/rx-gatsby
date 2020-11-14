@@ -216,6 +216,7 @@
   }
   .featuredSlider .slick-current .featuredPreview {
     top: -200px;
+    left: -3%;
   }
   .featuredSlider .slick-current .featuredPreview .catAndDate .featuredCat,
   .featuredSlider .slick-current .featuredPreview .catAndDate .featuredDate {
@@ -233,7 +234,7 @@
 
   .featuredSlider .slick-prev,
   .featuredSlider .slick-next {
-    top: 70% !important;
+    top: 60% !important;
   }
 }
 
@@ -249,7 +250,7 @@
   }
   .featuredSlider .slick-prev,
   .featuredSlider .slick-next {
-    top: 70% !important;
+    top: 70%;
   }
 }
 

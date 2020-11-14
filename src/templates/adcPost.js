@@ -22,6 +22,11 @@ export default class AddCulturePost extends Component {
       post: this.props.data.wordpressWpAddcultureposts,
       featuredPosts: this.props.data.allWordpressWpAddcultureposts.edges,
     }
+
+    this.addHover = this.addHover.bind(this)
+    this.removeHover = this.removeHover.bind(this)
+    this.addLinkedHover = this.addLinkedHover.bind(this)
+    this.removeLinkedHover = this.removeLinkedHover.bind(this)
   }
 
   formatCategories() {
@@ -40,28 +45,7 @@ export default class AddCulturePost extends Component {
     })
   }
 
-  bgChange() {
-    window.addEventListener("scroll", function() {
-      var element = document.getElementById("postContentAnchor")
-      var bodyRect = document.body.getBoundingClientRect(),
-        elemRect = element.getBoundingClientRect(),
-        offset = elemRect.top - bodyRect.top
-
-      if (elemRect.top < 100) {
-        // codigo si el elemento ya llego al top de la pantalla
-        document.querySelector(".postWrapper").classList.add("light")
-        document.querySelector(".content").classList.add("fontDark")
-        document.querySelector(".postExcerpt").classList.add("fontDark")
-      } else {
-        document.querySelector(".postWrapper").classList.remove("light")
-        document.querySelector(".content").classList.remove("fontDark")
-        document.querySelector(".postExcerpt").classList.remove("fontDark")
-      }
-    })
-  }
-
-  componentDidMount() {
-    window.scrollTo(0, 0)
+  navbarChange() {
     document.querySelector(".navbar").style.background = "#222220"
     document.querySelector(
       ".navbarMenuBurger .menuBurgerLineOne"
@@ -71,6 +55,131 @@ export default class AddCulturePost extends Component {
     ).style.background = "#fcc6c6"
     document.querySelector(".brand__logo h1").style.color = "#FFC6C6"
     document.querySelector(".storiesLink a").style.color = "#FFC6C6"
+    document.querySelectorAll(".storiesLink a svg g path")[0].style.fill =
+      "#FFC6C6"
+    document.querySelectorAll(".storiesLink a svg g path")[1].style.fill =
+      "#FFC6C6"
+  }
+
+  navbarChange() {
+    document.querySelector(".navbar").style.background = "#222220"
+    document.querySelector(
+      ".navbarMenuBurger .menuBurgerLineOne"
+    ).style.background = "#fcc6c6"
+    document.querySelector(
+      ".navbarMenuBurger .menuBurgerLineTwo"
+    ).style.background = "#fcc6c6"
+    document.querySelector(".brand__logo h1").style.color = "#FFC6C6"
+    document.querySelector(".storiesLink a").style.color = "#FFC6C6"
+    document.querySelectorAll(".storiesLink a svg g path")[0].style.fill =
+      "#FFC6C6"
+    document.querySelectorAll(".storiesLink a svg g path")[1].style.fill =
+      "#FFC6C6"
+  }
+
+  lightNavbar() {
+    document.querySelector(".navbar").style.background = "#e5e5e5"
+    document.querySelector(
+      ".navbarMenuBurger .menuBurgerLineOne"
+    ).style.background = "#222220"
+    document.querySelector(
+      ".navbarMenuBurger .menuBurgerLineTwo"
+    ).style.background = "#222220"
+    document.querySelector(".brand__logo h1").style.color = "#222220"
+    document.querySelector(".storiesLink a").style.color = "#222220"
+    document.querySelectorAll(".storiesLink a svg g path")[0].style.fill =
+      "#222220"
+    document.querySelectorAll(".storiesLink a svg g path")[1].style.fill =
+      "#222220"
+  }
+
+  bgChange() {
+    window.addEventListener("scroll", function() {
+      var element = document.getElementById("postContentAnchor")
+      var bodyRect = document.body.getBoundingClientRect(),
+        elemRect = element.getBoundingClientRect(),
+        offset = elemRect.top - bodyRect.top
+      if (elemRect.top < 100) {
+        // codigo si el elemento ya llego al top de la pantalla
+        document.querySelector(".postWrapper").classList.add("light")
+        document.querySelector(".content").classList.add("fontDark")
+        document.querySelector(".postExcerpt").classList.add("fontDark")
+
+        //navbar
+
+        document.querySelector(".navbar").style.background = "#e5e5e5"
+        document.querySelector(
+          ".navbarMenuBurger .menuBurgerLineOne"
+        ).style.background = "#222220"
+        document.querySelector(
+          ".navbarMenuBurger .menuBurgerLineTwo"
+        ).style.background = "#222220"
+        document.querySelector(".brand__logo h1").style.color = "#222220"
+        document.querySelector(".storiesLink a").style.color = "#222220"
+        document.querySelectorAll(".storiesLink a svg g path")[0].style.fill =
+          "#222220"
+        document.querySelectorAll(".storiesLink a svg g path")[1].style.fill =
+          "#222220"
+      } else {
+        document.querySelector(".postWrapper").classList.remove("light")
+        document.querySelector(".content").classList.remove("fontDark")
+        document.querySelector(".postExcerpt").classList.remove("fontDark")
+
+        // navbar
+        document.querySelector(".navbar").style.background = "#222220"
+        document.querySelector(
+          ".navbarMenuBurger .menuBurgerLineOne"
+        ).style.background = "#fcc6c6"
+        document.querySelector(
+          ".navbarMenuBurger .menuBurgerLineTwo"
+        ).style.background = "#fcc6c6"
+        document.querySelector(".brand__logo h1").style.color = "#FFC6C6"
+        document.querySelector(".storiesLink a").style.color = "#FFC6C6"
+        document.querySelectorAll(".storiesLink a svg g path")[0].style.fill =
+          "#FFC6C6"
+        document.querySelectorAll(".storiesLink a svg g path")[1].style.fill =
+          "#FFC6C6"
+      }
+    })
+  }
+
+  addLinkedHover(e) {
+    let allSocials = document.querySelectorAll(".socials a svg")
+    allSocials.forEach((icon, i) => {
+      if (i === 2) {
+        icon.children[0].classList.add("hoverRect")
+        icon.children[1].classList.add("hoverPath")
+        icon.children[2].classList.add("hoverPath")
+      }
+    })
+  }
+
+  removeLinkedHover(e) {
+    let allSocials = document.querySelectorAll(".socials a svg")
+    allSocials.forEach((icon, i) => {
+      if (i === 2) {
+        icon.children[0].classList.remove("hoverRect")
+        icon.children[1].classList.remove("hoverPath")
+        icon.children[2].classList.remove("hoverPath")
+      }
+    })
+  }
+
+  addHover(e) {
+    let element = e.target.children[0].children
+    element[0].classList.add("hoverRect")
+    element[1].classList.add("hoverPath")
+  }
+
+  removeHover(e) {
+    let element = e.target.children[0].children
+    element[0].classList.remove("hoverRect")
+    element[1].classList.remove("hoverPath")
+  }
+
+  componentDidMount() {
+    window.scrollTo(0, 0)
+    this.navbarChange()
     this.bgChange()
     this.formatCategories()
     console.log(this.state.post)
@@ -147,16 +256,36 @@ export default class AddCulturePost extends Component {
                     />
 
                     <div className="socials">
-                      <a to="https://twitter.com">
+                      <a
+                        onMouseEnter={this.addHover}
+                        onMouseLeave={this.removeHover}
+                        className="socialLink"
+                        href="https://twitter.com"
+                      >
                         <TwitterIcon tabIndex="0" alt="Twitter" />
                       </a>
-                      <a to="https://facebook.com">
+                      <a
+                        onMouseEnter={this.addHover}
+                        onMouseLeave={this.removeHover}
+                        className="socialLink"
+                        href="https://facebook.com"
+                      >
                         <FacebookIcon tabIndex="0" alt="Facebook" />
                       </a>
-                      <a to="https://linkedin.com">
+                      <a
+                        onMouseEnter={this.addLinkedHover}
+                        onMouseLeave={this.removeLinkedHover}
+                        className="socialLink"
+                        href="https://linkedin.com"
+                      >
                         <LinkedInIcon tabIndex="0" alt="LinkedIn" />
                       </a>
-                      <a to="#">
+                      <a
+                        onMouseEnter={this.addHover}
+                        onMouseLeave={this.removeHover}
+                        className="socialLink"
+                        href="#"
+                      >
                         <ShareIcon tabIndex="0" alt="Share" />
                       </a>
                     </div>

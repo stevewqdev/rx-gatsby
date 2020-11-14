@@ -3,10 +3,6 @@ a {
   color: #222220;
 }
 
-.anchor {
-  margin: 5% auto;
-}
-
 .darkAdd {
   background: #222220 !important;
 }
@@ -451,6 +447,10 @@ a {
     right: 42%;
     top: 38%;
   }
+
+  .categoriesNav .categorySelector {
+    justify-content: space-around;
+  }
 }
 
 @media (max-width: 2560px) {
@@ -501,7 +501,8 @@ a {
 
 @media (max-width: 1920px) {
   .featuredContent .featuredText {
-    left: 12%;
+    left: 13%;
+    top: 22%;
   }
 
   #blogPosts .container-fluid {
@@ -544,9 +545,6 @@ a {
 }
 
 @media (max-width: 1600px) {
-  .anchor {
-    margin: 10% auto;
-  }
   .featuredContent .featuredText {
     font-size: 100px;
     line-height: 85px;
