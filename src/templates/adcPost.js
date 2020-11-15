@@ -178,54 +178,56 @@ export default class AddCulturePost extends Component {
   }
 
   componentDidMount() {
-    window.scrollTo(0, 0)
     this.navbarChange()
     this.bgChange()
     this.formatCategories()
     console.log(this.state.post)
+  }
+
+  componentDidUpdate() {
+    window.scrollTo(0, 0)
   }
   render() {
     return (
       <AddCultureLayout>
         <Header />
         <div className="postWrapper">
-          <div className="postHeader">
-            <div className="headerContainer">
-              <div className="scrollIndicator">
-                <ScrollIndicator tabIndex="0" alt="scroll" class="scroll" />
-              </div>
-              <div className="postHeroContent">
-                <div className="categoryContainer">
-                  <HeroLine tabIndex="0" alt="line" className="heroLine" />
-                  {this.state.post.categories !== null ? (
-                    this.state.post.categories[0].name === "Featured" ? (
-                      <p>{this.state.post.categories[1].name}</p>
-                    ) : (
-                      <p>{this.state.post.categories[0].name}</p>
-                    )
+          <div className="postHeader container-fluid">
+            <div className="scrollIndicator">
+              <ScrollIndicator tabIndex="0" alt="scroll" class="scroll" />
+            </div>
+
+            <div className="postHeroContent">
+              <div className="categoryContainer">
+                <HeroLine tabIndex="0" alt="line" className="heroLine" />
+                {this.state.post.categories !== null ? (
+                  this.state.post.categories[0].name === "Featured" ? (
+                    <p>{this.state.post.categories[1].name}</p>
                   ) : (
-                    ""
-                  )}
-                </div>
-                <p className="postHeroDate">{this.state.post.date}—</p>
-                <h1 className="postHeroTitle">{this.state.post.title}</h1>
-              </div>
-              <div className="postHeroImage">
-                {this.state.post.featured_media !== null ? (
-                  <Img
-                    fluid={
-                      this.state.post.featured_media.localFile.childImageSharp
-                        .fluid
-                    }
-                  />
+                    <p>{this.state.post.categories[0].name}</p>
+                  )
                 ) : (
                   ""
                 )}
               </div>
+              <p className="postHeroDate">{this.state.post.date}—</p>
+              <h1 className="postHeroTitle">{this.state.post.title}</h1>
             </div>
-
-            <PostHeroLine tabIndex="0" alt="line" className="bottomLine" />
+            <div className="postHeroImage">
+              {this.state.post.featured_media !== null ? (
+                <Img
+                  fluid={
+                    this.state.post.featured_media.localFile.childImageSharp
+                      .fluid
+                  }
+                />
+              ) : (
+                ""
+              )}
+            </div>
           </div>
+
+          <PostHeroLine tabIndex="0" alt="line" className="bottomLine" />
 
           <div className="anchor" id="postContentAnchor"></div>
 

@@ -112,7 +112,14 @@
 
 @media (max-width: 4000px) {
   .filterWrapper {
-    padding: 10% 2%;
+    padding: 5% 2%;
+  }
+
+  .filterLine {
+    left: 26%;
+  }
+  .filterWrapper .row .container-fluid {
+    max-width: 1500px;
   }
 
   .filterHeaderContainer p {
@@ -132,7 +139,7 @@
     font-size: 25px;
   }
   .filterPosts .adcSinglePost {
-    width: 1900px;
+    width: 850px;
     justify-content: flex-start;
   }
   .filterPosts
@@ -141,10 +148,10 @@
     .catAndDateContainer
     .postCategory,
   .filterPosts .adcSinglePost .contentContainer .catAndDateContainer .postDate {
-    font-size: 20px;
+    font-size: 14px;
   }
   .filterPosts .adcSinglePost .contentContainer .postTitle {
-    font-size: 40px;
+    font-size: 22px;
   }
 }
 
@@ -152,12 +159,27 @@
   .filterWrapper {
     padding: 10% 2%;
   }
+
+  .filterLine {
+    left: 15%;
+  }
+  .filterWrapper .container-fluid {
+    max-width: 1400px;
+  }
+
+  .filterWrapper .row .container-fluid {
+    max-width: 1400px;
+  }
+
+  .filterHeaderContainer {
+    margin: 5% 0;
+  }
   .filterHeaderContainer h1 > span {
-    left: 23%;
-    bottom: 28%;
+    left: 0;
+    bottom: 35%;
   }
   .filterPosts .adcSinglePost {
-    width: 1200px;
+    width: 700px;
     justify-content: flex-start;
   }
 }
@@ -166,28 +188,31 @@
   .filterWrapper {
     padding: 10% 2%;
   }
-  .filterHeaderContainer h1 > span {
-    left: 30%;
+  .filterHeaderContainer {
+    margin: 5% 10%;
   }
   .filterPosts .adcSinglePost {
-    width: 900px;
+    width: 650px;
   }
 }
 
 @media (max-width: 1600px) {
+  .filterLine {
+    left: 0;
+  }
   .filterWrapper .container-fluid {
-    max-width: 1150px;
+    max-width: 1250px;
   }
   .filterHeaderContainer h1 > span {
     left: 0;
-    bottom: 6vh;
+    bottom: 5vh;
   }
   .filterHeaderContainer {
-    margin: 5% 0;
+    margin: 5% 10%;
   }
 
   .filterPosts .adcSinglePost {
-    width: 550px;
+    width: 600px;
   }
   .filterPosts .adcSinglePost .contentContainer .postTitle {
     font-size: 22px;
@@ -207,6 +232,9 @@
   .filterWrapper {
     padding: 10% 5%;
   }
+  .filterWrapper .container-fluid {
+    max-width: 1120px;
+  }
   .filterHeaderContainer h1 {
     font-size: 60px;
     line-height: 60px;
@@ -215,9 +243,6 @@
     left: 0;
     bottom: 3vh;
   }
-  .filterPosts .adcSinglePost {
-    width: 630px;
-  }
 
   .filterPosts
     .adcSinglePost
@@ -225,16 +250,13 @@
     .catAndDateContainer
     .postCategory,
   .filterPosts .adcSinglePost .contentContainer .catAndDateContainer .postDate {
-    font-size: 15px;
-  }
-  .filterPosts .adcSinglePost .contentContainer .postTitle {
-    font-size: 30px;
+    font-size: 12px;
   }
 }
 
 @media (max-width: 1366px) {
   .filterHeaderContainer {
-    margin: 5% 0;
+    margin: 5% 10%;
   }
   .filterWrapper .container-fluid {
     max-width: 1050px;
@@ -243,14 +265,11 @@
     line-height: 40px;
   }
   .filterPosts .adcSinglePost {
-    width: 500px;
+    width: 550px;
   }
 }
 
 @media (max-width: 1280px) {
-  .filterHeaderContainer h1 > span {
-    left: 29%;
-  }
   .filterPosts .adcSinglePost {
     width: 550px;
   }
@@ -260,14 +279,14 @@
   .filterWrapper {
     padding: 15% 5%;
   }
-  .filterHeaderContainer h1 > span {
-    left: 37%;
+  .filterWrapper .container-fluid {
+    max-width: 750px;
   }
   .filterTerms {
     font-size: 18px;
   }
   .filterPosts .adcSinglePost {
-    width: 450px;
+    width: 700px;
   }
   .filterPosts
     .adcSinglePost
@@ -278,11 +297,14 @@
     font-size: 12px;
   }
   .filterPosts .adcSinglePost .contentContainer .postTitle {
-    font-size: 25px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 768px) {
+  .filterWrapper .container-fluid {
+    max-width: 600px;
+  }
   .filterLine {
     display: none;
   }
@@ -290,15 +312,14 @@
     padding: 20% 5%;
   }
   .filterHeaderContainer {
-    margin: 0;
+    margin: 0 10%;
   }
   .filterHeaderContainer h1 > span {
     font-size: 16px;
-    left: 38.5%;
   }
 
   .filterPosts .adcSinglePost {
-    width: 680px;
+    width: 540px;
   }
 }
 

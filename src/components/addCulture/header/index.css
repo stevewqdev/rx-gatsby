@@ -111,6 +111,22 @@
   font-style: normal;
 }
 
+@media (max-width: 1366px) {
+  .navbarMenuBurger {
+    width: 2%;
+  }
+
+  .brand__logo {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .brand__logo {
+    width: 73%;
+  }
+}
+
 @media (max-width: 1024px) {
   .brand__logo {
     width: 60%;

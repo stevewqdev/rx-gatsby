@@ -12,20 +12,20 @@
 }
 
 .postHeader {
-  padding: 15%;
+  padding: 10%;
   height: 100vh;
   position: relative;
-}
-
-.headerContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
+/* .headerContainer {
+  position: relative;
+} */
+
 .scrollIndicator {
   position: relative;
-  left: -16%;
 }
 
 .scroll {
@@ -64,7 +64,7 @@
   font-weight: 400;
   font-size: 90px;
   top: 15%;
-  left: -10%;
+  left: 0;
 }
 
 .postHeroTitle {
@@ -74,21 +74,25 @@
   font-size: 70px;
   line-height: 70px;
   font-style: normal;
+  text-transform: uppercase;
   width: 80%;
   color: #e5e5e5;
 }
 
 .postHeroImage {
-  position: relative;
+  position: absolute;
+  right: 0;
   width: 100%;
 }
 
 .postHeroImage .gatsby-image-wrapper {
   position: absolute !important;
-  right: -120%;
+  right: 0;
   top: -20%;
-  width: 850px;
-  height: 600px;
+  width: 100%;
+  max-width: 1000px;
+  /* width: 850px;
+  height: 600px; */
   pointer-events: none;
 }
 
@@ -249,11 +253,11 @@
 
 .postTag {
   margin: 8px 5px;
-  padding: 1% 5%;
+  padding: 1% 2%;
   color: #cd4275;
   font-weight: 500;
   font-style: normal;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
@@ -265,7 +269,7 @@
 }
 
 .postTag:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .postBottomLine {
@@ -334,10 +338,13 @@
   .postHeader {
     height: initial;
   }
+  .postHeroContent {
+    left: -14%;
+  }
   .postHeroTitle {
-    font-size: 150px;
-    top: 45%;
-    line-height: 126px;
+    font-size: 100px;
+    line-height: 85px;
+    width: 100%;
   }
 
   .categoryContainer p {
@@ -346,25 +353,22 @@
     line-height: 25px;
   }
   .postHeroDate {
-    font-size: 130px;
-    top: 50%;
+    font-size: 100px;
+    top: 25%;
+    left: -5%;
   }
 
   .bottomLine {
-    width: initial;
-    bottom: -15%;
+    bottom: 60%;
   }
-  .postHeroImage .gatsby-image-wrapper {
-    width: 2000px;
-    height: 1200px;
-    top: -40%;
-    right: -40%;
+  .postHeroImage {
+    top: 15%;
   }
   .postContent .container-fluid {
     max-width: 1500px;
   }
   .postContainer {
-    padding: 12% 18%;
+    padding: 12% 26%;
   }
   .postInfoContainer {
     padding: 10% 0;
@@ -398,28 +402,35 @@
 }
 
 @media (max-width: 2560px) {
+  .postHeader {
+    height: 100vh;
+  }
+  .postHeroContent {
+    left: -2%;
+    top: 45%;
+  }
+  .categoryContainer {
+    margin-bottom: 15%;
+  }
   .postHeroImage .gatsby-image-wrapper {
-    width: 1500px;
-    height: 800px;
-    right: -50%;
+    max-width: 1300px;
   }
   .postContainer {
     padding: 15% 20%;
   }
   .postHeroDate {
     font-size: 100px;
-    top: 45%;
-    left: -5%;
+    top: 12%;
   }
 
   .bottomLine {
     width: initial;
-    bottom: -20%;
+    bottom: 0;
   }
   .postHeroTitle {
-    font-size: 110px;
-    top: 42%;
-    line-height: 90px;
+    font-size: 90px;
+    line-height: 80px;
+    width: 70%;
   }
   .scrollIndicator {
     left: -18% !important;
@@ -455,30 +466,30 @@
 }
 
 @media (max-width: 1920px) {
+  .postHeroContent {
+    left: 5%;
+    top: 30%;
+  }
   .postContainer {
-    padding: 15% 20%;
+    padding: 8% 20%;
   }
   .postHeader {
     height: 100vh;
   }
   .postHeroDate {
     font-size: 80px;
-    top: 45%;
-    left: -10%;
-  }
-
-  .postHeroTitle {
-    top: 40%;
-    font-size: 100px;
-    line-height: 80px;
+    top: 20%;
   }
   .postHeroImage .gatsby-image-wrapper {
     width: 1200px;
     height: 700px;
-    right: -50%;
   }
   .bottomLine {
-    bottom: -20%;
+    bottom: -25%;
+  }
+
+  .postContent .container-fluid {
+    max-width: 1400px;
   }
   .content p {
     padding-right: 20%;
@@ -495,20 +506,22 @@
 }
 
 @media (max-width: 1600px) {
+  .postHeroContent {
+    left: 8%;
+  }
   .categoryContainer p {
     width: 100%;
-    line-height: 14px;
-    font-size: 14px;
+    line-height: 20px;
+    font-size: 20px;
   }
   .postHeroDate {
     font-size: 80px;
-    top: 30%;
+    top: 18%;
   }
   .postHeroTitle {
     font-size: 80px;
     line-height: 70px;
-    width: 100%;
-    top: 35%;
+    width: 70%;
   }
   .postHeroImage .gatsby-image-wrapper {
     height: 550px;
@@ -553,10 +566,12 @@
 }
 
 @media (max-width: 1440px) {
+  .postHeroContent {
+    left: 4%;
+  }
   .postHeroDate {
     font-size: 80px;
-    top: 20%;
-    left: -10%;
+    top: 16%;
   }
   .categoryContainer p {
     width: 50%;
@@ -564,24 +579,22 @@
   }
 
   .bottomLine {
-    bottom: -25%;
+    bottom: -35%;
   }
 
   .postHeroTitle {
-    font-size: 80px;
-    line-height: 70px;
+    width: 80%;
   }
   .postHeroImage .gatsby-image-wrapper {
     width: 1000px;
     height: 600px;
-    right: -50%;
   }
 
   .postContent .container-fluid {
     max-width: 1100px;
   }
   .postContainer {
-    padding-right: 40%;
+    padding-right: 35%;
   }
 
   .relatedPostsSection {
@@ -598,34 +611,32 @@
 }
 
 @media (max-width: 1366px) {
-  /* .postHeader {
-    height: 85vh;
-  } */
-
+  .postHeroContent {
+    left: 2%;
+  }
   .categoryContainer p {
     width: 100%;
   }
   .postHeroDate {
     font-size: 60px;
-    top: 45%;
-    left: -10%;
+    top: 28%;
   }
 
   .postContainer {
-    padding-right: 40%;
+    padding-right: 50%;
   }
   .postHeroTitle {
-    font-size: 70px;
-    line-height: 60px;
+    font-size: 60px;
+    line-height: 50px;
+    width: 60%;
   }
   .postHeroImage .gatsby-image-wrapper {
     width: 800px;
     height: 500px;
-    right: -40%;
   }
 
   .bottomLine {
-    bottom: -45%;
+    bottom: -55%;
   }
 
   .postContent .container-fluid {
@@ -654,8 +665,7 @@
 @media (max-width: 1280px) {
   .postHeroDate {
     font-size: 60px;
-    top: 23%;
-    left: -8%;
+    top: 20%;
   }
 
   .postContainer {
@@ -665,11 +675,11 @@
   .postHeroTitle {
     font-size: 60px;
     line-height: 50px;
+    width: 70%;
   }
   .postHeroImage .gatsby-image-wrapper {
     width: 800px;
     height: 500px;
-    right: -50%;
   }
 
   .bottomLine {
@@ -677,7 +687,7 @@
   }
 
   .postContent .container-fluid {
-    max-width: 980px;
+    max-width: 1010px;
   }
 
   .relatedPostsSection {

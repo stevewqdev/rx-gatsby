@@ -404,21 +404,23 @@ export default class Filter extends Component {
 
             <div className="row">
               <div className="col-lg-12 col-md-12">
-                <div className="filterPosts">
-                  {this.state.postData}
-                  <ReactPaginate
-                    previousLabel={""}
-                    nextLabel={""}
-                    breakLabel={"..."}
-                    breakClassName={"break-me"}
-                    pageCount={this.state.pageCount}
-                    marginPagesDisplayed={2}
-                    pageRangeDisplayed={5}
-                    onPageChange={this.handlePageClick}
-                    containerClassName={"pagination"}
-                    subContainerClassName={"pages pagination"}
-                    activeClassName={"active"}
-                  />
+                <div className="container-fluid">
+                  <div className="filterPosts">
+                    {this.state.postData}
+                    <ReactPaginate
+                      previousLabel={""}
+                      nextLabel={""}
+                      breakLabel={"..."}
+                      breakClassName={"break-me"}
+                      pageCount={this.state.pageCount}
+                      marginPagesDisplayed={2}
+                      pageRangeDisplayed={5}
+                      onPageChange={this.handlePageClick}
+                      containerClassName={"pagination"}
+                      subContainerClassName={"pages pagination"}
+                      activeClassName={"active"}
+                    />
+                  </div>
                 </div>
               </div>
             </div>

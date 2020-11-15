@@ -109,7 +109,8 @@
 
 @media (max-width: 4000px) {
   .categoryHero {
-    margin-left: 5%;
+    margin-left: 31.5%;
+    height: 40vh;
   }
 
   .heroContainer .categoryLine {
@@ -119,6 +120,9 @@
     left: 1.5%;
     top: -20em;
   }
+  .categoryResults .container-fluid {
+    max-width: 1800px;
+  }
 
   .categoryPosts {
     margin: 0 8%;
@@ -127,11 +131,16 @@
 
 @media (max-width: 2560px) {
   .categoryHero {
-    margin-left: 8%;
+    margin-left: 21%;
+    height: 50vh;
   }
 
   .scroll-icon {
-    left: 2%;
+    left: 12%;
+  }
+
+  .categoryResults .container-fluid {
+    max-width: 1980px;
   }
 
   .categoryPosts {
@@ -141,7 +150,7 @@
 
 @media (max-width: 1920px) {
   .categoryHero {
-    margin-left: 8%;
+    margin-left: 14%;
   }
   .scroll-icon {
     left: 2%;
@@ -150,11 +159,18 @@
   .categoryPosts {
     margin: 0 auto;
   }
+
+  .categoryResults .container-fluid {
+    max-width: 1400px;
+  }
 }
 
 @media (max-width: 1600px) {
+  .categoryHero {
+    margin-left: 13%;
+  }
   .categoryResults .container-fluid {
-    max-width: 1150px;
+    max-width: 1200px;
   }
 
   .categoryPosts .adcSinglePost {
@@ -196,8 +212,13 @@
 }
 
 @media (max-width: 1280px) {
+  .categoryHero {
+    margin-left: 11%;
+    height: 60vh;
+  }
+
   .categoryPosts {
-    margin: 6% 12%;
+    margin: 0 12%;
   }
 }
 
