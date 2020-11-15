@@ -25,8 +25,7 @@ export default class PostsIndex extends Component {
     this.state = {
       isMouseTooltipVisible: false,
       posts: this.props.data.allWordpressWpAddcultureposts.edges,
-      featuredPosts: [],
-      popularPosts: [],
+      popular: [],
       offset: 0,
       perPage: 8,
       currentPage: 0,
@@ -283,8 +282,28 @@ export default class PostsIndex extends Component {
     )
   }
 
+  getPopular() {
+    const popular = []
+    this.state.posts.forEach(({ node }) => {
+      node.categories.forEach(category => {
+        if (category.name === "Popular") {
+          popular.push(node)
+          return this.setState(
+            {
+              popular: popular,
+            },
+            function() {
+              console.log(popular)
+            }
+          )
+        }
+      })
+    })
+  }
+
   componentDidMount() {
     window.scrollTo(0, 0)
+
     document.querySelector(".navbar").style.background = "#adaea5"
     this.formatData()
     this.featuredHandler()
@@ -292,6 +311,7 @@ export default class PostsIndex extends Component {
     // this.popularScrollhandler()
     this.identityScrollhandler()
     this.categoriesScrollhandler()
+    this.getPopular()
     AOS.init()
   }
 
@@ -421,7 +441,36 @@ export default class PostsIndex extends Component {
             </div> */}
 
             <Slider {...settings}>
-              <img src={SliderTest} />
+              {this.state.popular.map(post => (
+                <div className="popularSlides">
+                  <div className="popularSlide">
+                    <Img
+                      fluid={
+                        post.featured_media.localFile.childImageSharp.fluid
+                      }
+                    />
+                    <img
+                      src={post.featured_media.source_url}
+                      className="d-none"
+                      alt={post.title}
+                    />
+                    <div className="contentContainer">
+                      <div className="catDate">
+                        <div className="category">
+                          {post.categories[0].name}
+                        </div>
+                        <div className="date">{post.date}</div>
+                      </div>
+                      <h1 className="title">{post.title}</h1>
+                      <Link to={`/add-culture/post/${post.slug}`}>
+                        Link to post
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+
+              {/* <img src={SliderTest} />
               <div className="contentContainer">
                 <div className="catDate">
                   <div className="category">Add Culture Stories</div>
@@ -447,16 +496,7 @@ export default class PostsIndex extends Component {
                 </div>
                 <h1 className="title">Title for the slide</h1>
                 <a href="#">Link to post</a>
-              </div>
-              <img src={SliderTest} />
-              <div className="contentContainer">
-                <div className="catDate">
-                  <div className="category">Add Culture Stories</div>
-                  <div className="date">11.15.20</div>
-                </div>
-                <h1 className="title">Title for the slide</h1>
-                <a href="#">Link to post</a>
-              </div>
+              </div> */}
             </Slider>
 
             <div className="anchor" id="identityAnchor"></div>
