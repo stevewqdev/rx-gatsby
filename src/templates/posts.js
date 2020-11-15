@@ -421,7 +421,7 @@ export default class PostsIndex extends Component {
             </div> */}
 
             <Slider {...settings}>
-              <SliderTest />
+              <img src={SliderTest}>
               <div className="contentContainer">
                 <div className="catDate">
                   <div className="category">Add Culture Stories</div>
@@ -430,7 +430,7 @@ export default class PostsIndex extends Component {
                 <h1 className="title">Title for the slide</h1>
                 <a href="#">Link to post</a>
               </div>
-              <SliderTest />
+              <img src={SliderTest}>
               <div className="contentContainer">
                 <div className="catDate">
                   <div className="category">Add Culture Stories</div>
@@ -439,7 +439,7 @@ export default class PostsIndex extends Component {
                 <h1 className="title">Title for the slide</h1>
                 <a href="#">Link to post</a>
               </div>
-              <SliderTest />
+              <img src={SliderTest}>
               <div className="contentContainer">
                 <div className="catDate">
                   <div className="category">Add Culture Stories</div>
