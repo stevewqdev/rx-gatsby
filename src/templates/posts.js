@@ -7,7 +7,9 @@ import { graphql, Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import MouseTooltip from "react-sticky-mouse-tooltip"
 import ReactPaginate from "react-paginate"
+import Slider from "react-slick"
 import Img from "gatsby-image"
+import SliderTest from "../images/addCulture/sliderTest.png"
 import AddCultureSlider from "../components/addCulture/slider/index"
 // import PopularSlider from "../components/addCulture/slider/popular"
 // import ScrollIndicator from "../images/addCulture/scrollIndicator.svg"
@@ -294,6 +296,16 @@ export default class PostsIndex extends Component {
   }
 
   render() {
+    const settings = {
+      dots: false,
+      arrows: true,
+      infinite: true,
+      speed: 300,
+      centerMode: false,
+      className: "popularSlider",
+      slidesToShow: 3,
+      slidesToScroll: 1,
+    }
     return (
       <AddCultureLayout>
         <Helmet>
@@ -407,6 +419,45 @@ export default class PostsIndex extends Component {
                 </div>
               </div>
             </div> */}
+
+            <Slider {...settings}>
+              <SliderTest />
+              <div className="contentContainer">
+                <div className="catDate">
+                  <div className="category">Add Culture Stories</div>
+                  <div className="date">11.15.20</div>
+                </div>
+                <h1 className="title">Title for the slide</h1>
+                <a href="#">Link to post</a>
+              </div>
+              <SliderTest />
+              <div className="contentContainer">
+                <div className="catDate">
+                  <div className="category">Add Culture Stories</div>
+                  <div className="date">11.15.20</div>
+                </div>
+                <h1 className="title">Title for the slide</h1>
+                <a href="#">Link to post</a>
+              </div>
+              <SliderTest />
+              <div className="contentContainer">
+                <div className="catDate">
+                  <div className="category">Add Culture Stories</div>
+                  <div className="date">11.15.20</div>
+                </div>
+                <h1 className="title">Title for the slide</h1>
+                <a href="#">Link to post</a>
+              </div>
+              <SliderTest />
+              <div className="contentContainer">
+                <div className="catDate">
+                  <div className="category">Add Culture Stories</div>
+                  <div className="date">11.15.20</div>
+                </div>
+                <h1 className="title">Title for the slide</h1>
+                <a href="#">Link to post</a>
+              </div>
+            </Slider>
 
             <div className="anchor" id="identityAnchor"></div>
 
