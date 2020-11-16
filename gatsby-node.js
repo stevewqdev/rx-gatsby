@@ -48,7 +48,7 @@ exports.createPages = ({ graphql, actions }) => {
           createPage: createPage,
           pageTemplate: "src/templates/posts.js",
           pageLength: 1000,
-          pathPrefix: "add-culture",
+          pathPrefix: "addculture",
         })
 
         // // Loop through the posts
@@ -72,7 +72,7 @@ exports.createPages = ({ graphql, actions }) => {
           createPage: createPage,
           pageTemplate: "src/templates/filter.js",
           pageLength: 1000,
-          pathPrefix: "add-culture/filter/",
+          pathPrefix: "addculture/search/",
         })
       })
     )
@@ -85,7 +85,7 @@ exports.createPages = ({ graphql, actions }) => {
           createPage: createPage,
           pageTemplate: "src/templates/minority.js",
           pageLength: 1000,
-          pathPrefix: "add-culture/minority",
+          pathPrefix: "addculture/minority-owned-agencies",
         })
 
         // Loop through the posts
@@ -110,7 +110,7 @@ exports.createPages = ({ graphql, actions }) => {
           createPage: createPage,
           pageTemplate: "src/templates/why.js",
           pageLength: 1000,
-          pathPrefix: "add-culture/why",
+          pathPrefix: "addculture/why-add-culture",
         })
 
         // Loop through the posts
@@ -135,7 +135,7 @@ exports.createPages = ({ graphql, actions }) => {
           createPage: createPage,
           pageTemplate: "src/templates/stories.js",
           pageLength: 1000,
-          pathPrefix: "add-culture/stories",
+          pathPrefix: "addculture/add-culture-stories",
         })
 
         // Loop through the posts
@@ -160,7 +160,7 @@ exports.createPages = ({ graphql, actions }) => {
           createPage: createPage,
           pageTemplate: "src/templates/representation.js",
           pageLength: 1000,
-          pathPrefix: "add-culture/representation",
+          pathPrefix: "addculture/representation-done-right",
         })
 
         // Loop through the posts

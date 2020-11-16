@@ -117,9 +117,8 @@ export default class Minority extends Component {
       <AddCultureLayout>
         <Helmet>
           <meta charSet="utf-8" />
-          <meta name="description" content={"Minority - Add Culture"} />
-          <title>Minority ~ Add Culture</title>
-          <link rel="canonical" href={"/blog/minority"} />
+          <title>Minority Owned Agencies</title>
+          <link rel="canonical" href={"/addculture/minority-owned-agencies"} />
         </Helmet>
         <div className="main__section__wrapper blog__page">
           <Header />

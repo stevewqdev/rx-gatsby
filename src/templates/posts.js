@@ -356,9 +356,8 @@ export default class PostsIndex extends Component {
       <AddCultureLayout>
         <Helmet>
           <meta charSet="utf-8" />
-          <meta name="description" content={"The Raxo blog is a place"} />
-          <title>Add Culture ~ Blog</title>
-          <link rel="canonical" href={"/news"} />
+          <title>Ad+d Culture</title>
+          <link rel="canonical" href={"/addculture"} />
         </Helmet>
         <div className="main__section__wrapper blog__page">
           <Header />

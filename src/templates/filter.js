@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Img from "gatsby-image"
 import ReactPaginate from "react-paginate"
+import { Helmet } from "react-helmet"
 import { Link } from "gatsby"
 import AddCultureLayout from "../layouts/addCultureLayout/index"
 import Header from "../components/addCulture/header"
@@ -370,6 +371,11 @@ export default class Filter extends Component {
   render() {
     return (
       <AddCultureLayout>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Search</title>
+          <link rel="canonical" href={"/addculture/search"} />
+        </Helmet>
         <Header />
         <ScrollIndicatorDark tabIndex="0" alt="scroll" className="scrollIcon" />
         <FilterLine alt="Filter Line" tabIndex="0" className="filterLine" />

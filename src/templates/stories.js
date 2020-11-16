@@ -117,12 +117,8 @@ export default class Stories extends Component {
       <AddCultureLayout>
         <Helmet>
           <meta charSet="utf-8" />
-          <meta
-            name="description"
-            content={"Ad+d Culture Stories - Add Culture"}
-          />
-          <title>Ad+d Culture Stories ~ Add Culture</title>
-          <link rel="canonical" href={"/news/stories"} />
+          <title>Ad+d Culture Stories</title>
+          <link rel="canonical" href={"/addculture/add-culture-stories"} />
         </Helmet>
         <ScrollIndicator tabIndex="0" alt="scroll" className="scrollIcon" />
         <div className="main__section__wrapper blog__page">

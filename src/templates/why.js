@@ -104,9 +104,8 @@ export default class Why extends Component {
       <AddCultureLayout>
         <Helmet>
           <meta charSet="utf-8" />
-          <meta name="description" content={"Why Ad+d Culture - Add Culture"} />
-          <title>Why Ad+d Culture ~ Add Culture</title>
-          <link rel="canonical" href={"/news/why"} />
+          <title>Why Ad+d Culture</title>
+          <link rel="canonical" href={"/addculture/why-add-culture"} />
         </Helmet>
         <ScrollIndicatorDark tabIndex="0" alt="scroll" className="scrollIcon" />
         <div className="main__section__wrapper blog__page">

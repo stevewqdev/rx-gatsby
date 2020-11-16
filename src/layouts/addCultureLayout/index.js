@@ -99,6 +99,10 @@ const AddCultureLayout = ({ children, location }) => {
           <Helmet>
             {/* <link rel="icon" href="" /> */}
             <html lang="en" />
+            <meta
+              name="description"
+              content="Amplifying The Voices That Set The Tone"
+            />
           </Helmet>
           <Cursor></Cursor>
           <div className="addCultureWrapper" id="addCultureWrapper">
