@@ -1,6 +1,11 @@
 import React, { Component } from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  LinkedinShareButton,
+} from "react-share"
 import AddCultureLayout from "../layouts/addCultureLayout/index"
 import Header from "../components/addCulture/header"
 import HeroLine from "../images/addCulture/heroPostLine.svg"
@@ -266,7 +271,8 @@ export default class AddCulturePost extends Component {
                         onMouseEnter={this.addHover}
                         onMouseLeave={this.removeHover}
                         className="socialLink"
-                        href="https://twitter.com"
+                        href={`https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.raxo.co%2Faddculture%2Fpost%2F${this.state.post.slug}`}
+                        target="_blank"
                       >
                         <TwitterIcon tabIndex="0" alt="Twitter" />
                       </a>
@@ -274,7 +280,8 @@ export default class AddCulturePost extends Component {
                         onMouseEnter={this.addHover}
                         onMouseLeave={this.removeHover}
                         className="socialLink"
-                        href="https://facebook.com"
+                        target="_blank"
+                        href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fraxo.co%2Faddculture%2Fpost%2F${this.state.post.slug}`}
                       >
                         <FacebookIcon tabIndex="0" alt="Facebook" />
                       </a>
@@ -282,7 +289,8 @@ export default class AddCulturePost extends Component {
                         onMouseEnter={this.addLinkedHover}
                         onMouseLeave={this.removeLinkedHover}
                         className="socialLink"
-                        href="https://linkedin.com"
+                        href={`https://www.linkedin.com/sharing/share-offsite/?url=https://raxo.co/addculture/post/${this.state.post.slug}`}
+                        target="_blank"
                       >
                         <LinkedInIcon tabIndex="0" alt="LinkedIn" />
                       </a>
