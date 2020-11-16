@@ -475,7 +475,7 @@ export default class PostsIndex extends Component {
                 <Link
                   data-aos="fade-down"
                   data-duration="4000"
-                  to="/add-culture/minority"
+                  to="/addculture/minority-owned-agencies"
                   onMouseEnter={this.showTooltip}
                   onMouseLeave={this.hideTooltip}
                   className="categorySelector"
@@ -499,7 +499,7 @@ export default class PostsIndex extends Component {
                 <Link
                   data-aos="fade-down"
                   data-duration="4400"
-                  to="/add-culture/why"
+                  to="/addculture/why-add-culture"
                   onMouseEnter={this.showTooltip}
                   onMouseLeave={this.hideTooltip}
                   className="categorySelector"
@@ -523,7 +523,7 @@ export default class PostsIndex extends Component {
                 <Link
                   data-aos="fade-down"
                   data-duration="4600"
-                  to="/add-culture/stories"
+                  to="/addculture/add-culture-stories"
                   onMouseEnter={this.showTooltip}
                   onMouseLeave={this.hideTooltip}
                   className="categorySelector"
@@ -547,7 +547,7 @@ export default class PostsIndex extends Component {
                 <Link
                   data-aos="fade-down"
                   data-duration="4800"
-                  to="/add-culture/representation"
+                  to="/addculture/representation-done-right"
                   onMouseEnter={this.showTooltip}
                   onMouseLeave={this.hideTooltip}
                   className="categorySelector"

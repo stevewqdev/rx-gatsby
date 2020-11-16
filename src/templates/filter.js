@@ -71,21 +71,21 @@ export default class Filter extends Component {
     console.log(slice)
     const postData = slice.map(post => (
       <React.Fragment>
-        <Link to={`/add-culture/post/${post.slug}`}>
+        <Link to={`/addculture/post/${post.slug}`}>
           <div className={`adcSinglePost`}>
             <div className="contentContainer">
               <div className="catAndDateContainer">
                 {post.categories[0].name === "Popular" ||
                 post.categories[0].name === "Featured" ? (
                   <Link
-                    to={`/add-culture/post/${post.categories[1].slug.toLowerCase()}`}
+                    to={`/addculture/${post.categories[1].slug.toLowerCase()}`}
                     className="postCategory"
                   >
                     {post.categories[1].name}
                   </Link>
                 ) : (
                   <Link
-                    to={`/add-culture/post/${post.categories[0].slug.toLowerCase()}`}
+                    to={`/addculture/${post.categories[0].slug.toLowerCase()}`}
                     className="postCategory"
                   >
                     {post.categories[0].name}
@@ -162,21 +162,21 @@ export default class Filter extends Component {
       const postData = slice.map(post =>
         post ? (
           <React.Fragment>
-            <Link to={`/add-culture/post/${post.slug}`}>
+            <Link to={`/addculture/post/${post.slug}`}>
               <div className={`adcSinglePost`}>
                 <div className="contentContainer">
                   <div className="catAndDateContainer">
                     {post.categories[0].name === "Popular" ||
                     post.categories[0].name === "Featured" ? (
                       <Link
-                        to={`/add-culture/post/${post.categories[1].slug.toLowerCase()}`}
+                        to={`/addculture/${post.categories[1].slug.toLowerCase()}`}
                         className="postCategory"
                       >
                         {post.categories[1].name}
                       </Link>
                     ) : (
                       <Link
-                        to={`/add-culture/post/${post.categories[0].slug.toLowerCase()}`}
+                        to={`/addculture/${post.categories[0].slug.toLowerCase()}`}
                         className="postCategory"
                       >
                         {post.categories[0].name}
@@ -238,21 +238,21 @@ export default class Filter extends Component {
       const postData = slice.map(post =>
         post ? (
           <React.Fragment>
-            <Link to={`/add-culture/post/${post.slug}`}>
+            <Link to={`/addculture/post/${post.slug}`}>
               <div className={`adcSinglePost`}>
                 <div className="contentContainer">
                   <div className="catAndDateContainer">
                     {post.categories[0].name === "Popular" ||
                     post.categories[0].name === "Featured" ? (
                       <Link
-                        to={`/add-culture/post/${post.categories[1].slug.toLowerCase()}`}
+                        to={`/addculture/${post.categories[1].slug.toLowerCase()}`}
                         className="postCategory"
                       >
                         {post.categories[1].name}
                       </Link>
                     ) : (
                       <Link
-                        to={`/add-culture/post/${post.categories[0].slug.toLowerCase()}`}
+                        to={`/addculture/${post.categories[0].slug.toLowerCase()}`}
                         className="postCategory"
                       >
                         {post.categories[0].name}
@@ -314,21 +314,21 @@ export default class Filter extends Component {
       const postData = slice.map(post =>
         post ? (
           <React.Fragment>
-            <Link to={`/add-culture/post/${post.slug}`}>
+            <Link to={`/addculture/post/${post.slug}`}>
               <div className={`adcSinglePost`}>
                 <div className="contentContainer">
                   <div className="catAndDateContainer">
                     {post.categories[0].name === "Popular" ||
                     post.categories[0].name === "Featured" ? (
                       <Link
-                        to={`/add-culture/post/${post.categories[1].slug.toLowerCase()}`}
+                        to={`/addculture/${post.categories[1].slug.toLowerCase()}`}
                         className="postCategory"
                       >
                         {post.categories[1].name}
                       </Link>
                     ) : (
                       <Link
-                        to={`/add-culture/post/${post.categories[0].slug.toLowerCase()}`}
+                        to={`/addculture/${post.categories[0].slug.toLowerCase()}`}
                         className="postCategory"
                       >
                         {post.categories[0].name}

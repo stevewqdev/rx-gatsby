@@ -43,21 +43,21 @@ export default class Representation extends Component {
     console.log(slice)
     const postData = slice.map(({ node }, i) => (
       <React.Fragment>
-        <Link className="cardTop" to={`/add-culture/post/${node.slug}`}>
+        <Link className="cardTop" to={`/addculture/post/${node.slug}`}>
           <div className={`adcSinglePost post-${i}`}>
             <div className="contentContainer">
               <div className="catAndDateContainer">
                 {node.categories[0].name === "Popular" ||
                 node.categories[0].name === "Featured" ? (
                   <Link
-                    to={`/add-culture/post/${node.categories[1].slug.toLowerCase()}`}
+                    to={`/addculture/${node.categories[1].slug.toLowerCase()}`}
                     className="postCategory"
                   >
                     {node.categories[1].name}
                   </Link>
                 ) : (
                   <Link
-                    to={`/add-culture/post/${node.categories[0].slug.toLowerCase()}`}
+                    to={`/addculture/${node.categories[0].slug.toLowerCase()}`}
                     className="postCategory"
                   >
                     {node.categories[0].name}
@@ -115,12 +115,11 @@ export default class Representation extends Component {
       <AddCultureLayout>
         <Helmet>
           <meta charSet="utf-8" />
-          <meta
-            name="description"
-            content={"Representation Done Right - Add Culture"}
+          <title>Representation Done Right</title>
+          <link
+            rel="canonical"
+            href={"/addculture/representation-done-right"}
           />
-          <title>Representation Done Right ~ Add Culture</title>
-          <link rel="canonical" href={"/news/representation"} />
         </Helmet>
         <ScrollIndicatorDark tabIndex="0" alt="scroll" className="scrollIcon" />
         <div className="main__section__wrapper blog__page">

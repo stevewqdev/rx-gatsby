@@ -45,21 +45,21 @@ export default class Minority extends Component {
     console.log(slice)
     const postData = slice.map(({ node }, i) => (
       <React.Fragment>
-        <Link className="cardTop" to={`/add-culture/post/${node.slug}`}>
+        <Link className="cardTop" to={`/addculture/post/${node.slug}`}>
           <div className={`adcSinglePost post-${i}`}>
             <div className="contentContainer">
               <div className="catAndDateContainer">
                 {node.categories[0].name === "Popular" ||
                 node.categories[0].name === "Featured" ? (
                   <Link
-                    to={`/add-culture/post/${node.categories[1].slug.toLowerCase()}`}
+                    to={`/addculture/${node.categories[1].slug.toLowerCase()}`}
                     className="postCategory"
                   >
                     {node.categories[1].name}
                   </Link>
                 ) : (
                   <Link
-                    to={`/add-culture/post/${node.categories[0].slug.toLowerCase()}`}
+                    to={`/addculture/${node.categories[0].slug.toLowerCase()}`}
                     className="postCategory"
                   >
                     {node.categories[0].name}

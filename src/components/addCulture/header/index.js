@@ -67,16 +67,16 @@ export default class Header extends Component {
                 ></div>
               </div>
             </div>
-            <a
+            <Link
               data-aos="fade-right"
               data-duration="4000"
               className="brand__logo"
-              href="/add-culture"
+              href="/addculture"
             >
               <h1>
                 AD+D <br /> CULTURE
               </h1>
-            </a>
+            </Link>
             <div
               data-aos="fade-right"
               data-duration="4000"
@@ -111,7 +111,7 @@ export default class Header extends Component {
               <div className="col-lg-12 col-sm-12 ml-auto">
                 <div className="categoriesNavMenu">
                   <Link
-                    to="/add-culture/minority"
+                    to="/addculture/minority-owned-agencies"
                     onMouseEnter={this.showTooltipMenu}
                     onMouseLeave={this.hideTooltipMenu}
                     className="categorySelector"
@@ -133,7 +133,7 @@ export default class Header extends Component {
                     ></div>
                   </MouseTooltip>
                   <Link
-                    to="/add-culture/why"
+                    to="/addculture/why-add-culture"
                     onMouseEnter={this.showTooltipMenu}
                     onMouseLeave={this.hideTooltipMenu}
                     className="categorySelector"
@@ -155,7 +155,7 @@ export default class Header extends Component {
                     ></div>
                   </MouseTooltip>
                   <Link
-                    to="/add-culture/stories"
+                    to="/addculture/add-culture-stories"
                     onMouseEnter={this.showTooltipMenu}
                     onMouseLeave={this.hideTooltipMenu}
                     className="categorySelector"
@@ -177,7 +177,7 @@ export default class Header extends Component {
                     ></div>
                   </MouseTooltip>
                   <Link
-                    to="/add-culture/representation"
+                    to="/addculture/representation-done-right"
                     onMouseEnter={this.showTooltipMenu}
                     onMouseLeave={this.hideTooltipMenu}
                     className="categorySelector"
