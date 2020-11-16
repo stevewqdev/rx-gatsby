@@ -153,6 +153,10 @@
     top: 40vh;
     left: -32%;
   }
+
+  #placeholderContainer .content .postTitleText {
+    width: 100%;
+  }
   .popularSlider {
     left: 55%;
     top: 75%;
