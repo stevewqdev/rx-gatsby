@@ -397,6 +397,7 @@ export default class PostsIndex extends Component {
             </div>
 
             <div className="anchor" id="popularAnchor"></div>
+
             <div id="popular" className="popular">
               <div className="container-fluid">
                 <div className="scrollIndicator">
