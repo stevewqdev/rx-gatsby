@@ -105,28 +105,28 @@ export default class PostsIndex extends Component {
     })
   }
 
-  // popularScrollhandler() {
-  //   window.addEventListener("scroll", function() {
-  //     var element = document.getElementById("popularAnchor")
-  //     var bodyRect = document.body.getBoundingClientRect(),
-  //       elemRect = element.getBoundingClientRect(),
-  //       offset = elemRect.top - bodyRect.top
+  popularScrollhandler() {
+    window.addEventListener("scroll", function() {
+      var element = document.getElementById("popularAnchor")
+      var bodyRect = document.body.getBoundingClientRect(),
+        elemRect = element.getBoundingClientRect(),
+        offset = elemRect.top - bodyRect.top
 
-  //     if (elemRect.top < 100) {
-  //       // codigo si el elemento ya llego al top de la pantalla
-  //       document.querySelector(".navbar").style.background = "#222220"
-  //       document.querySelector(
-  //         ".navbarMenuBurger .menuBurgerLineOne"
-  //       ).style.background = "#fcc6c6"
-  //       document.querySelector(
-  //         ".navbarMenuBurger .menuBurgerLineTwo"
-  //       ).style.background = "#fcc6c6"
-  //       document.querySelector(".brand__logo h1").style.color = "#fcc6c6"
-  //       document.querySelector(".explore").style.color = "#fcc6c6"
-  //       document.querySelector(".addCultureContainer").classList.remove("light")
-  //     }
-  //   })
-  // }
+      if (elemRect.top < 100) {
+        // codigo si el elemento ya llego al top de la pantalla
+        document.querySelector(".navbar").style.background = "#222220"
+        document.querySelector(
+          ".navbarMenuBurger .menuBurgerLineOne"
+        ).style.background = "#fcc6c6"
+        document.querySelector(
+          ".navbarMenuBurger .menuBurgerLineTwo"
+        ).style.background = "#fcc6c6"
+        document.querySelector(".brand__logo h1").style.color = "#fcc6c6"
+        document.querySelector(".explore").style.color = "#fcc6c6"
+        document.querySelector(".addCultureContainer").classList.remove("light")
+      }
+    })
+  }
 
   identityScrollhandler() {
     window.addEventListener("scroll", function() {
@@ -311,7 +311,7 @@ export default class PostsIndex extends Component {
     this.formatData()
     this.featuredHandler()
     this.postsScrollHandler()
-    // this.popularScrollhandler()
+    this.popularScrollhandler()
     this.identityScrollhandler()
     this.categoriesScrollhandler()
     this.getPopular()
@@ -319,54 +319,6 @@ export default class PostsIndex extends Component {
   }
 
   render() {
-    // const settings = {
-    //   dots: false,
-    //   arrows: true,
-    //   infinite: true,
-    //   speed: 300,
-    //   centerMode: false,
-    //   className: "popularSlider",
-    //   slidesToShow: 3,
-    //   slidesToScroll: 1,
-    //   nextArrow: <img src={NextArrow} alt="Next post" />,
-    //   prevArrow: <img src={PrevArrow} alt="Previous post" />,
-    //   onInit: function showData() {
-    //     const posts = document.getElementsByClassName(".slick-active")
-
-    //     console.log(posts)
-
-    //     // for (let post of posts) {
-    //     //   console.log(post)
-    //     // }
-    //     // let title = posts[0].getElementsByClassName("titleText")[0].textContent
-    //     // let category = posts[0].getElementsByClassName("popularCat")[0]
-    //     //   .textContent
-    //     // let date = posts[0].getElementsByClassName("popularDate")[0].textContent
-    //     // let slug = posts[0]
-    //     //   .getElementsByClassName("postLink")[0]
-    //     //   .getAttribute("href")
-    //     // let featuredImage = posts[0]
-    //     //   .getElementsByClassName("srcImage")[0]
-    //     //   .getAttribute("src")
-    //     // console.log(featuredImage)
-    //     // let placeholderContainer = document.getElementById(
-    //     //   "placeholderContainer"
-    //     // )
-    //     // const printData = `
-    //     //   <img data-aos="fade-left" data-duration="4000" class="placeHolderImg" src=${featuredImage} alt=${title} />
-    //     //   <div data-aos="fade-right" data-duration="4000" class="content">
-    //     //     <div class="infoContainer">
-    //     //       <p class="popularCategory">${category}</p>
-    //     //       <p class="popDate">${date}</p>
-    //     //     </div>
-    //     //     <h1 class="postTitleText">${title}</h1>
-    //     //     <a href=${slug}>READ MORE+</a>
-    //     //   </div>
-    //     // `
-    //     // placeholderContainer.innerHTML += printData
-    //   },
-    // }
-
     return (
       <AddCultureLayout>
         <Helmet>
@@ -444,7 +396,7 @@ export default class PostsIndex extends Component {
               </div>
             </div>
 
-            {/* <div className="anchor" id="popularAnchor"></div> */}
+            <div className="anchor" id="popularAnchor"></div>
             <div id="popular" className="popular">
               <div className="container-fluid">
                 <div className="scrollIndicator">
