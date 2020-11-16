@@ -10,7 +10,6 @@ import ReactPaginate from "react-paginate"
 import Img from "gatsby-image"
 import AddCultureSlider from "../components/addCulture/slider/index"
 import ScrollIndicator from "../images/addCulture/scrollIndicator.svg"
-import ScrollIndicatorDark from "../images/addCulture/scrollIndicatorDark.svg"
 import PopularSlider from "../components/addCulture/slider/popular"
 import PopularLeftMark from "../images/addCulture/popularLeftMark.svg"
 import PopularRightMark from "../images/addCulture/popularRIghtMark.svg"
@@ -64,12 +63,12 @@ export default class PostsIndex extends Component {
         document.querySelector(
           ".navbarMenuBurger .menuBurgerLineTwo"
         ).style.background = "#222220"
-        document.querySelector(".brand__logo h1").style.color = "#222220"
-        document.querySelector(".explore").style.color = "#222220"
         document.querySelectorAll(".storiesLink a svg g path")[0].style.fill =
           "#222220"
         document.querySelectorAll(".storiesLink a svg g path")[1].style.fill =
           "#222220"
+        document.querySelector(".scrollIcon path").style.fill = "#f4f4f4"
+        document.querySelector(".scrollIcon line").style.stroke = "#f4f4f4"
       }
     })
   }
@@ -98,6 +97,9 @@ export default class PostsIndex extends Component {
         document.querySelectorAll(".storiesLink a svg g path")[1].style.fill =
           "#222220"
         document.querySelector(".addCultureContainer").classList.add("light")
+
+        document.querySelector(".scrollIcon path").style.fill = "#222220"
+        document.querySelector(".scrollIcon line").style.stroke = "#222220"
         posts.forEach(post => {
           post.classList.remove("adcSinglePostDark")
           post.children[0].children[0].children[1].style.color = "#222220"
@@ -135,6 +137,8 @@ export default class PostsIndex extends Component {
           "#FFC6C6"
         document.querySelectorAll(".storiesLink a svg g path")[1].style.fill =
           "#FFC6C6"
+        // document.querySelector(".scrollIcon path").style.fill = "#f4f4f4"
+        // document.querySelector(".scrollIcon line").style.stroke = "#f4f4f4"
         document.querySelector(".addCultureContainer").classList.remove("light")
       }
     })
@@ -192,7 +196,12 @@ export default class PostsIndex extends Component {
           "#222220"
         document.querySelectorAll(".storiesLink a svg g path")[1].style.fill =
           "#222220"
+        document.querySelector(".scrollIcon path").style.fill = "#f4f4f4"
+        document.querySelector(".scrollIcon line").style.stroke = "#f4f4f4"
         document.querySelector(".addCultureContainer").classList.remove("gray")
+      } else {
+        document.querySelector(".scrollIcon path").style.fill = "#222220"
+        document.querySelector(".scrollIcon line").style.stroke = "#222220"
       }
     })
   }
@@ -351,6 +360,7 @@ export default class PostsIndex extends Component {
           <Header />
           <AddCultureHero />
           <div className="addCultureContainer">
+            <ScrollIndicator className="scrollIcon" tabIndex="0" alt="Scroll" />
             <div id="featured" className="featuredContent">
               <svg
                 className="featuredLine"
@@ -387,13 +397,6 @@ export default class PostsIndex extends Component {
             <div id="blogPosts" className="addCultureBlogPosts">
               <div className="container-fluid">
                 <div className="row">
-                  <div
-                    data-aos="fade-left"
-                    data-duration="4000"
-                    className="scrollIndicatorDark"
-                  >
-                    <ScrollIndicatorDark tabIndex="0" alt="Scroll" />
-                  </div>
                   <div className="col-lg-12 col-md-12">
                     <div className="postsGrid">
                       {this.state.postData}
@@ -420,9 +423,6 @@ export default class PostsIndex extends Component {
 
             <div id="popular" className="popular">
               <div className="container-fluid">
-                <div className="scrollIndicator">
-                  <ScrollIndicator tabIndex="0" alt="Scroll" />
-                </div>
                 <div className="popularContent">
                   <PopularRightMark
                     className="popularRightMark"

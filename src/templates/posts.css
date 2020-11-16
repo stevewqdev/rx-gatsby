@@ -19,6 +19,21 @@ a {
   color: #f4f4f4 !important;
 }
 
+.scrollIcon {
+  position: fixed;
+  right: calc(100% - 70px);
+  top: 52vh;
+  transition: all 0.5s ease-in-out;
+}
+
+.scrollIcon path {
+  fill: #f4f4f4;
+}
+
+.scrollIcon stroke {
+  fill: #f4f4f4;
+}
+
 .adcSinglePostDark {
   border-color: #e5e5e5 !important;
   color: #e5e5e5 !important;

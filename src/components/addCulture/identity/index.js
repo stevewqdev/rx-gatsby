@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import ScrollIndicatorDark from "../../../images/addCulture/scrollIndicatorDark.svg"
 import IdentityTriangle from "../../../images/addCulture/identityTriangle.svg"
 import IdentityTopEllipses from "../../../images/addCulture/identityTopEllipses.svg"
 import IdentityInverseVector from "../../../images/addCulture/identityInverseVector.svg"
@@ -18,13 +17,6 @@ export default class Identity extends Component {
     return (
       <div id="identity" className="blogIdentity">
         <div className="row">
-          <div
-            data-aos="fade-right"
-            data-duration="4000"
-            className="scrollIndicatorDark"
-          >
-            <ScrollIndicatorDark tabIndex="0" alt="Scroll" />
-          </div>
           <IdentityTriangle
             data-aos="fade-right"
             data-duration="4000"
