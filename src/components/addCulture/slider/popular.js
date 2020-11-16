@@ -11,40 +11,39 @@ export default class PopularSlider extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      popular: [],
+      // popular: [],
       render: false,
     }
   }
 
-  getPopular() {
-    const popular = []
-    this.props.popular.forEach(({ node }) => {
-      node.categories.forEach(category => {
-        if (category.name === "Popular") {
-          popular.push(node)
-          return this.setState(
-            {
-              popular: popular,
-            },
-            function() {
-              console.log(popular)
-            }
-          )
-        }
-      })
-    })
-  }
+  // getPopular() {
+  //   const popular = []
+  //   this.props.popular.forEach(({ node }) => {
+  //     node.categories.forEach(category => {
+  //       if (category.name === "Popular") {
+  //         popular.push(node)
+  //         return this.setState(
+  //           {
+  //             popular: popular,
+  //           },
+  //           function() {
+  //             console.log(popular)
+  //           }
+  //         )
+  //       }
+  //     })
+  //   })
+  // }
 
   componentDidMount() {
     this.setState({
       render: true,
     })
-    this.getPopular()
     AOS.init()
   }
 
   render() {
-    const popularSettings = {
+    const settings = {
       dots: false,
       arrows: true,
       infinite: true,
@@ -121,16 +120,14 @@ export default class PopularSlider extends Component {
     const { render } = this.state
     if (render) {
       return (
-        <Slider {...popularSettings}>
-          {this.state.popular.map(post => (
+        <Slider {...settings}>
+          {this.props.popular.map(post => (
             <div>
               <Img
                 fluid={post.featured_media.localFile.childImageSharp.fluid}
                 className="popularImage"
-                alt={post.title}
               />
               <img
-                id="popularImage"
                 src={post.featured_media.source_url}
                 className="srcImage d-none"
                 alt={post.title}
@@ -158,7 +155,7 @@ export default class PopularSlider extends Component {
                   className="postLink"
                   to={`/add-culture/post/${post.slug}`}
                 >
-                  READ MORE+
+                  Link to post
                 </Link>
               </div>
             </div>
