@@ -9,14 +9,15 @@ import MouseTooltip from "react-sticky-mouse-tooltip"
 import ReactPaginate from "react-paginate"
 import Slider from "react-slick"
 import Img from "gatsby-image"
-import SliderTest from "../images/addCulture/sliderTest.png"
 import AddCultureSlider from "../components/addCulture/slider/index"
-// import PopularSlider from "../components/addCulture/slider/popular"
-// import ScrollIndicator from "../images/addCulture/scrollIndicator.svg"
+import NextArrow from "../images/addCulture/nextArrow.png"
+import PrevArrow from "../images/addCulture/prevArrow.png"
+import ScrollIndicator from "../images/addCulture/scrollIndicator.svg"
 import ScrollIndicatorDark from "../images/addCulture/scrollIndicatorDark.svg"
-// import PopularLeftMark from "../images/addCulture/popularLeftMark.svg"
-// import PopularRightMark from "../images/addCulture/popularRIghtMark.svg"
+import PopularLeftMark from "../images/addCulture/popularLeftMark.svg"
+import PopularRightMark from "../images/addCulture/popularRIghtMark.svg"
 import "./posts.css"
+import "../components/addCulture/slider/popular.css"
 import AOS from "aos"
 
 export default class PostsIndex extends Component {
@@ -325,6 +326,8 @@ export default class PostsIndex extends Component {
       className: "popularSlider",
       slidesToShow: 3,
       slidesToScroll: 1,
+      nextArrow: <img src={NextArrow} alt="Next post" />,
+      prevArrow: <img src={PrevArrow} alt="Previous post" />,
     }
     return (
       <AddCultureLayout>
@@ -405,7 +408,7 @@ export default class PostsIndex extends Component {
 
             {/* <div className="anchor" id="popularAnchor"></div> */}
 
-            {/* <div id="popular" className="popular">
+            <div id="popular" className="popular">
               <div className="container-fluid">
                 <div className="scrollIndicator">
                   <ScrollIndicator tabIndex="0" alt="Scroll" />
@@ -426,11 +429,37 @@ export default class PostsIndex extends Component {
                   <div className="activePlaceholder">
                     <div id="placeholderContainer"></div>
                   </div>
-                  <PopularSlider
-                    popular={
-                      this.props.data.allWordpressWpAddcultureposts.edges
-                    }
-                  />
+                  <Slider {...settings}>
+                    {this.state.popular.map(post => (
+                      <div className="popularSlides">
+                        <div className="popularSlide">
+                          <Img
+                            fluid={
+                              post.featured_media.localFile.childImageSharp
+                                .fluid
+                            }
+                          />
+                          <img
+                            src={post.featured_media.source_url}
+                            className="d-none"
+                            alt={post.title}
+                          />
+                          <div className="contentContainer">
+                            <div className="catDate">
+                              <div className="category">
+                                {post.categories[0].name}
+                              </div>
+                              <div className="date">{post.date}</div>
+                            </div>
+                            <h1 className="title">{post.title}</h1>
+                            <Link to={`/add-culture/post/${post.slug}`}>
+                              Link to post
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </Slider>
                   <PopularLeftMark
                     className="popularLeftMark"
                     tabIndex="0"
@@ -438,66 +467,7 @@ export default class PostsIndex extends Component {
                   />
                 </div>
               </div>
-            </div> */}
-
-            <Slider {...settings}>
-              {this.state.popular.map(post => (
-                <div className="popularSlides">
-                  <div className="popularSlide">
-                    <Img
-                      fluid={
-                        post.featured_media.localFile.childImageSharp.fluid
-                      }
-                    />
-                    <img
-                      src={post.featured_media.source_url}
-                      className="d-none"
-                      alt={post.title}
-                    />
-                    <div className="contentContainer">
-                      <div className="catDate">
-                        <div className="category">
-                          {post.categories[0].name}
-                        </div>
-                        <div className="date">{post.date}</div>
-                      </div>
-                      <h1 className="title">{post.title}</h1>
-                      <Link to={`/add-culture/post/${post.slug}`}>
-                        Link to post
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              ))}
-
-              {/* <img src={SliderTest} />
-              <div className="contentContainer">
-                <div className="catDate">
-                  <div className="category">Add Culture Stories</div>
-                  <div className="date">11.15.20</div>
-                </div>
-                <h1 className="title">Title for the slide</h1>
-                <a href="#">Link to post</a>
-              </div>
-              <img src={SliderTest} />
-              <div className="contentContainer">
-                <div className="catDate">
-                  <div className="category">Add Culture Stories</div>
-                  <div className="date">11.15.20</div>
-                </div>
-                <h1 className="title">Title for the slide</h1>
-                <a href="#">Link to post</a>
-              </div>
-              <img src={SliderTest} />
-              <div className="contentContainer">
-                <div className="catDate">
-                  <div className="category">Add Culture Stories</div>
-                  <div className="date">11.15.20</div>
-                </div>
-                <h1 className="title">Title for the slide</h1>
-                <a href="#">Link to post</a>
-              </div> */}
-            </Slider>
+            </div>
 
             <div className="anchor" id="identityAnchor"></div>
 
