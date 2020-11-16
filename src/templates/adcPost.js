@@ -189,6 +189,13 @@ export default class AddCulturePost extends Component {
     element[1].classList.remove("hoverPath")
   }
 
+  shareLink(e) {
+    e.preventDefault()
+    navigator.clipboard.writeText(
+      document.getElementById("sharePost").getAttribute("href")
+    )
+  }
+
   componentDidMount() {
     this.navbarChange()
     this.bgChange()
@@ -297,8 +304,10 @@ export default class AddCulturePost extends Component {
                       <a
                         onMouseEnter={this.addHover}
                         onMouseLeave={this.removeHover}
+                        onClick={this.shareLink}
+                        id="sharePost"
                         className="socialLink"
-                        href="#"
+                        href={`https://raxo.co/addculture/post/${this.state.post.slug}`}
                       >
                         <ShareIcon tabIndex="0" alt="Share" />
                       </a>
