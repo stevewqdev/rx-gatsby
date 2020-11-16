@@ -67,6 +67,8 @@ export default class PostsIndex extends Component {
           "#222220"
         document.querySelectorAll(".storiesLink a svg g path")[1].style.fill =
           "#222220"
+        document.querySelector(".brand__logo h1").style.color = "#222220"
+        document.querySelector(".explore").style.color = "#222220"
         document.querySelector(".scrollIcon path").style.fill = "#f4f4f4"
         document.querySelector(".scrollIcon line").style.stroke = "#f4f4f4"
       }
