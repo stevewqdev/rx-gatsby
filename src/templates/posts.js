@@ -7,18 +7,14 @@ import { graphql, Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import MouseTooltip from "react-sticky-mouse-tooltip"
 import ReactPaginate from "react-paginate"
-import Slider from "react-slick"
 import Img from "gatsby-image"
 import AddCultureSlider from "../components/addCulture/slider/index"
-import NextArrow from "../images/addCulture/nextArrow.png"
-import PrevArrow from "../images/addCulture/prevArrow.png"
 import ScrollIndicator from "../images/addCulture/scrollIndicator.svg"
 import ScrollIndicatorDark from "../images/addCulture/scrollIndicatorDark.svg"
 import PopularSlider from "../components/addCulture/slider/popular"
 import PopularLeftMark from "../images/addCulture/popularLeftMark.svg"
 import PopularRightMark from "../images/addCulture/popularRIghtMark.svg"
 import "./posts.css"
-// import "../components/addCulture/slider/popular.css"
 import AOS from "aos"
 
 export default class PostsIndex extends Component {
@@ -56,6 +52,10 @@ export default class PostsIndex extends Component {
         ).style.background = "#fcc6c6"
         document.querySelector(".brand__logo h1").style.color = "#fcc6c6"
         document.querySelector(".explore").style.color = "#fcc6c6"
+        document.querySelectorAll(".storiesLink a svg g path")[0].style.fill =
+          "#FFC6C6"
+        document.querySelectorAll(".storiesLink a svg g path")[1].style.fill =
+          "#FFC6C6"
       } else {
         document.querySelector(".navbar").style.background = "#adaea5"
         document.querySelector(
@@ -66,6 +66,10 @@ export default class PostsIndex extends Component {
         ).style.background = "#222220"
         document.querySelector(".brand__logo h1").style.color = "#222220"
         document.querySelector(".explore").style.color = "#222220"
+        document.querySelectorAll(".storiesLink a svg g path")[0].style.fill =
+          "#222220"
+        document.querySelectorAll(".storiesLink a svg g path")[1].style.fill =
+          "#222220"
       }
     })
   }
@@ -89,6 +93,10 @@ export default class PostsIndex extends Component {
         ).style.background = "#222220"
         document.querySelector(".brand__logo h1").style.color = "#222220"
         document.querySelector(".explore").style.color = "#222220"
+        document.querySelectorAll(".storiesLink a svg g path")[0].style.fill =
+          "#222220"
+        document.querySelectorAll(".storiesLink a svg g path")[1].style.fill =
+          "#222220"
         document.querySelector(".addCultureContainer").classList.add("light")
         posts.forEach(post => {
           post.classList.remove("adcSinglePostDark")
@@ -123,6 +131,10 @@ export default class PostsIndex extends Component {
         ).style.background = "#fcc6c6"
         document.querySelector(".brand__logo h1").style.color = "#fcc6c6"
         document.querySelector(".explore").style.color = "#fcc6c6"
+        document.querySelectorAll(".storiesLink a svg g path")[0].style.fill =
+          "#FFC6C6"
+        document.querySelectorAll(".storiesLink a svg g path")[1].style.fill =
+          "#FFC6C6"
         document.querySelector(".addCultureContainer").classList.remove("light")
       }
     })
@@ -146,6 +158,10 @@ export default class PostsIndex extends Component {
         ).style.background = "#222220"
         document.querySelector(".brand__logo h1").style.color = "#222220"
         document.querySelector(".explore").style.color = "#222220"
+        document.querySelectorAll(".storiesLink a svg g path")[0].style.fill =
+          "#222220"
+        document.querySelectorAll(".storiesLink a svg g path")[1].style.fill =
+          "#222220"
         document.querySelector(".addCultureContainer").classList.remove("light")
         document.querySelector(".addCultureContainer").classList.add("gray")
       } else {
@@ -172,6 +188,10 @@ export default class PostsIndex extends Component {
         ).style.background = "#fcc6c6"
         document.querySelector(".brand__logo h1").style.color = "#fcc6c6"
         document.querySelector(".explore").style.color = "#fcc6c6"
+        document.querySelectorAll(".storiesLink a svg g path")[0].style.fill =
+          "#222220"
+        document.querySelectorAll(".storiesLink a svg g path")[1].style.fill =
+          "#222220"
         document.querySelector(".addCultureContainer").classList.remove("gray")
       }
     })
