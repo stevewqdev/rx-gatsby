@@ -107,6 +107,8 @@ export default class Minority extends Component {
   componentDidMount() {
     window.scrollTo(0, 0)
     document.querySelector(".navbar").style.background = "#f4f4f4"
+    document.querySelector(".scrollIcon path").style.fill = "#222220"
+    document.querySelector(".scrollIcon line").style.stroke = "#222220"
     this.formatData()
   }
 
@@ -117,10 +119,15 @@ export default class Minority extends Component {
           <meta charSet="utf-8" />
           <meta name="description" content={"Minority - Add Culture"} />
           <title>Minority ~ Add Culture</title>
-          <link rel="canonical" href={"/news/minority"} />
+          <link rel="canonical" href={"/blog/minority"} />
         </Helmet>
         <div className="main__section__wrapper blog__page">
           <Header />
+          <ScrollIndicatorDark
+            tabIndex="0"
+            alt="scroll"
+            className="scrollIcon"
+          />
           <div className="categoryHero minority">
             <div className="heroContainer">
               <CategoryCircle
@@ -135,11 +142,6 @@ export default class Minority extends Component {
               <CategoryLine tabIndex="0" alt="line" className="categoryLine" />
             </div>
           </div>
-          <ScrollIndicatorDark
-            tabIndex="0"
-            alt="scroll"
-            className="scroll-icon"
-          />
 
           <div className="categoryResults">
             <div className="row">

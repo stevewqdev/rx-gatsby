@@ -105,6 +105,8 @@ export default class Representation extends Component {
   componentDidMount() {
     window.scrollTo(0, 0)
     document.querySelector(".navbar").style.background = "#f4f4f4"
+    document.querySelector(".scrollIcon path").style.fill = "#222220"
+    document.querySelector(".scrollIcon line").style.stroke = "#222220"
     this.formatData()
   }
 
@@ -120,6 +122,7 @@ export default class Representation extends Component {
           <title>Representation Done Right ~ Add Culture</title>
           <link rel="canonical" href={"/news/representation"} />
         </Helmet>
+        <ScrollIndicatorDark tabIndex="0" alt="scroll" className="scrollIcon" />
         <div className="main__section__wrapper blog__page">
           <Header />
           <div className="categoryHero representationBanner">
@@ -137,11 +140,6 @@ export default class Representation extends Component {
               <CategoryLine tabIndex="0" alt="line" className="categoryLine" />
             </div>
           </div>
-          <ScrollIndicatorDark
-            tabIndex="0"
-            alt="scroll"
-            className="scroll-icon"
-          />
           <div className="categoryResults">
             <div className="row">
               <div className="col-lg-12 col-md-12">

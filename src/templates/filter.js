@@ -4,6 +4,7 @@ import ReactPaginate from "react-paginate"
 import { Link } from "gatsby"
 import AddCultureLayout from "../layouts/addCultureLayout/index"
 import Header from "../components/addCulture/header"
+import ScrollIndicatorDark from "../images/addCulture/scrollIndicatorDark.svg"
 // import CategoryCircle from "../images/addCulture/categories/categoryCircle.svg"
 import FilterLine from "../images/addCulture/filterLine.svg"
 import "./filter.css"
@@ -157,7 +158,6 @@ export default class Filter extends Component {
         this.state.offset + this.state.perPage
       )
       // this.formatCategories(slice)
-      console.log(slice)
       const postData = slice.map(post =>
         post ? (
           <React.Fragment>
@@ -362,6 +362,8 @@ export default class Filter extends Component {
   componentDidMount() {
     window.scrollTo(0, 0)
     document.querySelector(".navbar").style.background = "#e5e5e5"
+    document.querySelector(".scrollIcon path").style.fill = "#222220"
+    document.querySelector(".scrollIcon line").style.stroke = "#222220"
     this.formatData()
   }
 
@@ -369,6 +371,7 @@ export default class Filter extends Component {
     return (
       <AddCultureLayout>
         <Header />
+        <ScrollIndicatorDark tabIndex="0" alt="scroll" className="scrollIcon" />
         <FilterLine alt="Filter Line" tabIndex="0" className="filterLine" />
         <div className="filterWrapper">
           <div className="container-fluid">

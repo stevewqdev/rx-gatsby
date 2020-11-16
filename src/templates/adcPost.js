@@ -105,6 +105,11 @@ export default class AddCulturePost extends Component {
         document.querySelector(".content").classList.add("fontDark")
         document.querySelector(".postExcerpt").classList.add("fontDark")
 
+        // scrollIcon
+
+        document.querySelector(".scrollIcon path").style.fill = "#222220"
+        document.querySelector(".scrollIcon line").style.stroke = "#222220"
+
         //navbar
 
         document.querySelector(".navbar").style.background = "#e5e5e5"
@@ -139,11 +144,13 @@ export default class AddCulturePost extends Component {
           "#FFC6C6"
         document.querySelectorAll(".storiesLink a svg g path")[1].style.fill =
           "#FFC6C6"
+        document.querySelector(".scrollIcon path").style.fill = "#f4f4f4"
+        document.querySelector(".scrollIcon line").style.stroke = "#f4f4f4"
       }
     })
   }
 
-  addLinkedHover(e) {
+  addLinkedHover() {
     let allSocials = document.querySelectorAll(".socials a svg")
     allSocials.forEach((icon, i) => {
       if (i === 2) {
@@ -154,7 +161,7 @@ export default class AddCulturePost extends Component {
     })
   }
 
-  removeLinkedHover(e) {
+  removeLinkedHover() {
     let allSocials = document.querySelectorAll(".socials a svg")
     allSocials.forEach((icon, i) => {
       if (i === 2) {
@@ -191,12 +198,9 @@ export default class AddCulturePost extends Component {
     return (
       <AddCultureLayout>
         <Header />
+        <ScrollIndicator tabIndex="0" alt="scroll" className="scrollIcon" />
         <div className="postWrapper">
           <div className="postHeader container-fluid">
-            <div className="scrollIndicator">
-              <ScrollIndicator tabIndex="0" alt="scroll" class="scroll" />
-            </div>
-
             <div className="postHeroContent">
               <div className="categoryContainer">
                 <HeroLine tabIndex="0" alt="line" className="heroLine" />
