@@ -431,31 +431,36 @@ export default class PostsIndex extends Component {
                   </div>
                   <Slider {...settings}>
                     {this.state.popular.map(post => (
-                      <div className="popularSlides">
-                        <div className="popularSlide">
-                          <Img
-                            fluid={
-                              post.featured_media.localFile.childImageSharp
-                                .fluid
-                            }
-                          />
-                          <img
-                            src={post.featured_media.source_url}
-                            className="d-none"
-                            alt={post.title}
-                          />
-                          <div className="contentContainer">
-                            <div className="catDate">
-                              <div className="category">
-                                {post.categories[0].name}
-                              </div>
-                              <div className="date">{post.date}</div>
-                            </div>
-                            <h1 className="title">{post.title}</h1>
-                            <Link to={`/add-culture/post/${post.slug}`}>
-                              Link to post
-                            </Link>
+                      <div>
+                        <Img
+                          fluid={
+                            post.featured_media.localFile.childImageSharp.fluid
+                          }
+                          className="popularImage"
+                        />
+                        <img
+                          src={post.featured_media.source_url}
+                          className="srcImage d-none"
+                          alt={post.title}
+                        />
+                        <div className="content">
+                          <div className="catAndDate">
+                            {post.categories.map(category =>
+                              category.name !== "Featured" ||
+                              category.name !== "Popular" ? (
+                                <p id="category" className="popularCat">
+                                  {category.name}
+                                </p>
+                              ) : (
+                                ""
+                              )
+                            )}
+                            <div className="date">{post.date}</div>
                           </div>
+                          <h1 className="title">{post.title}</h1>
+                          <Link to={`/add-culture/post/${post.slug}`}>
+                            Link to post
+                          </Link>
                         </div>
                       </div>
                     ))}
