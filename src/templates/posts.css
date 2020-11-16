@@ -75,12 +75,11 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 
 .postsGrid a {
-  content: "";
-  flex: auto;
+  margin-right: 10px;
   margin-bottom: 20px;
 }
 
@@ -102,6 +101,10 @@ a {
   margin-top: 15px;
 }
 
+.adcSinglePost .gatsby-image-wrapper {
+  max-height: 300px;
+  height: 100%;
+}
 .postsGrid .adcSinglePost .catAndDateContainer {
   display: flex;
   flex-direction: row;
@@ -128,7 +131,7 @@ a {
 }
 
 .contentContainer .postTitle {
-  padding-top: 20%;
+  padding-top: 12%;
   padding-bottom: 10%;
   font-family: "Lato", sans-serif;
   font-size: 20px;

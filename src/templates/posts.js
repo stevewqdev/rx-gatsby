@@ -231,6 +231,8 @@ export default class PostsIndex extends Component {
           category.name = "Rep. Done Right"
         } else if (category.name === "Add Culture Stories") {
           category.name = "Stories"
+        } else if (category.name === "Why Add Culture") {
+          category.name = "Culture"
         }
       })
     })
