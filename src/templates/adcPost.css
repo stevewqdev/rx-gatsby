@@ -37,6 +37,7 @@
   color: #ffc6c6;
   font-family: "ITC Avant Garde Pro Md", sans-serif;
   position: relative;
+  z-index: 10;
 }
 
 .categoryContainer {
@@ -53,6 +54,7 @@
   font-size: 16px;
   font-weight: bold;
   font-style: normal;
+  text-transform: uppercase;
   line-height: 22px;
   width: 18%;
 }

@@ -12,6 +12,16 @@ const Newsletter = props => {
     handleSubmit(e)
   }
 
+  function modalConfirmShow() {
+    document.querySelector(".confirm").classList.remove("d-none")
+    document.querySelector(".confirm").classList.add("fadeInUp")
+  }
+
+  function modalConfirmHide(e) {
+    document.querySelector(".confirm").classList.remove("d-none")
+    document.querySelector(".confirm").classList.remove("fadeInUp")
+  }
+
   function handleSubmit(e) {
     e.preventDefault()
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
@@ -33,6 +43,7 @@ const Newsletter = props => {
             setStatus(data.result)
             setMessage(data.msg)
             setEmail("")
+            modalConfirmShow()
           })
           .catch(error => {
             setStatus(error.result)
@@ -117,6 +128,31 @@ const Newsletter = props => {
               </a>
             </form>
           </div>
+        </div>
+      </div>
+
+      <div class="confirm animated animatedFadeInUp d-none">
+        <p className="close" onClick={modalConfirmHide}>
+          <svg
+            width="36"
+            height="36"
+            viewBox="0 0 36 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M3 3L33 33" stroke="#FFC6C6" stroke-width="2" />
+            <path d="M33 3L3 33" stroke="#FFC6C6" stroke-width="2" />
+          </svg>
+        </p>
+
+        <h3 class="hey">hey there!</h3>
+        <h1 class="thanks">
+          Thank you <br /> for <br /> joining us!
+        </h1>
+        <div className="text-center button-container">
+          <p class="done" onClick={modalConfirmHide}>
+            Done
+          </p>
         </div>
       </div>
     </div>
