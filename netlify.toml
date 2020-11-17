@@ -5,6 +5,18 @@ status = 301
 force = false
 
 [[redirects]]
+from = "/work/reel"
+to = "/"
+status = 301
+force = false
+
+[[redirects]]
+from = "/our-team"
+to = "/team"
+status = 301
+force = false
+
+[[redirects]]
 from = "/#/creative-work/allocate"
 to = "/project/allocaterite"
 status = 301
