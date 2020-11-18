@@ -124,7 +124,7 @@ export default class PostsIndex extends Component {
         elemRect = element.getBoundingClientRect(),
         offset = elemRect.top - bodyRect.top
 
-      if (elemRect.top < 200) {
+      if (elemRect.top < 250) {
         // codigo si el elemento ya llego al top de la pantalla
         document.querySelector(".navbar").style.background = "#222220"
         document.querySelector(
