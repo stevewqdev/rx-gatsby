@@ -204,7 +204,7 @@ export default class AddCulturePost extends Component {
   }
 
   componentDidUpdate() {
-    window.scrollTo(0, 0)
+    document.getElementById("top").scrollIntoView()
   }
   render() {
     return (
@@ -328,7 +328,7 @@ export default class AddCulturePost extends Component {
                         <div className="postTagsContainer">
                           {this.state.post.tags.map(tag => (
                             <Link
-                              to={`/add-culture/filter?${tag.slug}`}
+                              to={`/addculture/filter?${tag.slug}`}
                               className="postTag"
                             >
                               {tag.name}
@@ -362,20 +362,20 @@ export default class AddCulturePost extends Component {
               {this.state.featuredPosts.map(({ node }, i) => (
                 <>
                   {i < 3 ? (
-                    <Link to={`/add-culture/post/${node.slug}`}>
+                    <Link to={`/addculture/post/${node.slug}`}>
                       <div className={`adcSinglePost post-${i}`}>
                         <div className="contentContainer">
                           <div className="catAndDateContainer">
                             {node.categories[1] === "Featured" ? (
                               <Link
-                                to={`/add-culture/${node.categories[0].slug.toLowerCase()}`}
+                                to={`/addculture/${node.categories[0].slug.toLowerCase()}`}
                                 className="postCategory"
                               >
                                 {node.categories[0].name}
                               </Link>
                             ) : (
                               <Link
-                                to={`/add-culture/${node.categories[1].slug.toLowerCase()}`}
+                                to={`/addculture/${node.categories[1].slug.toLowerCase()}`}
                                 className="postCategory"
                               >
                                 {node.categories[1].name}

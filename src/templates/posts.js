@@ -40,7 +40,7 @@ export default class PostsIndex extends Component {
         elemRect = element.getBoundingClientRect(),
         offset = elemRect.top - bodyRect.top
 
-      if (elemRect.top < 100) {
+      if (elemRect.top < 200) {
         // codigo si el elemento ya llego al top de la pantalla
         document.querySelector(".navbar").style.background = "#222220"
         document.querySelector(
@@ -83,7 +83,7 @@ export default class PostsIndex extends Component {
         elemRect = element.getBoundingClientRect(),
         offset = elemRect.top - bodyRect.top
 
-      if (elemRect.top < 100) {
+      if (elemRect.top < 200) {
         // codigo si el elemento ya llego al top de la pantalla
         document.querySelector(".navbar").style.background = "#e5e5e5"
         document.querySelector(
@@ -124,7 +124,7 @@ export default class PostsIndex extends Component {
         elemRect = element.getBoundingClientRect(),
         offset = elemRect.top - bodyRect.top
 
-      if (elemRect.top < 100) {
+      if (elemRect.top < 200) {
         // codigo si el elemento ya llego al top de la pantalla
         document.querySelector(".navbar").style.background = "#222220"
         document.querySelector(
@@ -153,7 +153,7 @@ export default class PostsIndex extends Component {
         elemRect = element.getBoundingClientRect(),
         offset = elemRect.top - bodyRect.top
 
-      if (elemRect.top < 100) {
+      if (elemRect.top < 200) {
         // codigo si el elemento ya llego al top de la pantalla
         document.querySelector(".navbar").style.background = "#adaea5"
         document.querySelector(
@@ -168,10 +168,6 @@ export default class PostsIndex extends Component {
           "#222220"
         document.querySelectorAll(".storiesLink a svg g path")[1].style.fill =
           "#222220"
-        document.querySelector(".addCultureContainer").classList.remove("light")
-        document.querySelector(".addCultureContainer").classList.add("gray")
-      } else {
-        document.querySelector(".addCultureContainer").classList.remove("gray")
       }
     })
   }
@@ -183,7 +179,7 @@ export default class PostsIndex extends Component {
         elemRect = element.getBoundingClientRect(),
         offset = elemRect.top - bodyRect.top
 
-      if (elemRect.top < 100) {
+      if (elemRect.top < 200) {
         // codigo si el elemento ya llego al top de la pantalla
         document.querySelector(".navbar").style.background = "#222220"
         document.querySelector(
@@ -200,7 +196,6 @@ export default class PostsIndex extends Component {
           "#222220"
         document.querySelector(".scrollIcon path").style.fill = "#f4f4f4"
         document.querySelector(".scrollIcon line").style.stroke = "#f4f4f4"
-        document.querySelector(".addCultureContainer").classList.remove("gray")
       } else {
         document.querySelector(".scrollIcon path").style.fill = "#222220"
         document.querySelector(".scrollIcon line").style.stroke = "#222220"

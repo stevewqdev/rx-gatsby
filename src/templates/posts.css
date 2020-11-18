@@ -222,7 +222,7 @@ a {
 }
 
 .addCultureContainer .blogIdentity {
-  /* background: #adaea5; */
+  background: #adaea5;
   position: relative;
 }
 
@@ -300,9 +300,9 @@ a {
   line-height: 28px;
 }
 
-/* .blogCategories {
+.blogCategories {
   background: #222220;
-} */
+}
 
 .blogCategories .categoriesHeader {
   padding: 15% 10% 0 10%;
@@ -520,6 +520,9 @@ a {
 }
 
 @media (max-width: 1920px) {
+  .categoryContainer p {
+    font-size: 16px;
+  }
   .featuredContent .featuredText {
     left: 13%;
     top: 22%;
@@ -565,6 +568,9 @@ a {
 }
 
 @media (max-width: 1600px) {
+  .categoryContainer p {
+    font-size: 14px;
+  }
   .featuredContent .featuredText {
     font-size: 100px;
     line-height: 85px;

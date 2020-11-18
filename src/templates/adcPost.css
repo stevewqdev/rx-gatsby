@@ -51,7 +51,7 @@
 }
 
 .categoryContainer p {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   font-style: normal;
   text-transform: uppercase;
@@ -75,6 +75,7 @@
   font-weight: bold;
   font-size: 70px;
   line-height: 70px;
+  top: 14%;
   font-style: normal;
   text-transform: uppercase;
   width: 80%;
@@ -336,6 +337,10 @@
   width: 250px;
 }
 
+.featuredGrid .adcSinglePost.post-0 .contentContainer {
+  margin-right: 10px;
+}
+
 @media (max-width: 4000px) {
   .postHeader {
     height: initial;
@@ -400,6 +405,12 @@
   .featuredGrid .adcSinglePost.adcSinglePost.post-1,
   .featuredGrid .adcSinglePost.adcSinglePost.post-2 {
     width: 220px;
+  }
+
+  .featuredGrid .adcSinglePost.adcSinglePost.post-1 .gatsby-image-wrapper,
+  .featuredGrid .adcSinglePost.adcSinglePost.post-2 .gatsby-image-wrapper {
+    max-height: 180px !important;
+    height: 100%;
   }
 }
 
@@ -498,7 +509,7 @@
   }
 
   .featuredGrid .adcSinglePost.post-0 {
-    width: 950px;
+    width: 850px;
   }
 
   .featuredGrid .adcSinglePost.adcSinglePost.post-1,
