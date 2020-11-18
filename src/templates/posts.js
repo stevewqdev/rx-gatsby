@@ -246,7 +246,7 @@ export default class PostsIndex extends Component {
     this.formatCategories(slice)
     const postData = slice.map(({ node }, i) => (
       <React.Fragment>
-        <Link to={`/add-culture/post/${node.slug}`}>
+        <Link to={`/addculture/post/${node.slug}`}>
           <div
             data-aos="fade-up"
             data-duration="4000"
@@ -255,7 +255,7 @@ export default class PostsIndex extends Component {
             <div className="contentContainer">
               <div className="catAndDateContainer">
                 <Link
-                  to={`/post/${node.categories[0].slug.toLowerCase()}`}
+                  to={`/addculture/${node.categories[0].slug.toLowerCase()}`}
                   className="postCategory"
                 >
                   {node.categories[0].name}
