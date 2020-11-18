@@ -91,7 +91,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Loop through the posts
         minorityPosts.forEach(edge => {
           createPage({
-            path: `/add-culture/post/${edge.node.slug}/`,
+            path: `/addculture/post/${edge.node.slug}/`,
             component: slash(adcPostTemplate),
             context: {
               id: edge.node.id,
@@ -116,7 +116,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Loop through the posts
         whyPosts.forEach(edge => {
           createPage({
-            path: `/add-culture/post/${edge.node.slug}/`,
+            path: `/addculture/post/${edge.node.slug}/`,
             component: slash(adcPostTemplate),
             context: {
               id: edge.node.id,
@@ -141,7 +141,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Loop through the posts
         storiesPosts.forEach(edge => {
           createPage({
-            path: `/add-culture/post/${edge.node.slug}/`,
+            path: `/addculture/post/${edge.node.slug}/`,
             component: slash(adcPostTemplate),
             context: {
               id: edge.node.id,
@@ -166,7 +166,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Loop through the posts
         representationPosts.forEach(edge => {
           createPage({
-            path: `/add-culture/post/${edge.node.slug}/`,
+            path: `/addculture/post/${edge.node.slug}/`,
             component: slash(adcPostTemplate),
             context: {
               id: edge.node.id,
