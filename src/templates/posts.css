@@ -974,6 +974,9 @@ a {
 }
 
 @media (max-width: 540px) {
+  .scrollIcon {
+    display: none;
+  }
   .featuredContent .featuredText {
     font-size: 55px;
     line-height: 50px;
@@ -1043,7 +1046,7 @@ a {
   }
 
   .postsGrid .adcSinglePost {
-    width: initial;
+    width: 300px;
   }
 
   .popularContent .popularHeading {

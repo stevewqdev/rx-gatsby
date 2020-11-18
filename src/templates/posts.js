@@ -5,6 +5,7 @@ import AddCultureHero from "../components/addCulture/hero/index"
 import Identity from "../components/addCulture/identity/index"
 import { graphql, Link } from "gatsby"
 import { Helmet } from "react-helmet"
+import LazyLoad from "react-lazyload"
 import MouseTooltip from "react-sticky-mouse-tooltip"
 import ReactPaginate from "react-paginate"
 import Img from "gatsby-image"
@@ -383,73 +384,83 @@ export default class PostsIndex extends Component {
                 >
                   FEATURED <br /> THIS <br /> MONTH
                 </h1>
-                <AddCultureSlider
-                  className="slider"
-                  featured={this.props.data.allWordpressWpAddcultureposts.edges}
-                />
+                <LazyLoad>
+                  <AddCultureSlider
+                    className="slider"
+                    featured={
+                      this.props.data.allWordpressWpAddcultureposts.edges
+                    }
+                  />
+                </LazyLoad>
               </div>
             </div>
 
             <div className="anchor" id="postsAnchor"></div>
 
-            <div id="blogPosts" className="addCultureBlogPosts">
-              <div className="container-fluid">
-                <div className="row">
-                  <div className="col-lg-12 col-md-12">
-                    <div className="postsGrid">
-                      {this.state.postData}
-                      <ReactPaginate
-                        previousLabel={""}
-                        nextLabel={""}
-                        breakLabel={"..."}
-                        breakClassName={"break-me"}
-                        pageCount={this.state.pageCount}
-                        marginPagesDisplayed={2}
-                        pageRangeDisplayed={5}
-                        onPageChange={this.handlePageClick}
-                        containerClassName={"pagination"}
-                        subContainerClassName={"pages pagination"}
-                        activeClassName={"active"}
-                      />
+            <LazyLoad>
+              <div id="blogPosts" className="addCultureBlogPosts">
+                <div className="container-fluid">
+                  <div className="row">
+                    <div className="col-lg-12 col-md-12">
+                      <div className="postsGrid">
+                        {this.state.postData}
+                        <ReactPaginate
+                          previousLabel={""}
+                          nextLabel={""}
+                          breakLabel={"..."}
+                          breakClassName={"break-me"}
+                          pageCount={this.state.pageCount}
+                          marginPagesDisplayed={2}
+                          pageRangeDisplayed={5}
+                          onPageChange={this.handlePageClick}
+                          containerClassName={"pagination"}
+                          subContainerClassName={"pages pagination"}
+                          activeClassName={"active"}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </LazyLoad>
 
             <div className="anchor" id="popularAnchor"></div>
 
             <div id="popular" className="popular">
               <div className="container-fluid">
-                <div className="popularContent">
-                  <PopularRightMark
-                    className="popularRightMark"
-                    tabIndex="0"
-                    alt="left mark"
-                  />
-                  <h1
-                    data-aos="fade-right"
-                    data-duration="4000"
-                    className="popularHeading"
-                  >
-                    POPULAR <br /> THIS <br /> MONTH
-                  </h1>
-                  <div className="activePlaceholder">
-                    <div id="placeholderContainer"></div>
+                <LazyLoad>
+                  <div className="popularContent">
+                    <PopularRightMark
+                      className="popularRightMark"
+                      tabIndex="0"
+                      alt="left mark"
+                    />
+                    <h1
+                      data-aos="fade-right"
+                      data-duration="4000"
+                      className="popularHeading"
+                    >
+                      POPULAR <br /> THIS <br /> MONTH
+                    </h1>
+                    <div className="activePlaceholder">
+                      <div id="placeholderContainer"></div>
+                    </div>
+                    <PopularSlider popular={this.state.popular} />
+                    <PopularLeftMark
+                      className="popularLeftMark"
+                      tabIndex="0"
+                      alt="left mark"
+                    />
                   </div>
-                  <PopularSlider popular={this.state.popular} />
-                  <PopularLeftMark
-                    className="popularLeftMark"
-                    tabIndex="0"
-                    alt="left mark"
-                  />
-                </div>
+                </LazyLoad>
               </div>
             </div>
 
             <div className="anchor" id="identityAnchor"></div>
 
-            <Identity />
+            <LazyLoad>
+              <Identity />
+            </LazyLoad>
 
             <div className="categories" id="categoriesAnchor"></div>
 
@@ -466,104 +477,106 @@ export default class PostsIndex extends Component {
                   OUR BLOG <br /> <span>OUR CATEGORIES.</span>
                 </h1>
               </div>
-              <div className="categoriesNav">
-                <Link
-                  data-aos="fade-down"
-                  data-duration="4000"
-                  to="/addculture/minority-owned-agencies"
-                  onMouseEnter={this.showTooltip}
-                  onMouseLeave={this.hideTooltip}
-                  className="categorySelector"
-                  id="categoryOne"
-                >
-                  <p className="categoryNumber">01</p>
-                  <h2 className="categoryName">
-                    MINORITY <br /> OWNED <br /> AGENCIES
-                  </h2>
-                </Link>
-                <MouseTooltip
-                  visible={this.state.isMouseTooltipVisible}
-                  offsetX={-200}
-                  offsetY={-200}
-                >
-                  <div
-                    className="category minorityImg"
-                    id="categoryOne-container"
-                  ></div>
-                </MouseTooltip>
-                <Link
-                  data-aos="fade-down"
-                  data-duration="4400"
-                  to="/addculture/why-add-culture"
-                  onMouseEnter={this.showTooltip}
-                  onMouseLeave={this.hideTooltip}
-                  className="categorySelector"
-                  id="categoryThree"
-                >
-                  <p className="categoryNumber">02</p>
-                  <h2 className="categoryName">
-                    WHY <br /> AD+D <br /> CULTURE
-                  </h2>
-                </Link>
-                <MouseTooltip
-                  visible={this.state.isMouseTooltipVisible}
-                  offsetX={-200}
-                  offsetY={-200}
-                >
-                  <div
-                    className="category whyImg"
-                    id="categoryThree-container"
-                  ></div>
-                </MouseTooltip>
-                <Link
-                  data-aos="fade-down"
-                  data-duration="4600"
-                  to="/addculture/add-culture-stories"
-                  onMouseEnter={this.showTooltip}
-                  onMouseLeave={this.hideTooltip}
-                  className="categorySelector"
-                  id="categoryFour"
-                >
-                  <p className="categoryNumber">03</p>
-                  <h2 className="categoryName">
-                    AD+D <br /> CULTURE <br /> STORIES
-                  </h2>
-                </Link>
-                <MouseTooltip
-                  visible={this.state.isMouseTooltipVisible}
-                  offsetX={-200}
-                  offsetY={-200}
-                >
-                  <div
-                    className="category storiesImg"
-                    id="categoryFour-container"
-                  ></div>
-                </MouseTooltip>
-                <Link
-                  data-aos="fade-down"
-                  data-duration="4800"
-                  to="/addculture/representation-done-right"
-                  onMouseEnter={this.showTooltip}
-                  onMouseLeave={this.hideTooltip}
-                  className="categorySelector"
-                  id="categoryFive"
-                >
-                  <p className="categoryNumber">04</p>
-                  <h2 className="categoryName">
-                    REPRESENTATION <br /> DONE RIGHT
-                  </h2>
-                </Link>
-                <MouseTooltip
-                  visible={this.state.isMouseTooltipVisible}
-                  offsetX={-200}
-                  offsetY={-200}
-                >
-                  <div
-                    className="category representationImg"
-                    id="categoryFive-container"
-                  ></div>
-                </MouseTooltip>
-              </div>
+              <LazyLoad>
+                <div className="categoriesNav">
+                  <Link
+                    data-aos="fade-down"
+                    data-duration="4000"
+                    to="/addculture/minority-owned-agencies"
+                    onMouseEnter={this.showTooltip}
+                    onMouseLeave={this.hideTooltip}
+                    className="categorySelector"
+                    id="categoryOne"
+                  >
+                    <p className="categoryNumber">01</p>
+                    <h2 className="categoryName">
+                      MINORITY <br /> OWNED <br /> AGENCIES
+                    </h2>
+                  </Link>
+                  <MouseTooltip
+                    visible={this.state.isMouseTooltipVisible}
+                    offsetX={-200}
+                    offsetY={-200}
+                  >
+                    <div
+                      className="category minorityImg"
+                      id="categoryOne-container"
+                    ></div>
+                  </MouseTooltip>
+                  <Link
+                    data-aos="fade-down"
+                    data-duration="4400"
+                    to="/addculture/why-add-culture"
+                    onMouseEnter={this.showTooltip}
+                    onMouseLeave={this.hideTooltip}
+                    className="categorySelector"
+                    id="categoryThree"
+                  >
+                    <p className="categoryNumber">02</p>
+                    <h2 className="categoryName">
+                      WHY <br /> AD+D <br /> CULTURE
+                    </h2>
+                  </Link>
+                  <MouseTooltip
+                    visible={this.state.isMouseTooltipVisible}
+                    offsetX={-200}
+                    offsetY={-200}
+                  >
+                    <div
+                      className="category whyImg"
+                      id="categoryThree-container"
+                    ></div>
+                  </MouseTooltip>
+                  <Link
+                    data-aos="fade-down"
+                    data-duration="4600"
+                    to="/addculture/add-culture-stories"
+                    onMouseEnter={this.showTooltip}
+                    onMouseLeave={this.hideTooltip}
+                    className="categorySelector"
+                    id="categoryFour"
+                  >
+                    <p className="categoryNumber">03</p>
+                    <h2 className="categoryName">
+                      AD+D <br /> CULTURE <br /> STORIES
+                    </h2>
+                  </Link>
+                  <MouseTooltip
+                    visible={this.state.isMouseTooltipVisible}
+                    offsetX={-200}
+                    offsetY={-200}
+                  >
+                    <div
+                      className="category storiesImg"
+                      id="categoryFour-container"
+                    ></div>
+                  </MouseTooltip>
+                  <Link
+                    data-aos="fade-down"
+                    data-duration="4800"
+                    to="/addculture/representation-done-right"
+                    onMouseEnter={this.showTooltip}
+                    onMouseLeave={this.hideTooltip}
+                    className="categorySelector"
+                    id="categoryFive"
+                  >
+                    <p className="categoryNumber">04</p>
+                    <h2 className="categoryName">
+                      REPRESENTATION <br /> DONE RIGHT
+                    </h2>
+                  </Link>
+                  <MouseTooltip
+                    visible={this.state.isMouseTooltipVisible}
+                    offsetX={-200}
+                    offsetY={-200}
+                  >
+                    <div
+                      className="category representationImg"
+                      id="categoryFive-container"
+                    ></div>
+                  </MouseTooltip>
+                </div>
+              </LazyLoad>
             </div>
           </div>
         </div>

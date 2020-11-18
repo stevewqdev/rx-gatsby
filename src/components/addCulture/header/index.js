@@ -185,7 +185,7 @@ export default class Header extends Component {
                   >
                     <p className="categoryNumber">04</p>
                     <h2 className="categoryName">
-                      REPRESENTATION <br /> DONE RIGHT
+                      REP. <br /> DONE RIGHT
                     </h2>
                   </Link>
                   <MouseTooltip

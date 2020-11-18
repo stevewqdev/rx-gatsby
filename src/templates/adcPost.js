@@ -1,11 +1,6 @@
 import React, { Component } from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
-import {
-  FacebookShareButton,
-  TwitterShareButton,
-  LinkedinShareButton,
-} from "react-share"
 import AddCultureLayout from "../layouts/addCultureLayout/index"
 import Header from "../components/addCulture/header"
 import HeroLine from "../images/addCulture/heroPostLine.svg"
@@ -19,6 +14,7 @@ import ShareIcon from "../images/addCulture/socialIcons/button/header/navigation
 import BottomLine from "../images/addCulture/bottomLine.svg"
 import "../fonts/addCulture/schnyder/stylesheet.css"
 import "./adcPost.css"
+import LazyLoad from "react-lazyload"
 
 export default class AddCulturePost extends Component {
   constructor(props) {
@@ -229,18 +225,20 @@ export default class AddCulturePost extends Component {
               <p className="postHeroDate">{this.state.post.date}—</p>
               <h1 className="postHeroTitle">{this.state.post.title}</h1>
             </div>
-            <div className="postHeroImage">
-              {this.state.post.featured_media !== null ? (
-                <Img
-                  fluid={
-                    this.state.post.featured_media.localFile.childImageSharp
-                      .fluid
-                  }
-                />
-              ) : (
-                ""
-              )}
-            </div>
+            <LazyLoad>
+              <div className="postHeroImage">
+                {this.state.post.featured_media !== null ? (
+                  <Img
+                    fluid={
+                      this.state.post.featured_media.localFile.childImageSharp
+                        .fluid
+                    }
+                  />
+                ) : (
+                  ""
+                )}
+              </div>
+            </LazyLoad>
           </div>
 
           <PostHeroLine tabIndex="0" alt="line" className="bottomLine" />

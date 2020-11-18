@@ -743,6 +743,7 @@
     font-size: 50px;
     line-height: 50px;
     width: 100%;
+    top: 5%;
     text-align: center;
   }
 
@@ -978,7 +979,7 @@
 
   .postHeroContent {
     z-index: 10;
-    top: 35vh;
+    top: 25vh;
   }
 
   /* .postHeroContent .postHeroTitle {
@@ -1093,13 +1094,13 @@
 
   .postHeroContent {
     z-index: 10;
-    top: 35vh;
+    top: 25vh;
   }
 
   .postHeroContent .postHeroTitle {
     padding: 0 5%;
-    font-size: 35px;
-    line-height: 30px;
+    font-size: 30px;
+    line-height: 28px;
     width: 100%;
     text-align: center;
   }
