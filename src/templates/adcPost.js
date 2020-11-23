@@ -12,6 +12,7 @@ import FacebookIcon from "../images/addCulture/socialIcons/button/header/navigat
 import LinkedInIcon from "../images/addCulture/socialIcons/button/header/navigation-2.svg"
 import ShareIcon from "../images/addCulture/socialIcons/button/header/navigation-3.svg"
 import BottomLine from "../images/addCulture/bottomLine.svg"
+import BackArrow from "../images/addCulture/prevArrow.png"
 import "../fonts/addCulture/schnyder/stylesheet.css"
 import "./adcPost.css"
 import LazyLoad from "react-lazyload"
@@ -207,6 +208,9 @@ export default class AddCulturePost extends Component {
       <AddCultureLayout>
         <Header />
         <ScrollIndicator tabIndex="0" alt="scroll" className="scrollIcon" />
+        <Link className="goBack" to="/addculture">
+          <img src={BackArrow} />
+        </Link>
         <div className="postWrapper">
           <div className="postHeader container-fluid">
             <div className="postHeroContent">

@@ -200,8 +200,8 @@
 }
 
 @media (max-width: 1366px) {
-  .scrollIndicator {
-    left: 0;
+  .addCultureHeroContent .addCultureText {
+    margin-left: 50px;
   }
   .addCultureHeroContent .whoWeAre {
     font-size: 16px;
@@ -223,9 +223,9 @@
     bottom: -1.8em;
     left: -2.8em;
   }
-  .addCultureText {
-    margin-top: 13%;
-    margin-left: 5%;
+  .addCultureHeroContent .addCultureText {
+    margin-top: 8%;
+    margin-left: 40px;
   }
   .addCultureHeroContent .whoWeAre {
     font-size: 18px;
@@ -252,9 +252,9 @@
     left: 0%;
   }
 
-  .addCultureText {
-    margin-left: 13%;
-    margin-top: 12%;
+  .addCultureHeroContent .addCultureText {
+    margin-left: initial;
+    margin-top: 16%;
   }
   .addCultureHeroContent .whoWeAre {
     margin-top: 0;

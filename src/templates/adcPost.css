@@ -6,6 +6,18 @@
   color: #222220 !important;
 }
 
+.goBack {
+  position: absolute;
+  top: 20%;
+  left: 8%;
+  z-index: 10;
+}
+
+.goBack img {
+  width: 30px;
+  height: auto;
+}
+
 .postWrapper {
   background: #222220;
   transition: all 1s ease-in-out;

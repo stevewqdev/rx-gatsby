@@ -8,6 +8,7 @@ import Header from "../components/addCulture/header"
 import CategoryCircle from "../images/addCulture/categories/categoryCircle.svg"
 import CategoryLine from "../images/addCulture/categories/categoryLine.svg"
 import ScrollIndicatorDark from "../images/addCulture/scrollIndicatorDark.svg"
+import BackArrow from "../images/addCulture/backArrowDark.png"
 
 import "./category.css"
 import "./why.css"
@@ -110,6 +111,9 @@ export default class Why extends Component {
         <ScrollIndicatorDark tabIndex="0" alt="scroll" className="scrollIcon" />
         <div className="main__section__wrapper blog__page">
           <Header />
+          <Link className="goBack" to="/addculture">
+            <img src={BackArrow} />
+          </Link>
           <div className="categoryHero whyBanner">
             <div className="heroContainer">
               <CategoryCircle

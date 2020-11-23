@@ -8,6 +8,7 @@ import Header from "../components/addCulture/header"
 import CategoryCircle from "../images/addCulture/categories/categoryCircle.svg"
 import CategoryLine from "../images/addCulture/categories/categoryLine.svg"
 import ScrollIndicatorDark from "../images/addCulture/scrollIndicatorDark.svg"
+import BackArrow from "../images/addCulture/backArrowDark.png"
 
 import "./category.css"
 import "./minority.css"
@@ -127,6 +128,9 @@ export default class Minority extends Component {
             alt="scroll"
             className="scrollIcon"
           />
+          <Link className="goBack" to="/addculture">
+            <img src={BackArrow} />
+          </Link>
           <div className="categoryHero minority">
             <div className="heroContainer">
               <CategoryCircle

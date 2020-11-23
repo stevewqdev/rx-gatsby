@@ -117,14 +117,14 @@
   }
 
   .brand__logo {
-    width: 80%;
+    width: 70%;
   }
 }
 
 @media (max-width: 1280px) {
-  .brand__logo {
+  /* .brand__logo {
     width: 73%;
-  }
+  } */
 }
 
 @media (max-width: 1024px) {
