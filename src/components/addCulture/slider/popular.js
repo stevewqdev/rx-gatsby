@@ -52,6 +52,7 @@ export default class PopularSlider extends Component {
       className: "popularSlider",
       slidesToShow: 3,
       slidesToScroll: 1,
+      swipeToSlide: true,
       nextArrow: <img src={NextArrow} tabIndex="0" alt="Next post" />,
       prevArrow: <img src={PrevArrow} tabIndex="0" alt="Previous post" />,
       onInit: function showData() {

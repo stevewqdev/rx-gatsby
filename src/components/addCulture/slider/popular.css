@@ -67,18 +67,13 @@
   left: 50%;
 }
 
-/* .popularSlider .slick-track {
-  max-width: 100% !important;
-} */
-
 .popularSlider .slick-slide {
   padding: 0 5px;
 }
 
-/* .popularSlider .slick-slide .gatsby-image-wrapper {
-  width: 137px;
-  height: 145px;
-} */
+.popularSlider .slick-slide .gatsby-image-wrapper {
+  height: 120px;
+}
 
 .popularSlider .slick-slide .content {
   display: none;

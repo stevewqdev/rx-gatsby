@@ -394,18 +394,18 @@ export default class Filter extends Component {
                 <p>Filter by:</p>
                 <ul>
                   <li>
-                    <a className="all blog__active" onClick={this.formatData}>
+                    <p className="all blog__active" onClick={this.formatData}>
                       All
-                    </a>
+                    </p>
                   </li>
                   <li>
-                    <a onClick={this.filterNewestPosts}>Newest</a>
+                    <p onClick={this.filterNewestPosts}>Newest</p>
                   </li>
                   <li>
-                    <a onClick={this.filterPopularPosts}>Popular</a>
+                    <p onClick={this.filterPopularPosts}>Popular</p>
                   </li>
                   <li>
-                    <a onClick={this.filterFeaturedPosts}>Featured</a>
+                    <p onClick={this.filterFeaturedPosts}>Featured</p>
                   </li>
                 </ul>
               </div>

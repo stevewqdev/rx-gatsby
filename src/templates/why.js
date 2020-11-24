@@ -112,7 +112,7 @@ export default class Why extends Component {
         <div className="main__section__wrapper blog__page">
           <Header />
           <Link className="goBack" to="/addculture">
-            <img src={BackArrow} />
+            <img alt="go back" src={BackArrow} />
           </Link>
           <div className="categoryHero whyBanner">
             <div className="heroContainer">

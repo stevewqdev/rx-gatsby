@@ -129,7 +129,7 @@ export default class Minority extends Component {
             className="scrollIcon"
           />
           <Link className="goBack" to="/addculture">
-            <img src={BackArrow} />
+            <img alt="go back" src={BackArrow} />
           </Link>
           <div className="categoryHero minority">
             <div className="heroContainer">

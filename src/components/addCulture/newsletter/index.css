@@ -2,6 +2,14 @@
   width: 100%;
 }
 
+.form__messages .form__message {
+  font-family: "HelveticaNeue", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  font-style: normal;
+  color: #800000 !important;
+}
+
 .inputText {
   font-weight: bold;
   font-size: 16px;

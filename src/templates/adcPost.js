@@ -63,22 +63,6 @@ export default class AddCulturePost extends Component {
       "#FFC6C6"
   }
 
-  navbarChange() {
-    document.querySelector(".navbar").style.background = "#222220"
-    document.querySelector(
-      ".navbarMenuBurger .menuBurgerLineOne"
-    ).style.background = "#fcc6c6"
-    document.querySelector(
-      ".navbarMenuBurger .menuBurgerLineTwo"
-    ).style.background = "#fcc6c6"
-    document.querySelector(".brand__logo h1").style.color = "#FFC6C6"
-    document.querySelector(".storiesLink a").style.color = "#FFC6C6"
-    document.querySelectorAll(".storiesLink a svg g path")[0].style.fill =
-      "#FFC6C6"
-    document.querySelectorAll(".storiesLink a svg g path")[1].style.fill =
-      "#FFC6C6"
-  }
-
   lightNavbar() {
     document.querySelector(".navbar").style.background = "#e5e5e5"
     document.querySelector(
@@ -209,7 +193,7 @@ export default class AddCulturePost extends Component {
         <Header />
         <ScrollIndicator tabIndex="0" alt="scroll" className="scrollIcon" />
         <Link className="goBack" to="/addculture">
-          <img src={BackArrow} />
+          <img alt="go back" src={BackArrow} />
         </Link>
         <div className="postWrapper">
           <div className="postHeader container-fluid">
@@ -282,6 +266,7 @@ export default class AddCulturePost extends Component {
                         className="socialLink"
                         href={`https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.raxo.co%2Faddculture%2Fpost%2F${this.state.post.slug}`}
                         target="_blank"
+                        rel="noreferrer"
                       >
                         <TwitterIcon tabIndex="0" alt="Twitter" />
                       </a>
@@ -290,6 +275,7 @@ export default class AddCulturePost extends Component {
                         onMouseLeave={this.removeHover}
                         className="socialLink"
                         target="_blank"
+                        rel="noreferrer"
                         href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fraxo.co%2Faddculture%2Fpost%2F${this.state.post.slug}`}
                       >
                         <FacebookIcon tabIndex="0" alt="Facebook" />
@@ -300,6 +286,7 @@ export default class AddCulturePost extends Component {
                         className="socialLink"
                         href={`https://www.linkedin.com/sharing/share-offsite/?url=https://raxo.co/addculture/post/${this.state.post.slug}`}
                         target="_blank"
+                        rel="noreferrer"
                       >
                         <LinkedInIcon tabIndex="0" alt="LinkedIn" />
                       </a>
@@ -330,7 +317,7 @@ export default class AddCulturePost extends Component {
                         <div className="postTagsContainer">
                           {this.state.post.tags.map(tag => (
                             <Link
-                              to={`/addculture/filter?${tag.slug}`}
+                              to={`/addculture/search?${tag.slug}`}
                               className="postTag"
                             >
                               {tag.name}

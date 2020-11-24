@@ -126,7 +126,7 @@ export default class Representation extends Component {
         <div className="main__section__wrapper blog__page">
           <Header />
           <Link className="goBack" to="/addculture">
-            <img src={BackArrow} />
+            <img alt="go back" src={BackArrow} />
           </Link>
           <div className="categoryHero representationBanner">
             <div className="heroContainer">

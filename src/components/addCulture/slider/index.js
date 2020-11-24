@@ -47,6 +47,7 @@ export default class AddCultureSlider extends React.Component {
       centerMode: false,
       className: "featuredSlider",
       slidesToShow: 1,
+      swipeToSlide: true,
       nextArrow: <img src={NextArrow} alt="Next post" />,
       prevArrow: <img src={PrevArrow} alt="Previous post" />,
       onInit: function addClasses() {

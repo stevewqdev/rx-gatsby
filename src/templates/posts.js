@@ -246,7 +246,7 @@ export default class PostsIndex extends Component {
     this.formatCategories(slice)
     const postData = slice.map(({ node }, i) => (
       <React.Fragment>
-        <Link to={`/addculture/post/${node.slug}`}>
+        <a href={`/addculture/post/${node.slug}`}>
           <div
             data-aos="fade-up"
             data-duration="4000"
@@ -254,27 +254,12 @@ export default class PostsIndex extends Component {
           >
             <div className="contentContainer">
               <div className="catAndDateContainer">
-                <Link
-                  to={`/addculture/${node.categories[0].slug.toLowerCase()}`}
+                <a
+                  href={`/addculture/${node.categories[0].slug.toLowerCase()}`}
                   className="postCategory"
                 >
                   {node.categories[0].name}
-                </Link>
-                {/* {node.categories[1] === "Featured" ? (
-                  <Link
-                    to={`/post/${node.categories[0].slug.toLowerCase()}`}
-                    className="postCategory"
-                  >
-                    {node.categories[0].name}
-                  </Link>
-                ) : (
-                  <Link
-                    to={`/post/${node.categories[1].slug.toLowerCase()}`}
-                    className="postCategory"
-                  >
-                    {node.categories[1].name}
-                  </Link>
-                )} */}
+                </a>
                 <p className="postDate">{node.date}</p>
               </div>
               <h2 className="postTitle">{node.title}</h2>
@@ -288,7 +273,7 @@ export default class PostsIndex extends Component {
               ""
             )}
           </div>
-        </Link>
+        </a>
       </React.Fragment>
     ))
 
@@ -300,7 +285,6 @@ export default class PostsIndex extends Component {
 
   handlePageClick = e => {
     const selectedPage = e.selected
-    console.log(this.state.perPage)
     const offset = selectedPage * this.state.perPage
 
     this.setState(
@@ -320,14 +304,9 @@ export default class PostsIndex extends Component {
       node.categories.forEach(category => {
         if (category.name === "Popular") {
           popular.push(node)
-          return this.setState(
-            {
-              popular: popular,
-            },
-            function() {
-              console.log(popular)
-            }
-          )
+          return this.setState({
+            popular: popular,
+          })
         }
       })
     })
