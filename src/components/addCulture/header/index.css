@@ -75,6 +75,7 @@
   position: relative;
   padding: 10% 5%;
   font-family: "ITC Avant Garde Pro Md", sans-serif;
+  display: none;
 }
 
 .categoriesNavMenu .categorySelector {
