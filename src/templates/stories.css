@@ -4,3 +4,15 @@
   background-position: center left;
   background-repeat: no-repeat;
 }
+
+@media (max-width: 4000px) {
+  .storiesBanner {
+    background-size: 1930px;
+  }
+}
+
+@media (max-width: 2560px) {
+  .storiesBanner {
+    background-size: 1700px;
+  }
+}
