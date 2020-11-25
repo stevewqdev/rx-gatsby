@@ -181,7 +181,7 @@
     width: 700px;
   }
   .categoryPosts .adcSinglePost.post-1 .gatsby-image-wrapper {
-    width: 170%;
+    width: 75%;
   }
 }
 
@@ -213,12 +213,20 @@
 
 @media (max-width: 1280px) {
   .categoryHero {
-    margin-left: 11%;
+    margin-left: 13%;
     height: 60vh;
   }
 
   .categoryPosts {
     margin: 0 12%;
+  }
+
+  .categoryPosts .adcSinglePost {
+    width: 180px;
+  }
+
+  .categoryPosts .adcSinglePost.post-1 {
+    width: 550px;
   }
 }
 
@@ -289,11 +297,11 @@
   }
 
   .categoryPosts .adcSinglePost {
-    width: initial;
+    width: 450px;
   }
 
   .categoryPosts .adcSinglePost.post-1 {
-    width: initial;
+    width: 450px;
   }
 }
 
@@ -301,8 +309,45 @@
   .heroContainer {
     text-align: center;
   }
+  .categoryPosts .adcSinglePost {
+    width: 350px;
+  }
+
+  .categoryPosts .adcSinglePost.post-1 {
+    width: 350px;
+  }
 
   .categoryCircle {
     display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .categoryPosts .adcSinglePost {
+    width: 320px;
+  }
+
+  .categoryPosts .adcSinglePost.post-1 {
+    width: 320px;
+  }
+}
+
+@media (max-width: 320px) {
+  .categoryPosts .adcSinglePost {
+    width: 280px;
+  }
+
+  .categoryPosts .adcSinglePost.post-1 {
+    width: 280px;
+  }
+}
+
+@media (max-width: 280px) {
+  .categoryPosts .adcSinglePost {
+    width: 250px;
+  }
+
+  .categoryPosts .adcSinglePost.post-1 {
+    width: 250px;
   }
 }
