@@ -177,10 +177,28 @@ export default class AddCulturePost extends Component {
     )
   }
 
+  getFeatured() {
+    const featured = []
+    this.state.featuredPosts.map(({ node }) => {
+      if (node.acf.featured === true) {
+        featured.push(node)
+        this.setState(
+          {
+            featuredPosts: featured,
+          },
+          function() {
+            console.log(this.state.featuredPosts)
+          }
+        )
+      }
+    })
+  }
+
   componentDidMount() {
     this.navbarChange()
     this.bgChange()
     this.formatCategories()
+    this.getFeatured()
   }
   render() {
     return (
@@ -195,15 +213,8 @@ export default class AddCulturePost extends Component {
             <div className="postHeroContent">
               <div className="categoryContainer">
                 <HeroLine tabIndex="0" alt="line" className="heroLine" />
-                {this.state.post.categories !== null ? (
-                  this.state.post.categories[0].name === "Featured" ? (
-                    <p>{this.state.post.categories[1].name}</p>
-                  ) : (
-                    <p>{this.state.post.categories[0].name}</p>
-                  )
-                ) : (
-                  ""
-                )}
+
+                <p>{this.state.post.categories[0].name}</p>
               </div>
               <p className="postHeroDate">{this.state.post.date}—</p>
               <h1 className="postHeroTitle">{this.state.post.title}</h1>
@@ -350,19 +361,12 @@ export default class AddCulturePost extends Component {
                       <div className={`adcSinglePost post-${i}`}>
                         <div className="contentContainer">
                           <div className="catAndDateContainer">
-                            {node.categories.map(category =>
-                              category.wordpress_id !== 32 &&
-                              category.wordpress_id !== 30 ? (
-                                <Link
-                                  to={`/addculture/${category.slug.toLowerCase()}`}
-                                  className="postCategory"
-                                >
-                                  {category.name}
-                                </Link>
-                              ) : (
-                                ""
-                              )
-                            )}
+                            <Link
+                              to={`/addculture/${node.categories[0].slug.toLowerCase()}`}
+                              className="postCategory"
+                            >
+                              {node.categories[0].name}
+                            </Link>
                             <p className="postDate">{node.date}</p>
                           </div>
                           <h2 className="postTitle">{node.title}</h2>
@@ -434,15 +438,16 @@ export const postQuery = graphql`
         slug
       }
     }
-    allWordpressWpAddcultureposts(
-      filter: { categories: { elemMatch: { slug: { eq: "featured" } } } }
-    ) {
+    allWordpressWpAddcultureposts {
       edges {
         node {
           id
           title
           slug
           date(formatString: "MM.DD.YY")
+          acf {
+            featured
+          }
           categories {
             name
             slug

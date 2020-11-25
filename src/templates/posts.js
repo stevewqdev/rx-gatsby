@@ -254,19 +254,12 @@ export default class PostsIndex extends Component {
           >
             <div className="contentContainer">
               <div className="catAndDateContainer">
-                {node.categories.map(category =>
-                  category.wordpress_id !== 32 &&
-                  category.wordpress_id !== 30 ? (
-                    <Link
-                      to={`/addculture/${category.slug.toLowerCase()}`}
-                      className="postCategory"
-                    >
-                      {category.name}
-                    </Link>
-                  ) : (
-                    ""
-                  )
-                )}
+                <Link
+                  to={`/addculture/${node.categories[0].slug.toLowerCase()}`}
+                  className="postCategory"
+                >
+                  {node.categories[0].name}
+                </Link>
                 <p className="postDate">{node.date}</p>
               </div>
               <h2 className="postTitle">{node.title}</h2>
@@ -308,14 +301,12 @@ export default class PostsIndex extends Component {
   getPopular() {
     const popular = []
     this.state.posts.forEach(({ node }) => {
-      node.categories.forEach(category => {
-        if (category.name === "Popular") {
-          popular.push(node)
-          return this.setState({
-            popular: popular,
-          })
-        }
-      })
+      if (node.acf.popular === true) {
+        popular.push(node)
+        return this.setState({
+          popular: popular,
+        })
+      }
     })
   }
 
@@ -583,6 +574,10 @@ export const blogQuery = graphql`
             name
             slug
             wordpress_id
+          }
+          acf {
+            featured
+            popular
           }
           featured_media {
             id

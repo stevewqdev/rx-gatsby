@@ -19,14 +19,12 @@ export default class AddCultureSlider extends React.Component {
   getFeatured() {
     const featured = []
     this.props.featured.map(({ node }) => {
-      return node.categories.map(category => {
-        if (category.name === "Featured") {
-          featured.push(node)
-          return this.setState({
-            featured: featured,
-          })
-        }
-      })
+      if (node.acf.featured === true) {
+        featured.push(node)
+        this.setState({
+          featured: featured,
+        })
+      }
     })
   }
 
@@ -119,14 +117,7 @@ export default class AddCultureSlider extends React.Component {
                 className="featuredPreview"
               >
                 <div className="catAndDate">
-                  {post.categories.map(category =>
-                    category.wordpress_id !== 32 &&
-                    category.wordpress_id !== 30 ? (
-                      <p className="featuredCat">{category.name}</p>
-                    ) : (
-                      ""
-                    )
-                  )}
+                  <p className="featuredCat">{post.categories[0].name}</p>
                   <p className="featuredDate">{post.date}</p>
                 </div>
                 <h1 className="titleText">{post.title}</h1>

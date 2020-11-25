@@ -50,22 +50,12 @@ export default class Stories extends Component {
           <div className={`adcSinglePost post-${i}`}>
             <div className="contentContainer">
               <div className="catAndDateContainer">
-                {node.categories[0].name === "Popular" ||
-                node.categories[0].name === "Featured" ? (
-                  <Link
-                    to={`/addculture/${node.categories[1].slug.toLowerCase()}`}
-                    className="postCategory"
-                  >
-                    {node.categories[1].name}
-                  </Link>
-                ) : (
-                  <Link
-                    to={`/addculture/${node.categories[0].slug.toLowerCase()}`}
-                    className="postCategory"
-                  >
-                    {node.categories[0].name}
-                  </Link>
-                )}
+                <Link
+                  to={`/addculture/${node.categories[0].slug.toLowerCase()}`}
+                  className="postCategory"
+                >
+                  {node.categories[0].name}
+                </Link>
                 <p className="postDate">{node.date}</p>
               </div>
               <h2 className="postTitle">{node.title}</h2>

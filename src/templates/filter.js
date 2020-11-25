@@ -28,22 +28,6 @@ export default class Filter extends Component {
     this.formatData = this.formatData.bind(this)
   }
 
-  // formatCategories(arr) {
-  //   arr.forEach(({ node }) => {
-  //     node.categories.forEach(category => {
-  //       if (category.name === "Minority Owned Agencies") {
-  //         category.name = "Min. Agencies"
-  //       } else if (category.name === "Representation Done Right") {
-  //         category.name = 'Rep. Done Right'
-  //       } else if (category.name === 'Ad+d Culture Stories') {
-  //         category.name = 'Stories'
-  //       } else if (category.name === 'Why Ad+d Culture') {
-  //         category.name = 'Culture'
-  //       }
-  //     })
-  //   })
-  // }
-
   formatData() {
     this.removeActiveClass()
     document.querySelector(".all").classList.add("blog__active")
@@ -81,22 +65,13 @@ export default class Filter extends Component {
           <div className={`adcSinglePost`}>
             <div className="contentContainer">
               <div className="catAndDateContainer">
-                {post.categories[0].name === "Popular" ||
-                post.categories[0].name === "Featured" ? (
-                  <Link
-                    to={`/addculture/${post.categories[1].slug.toLowerCase()}`}
-                    className="postCategory"
-                  >
-                    {post.categories[1].name}
-                  </Link>
-                ) : (
-                  <Link
-                    to={`/addculture/${post.categories[0].slug.toLowerCase()}`}
-                    className="postCategory"
-                  >
-                    {post.categories[0].name}
-                  </Link>
-                )}
+                <Link
+                  to={`/addculture/${post.categories[0].slug.toLowerCase()}`}
+                  className="postCategory"
+                >
+                  {post.categories[0].name}
+                </Link>
+
                 <p className="postDate">{post.date}</p>
               </div>
               <h2 className="postTitle">{post.title}</h2>
@@ -172,22 +147,12 @@ export default class Filter extends Component {
               <div className={`adcSinglePost`}>
                 <div className="contentContainer">
                   <div className="catAndDateContainer">
-                    {post.categories[0].name === "Popular" ||
-                    post.categories[0].name === "Featured" ? (
-                      <Link
-                        to={`/addculture/${post.categories[1].slug.toLowerCase()}`}
-                        className="postCategory"
-                      >
-                        {post.categories[1].name}
-                      </Link>
-                    ) : (
-                      <Link
-                        to={`/addculture/${post.categories[0].slug.toLowerCase()}`}
-                        className="postCategory"
-                      >
-                        {post.categories[0].name}
-                      </Link>
-                    )}
+                    <Link
+                      to={`/addculture/${post.categories[0].slug.toLowerCase()}`}
+                      className="postCategory"
+                    >
+                      {post.categories[0].name}
+                    </Link>
                     <p className="postDate">{post.date}</p>
                   </div>
                   <h2 className="postTitle">{post.title}</h2>
@@ -226,11 +191,9 @@ export default class Filter extends Component {
       this.state.allPosts.forEach(({ node }) => {
         node.tags.forEach(tag => {
           if (tag.name === search) {
-            node.categories.forEach(cat => {
-              if (cat.name === "Featured") {
-                featured.push(node)
-              }
-            })
+            if (node.acf.featured === true) {
+              featured.push(node)
+            }
           }
         })
       })
@@ -248,22 +211,12 @@ export default class Filter extends Component {
               <div className={`adcSinglePost`}>
                 <div className="contentContainer">
                   <div className="catAndDateContainer">
-                    {post.categories[0].name === "Popular" ||
-                    post.categories[0].name === "Featured" ? (
-                      <Link
-                        to={`/addculture/${post.categories[1].slug.toLowerCase()}`}
-                        className="postCategory"
-                      >
-                        {post.categories[1].name}
-                      </Link>
-                    ) : (
-                      <Link
-                        to={`/addculture/${post.categories[0].slug.toLowerCase()}`}
-                        className="postCategory"
-                      >
-                        {post.categories[0].name}
-                      </Link>
-                    )}
+                    <Link
+                      to={`/addculture/${post.categories[0].slug.toLowerCase()}`}
+                      className="postCategory"
+                    >
+                      {post.categories[0].name}
+                    </Link>
                     <p className="postDate">{post.date}</p>
                   </div>
                   <h2 className="postTitle">{post.title}</h2>
@@ -302,11 +255,9 @@ export default class Filter extends Component {
       this.state.allPosts.forEach(({ node }) => {
         node.tags.forEach(tag => {
           if (tag.name === search) {
-            node.categories.forEach(cat => {
-              if (cat.name === "Popular") {
-                popular.push(node)
-              }
-            })
+            if (node.acf.popular === true) {
+              popular.push(node)
+            }
           }
         })
       })
@@ -324,22 +275,12 @@ export default class Filter extends Component {
               <div className={`adcSinglePost`}>
                 <div className="contentContainer">
                   <div className="catAndDateContainer">
-                    {post.categories[0].name === "Popular" ||
-                    post.categories[0].name === "Featured" ? (
-                      <Link
-                        to={`/addculture/${post.categories[1].slug.toLowerCase()}`}
-                        className="postCategory"
-                      >
-                        {post.categories[1].name}
-                      </Link>
-                    ) : (
-                      <Link
-                        to={`/addculture/${post.categories[0].slug.toLowerCase()}`}
-                        className="postCategory"
-                      >
-                        {post.categories[0].name}
-                      </Link>
-                    )}
+                    <Link
+                      to={`/addculture/${post.categories[0].slug.toLowerCase()}`}
+                      className="postCategory"
+                    >
+                      {post.categories[0].name}
+                    </Link>
                     <p className="postDate">{post.date}</p>
                   </div>
                   <h2 className="postTitle">{post.title}</h2>

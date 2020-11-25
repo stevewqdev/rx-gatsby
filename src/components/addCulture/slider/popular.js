@@ -11,29 +11,9 @@ export default class PopularSlider extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      // popular: [],
       render: false,
     }
   }
-
-  // getPopular() {
-  //   const popular = []
-  //   this.props.popular.forEach(({ node }) => {
-  //     node.categories.forEach(category => {
-  //       if (category.name === "Popular") {
-  //         popular.push(node)
-  //         return this.setState(
-  //           {
-  //             popular: popular,
-  //           },
-  //           function() {
-  //             console.log(popular)
-  //           }
-  //         )
-  //       }
-  //     })
-  //   })
-  // }
 
   componentDidMount() {
     this.setState({
@@ -135,16 +115,9 @@ export default class PopularSlider extends Component {
               />
               <div className="content">
                 <div className="catAndDate">
-                  {post.categories.map(category =>
-                    category.wordpress_id !== 32 &&
-                    category.wordpress_id !== 30 ? (
-                      <p id="category" className="popularCat">
-                        {category.name}
-                      </p>
-                    ) : (
-                      ""
-                    )
-                  )}
+                  <p id="category" className="popularCat">
+                    {post.categories[0].name}
+                  </p>
                   <p id="date" className="popularDate">
                     {post.date}
                   </p>

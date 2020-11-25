@@ -10,6 +10,10 @@ module.exports = `
           slug
           date(formatString: "MM.DD.YYYY")
           content
+          acf {
+            featured
+            popular
+          }
           categories {
             name
             slug
