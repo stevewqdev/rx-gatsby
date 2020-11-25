@@ -183,6 +183,9 @@
     bottom: -2em;
     width: 147px;
   }
+  .addCultureText {
+    margin-top: 8%;
+  }
   .addCultureHeroContent .whoWeAre {
     font-size: 14px;
     line-height: 14px;

@@ -177,28 +177,28 @@ export default class AddCulturePost extends Component {
     )
   }
 
-  getFeatured() {
-    const featured = []
-    this.state.featuredPosts.map(({ node }) => {
-      if (node.acf.featured === true) {
-        featured.push(node)
-        this.setState(
-          {
-            featuredPosts: featured,
-          },
-          function() {
-            console.log(this.state.featuredPosts)
-          }
-        )
-      }
-    })
-  }
+  // getFeatured() {
+  //   const featured = []
+  //   this.state.featuredPosts.map(({ node }) => {
+  //     if (node.acf.featured === true) {
+  //       featured.push(node)
+  //       this.setState(
+  //         {
+  //           featuredPosts: featured,
+  //         },
+  //         function() {
+  //           console.log(this.state.featuredPosts)
+  //         }
+  //       )
+  //     }
+  //   })
+  // }
 
   componentDidMount() {
     this.navbarChange()
     this.bgChange()
     this.formatCategories()
-    this.getFeatured()
+    // this.getFeatured()
   }
   render() {
     return (

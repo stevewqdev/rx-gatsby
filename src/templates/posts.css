@@ -992,11 +992,11 @@ a {
     top: 0;
   }
   .postsGrid .adcSinglePost {
-    width: 300px;
+    width: 400px;
   }
 
   .postsGrid .adcSinglePost.post-0 {
-    width: 300px;
+    width: 400px;
   }
   .adcSinglePost.post-0 .gatsby-image-wrapper {
     width: 100%;
@@ -1010,6 +1010,7 @@ a {
     position: relative;
     text-align: center;
     left: initial;
+    top: -50px;
   }
 
   .blogIdentity .identityHeading {

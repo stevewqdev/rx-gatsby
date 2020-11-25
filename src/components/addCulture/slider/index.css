@@ -452,15 +452,15 @@
 
   .featuredSlider .slick-current .featuredImage {
     width: 100%;
-    margin-left: 5%;
+    margin-left: 0;
     height: auto;
   }
 
   .featuredSlider .slick-snext {
-    transform: translate3d(40%, 0, -100px);
+    transform: translate3d(40%, 0, -90px);
   }
   .featuredSlider .slick-sprev {
-    transform: translate3d(-40%, 0, -100px);
+    transform: translate3d(-42%, 0, -90px);
   }
   .featuredSlider .slick-current .featuredPreview {
     top: 170px;

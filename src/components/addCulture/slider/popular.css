@@ -327,9 +327,9 @@
   }
 
   #placeholderContainer .content {
-    top: 55vh;
+    top: 63vh;
     text-align: center;
-    left: initial;
+    left: 10vw;
   }
   #placeholderContainer .content .infoContainer {
     justify-content: space-between;
@@ -337,12 +337,16 @@
     width: 100%;
   }
 
+  .popularSlider .slick-slide .gatsby-image-wrapper {
+    height: initial;
+  }
+
   #placeholderContainer .content .postTitleText {
     width: 100%;
   }
   .popularSlider {
     left: 11%;
-    top: 150%;
+    top: 210%;
   }
 
   .popularSlider .slick-prev,
@@ -383,6 +387,10 @@
 
   .popularSlider .slick-next {
     right: -40px;
+  }
+  #placeholderContainer .content {
+    left: initial;
+    top: 55vh;
   }
 }
 
