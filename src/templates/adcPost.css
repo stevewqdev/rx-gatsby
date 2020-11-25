@@ -72,12 +72,11 @@
 }
 
 .postHeroDate {
-  position: absolute;
+  position: relative;
   z-index: 0;
   font-family: "Schnyder L";
   font-weight: 400;
   font-size: 90px;
-  top: 15%;
   left: 0;
 }
 
@@ -87,7 +86,6 @@
   font-weight: bold;
   font-size: 70px;
   line-height: 70px;
-  top: 14%;
   font-style: normal;
   text-transform: uppercase;
   width: 80%;
@@ -106,8 +104,6 @@
   top: -20%;
   width: 100%;
   max-width: 1000px;
-  /* width: 850px;
-  height: 600px; */
   pointer-events: none;
 }
 
@@ -374,7 +370,6 @@
   }
   .postHeroDate {
     font-size: 100px;
-    top: 25%;
     left: -5%;
   }
 
@@ -446,7 +441,6 @@
   }
   .postHeroDate {
     font-size: 100px;
-    top: 12%;
   }
 
   .bottomLine {
@@ -504,7 +498,6 @@
   }
   .postHeroDate {
     font-size: 80px;
-    top: 20%;
   }
   .postHeroImage .gatsby-image-wrapper {
     width: 1200px;
@@ -532,9 +525,6 @@
 }
 
 @media (max-width: 1600px) {
-  .postHeroContent {
-    left: 8%;
-  }
   .categoryContainer p {
     width: 100%;
     line-height: 20px;
@@ -542,7 +532,6 @@
   }
   .postHeroDate {
     font-size: 80px;
-    top: 18%;
   }
   .postHeroTitle {
     font-size: 80px;
@@ -597,7 +586,6 @@
   }
   .postHeroDate {
     font-size: 80px;
-    top: 16%;
   }
   .categoryContainer p {
     width: 50%;
@@ -645,7 +633,6 @@
   }
   .postHeroDate {
     font-size: 60px;
-    top: 28%;
   }
 
   .postContainer {
@@ -691,7 +678,6 @@
 @media (max-width: 1280px) {
   .postHeroDate {
     font-size: 60px;
-    top: 20%;
   }
 
   .postContainer {
