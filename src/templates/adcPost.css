@@ -1098,6 +1098,8 @@
   .postHeroContent {
     z-index: 10;
     top: 25vh;
+    margin: 0 auto;
+    left: 0;
   }
 
   .postHeroContent .postHeroTitle {
