@@ -254,12 +254,19 @@ export default class PostsIndex extends Component {
           >
             <div className="contentContainer">
               <div className="catAndDateContainer">
-                <a
-                  href={`/addculture/${node.categories[0].slug.toLowerCase()}`}
-                  className="postCategory"
-                >
-                  {node.categories[0].name}
-                </a>
+                {node.categories.map(category =>
+                  category.wordpress_id !== 32 &&
+                  category.wordpress_id !== 30 ? (
+                    <Link
+                      to={`/addculture/${category.slug.toLowerCase()}`}
+                      className="postCategory"
+                    >
+                      {category.name}
+                    </Link>
+                  ) : (
+                    ""
+                  )
+                )}
                 <p className="postDate">{node.date}</p>
               </div>
               <h2 className="postTitle">{node.title}</h2>
@@ -575,6 +582,7 @@ export const blogQuery = graphql`
           categories {
             name
             slug
+            wordpress_id
           }
           featured_media {
             id

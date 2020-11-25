@@ -328,7 +328,7 @@
 
 @media (max-width: 540px) {
   .filterWrapper {
-    padding: 30% 5%;
+    padding: 20% 0;
   }
 
   .filterPosts .adcSinglePost {
@@ -347,19 +347,26 @@
     width: 480px;
     justify-content: flex-end;
   }
-
+  .filterHeaderContainer p {
+    font-size: 20px;
+  }
   .filterHeaderContainer h1 {
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 30px;
+    line-height: 30px;
   }
 }
 
 @media (max-width: 480px) {
   .filterWrapper {
-    padding: 35% 5%;
+    padding: 35% 0;
+  }
+  .filterHeaderContainer h1 {
+    font-size: 22px;
+    line-height: 25px;
   }
   .filterHeaderContainer h1 > span {
-    left: 49%;
+    left: 0;
+    bottom: 1vh;
   }
   .filterPosts {
     flex-direction: column;
@@ -367,7 +374,7 @@
 
   .filterPosts .adcSinglePost {
     flex-direction: column;
-    width: 370px;
+    width: 350px;
   }
 
   .filterTerms ul {
@@ -385,9 +392,6 @@
 }
 
 @media (max-width: 375px) {
-  .filterHeaderContainer h1 > span {
-    left: 53%;
-  }
   .filterTerms {
     font-size: 15px;
   }
@@ -395,28 +399,26 @@
     width: 320px;
   }
   .filterPosts .adcSinglePost {
-    width: 340px;
+    width: 320px;
   }
 }
 
 @media (max-width: 360px) {
-  .filterHeaderContainer h1 > span {
-    left: 55%;
-  }
   .filterTerms ul {
-    width: 320px;
-  }
-  .filterPosts .adcSinglePost {
-    width: 320px;
+    width: 290px;
   }
 }
 
 @media (max-width: 320px) {
-  .filterWrapper {
+  /* .filterWrapper {
     padding: 45% 5%;
+  } */
+  .filterHeaderContainer h1 {
+    font-size: 18px;
   }
+
   .filterHeaderContainer h1 > span {
-    left: 62%;
+    font-size: 12px;
   }
   .filterTerms ul {
     width: 280px;
@@ -426,7 +428,7 @@
     font-size: 12px;
   }
   .filterPosts .adcSinglePost {
-    width: 280px;
+    width: 250px;
   }
 }
 

@@ -13,6 +13,7 @@ module.exports = `
           categories {
             name
             slug
+            wordpress_id
           }
           tags {
             id
@@ -52,4 +53,4 @@ module.exports = `
       }
     }
   }
-`;
+`

@@ -53,8 +53,8 @@ export default class PopularSlider extends Component {
       slidesToShow: 3,
       slidesToScroll: 1,
       swipeToSlide: true,
-      nextArrow: <img src={NextArrow} tabIndex="0" alt="Next post" />,
-      prevArrow: <img src={PrevArrow} tabIndex="0" alt="Previous post" />,
+      nextArrow: <img src={NextArrow} alt="Next post" />,
+      prevArrow: <img src={PrevArrow} alt="Previous post" />,
       onInit: function showData() {
         const posts = document.querySelectorAll(".popularSlider .slick-active")
 
@@ -136,8 +136,8 @@ export default class PopularSlider extends Component {
               <div className="content">
                 <div className="catAndDate">
                   {post.categories.map(category =>
-                    category.name !== "Featured" ||
-                    category.name !== "Popular" ? (
+                    category.wordpress_id !== 32 &&
+                    category.wordpress_id !== 30 ? (
                       <p id="category" className="popularCat">
                         {category.name}
                       </p>
@@ -152,10 +152,7 @@ export default class PopularSlider extends Component {
                 <h1 id="title" className="titleText">
                   {post.title}
                 </h1>
-                <Link
-                  className="postLink"
-                  to={`/add-culture/post/${post.slug}`}
-                >
+                <Link className="postLink" to={`/addculture/post/${post.slug}`}>
                   Link to post
                 </Link>
               </div>

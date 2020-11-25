@@ -32,7 +32,13 @@ export default class Filter extends Component {
   //   arr.forEach(({ node }) => {
   //     node.categories.forEach(category => {
   //       if (category.name === "Minority Owned Agencies") {
-  //         category.name = "Min. Owned Agencies"
+  //         category.name = "Min. Agencies"
+  //       } else if (category.name === "Representation Done Right") {
+  //         category.name = 'Rep. Done Right'
+  //       } else if (category.name === 'Ad+d Culture Stories') {
+  //         category.name = 'Stories'
+  //       } else if (category.name === 'Why Ad+d Culture') {
+  //         category.name = 'Culture'
   //       }
   //     })
   //   })

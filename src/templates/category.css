@@ -70,6 +70,7 @@
 .categoryPosts .adcSinglePost.post-1 .gatsby-image-wrapper {
   width: 100%;
   height: auto;
+  max-height: initial;
   margin-top: 15px;
 }
 
@@ -206,7 +207,7 @@
     width: 600px;
   }
   .categoryPosts .adcSinglePost.post-1 .gatsby-image-wrapper {
-    width: 190%;
+    width: 70%;
   }
 }
 

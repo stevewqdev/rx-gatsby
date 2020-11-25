@@ -119,11 +119,18 @@ export default class AddCultureSlider extends React.Component {
                 className="featuredPreview"
               >
                 <div className="catAndDate">
-                  <p className="featuredCat">{post.categories[0].name}</p>
+                  {post.categories.map(category =>
+                    category.wordpress_id !== 32 &&
+                    category.wordpress_id !== 30 ? (
+                      <p className="featuredCat">{category.name}</p>
+                    ) : (
+                      ""
+                    )
+                  )}
                   <p className="featuredDate">{post.date}</p>
                 </div>
                 <h1 className="titleText">{post.title}</h1>
-                <Link to={`/add-culture/post/${post.slug}`}>READ MORE+</Link>
+                <Link to={`/addculture/post/${post.slug}`}>READ MORE+</Link>
               </div>
             </div>
           ))}

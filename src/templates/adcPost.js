@@ -181,11 +181,6 @@ export default class AddCulturePost extends Component {
     this.navbarChange()
     this.bgChange()
     this.formatCategories()
-    console.log(this.state.post)
-  }
-
-  componentDidUpdate() {
-    document.getElementById("top").scrollIntoView()
   }
   render() {
     return (
@@ -355,20 +350,18 @@ export default class AddCulturePost extends Component {
                       <div className={`adcSinglePost post-${i}`}>
                         <div className="contentContainer">
                           <div className="catAndDateContainer">
-                            {node.categories[1] === "Featured" ? (
-                              <Link
-                                to={`/addculture/${node.categories[0].slug.toLowerCase()}`}
-                                className="postCategory"
-                              >
-                                {node.categories[0].name}
-                              </Link>
-                            ) : (
-                              <Link
-                                to={`/addculture/${node.categories[1].slug.toLowerCase()}`}
-                                className="postCategory"
-                              >
-                                {node.categories[1].name}
-                              </Link>
+                            {node.categories.map(category =>
+                              category.wordpress_id !== 32 &&
+                              category.wordpress_id !== 30 ? (
+                                <Link
+                                  to={`/addculture/${category.slug.toLowerCase()}`}
+                                  className="postCategory"
+                                >
+                                  {category.name}
+                                </Link>
+                              ) : (
+                                ""
+                              )
                             )}
                             <p className="postDate">{node.date}</p>
                           </div>
@@ -433,6 +426,7 @@ export const postQuery = graphql`
       categories {
         name
         slug
+        wordpress_id
       }
       tags {
         id
@@ -452,6 +446,7 @@ export const postQuery = graphql`
           categories {
             name
             slug
+            wordpress_id
           }
           featured_media {
             source_url
