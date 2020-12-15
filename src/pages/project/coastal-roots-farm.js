@@ -356,78 +356,78 @@ class CoastalRootFarm extends Component {
 }
 export default CoastalRootFarm
 
-// export const pageQuery = graphql`
-//   query CoastalRootFarm {
-//     allWordpressWpProjects(filter: { wordpress_id: { eq: 2005 } }) {
-//       edges {
-//         node {
-//           id
-//           title
-//           content
-//           acf {
-//             related_extra_copy
-//             related_project
-//             related_project_thumbnail {
-//               localFile {
-//                 childImageSharp {
-//                   fluid(maxWidth: 1300, quality: 80) {
-//                     ...GatsbyImageSharpFluid_withWebp
-//                   }
-//                 }
-//                 url
-//               }
-//             }
-//             related_project_url
-//             frontend_title
-//             client
-//             project_focus
-//             featured_image {
-//               localFile {
-//                 childImageSharp {
-//                   fluid(maxWidth: 1300, quality: 80) {
-//                     ...GatsbyImageSharpFluid_withWebp
-//                   }
-//                 }
-//                 url
-//               }
-//             }
-//             project_background
-//             coastal_roots_data {
-//               image {
-//                 localFile {
-//                   childImageSharp {
-//                     fluid(maxWidth: 1300, quality: 80) {
-//                       ...GatsbyImageSharpFluid_withWebp
-//                     }
-//                   }
-//                   url
-//                 }
-//               }
-//               copy
-//             }
-//             coastal_roots_about
-//             coastal_roots_data_section_two {
-//               image {
-//                 localFile {
-//                   childImageSharp {
-//                     fluid(maxWidth: 1300, quality: 80) {
-//                       ...GatsbyImageSharpFluid_withWebp
-//                     }
-//                   }
-//                   url
-//                 }
-//               }
-//               copy
-//             }
-//           }
+export const pageQuery = graphql`
+  query CoastalRootFarm {
+    allWordpressWpProjects(filter: { wordpress_id: { eq: 2005 } }) {
+      edges {
+        node {
+          id
+          title
+          content
+          acf {
+            related_extra_copy
+            related_project
+            related_project_thumbnail {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1300, quality: 80) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+                url
+              }
+            }
+            related_project_url
+            frontend_title
+            client
+            project_focus
+            featured_image {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1300, quality: 80) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+                url
+              }
+            }
+            project_background
+            coastal_roots_data {
+              image {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 1300, quality: 80) {
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                  url
+                }
+              }
+              copy
+            }
+            coastal_roots_about
+            coastal_roots_data_section_two {
+              image {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 1300, quality: 80) {
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                  url
+                }
+              }
+              copy
+            }
+          }
 
-//           yoast_meta {
-//             yoast_wpseo_canonical
-//             yoast_wpseo_metadesc
-//             yoast_wpseo_title
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+          yoast_meta {
+            yoast_wpseo_canonical
+            yoast_wpseo_metadesc
+            yoast_wpseo_title
+          }
+        }
+      }
+    }
+  }
+`
