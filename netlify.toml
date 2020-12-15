@@ -1,10 +1,4 @@
 [[redirects]]
-from = "/news"
-to = "/"
-status = 301
-force = false
-
-[[redirects]]
 from = "/work/reel"
 to = "/"
 status = 301

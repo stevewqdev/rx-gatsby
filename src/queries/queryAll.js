@@ -2,41 +2,44 @@
 
 module.exports = `
     {
-      allWordpressWpAddcultureposts {
-        edges {
-          node {
-            title
-            slug
-            date(formatString: "MM.DD.YY")
-            categories {
-              name
-              slug
-            }
-            featured_media {
+        allWordpressPost {
+          edges {
+            node {
               id
-              source_url
-              localFile {
-                id
-                childImageSharp {
-                  fluid(maxWidth: 1920) {
-                    base64
-                      aspectRatio
-                      src
-                      srcSet
-                      srcWebp
-                      srcSetWebp
-                      sizes
-                  }
-                }
+              slug
+              status
+              content
+              template
+              format
+              title
+              date(formatString: "MM.DD.YYYY")
+              link
+              categories {
+                slug
+                description
+                path
               }
-            }
-            yoast_meta {
-              yoast_wpseo_canonical
-              yoast_wpseo_title
-              yoast_wpseo_metadesc
+              featured_media{
+                source_url
+                alt_text
+                caption
+                description
+              }
+              author {
+                name
+                avatar_urls {
+                  wordpress_24
+                  wordpress_48
+                  wordpress_96
+                }
+                url
+                wordpress_id
+              }
+              acf {
+                template
+              }
             }
           }
         }
-      }
     }
 `
