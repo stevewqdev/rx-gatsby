@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet"
 import { Link } from "gatsby"
 import AOS from "aos"
 import Img from "gatsby-image"
-
+ 
 import "../layouts/pages/work.css"
 
 class ContactPage extends Component {

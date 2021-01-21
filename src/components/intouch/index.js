@@ -10,7 +10,7 @@ const GetInTouch = props => {
       wordpressAcfOptions {
         options {
           get_in_touch_copy
-        }
+        } 
       }
     }
   `)

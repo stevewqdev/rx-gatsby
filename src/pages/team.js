@@ -123,7 +123,7 @@ class Team extends Component {
                         onClick={this.toggleTeamMember}
                       >
                         <div className={`team__new__member__background`}>
-                          {member.photo ? (
+                          {member.photo.localFile ? (
                             <Img
                               fluid={
                                 member.photo.localFile.childImageSharp.fluid
@@ -179,7 +179,7 @@ class Team extends Component {
                         onClick={this.toggleTeamMember}
                       >
                         <div className={`team__new__member__background`}>
-                          {member.photo ? (
+                          {member.photo.localFile ? (
                             <Img
                               fluid={
                                 member.photo.localFile.childImageSharp.fluid
@@ -240,7 +240,7 @@ class Team extends Component {
                         onClick={this.toggleTeamMember}
                       >
                         <div className={`team__new__member__background`}>
-                          {member.photo ? (
+                          {member.photo.localFile ? (
                             <Img
                               fluid={
                                 member.photo.localFile.childImageSharp.fluid
@@ -301,7 +301,7 @@ class Team extends Component {
                         onClick={this.toggleTeamMember}
                       >
                         <div className={`team__new__member__background`}>
-                          {member.photo ? (
+                          {member.photo.localFile ? (
                             <Img
                               fluid={
                                 member.photo.localFile.childImageSharp.fluid
@@ -362,7 +362,7 @@ class Team extends Component {
                         onClick={this.toggleTeamMember}
                       >
                         <div className={`team__new__member__background`}>
-                          {member.photo ? (
+                          {member.photo.localFile ? (
                             <Img
                               fluid={
                                 member.photo.localFile.childImageSharp.fluid
@@ -422,7 +422,7 @@ class Team extends Component {
                         onClick={this.toggleTeamMember}
                       >
                         <div className={`team__new__member__background`}>
-                          {member.photo ? (
+                          {member.photo.localFile ? (
                             <Img
                               fluid={
                                 member.photo.localFile.childImageSharp.fluid
@@ -482,7 +482,7 @@ class Team extends Component {
                         onClick={this.toggleTeamMember}
                       >
                         <div className={`team__new__member__background`}>
-                          {member.photo ? (
+                          {member.photo.localFile ? (
                             <Img
                               fluid={
                                 member.photo.localFile.childImageSharp.fluid
@@ -542,7 +542,7 @@ class Team extends Component {
                         onClick={this.toggleTeamMember}
                       >
                         <div className={`team__new__member__background`}>
-                          {member.photo ? (
+                          {member.photo.localFile ? (
                             <Img
                               fluid={
                                 member.photo.localFile.childImageSharp.fluid
@@ -602,7 +602,7 @@ class Team extends Component {
                         onClick={this.toggleTeamMember}
                       >
                         <div className={`team__new__member__background`}>
-                          {member.photo ? (
+                          {member.photo.localFile ? (
                             <Img
                               fluid={
                                 member.photo.localFile.childImageSharp.fluid
