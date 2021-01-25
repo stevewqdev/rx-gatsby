@@ -65,3 +65,39 @@
 .news-card-footer .date-tags .tags {
   text-transform: uppercase;
 }
+
+@media (max-width: 4000px) {
+  .grid-container .news-card {
+    width: 600px;
+  }
+}
+
+@media (max-width: 1700px) {
+  .grid-container .news-card {
+    width: 520px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .grid-container .news-card {
+    width: 420px;
+  }
+}
+
+@media (max-width: 1100px) {
+  #filter p {
+    font-size: 10px;
+  }
+  .grid-container .news-card {
+    width: 320px;
+  }
+}
+
+@media (max-width: 825px) {
+  #filter p {
+    font-size: 8px;
+  }
+  .grid-container .news-card {
+    width: 100%;
+  }
+}
