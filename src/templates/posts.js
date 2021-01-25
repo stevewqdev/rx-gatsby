@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import Hero from "../components/hero"
 import "./post-grid.css"
+import "./posts.css"
 import Img from "gatsby-image"
 
 export default function News({ pageContext }) {
