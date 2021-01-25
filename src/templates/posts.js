@@ -20,7 +20,7 @@ export default function News({ pageContext }) {
         <title>RAXO ~ News</title>
         <link rel="canonical" href={"/news"} />
       </Helmet>
-      <Hero title="News" />
+      <Hero title="News" classes={"news__hero"} />
       <div className="main__section__wrapper blog__page">
         <div className="blog container__base container container__custom">
           <div className="row">
@@ -60,16 +60,18 @@ export default function News({ pageContext }) {
                       className="news-card-desc"
                       dangerouslySetInnerHTML={{ __html: node.excerpt }}
                     />
-                    <div className="news-card-footer">
-                      <div className="date-tags">
-                        <p className="date">{node.date}</p>
-                        {node.tags
-                          ? node.tags.map(tag => (
-                              <span className="tags"> #{tag.name}</span>
-                            ))
-                          : ""}
-                        <div className="go-to"></div>
-                      </div>
+                  </div>
+                  <div className="news-card-footer">
+                    <div className="date-tags">
+                      <p className="date">{node.date}</p>
+                      {node.tags
+                        ? node.tags.map(tag => (
+                            <span className="tags"> #{tag.name}</span>
+                          ))
+                        : ""}
+                    </div>
+                    <div className="go-to">
+                      <Link to="/">Visit →</Link>
                     </div>
                   </div>
                 </div>
