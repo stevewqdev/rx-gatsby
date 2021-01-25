@@ -34,16 +34,16 @@ exports.createPages = ({ graphql, actions }) => {
           pathPrefix: "news",
         })
 
-        // Loop through the posts
-        news.forEach(edge => {
-          createPage({
-            path: `/news/${edge.node.slug}/`,
-            component: slash(postTemplate),
-            context: {
-              id: edge.node.id,
-            },
-          })
-        })
+        // // Loop through the posts
+        // news.forEach(edge => {
+        //   createPage({
+        //     path: `/news/${edge.node.slug}/`,
+        //     component: slash(postTemplate),
+        //     context: {
+        //       id: edge.node.id,
+        //     },
+        //   })
+        // })
       })
     )
   })
