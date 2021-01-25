@@ -1,116 +1,67 @@
-.header__hero__full {
-  position: absolute !important;
-  top: 0px;
-  width: 100%;
-  height: 100%;
+.news__hero {
+  margin-top: -60px;
 }
-.internal__post .hero__first__subtitle {
-  position: relative;
-  top: 100px;
+
+#filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.hero__component {
-  position: relative !important;
-  margin-top: -100vh;
-  overflow: hidden;
+
+#filter p {
+  font-size: 12px;
+  color: #adadad;
+  font-family: "MarkPro-Book";
 }
-.post {
-  min-height: 100vh;
-  margin: 70px auto;
+
+#filter p.active {
+  color: #000;
+  font-size: 15px;
+  font-weight: bold;
+  border-bottom: 2.5px solid #000;
 }
-.post__content p {
-  margin: 30px 0;
+
+.grid-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.main__section__wrapper.post__wrapper {
-  padding-bottom: 80px;
+
+.grid-container .news-card {
+  width: 420px;
+  border-bottom: 2px solid #000;
+  padding-bottom: 10px;
+  margin: 20px 0;
 }
-.post__date p {
-  font-family: "Roboto" !important;
-  letter-spacing: 0.2px;
-  line-height: 22px;
+
+.grid-container .news-card .news-card-body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
-.post__content p {
-  font-family: "Roboto" !important;
-  letter-spacing: 0.2px;
-  line-height: 22px;
+
+.grid-container .news-card .news-card-desc {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
-.hero__component.template__default .separator {
-  margin-bottom: 0px;
+
+.news-card-body .news-card-title {
+  font-family: "MarkPro", sans-serif;
+  font-size: 40px;
+  margin-top: 15px;
 }
-.hero__component.template__default .hero__title {
-  margin-top: 13px;
+
+.news-card-footer .date-tags {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  color: #adadad;
+  font-weight: 500;
 }
-.hero__component.template__default {
-  min-height: auto;
-  padding-top: 170px;
-  background: #f4f4f4;
-  padding-bottom: 20px;
-}
-.hero__component.template__default .separator.--white {
-  background: black;
-}
-.hero__component.template__default h1 {
-  margin-top: 50px;
-  color: black;
-}
-.hero__component.template__default .hero__title {
-  color: black;
-}
-.hero__component.template__default .hero__title p:nth-child(2) {
-  margin-top: 5px;
-}
-.template__default.internal__post .header__hero__full {
-  display: none;
-}
-.template__default.internal__post .bottom__info {
-  display: none;
-}
-.template__default .post__content__wrapper {
-  position: relative;
-  top: -57px;
-  padding-left: 10px;
-}
-.template__default .row {
-  width: 100%;
-  margin: auto;
-}
-.template__default .post__thumbnail__caption {
-  margin-top: 20px;
-}
-@media (max-width: 500px) {
-  .hero__component {
-    margin-top: -107vh;
-  }
-  .template__default .post {
-    margin: 0px 0;
-    padding: 0 30px;
-  }
-  .template__default .post__content__wrapper {
-    position: relative;
-    top: 5px;
-    padding-left: 0px;
-    padding: 0;
-  }
-  .template__default .post__content__container {
-    padding: 0px;
-  }
-  .hero__component.template__default .hero__title {
-    padding: 0px;
-  }
-}
-@media (max-width: 920px) and (orientation: landscape) {
-  .post.container__custom {
-    max-width: 680px;
-  }
-  .hero__component.template__default .separator.full {
-    width: 100%;
-  }
-  .template__default.hero__title {
-    padding: 0px;
-  }
-  .hero__component.template__default .hero__title {
-    padding: 0px;
-  }
-  .internal__post .hero__first__subtitle {
-    top: 0px;
-  }
+
+.news-card-footer .date-tags .tags {
+  text-transform: uppercase;
 }

@@ -2,7 +2,7 @@
 
 module.exports = `
     {
-        allWordpressPost {
+        allWordpressWpNewsPost {
           edges {
             node {
               id
@@ -10,33 +10,33 @@ module.exports = `
               status
               content
               template
-              format
               title
-              date(formatString: "MM.DD.YYYY")
+              excerpt
+              date(formatString: "MMMM DD, YYYY")
               link
-              categories {
+              news_categories {
                 slug
-                description
-                path
-              }
-              featured_media{
-                source_url
-                alt_text
-                caption
-                description
-              }
-              author {
                 name
-                avatar_urls {
-                  wordpress_24
-                  wordpress_48
-                  wordpress_96
-                }
-                url
-                wordpress_id
               }
-              acf {
-                template
+              featured_media {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 600, quality: 80) {
+                      base64
+                      aspectRatio
+                      src
+                      srcSet
+                      srcWebp
+                      srcSetWebp
+                      sizes
+                    }
+                  }
+                }
+                source_url
+              }
+              tags {
+                name
+                slug
               }
             }
           }
