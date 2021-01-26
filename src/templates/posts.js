@@ -56,7 +56,7 @@ export default function News({ pageContext }) {
                   </div>
                   <div className="news-card-body">
                     <h1 className="news-card-title">{node.title}</h1>
-                    <p
+                    <div
                       className="news-card-desc"
                       dangerouslySetInnerHTML={{ __html: node.excerpt }}
                     />
