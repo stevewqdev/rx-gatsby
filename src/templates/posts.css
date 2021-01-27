@@ -12,11 +12,11 @@
   font-size: 12px;
   color: #adadad;
   font-family: "MarkPro-Book";
+  text-transform: uppercase;
 }
 
 #filter p.active {
   color: #000;
-  font-size: 15px;
   font-weight: bold;
   border-bottom: 2.5px solid #000;
 }
