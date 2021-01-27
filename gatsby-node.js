@@ -22,7 +22,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Posts detail
         // Here we retrieve all the posts
         const news = result.data.allWordpressWpNewsPost.edges
-
+        console.log(news)
         // And we paginate them
         createPaginatedPages({
           edges: news,
