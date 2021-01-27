@@ -38,6 +38,9 @@ module.exports = `
                 name
                 slug
               }
+              acf {
+                link
+              }
             }
           }
         }

@@ -35,8 +35,6 @@ export default class News extends Component {
   }
 
   showAll(e) {
-    // clear grid-container
-    // this.resetContent()
     // change activeClass
     this.removeActiveClass()
     // add active class
@@ -55,8 +53,6 @@ export default class News extends Component {
     const originalArray = this.props.pageContext.group
     const news = []
     const filter = e.target.getAttribute("id")
-    // clear grid-container
-    // this.resetContent()
     // change activeClass
     this.removeActiveClass()
     e.target.classList.add("active")
@@ -68,9 +64,6 @@ export default class News extends Component {
         })
       }
     })
-  }
-  componentDidMount() {
-    console.log(this.state.news)
   }
   render() {
     const { categories, news } = this.state
@@ -103,41 +96,44 @@ export default class News extends Component {
 
               <div id="news" className="mt-5 grid-container">
                 {news.map(({ node }) => (
-                  <div className="news-card">
-                    <div className="news-card-head">
-                      {node.featured_media ? (
-                        <Img
-                          fluid={
-                            node.featured_media.localFile.childImageSharp.fluid
-                          }
-                          alt={node.title}
-                          tabIndex={-1}
+                  <a href={node.acf.link}>
+                    <div className="news-card">
+                      <div className="news-card-head">
+                        {node.featured_media ? (
+                          <Img
+                            fluid={
+                              node.featured_media.localFile.childImageSharp
+                                .fluid
+                            }
+                            alt={node.title}
+                            tabIndex={-1}
+                          />
+                        ) : (
+                          ""
+                        )}
+                      </div>
+                      <div className="news-card-body">
+                        <h1 className="news-card-title">{node.title}</h1>
+                        <div
+                          className="news-card-desc"
+                          dangerouslySetInnerHTML={{ __html: node.excerpt }}
                         />
-                      ) : (
-                        ""
-                      )}
-                    </div>
-                    <div className="news-card-body">
-                      <h1 className="news-card-title">{node.title}</h1>
-                      <div
-                        className="news-card-desc"
-                        dangerouslySetInnerHTML={{ __html: node.excerpt }}
-                      />
-                    </div>
-                    <div className="news-card-footer">
-                      <div className="date-tags">
-                        <p className="date">{node.date}</p>
-                        {node.tags
-                          ? node.tags.map(tag => (
-                              <span className="tags"> #{tag.name}</span>
-                            ))
-                          : ""}
                       </div>
-                      <div className="go-to">
-                        <Link to="/">Visit →</Link>
+                      <div className="news-card-footer">
+                        <div className="date-tags">
+                          <p className="date">{node.date}</p>
+                          {node.tags
+                            ? node.tags.map(tag => (
+                                <span className="tags"> #{tag.name}</span>
+                              ))
+                            : ""}
+                        </div>
+                        <div className="go-to">
+                          <a href={node.acf.link}>Visit →</a>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
