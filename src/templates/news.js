@@ -96,7 +96,7 @@ export default class News extends Component {
 
               <div id="news" className="mt-5 grid-container">
                 {news.map(({ node }) => (
-                  <a href={node.acf.link}>
+                  <a target="_blank" href={node.acf.link}>
                     <div className="news-card">
                       <div className="news-card-head">
                         {node.featured_media ? (
@@ -129,7 +129,9 @@ export default class News extends Component {
                             : ""}
                         </div>
                         <div className="go-to">
-                          <a href={node.acf.link}>Visit →</a>
+                          <a target="_blank" href={node.acf.link}>
+                            Visit →
+                          </a>
                         </div>
                       </div>
                     </div>
