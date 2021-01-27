@@ -118,8 +118,13 @@
 }
 
 @media (max-width: 825px) {
+  #filter {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
   #filter p {
-    font-size: 8px;
+    font-size: 10px;
+    margin: 0 5px;
   }
   .grid-container .news-card {
     width: 100%;

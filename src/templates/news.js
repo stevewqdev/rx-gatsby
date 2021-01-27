@@ -77,7 +77,7 @@ export default class News extends Component {
     })
   }
   render() {
-    const { categories, news, loaded } = this.state
+    const { categories, news } = this.state
     return (
       <Layout>
         <Helmet>
