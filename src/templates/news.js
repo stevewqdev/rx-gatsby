@@ -3,16 +3,17 @@ import Layout from "../layouts/index"
 import { graphql, Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import Hero from "../components/hero"
-import "../templates/post-grid.css"
-import "../templates/posts.css"
+import "./post-grid.css"
+import "./posts.css"
 import Img from "gatsby-image"
 
 export default class News extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      news: this.props.data.allWordpressWpNewsPost.edges,
+      news: this.props.pageContext.group,
       categories: this.props.data.allWordpressWpNewsCategories.edges,
+      isLoaded: true,
     }
 
     this.filterCards = this.filterCards.bind(this)
@@ -42,16 +43,16 @@ export default class News extends Component {
     e.target.classList.add("active")
     this.setState(
       {
-        news: this.props.data.allWordpressWpNewsPost.edges,
+        news: this.props.pageContext.group,
       },
-      () => {
+      function() {
         console.log(this.state.news)
       }
     )
   }
 
   filterCards(e) {
-    const originalArray = this.props.data.allWordpressWpNewsPost.edges
+    const originalArray = this.props.pageContext.group
     const news = []
     const filter = e.target.getAttribute("id")
     // clear grid-container
@@ -59,18 +60,12 @@ export default class News extends Component {
     // change activeClass
     this.removeActiveClass()
     e.target.classList.add("active")
-    originalArray.forEach(({ node }) => {
-      if (node.news_categories[0].slug === filter) {
-        news.push(node)
-        console.log(news)
-        this.setState(
-          {
-            news: news,
-          },
-          () => {
-            console.log(this.state.news)
-          }
-        )
+    originalArray.forEach(post => {
+      if (post.node.news_categories[0].slug === filter) {
+        news.push(post)
+        this.setState({ news: news }, () => {
+          console.log(this.state.news)
+        })
       }
     })
   }
@@ -155,45 +150,6 @@ export default class News extends Component {
 
 export const pageQuery = graphql`
   query newsQuery {
-    allWordpressWpNewsPost {
-      edges {
-        node {
-          id
-          slug
-          status
-          content
-          template
-          title
-          excerpt
-          date(formatString: "MMMM DD, YYYY")
-          link
-          news_categories {
-            slug
-            name
-          }
-          featured_media {
-            localFile {
-              childImageSharp {
-                fluid(maxWidth: 600, quality: 80) {
-                  base64
-                  aspectRatio
-                  src
-                  srcSet
-                  srcWebp
-                  srcSetWebp
-                  sizes
-                }
-              }
-            }
-            source_url
-          }
-          tags {
-            name
-            slug
-          }
-        }
-      }
-    }
     allWordpressWpNewsCategories {
       edges {
         node {
