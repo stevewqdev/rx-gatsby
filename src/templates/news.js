@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import Layout from "../layouts/index"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Loading from "../components/loading"
 import { Helmet } from "react-helmet"
 import Hero from "../components/hero"
@@ -57,6 +57,7 @@ export default class News extends Component {
   }
 
   filterCards(e) {
+    document.querySelector(".footer").classList.add("footer_fixed")
     this.setState({ isLoaded: false }, () => console.log(this.state.isLoaded))
     const originalArray = this.props.pageContext.group
     const news = []

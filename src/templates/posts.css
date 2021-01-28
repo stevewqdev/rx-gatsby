@@ -2,6 +2,11 @@
   margin-top: -110px;
 }
 
+.footer_fixed {
+  position: fixed !important;
+  z-index: 8 !important;
+}
+
 #filter {
   display: flex;
   flex-direction: row;
