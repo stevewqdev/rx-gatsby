@@ -1,5 +1,22 @@
+@media (max-width: 4000px) {
+  .main__section__wrapper.blog__page {
+    margin-top: -80vh;
+  }
+}
+
+@media (max-width: 2560px) {
+  .main__section__wrapper.blog__page {
+    margin-top: -75vh;
+  }
+}
+
+@media (max-width: 1920px) {
+  .main__section__wrapper.blog__page {
+    margin-top: -55vh;
+  }
+}
+
 .main__section__wrapper.blog__page {
-  margin-top: -55vh;
   padding: 150px 0;
 }
 .grid__container .gatsby-image-wrapper {

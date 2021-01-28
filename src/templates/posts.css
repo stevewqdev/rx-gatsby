@@ -1,5 +1,19 @@
-.news__hero {
-  margin-top: -110px;
+@media (max-width: 4000px) {
+  .news__hero {
+    margin-top: -1000px;
+  }
+}
+
+@media (max-width: 2560px) {
+  .news__hero {
+    margin-top: -500px;
+  }
+}
+
+@media (max-width: 1920px) {
+  .news__hero {
+    margin-top: -110px;
+  }
 }
 
 .footer_fixed {
