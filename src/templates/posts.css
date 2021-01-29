@@ -146,6 +146,11 @@
 @media (max-width: 1700px) {
   .grid-container .news-card {
     width: 520px;
+    max-height: 530px;
+  }
+
+  .grid-container .news-card .gatsby-image-wrapper {
+    max-height: 300px;
   }
 }
 
