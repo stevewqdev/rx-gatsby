@@ -93,14 +93,14 @@ export default class News extends Component {
             <div className="row">
               <div className="col-lg-12 col-sm-12">
                 <div id="filter">
-                  <p className="active" onClick={this.showAll}>
+                  <a className="active" onClick={this.showAll}>
                     All
-                  </p>
+                  </a>
                   {categories
                     ? categories.map(({ node }) => (
-                        <p id={node.slug} onClick={this.filterCards}>
+                        <a id={node.slug} onClick={this.filterCards}>
                           {node.name}
-                        </p>
+                        </a>
                       ))
                     : ""}
                 </div>

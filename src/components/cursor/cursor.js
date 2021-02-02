@@ -18,6 +18,7 @@ export default class cursor extends Component {
       ...document.querySelectorAll(".recognition__list__item"),
     ]
     const projects = [...document.querySelectorAll(".the__project")]
+    const cards = [...document.querySelectorAll(".news-card")]
 
     const allElements = aLinks
       .concat(buttons)
@@ -31,6 +32,7 @@ export default class cursor extends Component {
       .concat(toggleOffices)
       .concat(servicesList)
       .concat(projects)
+      .concat(cards)
     allElements.forEach(function(element) {
       element.addEventListener("mouseenter", function() {
         const theCursor = document.querySelector(".cursor")
