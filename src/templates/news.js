@@ -83,7 +83,12 @@ export default class News extends Component {
       <Layout>
         <Helmet>
           <meta charSet="utf-8" />
-          <meta name="description" content={"The Raxo blog is a place"} />
+          <meta
+            name="description"
+            content={
+              "Read the latest from our award-winning, black-owned creative studio."
+            }
+          />
           <title>RAXO ~ News</title>
           <link rel="canonical" href={"/news"} />
         </Helmet>

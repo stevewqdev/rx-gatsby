@@ -2,7 +2,7 @@
 
 module.exports = `
     {
-        allWordpressWpNewsPost {
+        allWordpressWpNewsPost(sort: {fields: date, order: DESC}) {
           edges {
             node {
               id
