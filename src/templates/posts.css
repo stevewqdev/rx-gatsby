@@ -59,9 +59,10 @@
   color: #adadad;
   font-family: "MarkPro-Book";
   text-transform: uppercase;
+  margin: 0 5px;
 }
 
-#filter p.active {
+#filter a.active {
   color: #000;
   font-weight: bold;
   border-bottom: 2.5px solid #000;
