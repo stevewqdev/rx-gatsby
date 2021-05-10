@@ -119,14 +119,13 @@ export default class News extends Component {
                     <a target="_blank" href={node.acf.link}>
                       <div className="news-card">
                         <div className="news-card-head">
-                          {node.featured_media ? (
+                          {node.featured_media.localFile ? (
                             <Img
                               fluid={
                                 node.featured_media.localFile.childImageSharp
                                   .fluid
                               }
                               alt={node.title}
-                              tabIndex={-1}
                             />
                           ) : (
                             ""
