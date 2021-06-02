@@ -350,6 +350,17 @@ const Layout = ({ children, location }) => {
             _ss.push(['_setResponseCallback', callThisOnReturn]); 
             `}
             </script>
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-38JE50R2DZ" />
+            <script 
+            dangerouslySetInnerHTML={{__html: `
+              <!-- Global site tag (gtag.js) - Google Analytics -->
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-38JE50R2DZ');
+            `}}
+            />
+
           </Helmet>
 
           <Cursor></Cursor>
