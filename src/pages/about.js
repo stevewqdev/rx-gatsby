@@ -359,9 +359,9 @@ class ContactPage extends Component {
           <style>{customStyles}</style>
           <meta
             name="description"
-            content={pageData.yoast_meta.yoast_wpseo_metadesc}
+            content={pageData.yoast.metadesc}
           />
-          <title>{pageData.yoast_meta.yoast_wpseo_title}</title>
+          <title>{pageData.title} - Raxo </title>
           <link
             rel="canonical"
             href={pageData.yoast_meta.yoast_wpseo_canonical}
@@ -947,7 +947,10 @@ export const pageQuery = graphql`
           title
           content
           date(formatString: "MMMM DD, YYYY")
-          yoast_meta {
+          yoast{
+ metadesc
+}
+yoast_meta {
             yoast_wpseo_metadesc
             yoast_wpseo_title
             yoast_wpseo_canonical
