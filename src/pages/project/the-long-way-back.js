@@ -68,9 +68,9 @@ class TLWB extends Component {
             <meta charSet="utf-8" />
             <meta
               name="description"
-              content={pageData.yoast_meta.yoast_wpseo_metadesc}
+              content={pageData.yoast.metadesc}
             />
-            <title>{pageData.yoast_meta.yoast_wpseo_title}</title>
+            <title>{pageData.title} - Raxo </title>
             <link
               rel="canonical"
               href={pageData.yoast_meta.yoast_wpseo_canonical}
@@ -479,7 +479,10 @@ export const pageQuery = graphql`
             }
           }
 
-          yoast_meta {
+          yoast{
+ metadesc
+}
+yoast_meta {
             yoast_wpseo_canonical
             yoast_wpseo_metadesc
             yoast_wpseo_title

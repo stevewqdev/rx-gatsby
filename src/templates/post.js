@@ -88,7 +88,7 @@ class Post extends Component {
           <meta charSet="utf-8" />
           <meta
             name="description"
-            content={post.yoast_meta.yoast_wpseo_metadesc}
+            content={post.yoast.metadesc}
           />
           <title>{post.yoast_meta.yoast_wpseo_title}</title>
           <link rel="canonical" href={post.yoast_meta.yoast_wpseo_canonical} />
@@ -204,7 +204,10 @@ export const postQuery = graphql`
       content
       date
       status
-      yoast_meta {
+      yoast{
+ metadesc
+}
+yoast_meta {
         yoast_wpseo_metadesc
         yoast_wpseo_title
         yoast_wpseo_canonical
