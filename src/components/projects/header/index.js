@@ -21,7 +21,7 @@ const ProjectHero = props => {
       <div className="container container__custom">
         <div className="row">
           <p className="btw__link  xsm__font bold__font">
-            <Link to="/work/" activeStyle={{ color: "white" }} >
+            <Link to="/work/" activeStyle={{ color: "white" }}>
               Back to Work
             </Link>
           </p>
@@ -143,8 +143,8 @@ const ProjectHero = props => {
             data-aos-duration="1200"
             tabIndex={0}
           >
-            <Img
-              fluid={props.projectThumbnail.localFile.childImageSharp.fluid}
+            <img
+              src={props.projectThumbnail}
               alt={`${props.clientName} featured image`}
               tabIndex={-1}
             />
