@@ -147,6 +147,7 @@ const ProjectHero = props => {
               src={props.projectThumbnail}
               alt={`${props.clientName} featured image`}
               tabIndex={-1}
+              loading="lazy"
             />
           </div>
         </div>
