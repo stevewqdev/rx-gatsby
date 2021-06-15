@@ -143,7 +143,7 @@ class HomePage extends Component {
     const pageData = this.props.data.allWordpressPage.edges[0].node
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf
 
-    console.log(pageAcf);
+    console.log(pageData, pageAcf);
 
     const customStyle = `
     @media(max-width: 500px){
@@ -509,51 +509,7 @@ class HomePage extends Component {
               </div>
             </div>
           </section>
-          {/* <section className="selected__projects latest__projects">
-              <div className="container container__custom">
-                <div className="row">
-                  <div className="col-lg-12 no__padding">
-                    <div className="separator --black "></div>
-                  </div>
-                  <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__info">
-                    <div className="selected__projects__title">
-                      <h2 className="lg__font">{pageAcf.lp_title}</h2>
-                    </div>
-
-                  </div>
-                  <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 no__padding selected__projects__button">
-                    <div className="row">
-                      <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 no__padding selected__projects__button__left"></div>
-                      <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 no__padding selected__projects__button__right">
-                        <div className="selected__projects__copy">
-                          <p className="bold__font md__font latest__projects__subtitle">{pageAcf.lp_subtitle}</p>
-                          <div
-                            className=""
-                            dangerouslySetInnerHTML={{ __html: pageAcf.lp_copy }}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="row latest__projects__projects">
-                  <div className="container">
-                    <div className="row">
-                      {
-                        latestProjects.map((project, index) => 
-                          <div className="col-xs-6 col-sm-3 col-md-3 pgrid__base__thumbnail --pr-one no__padding" key={index}>
-                              <Link to={`/project/${project.node.slug.toLowerCase()}`}>
-                                <img src={`${project.node.acf.featured_image.localFile.url}`} alt={`${project.node.title}`}/>
-                              </Link>
-                              <p className="bold__font md__font">{project.node.title}</p>
-                          </div>
-                        )
-                      }
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section> */}
+          
         </div>
       </Layout>
     )
