@@ -57,17 +57,12 @@ class PNP extends Component {
     const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf
     const { paused, volume } = this.state
 
-    console.log(pageAcf);
-
     return (
       <Layout>
         <div className="project__template pnp">
           <Helmet>
             <meta charSet="utf-8" />
-            <meta
-              name="description"
-              content={pageData.yoast.metadesc}
-            />
+            <meta name="description" content={pageData.yoast.metadesc} />
             <title>{pageData.title} - Raxo </title>
             <link
               rel="canonical"
@@ -85,207 +80,180 @@ class PNP extends Component {
           ></ProjectHero>
 
           <div className="main__section__wrapper">
-
-            <section className="includes__separator pnp" >
-                <div className="container container__custom">
-                    <div className="row" id="section__one">
-                        {pageAcf.pnp_section_one.map((element, index) => (
-                            <>
-                                {
-                                    index === 0 
-                                    ? 
-                                    <>
-                                        <div className="col-sm-12 col-md-12 col-lg-6 copy  d-flex align-items-start no__padding"
-                                            data-aos="fade-up"
-                                            data-aos-easing="ease-in-back"
-                                            data-aos-delay={`120`}
-                                            data-aos-duration="1200"
-                                            data-aos-offset="450"
-                                        >
-                                            <div
-                                            className="simple__copy sm__font reg__font"
-                                            dangerouslySetInnerHTML={{ __html: element.copy }}
-                                            />
-                                        </div> 
-                                        <div className="col-sm-12 col-md-12 col-lg-6 image no__padding">
-                                        {element.image 
-                                            ? 
-                                                (
-                                                    <Img
-                                                        fluid={
-                                                        element.image.localFile.childImageSharp
-                                                            .fluid
-                                                        }
-                                                        alt={`Illustration from PNP project`}
-                                                        tabIndex={-1}
-                                                    />
-                                                ) 
-                                            : 
-                                            (
-                                                ""
-                                            )
-                                        }
-                                        </div> 
-                                        <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 video no__padding hidden-${index} `}>
-                                            <Vimeo
-                                                video={element.vimeo_id}
-                                                volume={volume}
-                                                paused={paused}
-                                                onPause={this.handlePlayerPause}
-                                                onPlay={this.handlePlayerPlay}
-                                            />
-                                              
-                                        </div> 
-                                    </>
-                                    : ""
-                                }
-                                {
-                                    index === 1
-                                    ?
-                                    <>
-                                        <div className="col-sm-12 col-md-12 col-lg-12 image no__padding">
-                                            {element.image 
-                                                ? 
-                                                    (
-                                                        <Img
-                                                            fluid={
-                                                            element.image.localFile.childImageSharp
-                                                                .fluid
-                                                            }
-                                                            alt={`Illustration from PNP project`}
-                                                            tabIndex={-1}
-                                                        />
-                                                    ) 
-                                                : 
-                                                (
-                                                    ""
-                                                )
-                                            }
-                                        </div> 
-                                    </>
-                                    : ""
-                                }
-                            </>
-                        ))}
-                    </div>
-                    
-                    <div className="row section__two__about" id="section__two">
-                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 full__width__image no__padding">
-                            <div className="separator --black"></div>
-                            <div
+            <section className="includes__separator pnp">
+              <div className="container container__custom">
+                <div className="row" id="section__one">
+                  {pageAcf.pnp_section_one.map((element, index) => (
+                    <>
+                      {index === 0 ? (
+                        <>
+                          <div
+                            className="col-sm-12 col-md-12 col-lg-6 copy  d-flex align-items-start no__padding"
                             data-aos="fade-up"
                             data-aos-easing="ease-in-back"
                             data-aos-delay={`120`}
                             data-aos-duration="1200"
-                            data-aos-offset="300"
-                            >
-                            <h1
-                                className="xxl__font"
-                                dangerouslySetInnerHTML={{
-                                __html: pageAcf.pnp_about
-                                }}
+                            data-aos-offset="450"
+                          >
+                            <div
+                              className="simple__copy sm__font reg__font"
+                              dangerouslySetInnerHTML={{ __html: element.copy }}
                             />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="row" id="section__three">
-                        {pageAcf.pnp_section_one.map((element, index) => (
-                            <>
-                                {
-                                    index === 2
-                                    ?
-                                    <>
-                                        <div className={`col-sm-12 col-md-12 col-lg-12 image no__padding row-${index}`}>
-                                            {element.image 
-                                                ? 
-                                                    (
-                                                        <Img
-                                                            fluid={
-                                                            element.image.localFile.childImageSharp
-                                                                .fluid
-                                                            }
-                                                            alt={`Illustration from PNP project`}
-                                                            tabIndex={-1}
-                                                        />
-                                                    ) 
-                                                : 
-                                                (
-                                                    ""
-                                                )
-                                            }
-                                        </div> 
-                                    </>
-                                    : ""
+                          </div>
+                          <div className="col-sm-12 col-md-12 col-lg-6 image no__padding">
+                            {element.image ? (
+                              <Img
+                                fluid={
+                                  element.image.localFile.childImageSharp.fluid
                                 }
-                                {
-                                    index === 3 
-                                    ? 
-                                    <>
-                                        <div className={`col-sm-12 col-md-12 col-lg-6 image no__padding  row-${index}`}>
-                                            {element.image 
-                                                ? 
-                                                    (
-                                                        <Img
-                                                            fluid={
-                                                            element.image.localFile.childImageSharp
-                                                                .fluid
-                                                            }
-                                                            alt={`Illustration from PNP project`}
-                                                            tabIndex={-1}
-                                                        />
-                                                    ) 
-                                                : 
-                                                (
-                                                    ""
-                                                )
-                                            }
-                                        </div> 
-                                        <div className="col-sm-12 col-md-12 col-lg-6 copy right  d-flex align-items-start no__padding"
-                                            data-aos="fade-up"
-                                            data-aos-easing="ease-in-back"
-                                            data-aos-delay={`120`}
-                                            data-aos-duration="1200"
-                                            data-aos-offset="450"
-                                        >
-                                            <div
-                                            className="simple__copy sm__font reg__font"
-                                            dangerouslySetInnerHTML={{ __html: element.copy }}
-                                            />
-                                        </div> 
-                                    </>
-                                    : ""
+                                alt={`Illustration from PNP project`}
+                                tabIndex={-1}
+                              />
+                            ) : (
+                              ""
+                            )}
+                          </div>
+                          <div
+                            className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 video no__padding hidden-${index} `}
+                          >
+                            <Vimeo
+                              video={element.vimeo_id}
+                              volume={volume}
+                              paused={paused}
+                              onPause={this.handlePlayerPause}
+                              onPlay={this.handlePlayerPlay}
+                            />
+                          </div>
+                        </>
+                      ) : (
+                        ""
+                      )}
+                      {index === 1 ? (
+                        <>
+                          <div className="col-sm-12 col-md-12 col-lg-12 image no__padding">
+                            {element.image ? (
+                              <Img
+                                fluid={
+                                  element.image.localFile.childImageSharp.fluid
                                 }
-                                {
-                                    index === 4
-                                    ?
-                                    <>
-                                        <div className={`col-sm-12 col-md-12 col-lg-12 image no__padding row-${index}`}>
-                                            {element.image 
-                                                ? 
-                                                    (
-                                                        <Img
-                                                            fluid={
-                                                            element.image.localFile.childImageSharp
-                                                                .fluid
-                                                            }
-                                                            alt={`Illustration from PNP project`}
-                                                            tabIndex={-1}
-                                                        />
-                                                    ) 
-                                                : 
-                                                (
-                                                    ""
-                                                )
-                                            }
-                                        </div> 
-                                    </>
-                                    : ""
-                                }
-                            </>
-                        ))}
-                    </div>
+                                alt={`Illustration from PNP project`}
+                                tabIndex={-1}
+                              />
+                            ) : (
+                              ""
+                            )}
+                          </div>
+                        </>
+                      ) : (
+                        ""
+                      )}
+                    </>
+                  ))}
                 </div>
+
+                <div className="row section__two__about" id="section__two">
+                  <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 full__width__image no__padding">
+                    <div className="separator --black"></div>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-easing="ease-in-back"
+                      data-aos-delay={`120`}
+                      data-aos-duration="1200"
+                      data-aos-offset="300"
+                    >
+                      <h1
+                        className="xxl__font"
+                        dangerouslySetInnerHTML={{
+                          __html: pageAcf.pnp_about,
+                        }}
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="row" id="section__three">
+                  {pageAcf.pnp_section_one.map((element, index) => (
+                    <>
+                      {index === 2 ? (
+                        <>
+                          <div
+                            className={`col-sm-12 col-md-12 col-lg-12 image no__padding row-${index}`}
+                          >
+                            {element.image ? (
+                              <Img
+                                fluid={
+                                  element.image.localFile.childImageSharp.fluid
+                                }
+                                alt={`Illustration from PNP project`}
+                                tabIndex={-1}
+                              />
+                            ) : (
+                              ""
+                            )}
+                          </div>
+                        </>
+                      ) : (
+                        ""
+                      )}
+                      {index === 3 ? (
+                        <>
+                          <div
+                            className={`col-sm-12 col-md-12 col-lg-6 image no__padding  row-${index}`}
+                          >
+                            {element.image ? (
+                              <Img
+                                fluid={
+                                  element.image.localFile.childImageSharp.fluid
+                                }
+                                alt={`Illustration from PNP project`}
+                                tabIndex={-1}
+                              />
+                            ) : (
+                              ""
+                            )}
+                          </div>
+                          <div
+                            className="col-sm-12 col-md-12 col-lg-6 copy right  d-flex align-items-start no__padding"
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay={`120`}
+                            data-aos-duration="1200"
+                            data-aos-offset="450"
+                          >
+                            <div
+                              className="simple__copy sm__font reg__font"
+                              dangerouslySetInnerHTML={{ __html: element.copy }}
+                            />
+                          </div>
+                        </>
+                      ) : (
+                        ""
+                      )}
+                      {index === 4 ? (
+                        <>
+                          <div
+                            className={`col-sm-12 col-md-12 col-lg-12 image no__padding row-${index}`}
+                          >
+                            {element.image ? (
+                              <Img
+                                fluid={
+                                  element.image.localFile.childImageSharp.fluid
+                                }
+                                alt={`Illustration from PNP project`}
+                                tabIndex={-1}
+                              />
+                            ) : (
+                              ""
+                            )}
+                          </div>
+                        </>
+                      ) : (
+                        ""
+                      )}
+                    </>
+                  ))}
+                </div>
+              </div>
             </section>
 
             <RelatedProjects
@@ -354,10 +322,10 @@ export const pageQuery = graphql`
               vimeo_id
             }
           }
-          yoast{
- metadesc
-}
-yoast_meta {
+          yoast {
+            metadesc
+          }
+          yoast_meta {
             yoast_wpseo_canonical
             yoast_wpseo_metadesc
             yoast_wpseo_title

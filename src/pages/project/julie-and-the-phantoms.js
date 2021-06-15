@@ -3,7 +3,6 @@ import Layout from "../../layouts/index"
 import axios from "axios"
 import { Helmet } from "react-helmet"
 import ProjectHero from "../../components/projects/header/index"
-import Img from "gatsby-image"
 import "../../layouts/pages/projects/jatp.css"
 import Vimeo from "@u-wave/react-vimeo"
 import Loading from "../../components/loading"
@@ -67,7 +66,7 @@ class JATP extends Component {
         )
       })
       .catch(err => {
-        console.log(err)
+        console.error(err)
       })
   }
 
@@ -86,10 +85,6 @@ class JATP extends Component {
             <meta charSet="utf-8" />
             <meta name="description" content={data.yoast.metadesc} />
             <title>{data.title.rendered} - Raxo </title>
-            {/* <link
-              rel="canonical"
-              href={pageData.yoast_meta.yoast_wpseo_canonical}
-            />  */}
           </Helmet>
 
           <ProjectHero
@@ -180,7 +175,7 @@ class JATP extends Component {
                                 <div
                                   className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 image hidden-${index} no__padding`}
                                 >
-                                  <Img
+                                  <img
                                     src={element.video_image}
                                     alt={`Illustration from jatp project`}
                                     tabIndex={-1}

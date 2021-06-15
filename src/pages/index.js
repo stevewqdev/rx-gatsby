@@ -14,10 +14,10 @@ class HomePage extends Component {
 
   playVideoHero(event) {
     if (event.target.paused) {
-      event.target.play();
+      event.target.play()
     } else {
       //event.target.pause();
-    } 
+    }
   }
 
   playVideo(event) {
@@ -88,7 +88,6 @@ class HomePage extends Component {
       this.setState({
         isMobile: true,
       })
-      
     }
 
     let aElements = [
@@ -131,19 +130,14 @@ class HomePage extends Component {
     )
     setTimeout(
       function() {
-
-        document.querySelectorAll(".background__video__mobile__home")[0].click();
-        
+        document.querySelectorAll(".background__video__mobile__home")[0].click()
       }.bind(this),
       1500
     )
   }
   render() {
-
     const pageData = this.props.data.allWordpressPage.edges[0].node
     const pageAcf = this.props.data.allWordpressPage.edges[0].node.acf
-
-    console.log(pageData, pageAcf);
 
     const customStyle = `
     @media(max-width: 500px){
@@ -159,10 +153,7 @@ class HomePage extends Component {
         <Helmet>
           <style>{customStyle}</style>
           <meta charSet="utf-8" />
-          <meta
-            name="description"
-            content={pageData.yoast.metadesc}
-          />
+          <meta name="description" content={pageData.yoast.metadesc} />
           <title>{pageData.title} - Raxo </title>
           <link
             rel="canonical"
@@ -174,11 +165,9 @@ class HomePage extends Component {
           <div className="row">
             <div className="col-lg-12">
               <div className="video__background" id="scene">
-                { pageAcf.video_background && this.state.isLoaded  ? (
+                {pageAcf.video_background && this.state.isLoaded ? (
                   <>
-                  {
-                    this.state.isMobile
-                    ?
+                    {this.state.isMobile ? (
                       <video
                         data-depth="0.2"
                         loop
@@ -195,7 +184,8 @@ class HomePage extends Component {
                           type="video/mp4"
                         />
                       </video>
-                    : <video
+                    ) : (
+                      <video
                         data-depth="0.2"
                         autoPlay
                         loop
@@ -210,7 +200,7 @@ class HomePage extends Component {
                           type="video/mp4"
                         />
                       </video>
-                  }
+                    )}
                   </>
                 ) : (
                   ""
@@ -509,7 +499,6 @@ class HomePage extends Component {
               </div>
             </div>
           </section>
-          
         </div>
       </Layout>
     )
@@ -541,7 +530,7 @@ export const pageQuery = graphql`
           title
           content
           date(formatString: "MMMM DD, YYYY")
-          yoast{
+          yoast {
             metadesc
           }
           yoast_meta {

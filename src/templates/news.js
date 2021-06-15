@@ -36,29 +36,22 @@ export default class News extends Component {
   }
 
   showAll(e) {
-    this.setState({ isLoaded: false }, () => {
-      console.log(this.state.isLoaded)
-    })
+    this.setState({ isLoaded: false })
     // change activeClass
     this.removeActiveClass()
     // add active class
     e.target.classList.add("active")
     setTimeout(() => {
-      this.setState(
-        {
-          news: this.props.pageContext.group,
-          isLoaded: true,
-        },
-        () => {
-          console.log(this.state.isLoaded)
-        }
-      )
+      this.setState({
+        news: this.props.pageContext.group,
+        isLoaded: true,
+      })
     }, 2000)
   }
 
   filterCards(e) {
     document.querySelector(".footer").classList.add("footer_fixed")
-    this.setState({ isLoaded: false }, () => console.log(this.state.isLoaded))
+    this.setState({ isLoaded: false })
     const originalArray = this.props.pageContext.group
     const news = []
     const filter = e.target.getAttribute("id")
@@ -70,9 +63,7 @@ export default class News extends Component {
       if (post.node.news_categories[0].slug === filter) {
         news.push(post)
         setTimeout(() => {
-          this.setState({ news: news, isLoaded: true }, () => {
-            console.log(this.state.isLoaded)
-          })
+          this.setState({ news: news, isLoaded: true })
         }, 2000)
       }
     })
