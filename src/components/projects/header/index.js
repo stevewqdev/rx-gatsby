@@ -143,11 +143,10 @@ const ProjectHero = props => {
             data-aos-duration="1200"
             tabIndex={0}
           >
-            <img
-              src={props.projectThumbnail}
+            <Img
+              fluid={props.projectThumbnail.localFile.childImageSharp.fluid}
               alt={`${props.clientName} featured image`}
               tabIndex={-1}
-              loading="lazy"
             />
           </div>
         </div>

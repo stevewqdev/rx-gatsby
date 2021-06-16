@@ -1,14 +1,14 @@
 import React, { Component } from "react"
 import Layout from "../../layouts/index"
-import axios from "axios"
+import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import ProjectHero from "../../components/projects/header/index"
+import Img from "gatsby-image"
 import "../../layouts/pages/projects/jatp.css"
 import Vimeo from "@u-wave/react-vimeo"
-import Loading from "../../components/loading"
 import RelatedProjects from "../../components/relatedProjects/index"
 
-export default class JATP extends Component {
+class JATP extends Component {
   constructor(props) {
     super(props)
 
@@ -16,7 +16,6 @@ export default class JATP extends Component {
       videoIndex: 0,
       volume: 1,
       paused: false,
-      data: {},
     }
 
     this.handlePause = this.handlePause.bind(this)
@@ -49,227 +48,322 @@ export default class JATP extends Component {
     })
   }
 
-  getData() {
-    const url = "https://rx.raxo.dev/wp-json/wp/v2/projects/1893"
-
-    axios
-      .get(url)
-      .then(({ data }) => {
-        this.setState(
-          {
-            data: data,
-            isLoaded: true,
-          },
-          () => {
-            console.log(this.state.data)
-          }
-        )
-      })
-      .catch(err => {
-        console.error(err)
-      })
-  }
-
   componentDidMount() {
     //document.querySelectorAll(".floating__web__info")[1].classList.add("mix__blend__screen");
-    this.getData()
   }
 
   render() {
-    const { paused, volume, data } = this.state
+    const pageData = this.props.data.allWordpressWpProjects.edges[0].node
+    const pageAcf = this.props.data.allWordpressWpProjects.edges[0].node.acf
+    const { paused, volume } = this.state
 
     return (
       <Layout>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Julie And The Phantoms: A Netflix Original - Raxo </title>
-        </Helmet>
-        {this.state.isLoaded === true ? (
-          <div className="project__template jatp">
-            <ProjectHero
-              title={data.acf.frontend_title}
-              clientName={data.acf.client}
-              projectInfo={data.content.rendered}
-              projectFocus={data.acf.project_focus}
-              projectThumbnail={data.acf.featured_image}
-              theme={`${data.acf.project_background} jatp`}
-            ></ProjectHero>
+        <div className="project__template jatp">
+          <Helmet>
+            <meta charSet="utf-8" />
+            <meta name="description" content={pageData.yoast.metadesc} />
+            <title>{pageData.title} - Raxo </title>
+            <link
+              rel="canonical"
+              href={pageData.yoast_meta.yoast_wpseo_canonical}
+            />
+          </Helmet>
 
-            <div className="main__section__wrapper">
-              <section id="section__one">
-                <div className="container container__custom">
-                  <div className="row one">
-                    <div className="col-lg-12 copy no__padding">
-                      <div
-                        className="simple__copy sm__font reg__font"
+          <ProjectHero
+            title={pageAcf.frontend_title}
+            clientName={pageAcf.client}
+            projectInfo={pageData.content}
+            projectFocus={pageAcf.project_focus}
+            projectThumbnail={pageAcf.featured_image}
+            theme={`${pageAcf.project_background} jatp`}
+          ></ProjectHero>
+
+          <div className="main__section__wrapper">
+            <section id="section__one">
+              <div className="container container__custom">
+                <div className="row one">
+                  <div className="col-lg-12 copy no__padding">
+                    <div
+                      className="simple__copy sm__font reg__font"
+                      dangerouslySetInnerHTML={{
+                        __html: pageAcf.jatp_sone_copy,
+                      }}
+                    />
+                  </div>
+                  <div className="col-lg-12 image no__padding">
+                    <Img
+                      fluid={
+                        pageAcf.jatp_sone_image.localFile.childImageSharp.fluid
+                      }
+                      alt={`Illustration from jatp project`}
+                      tabIndex={-1}
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section className="includes__separator jatp" id="section__two">
+              <div className="container container__custom">
+                <div className="row section__two__about">
+                  <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 full__width__image ">
+                    <div className="separator --black"></div>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-easing="ease-in-back"
+                      data-aos-delay={`120`}
+                      data-aos-duration="1200"
+                      data-aos-offset="300"
+                    >
+                      <h1
+                        className="xxl__font"
                         dangerouslySetInnerHTML={{
-                          __html: data.acf.jatp_sone_copy,
+                          __html: pageAcf.jatp_sone_about,
                         }}
                       />
                     </div>
-                    <div className="col-lg-12 image no__padding">
-                      <img
-                        src={data.acf.jatp_sone_image}
-                        alt={`Illustration from jatp project`}
-                        tabIndex={-1}
-                      />
-                    </div>
                   </div>
                 </div>
-              </section>
-              <section className="includes__separator jatp" id="section__two">
-                <div className="container container__custom">
-                  <div className="row section__two__about">
-                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 full__width__image ">
-                      <div className="separator --black"></div>
-                      <div
-                        data-aos="fade-up"
-                        data-aos-easing="ease-in-back"
-                        data-aos-delay={`120`}
-                        data-aos-duration="1200"
-                        data-aos-offset="300"
-                      >
-                        <h1
-                          className="xxl__font"
-                          dangerouslySetInnerHTML={{
-                            __html: data.acf.jatp_sone_about,
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
+              </div>
+            </section>
 
-              <section id="section__three">
-                <div className="container container__custom">
-                  <div className="row">
-                    {data.acf.jatp_stwo_grid.map((element, index) => (
-                      <>
-                        {index !== 0 && index % 2 === 0 ? (
-                          <>
+            <section id="section__three">
+              <div className="container container__custom">
+                <div className="row">
+                  {pageAcf.jatp_stwo_grid.map((element, index) => (
+                    <>
+                      {index !== 0 && index % 2 === 0 ? (
+                        <>
+                          <div
+                            className={`col-xs-12 col-sm-12 col-md-12 col-lg-3 copy hidden-${index}`}
+                          >
                             <div
-                              className={`col-xs-12 col-sm-12 col-md-12 col-lg-3 copy hidden-${index}`}
-                            >
-                              <div
-                                className="simple__copy sm__font reg__font"
-                                dangerouslySetInnerHTML={{
-                                  __html: element.copy,
-                                }}
-                              />
-                            </div>
-                            <div
-                              className={`col-xs-12 col-sm-12 col-md-12 col-lg-9 image hidden-${index} no__padding`}
-                            >
-                              <img
-                                src={element.main_image}
+                              className="simple__copy sm__font reg__font"
+                              dangerouslySetInnerHTML={{ __html: element.copy }}
+                            />
+                          </div>
+                          <div
+                            className={`col-xs-12 col-sm-12 col-md-12 col-lg-9 image hidden-${index} no__padding`}
+                          >
+                            <Img
+                              fluid={
+                                element.main_image.localFile.childImageSharp
+                                  .fluid
+                              }
+                              alt={`Illustration from jatp project`}
+                              tabIndex={-1}
+                            />
+                          </div>
+
+                          <div
+                            className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 video no__padding hidden-${index}`}
+                          >
+                            {element.vimeo_id ? (
+                              <a href={element.vimeo_id} target="_BLANK">
+                                <div
+                                  className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 image hidden-${index} no__padding`}
+                                >
+                                  <Img
+                                    fluid={
+                                      element.video_image.localFile
+                                        .childImageSharp.fluid
+                                    }
+                                    alt={`Illustration from jatp project`}
+                                    tabIndex={-1}
+                                  />
+                                </div>
+                              </a>
+                            ) : (
+                              ""
+                            )}
+                          </div>
+                          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 end__image no__padding">
+                            {element.end_image ? (
+                              <Img
+                                fluid={
+                                  element.end_image.localFile.childImageSharp
+                                    .fluid
+                                }
                                 alt={`Illustration from jatp project`}
                                 tabIndex={-1}
                               />
-                            </div>
-
+                            ) : (
+                              ""
+                            )}
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          <div
+                            className={`col-xs-12 col-sm-12 col-md-12 col-lg-9 image hidden-${index} no__padding`}
+                          >
+                            <Img
+                              fluid={
+                                element.main_image.localFile.childImageSharp
+                                  .fluid
+                              }
+                              alt={`Illustration from jatp project`}
+                              tabIndex={-1}
+                            />
+                          </div>
+                          <div
+                            className={`col-xs-12 col-sm-12 col-md-12 col-lg-3 copy hidden-${index}`}
+                          >
                             <div
-                              className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 video no__padding hidden-${index}`}
-                            >
-                              {element.vimeo_id ? (
-                                <a href={element.vimeo_id} target="_BLANK">
-                                  <div
-                                    className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 image hidden-${index} no__padding`}
-                                  >
-                                    <img
-                                      src={element.video_image}
-                                      alt={`Illustration from jatp project`}
-                                      tabIndex={-1}
-                                    />
-                                  </div>
-                                </a>
-                              ) : (
-                                ""
-                              )}
-                            </div>
-                            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 end__image no__padding">
-                              {element.end_image ? (
-                                <img
-                                  src={element.end_image}
-                                  alt={`Illustration from jatp project`}
-                                  tabIndex={-1}
-                                />
-                              ) : (
-                                ""
-                              )}
-                            </div>
-                          </>
-                        ) : (
-                          <>
-                            <div
-                              className={`col-xs-12 col-sm-12 col-md-12 col-lg-9 image hidden-${index} no__padding`}
-                            >
-                              <img
-                                src={element.main_image}
+                              className="simple__copy sm__font reg__font"
+                              dangerouslySetInnerHTML={{ __html: element.copy }}
+                            />
+                          </div>
+                          <div
+                            className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 video no__padding hidden-${index}`}
+                          >
+                            {element.vimeo_id ? (
+                              <a href={element.vimeo_id} target="_BLANK">
+                                <div
+                                  className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 image hidden-${index} no__padding`}
+                                >
+                                  <Img
+                                    fluid={
+                                      element.video_image.localFile
+                                        .childImageSharp.fluid
+                                    }
+                                    alt={`Illustration from jatp project`}
+                                    tabIndex={-1}
+                                  />
+                                </div>
+                              </a>
+                            ) : (
+                              ""
+                            )}
+                          </div>
+                          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 end__image no__padding">
+                            {element.end_image ? (
+                              <Img
+                                fluid={
+                                  element.end_image.localFile.childImageSharp
+                                    .fluid
+                                }
                                 alt={`Illustration from jatp project`}
                                 tabIndex={-1}
                               />
-                            </div>
-                            <div
-                              className={`col-xs-12 col-sm-12 col-md-12 col-lg-3 copy hidden-${index}`}
-                            >
-                              <div
-                                className="simple__copy sm__font reg__font"
-                                dangerouslySetInnerHTML={{
-                                  __html: element.copy,
-                                }}
-                              />
-                            </div>
-                            <div
-                              className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 video no__padding hidden-${index}`}
-                            >
-                              {element.vimeo_id ? (
-                                <a href={element.vimeo_id} target="_BLANK">
-                                  <div
-                                    className={`col-xs-12 col-sm-12 col-md-12 col-lg-12 image hidden-${index} no__padding`}
-                                  >
-                                    <img
-                                      src={element.video_image}
-                                      alt={`Illustration from jatp project`}
-                                      tabIndex={-1}
-                                    />
-                                  </div>
-                                </a>
-                              ) : (
-                                ""
-                              )}
-                            </div>
-                            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 end__image no__padding">
-                              {element.end_image ? (
-                                <img
-                                  src={element.end_image}
-                                  alt={`Illustration from jatp project`}
-                                  tabIndex={-1}
-                                />
-                              ) : (
-                                ""
-                              )}
-                            </div>
-                          </>
-                        )}
-                      </>
-                    ))}
-                  </div>
+                            ) : (
+                              ""
+                            )}
+                          </div>
+                        </>
+                      )}
+                    </>
+                  ))}
                 </div>
-              </section>
+              </div>
+            </section>
 
-              <RelatedProjects
-                relatedcopy={data.acf.related_extra_copy}
-                relatedproject={data.acf.related_project}
-                relatedthumbnail={data.acf.related_project_thumbnail}
-                relatedprojectlink={data.acf.related_project_url}
-              ></RelatedProjects>
-            </div>
+            <RelatedProjects
+              relatedcopy={pageAcf.related_extra_copy}
+              relatedproject={pageAcf.related_project}
+              relatedthumbnail={pageAcf.related_project_thumbnail}
+              relatedprojectlink={pageAcf.related_project_url}
+            ></RelatedProjects>
           </div>
-        ) : (
-          <Loading />
-        )}
+        </div>
       </Layout>
     )
   }
 }
+
+export const pageQuery = graphql`
+  query jatpPageQuery {
+    allWordpressWpProjects(filter: { wordpress_id: { eq: 2230 } }) {
+      edges {
+        node {
+          id
+          title
+          content
+          acf {
+            related_extra_copy
+            related_project
+            related_project_thumbnail {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1300, quality: 80) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+                url
+              }
+            }
+            related_project_url
+            frontend_title
+            client
+            project_focus
+            featured_image {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1300, quality: 80) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+                url
+              }
+            }
+            project_background
+            jatp_sone_copy
+            jatp_sone_image {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1300, quality: 80) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+                url
+              }
+            }
+            jatp_sone_about
+            jatp_stwo_grid {
+              main_image {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 1300, quality: 80) {
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                  url
+                }
+              }
+              video_image {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 1300, quality: 80) {
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                  url
+                }
+              }
+              end_image {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 1300, quality: 80) {
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                  }
+                  url
+                }
+              }
+              copy
+              vimeo_id
+            }
+          }
+          yoast {
+            metadesc
+          }
+          yoast_meta {
+            yoast_wpseo_canonical
+            yoast_wpseo_metadesc
+            yoast_wpseo_title
+          }
+        }
+      }
+    }
+  }
+`
