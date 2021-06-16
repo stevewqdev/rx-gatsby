@@ -336,13 +336,17 @@ const Layout = ({ children, location }) => {
 
             <script
               async
-              src="https://www.googletagmanager.com/gtag/js?id=G-38JE50R2DZ"
-            />
-            <script>{`<!-- Global site tag (gtag.js) - Google Analytics -->
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-38JE50R2DZ');`}</script>
+              src="https://www.googletagmanager.com/gtag/js?id=G-E0E56Y63NM"
+            ></script>
+            <script>
+              {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E0E56Y63NM');
+`}
+            </script>
           </Helmet>
 
           <Cursor></Cursor>
