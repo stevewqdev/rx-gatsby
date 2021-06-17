@@ -82,7 +82,7 @@ footer .menu__subitem{
         padding: 0px;
     }
     footer .col-xs-12{
-        display: none!important;
+        display: flex!important;
     }
     .get_in_touch {
         padding: 30px 15px!important;
