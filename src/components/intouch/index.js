@@ -58,7 +58,7 @@ const GetInTouch = props => {
 
     if (name.length === 0 && name.length < 4) {
       setNameStatus("invalid")
-      setNameMessage("Please, add a your name and lastname")
+      setNameMessage("Please, add your name and lastname")
     }else{
       setNameStatus("invalid")
       setNameMessage("")
@@ -92,7 +92,7 @@ const GetInTouch = props => {
           setMessage("Please, add a valid email address")
 
           setNameStatus("invalid")
-          setNameMessage("Please, add a your name and lastname")
+          setNameMessage("Please, add your name and lastname")
         }
     }
   }
