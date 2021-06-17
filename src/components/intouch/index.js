@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import addToMailchimp from "gatsby-plugin-mailchimp"
+import axios from "axios"
 
 import "./index.css"
 
@@ -70,6 +71,20 @@ const GetInTouch = props => {
           FNAME: `${name.split(" ")[0]}`,
           LNAME: `${name.split(" ")[1]}`
         }
+
+        const form = new FormData()
+
+        form.set('your-name', name.split(" ")[0])
+        form.set('your-last-name', name.split(" ")[1])
+        form.set('your-email', email)
+
+        axios.post('https://rx.raxo.dev/wp-json/contact-form-7/v1/contact-forms/5/feedback', form, {
+          headers: { 'Content-Type': 'multipart/form-data' },
+        }).then(response => {
+            console.log("success");
+        }).catch(err => {
+          console.log("err");
+        })
 
         // Add Lead to SharpSpring
         var xhr = new XMLHttpRequest()
